@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="BMSDK">
+      <UniqueIdentifier>{6991667e-2e90-45fa-ae32-4dbd43e25023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BMSDK\WRAPPERS">
+      <UniqueIdentifier>{27e951ec-b792-405e-b628-766198b44ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{2fae05c0-c06a-4570-89b6-b0eeea5e18da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RLSDK">
+      <UniqueIdentifier>{02a933b4-36a6-406a-9f84-93f1d4998398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RLSDK\SDK_HEADERS">
+      <UniqueIdentifier>{e3483ecc-2e2d-435f-806e-78c45b08b740}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Voltage">
+      <UniqueIdentifier>{f2ec569e-dd99-49b8-a15d-fb6d6890e0d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Console shiz from codered">
+      <UniqueIdentifier>{3ba9f64b-308e-45b1-984f-1e9f0e1a93db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Console shiz from codered\Components">
+      <UniqueIdentifier>{19119b3b-8ef7-4f91-9e8f-28420a561147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filesystem">
+      <UniqueIdentifier>{e29545a4-9d1c-45eb-b0ee-143b41c1abdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{cd70a80a-39b8-4c52-a418-137ba80bc76b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\json">
+      <UniqueIdentifier>{61856edc-90cb-4386-bebb-7a1ae426227f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Voltage.cpp">
+      <Filter>Voltage</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_additions.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_rangeslider.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_searchablecombo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_timeline.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imguivariouscontrols.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\GameDefines.cpp">
+      <Filter>RLSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\AkAudio_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\Core_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\Engine_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\GFxUI_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\IpDrv_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\OnlineSubsystemEOS_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\ProjectX_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\TAGame_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\WinDrv_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\XAudio2_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Components\Console.cpp">
+      <Filter>Console shiz from codered\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Component.cpp">
+      <Filter>Console shiz from codered</Filter>
+    </ClCompile>
+    <ClCompile Include="Extensions\Filesystem.cpp">
+      <Filter>filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Extensions\Colors.cpp">
+      <Filter>filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\TFL_HT.cpp">
+      <Filter>RLSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="json\jsoncpp.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="Formatting.cpp">
+      <Filter>Console shiz from codered</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\AppData\Roaming\bakkesmod\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\includes.h">
+      <Filter>BMSDK\WRAPPERS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Roaming\bakkesmod\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h">
+      <Filter>BMSDK\WRAPPERS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Roaming\bakkesmod\bakkesmod\bakkesmodsdk\include\bakkesmod\core\bmcore.h">
+      <Filter>BMSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Roaming\bakkesmod\bakkesmod\bakkesmodsdk\include\utils\parser.h">
+      <Filter>BMSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_additions.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx11.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_rangeslider.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_searchablecombo.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_timeline.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imguivariouscontrols.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Voltage.hpp">
+      <Filter>Voltage</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\GameDefines.hpp">
+      <Filter>RLSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SdkHeaders.hpp">
+      <Filter>RLSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\Utils.hpp">
+      <Filter>RLSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\AkAudio_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\AkAudio_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\AkAudio_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\Core_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\Core_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\Core_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\Engine_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\Engine_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\Engine_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\GFxUI_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\GFxUI_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\GFxUI_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\IpDrv_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\IpDrv_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\IpDrv_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemEOS_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemEOS_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemEOS_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\ProjectX_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\ProjectX_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\ProjectX_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\TAGame_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\TAGame_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\TAGame_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\WinDrv_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\WinDrv_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\WinDrv_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\XAudio2_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\XAudio2_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\XAudio2_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Components\Console.hpp">
+      <Filter>Console shiz from codered\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Component.hpp">
+      <Filter>Console shiz from codered</Filter>
+    </ClInclude>
+    <ClInclude Include="Extensions\Filesystem.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\se_exception.h">
+      <Filter>RLSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\stringify.h">
+      <Filter>RLSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Extensions\Colors.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\TFL_HT.h">
+      <Filter>RLSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json\json.h">
+      <Filter>json\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json\json-forwards.h">
+      <Filter>json\json</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SdkConstants.hpp">
+      <Filter>RLSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Formatting.hpp">
+      <Filter>Console shiz from codered</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

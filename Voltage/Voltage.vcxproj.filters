@@ -93,9 +93,6 @@
     <ClCompile Include="RLSDK\SDK_HEADERS\OnlineSubsystemEOS_classes.cpp">
       <Filter>RLSDK\SDK_HEADERS</Filter>
     </ClCompile>
-    <ClCompile Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_classes.cpp">
-      <Filter>RLSDK\SDK_HEADERS</Filter>
-    </ClCompile>
     <ClCompile Include="RLSDK\SDK_HEADERS\ProjectX_classes.cpp">
       <Filter>RLSDK\SDK_HEADERS</Filter>
     </ClCompile>
@@ -128,6 +125,9 @@
     </ClCompile>
     <ClCompile Include="Formatting.cpp">
       <Filter>Console shiz from codered</Filter>
+    </ClCompile>
+    <ClCompile Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_classes.cpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -248,15 +248,6 @@
     <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemEOS_structs.hpp">
       <Filter>RLSDK\SDK_HEADERS</Filter>
     </ClInclude>
-    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_classes.hpp">
-      <Filter>RLSDK\SDK_HEADERS</Filter>
-    </ClInclude>
-    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_parameters.hpp">
-      <Filter>RLSDK\SDK_HEADERS</Filter>
-    </ClInclude>
-    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_structs.hpp">
-      <Filter>RLSDK\SDK_HEADERS</Filter>
-    </ClInclude>
     <ClInclude Include="RLSDK\SDK_HEADERS\ProjectX_classes.hpp">
       <Filter>RLSDK\SDK_HEADERS</Filter>
     </ClInclude>
@@ -320,11 +311,17 @@
     <ClInclude Include="json\json\json-forwards.h">
       <Filter>json\json</Filter>
     </ClInclude>
-    <ClInclude Include="RLSDK\SdkConstants.hpp">
-      <Filter>RLSDK</Filter>
-    </ClInclude>
     <ClInclude Include="Formatting.hpp">
       <Filter>Console shiz from codered</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_classes.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_parameters.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
+    </ClInclude>
+    <ClInclude Include="RLSDK\SDK_HEADERS\OnlineSubsystemSteamworks_structs.hpp">
+      <Filter>RLSDK\SDK_HEADERS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

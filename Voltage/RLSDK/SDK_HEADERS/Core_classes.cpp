@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: Core_classes.cpp
@@ -120,17 +120,32 @@ UObject* UObject::GetPackageObj()
 	return uPackage;
 }
 
-template<typename T> T* UObject::FindObject(char const* objectFullName)
+UClass* UObject::FindClass(const std::string& classFullName)
 {
-	for (UObject* uObject : *UObject::GObjObjects())
+	static bool initialized = false;
+	static std::map<const std::string, UClass*> foundClasses{};
+
+	if (!initialized)
 	{
-		if (uObject && uObject->IsA(T::StaticClass()))
+		for (UObject* uObject : *UObject::GObjObjects())
 		{
-			if (uObject->GetFullName() == objectFullName)
+			if (uObject)
 			{
-				return reinterpret_cast<T*>(uObject);
+				const std::string objectFullName = uObject->GetFullName();
+
+				if (objectFullName.find("Class") == 0)
+				{
+					foundClasses[objectFullName] = reinterpret_cast<UClass*>(uObject);
+				}
 			}
 		}
+
+		initialized = true;
+	}
+
+	if (foundClasses.find(classFullName) != foundClasses.end())
+	{
+		return foundClasses[classFullName];
 	}
 
 	return nullptr;
@@ -159,7 +174,7 @@ template<typename T> static unsigned int UObject::CountObject(char const* object
 	return countCache[objectName];
 }
 
-class UClass* UObject::FindClass(char const* classFullName)
+UClass* UObject::FindClass(char const* classFullName)
 {
 	static bool initialized = false;
 	static std::map<std::string, UClass*> foundClasses{};
@@ -242,7 +257,8 @@ struct FRotator UObject::RSmoothInterpTo(struct FRotator From, struct FRotator T
 
 	if (!pFnRSmoothInterpTo)
 	{
-		pFnRSmoothInterpTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RSMOOTHINTERPTO));
+		pFnRSmoothInterpTo = UFunction::FindFunction("Function Core.Object.RSmoothInterpTo");
+
 	}
 
 	UObject_execRSmoothInterpTo_Parms RSmoothInterpTo_Parms;
@@ -271,7 +287,8 @@ struct FVector UObject::VSmoothInterpTo(struct FVector From, struct FVector To, 
 
 	if (!pFnVSmoothInterpTo)
 	{
-		pFnVSmoothInterpTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VSMOOTHINTERPTO));
+		pFnVSmoothInterpTo = UFunction::FindFunction("Function Core.Object.VSmoothInterpTo");
+
 	}
 
 	UObject_execVSmoothInterpTo_Parms VSmoothInterpTo_Parms;
@@ -300,7 +317,8 @@ float UObject::FSmoothInterpTo(float From, float To, float Lambda, float DeltaTi
 
 	if (!pFnFSmoothInterpTo)
 	{
-		pFnFSmoothInterpTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FSMOOTHINTERPTO));
+		pFnFSmoothInterpTo = UFunction::FindFunction("Function Core.Object.FSmoothInterpTo");
+
 	}
 
 	UObject_execFSmoothInterpTo_Parms FSmoothInterpTo_Parms;
@@ -327,7 +345,8 @@ float UObject::GetSmoothInterpLerpValue(float Lambda, float DeltaTime)
 
 	if (!pFnGetSmoothInterpLerpValue)
 	{
-		pFnGetSmoothInterpLerpValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETSMOOTHINTERPLERPVALUE));
+		pFnGetSmoothInterpLerpValue = UFunction::FindFunction("Function Core.Object.GetSmoothInterpLerpValue");
+
 	}
 
 	UObject_execGetSmoothInterpLerpValue_Parms GetSmoothInterpLerpValue_Parms;
@@ -340,7 +359,7 @@ float UObject::GetSmoothInterpLerpValue(float Lambda, float DeltaTime)
 };
 
 // Function Core.Object.GetTypedOuter
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UClass*                  ObjClass                       (CPF_Parm)
@@ -351,7 +370,8 @@ class UObject* UObject::GetTypedOuter(class UClass* ObjClass)
 
 	if (!pFnGetTypedOuter)
 	{
-		pFnGetTypedOuter = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETTYPEDOUTER));
+		pFnGetTypedOuter = UFunction::FindFunction("Function Core.Object.GetTypedOuter");
+
 	}
 
 	UObject_execGetTypedOuter_Parms GetTypedOuter_Parms;
@@ -376,7 +396,8 @@ void UObject::MarkPendingKill()
 
 	if (!pFnMarkPendingKill)
 	{
-		pFnMarkPendingKill = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MARKPENDINGKILL));
+		pFnMarkPendingKill = UFunction::FindFunction("Function Core.Object.MarkPendingKill");
+
 	}
 
 	UObject_execMarkPendingKill_Parms MarkPendingKill_Parms;
@@ -389,7 +410,7 @@ void UObject::MarkPendingKill()
 };
 
 // Function Core.Object.NotNone
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UObject*                 O                              (CPF_Parm)
@@ -400,7 +421,8 @@ bool UObject::NotNone(class UObject* O)
 
 	if (!pFnNotNone)
 	{
-		pFnNotNone = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTNONE));
+		pFnNotNone = UFunction::FindFunction("Function Core.Object.NotNone");
+
 	}
 
 	UObject_execNotNone_Parms NotNone_Parms;
@@ -421,7 +443,8 @@ void UObject::SwapArrayItems()
 
 	if (!pFnSwapArrayItems)
 	{
-		pFnSwapArrayItems = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SWAPARRAYITEMS));
+		pFnSwapArrayItems = UFunction::FindFunction("Function Core.Object.SwapArrayItems");
+
 	}
 
 	UObject_execSwapArrayItems_Parms SwapArrayItems_Parms;
@@ -439,7 +462,8 @@ void UObject::Swap()
 
 	if (!pFnSwap)
 	{
-		pFnSwap = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SWAP));
+		pFnSwap = UFunction::FindFunction("Function Core.Object.Swap");
+
 	}
 
 	UObject_execSwap_Parms Swap_Parms;
@@ -460,7 +484,8 @@ float UObject::SumFloat(float Total, float Value)
 
 	if (!pFnSumFloat)
 	{
-		pFnSumFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUMFLOAT));
+		pFnSumFloat = UFunction::FindFunction("Function Core.Object.SumFloat");
+
 	}
 
 	UObject_execSumFloat_Parms SumFloat_Parms;
@@ -473,7 +498,7 @@ float UObject::SumFloat(float Total, float Value)
 };
 
 // Function Core.Object.SumInt
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            Total                          (CPF_Parm)
@@ -485,7 +510,8 @@ int UObject::SumInt(int Total, int Value)
 
 	if (!pFnSumInt)
 	{
-		pFnSumInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUMINT));
+		pFnSumInt = UFunction::FindFunction("Function Core.Object.SumInt");
+
 	}
 
 	UObject_execSumInt_Parms SumInt_Parms;
@@ -510,7 +536,8 @@ int UObject::SortDescendingFloat(float A, float B)
 
 	if (!pFnSortDescendingFloat)
 	{
-		pFnSortDescendingFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTDESCENDINGFLOAT));
+		pFnSortDescendingFloat = UFunction::FindFunction("Function Core.Object.SortDescendingFloat");
+
 	}
 
 	UObject_execSortDescendingFloat_Parms SortDescendingFloat_Parms;
@@ -535,7 +562,8 @@ int UObject::SortAscendingFloat(float A, float B)
 
 	if (!pFnSortAscendingFloat)
 	{
-		pFnSortAscendingFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTASCENDINGFLOAT));
+		pFnSortAscendingFloat = UFunction::FindFunction("Function Core.Object.SortAscendingFloat");
+
 	}
 
 	UObject_execSortAscendingFloat_Parms SortAscendingFloat_Parms;
@@ -560,7 +588,8 @@ int UObject::SortDescendingString(struct FString A, struct FString B)
 
 	if (!pFnSortDescendingString)
 	{
-		pFnSortDescendingString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTDESCENDINGSTRING));
+		pFnSortDescendingString = UFunction::FindFunction("Function Core.Object.SortDescendingString");
+
 	}
 
 	UObject_execSortDescendingString_Parms SortDescendingString_Parms;
@@ -573,7 +602,7 @@ int UObject::SortDescendingString(struct FString A, struct FString B)
 };
 
 // Function Core.Object.SortAscendingString
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 A                              (CPF_Parm | CPF_NeedCtorLink)
@@ -585,7 +614,8 @@ int UObject::SortAscendingString(struct FString A, struct FString B)
 
 	if (!pFnSortAscendingString)
 	{
-		pFnSortAscendingString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTASCENDINGSTRING));
+		pFnSortAscendingString = UFunction::FindFunction("Function Core.Object.SortAscendingString");
+
 	}
 
 	UObject_execSortAscendingString_Parms SortAscendingString_Parms;
@@ -610,7 +640,8 @@ int UObject::SortDescendingQWORD(unsigned long long A, unsigned long long B)
 
 	if (!pFnSortDescendingQWORD)
 	{
-		pFnSortDescendingQWORD = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTDESCENDINGQWORD));
+		pFnSortDescendingQWORD = UFunction::FindFunction("Function Core.Object.SortDescendingQWORD");
+
 	}
 
 	UObject_execSortDescendingQWORD_Parms SortDescendingQWORD_Parms;
@@ -623,7 +654,7 @@ int UObject::SortDescendingQWORD(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.SortAscendingQWORD
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -635,7 +666,8 @@ int UObject::SortAscendingQWORD(unsigned long long A, unsigned long long B)
 
 	if (!pFnSortAscendingQWORD)
 	{
-		pFnSortAscendingQWORD = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTASCENDINGQWORD));
+		pFnSortAscendingQWORD = UFunction::FindFunction("Function Core.Object.SortAscendingQWORD");
+
 	}
 
 	UObject_execSortAscendingQWORD_Parms SortAscendingQWORD_Parms;
@@ -660,7 +692,8 @@ int UObject::SortDescendingInt(int A, int B)
 
 	if (!pFnSortDescendingInt)
 	{
-		pFnSortDescendingInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTDESCENDINGINT));
+		pFnSortDescendingInt = UFunction::FindFunction("Function Core.Object.SortDescendingInt");
+
 	}
 
 	UObject_execSortDescendingInt_Parms SortDescendingInt_Parms;
@@ -685,7 +718,8 @@ int UObject::SortAscendingInt(int A, int B)
 
 	if (!pFnSortAscendingInt)
 	{
-		pFnSortAscendingInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SORTASCENDINGINT));
+		pFnSortAscendingInt = UFunction::FindFunction("Function Core.Object.SortAscendingInt");
+
 	}
 
 	UObject_execSortAscendingInt_Parms SortAscendingInt_Parms;
@@ -710,7 +744,8 @@ struct FString UObject::PadString(struct FString Str, int Characters)
 
 	if (!pFnPadString)
 	{
-		pFnPadString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PADSTRING));
+		pFnPadString = UFunction::FindFunction("Function Core.Object.PadString");
+
 	}
 
 	UObject_execPadString_Parms PadString_Parms;
@@ -733,7 +768,8 @@ unsigned long long UObject::GetFrameCounter()
 
 	if (!pFnGetFrameCounter)
 	{
-		pFnGetFrameCounter = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETFRAMECOUNTER));
+		pFnGetFrameCounter = UFunction::FindFunction("Function Core.Object.GetFrameCounter");
+
 	}
 
 	UObject_execGetFrameCounter_Parms GetFrameCounter_Parms;
@@ -761,7 +797,8 @@ float UObject::GetScaledAxisValue(float Value, float Sensitivity, float MaxSensi
 
 	if (!pFnGetScaledAxisValue)
 	{
-		pFnGetScaledAxisValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETSCALEDAXISVALUE));
+		pFnGetScaledAxisValue = UFunction::FindFunction("Function Core.Object.GetScaledAxisValue");
+
 	}
 
 	UObject_execGetScaledAxisValue_Parms GetScaledAxisValue_Parms;
@@ -779,7 +816,7 @@ float UObject::GetScaledAxisValue(float Value, float Sensitivity, float MaxSensi
 };
 
 // Function Core.Object.GetSingleton
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UClass*                  ObjClass                       (CPF_Parm)
@@ -790,7 +827,8 @@ class UObject* UObject::GetSingleton(class UClass* ObjClass)
 
 	if (!pFnGetSingleton)
 	{
-		pFnGetSingleton = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETSINGLETON));
+		pFnGetSingleton = UFunction::FindFunction("Function Core.Object.GetSingleton");
+
 	}
 
 	UObject_execGetSingleton_Parms GetSingleton_Parms;
@@ -806,7 +844,7 @@ class UObject* UObject::GetSingleton(class UClass* ObjClass)
 };
 
 // Function Core.Object.GetObjectProvider
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObjectProvider*         ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_EditInline)
 
@@ -816,7 +854,8 @@ class UObjectProvider* UObject::GetObjectProviderW()
 
 	if (!pFnGetObjectProviderW)
 	{
-		pFnGetObjectProviderW = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETOBJECTPROVIDER));
+		pFnGetObjectProviderW = UFunction::FindFunction("Function Core.Object.GetObjectProvider");
+
 	}
 
 	UObject_execGetObjectProviderW_Parms GetObjectProviderW_Parms;
@@ -841,7 +880,8 @@ bool UObject::IsAutomationTest()
 
 	if (!pFnIsAutomationTest)
 	{
-		pFnIsAutomationTest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISAUTOMATIONTEST));
+		pFnIsAutomationTest = UFunction::FindFunction("Function Core.Object.IsAutomationTest");
+
 	}
 
 	UObject_execIsAutomationTest_Parms IsAutomationTest_Parms;
@@ -856,7 +896,7 @@ bool UObject::IsAutomationTest()
 };
 
 // Function Core.Object.GetEdition
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -866,7 +906,8 @@ unsigned char UObject::GetEdition()
 
 	if (!pFnGetEdition)
 	{
-		pFnGetEdition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETEDITION));
+		pFnGetEdition = UFunction::FindFunction("Function Core.Object.GetEdition");
+
 	}
 
 	UObject_execGetEdition_Parms GetEdition_Parms;
@@ -881,7 +922,7 @@ unsigned char UObject::GetEdition()
 };
 
 // Function Core.Object.IsEdition
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  Edition                        (CPF_Parm)
@@ -892,7 +933,8 @@ bool UObject::IsEdition(unsigned char Edition)
 
 	if (!pFnIsEdition)
 	{
-		pFnIsEdition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISEDITION));
+		pFnIsEdition = UFunction::FindFunction("Function Core.Object.IsEdition");
+
 	}
 
 	UObject_execIsEdition_Parms IsEdition_Parms;
@@ -918,7 +960,8 @@ struct FString UObject::ToJson()
 
 	if (!pFnToJson)
 	{
-		pFnToJson = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TOJSON));
+		pFnToJson = UFunction::FindFunction("Function Core.Object.ToJson");
+
 	}
 
 	UObject_execToJson_Parms ToJson_Parms;
@@ -943,7 +986,8 @@ void UObject::SetRooted(unsigned long bRooted)
 
 	if (!pFnSetRooted)
 	{
-		pFnSetRooted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SETROOTED));
+		pFnSetRooted = UFunction::FindFunction("Function Core.Object.SetRooted");
+
 	}
 
 	UObject_execSetRooted_Parms SetRooted_Parms;
@@ -967,7 +1011,8 @@ void UObject::ProfNodeEvent(struct FString EventName)
 
 	if (!pFnProfNodeEvent)
 	{
-		pFnProfNodeEvent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PROFNODEEVENT));
+		pFnProfNodeEvent = UFunction::FindFunction("Function Core.Object.ProfNodeEvent");
+
 	}
 
 	UObject_execProfNodeEvent_Parms ProfNodeEvent_Parms;
@@ -991,7 +1036,8 @@ void UObject::ProfNodeSetDepthThreshold(int Depth)
 
 	if (!pFnProfNodeSetDepthThreshold)
 	{
-		pFnProfNodeSetDepthThreshold = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PROFNODESETDEPTHTHRESHOLD));
+		pFnProfNodeSetDepthThreshold = UFunction::FindFunction("Function Core.Object.ProfNodeSetDepthThreshold");
+
 	}
 
 	UObject_execProfNodeSetDepthThreshold_Parms ProfNodeSetDepthThreshold_Parms;
@@ -1015,7 +1061,8 @@ void UObject::ProfNodeSetTimeThresholdSeconds(float Threshold)
 
 	if (!pFnProfNodeSetTimeThresholdSeconds)
 	{
-		pFnProfNodeSetTimeThresholdSeconds = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PROFNODESETTIMETHRESHOLDSECONDS));
+		pFnProfNodeSetTimeThresholdSeconds = UFunction::FindFunction("Function Core.Object.ProfNodeSetTimeThresholdSeconds");
+
 	}
 
 	UObject_execProfNodeSetTimeThresholdSeconds_Parms ProfNodeSetTimeThresholdSeconds_Parms;
@@ -1039,7 +1086,8 @@ void UObject::ProfNodeStop(int AssumedTimerIndex)
 
 	if (!pFnProfNodeStop)
 	{
-		pFnProfNodeStop = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PROFNODESTOP));
+		pFnProfNodeStop = UFunction::FindFunction("Function Core.Object.ProfNodeStop");
+
 	}
 
 	UObject_execProfNodeStop_Parms ProfNodeStop_Parms;
@@ -1064,7 +1112,8 @@ int UObject::ProfNodeStart(struct FString TimerName)
 
 	if (!pFnProfNodeStart)
 	{
-		pFnProfNodeStart = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PROFNODESTART));
+		pFnProfNodeStart = UFunction::FindFunction("Function Core.Object.ProfNodeStart");
+
 	}
 
 	UObject_execProfNodeStart_Parms ProfNodeStart_Parms;
@@ -1080,7 +1129,7 @@ int UObject::ProfNodeStart(struct FString TimerName)
 };
 
 // Function Core.Object.CreateGuidString
-// [0x00822003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_HasDefaults | FUNC_AllFlags)
+// [0x00832003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasDefaults | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -1090,7 +1139,8 @@ struct FString UObject::CreateGuidString()
 
 	if (!pFnCreateGuidString)
 	{
-		pFnCreateGuidString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CREATEGUIDSTRING));
+		pFnCreateGuidString = UFunction::FindFunction("Function Core.Object.CreateGuidString");
+
 	}
 
 	UObject_execCreateGuidString_Parms CreateGuidString_Parms;
@@ -1101,7 +1151,7 @@ struct FString UObject::CreateGuidString()
 };
 
 // Function Core.Object.GetStringFromGuid
-// [0x00422401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00432401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FGuid                   InGuid                         (CPF_Const | CPF_Parm | CPF_OutParm)
@@ -1112,7 +1162,8 @@ struct FString UObject::GetStringFromGuid(struct FGuid& InGuid)
 
 	if (!pFnGetStringFromGuid)
 	{
-		pFnGetStringFromGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETSTRINGFROMGUID));
+		pFnGetStringFromGuid = UFunction::FindFunction("Function Core.Object.GetStringFromGuid");
+
 	}
 
 	UObject_execGetStringFromGuid_Parms GetStringFromGuid_Parms;
@@ -1139,7 +1190,8 @@ struct FGuid UObject::GetGuidFromString(struct FString& InGuidString)
 
 	if (!pFnGetGuidFromString)
 	{
-		pFnGetGuidFromString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETGUIDFROMSTRING));
+		pFnGetGuidFromString = UFunction::FindFunction("Function Core.Object.GetGuidFromString");
+
 	}
 
 	UObject_execGetGuidFromString_Parms GetGuidFromString_Parms;
@@ -1155,7 +1207,7 @@ struct FGuid UObject::GetGuidFromString(struct FString& InGuidString)
 };
 
 // Function Core.Object.CreateGuid
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FGuid                   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1165,7 +1217,8 @@ struct FGuid UObject::CreateGuid()
 
 	if (!pFnCreateGuid)
 	{
-		pFnCreateGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CREATEGUID));
+		pFnCreateGuid = UFunction::FindFunction("Function Core.Object.CreateGuid");
+
 	}
 
 	UObject_execCreateGuid_Parms CreateGuid_Parms;
@@ -1191,7 +1244,8 @@ bool UObject::IsGuidValid(struct FGuid& InGuid)
 
 	if (!pFnIsGuidValid)
 	{
-		pFnIsGuidValid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISGUIDVALID));
+		pFnIsGuidValid = UFunction::FindFunction("Function Core.Object.IsGuidValid");
+
 	}
 
 	UObject_execIsGuidValid_Parms IsGuidValid_Parms;
@@ -1217,7 +1271,8 @@ void UObject::InvalidateGuid(struct FGuid& InGuid)
 
 	if (!pFnInvalidateGuid)
 	{
-		pFnInvalidateGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_INVALIDATEGUID));
+		pFnInvalidateGuid = UFunction::FindFunction("Function Core.Object.InvalidateGuid");
+
 	}
 
 	UObject_execInvalidateGuid_Parms InvalidateGuid_Parms;
@@ -1244,7 +1299,8 @@ class UObject* UObject::FindStructProperty(class UClass* PropertyClass, struct F
 
 	if (!pFnFindStructProperty)
 	{
-		pFnFindStructProperty = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINDSTRUCTPROPERTY));
+		pFnFindStructProperty = UFunction::FindFunction("Function Core.Object.FindStructProperty");
+
 	}
 
 	UObject_execFindStructProperty_Parms FindStructProperty_Parms;
@@ -1274,7 +1330,8 @@ class UObject* UObject::FindProperty(class UClass* PropertyClass, struct FName P
 
 	if (!pFnFindProperty)
 	{
-		pFnFindProperty = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINDPROPERTY));
+		pFnFindProperty = UFunction::FindFunction("Function Core.Object.FindProperty");
+
 	}
 
 	UObject_execFindProperty_Parms FindProperty_Parms;
@@ -1291,7 +1348,7 @@ class UObject* UObject::FindProperty(class UClass* PropertyClass, struct FName P
 };
 
 // Function Core.Object.DuplicateObject
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UObject*                 Template                       (CPF_Parm)
@@ -1304,7 +1361,8 @@ class UObject* UObject::DuplicateObject(class UObject* Template, class UObject* 
 
 	if (!pFnDuplicateObject)
 	{
-		pFnDuplicateObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DUPLICATEOBJECT));
+		pFnDuplicateObject = UFunction::FindFunction("Function Core.Object.DuplicateObject");
+
 	}
 
 	UObject_execDuplicateObject_Parms DuplicateObject_Parms;
@@ -1322,7 +1380,7 @@ class UObject* UObject::DuplicateObject(class UObject* Template, class UObject* 
 };
 
 // Function Core.Object.RunningAverage
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // float                          OldAverage                     (CPF_Parm)
@@ -1335,7 +1393,8 @@ float UObject::RunningAverage(float OldAverage, float NewValue, int NewCount)
 
 	if (!pFnRunningAverage)
 	{
-		pFnRunningAverage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RUNNINGAVERAGE));
+		pFnRunningAverage = UFunction::FindFunction("Function Core.Object.RunningAverage");
+
 	}
 
 	UObject_execRunningAverage_Parms RunningAverage_Parms;
@@ -1353,7 +1412,7 @@ float UObject::RunningAverage(float OldAverage, float NewValue, int NewCount)
 };
 
 // Function Core.Object.GetCurrentTime
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1363,7 +1422,8 @@ float UObject::GetCurrentTimeW()
 
 	if (!pFnGetCurrentTimeW)
 	{
-		pFnGetCurrentTimeW = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETCURRENTTIME));
+		pFnGetCurrentTimeW = UFunction::FindFunction("Function Core.Object.GetCurrentTime");
+
 	}
 
 	UObject_execGetCurrentTimeW_Parms GetCurrentTimeW_Parms;
@@ -1389,7 +1449,8 @@ struct FLinearColor UObject::GetMaxLinearColorBrightness(struct FLinearColor C)
 
 	if (!pFnGetMaxLinearColorBrightness)
 	{
-		pFnGetMaxLinearColorBrightness = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETMAXLINEARCOLORBRIGHTNESS));
+		pFnGetMaxLinearColorBrightness = UFunction::FindFunction("Function Core.Object.GetMaxLinearColorBrightness");
+
 	}
 
 	UObject_execGetMaxLinearColorBrightness_Parms GetMaxLinearColorBrightness_Parms;
@@ -1416,7 +1477,8 @@ struct FColor UObject::GetMaxColorBrightness(struct FColor C)
 
 	if (!pFnGetMaxColorBrightness)
 	{
-		pFnGetMaxColorBrightness = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETMAXCOLORBRIGHTNESS));
+		pFnGetMaxColorBrightness = UFunction::FindFunction("Function Core.Object.GetMaxColorBrightness");
+
 	}
 
 	UObject_execGetMaxColorBrightness_Parms GetMaxColorBrightness_Parms;
@@ -1439,7 +1501,8 @@ struct FLinearColor UObject::LABtoRGB(struct FLinearColor C)
 
 	if (!pFnLABtoRGB)
 	{
-		pFnLABtoRGB = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LABTORGB));
+		pFnLABtoRGB = UFunction::FindFunction("Function Core.Object.LABtoRGB");
+
 	}
 
 	UObject_execLABtoRGB_Parms LABtoRGB_Parms;
@@ -1466,7 +1529,8 @@ struct FLinearColor UObject::RGBtoLAB(struct FLinearColor C)
 
 	if (!pFnRGBtoLAB)
 	{
-		pFnRGBtoLAB = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RGBTOLAB));
+		pFnRGBtoLAB = UFunction::FindFunction("Function Core.Object.RGBtoLAB");
+
 	}
 
 	UObject_execRGBtoLAB_Parms RGBtoLAB_Parms;
@@ -1482,7 +1546,7 @@ struct FLinearColor UObject::RGBtoLAB(struct FLinearColor C)
 };
 
 // Function Core.Object.HSVtoRGB
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FLinearColor            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FLinearColor            C                              (CPF_Parm)
@@ -1493,7 +1557,8 @@ struct FLinearColor UObject::HSVtoRGB(struct FLinearColor C)
 
 	if (!pFnHSVtoRGB)
 	{
-		pFnHSVtoRGB = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_HSVTORGB));
+		pFnHSVtoRGB = UFunction::FindFunction("Function Core.Object.HSVtoRGB");
+
 	}
 
 	UObject_execHSVtoRGB_Parms HSVtoRGB_Parms;
@@ -1509,7 +1574,7 @@ struct FLinearColor UObject::HSVtoRGB(struct FLinearColor C)
 };
 
 // Function Core.Object.RGBtoHSV
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FLinearColor            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FLinearColor            C                              (CPF_Parm)
@@ -1520,7 +1585,8 @@ struct FLinearColor UObject::RGBtoHSV(struct FLinearColor C)
 
 	if (!pFnRGBtoHSV)
 	{
-		pFnRGBtoHSV = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RGBTOHSV));
+		pFnRGBtoHSV = UFunction::FindFunction("Function Core.Object.RGBtoHSV");
+
 	}
 
 	UObject_execRGBtoHSV_Parms RGBtoHSV_Parms;
@@ -1547,7 +1613,8 @@ struct FLinearColor UObject::IntToLinearColor(int I)
 
 	if (!pFnIntToLinearColor)
 	{
-		pFnIntToLinearColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_INTTOLINEARCOLOR));
+		pFnIntToLinearColor = UFunction::FindFunction("Function Core.Object.IntToLinearColor");
+
 	}
 
 	UObject_execIntToLinearColor_Parms IntToLinearColor_Parms;
@@ -1559,7 +1626,7 @@ struct FLinearColor UObject::IntToLinearColor(int I)
 };
 
 // Function Core.Object.IntToColor
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FColor                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            I                              (CPF_Parm)
@@ -1570,7 +1637,8 @@ struct FColor UObject::IntToColor(int I)
 
 	if (!pFnIntToColor)
 	{
-		pFnIntToColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_INTTOCOLOR));
+		pFnIntToColor = UFunction::FindFunction("Function Core.Object.IntToColor");
+
 	}
 
 	UObject_execIntToColor_Parms IntToColor_Parms;
@@ -1586,7 +1654,7 @@ struct FColor UObject::IntToColor(int I)
 };
 
 // Function Core.Object.LinearColorToInt
-// [0x00022103] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetRequest | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032103] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetRequest | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FLinearColor            C                              (CPF_Parm)
@@ -1597,7 +1665,8 @@ int UObject::LinearColorToInt(struct FLinearColor C)
 
 	if (!pFnLinearColorToInt)
 	{
-		pFnLinearColorToInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LINEARCOLORTOINT));
+		pFnLinearColorToInt = UFunction::FindFunction("Function Core.Object.LinearColorToInt");
+
 	}
 
 	UObject_execLinearColorToInt_Parms LinearColorToInt_Parms;
@@ -1609,7 +1678,7 @@ int UObject::LinearColorToInt(struct FLinearColor C)
 };
 
 // Function Core.Object.ColorToInt
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FColor                  C                              (CPF_Parm)
@@ -1620,7 +1689,8 @@ int UObject::ColorToInt(struct FColor C)
 
 	if (!pFnColorToInt)
 	{
-		pFnColorToInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_COLORTOINT));
+		pFnColorToInt = UFunction::FindFunction("Function Core.Object.ColorToInt");
+
 	}
 
 	UObject_execColorToInt_Parms ColorToInt_Parms;
@@ -1650,7 +1720,8 @@ bool UObject::SolveVelocityQuadratic(float Distance, float Speed, float Accel, f
 
 	if (!pFnSolveVelocityQuadratic)
 	{
-		pFnSolveVelocityQuadratic = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SOLVEVELOCITYQUADRATIC));
+		pFnSolveVelocityQuadratic = UFunction::FindFunction("Function Core.Object.SolveVelocityQuadratic");
+
 	}
 
 	UObject_execSolveVelocityQuadratic_Parms SolveVelocityQuadratic_Parms;
@@ -1680,7 +1751,8 @@ float UObject::Sign(float X)
 
 	if (!pFnSign)
 	{
-		pFnSign = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SIGN));
+		pFnSign = UFunction::FindFunction("Function Core.Object.Sign");
+
 	}
 
 	UObject_execSign_Parms Sign_Parms;
@@ -1708,7 +1780,8 @@ struct FVector2D UObject::MakeVector2D(float X, float Y)
 
 	if (!pFnMakeVector2D)
 	{
-		pFnMakeVector2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKEVECTOR2D));
+		pFnMakeVector2D = UFunction::FindFunction("Function Core.Object.MakeVector2D");
+
 	}
 
 	UObject_execMakeVector2D_Parms MakeVector2D_Parms;
@@ -1732,7 +1805,8 @@ struct FVector UObject::VAbs(struct FVector V)
 
 	if (!pFnVAbs)
 	{
-		pFnVAbs = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VABS));
+		pFnVAbs = UFunction::FindFunction("Function Core.Object.VAbs");
+
 	}
 
 	UObject_execVAbs_Parms VAbs_Parms;
@@ -1757,7 +1831,8 @@ struct FVector UObject::MakeVector(float X, float Y, float Z)
 
 	if (!pFnMakeVector)
 	{
-		pFnMakeVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKEVECTOR));
+		pFnMakeVector = UFunction::FindFunction("Function Core.Object.MakeVector");
+
 	}
 
 	UObject_execMakeVector_Parms MakeVector_Parms;
@@ -1783,7 +1858,8 @@ struct FVector UObject::FlattenVector(struct FVector NormalToFlatten, struct FVe
 
 	if (!pFnFlattenVector)
 	{
-		pFnFlattenVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FLATTENVECTOR));
+		pFnFlattenVector = UFunction::FindFunction("Function Core.Object.FlattenVector");
+
 	}
 
 	UObject_execFlattenVector_Parms FlattenVector_Parms;
@@ -1796,7 +1872,7 @@ struct FVector UObject::FlattenVector(struct FVector NormalToFlatten, struct FVe
 };
 
 // Function Core.Object.GetRealArchetypeName
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FName                   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1806,7 +1882,8 @@ struct FName UObject::GetRealArchetypeName()
 
 	if (!pFnGetRealArchetypeName)
 	{
-		pFnGetRealArchetypeName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETREALARCHETYPENAME));
+		pFnGetRealArchetypeName = UFunction::FindFunction("Function Core.Object.GetRealArchetypeName");
+
 	}
 
 	UObject_execGetRealArchetypeName_Parms GetRealArchetypeName_Parms;
@@ -1832,7 +1909,8 @@ struct FString UObject::FormatTime(int Seconds)
 
 	if (!pFnFormatTime)
 	{
-		pFnFormatTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FORMATTIME));
+		pFnFormatTime = UFunction::FindFunction("Function Core.Object.FormatTime");
+
 	}
 
 	UObject_execFormatTime_Parms FormatTime_Parms;
@@ -1844,7 +1922,7 @@ struct FString UObject::FormatTime(int Seconds)
 };
 
 // Function Core.Object.GetTextArchetype
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UClass*                  ArchetypeClass                 (CPF_Parm)
@@ -1856,7 +1934,8 @@ class UObject* UObject::GetTextArchetype(class UClass* ArchetypeClass, struct FS
 
 	if (!pFnGetTextArchetype)
 	{
-		pFnGetTextArchetype = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETTEXTARCHETYPE));
+		pFnGetTextArchetype = UFunction::FindFunction("Function Core.Object.GetTextArchetype");
+
 	}
 
 	UObject_execGetTextArchetype_Parms GetTextArchetype_Parms;
@@ -1873,7 +1952,7 @@ class UObject* UObject::GetTextArchetype(class UClass* ArchetypeClass, struct FS
 };
 
 // Function Core.Object.IsArchetype
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1883,7 +1962,8 @@ bool UObject::IsArchetype()
 
 	if (!pFnIsArchetype)
 	{
-		pFnIsArchetype = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISARCHETYPE));
+		pFnIsArchetype = UFunction::FindFunction("Function Core.Object.IsArchetype");
+
 	}
 
 	UObject_execIsArchetype_Parms IsArchetype_Parms;
@@ -1907,7 +1987,8 @@ void UObject::UnsubscribeFromAllEvents()
 
 	if (!pFnUnsubscribeFromAllEvents)
 	{
-		pFnUnsubscribeFromAllEvents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_UNSUBSCRIBEFROMALLEVENTS));
+		pFnUnsubscribeFromAllEvents = UFunction::FindFunction("Function Core.Object.UnsubscribeFromAllEvents");
+
 	}
 
 	UObject_execUnsubscribeFromAllEvents_Parms UnsubscribeFromAllEvents_Parms;
@@ -1920,7 +2001,7 @@ void UObject::UnsubscribeFromAllEvents()
 };
 
 // Function Core.Object.NewInstance
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UObject*                 ObjOuter                       (CPF_OptionalParm | CPF_Parm)
@@ -1932,7 +2013,8 @@ class UObject* UObject::NewInstance(class UObject* ObjOuter, struct FName ObjNam
 
 	if (!pFnNewInstance)
 	{
-		pFnNewInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NEWINSTANCE));
+		pFnNewInstance = UFunction::FindFunction("Function Core.Object.NewInstance");
+
 	}
 
 	UObject_execNewInstance_Parms NewInstance_Parms;
@@ -1959,7 +2041,8 @@ void UObject::PrintDebugInfo(class UDebugDrawer* Drawer)
 
 	if (!pFnPrintDebugInfo)
 	{
-		pFnPrintDebugInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PRINTDEBUGINFO));
+		pFnPrintDebugInfo = UFunction::FindFunction("Function Core.Object.PrintDebugInfo");
+
 	}
 
 	UObject_execPrintDebugInfo_Parms PrintDebugInfo_Parms;
@@ -1980,7 +2063,8 @@ struct FRotator UObject::RotatorFromInt(int RotationPitchAndYaw)
 
 	if (!pFnRotatorFromInt)
 	{
-		pFnRotatorFromInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ROTATORFROMINT));
+		pFnRotatorFromInt = UFunction::FindFunction("Function Core.Object.RotatorFromInt");
+
 	}
 
 	UObject_execRotatorFromInt_Parms RotatorFromInt_Parms;
@@ -2003,7 +2087,8 @@ int UObject::RotatorToInt(struct FRotator Rotation)
 
 	if (!pFnRotatorToInt)
 	{
-		pFnRotatorToInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ROTATORTOINT));
+		pFnRotatorToInt = UFunction::FindFunction("Function Core.Object.RotatorToInt");
+
 	}
 
 	UObject_execRotatorToInt_Parms RotatorToInt_Parms;
@@ -2015,7 +2100,7 @@ int UObject::RotatorToInt(struct FRotator Rotation)
 };
 
 // Function Core.Object.GetLanguage
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -2025,7 +2110,8 @@ struct FString UObject::GetLanguage()
 
 	if (!pFnGetLanguage)
 	{
-		pFnGetLanguage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETLANGUAGE));
+		pFnGetLanguage = UFunction::FindFunction("Function Core.Object.GetLanguage");
+
 	}
 
 	UObject_execGetLanguage_Parms GetLanguage_Parms;
@@ -2051,7 +2137,8 @@ int UObject::GetRandomOptionSumFrequency(TArray<float>& FreqList)
 
 	if (!pFnGetRandomOptionSumFrequency)
 	{
-		pFnGetRandomOptionSumFrequency = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETRANDOMOPTIONSUMFREQUENCY));
+		pFnGetRandomOptionSumFrequency = UFunction::FindFunction("Function Core.Object.GetRandomOptionSumFrequency");
+
 	}
 
 	UObject_execGetRandomOptionSumFrequency_Parms GetRandomOptionSumFrequency_Parms;
@@ -2073,7 +2160,8 @@ int UObject::GetBuildChangelistNumber()
 
 	if (!pFnGetBuildChangelistNumber)
 	{
-		pFnGetBuildChangelistNumber = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETBUILDCHANGELISTNUMBER));
+		pFnGetBuildChangelistNumber = UFunction::FindFunction("Function Core.Object.GetBuildChangelistNumber");
+
 	}
 
 	UObject_execGetBuildChangelistNumber_Parms GetBuildChangelistNumber_Parms;
@@ -2098,7 +2186,8 @@ int UObject::GetEngineVersion()
 
 	if (!pFnGetEngineVersion)
 	{
-		pFnGetEngineVersion = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETENGINEVERSION));
+		pFnGetEngineVersion = UFunction::FindFunction("Function Core.Object.GetEngineVersion");
+
 	}
 
 	UObject_execGetEngineVersion_Parms GetEngineVersion_Parms;
@@ -2113,7 +2202,7 @@ int UObject::GetEngineVersion()
 };
 
 // Function Core.Object.GetAppSeconds
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -2123,7 +2212,8 @@ float UObject::GetAppSeconds()
 
 	if (!pFnGetAppSeconds)
 	{
-		pFnGetAppSeconds = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETAPPSECONDS));
+		pFnGetAppSeconds = UFunction::FindFunction("Function Core.Object.GetAppSeconds");
+
 	}
 
 	UObject_execGetAppSeconds_Parms GetAppSeconds_Parms;
@@ -2155,7 +2245,8 @@ void UObject::GetSystemTime(int& Year, int& Month, int& DayOfWeek, int& Day, int
 
 	if (!pFnGetSystemTime)
 	{
-		pFnGetSystemTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETSYSTEMTIME));
+		pFnGetSystemTime = UFunction::FindFunction("Function Core.Object.GetSystemTime");
+
 	}
 
 	UObject_execGetSystemTime_Parms GetSystemTime_Parms;
@@ -2186,7 +2277,8 @@ struct FString UObject::TimeStamp()
 
 	if (!pFnTimeStamp)
 	{
-		pFnTimeStamp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TIMESTAMP));
+		pFnTimeStamp = UFunction::FindFunction("Function Core.Object.TimeStamp");
+
 	}
 
 	UObject_execTimeStamp_Parms TimeStamp_Parms;
@@ -2214,7 +2306,8 @@ struct FVector UObject::TransformVectorByRotation(struct FRotator SourceRotation
 
 	if (!pFnTransformVectorByRotation)
 	{
-		pFnTransformVectorByRotation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TRANSFORMVECTORBYROTATION));
+		pFnTransformVectorByRotation = UFunction::FindFunction("Function Core.Object.TransformVectorByRotation");
+
 	}
 
 	UObject_execTransformVectorByRotation_Parms TransformVectorByRotation_Parms;
@@ -2242,7 +2335,8 @@ struct FName UObject::GetPackageName()
 
 	if (!pFnGetPackageName)
 	{
-		pFnGetPackageName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETPACKAGENAME));
+		pFnGetPackageName = UFunction::FindFunction("Function Core.Object.GetPackageName");
+
 	}
 
 	UObject_execGetPackageName_Parms GetPackageName_Parms;
@@ -2263,7 +2357,8 @@ bool UObject::IsPendingKill()
 
 	if (!pFnIsPendingKill)
 	{
-		pFnIsPendingKill = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISPENDINGKILL));
+		pFnIsPendingKill = UFunction::FindFunction("Function Core.Object.IsPendingKill");
+
 	}
 
 	UObject_execIsPendingKill_Parms IsPendingKill_Parms;
@@ -2278,7 +2373,7 @@ bool UObject::IsPendingKill()
 };
 
 // Function Core.Object.RangeByteToFloatUnsigned
-// [0x00020501] (FUNC_Final | FUNC_NetRequest | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030501] (FUNC_Final | FUNC_NetRequest | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  inputByte                      (CPF_Parm)
@@ -2289,7 +2384,8 @@ float UObject::RangeByteToFloatUnsigned(unsigned char inputByte)
 
 	if (!pFnRangeByteToFloatUnsigned)
 	{
-		pFnRangeByteToFloatUnsigned = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RANGEBYTETOFLOATUNSIGNED));
+		pFnRangeByteToFloatUnsigned = UFunction::FindFunction("Function Core.Object.RangeByteToFloatUnsigned");
+
 	}
 
 	UObject_execRangeByteToFloatUnsigned_Parms RangeByteToFloatUnsigned_Parms;
@@ -2316,7 +2412,8 @@ float UObject::RangeByteToFloatSigned(unsigned char inputByte)
 
 	if (!pFnRangeByteToFloatSigned)
 	{
-		pFnRangeByteToFloatSigned = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RANGEBYTETOFLOATSIGNED));
+		pFnRangeByteToFloatSigned = UFunction::FindFunction("Function Core.Object.RangeByteToFloatSigned");
+
 	}
 
 	UObject_execRangeByteToFloatSigned_Parms RangeByteToFloatSigned_Parms;
@@ -2343,7 +2440,8 @@ unsigned char UObject::FloatToRangeByteUnsigned(float inputFloat)
 
 	if (!pFnFloatToRangeByteUnsigned)
 	{
-		pFnFloatToRangeByteUnsigned = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FLOATTORANGEBYTEUNSIGNED));
+		pFnFloatToRangeByteUnsigned = UFunction::FindFunction("Function Core.Object.FloatToRangeByteUnsigned");
+
 	}
 
 	UObject_execFloatToRangeByteUnsigned_Parms FloatToRangeByteUnsigned_Parms;
@@ -2370,7 +2468,8 @@ unsigned char UObject::FloatToRangeByteSigned(float inputFloat)
 
 	if (!pFnFloatToRangeByteSigned)
 	{
-		pFnFloatToRangeByteSigned = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FLOATTORANGEBYTESIGNED));
+		pFnFloatToRangeByteSigned = UFunction::FindFunction("Function Core.Object.FloatToRangeByteSigned");
+
 	}
 
 	UObject_execFloatToRangeByteSigned_Parms FloatToRangeByteSigned_Parms;
@@ -2397,7 +2496,8 @@ float UObject::UnwindHeading(float A)
 
 	if (!pFnUnwindHeading)
 	{
-		pFnUnwindHeading = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_UNWINDHEADING));
+		pFnUnwindHeading = UFunction::FindFunction("Function Core.Object.UnwindHeading");
+
 	}
 
 	UObject_execUnwindHeading_Parms UnwindHeading_Parms;
@@ -2421,7 +2521,8 @@ float UObject::FindDeltaAngle(float A1, float A2)
 
 	if (!pFnFindDeltaAngle)
 	{
-		pFnFindDeltaAngle = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINDDELTAANGLE));
+		pFnFindDeltaAngle = UFunction::FindFunction("Function Core.Object.FindDeltaAngle");
+
 	}
 
 	UObject_execFindDeltaAngle_Parms FindDeltaAngle_Parms;
@@ -2445,7 +2546,8 @@ float UObject::GetHeadingAngle(struct FVector Dir)
 
 	if (!pFnGetHeadingAngle)
 	{
-		pFnGetHeadingAngle = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETHEADINGANGLE));
+		pFnGetHeadingAngle = UFunction::FindFunction("Function Core.Object.GetHeadingAngle");
+
 	}
 
 	UObject_execGetHeadingAngle_Parms GetHeadingAngle_Parms;
@@ -2467,7 +2569,8 @@ void UObject::GetAngularDegreesFromRadians(struct FVector2D& OutFOV)
 
 	if (!pFnGetAngularDegreesFromRadians)
 	{
-		pFnGetAngularDegreesFromRadians = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETANGULARDEGREESFROMRADIANS));
+		pFnGetAngularDegreesFromRadians = UFunction::FindFunction("Function Core.Object.GetAngularDegreesFromRadians");
+
 	}
 
 	UObject_execGetAngularDegreesFromRadians_Parms GetAngularDegreesFromRadians_Parms;
@@ -2488,7 +2591,8 @@ void UObject::GetAngularFromDotDist(struct FVector2D DotDist, struct FVector2D& 
 
 	if (!pFnGetAngularFromDotDist)
 	{
-		pFnGetAngularFromDotDist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETANGULARFROMDOTDIST));
+		pFnGetAngularFromDotDist = UFunction::FindFunction("Function Core.Object.GetAngularFromDotDist");
+
 	}
 
 	UObject_execGetAngularFromDotDist_Parms GetAngularFromDotDist_Parms;
@@ -2518,7 +2622,8 @@ bool UObject::GetAngularDistance(struct FVector Direction, struct FVector AxisX,
 
 	if (!pFnGetAngularDistance)
 	{
-		pFnGetAngularDistance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETANGULARDISTANCE));
+		pFnGetAngularDistance = UFunction::FindFunction("Function Core.Object.GetAngularDistance");
+
 	}
 
 	UObject_execGetAngularDistance_Parms GetAngularDistance_Parms;
@@ -2553,7 +2658,8 @@ bool UObject::GetDotDistance(struct FVector Direction, struct FVector AxisX, str
 
 	if (!pFnGetDotDistance)
 	{
-		pFnGetDotDistance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETDOTDISTANCE));
+		pFnGetDotDistance = UFunction::FindFunction("Function Core.Object.GetDotDistance");
+
 	}
 
 	UObject_execGetDotDistance_Parms GetDotDistance_Parms;
@@ -2590,7 +2696,8 @@ bool UObject::LinePlaneIntersection(struct FVector LineStart, struct FVector Lin
 
 	if (!pFnLinePlaneIntersection)
 	{
-		pFnLinePlaneIntersection = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LINEPLANEINTERSECTION));
+		pFnLinePlaneIntersection = UFunction::FindFunction("Function Core.Object.LinePlaneIntersection");
+
 	}
 
 	UObject_execLinePlaneIntersection_Parms LinePlaneIntersection_Parms;
@@ -2622,7 +2729,8 @@ struct FVector UObject::PointProjectToPlane(struct FVector Point, struct FVector
 
 	if (!pFnPointProjectToPlane)
 	{
-		pFnPointProjectToPlane = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_POINTPROJECTTOPLANE));
+		pFnPointProjectToPlane = UFunction::FindFunction("Function Core.Object.PointProjectToPlane");
+
 	}
 
 	UObject_execPointProjectToPlane_Parms PointProjectToPlane_Parms;
@@ -2655,7 +2763,8 @@ float UObject::PointDistToPlane(struct FVector Point, struct FRotator Orientatio
 
 	if (!pFnPointDistToPlane)
 	{
-		pFnPointDistToPlane = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_POINTDISTTOPLANE));
+		pFnPointDistToPlane = UFunction::FindFunction("Function Core.Object.PointDistToPlane");
+
 	}
 
 	UObject_execPointDistToPlane_Parms PointDistToPlane_Parms;
@@ -2684,7 +2793,8 @@ float UObject::PointDistToSegment(struct FVector Point, struct FVector StartPoin
 
 	if (!pFnPointDistToSegment)
 	{
-		pFnPointDistToSegment = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_POINTDISTTOSEGMENT));
+		pFnPointDistToSegment = UFunction::FindFunction("Function Core.Object.PointDistToSegment");
+
 	}
 
 	UObject_execPointDistToSegment_Parms PointDistToSegment_Parms;
@@ -2717,7 +2827,8 @@ float UObject::PointDistToLine(struct FVector Point, struct FVector Line, struct
 
 	if (!pFnPointDistToLine)
 	{
-		pFnPointDistToLine = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_POINTDISTTOLINE));
+		pFnPointDistToLine = UFunction::FindFunction("Function Core.Object.PointDistToLine");
+
 	}
 
 	UObject_execPointDistToLine_Parms PointDistToLine_Parms;
@@ -2749,7 +2860,8 @@ void UObject::GetPerObjectConfigObjects(class UClass* SearchClass, class UObject
 
 	if (!pFnGetPerObjectConfigObjects)
 	{
-		pFnGetPerObjectConfigObjects = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETPEROBJECTCONFIGOBJECTS));
+		pFnGetPerObjectConfigObjects = UFunction::FindFunction("Function Core.Object.GetPerObjectConfigObjects");
+
 	}
 
 	UObject_execGetPerObjectConfigObjects_Parms GetPerObjectConfigObjects_Parms;
@@ -2780,7 +2892,8 @@ bool UObject::GetPerObjectConfigSections(class UClass* SearchClass, class UObjec
 
 	if (!pFnGetPerObjectConfigSections)
 	{
-		pFnGetPerObjectConfigSections = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETPEROBJECTCONFIGSECTIONS));
+		pFnGetPerObjectConfigSections = UFunction::FindFunction("Function Core.Object.GetPerObjectConfigSections");
+
 	}
 
 	UObject_execGetPerObjectConfigSections_Parms GetPerObjectConfigSections_Parms;
@@ -2810,7 +2923,8 @@ void UObject::ImportJSON(struct FString PropertyName, struct FString& JSON)
 
 	if (!pFnImportJSON)
 	{
-		pFnImportJSON = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_IMPORTJSON));
+		pFnImportJSON = UFunction::FindFunction("Function Core.Object.ImportJSON");
+
 	}
 
 	UObject_execImportJSON_Parms ImportJSON_Parms;
@@ -2834,7 +2948,8 @@ void UObject::StaticSaveConfig()
 
 	if (!pFnStaticSaveConfig)
 	{
-		pFnStaticSaveConfig = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_STATICSAVECONFIG));
+		pFnStaticSaveConfig = UFunction::FindFunction("Function Core.Object.StaticSaveConfig");
+
 	}
 
 	UObject_execStaticSaveConfig_Parms StaticSaveConfig_Parms;
@@ -2856,7 +2971,8 @@ void UObject::SaveConfig()
 
 	if (!pFnSaveConfig)
 	{
-		pFnSaveConfig = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SAVECONFIG));
+		pFnSaveConfig = UFunction::FindFunction("Function Core.Object.SaveConfig");
+
 	}
 
 	UObject_execSaveConfig_Parms SaveConfig_Parms;
@@ -2881,7 +2997,8 @@ class UObject* UObject::LoadSeekFreeObject(class UClass* ObjClass, struct FStrin
 
 	if (!pFnLoadSeekFreeObject)
 	{
-		pFnLoadSeekFreeObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LOADSEEKFREEOBJECT));
+		pFnLoadSeekFreeObject = UFunction::FindFunction("Function Core.Object.LoadSeekFreeObject");
+
 	}
 
 	UObject_execLoadSeekFreeObject_Parms LoadSeekFreeObject_Parms;
@@ -2898,7 +3015,7 @@ class UObject* UObject::LoadSeekFreeObject(class UClass* ObjClass, struct FStrin
 };
 
 // Function Core.Object.FindObject
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 ObjectName                     (CPF_Parm | CPF_NeedCtorLink)
@@ -2910,7 +3027,8 @@ class UObject* UObject::FindObject(struct FString ObjectName, class UClass* Obje
 
 	if (!pFnFindObject)
 	{
-		pFnFindObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINDOBJECT));
+		pFnFindObject = UFunction::FindFunction("Function Core.Object.FindObject");
+
 	}
 
 	UObject_execFindObject_Parms FindObject_Parms;
@@ -2927,7 +3045,7 @@ class UObject* UObject::FindObject(struct FString ObjectName, class UClass* Obje
 };
 
 // Function Core.Object.DynamicLoadObject
-// [0x00026401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00036401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 ObjectName                     (CPF_Parm | CPF_NeedCtorLink)
@@ -2940,7 +3058,8 @@ class UObject* UObject::DynamicLoadObject(struct FString ObjectName, class UClas
 
 	if (!pFnDynamicLoadObject)
 	{
-		pFnDynamicLoadObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DYNAMICLOADOBJECT));
+		pFnDynamicLoadObject = UFunction::FindFunction("Function Core.Object.DynamicLoadObject");
+
 	}
 
 	UObject_execDynamicLoadObject_Parms DynamicLoadObject_Parms;
@@ -2958,7 +3077,7 @@ class UObject* UObject::DynamicLoadObject(struct FString ObjectName, class UClas
 };
 
 // Function Core.Object.EnumFromString
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UObject*                 E                              (CPF_Parm)
@@ -2970,7 +3089,8 @@ int UObject::EnumFromString(class UObject* E, struct FName ValueName)
 
 	if (!pFnEnumFromString)
 	{
-		pFnEnumFromString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ENUMFROMSTRING));
+		pFnEnumFromString = UFunction::FindFunction("Function Core.Object.EnumFromString");
+
 	}
 
 	UObject_execEnumFromString_Parms EnumFromString_Parms;
@@ -2987,7 +3107,7 @@ int UObject::EnumFromString(class UObject* E, struct FName ValueName)
 };
 
 // Function Core.Object.GetEnum
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FName                   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UObject*                 E                              (CPF_Parm)
@@ -2999,7 +3119,8 @@ struct FName UObject::GetEnum(class UObject* E, int I)
 
 	if (!pFnGetEnum)
 	{
-		pFnGetEnum = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETENUM));
+		pFnGetEnum = UFunction::FindFunction("Function Core.Object.GetEnum");
+
 	}
 
 	UObject_execGetEnum_Parms GetEnum_Parms;
@@ -3026,7 +3147,8 @@ void UObject::Disable(struct FName ProbeFunc)
 
 	if (!pFnDisable)
 	{
-		pFnDisable = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DISABLE));
+		pFnDisable = UFunction::FindFunction("Function Core.Object.Disable");
+
 	}
 
 	UObject_execDisable_Parms Disable_Parms;
@@ -3050,7 +3172,8 @@ void UObject::Enable(struct FName ProbeFunc)
 
 	if (!pFnEnable)
 	{
-		pFnEnable = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ENABLE));
+		pFnEnable = UFunction::FindFunction("Function Core.Object.Enable");
+
 	}
 
 	UObject_execEnable_Parms Enable_Parms;
@@ -3073,7 +3196,8 @@ void UObject::eventContinuedState()
 
 	if (!pFnContinuedState)
 	{
-		pFnContinuedState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CONTINUEDSTATE));
+		pFnContinuedState = UFunction::FindFunction("Function Core.Object.ContinuedState");
+
 	}
 
 	UObject_eventContinuedState_Parms ContinuedState_Parms;
@@ -3091,7 +3215,8 @@ void UObject::eventPausedState()
 
 	if (!pFnPausedState)
 	{
-		pFnPausedState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PAUSEDSTATE));
+		pFnPausedState = UFunction::FindFunction("Function Core.Object.PausedState");
+
 	}
 
 	UObject_eventPausedState_Parms PausedState_Parms;
@@ -3109,7 +3234,8 @@ void UObject::eventPoppedState()
 
 	if (!pFnPoppedState)
 	{
-		pFnPoppedState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_POPPEDSTATE));
+		pFnPoppedState = UFunction::FindFunction("Function Core.Object.PoppedState");
+
 	}
 
 	UObject_eventPoppedState_Parms PoppedState_Parms;
@@ -3127,7 +3253,8 @@ void UObject::eventPushedState()
 
 	if (!pFnPushedState)
 	{
-		pFnPushedState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PUSHEDSTATE));
+		pFnPushedState = UFunction::FindFunction("Function Core.Object.PushedState");
+
 	}
 
 	UObject_eventPushedState_Parms PushedState_Parms;
@@ -3136,7 +3263,7 @@ void UObject::eventPushedState()
 };
 
 // Function Core.Object.EndState
-// [0x00020800] (FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030800] (FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FName                   NextStateName                  (CPF_Parm)
 
@@ -3146,7 +3273,8 @@ void UObject::eventEndState(struct FName NextStateName)
 
 	if (!pFnEndState)
 	{
-		pFnEndState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ENDSTATE));
+		pFnEndState = UFunction::FindFunction("Function Core.Object.EndState");
+
 	}
 
 	UObject_eventEndState_Parms EndState_Parms;
@@ -3166,7 +3294,8 @@ void UObject::eventBeginState(struct FName PreviousStateName)
 
 	if (!pFnBeginState)
 	{
-		pFnBeginState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_BEGINSTATE));
+		pFnBeginState = UFunction::FindFunction("Function Core.Object.BeginState");
+
 	}
 
 	UObject_eventBeginState_Parms BeginState_Parms;
@@ -3185,7 +3314,8 @@ void UObject::DumpStateStack()
 
 	if (!pFnDumpStateStack)
 	{
-		pFnDumpStateStack = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DUMPSTATESTACK));
+		pFnDumpStateStack = UFunction::FindFunction("Function Core.Object.DumpStateStack");
+
 	}
 
 	UObject_execDumpStateStack_Parms DumpStateStack_Parms;
@@ -3208,7 +3338,8 @@ void UObject::PopState(unsigned long bPopAll)
 
 	if (!pFnPopState)
 	{
-		pFnPopState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_POPSTATE));
+		pFnPopState = UFunction::FindFunction("Function Core.Object.PopState");
+
 	}
 
 	UObject_execPopState_Parms PopState_Parms;
@@ -3233,7 +3364,8 @@ void UObject::PushState(struct FName NewState, struct FName NewLabel)
 
 	if (!pFnPushState)
 	{
-		pFnPushState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PUSHSTATE));
+		pFnPushState = UFunction::FindFunction("Function Core.Object.PushState");
+
 	}
 
 	UObject_execPushState_Parms PushState_Parms;
@@ -3258,7 +3390,8 @@ struct FName UObject::GetStateName()
 
 	if (!pFnGetStateName)
 	{
-		pFnGetStateName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETSTATENAME));
+		pFnGetStateName = UFunction::FindFunction("Function Core.Object.GetStateName");
+
 	}
 
 	UObject_execGetStateName_Parms GetStateName_Parms;
@@ -3285,7 +3418,8 @@ bool UObject::IsChildState(struct FName TestState, struct FName TestParentState)
 
 	if (!pFnIsChildState)
 	{
-		pFnIsChildState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISCHILDSTATE));
+		pFnIsChildState = UFunction::FindFunction("Function Core.Object.IsChildState");
+
 	}
 
 	UObject_execIsChildState_Parms IsChildState_Parms;
@@ -3314,7 +3448,8 @@ bool UObject::IsInState(struct FName TestState, unsigned long bTestStateStack)
 
 	if (!pFnIsInState)
 	{
-		pFnIsInState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISINSTATE));
+		pFnIsInState = UFunction::FindFunction("Function Core.Object.IsInState");
+
 	}
 
 	UObject_execIsInState_Parms IsInState_Parms;
@@ -3344,7 +3479,8 @@ void UObject::GotoState(struct FName NewState, struct FName Label, unsigned long
 
 	if (!pFnGotoState)
 	{
-		pFnGotoState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GOTOSTATE));
+		pFnGotoState = UFunction::FindFunction("Function Core.Object.GotoState");
+
 	}
 
 	UObject_execGotoState_Parms GotoState_Parms;
@@ -3371,7 +3507,8 @@ bool UObject::IsUTracing()
 
 	if (!pFnIsUTracing)
 	{
-		pFnIsUTracing = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISUTRACING));
+		pFnIsUTracing = UFunction::FindFunction("Function Core.Object.IsUTracing");
+
 	}
 
 	UObject_execIsUTracing_Parms IsUTracing_Parms;
@@ -3396,7 +3533,8 @@ void UObject::SetUTracing(unsigned long bShouldUTrace)
 
 	if (!pFnSetUTracing)
 	{
-		pFnSetUTracing = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SETUTRACING));
+		pFnSetUTracing = UFunction::FindFunction("Function Core.Object.SetUTracing");
+
 	}
 
 	UObject_execSetUTracing_Parms SetUTracing_Parms;
@@ -3410,7 +3548,7 @@ void UObject::SetUTracing(unsigned long bShouldUTrace)
 };
 
 // Function Core.Object.GetFuncName
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FName                   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -3420,7 +3558,8 @@ struct FName UObject::GetFuncName()
 
 	if (!pFnGetFuncName)
 	{
-		pFnGetFuncName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETFUNCNAME));
+		pFnGetFuncName = UFunction::FindFunction("Function Core.Object.GetFuncName");
+
 	}
 
 	UObject_execGetFuncName_Parms GetFuncName_Parms;
@@ -3446,7 +3585,8 @@ void UObject::DebugBreak(int UserFlags, unsigned char DebuggerType)
 
 	if (!pFnDebugBreak)
 	{
-		pFnDebugBreak = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DEBUGBREAK));
+		pFnDebugBreak = UFunction::FindFunction("Function Core.Object.DebugBreak");
+
 	}
 
 	UObject_execDebugBreak_Parms DebugBreak_Parms;
@@ -3471,7 +3611,8 @@ struct FString UObject::GetScriptTrace()
 
 	if (!pFnGetScriptTrace)
 	{
-		pFnGetScriptTrace = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETSCRIPTTRACE));
+		pFnGetScriptTrace = UFunction::FindFunction("Function Core.Object.GetScriptTrace");
+
 	}
 
 	UObject_execGetScriptTrace_Parms GetScriptTrace_Parms;
@@ -3495,7 +3636,8 @@ void UObject::ScriptTrace()
 
 	if (!pFnScriptTrace)
 	{
-		pFnScriptTrace = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SCRIPTTRACE));
+		pFnScriptTrace = UFunction::FindFunction("Function Core.Object.ScriptTrace");
+
 	}
 
 	UObject_execScriptTrace_Parms ScriptTrace_Parms;
@@ -3519,7 +3661,8 @@ struct FString UObject::ParseLocalizedPropertyPath(struct FString PathName)
 
 	if (!pFnParseLocalizedPropertyPath)
 	{
-		pFnParseLocalizedPropertyPath = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PARSELOCALIZEDPROPERTYPATH));
+		pFnParseLocalizedPropertyPath = UFunction::FindFunction("Function Core.Object.ParseLocalizedPropertyPath");
+
 	}
 
 	UObject_execParseLocalizedPropertyPath_Parms ParseLocalizedPropertyPath_Parms;
@@ -3531,7 +3674,7 @@ struct FString UObject::ParseLocalizedPropertyPath(struct FString PathName)
 };
 
 // Function Core.Object.Localize
-// [0x00026401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00036401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 SectionName                    (CPF_Parm | CPF_CoerceParm | CPF_NeedCtorLink)
@@ -3545,7 +3688,8 @@ struct FString UObject::Localize(struct FString SectionName, struct FString KeyN
 
 	if (!pFnLocalize)
 	{
-		pFnLocalize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LOCALIZE));
+		pFnLocalize = UFunction::FindFunction("Function Core.Object.Localize");
+
 	}
 
 	UObject_execLocalize_Parms Localize_Parms;
@@ -3574,7 +3718,8 @@ void UObject::WarnInternal(struct FString S)
 
 	if (!pFnWarnInternal)
 	{
-		pFnWarnInternal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_WARNINTERNAL));
+		pFnWarnInternal = UFunction::FindFunction("Function Core.Object.WarnInternal");
+
 	}
 
 	UObject_execWarnInternal_Parms WarnInternal_Parms;
@@ -3600,7 +3745,8 @@ void UObject::LogInternal(struct FString S, struct FName Tag, unsigned long bFil
 
 	if (!pFnLogInternal)
 	{
-		pFnLogInternal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LOGINTERNAL));
+		pFnLogInternal = UFunction::FindFunction("Function Core.Object.LogInternal");
+
 	}
 
 	UObject_execLogInternal_Parms LogInternal_Parms;
@@ -3629,7 +3775,8 @@ struct FLinearColor UObject::LinearColorLerp(struct FLinearColor ColorA, struct 
 
 	if (!pFnLinearColorLerp)
 	{
-		pFnLinearColorLerp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LINEARCOLORLERP));
+		pFnLinearColorLerp = UFunction::FindFunction("Function Core.Object.LinearColorLerp");
+
 	}
 
 	UObject_execLinearColorLerp_Parms LinearColorLerp_Parms;
@@ -3655,7 +3802,8 @@ struct FLinearColor UObject::Subtract_LinearColorLinearColor(struct FLinearColor
 
 	if (!pFnSubtract_LinearColorLinearColor)
 	{
-		pFnSubtract_LinearColorLinearColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_LINEARCOLORLINEARCOLOR));
+		pFnSubtract_LinearColorLinearColor = UFunction::FindFunction("Function Core.Object.Subtract_LinearColorLinearColor");
+
 	}
 
 	UObject_execSubtract_LinearColorLinearColor_Parms Subtract_LinearColorLinearColor_Parms;
@@ -3668,7 +3816,7 @@ struct FLinearColor UObject::Subtract_LinearColorLinearColor(struct FLinearColor
 };
 
 // Function Core.Object.Multiply_LinearColorFloat
-// [0x00023003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FLinearColor            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FLinearColor            LC                             (CPF_Parm)
@@ -3680,7 +3828,8 @@ struct FLinearColor UObject::Multiply_LinearColorFloat(struct FLinearColor LC, f
 
 	if (!pFnMultiply_LinearColorFloat)
 	{
-		pFnMultiply_LinearColorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_LINEARCOLORFLOAT));
+		pFnMultiply_LinearColorFloat = UFunction::FindFunction("Function Core.Object.Multiply_LinearColorFloat");
+
 	}
 
 	UObject_execMultiply_LinearColorFloat_Parms Multiply_LinearColorFloat_Parms;
@@ -3704,7 +3853,8 @@ struct FLinearColor UObject::ConvertFromSRGB(struct FLinearColor OldColor)
 
 	if (!pFnConvertFromSRGB)
 	{
-		pFnConvertFromSRGB = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CONVERTFROMSRGB));
+		pFnConvertFromSRGB = UFunction::FindFunction("Function Core.Object.ConvertFromSRGB");
+
 	}
 
 	UObject_execConvertFromSRGB_Parms ConvertFromSRGB_Parms;
@@ -3720,7 +3870,7 @@ struct FLinearColor UObject::ConvertFromSRGB(struct FLinearColor OldColor)
 };
 
 // Function Core.Object.LinearColorToColor
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FColor                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FLinearColor            OldColor                       (CPF_Parm)
@@ -3731,7 +3881,8 @@ struct FColor UObject::LinearColorToColor(struct FLinearColor OldColor)
 
 	if (!pFnLinearColorToColor)
 	{
-		pFnLinearColorToColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LINEARCOLORTOCOLOR));
+		pFnLinearColorToColor = UFunction::FindFunction("Function Core.Object.LinearColorToColor");
+
 	}
 
 	UObject_execLinearColorToColor_Parms LinearColorToColor_Parms;
@@ -3743,7 +3894,7 @@ struct FColor UObject::LinearColorToColor(struct FLinearColor OldColor)
 };
 
 // Function Core.Object.ColorToLinearColor
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FLinearColor            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FColor                  OldColor                       (CPF_Parm)
@@ -3754,7 +3905,8 @@ struct FLinearColor UObject::ColorToLinearColor(struct FColor OldColor)
 
 	if (!pFnColorToLinearColor)
 	{
-		pFnColorToLinearColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_COLORTOLINEARCOLOR));
+		pFnColorToLinearColor = UFunction::FindFunction("Function Core.Object.ColorToLinearColor");
+
 	}
 
 	UObject_execColorToLinearColor_Parms ColorToLinearColor_Parms;
@@ -3770,7 +3922,7 @@ struct FLinearColor UObject::ColorToLinearColor(struct FColor OldColor)
 };
 
 // Function Core.Object.MakeLinearColor
-// [0x00026401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00036401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FLinearColor            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // float                          R                              (CPF_Parm)
@@ -3784,7 +3936,8 @@ struct FLinearColor UObject::MakeLinearColor(float R, float G, float B, float A)
 
 	if (!pFnMakeLinearColor)
 	{
-		pFnMakeLinearColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKELINEARCOLOR));
+		pFnMakeLinearColor = UFunction::FindFunction("Function Core.Object.MakeLinearColor");
+
 	}
 
 	UObject_execMakeLinearColor_Parms MakeLinearColor_Parms;
@@ -3816,7 +3969,8 @@ struct FColor UObject::LerpColor(struct FColor A, struct FColor B, float Alpha)
 
 	if (!pFnLerpColor)
 	{
-		pFnLerpColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LERPCOLOR));
+		pFnLerpColor = UFunction::FindFunction("Function Core.Object.LerpColor");
+
 	}
 
 	UObject_execLerpColor_Parms LerpColor_Parms;
@@ -3834,7 +3988,7 @@ struct FColor UObject::LerpColor(struct FColor A, struct FColor B, float Alpha)
 };
 
 // Function Core.Object.MakeColor
-// [0x00826003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_HasDefaults | FUNC_AllFlags)
+// [0x00836003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasDefaults | FUNC_AllFlags)
 // Parameter info:
 // struct FColor                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  R                              (CPF_Parm)
@@ -3848,7 +4002,8 @@ struct FColor UObject::MakeColor(unsigned char R, unsigned char G, unsigned char
 
 	if (!pFnMakeColor)
 	{
-		pFnMakeColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKECOLOR));
+		pFnMakeColor = UFunction::FindFunction("Function Core.Object.MakeColor");
+
 	}
 
 	UObject_execMakeColor_Parms MakeColor_Parms;
@@ -3875,7 +4030,8 @@ struct FColor UObject::Add_ColorColor(struct FColor A, struct FColor B)
 
 	if (!pFnAdd_ColorColor)
 	{
-		pFnAdd_ColorColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_COLORCOLOR));
+		pFnAdd_ColorColor = UFunction::FindFunction("Function Core.Object.Add_ColorColor");
+
 	}
 
 	UObject_execAdd_ColorColor_Parms Add_ColorColor_Parms;
@@ -3900,7 +4056,8 @@ struct FColor UObject::Multiply_ColorFloat(struct FColor A, float B)
 
 	if (!pFnMultiply_ColorFloat)
 	{
-		pFnMultiply_ColorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_COLORFLOAT));
+		pFnMultiply_ColorFloat = UFunction::FindFunction("Function Core.Object.Multiply_ColorFloat");
+
 	}
 
 	UObject_execMultiply_ColorFloat_Parms Multiply_ColorFloat_Parms;
@@ -3925,7 +4082,8 @@ struct FColor UObject::Multiply_FloatColor(float A, struct FColor B)
 
 	if (!pFnMultiply_FloatColor)
 	{
-		pFnMultiply_FloatColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_FLOATCOLOR));
+		pFnMultiply_FloatColor = UFunction::FindFunction("Function Core.Object.Multiply_FloatColor");
+
 	}
 
 	UObject_execMultiply_FloatColor_Parms Multiply_FloatColor_Parms;
@@ -3950,7 +4108,8 @@ struct FColor UObject::Subtract_ColorColor(struct FColor A, struct FColor B)
 
 	if (!pFnSubtract_ColorColor)
 	{
-		pFnSubtract_ColorColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_COLORCOLOR));
+		pFnSubtract_ColorColor = UFunction::FindFunction("Function Core.Object.Subtract_ColorColor");
+
 	}
 
 	UObject_execSubtract_ColorColor_Parms Subtract_ColorColor_Parms;
@@ -3975,7 +4134,8 @@ struct FVector2D UObject::EvalInterpCurveVector2D(float InVal, struct FInterpCur
 
 	if (!pFnEvalInterpCurveVector2D)
 	{
-		pFnEvalInterpCurveVector2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EVALINTERPCURVEVECTOR2D));
+		pFnEvalInterpCurveVector2D = UFunction::FindFunction("Function Core.Object.EvalInterpCurveVector2D");
+
 	}
 
 	UObject_execEvalInterpCurveVector2D_Parms EvalInterpCurveVector2D_Parms;
@@ -4002,7 +4162,8 @@ void UObject::AutoSetTangentsVector(struct FInterpCurveVector& Curve)
 
 	if (!pFnAutoSetTangentsVector)
 	{
-		pFnAutoSetTangentsVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_AUTOSETTANGENTSVECTOR));
+		pFnAutoSetTangentsVector = UFunction::FindFunction("Function Core.Object.AutoSetTangentsVector");
+
 	}
 
 	UObject_execAutoSetTangentsVector_Parms AutoSetTangentsVector_Parms;
@@ -4028,7 +4189,8 @@ struct FVector UObject::EvalInterpCurveVector(float InVal, struct FInterpCurveVe
 
 	if (!pFnEvalInterpCurveVector)
 	{
-		pFnEvalInterpCurveVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EVALINTERPCURVEVECTOR));
+		pFnEvalInterpCurveVector = UFunction::FindFunction("Function Core.Object.EvalInterpCurveVector");
+
 	}
 
 	UObject_execEvalInterpCurveVector_Parms EvalInterpCurveVector_Parms;
@@ -4055,7 +4217,8 @@ void UObject::AutoSetTangentsFloat(struct FInterpCurveFloat& Curve)
 
 	if (!pFnAutoSetTangentsFloat)
 	{
-		pFnAutoSetTangentsFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_AUTOSETTANGENTSFLOAT));
+		pFnAutoSetTangentsFloat = UFunction::FindFunction("Function Core.Object.AutoSetTangentsFloat");
+
 	}
 
 	UObject_execAutoSetTangentsFloat_Parms AutoSetTangentsFloat_Parms;
@@ -4069,7 +4232,7 @@ void UObject::AutoSetTangentsFloat(struct FInterpCurveFloat& Curve)
 };
 
 // Function Core.Object.EvalInterpCurveFloat
-// [0x00422401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00432401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // float                          InVal                          (CPF_Parm)
@@ -4081,7 +4244,8 @@ float UObject::EvalInterpCurveFloat(float InVal, struct FInterpCurveFloat& Float
 
 	if (!pFnEvalInterpCurveFloat)
 	{
-		pFnEvalInterpCurveFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EVALINTERPCURVEFLOAT));
+		pFnEvalInterpCurveFloat = UFunction::FindFunction("Function Core.Object.EvalInterpCurveFloat");
+
 	}
 
 	UObject_execEvalInterpCurveFloat_Parms EvalInterpCurveFloat_Parms;
@@ -4110,7 +4274,8 @@ struct FVector2D UObject::vect2d(float InX, float InY)
 
 	if (!pFnvect2d)
 	{
-		pFnvect2d = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VECT2D));
+		pFnvect2d = UFunction::FindFunction("Function Core.Object.vect2d");
+
 	}
 
 	UObject_execvect2d_Parms vect2d_Parms;
@@ -4136,7 +4301,8 @@ float UObject::GetMappedRangeValue(struct FVector2D InputRange, struct FVector2D
 
 	if (!pFnGetMappedRangeValue)
 	{
-		pFnGetMappedRangeValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETMAPPEDRANGEVALUE));
+		pFnGetMappedRangeValue = UFunction::FindFunction("Function Core.Object.GetMappedRangeValue");
+
 	}
 
 	UObject_execGetMappedRangeValue_Parms GetMappedRangeValue_Parms;
@@ -4166,7 +4332,8 @@ float UObject::GetRangePctByValue(struct FVector2D Range, float Value)
 
 	if (!pFnGetRangePctByValue)
 	{
-		pFnGetRangePctByValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETRANGEPCTBYVALUE));
+		pFnGetRangePctByValue = UFunction::FindFunction("Function Core.Object.GetRangePctByValue");
+
 	}
 
 	UObject_execGetRangePctByValue_Parms GetRangePctByValue_Parms;
@@ -4191,7 +4358,8 @@ float UObject::GetRangeValueByPct(struct FVector2D Range, float Pct)
 
 	if (!pFnGetRangeValueByPct)
 	{
-		pFnGetRangeValueByPct = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETRANGEVALUEBYPCT));
+		pFnGetRangeValueByPct = UFunction::FindFunction("Function Core.Object.GetRangeValueByPct");
+
 	}
 
 	UObject_execGetRangeValueByPct_Parms GetRangeValueByPct_Parms;
@@ -4215,7 +4383,8 @@ struct FVector2D UObject::V2DNormal(struct FVector2D A)
 
 	if (!pFnV2DNormal)
 	{
-		pFnV2DNormal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_V2DNORMAL));
+		pFnV2DNormal = UFunction::FindFunction("Function Core.Object.V2DNormal");
+
 	}
 
 	UObject_execV2DNormal_Parms V2DNormal_Parms;
@@ -4242,7 +4411,8 @@ float UObject::V2DSizeSq(struct FVector2D A)
 
 	if (!pFnV2DSizeSq)
 	{
-		pFnV2DSizeSq = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_V2DSIZESQ));
+		pFnV2DSizeSq = UFunction::FindFunction("Function Core.Object.V2DSizeSq");
+
 	}
 
 	UObject_execV2DSizeSq_Parms V2DSizeSq_Parms;
@@ -4269,7 +4439,8 @@ float UObject::V2DSize(struct FVector2D A)
 
 	if (!pFnV2DSize)
 	{
-		pFnV2DSize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_V2DSIZE));
+		pFnV2DSize = UFunction::FindFunction("Function Core.Object.V2DSize");
+
 	}
 
 	UObject_execV2DSize_Parms V2DSize_Parms;
@@ -4297,7 +4468,8 @@ float UObject::Dot_Vector2DVector2D(struct FVector2D A, struct FVector2D B)
 
 	if (!pFnDot_Vector2DVector2D)
 	{
-		pFnDot_Vector2DVector2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DOT_VECTOR2DVECTOR2D));
+		pFnDot_Vector2DVector2D = UFunction::FindFunction("Function Core.Object.Dot_Vector2DVector2D");
+
 	}
 
 	UObject_execDot_Vector2DVector2D_Parms Dot_Vector2DVector2D_Parms;
@@ -4326,7 +4498,8 @@ struct FVector2D UObject::SubtractEqual_Vector2DVector2D(struct FVector2D B, str
 
 	if (!pFnSubtractEqual_Vector2DVector2D)
 	{
-		pFnSubtractEqual_Vector2DVector2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTEQUAL_VECTOR2DVECTOR2D));
+		pFnSubtractEqual_Vector2DVector2D = UFunction::FindFunction("Function Core.Object.SubtractEqual_Vector2DVector2D");
+
 	}
 
 	UObject_execSubtractEqual_Vector2DVector2D_Parms SubtractEqual_Vector2DVector2D_Parms;
@@ -4355,7 +4528,8 @@ struct FVector2D UObject::AddEqual_Vector2DVector2D(struct FVector2D B, struct F
 
 	if (!pFnAddEqual_Vector2DVector2D)
 	{
-		pFnAddEqual_Vector2DVector2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDEQUAL_VECTOR2DVECTOR2D));
+		pFnAddEqual_Vector2DVector2D = UFunction::FindFunction("Function Core.Object.AddEqual_Vector2DVector2D");
+
 	}
 
 	UObject_execAddEqual_Vector2DVector2D_Parms AddEqual_Vector2DVector2D_Parms;
@@ -4384,7 +4558,8 @@ struct FVector2D UObject::DivideEqual_Vector2DFloat(float B, struct FVector2D& A
 
 	if (!pFnDivideEqual_Vector2DFloat)
 	{
-		pFnDivideEqual_Vector2DFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDEEQUAL_VECTOR2DFLOAT));
+		pFnDivideEqual_Vector2DFloat = UFunction::FindFunction("Function Core.Object.DivideEqual_Vector2DFloat");
+
 	}
 
 	UObject_execDivideEqual_Vector2DFloat_Parms DivideEqual_Vector2DFloat_Parms;
@@ -4413,7 +4588,8 @@ struct FVector2D UObject::MultiplyEqual_Vector2DFloat(float B, struct FVector2D&
 
 	if (!pFnMultiplyEqual_Vector2DFloat)
 	{
-		pFnMultiplyEqual_Vector2DFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_VECTOR2DFLOAT));
+		pFnMultiplyEqual_Vector2DFloat = UFunction::FindFunction("Function Core.Object.MultiplyEqual_Vector2DFloat");
+
 	}
 
 	UObject_execMultiplyEqual_Vector2DFloat_Parms MultiplyEqual_Vector2DFloat_Parms;
@@ -4442,7 +4618,8 @@ struct FVector2D UObject::Divide_Vector2DFloat(struct FVector2D A, float B)
 
 	if (!pFnDivide_Vector2DFloat)
 	{
-		pFnDivide_Vector2DFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDE_VECTOR2DFLOAT));
+		pFnDivide_Vector2DFloat = UFunction::FindFunction("Function Core.Object.Divide_Vector2DFloat");
+
 	}
 
 	UObject_execDivide_Vector2DFloat_Parms Divide_Vector2DFloat_Parms;
@@ -4471,7 +4648,8 @@ struct FVector2D UObject::Multiply_Vector2DFloat(struct FVector2D A, float B)
 
 	if (!pFnMultiply_Vector2DFloat)
 	{
-		pFnMultiply_Vector2DFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_VECTOR2DFLOAT));
+		pFnMultiply_Vector2DFloat = UFunction::FindFunction("Function Core.Object.Multiply_Vector2DFloat");
+
 	}
 
 	UObject_execMultiply_Vector2DFloat_Parms Multiply_Vector2DFloat_Parms;
@@ -4500,7 +4678,8 @@ struct FVector2D UObject::Subtract_Vector2DVector2D(struct FVector2D A, struct F
 
 	if (!pFnSubtract_Vector2DVector2D)
 	{
-		pFnSubtract_Vector2DVector2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_VECTOR2DVECTOR2D));
+		pFnSubtract_Vector2DVector2D = UFunction::FindFunction("Function Core.Object.Subtract_Vector2DVector2D");
+
 	}
 
 	UObject_execSubtract_Vector2DVector2D_Parms Subtract_Vector2DVector2D_Parms;
@@ -4529,7 +4708,8 @@ struct FVector2D UObject::Add_Vector2DVector2D(struct FVector2D A, struct FVecto
 
 	if (!pFnAdd_Vector2DVector2D)
 	{
-		pFnAdd_Vector2DVector2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_VECTOR2DVECTOR2D));
+		pFnAdd_Vector2DVector2D = UFunction::FindFunction("Function Core.Object.Add_Vector2DVector2D");
+
 	}
 
 	UObject_execAdd_Vector2DVector2D_Parms Add_Vector2DVector2D_Parms;
@@ -4558,7 +4738,8 @@ struct FQuat UObject::Subtract_QuatQuat(struct FQuat A, struct FQuat B)
 
 	if (!pFnSubtract_QuatQuat)
 	{
-		pFnSubtract_QuatQuat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_QUATQUAT));
+		pFnSubtract_QuatQuat = UFunction::FindFunction("Function Core.Object.Subtract_QuatQuat");
+
 	}
 
 	UObject_execSubtract_QuatQuat_Parms Subtract_QuatQuat_Parms;
@@ -4587,7 +4768,8 @@ struct FQuat UObject::Add_QuatQuat(struct FQuat A, struct FQuat B)
 
 	if (!pFnAdd_QuatQuat)
 	{
-		pFnAdd_QuatQuat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_QUATQUAT));
+		pFnAdd_QuatQuat = UFunction::FindFunction("Function Core.Object.Add_QuatQuat");
+
 	}
 
 	UObject_execAdd_QuatQuat_Parms Add_QuatQuat_Parms;
@@ -4618,7 +4800,8 @@ struct FQuat UObject::QuatSlerp(struct FQuat A, struct FQuat B, float Alpha, uns
 
 	if (!pFnQuatSlerp)
 	{
-		pFnQuatSlerp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATSLERP));
+		pFnQuatSlerp = UFunction::FindFunction("Function Core.Object.QuatSlerp");
+
 	}
 
 	UObject_execQuatSlerp_Parms QuatSlerp_Parms;
@@ -4648,7 +4831,8 @@ struct FRotator UObject::QuatToRotator(struct FQuat A)
 
 	if (!pFnQuatToRotator)
 	{
-		pFnQuatToRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATTOROTATOR));
+		pFnQuatToRotator = UFunction::FindFunction("Function Core.Object.QuatToRotator");
+
 	}
 
 	UObject_execQuatToRotator_Parms QuatToRotator_Parms;
@@ -4675,7 +4859,8 @@ struct FQuat UObject::QuatFromRotator(struct FRotator A)
 
 	if (!pFnQuatFromRotator)
 	{
-		pFnQuatFromRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATFROMROTATOR));
+		pFnQuatFromRotator = UFunction::FindFunction("Function Core.Object.QuatFromRotator");
+
 	}
 
 	UObject_execQuatFromRotator_Parms QuatFromRotator_Parms;
@@ -4703,7 +4888,8 @@ struct FQuat UObject::QuatFromAxisAndAngle(struct FVector Axis, float Angle)
 
 	if (!pFnQuatFromAxisAndAngle)
 	{
-		pFnQuatFromAxisAndAngle = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATFROMAXISANDANGLE));
+		pFnQuatFromAxisAndAngle = UFunction::FindFunction("Function Core.Object.QuatFromAxisAndAngle");
+
 	}
 
 	UObject_execQuatFromAxisAndAngle_Parms QuatFromAxisAndAngle_Parms;
@@ -4732,7 +4918,8 @@ struct FQuat UObject::QuatFindBetween(struct FVector A, struct FVector B)
 
 	if (!pFnQuatFindBetween)
 	{
-		pFnQuatFindBetween = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATFINDBETWEEN));
+		pFnQuatFindBetween = UFunction::FindFunction("Function Core.Object.QuatFindBetween");
+
 	}
 
 	UObject_execQuatFindBetween_Parms QuatFindBetween_Parms;
@@ -4761,7 +4948,8 @@ struct FVector UObject::QuatRotateVector(struct FQuat A, struct FVector B)
 
 	if (!pFnQuatRotateVector)
 	{
-		pFnQuatRotateVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATROTATEVECTOR));
+		pFnQuatRotateVector = UFunction::FindFunction("Function Core.Object.QuatRotateVector");
+
 	}
 
 	UObject_execQuatRotateVector_Parms QuatRotateVector_Parms;
@@ -4789,7 +4977,8 @@ struct FQuat UObject::QuatInvert(struct FQuat A)
 
 	if (!pFnQuatInvert)
 	{
-		pFnQuatInvert = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATINVERT));
+		pFnQuatInvert = UFunction::FindFunction("Function Core.Object.QuatInvert");
+
 	}
 
 	UObject_execQuatInvert_Parms QuatInvert_Parms;
@@ -4817,7 +5006,8 @@ float UObject::QuatDot(struct FQuat A, struct FQuat B)
 
 	if (!pFnQuatDot)
 	{
-		pFnQuatDot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATDOT));
+		pFnQuatDot = UFunction::FindFunction("Function Core.Object.QuatDot");
+
 	}
 
 	UObject_execQuatDot_Parms QuatDot_Parms;
@@ -4846,7 +5036,8 @@ struct FQuat UObject::QuatProduct(struct FQuat A, struct FQuat B)
 
 	if (!pFnQuatProduct)
 	{
-		pFnQuatProduct = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QUATPRODUCT));
+		pFnQuatProduct = UFunction::FindFunction("Function Core.Object.QuatProduct");
+
 	}
 
 	UObject_execQuatProduct_Parms QuatProduct_Parms;
@@ -4875,7 +5066,8 @@ struct FVector UObject::MatrixGetAxis(struct FMatrix TM, unsigned char Axis)
 
 	if (!pFnMatrixGetAxis)
 	{
-		pFnMatrixGetAxis = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MATRIXGETAXIS));
+		pFnMatrixGetAxis = UFunction::FindFunction("Function Core.Object.MatrixGetAxis");
+
 	}
 
 	UObject_execMatrixGetAxis_Parms MatrixGetAxis_Parms;
@@ -4903,7 +5095,8 @@ struct FVector UObject::MatrixGetOrigin(struct FMatrix TM)
 
 	if (!pFnMatrixGetOrigin)
 	{
-		pFnMatrixGetOrigin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MATRIXGETORIGIN));
+		pFnMatrixGetOrigin = UFunction::FindFunction("Function Core.Object.MatrixGetOrigin");
+
 	}
 
 	UObject_execMatrixGetOrigin_Parms MatrixGetOrigin_Parms;
@@ -4930,7 +5123,8 @@ struct FRotator UObject::MatrixGetRotator(struct FMatrix TM)
 
 	if (!pFnMatrixGetRotator)
 	{
-		pFnMatrixGetRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MATRIXGETROTATOR));
+		pFnMatrixGetRotator = UFunction::FindFunction("Function Core.Object.MatrixGetRotator");
+
 	}
 
 	UObject_execMatrixGetRotator_Parms MatrixGetRotator_Parms;
@@ -4957,7 +5151,8 @@ struct FMatrix UObject::MakeRotationMatrix(struct FRotator Rotation)
 
 	if (!pFnMakeRotationMatrix)
 	{
-		pFnMakeRotationMatrix = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKEROTATIONMATRIX));
+		pFnMakeRotationMatrix = UFunction::FindFunction("Function Core.Object.MakeRotationMatrix");
+
 	}
 
 	UObject_execMakeRotationMatrix_Parms MakeRotationMatrix_Parms;
@@ -4985,7 +5180,8 @@ struct FMatrix UObject::MakeRotationTranslationMatrix(struct FVector Translation
 
 	if (!pFnMakeRotationTranslationMatrix)
 	{
-		pFnMakeRotationTranslationMatrix = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKEROTATIONTRANSLATIONMATRIX));
+		pFnMakeRotationTranslationMatrix = UFunction::FindFunction("Function Core.Object.MakeRotationTranslationMatrix");
+
 	}
 
 	UObject_execMakeRotationTranslationMatrix_Parms MakeRotationTranslationMatrix_Parms;
@@ -5014,7 +5210,8 @@ struct FVector UObject::InverseTransformNormal(struct FMatrix TM, struct FVector
 
 	if (!pFnInverseTransformNormal)
 	{
-		pFnInverseTransformNormal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_INVERSETRANSFORMNORMAL));
+		pFnInverseTransformNormal = UFunction::FindFunction("Function Core.Object.InverseTransformNormal");
+
 	}
 
 	UObject_execInverseTransformNormal_Parms InverseTransformNormal_Parms;
@@ -5043,7 +5240,8 @@ struct FVector UObject::TransformNormal(struct FMatrix TM, struct FVector A)
 
 	if (!pFnTransformNormal)
 	{
-		pFnTransformNormal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TRANSFORMNORMAL));
+		pFnTransformNormal = UFunction::FindFunction("Function Core.Object.TransformNormal");
+
 	}
 
 	UObject_execTransformNormal_Parms TransformNormal_Parms;
@@ -5072,7 +5270,8 @@ struct FVector UObject::InverseTransformVector(struct FMatrix TM, struct FVector
 
 	if (!pFnInverseTransformVector)
 	{
-		pFnInverseTransformVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_INVERSETRANSFORMVECTOR));
+		pFnInverseTransformVector = UFunction::FindFunction("Function Core.Object.InverseTransformVector");
+
 	}
 
 	UObject_execInverseTransformVector_Parms InverseTransformVector_Parms;
@@ -5101,7 +5300,8 @@ struct FVector UObject::TransformVector(struct FMatrix TM, struct FVector A)
 
 	if (!pFnTransformVector)
 	{
-		pFnTransformVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TRANSFORMVECTOR));
+		pFnTransformVector = UFunction::FindFunction("Function Core.Object.TransformVector");
+
 	}
 
 	UObject_execTransformVector_Parms TransformVector_Parms;
@@ -5130,7 +5330,8 @@ struct FMatrix UObject::Multiply_MatrixMatrix(struct FMatrix A, struct FMatrix B
 
 	if (!pFnMultiply_MatrixMatrix)
 	{
-		pFnMultiply_MatrixMatrix = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_MATRIXMATRIX));
+		pFnMultiply_MatrixMatrix = UFunction::FindFunction("Function Core.Object.Multiply_MatrixMatrix");
+
 	}
 
 	UObject_execMultiply_MatrixMatrix_Parms Multiply_MatrixMatrix_Parms;
@@ -5159,7 +5360,8 @@ bool UObject::NotEqual_NameName(struct FName A, struct FName B)
 
 	if (!pFnNotEqual_NameName)
 	{
-		pFnNotEqual_NameName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_NAMENAME));
+		pFnNotEqual_NameName = UFunction::FindFunction("Function Core.Object.NotEqual_NameName");
+
 	}
 
 	UObject_execNotEqual_NameName_Parms NotEqual_NameName_Parms;
@@ -5188,7 +5390,8 @@ bool UObject::EqualEqual_NameName(struct FName A, struct FName B)
 
 	if (!pFnEqualEqual_NameName)
 	{
-		pFnEqualEqual_NameName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_NAMENAME));
+		pFnEqualEqual_NameName = UFunction::FindFunction("Function Core.Object.EqualEqual_NameName");
+
 	}
 
 	UObject_execEqualEqual_NameName_Parms EqualEqual_NameName_Parms;
@@ -5216,7 +5419,8 @@ bool UObject::IsA(struct FName ClassName)
 
 	if (!pFnIsA)
 	{
-		pFnIsA = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISA));
+		pFnIsA = UFunction::FindFunction("Function Core.Object.IsA");
+
 	}
 
 	UObject_execIsA_Parms IsA_Parms;
@@ -5244,7 +5448,8 @@ bool UObject::ClassIsChildOf(class UClass* TestClass, class UClass* ParentClass)
 
 	if (!pFnClassIsChildOf)
 	{
-		pFnClassIsChildOf = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CLASSISCHILDOF));
+		pFnClassIsChildOf = UFunction::FindFunction("Function Core.Object.ClassIsChildOf");
+
 	}
 
 	UObject_execClassIsChildOf_Parms ClassIsChildOf_Parms;
@@ -5261,7 +5466,7 @@ bool UObject::ClassIsChildOf(class UClass* TestClass, class UClass* ParentClass)
 };
 
 // Function Core.Object.NotEqual_InterfaceInterface
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UInterface*              A                              (CPF_Parm)
@@ -5273,7 +5478,8 @@ bool UObject::NotEqual_InterfaceInterface(class UInterface* A, class UInterface*
 
 	if (!pFnNotEqual_InterfaceInterface)
 	{
-		pFnNotEqual_InterfaceInterface = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_INTERFACEINTERFACE));
+		pFnNotEqual_InterfaceInterface = UFunction::FindFunction("Function Core.Object.NotEqual_InterfaceInterface");
+
 	}
 
 	UObject_execNotEqual_InterfaceInterface_Parms NotEqual_InterfaceInterface_Parms;
@@ -5290,7 +5496,7 @@ bool UObject::NotEqual_InterfaceInterface(class UInterface* A, class UInterface*
 };
 
 // Function Core.Object.EqualEqual_InterfaceInterface
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UInterface*              A                              (CPF_Parm)
@@ -5302,7 +5508,8 @@ bool UObject::EqualEqual_InterfaceInterface(class UInterface* A, class UInterfac
 
 	if (!pFnEqualEqual_InterfaceInterface)
 	{
-		pFnEqualEqual_InterfaceInterface = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_INTERFACEINTERFACE));
+		pFnEqualEqual_InterfaceInterface = UFunction::FindFunction("Function Core.Object.EqualEqual_InterfaceInterface");
+
 	}
 
 	UObject_execEqualEqual_InterfaceInterface_Parms EqualEqual_InterfaceInterface_Parms;
@@ -5331,7 +5538,8 @@ bool UObject::NotEqual_ObjectObject(class UObject* A, class UObject* B)
 
 	if (!pFnNotEqual_ObjectObject)
 	{
-		pFnNotEqual_ObjectObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_OBJECTOBJECT));
+		pFnNotEqual_ObjectObject = UFunction::FindFunction("Function Core.Object.NotEqual_ObjectObject");
+
 	}
 
 	UObject_execNotEqual_ObjectObject_Parms NotEqual_ObjectObject_Parms;
@@ -5360,7 +5568,8 @@ bool UObject::EqualEqual_ObjectObject(class UObject* A, class UObject* B)
 
 	if (!pFnEqualEqual_ObjectObject)
 	{
-		pFnEqualEqual_ObjectObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_OBJECTOBJECT));
+		pFnEqualEqual_ObjectObject = UFunction::FindFunction("Function Core.Object.EqualEqual_ObjectObject");
+
 	}
 
 	UObject_execEqualEqual_ObjectObject_Parms EqualEqual_ObjectObject_Parms;
@@ -5377,7 +5586,7 @@ bool UObject::EqualEqual_ObjectObject(class UObject* A, class UObject* B)
 };
 
 // Function Core.Object.GetPathName
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -5387,7 +5596,8 @@ struct FString UObject::GetPathName()
 
 	if (!pFnGetPathName)
 	{
-		pFnGetPathName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETPATHNAME));
+		pFnGetPathName = UFunction::FindFunction("Function Core.Object.GetPathName");
+
 	}
 
 	UObject_execGetPathName_Parms GetPathName_Parms;
@@ -5398,7 +5608,7 @@ struct FString UObject::GetPathName()
 };
 
 // Function Core.Object.PathName
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // class UObject*                 CheckObject                    (CPF_Parm)
@@ -5409,7 +5619,8 @@ struct FString UObject::PathName(class UObject* CheckObject)
 
 	if (!pFnPathName)
 	{
-		pFnPathName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PATHNAME));
+		pFnPathName = UFunction::FindFunction("Function Core.Object.PathName");
+
 	}
 
 	UObject_execPathName_Parms PathName_Parms;
@@ -5438,7 +5649,8 @@ TArray<struct FString> UObject::SplitString(struct FString Source, struct FStrin
 
 	if (!pFnSplitString)
 	{
-		pFnSplitString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SPLITSTRING));
+		pFnSplitString = UFunction::FindFunction("Function Core.Object.SplitString");
+
 	}
 
 	UObject_execSplitString_Parms SplitString_Parms;
@@ -5452,7 +5664,7 @@ TArray<struct FString> UObject::SplitString(struct FString Source, struct FStrin
 };
 
 // Function Core.Object.ParseStringIntoArray
-// [0x00422401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00432401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 BaseString                     (CPF_Parm | CPF_NeedCtorLink)
 // struct FString                 delim                          (CPF_Parm | CPF_NeedCtorLink)
@@ -5465,7 +5677,8 @@ void UObject::ParseStringIntoArray(struct FString BaseString, struct FString del
 
 	if (!pFnParseStringIntoArray)
 	{
-		pFnParseStringIntoArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PARSESTRINGINTOARRAY));
+		pFnParseStringIntoArray = UFunction::FindFunction("Function Core.Object.ParseStringIntoArray");
+
 	}
 
 	UObject_execParseStringIntoArray_Parms ParseStringIntoArray_Parms;
@@ -5493,7 +5706,8 @@ bool UObject::ContainsWhitespace(struct FString Text)
 
 	if (!pFnContainsWhitespace)
 	{
-		pFnContainsWhitespace = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CONTAINSWHITESPACE));
+		pFnContainsWhitespace = UFunction::FindFunction("Function Core.Object.ContainsWhitespace");
+
 	}
 
 	UObject_execContainsWhitespace_Parms ContainsWhitespace_Parms;
@@ -5509,7 +5723,7 @@ bool UObject::ContainsWhitespace(struct FString Text)
 };
 
 // Function Core.Object.RepeatString
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 InValue                        (CPF_Parm | CPF_NeedCtorLink)
@@ -5521,7 +5735,8 @@ struct FString UObject::RepeatString(struct FString InValue, int Count)
 
 	if (!pFnRepeatString)
 	{
-		pFnRepeatString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_REPEATSTRING));
+		pFnRepeatString = UFunction::FindFunction("Function Core.Object.RepeatString");
+
 	}
 
 	UObject_execRepeatString_Parms RepeatString_Parms;
@@ -5547,7 +5762,8 @@ struct FString UObject::JoinArrayQWord(struct FString delim, unsigned long bIgno
 
 	if (!pFnJoinArrayQWord)
 	{
-		pFnJoinArrayQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_JOINARRAYQWORD));
+		pFnJoinArrayQWord = UFunction::FindFunction("Function Core.Object.JoinArrayQWord");
+
 	}
 
 	UObject_execJoinArrayQWord_Parms JoinArrayQWord_Parms;
@@ -5561,7 +5777,7 @@ struct FString UObject::JoinArrayQWord(struct FString delim, unsigned long bIgno
 };
 
 // Function Core.Object.JoinArrayInt
-// [0x00426003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00436003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 delim                          (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
@@ -5574,7 +5790,8 @@ struct FString UObject::JoinArrayInt(struct FString delim, unsigned long bIgnore
 
 	if (!pFnJoinArrayInt)
 	{
-		pFnJoinArrayInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_JOINARRAYINT));
+		pFnJoinArrayInt = UFunction::FindFunction("Function Core.Object.JoinArrayInt");
+
 	}
 
 	UObject_execJoinArrayInt_Parms JoinArrayInt_Parms;
@@ -5588,7 +5805,7 @@ struct FString UObject::JoinArrayInt(struct FString delim, unsigned long bIgnore
 };
 
 // Function Core.Object.JoinArrayName
-// [0x00426003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00436003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 delim                          (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
@@ -5601,7 +5818,8 @@ struct FString UObject::JoinArrayName(struct FString delim, unsigned long bIgnor
 
 	if (!pFnJoinArrayName)
 	{
-		pFnJoinArrayName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_JOINARRAYNAME));
+		pFnJoinArrayName = UFunction::FindFunction("Function Core.Object.JoinArrayName");
+
 	}
 
 	UObject_execJoinArrayName_Parms JoinArrayName_Parms;
@@ -5615,7 +5833,7 @@ struct FString UObject::JoinArrayName(struct FString delim, unsigned long bIgnor
 };
 
 // Function Core.Object.JoinArrayStr
-// [0x00426003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00436003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 delim                          (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
@@ -5628,7 +5846,8 @@ struct FString UObject::JoinArrayStr(struct FString delim, unsigned long bIgnore
 
 	if (!pFnJoinArrayStr)
 	{
-		pFnJoinArrayStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_JOINARRAYSTR));
+		pFnJoinArrayStr = UFunction::FindFunction("Function Core.Object.JoinArrayStr");
+
 	}
 
 	UObject_execJoinArrayStr_Parms JoinArrayStr_Parms;
@@ -5642,7 +5861,7 @@ struct FString UObject::JoinArrayStr(struct FString delim, unsigned long bIgnore
 };
 
 // Function Core.Object.JoinArray
-// [0x00426401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00436401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 delim                          (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
 // unsigned long                  bIgnoreBlanks                  (CPF_OptionalParm | CPF_Parm)
@@ -5655,7 +5874,8 @@ void UObject::JoinArray(struct FString delim, unsigned long bIgnoreBlanks, TArra
 
 	if (!pFnJoinArray)
 	{
-		pFnJoinArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_JOINARRAY));
+		pFnJoinArray = UFunction::FindFunction("Function Core.Object.JoinArray");
+
 	}
 
 	UObject_execJoinArray_Parms JoinArray_Parms;
@@ -5683,7 +5903,8 @@ struct FString UObject::GetRightMost(struct FString Text)
 
 	if (!pFnGetRightMost)
 	{
-		pFnGetRightMost = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETRIGHTMOST));
+		pFnGetRightMost = UFunction::FindFunction("Function Core.Object.GetRightMost");
+
 	}
 
 	UObject_execGetRightMost_Parms GetRightMost_Parms;
@@ -5695,7 +5916,7 @@ struct FString UObject::GetRightMost(struct FString Text)
 };
 
 // Function Core.Object.Split
-// [0x00026003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00036003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 Text                           (CPF_Parm | CPF_CoerceParm | CPF_NeedCtorLink)
@@ -5708,7 +5929,8 @@ struct FString UObject::Split(struct FString Text, struct FString SplitStr, unsi
 
 	if (!pFnSplit)
 	{
-		pFnSplit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SPLIT));
+		pFnSplit = UFunction::FindFunction("Function Core.Object.Split");
+
 	}
 
 	UObject_execSplit_Parms Split_Parms;
@@ -5733,7 +5955,8 @@ struct FString UObject::Trim(struct FString Src)
 
 	if (!pFnTrim)
 	{
-		pFnTrim = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TRIM));
+		pFnTrim = UFunction::FindFunction("Function Core.Object.Trim");
+
 	}
 
 	UObject_execTrim_Parms Trim_Parms;
@@ -5763,7 +5986,8 @@ struct FString UObject::Repl(struct FString Src, struct FString Match, struct FS
 
 	if (!pFnRepl)
 	{
-		pFnRepl = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_REPL));
+		pFnRepl = UFunction::FindFunction("Function Core.Object.Repl");
+
 	}
 
 	UObject_execRepl_Parms Repl_Parms;
@@ -5793,7 +6017,8 @@ int UObject::Asc(struct FString S)
 
 	if (!pFnAsc)
 	{
-		pFnAsc = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ASC));
+		pFnAsc = UFunction::FindFunction("Function Core.Object.Asc");
+
 	}
 
 	UObject_execAsc_Parms Asc_Parms;
@@ -5820,7 +6045,8 @@ struct FString UObject::Chr(int I)
 
 	if (!pFnChr)
 	{
-		pFnChr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CHR));
+		pFnChr = UFunction::FindFunction("Function Core.Object.Chr");
+
 	}
 
 	UObject_execChr_Parms Chr_Parms;
@@ -5847,7 +6073,8 @@ struct FString UObject::Locs(struct FString S)
 
 	if (!pFnLocs)
 	{
-		pFnLocs = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LOCS));
+		pFnLocs = UFunction::FindFunction("Function Core.Object.Locs");
+
 	}
 
 	UObject_execLocs_Parms Locs_Parms;
@@ -5874,7 +6101,8 @@ struct FString UObject::Caps(struct FString S)
 
 	if (!pFnCaps)
 	{
-		pFnCaps = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CAPS));
+		pFnCaps = UFunction::FindFunction("Function Core.Object.Caps");
+
 	}
 
 	UObject_execCaps_Parms Caps_Parms;
@@ -5902,7 +6130,8 @@ struct FString UObject::Right(struct FString S, int I)
 
 	if (!pFnRight)
 	{
-		pFnRight = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RIGHT));
+		pFnRight = UFunction::FindFunction("Function Core.Object.Right");
+
 	}
 
 	UObject_execRight_Parms Right_Parms;
@@ -5931,7 +6160,8 @@ struct FString UObject::Left(struct FString S, int I)
 
 	if (!pFnLeft)
 	{
-		pFnLeft = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LEFT));
+		pFnLeft = UFunction::FindFunction("Function Core.Object.Left");
+
 	}
 
 	UObject_execLeft_Parms Left_Parms;
@@ -5961,7 +6191,8 @@ struct FString UObject::Mid(struct FString S, int I, int J)
 
 	if (!pFnMid)
 	{
-		pFnMid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MID));
+		pFnMid = UFunction::FindFunction("Function Core.Object.Mid");
+
 	}
 
 	UObject_execMid_Parms Mid_Parms;
@@ -5994,7 +6225,8 @@ int UObject::InStr(struct FString S, struct FString T, unsigned long bSearchFrom
 
 	if (!pFnInStr)
 	{
-		pFnInStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_INSTR));
+		pFnInStr = UFunction::FindFunction("Function Core.Object.InStr");
+
 	}
 
 	UObject_execInStr_Parms InStr_Parms;
@@ -6025,7 +6257,8 @@ int UObject::Len(struct FString S)
 
 	if (!pFnLen)
 	{
-		pFnLen = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LEN));
+		pFnLen = UFunction::FindFunction("Function Core.Object.Len");
+
 	}
 
 	UObject_execLen_Parms Len_Parms;
@@ -6053,7 +6286,8 @@ struct FString UObject::SubtractEqual_StrStr(struct FString B, struct FString& A
 
 	if (!pFnSubtractEqual_StrStr)
 	{
-		pFnSubtractEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTEQUAL_STRSTR));
+		pFnSubtractEqual_StrStr = UFunction::FindFunction("Function Core.Object.SubtractEqual_StrStr");
+
 	}
 
 	UObject_execSubtractEqual_StrStr_Parms SubtractEqual_StrStr_Parms;
@@ -6082,7 +6316,8 @@ struct FString UObject::AtEqual_StrStr(struct FString B, struct FString& A)
 
 	if (!pFnAtEqual_StrStr)
 	{
-		pFnAtEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ATEQUAL_STRSTR));
+		pFnAtEqual_StrStr = UFunction::FindFunction("Function Core.Object.AtEqual_StrStr");
+
 	}
 
 	UObject_execAtEqual_StrStr_Parms AtEqual_StrStr_Parms;
@@ -6111,7 +6346,8 @@ struct FString UObject::ConcatEqual_StrStr(struct FString B, struct FString& A)
 
 	if (!pFnConcatEqual_StrStr)
 	{
-		pFnConcatEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CONCATEQUAL_STRSTR));
+		pFnConcatEqual_StrStr = UFunction::FindFunction("Function Core.Object.ConcatEqual_StrStr");
+
 	}
 
 	UObject_execConcatEqual_StrStr_Parms ConcatEqual_StrStr_Parms;
@@ -6140,7 +6376,8 @@ bool UObject::ComplementEqual_StrStr(struct FString A, struct FString B)
 
 	if (!pFnComplementEqual_StrStr)
 	{
-		pFnComplementEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_COMPLEMENTEQUAL_STRSTR));
+		pFnComplementEqual_StrStr = UFunction::FindFunction("Function Core.Object.ComplementEqual_StrStr");
+
 	}
 
 	UObject_execComplementEqual_StrStr_Parms ComplementEqual_StrStr_Parms;
@@ -6169,7 +6406,8 @@ bool UObject::NotEqual_StrStr(struct FString A, struct FString B)
 
 	if (!pFnNotEqual_StrStr)
 	{
-		pFnNotEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_STRSTR));
+		pFnNotEqual_StrStr = UFunction::FindFunction("Function Core.Object.NotEqual_StrStr");
+
 	}
 
 	UObject_execNotEqual_StrStr_Parms NotEqual_StrStr_Parms;
@@ -6198,7 +6436,8 @@ bool UObject::EqualEqual_StrStr(struct FString A, struct FString B)
 
 	if (!pFnEqualEqual_StrStr)
 	{
-		pFnEqualEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_STRSTR));
+		pFnEqualEqual_StrStr = UFunction::FindFunction("Function Core.Object.EqualEqual_StrStr");
+
 	}
 
 	UObject_execEqualEqual_StrStr_Parms EqualEqual_StrStr_Parms;
@@ -6227,7 +6466,8 @@ bool UObject::GreaterEqual_StrStr(struct FString A, struct FString B)
 
 	if (!pFnGreaterEqual_StrStr)
 	{
-		pFnGreaterEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATEREQUAL_STRSTR));
+		pFnGreaterEqual_StrStr = UFunction::FindFunction("Function Core.Object.GreaterEqual_StrStr");
+
 	}
 
 	UObject_execGreaterEqual_StrStr_Parms GreaterEqual_StrStr_Parms;
@@ -6256,7 +6496,8 @@ bool UObject::LessEqual_StrStr(struct FString A, struct FString B)
 
 	if (!pFnLessEqual_StrStr)
 	{
-		pFnLessEqual_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESSEQUAL_STRSTR));
+		pFnLessEqual_StrStr = UFunction::FindFunction("Function Core.Object.LessEqual_StrStr");
+
 	}
 
 	UObject_execLessEqual_StrStr_Parms LessEqual_StrStr_Parms;
@@ -6285,7 +6526,8 @@ bool UObject::Greater_StrStr(struct FString A, struct FString B)
 
 	if (!pFnGreater_StrStr)
 	{
-		pFnGreater_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATER_STRSTR));
+		pFnGreater_StrStr = UFunction::FindFunction("Function Core.Object.Greater_StrStr");
+
 	}
 
 	UObject_execGreater_StrStr_Parms Greater_StrStr_Parms;
@@ -6314,7 +6556,8 @@ bool UObject::Less_StrStr(struct FString A, struct FString B)
 
 	if (!pFnLess_StrStr)
 	{
-		pFnLess_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESS_STRSTR));
+		pFnLess_StrStr = UFunction::FindFunction("Function Core.Object.Less_StrStr");
+
 	}
 
 	UObject_execLess_StrStr_Parms Less_StrStr_Parms;
@@ -6343,7 +6586,8 @@ struct FString UObject::At_StrStr(struct FString A, struct FString B)
 
 	if (!pFnAt_StrStr)
 	{
-		pFnAt_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_AT_STRSTR));
+		pFnAt_StrStr = UFunction::FindFunction("Function Core.Object.At_StrStr");
+
 	}
 
 	UObject_execAt_StrStr_Parms At_StrStr_Parms;
@@ -6372,7 +6616,8 @@ struct FString UObject::Concat_StrStr(struct FString A, struct FString B)
 
 	if (!pFnConcat_StrStr)
 	{
-		pFnConcat_StrStr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CONCAT_STRSTR));
+		pFnConcat_StrStr = UFunction::FindFunction("Function Core.Object.Concat_StrStr");
+
 	}
 
 	UObject_execConcat_StrStr_Parms Concat_StrStr_Parms;
@@ -6403,7 +6648,8 @@ struct FRotator UObject::RotateRotator(struct FVector Axis, struct FRotator Rot,
 
 	if (!pFnRotateRotator)
 	{
-		pFnRotateRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ROTATEROTATOR));
+		pFnRotateRotator = UFunction::FindFunction("Function Core.Object.RotateRotator");
+
 	}
 
 	UObject_execRotateRotator_Parms RotateRotator_Parms;
@@ -6432,7 +6678,8 @@ struct FQuat UObject::MakeQuat(float X, float Y, float Z, float W)
 
 	if (!pFnMakeQuat)
 	{
-		pFnMakeQuat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKEQUAT));
+		pFnMakeQuat = UFunction::FindFunction("Function Core.Object.MakeQuat");
+
 	}
 
 	UObject_execMakeQuat_Parms MakeQuat_Parms;
@@ -6460,7 +6707,8 @@ struct FRotator UObject::MakeRotator(int Pitch, int Yaw, int Roll)
 
 	if (!pFnMakeRotator)
 	{
-		pFnMakeRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAKEROTATOR));
+		pFnMakeRotator = UFunction::FindFunction("Function Core.Object.MakeRotator");
+
 	}
 
 	UObject_execMakeRotator_Parms MakeRotator_Parms;
@@ -6490,7 +6738,8 @@ bool UObject::SClampRotAxis(float DeltaTime, int ViewAxis, int MaxLimit, int Min
 
 	if (!pFnSClampRotAxis)
 	{
-		pFnSClampRotAxis = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SCLAMPROTAXIS));
+		pFnSClampRotAxis = UFunction::FindFunction("Function Core.Object.SClampRotAxis");
+
 	}
 
 	UObject_execSClampRotAxis_Parms SClampRotAxis_Parms;
@@ -6520,7 +6769,8 @@ int UObject::ClampRotAxisFromRange(int Current, int Min, int Max)
 
 	if (!pFnClampRotAxisFromRange)
 	{
-		pFnClampRotAxisFromRange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CLAMPROTAXISFROMRANGE));
+		pFnClampRotAxisFromRange = UFunction::FindFunction("Function Core.Object.ClampRotAxisFromRange");
+
 	}
 
 	UObject_execClampRotAxisFromRange_Parms ClampRotAxisFromRange_Parms;
@@ -6547,7 +6797,8 @@ int UObject::ClampRotAxisFromBase(int Current, int Center, int MaxDelta)
 
 	if (!pFnClampRotAxisFromBase)
 	{
-		pFnClampRotAxisFromBase = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CLAMPROTAXISFROMBASE));
+		pFnClampRotAxisFromBase = UFunction::FindFunction("Function Core.Object.ClampRotAxisFromBase");
+
 	}
 
 	UObject_execClampRotAxisFromBase_Parms ClampRotAxisFromBase_Parms;
@@ -6574,7 +6825,8 @@ void UObject::ClampRotAxis(int ViewAxis, int MaxLimit, int MinLimit, int& out_De
 
 	if (!pFnClampRotAxis)
 	{
-		pFnClampRotAxis = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CLAMPROTAXIS));
+		pFnClampRotAxis = UFunction::FindFunction("Function Core.Object.ClampRotAxis");
+
 	}
 
 	UObject_execClampRotAxis_Parms ClampRotAxis_Parms;
@@ -6600,7 +6852,8 @@ struct FRotator UObject::FlattenRotatorOnAxis(struct FVector AxisToRemove, struc
 
 	if (!pFnFlattenRotatorOnAxis)
 	{
-		pFnFlattenRotatorOnAxis = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FLATTENROTATORONAXIS));
+		pFnFlattenRotatorOnAxis = UFunction::FindFunction("Function Core.Object.FlattenRotatorOnAxis");
+
 	}
 
 	UObject_execFlattenRotatorOnAxis_Parms FlattenRotatorOnAxis_Parms;
@@ -6625,7 +6878,8 @@ float UObject::RSize(struct FRotator R)
 
 	if (!pFnRSize)
 	{
-		pFnRSize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RSIZE));
+		pFnRSize = UFunction::FindFunction("Function Core.Object.RSize");
+
 	}
 
 	UObject_execRSize_Parms RSize_Parms;
@@ -6653,7 +6907,8 @@ float UObject::RDiff(struct FRotator A, struct FRotator B)
 
 	if (!pFnRDiff)
 	{
-		pFnRDiff = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RDIFF));
+		pFnRDiff = UFunction::FindFunction("Function Core.Object.RDiff");
+
 	}
 
 	UObject_execRDiff_Parms RDiff_Parms;
@@ -6681,7 +6936,8 @@ int UObject::NormalizeRotAxis(int Angle)
 
 	if (!pFnNormalizeRotAxis)
 	{
-		pFnNormalizeRotAxis = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NORMALIZEROTAXIS));
+		pFnNormalizeRotAxis = UFunction::FindFunction("Function Core.Object.NormalizeRotAxis");
+
 	}
 
 	UObject_execNormalizeRotAxis_Parms NormalizeRotAxis_Parms;
@@ -6712,7 +6968,8 @@ struct FRotator UObject::RInterpTo(struct FRotator Current, struct FRotator Targ
 
 	if (!pFnRInterpTo)
 	{
-		pFnRInterpTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RINTERPTO));
+		pFnRInterpTo = UFunction::FindFunction("Function Core.Object.RInterpTo");
+
 	}
 
 	UObject_execRInterpTo_Parms RInterpTo_Parms;
@@ -6744,7 +7001,8 @@ struct FRotator UObject::RTransform(struct FRotator R, struct FRotator RBasis)
 
 	if (!pFnRTransform)
 	{
-		pFnRTransform = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RTRANSFORM));
+		pFnRTransform = UFunction::FindFunction("Function Core.Object.RTransform");
+
 	}
 
 	UObject_execRTransform_Parms RTransform_Parms;
@@ -6775,7 +7033,8 @@ struct FRotator UObject::RLerp(struct FRotator A, struct FRotator B, float Alpha
 
 	if (!pFnRLerp)
 	{
-		pFnRLerp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RLERP));
+		pFnRLerp = UFunction::FindFunction("Function Core.Object.RLerp");
+
 	}
 
 	UObject_execRLerp_Parms RLerp_Parms;
@@ -6805,7 +7064,8 @@ struct FRotator UObject::Normalize(struct FRotator Rot)
 
 	if (!pFnNormalize)
 	{
-		pFnNormalize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NORMALIZE));
+		pFnNormalize = UFunction::FindFunction("Function Core.Object.Normalize");
+
 	}
 
 	UObject_execNormalize_Parms Normalize_Parms;
@@ -6834,7 +7094,8 @@ struct FRotator UObject::OrthoRotation(struct FVector X, struct FVector Y, struc
 
 	if (!pFnOrthoRotation)
 	{
-		pFnOrthoRotation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ORTHOROTATION));
+		pFnOrthoRotation = UFunction::FindFunction("Function Core.Object.OrthoRotation");
+
 	}
 
 	UObject_execOrthoRotation_Parms OrthoRotation_Parms;
@@ -6863,7 +7124,8 @@ struct FRotator UObject::RotRand(unsigned long bRoll)
 
 	if (!pFnRotRand)
 	{
-		pFnRotRand = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ROTRAND));
+		pFnRotRand = UFunction::FindFunction("Function Core.Object.RotRand");
+
 	}
 
 	UObject_execRotRand_Parms RotRand_Parms;
@@ -6879,7 +7141,7 @@ struct FRotator UObject::RotRand(unsigned long bRoll)
 };
 
 // Function Core.Object.GetRotatorAxis
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FVector                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FRotator                A                              (CPF_Parm)
@@ -6891,7 +7153,8 @@ struct FVector UObject::GetRotatorAxis(struct FRotator A, int Axis)
 
 	if (!pFnGetRotatorAxis)
 	{
-		pFnGetRotatorAxis = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETROTATORAXIS));
+		pFnGetRotatorAxis = UFunction::FindFunction("Function Core.Object.GetRotatorAxis");
+
 	}
 
 	UObject_execGetRotatorAxis_Parms GetRotatorAxis_Parms;
@@ -6921,7 +7184,8 @@ void UObject::GetUnAxes(struct FRotator A, struct FVector& X, struct FVector& Y,
 
 	if (!pFnGetUnAxes)
 	{
-		pFnGetUnAxes = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETUNAXES));
+		pFnGetUnAxes = UFunction::FindFunction("Function Core.Object.GetUnAxes");
+
 	}
 
 	UObject_execGetUnAxes_Parms GetUnAxes_Parms;
@@ -6951,7 +7215,8 @@ void UObject::GetAxes(struct FRotator A, struct FVector& X, struct FVector& Y, s
 
 	if (!pFnGetAxes)
 	{
-		pFnGetAxes = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETAXES));
+		pFnGetAxes = UFunction::FindFunction("Function Core.Object.GetAxes");
+
 	}
 
 	UObject_execGetAxes_Parms GetAxes_Parms;
@@ -6980,7 +7245,8 @@ bool UObject::ClockwiseFrom_IntInt(int A, int B)
 
 	if (!pFnClockwiseFrom_IntInt)
 	{
-		pFnClockwiseFrom_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CLOCKWISEFROM_INTINT));
+		pFnClockwiseFrom_IntInt = UFunction::FindFunction("Function Core.Object.ClockwiseFrom_IntInt");
+
 	}
 
 	UObject_execClockwiseFrom_IntInt_Parms ClockwiseFrom_IntInt_Parms;
@@ -7009,7 +7275,8 @@ struct FRotator UObject::SubtractEqual_RotatorRotator(struct FRotator B, struct 
 
 	if (!pFnSubtractEqual_RotatorRotator)
 	{
-		pFnSubtractEqual_RotatorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTEQUAL_ROTATORROTATOR));
+		pFnSubtractEqual_RotatorRotator = UFunction::FindFunction("Function Core.Object.SubtractEqual_RotatorRotator");
+
 	}
 
 	UObject_execSubtractEqual_RotatorRotator_Parms SubtractEqual_RotatorRotator_Parms;
@@ -7038,7 +7305,8 @@ struct FRotator UObject::AddEqual_RotatorRotator(struct FRotator B, struct FRota
 
 	if (!pFnAddEqual_RotatorRotator)
 	{
-		pFnAddEqual_RotatorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDEQUAL_ROTATORROTATOR));
+		pFnAddEqual_RotatorRotator = UFunction::FindFunction("Function Core.Object.AddEqual_RotatorRotator");
+
 	}
 
 	UObject_execAddEqual_RotatorRotator_Parms AddEqual_RotatorRotator_Parms;
@@ -7067,7 +7335,8 @@ struct FRotator UObject::Subtract_RotatorRotator(struct FRotator A, struct FRota
 
 	if (!pFnSubtract_RotatorRotator)
 	{
-		pFnSubtract_RotatorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_ROTATORROTATOR));
+		pFnSubtract_RotatorRotator = UFunction::FindFunction("Function Core.Object.Subtract_RotatorRotator");
+
 	}
 
 	UObject_execSubtract_RotatorRotator_Parms Subtract_RotatorRotator_Parms;
@@ -7096,7 +7365,8 @@ struct FRotator UObject::Add_RotatorRotator(struct FRotator A, struct FRotator B
 
 	if (!pFnAdd_RotatorRotator)
 	{
-		pFnAdd_RotatorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_ROTATORROTATOR));
+		pFnAdd_RotatorRotator = UFunction::FindFunction("Function Core.Object.Add_RotatorRotator");
+
 	}
 
 	UObject_execAdd_RotatorRotator_Parms Add_RotatorRotator_Parms;
@@ -7125,7 +7395,8 @@ struct FRotator UObject::DivideEqual_RotatorFloat(float B, struct FRotator& A)
 
 	if (!pFnDivideEqual_RotatorFloat)
 	{
-		pFnDivideEqual_RotatorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDEEQUAL_ROTATORFLOAT));
+		pFnDivideEqual_RotatorFloat = UFunction::FindFunction("Function Core.Object.DivideEqual_RotatorFloat");
+
 	}
 
 	UObject_execDivideEqual_RotatorFloat_Parms DivideEqual_RotatorFloat_Parms;
@@ -7154,7 +7425,8 @@ struct FRotator UObject::MultiplyEqual_RotatorFloat(float B, struct FRotator& A)
 
 	if (!pFnMultiplyEqual_RotatorFloat)
 	{
-		pFnMultiplyEqual_RotatorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_ROTATORFLOAT));
+		pFnMultiplyEqual_RotatorFloat = UFunction::FindFunction("Function Core.Object.MultiplyEqual_RotatorFloat");
+
 	}
 
 	UObject_execMultiplyEqual_RotatorFloat_Parms MultiplyEqual_RotatorFloat_Parms;
@@ -7183,7 +7455,8 @@ struct FRotator UObject::Divide_RotatorFloat(struct FRotator A, float B)
 
 	if (!pFnDivide_RotatorFloat)
 	{
-		pFnDivide_RotatorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDE_ROTATORFLOAT));
+		pFnDivide_RotatorFloat = UFunction::FindFunction("Function Core.Object.Divide_RotatorFloat");
+
 	}
 
 	UObject_execDivide_RotatorFloat_Parms Divide_RotatorFloat_Parms;
@@ -7212,7 +7485,8 @@ struct FRotator UObject::Multiply_FloatRotator(float A, struct FRotator B)
 
 	if (!pFnMultiply_FloatRotator)
 	{
-		pFnMultiply_FloatRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_FLOATROTATOR));
+		pFnMultiply_FloatRotator = UFunction::FindFunction("Function Core.Object.Multiply_FloatRotator");
+
 	}
 
 	UObject_execMultiply_FloatRotator_Parms Multiply_FloatRotator_Parms;
@@ -7241,7 +7515,8 @@ struct FRotator UObject::Multiply_RotatorFloat(struct FRotator A, float B)
 
 	if (!pFnMultiply_RotatorFloat)
 	{
-		pFnMultiply_RotatorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_ROTATORFLOAT));
+		pFnMultiply_RotatorFloat = UFunction::FindFunction("Function Core.Object.Multiply_RotatorFloat");
+
 	}
 
 	UObject_execMultiply_RotatorFloat_Parms Multiply_RotatorFloat_Parms;
@@ -7270,7 +7545,8 @@ bool UObject::NotEqual_RotatorRotator(struct FRotator A, struct FRotator B)
 
 	if (!pFnNotEqual_RotatorRotator)
 	{
-		pFnNotEqual_RotatorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_ROTATORROTATOR));
+		pFnNotEqual_RotatorRotator = UFunction::FindFunction("Function Core.Object.NotEqual_RotatorRotator");
+
 	}
 
 	UObject_execNotEqual_RotatorRotator_Parms NotEqual_RotatorRotator_Parms;
@@ -7299,7 +7575,8 @@ bool UObject::EqualEqual_RotatorRotator(struct FRotator A, struct FRotator B)
 
 	if (!pFnEqualEqual_RotatorRotator)
 	{
-		pFnEqualEqual_RotatorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_ROTATORROTATOR));
+		pFnEqualEqual_RotatorRotator = UFunction::FindFunction("Function Core.Object.EqualEqual_RotatorRotator");
+
 	}
 
 	UObject_execEqualEqual_RotatorRotator_Parms EqualEqual_RotatorRotator_Parms;
@@ -7328,7 +7605,8 @@ float UObject::GetRadiansBetweenVectors(struct FVector V0, struct FVector v1)
 
 	if (!pFnGetRadiansBetweenVectors)
 	{
-		pFnGetRadiansBetweenVectors = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GETRADIANSBETWEENVECTORS));
+		pFnGetRadiansBetweenVectors = UFunction::FindFunction("Function Core.Object.GetRadiansBetweenVectors");
+
 	}
 
 	UObject_execGetRadiansBetweenVectors_Parms GetRadiansBetweenVectors_Parms;
@@ -7354,7 +7632,8 @@ struct FVector UObject::VClamp(struct FVector A, struct FVector Min, struct FVec
 
 	if (!pFnVClamp)
 	{
-		pFnVClamp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VCLAMP));
+		pFnVClamp = UFunction::FindFunction("Function Core.Object.VClamp");
+
 	}
 
 	UObject_execVClamp_Parms VClamp_Parms;
@@ -7381,7 +7660,8 @@ struct FVector UObject::vect3d(float X, float Y, float Z)
 
 	if (!pFnvect3d)
 	{
-		pFnvect3d = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VECT3D));
+		pFnvect3d = UFunction::FindFunction("Function Core.Object.vect3d");
+
 	}
 
 	UObject_execvect3d_Parms vect3d_Parms;
@@ -7410,7 +7690,8 @@ bool UObject::InCylinder(struct FVector Origin, struct FRotator Dir, float Width
 
 	if (!pFnInCylinder)
 	{
-		pFnInCylinder = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_INCYLINDER));
+		pFnInCylinder = UFunction::FindFunction("Function Core.Object.InCylinder");
+
 	}
 
 	UObject_execInCylinder_Parms InCylinder_Parms;
@@ -7438,7 +7719,8 @@ float UObject::NoZDot(struct FVector A, struct FVector B)
 
 	if (!pFnNoZDot)
 	{
-		pFnNoZDot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOZDOT));
+		pFnNoZDot = UFunction::FindFunction("Function Core.Object.NoZDot");
+
 	}
 
 	UObject_execNoZDot_Parms NoZDot_Parms;
@@ -7467,7 +7749,8 @@ struct FVector UObject::ClampLength(struct FVector V, float MaxLength)
 
 	if (!pFnClampLength)
 	{
-		pFnClampLength = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CLAMPLENGTH));
+		pFnClampLength = UFunction::FindFunction("Function Core.Object.ClampLength");
+
 	}
 
 	UObject_execClampLength_Parms ClampLength_Parms;
@@ -7498,7 +7781,8 @@ struct FVector UObject::VInterpConstantTo(struct FVector Current, struct FVector
 
 	if (!pFnVInterpConstantTo)
 	{
-		pFnVInterpConstantTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VINTERPCONSTANTTO));
+		pFnVInterpConstantTo = UFunction::FindFunction("Function Core.Object.VInterpConstantTo");
+
 	}
 
 	UObject_execVInterpConstantTo_Parms VInterpConstantTo_Parms;
@@ -7531,7 +7815,8 @@ struct FVector UObject::VInterpTo(struct FVector Current, struct FVector Target,
 
 	if (!pFnVInterpTo)
 	{
-		pFnVInterpTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VINTERPTO));
+		pFnVInterpTo = UFunction::FindFunction("Function Core.Object.VInterpTo");
+
 	}
 
 	UObject_execVInterpTo_Parms VInterpTo_Parms;
@@ -7550,7 +7835,7 @@ struct FVector UObject::VInterpTo(struct FVector Current, struct FVector Target,
 };
 
 // Function Core.Object.Construct
-// [0x00020800] (FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030800] (FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UObject::eventConstruct()
@@ -7559,7 +7844,8 @@ void UObject::eventConstruct()
 
 	if (!pFnConstruct)
 	{
-		pFnConstruct = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CONSTRUCT));
+		pFnConstruct = UFunction::FindFunction("Function Core.Object.Construct");
+
 	}
 
 	UObject_eventConstruct_Parms Construct_Parms;
@@ -7581,7 +7867,8 @@ struct FVector UObject::ProjectOnToPlane(struct FVector InVector, struct FVector
 
 	if (!pFnProjectOnToPlane)
 	{
-		pFnProjectOnToPlane = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PROJECTONTOPLANE));
+		pFnProjectOnToPlane = UFunction::FindFunction("Function Core.Object.ProjectOnToPlane");
+
 	}
 
 	UObject_execProjectOnToPlane_Parms ProjectOnToPlane_Parms;
@@ -7610,7 +7897,8 @@ bool UObject::IsZero(struct FVector A)
 
 	if (!pFnIsZero)
 	{
-		pFnIsZero = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ISZERO));
+		pFnIsZero = UFunction::FindFunction("Function Core.Object.IsZero");
+
 	}
 
 	UObject_execIsZero_Parms IsZero_Parms;
@@ -7638,7 +7926,8 @@ struct FVector UObject::ProjectOnTo(struct FVector X, struct FVector Y)
 
 	if (!pFnProjectOnTo)
 	{
-		pFnProjectOnTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PROJECTONTO));
+		pFnProjectOnTo = UFunction::FindFunction("Function Core.Object.ProjectOnTo");
+
 	}
 
 	UObject_execProjectOnTo_Parms ProjectOnTo_Parms;
@@ -7667,7 +7956,8 @@ struct FVector UObject::MirrorVectorByNormal(struct FVector InVect, struct FVect
 
 	if (!pFnMirrorVectorByNormal)
 	{
-		pFnMirrorVectorByNormal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MIRRORVECTORBYNORMAL));
+		pFnMirrorVectorByNormal = UFunction::FindFunction("Function Core.Object.MirrorVectorByNormal");
+
 	}
 
 	UObject_execMirrorVectorByNormal_Parms MirrorVectorByNormal_Parms;
@@ -7697,7 +7987,8 @@ struct FVector UObject::VRandCone2(struct FVector Dir, float HorizontalConeHalfA
 
 	if (!pFnVRandCone2)
 	{
-		pFnVRandCone2 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VRANDCONE2));
+		pFnVRandCone2 = UFunction::FindFunction("Function Core.Object.VRandCone2");
+
 	}
 
 	UObject_execVRandCone2_Parms VRandCone2_Parms;
@@ -7727,7 +8018,8 @@ struct FVector UObject::VRandCone(struct FVector Dir, float ConeHalfAngleRadians
 
 	if (!pFnVRandCone)
 	{
-		pFnVRandCone = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VRANDCONE));
+		pFnVRandCone = UFunction::FindFunction("Function Core.Object.VRandCone");
+
 	}
 
 	UObject_execVRandCone_Parms VRandCone_Parms;
@@ -7754,7 +8046,8 @@ struct FVector UObject::VRand()
 
 	if (!pFnVRand)
 	{
-		pFnVRand = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VRAND));
+		pFnVRand = UFunction::FindFunction("Function Core.Object.VRand");
+
 	}
 
 	UObject_execVRand_Parms VRand_Parms;
@@ -7769,7 +8062,7 @@ struct FVector UObject::VRand()
 };
 
 // Function Core.Object.VLerp
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FVector                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FVector                 A                              (CPF_Parm)
@@ -7782,7 +8075,8 @@ struct FVector UObject::VLerp(struct FVector A, struct FVector B, float Alpha)
 
 	if (!pFnVLerp)
 	{
-		pFnVLerp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VLERP));
+		pFnVLerp = UFunction::FindFunction("Function Core.Object.VLerp");
+
 	}
 
 	UObject_execVLerp_Parms VLerp_Parms;
@@ -7811,7 +8105,8 @@ struct FVector UObject::Normal2D(struct FVector A)
 
 	if (!pFnNormal2D)
 	{
-		pFnNormal2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NORMAL2D));
+		pFnNormal2D = UFunction::FindFunction("Function Core.Object.Normal2D");
+
 	}
 
 	UObject_execNormal2D_Parms Normal2D_Parms;
@@ -7838,7 +8133,8 @@ struct FVector UObject::Normal(struct FVector A)
 
 	if (!pFnNormal)
 	{
-		pFnNormal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NORMAL));
+		pFnNormal = UFunction::FindFunction("Function Core.Object.Normal");
+
 	}
 
 	UObject_execNormal_Parms Normal_Parms;
@@ -7865,7 +8161,8 @@ float UObject::VSizeSq2D(struct FVector A)
 
 	if (!pFnVSizeSq2D)
 	{
-		pFnVSizeSq2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VSIZESQ2D));
+		pFnVSizeSq2D = UFunction::FindFunction("Function Core.Object.VSizeSq2D");
+
 	}
 
 	UObject_execVSizeSq2D_Parms VSizeSq2D_Parms;
@@ -7892,7 +8189,8 @@ float UObject::VSizeSq(struct FVector A)
 
 	if (!pFnVSizeSq)
 	{
-		pFnVSizeSq = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VSIZESQ));
+		pFnVSizeSq = UFunction::FindFunction("Function Core.Object.VSizeSq");
+
 	}
 
 	UObject_execVSizeSq_Parms VSizeSq_Parms;
@@ -7919,7 +8217,8 @@ float UObject::VSize2D(struct FVector A)
 
 	if (!pFnVSize2D)
 	{
-		pFnVSize2D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VSIZE2D));
+		pFnVSize2D = UFunction::FindFunction("Function Core.Object.VSize2D");
+
 	}
 
 	UObject_execVSize2D_Parms VSize2D_Parms;
@@ -7946,7 +8245,8 @@ float UObject::VSize(struct FVector A)
 
 	if (!pFnVSize)
 	{
-		pFnVSize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_VSIZE));
+		pFnVSize = UFunction::FindFunction("Function Core.Object.VSize");
+
 	}
 
 	UObject_execVSize_Parms VSize_Parms;
@@ -7974,7 +8274,8 @@ struct FVector UObject::SubtractEqual_VectorVector(struct FVector B, struct FVec
 
 	if (!pFnSubtractEqual_VectorVector)
 	{
-		pFnSubtractEqual_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTEQUAL_VECTORVECTOR));
+		pFnSubtractEqual_VectorVector = UFunction::FindFunction("Function Core.Object.SubtractEqual_VectorVector");
+
 	}
 
 	UObject_execSubtractEqual_VectorVector_Parms SubtractEqual_VectorVector_Parms;
@@ -8003,7 +8304,8 @@ struct FVector UObject::AddEqual_VectorVector(struct FVector B, struct FVector& 
 
 	if (!pFnAddEqual_VectorVector)
 	{
-		pFnAddEqual_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDEQUAL_VECTORVECTOR));
+		pFnAddEqual_VectorVector = UFunction::FindFunction("Function Core.Object.AddEqual_VectorVector");
+
 	}
 
 	UObject_execAddEqual_VectorVector_Parms AddEqual_VectorVector_Parms;
@@ -8032,7 +8334,8 @@ struct FVector UObject::DivideEqual_VectorFloat(float B, struct FVector& A)
 
 	if (!pFnDivideEqual_VectorFloat)
 	{
-		pFnDivideEqual_VectorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDEEQUAL_VECTORFLOAT));
+		pFnDivideEqual_VectorFloat = UFunction::FindFunction("Function Core.Object.DivideEqual_VectorFloat");
+
 	}
 
 	UObject_execDivideEqual_VectorFloat_Parms DivideEqual_VectorFloat_Parms;
@@ -8061,7 +8364,8 @@ struct FVector UObject::MultiplyEqual_VectorVector(struct FVector B, struct FVec
 
 	if (!pFnMultiplyEqual_VectorVector)
 	{
-		pFnMultiplyEqual_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_VECTORVECTOR));
+		pFnMultiplyEqual_VectorVector = UFunction::FindFunction("Function Core.Object.MultiplyEqual_VectorVector");
+
 	}
 
 	UObject_execMultiplyEqual_VectorVector_Parms MultiplyEqual_VectorVector_Parms;
@@ -8090,7 +8394,8 @@ struct FVector UObject::MultiplyEqual_VectorFloat(float B, struct FVector& A)
 
 	if (!pFnMultiplyEqual_VectorFloat)
 	{
-		pFnMultiplyEqual_VectorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_VECTORFLOAT));
+		pFnMultiplyEqual_VectorFloat = UFunction::FindFunction("Function Core.Object.MultiplyEqual_VectorFloat");
+
 	}
 
 	UObject_execMultiplyEqual_VectorFloat_Parms MultiplyEqual_VectorFloat_Parms;
@@ -8119,7 +8424,8 @@ struct FVector UObject::Cross_VectorVector(struct FVector A, struct FVector B)
 
 	if (!pFnCross_VectorVector)
 	{
-		pFnCross_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CROSS_VECTORVECTOR));
+		pFnCross_VectorVector = UFunction::FindFunction("Function Core.Object.Cross_VectorVector");
+
 	}
 
 	UObject_execCross_VectorVector_Parms Cross_VectorVector_Parms;
@@ -8148,7 +8454,8 @@ float UObject::Dot_VectorVector(struct FVector A, struct FVector B)
 
 	if (!pFnDot_VectorVector)
 	{
-		pFnDot_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DOT_VECTORVECTOR));
+		pFnDot_VectorVector = UFunction::FindFunction("Function Core.Object.Dot_VectorVector");
+
 	}
 
 	UObject_execDot_VectorVector_Parms Dot_VectorVector_Parms;
@@ -8177,7 +8484,8 @@ bool UObject::NotEqual_VectorVector(struct FVector A, struct FVector B)
 
 	if (!pFnNotEqual_VectorVector)
 	{
-		pFnNotEqual_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_VECTORVECTOR));
+		pFnNotEqual_VectorVector = UFunction::FindFunction("Function Core.Object.NotEqual_VectorVector");
+
 	}
 
 	UObject_execNotEqual_VectorVector_Parms NotEqual_VectorVector_Parms;
@@ -8206,7 +8514,8 @@ bool UObject::EqualEqual_VectorVector(struct FVector A, struct FVector B)
 
 	if (!pFnEqualEqual_VectorVector)
 	{
-		pFnEqualEqual_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_VECTORVECTOR));
+		pFnEqualEqual_VectorVector = UFunction::FindFunction("Function Core.Object.EqualEqual_VectorVector");
+
 	}
 
 	UObject_execEqualEqual_VectorVector_Parms EqualEqual_VectorVector_Parms;
@@ -8235,7 +8544,8 @@ struct FVector UObject::GreaterGreater_VectorRotator(struct FVector A, struct FR
 
 	if (!pFnGreaterGreater_VectorRotator)
 	{
-		pFnGreaterGreater_VectorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATERGREATER_VECTORROTATOR));
+		pFnGreaterGreater_VectorRotator = UFunction::FindFunction("Function Core.Object.GreaterGreater_VectorRotator");
+
 	}
 
 	UObject_execGreaterGreater_VectorRotator_Parms GreaterGreater_VectorRotator_Parms;
@@ -8264,7 +8574,8 @@ struct FVector UObject::LessLess_VectorRotator(struct FVector A, struct FRotator
 
 	if (!pFnLessLess_VectorRotator)
 	{
-		pFnLessLess_VectorRotator = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESSLESS_VECTORROTATOR));
+		pFnLessLess_VectorRotator = UFunction::FindFunction("Function Core.Object.LessLess_VectorRotator");
+
 	}
 
 	UObject_execLessLess_VectorRotator_Parms LessLess_VectorRotator_Parms;
@@ -8293,7 +8604,8 @@ struct FVector UObject::Subtract_VectorVector(struct FVector A, struct FVector B
 
 	if (!pFnSubtract_VectorVector)
 	{
-		pFnSubtract_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_VECTORVECTOR));
+		pFnSubtract_VectorVector = UFunction::FindFunction("Function Core.Object.Subtract_VectorVector");
+
 	}
 
 	UObject_execSubtract_VectorVector_Parms Subtract_VectorVector_Parms;
@@ -8322,7 +8634,8 @@ struct FVector UObject::Add_VectorVector(struct FVector A, struct FVector B)
 
 	if (!pFnAdd_VectorVector)
 	{
-		pFnAdd_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_VECTORVECTOR));
+		pFnAdd_VectorVector = UFunction::FindFunction("Function Core.Object.Add_VectorVector");
+
 	}
 
 	UObject_execAdd_VectorVector_Parms Add_VectorVector_Parms;
@@ -8351,7 +8664,8 @@ struct FVector UObject::Divide_VectorFloat(struct FVector A, float B)
 
 	if (!pFnDivide_VectorFloat)
 	{
-		pFnDivide_VectorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDE_VECTORFLOAT));
+		pFnDivide_VectorFloat = UFunction::FindFunction("Function Core.Object.Divide_VectorFloat");
+
 	}
 
 	UObject_execDivide_VectorFloat_Parms Divide_VectorFloat_Parms;
@@ -8380,7 +8694,8 @@ struct FVector UObject::Multiply_VectorVector(struct FVector A, struct FVector B
 
 	if (!pFnMultiply_VectorVector)
 	{
-		pFnMultiply_VectorVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_VECTORVECTOR));
+		pFnMultiply_VectorVector = UFunction::FindFunction("Function Core.Object.Multiply_VectorVector");
+
 	}
 
 	UObject_execMultiply_VectorVector_Parms Multiply_VectorVector_Parms;
@@ -8409,7 +8724,8 @@ struct FVector UObject::Multiply_FloatVector(float A, struct FVector B)
 
 	if (!pFnMultiply_FloatVector)
 	{
-		pFnMultiply_FloatVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_FLOATVECTOR));
+		pFnMultiply_FloatVector = UFunction::FindFunction("Function Core.Object.Multiply_FloatVector");
+
 	}
 
 	UObject_execMultiply_FloatVector_Parms Multiply_FloatVector_Parms;
@@ -8438,7 +8754,8 @@ struct FVector UObject::Multiply_VectorFloat(struct FVector A, float B)
 
 	if (!pFnMultiply_VectorFloat)
 	{
-		pFnMultiply_VectorFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_VECTORFLOAT));
+		pFnMultiply_VectorFloat = UFunction::FindFunction("Function Core.Object.Multiply_VectorFloat");
+
 	}
 
 	UObject_execMultiply_VectorFloat_Parms Multiply_VectorFloat_Parms;
@@ -8466,7 +8783,8 @@ struct FVector UObject::Subtract_PreVector(struct FVector A)
 
 	if (!pFnSubtract_PreVector)
 	{
-		pFnSubtract_PreVector = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_PREVECTOR));
+		pFnSubtract_PreVector = UFunction::FindFunction("Function Core.Object.Subtract_PreVector");
+
 	}
 
 	UObject_execSubtract_PreVector_Parms Subtract_PreVector_Parms;
@@ -8496,7 +8814,8 @@ float UObject::FInterpConstantTo(float Current, float Target, float DeltaTime, f
 
 	if (!pFnFInterpConstantTo)
 	{
-		pFnFInterpConstantTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINTERPCONSTANTTO));
+		pFnFInterpConstantTo = UFunction::FindFunction("Function Core.Object.FInterpConstantTo");
+
 	}
 
 	UObject_execFInterpConstantTo_Parms FInterpConstantTo_Parms;
@@ -8529,7 +8848,8 @@ float UObject::FInterpTo(float Current, float Target, float DeltaTime, float Int
 
 	if (!pFnFInterpTo)
 	{
-		pFnFInterpTo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINTERPTO));
+		pFnFInterpTo = UFunction::FindFunction("Function Core.Object.FInterpTo");
+
 	}
 
 	UObject_execFInterpTo_Parms FInterpTo_Parms;
@@ -8561,7 +8881,8 @@ float UObject::FPctByRange(float Value, float InMin, float InMax)
 
 	if (!pFnFPctByRange)
 	{
-		pFnFPctByRange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FPCTBYRANGE));
+		pFnFPctByRange = UFunction::FindFunction("Function Core.Object.FPctByRange");
+
 	}
 
 	UObject_execFPctByRange_Parms FPctByRange_Parms;
@@ -8586,7 +8907,8 @@ float UObject::RandSign(float Value)
 
 	if (!pFnRandSign)
 	{
-		pFnRandSign = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RANDSIGN));
+		pFnRandSign = UFunction::FindFunction("Function Core.Object.RandSign");
+
 	}
 
 	UObject_execRandSign_Parms RandSign_Parms;
@@ -8613,7 +8935,8 @@ struct FVector UObject::CalculateGravityPosition(struct FVector Location, struct
 
 	if (!pFnCalculateGravityPosition)
 	{
-		pFnCalculateGravityPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CALCULATEGRAVITYPOSITION));
+		pFnCalculateGravityPosition = UFunction::FindFunction("Function Core.Object.CalculateGravityPosition");
+
 	}
 
 	UObject_execCalculateGravityPosition_Parms CalculateGravityPosition_Parms;
@@ -8629,7 +8952,7 @@ struct FVector UObject::CalculateGravityPosition(struct FVector Location, struct
 };
 
 // Function Core.Object.RandRange
-// [0x00022103] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetRequest | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032103] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetRequest | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // float                          InMin                          (CPF_Parm)
@@ -8641,7 +8964,8 @@ float UObject::RandRange(float InMin, float InMax)
 
 	if (!pFnRandRange)
 	{
-		pFnRandRange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RANDRANGE));
+		pFnRandRange = UFunction::FindFunction("Function Core.Object.RandRange");
+
 	}
 
 	UObject_execRandRange_Parms RandRange_Parms;
@@ -8668,7 +8992,8 @@ float UObject::FInterpEaseInOut(float A, float B, float Alpha, float Exp)
 
 	if (!pFnFInterpEaseInOut)
 	{
-		pFnFInterpEaseInOut = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINTERPEASEINOUT));
+		pFnFInterpEaseInOut = UFunction::FindFunction("Function Core.Object.FInterpEaseInOut");
+
 	}
 
 	UObject_execFInterpEaseInOut_Parms FInterpEaseInOut_Parms;
@@ -8701,7 +9026,8 @@ float UObject::FInterpEaseOut(float A, float B, float Alpha, float Exp)
 
 	if (!pFnFInterpEaseOut)
 	{
-		pFnFInterpEaseOut = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINTERPEASEOUT));
+		pFnFInterpEaseOut = UFunction::FindFunction("Function Core.Object.FInterpEaseOut");
+
 	}
 
 	UObject_execFInterpEaseOut_Parms FInterpEaseOut_Parms;
@@ -8720,7 +9046,7 @@ float UObject::FInterpEaseOut(float A, float B, float Alpha, float Exp)
 };
 
 // Function Core.Object.FInterpEaseIn
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // float                          A                              (CPF_Parm)
@@ -8734,7 +9060,8 @@ float UObject::FInterpEaseIn(float A, float B, float Alpha, float Exp)
 
 	if (!pFnFInterpEaseIn)
 	{
-		pFnFInterpEaseIn = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FINTERPEASEIN));
+		pFnFInterpEaseIn = UFunction::FindFunction("Function Core.Object.FInterpEaseIn");
+
 	}
 
 	UObject_execFInterpEaseIn_Parms FInterpEaseIn_Parms;
@@ -8768,7 +9095,8 @@ float UObject::FCubicInterp(float P0, float T0, float P1, float T1, float A)
 
 	if (!pFnFCubicInterp)
 	{
-		pFnFCubicInterp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FCUBICINTERP));
+		pFnFCubicInterp = UFunction::FindFunction("Function Core.Object.FCubicInterp");
+
 	}
 
 	UObject_execFCubicInterp_Parms FCubicInterp_Parms;
@@ -8788,7 +9116,7 @@ float UObject::FCubicInterp(float P0, float T0, float P1, float T1, float A)
 };
 
 // Function Core.Object.FloorLog2
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            Value                          (CPF_Parm)
@@ -8799,7 +9127,8 @@ int UObject::FloorLog2(int Value)
 
 	if (!pFnFloorLog2)
 	{
-		pFnFloorLog2 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FLOORLOG2));
+		pFnFloorLog2 = UFunction::FindFunction("Function Core.Object.FloorLog2");
+
 	}
 
 	UObject_execFloorLog2_Parms FloorLog2_Parms;
@@ -8826,7 +9155,8 @@ int UObject::FCeil(float A)
 
 	if (!pFnFCeil)
 	{
-		pFnFCeil = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FCEIL));
+		pFnFCeil = UFunction::FindFunction("Function Core.Object.FCeil");
+
 	}
 
 	UObject_execFCeil_Parms FCeil_Parms;
@@ -8853,7 +9183,8 @@ int UObject::FFloor(float A)
 
 	if (!pFnFFloor)
 	{
-		pFnFFloor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FFLOOR));
+		pFnFFloor = UFunction::FindFunction("Function Core.Object.FFloor");
+
 	}
 
 	UObject_execFFloor_Parms FFloor_Parms;
@@ -8880,7 +9211,8 @@ int UObject::Round(float A)
 
 	if (!pFnRound)
 	{
-		pFnRound = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ROUND));
+		pFnRound = UFunction::FindFunction("Function Core.Object.Round");
+
 	}
 
 	UObject_execRound_Parms Round_Parms;
@@ -8909,7 +9241,8 @@ float UObject::Lerp(float A, float B, float Alpha)
 
 	if (!pFnLerp)
 	{
-		pFnLerp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LERP));
+		pFnLerp = UFunction::FindFunction("Function Core.Object.Lerp");
+
 	}
 
 	UObject_execLerp_Parms Lerp_Parms;
@@ -8940,7 +9273,8 @@ float UObject::FClamp(float V, float A, float B)
 
 	if (!pFnFClamp)
 	{
-		pFnFClamp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FCLAMP));
+		pFnFClamp = UFunction::FindFunction("Function Core.Object.FClamp");
+
 	}
 
 	UObject_execFClamp_Parms FClamp_Parms;
@@ -8970,7 +9304,8 @@ float UObject::FMax(float A, float B)
 
 	if (!pFnFMax)
 	{
-		pFnFMax = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FMAX));
+		pFnFMax = UFunction::FindFunction("Function Core.Object.FMax");
+
 	}
 
 	UObject_execFMax_Parms FMax_Parms;
@@ -8999,7 +9334,8 @@ float UObject::FMin(float A, float B)
 
 	if (!pFnFMin)
 	{
-		pFnFMin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FMIN));
+		pFnFMin = UFunction::FindFunction("Function Core.Object.FMin");
+
 	}
 
 	UObject_execFMin_Parms FMin_Parms;
@@ -9026,7 +9362,8 @@ float UObject::FRand()
 
 	if (!pFnFRand)
 	{
-		pFnFRand = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FRAND));
+		pFnFRand = UFunction::FindFunction("Function Core.Object.FRand");
+
 	}
 
 	UObject_execFRand_Parms FRand_Parms;
@@ -9052,7 +9389,8 @@ float UObject::Square(float A)
 
 	if (!pFnSquare)
 	{
-		pFnSquare = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SQUARE));
+		pFnSquare = UFunction::FindFunction("Function Core.Object.Square");
+
 	}
 
 	UObject_execSquare_Parms Square_Parms;
@@ -9079,7 +9417,8 @@ float UObject::Sqrt(float A)
 
 	if (!pFnSqrt)
 	{
-		pFnSqrt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SQRT));
+		pFnSqrt = UFunction::FindFunction("Function Core.Object.Sqrt");
+
 	}
 
 	UObject_execSqrt_Parms Sqrt_Parms;
@@ -9106,7 +9445,8 @@ float UObject::Loge(float A)
 
 	if (!pFnLoge)
 	{
-		pFnLoge = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LOGE));
+		pFnLoge = UFunction::FindFunction("Function Core.Object.Loge");
+
 	}
 
 	UObject_execLoge_Parms Loge_Parms;
@@ -9133,7 +9473,8 @@ float UObject::Exp(float A)
 
 	if (!pFnExp)
 	{
-		pFnExp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EXP));
+		pFnExp = UFunction::FindFunction("Function Core.Object.Exp");
+
 	}
 
 	UObject_execExp_Parms Exp_Parms;
@@ -9161,7 +9502,8 @@ float UObject::Atan2(float A, float B)
 
 	if (!pFnAtan2)
 	{
-		pFnAtan2 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ATAN2));
+		pFnAtan2 = UFunction::FindFunction("Function Core.Object.Atan2");
+
 	}
 
 	UObject_execAtan2_Parms Atan2_Parms;
@@ -9189,7 +9531,8 @@ float UObject::Atan(float A)
 
 	if (!pFnAtan)
 	{
-		pFnAtan = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ATAN));
+		pFnAtan = UFunction::FindFunction("Function Core.Object.Atan");
+
 	}
 
 	UObject_execAtan_Parms Atan_Parms;
@@ -9216,7 +9559,8 @@ float UObject::Tan(float A)
 
 	if (!pFnTan)
 	{
-		pFnTan = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TAN));
+		pFnTan = UFunction::FindFunction("Function Core.Object.Tan");
+
 	}
 
 	UObject_execTan_Parms Tan_Parms;
@@ -9243,7 +9587,8 @@ float UObject::Acos(float A)
 
 	if (!pFnAcos)
 	{
-		pFnAcos = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ACOS));
+		pFnAcos = UFunction::FindFunction("Function Core.Object.Acos");
+
 	}
 
 	UObject_execAcos_Parms Acos_Parms;
@@ -9270,7 +9615,8 @@ float UObject::Cos(float A)
 
 	if (!pFnCos)
 	{
-		pFnCos = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_COS));
+		pFnCos = UFunction::FindFunction("Function Core.Object.Cos");
+
 	}
 
 	UObject_execCos_Parms Cos_Parms;
@@ -9297,7 +9643,8 @@ float UObject::Asin(float A)
 
 	if (!pFnAsin)
 	{
-		pFnAsin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ASIN));
+		pFnAsin = UFunction::FindFunction("Function Core.Object.Asin");
+
 	}
 
 	UObject_execAsin_Parms Asin_Parms;
@@ -9324,7 +9671,8 @@ float UObject::Sin(float A)
 
 	if (!pFnSin)
 	{
-		pFnSin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SIN));
+		pFnSin = UFunction::FindFunction("Function Core.Object.Sin");
+
 	}
 
 	UObject_execSin_Parms Sin_Parms;
@@ -9351,7 +9699,8 @@ float UObject::Abs(float A)
 
 	if (!pFnAbs)
 	{
-		pFnAbs = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ABS));
+		pFnAbs = UFunction::FindFunction("Function Core.Object.Abs");
+
 	}
 
 	UObject_execAbs_Parms Abs_Parms;
@@ -9379,7 +9728,8 @@ float UObject::SubtractEqual_FloatFloat(float B, float& A)
 
 	if (!pFnSubtractEqual_FloatFloat)
 	{
-		pFnSubtractEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTEQUAL_FLOATFLOAT));
+		pFnSubtractEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.SubtractEqual_FloatFloat");
+
 	}
 
 	UObject_execSubtractEqual_FloatFloat_Parms SubtractEqual_FloatFloat_Parms;
@@ -9408,7 +9758,8 @@ float UObject::AddEqual_FloatFloat(float B, float& A)
 
 	if (!pFnAddEqual_FloatFloat)
 	{
-		pFnAddEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDEQUAL_FLOATFLOAT));
+		pFnAddEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.AddEqual_FloatFloat");
+
 	}
 
 	UObject_execAddEqual_FloatFloat_Parms AddEqual_FloatFloat_Parms;
@@ -9437,7 +9788,8 @@ float UObject::DivideEqual_FloatFloat(float B, float& A)
 
 	if (!pFnDivideEqual_FloatFloat)
 	{
-		pFnDivideEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDEEQUAL_FLOATFLOAT));
+		pFnDivideEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.DivideEqual_FloatFloat");
+
 	}
 
 	UObject_execDivideEqual_FloatFloat_Parms DivideEqual_FloatFloat_Parms;
@@ -9466,7 +9818,8 @@ float UObject::MultiplyEqual_FloatFloat(float B, float& A)
 
 	if (!pFnMultiplyEqual_FloatFloat)
 	{
-		pFnMultiplyEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_FLOATFLOAT));
+		pFnMultiplyEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.MultiplyEqual_FloatFloat");
+
 	}
 
 	UObject_execMultiplyEqual_FloatFloat_Parms MultiplyEqual_FloatFloat_Parms;
@@ -9495,7 +9848,8 @@ bool UObject::NotEqual_FloatFloat(float A, float B)
 
 	if (!pFnNotEqual_FloatFloat)
 	{
-		pFnNotEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_FLOATFLOAT));
+		pFnNotEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.NotEqual_FloatFloat");
+
 	}
 
 	UObject_execNotEqual_FloatFloat_Parms NotEqual_FloatFloat_Parms;
@@ -9524,7 +9878,8 @@ bool UObject::ComplementEqual_FloatFloat(float A, float B)
 
 	if (!pFnComplementEqual_FloatFloat)
 	{
-		pFnComplementEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_COMPLEMENTEQUAL_FLOATFLOAT));
+		pFnComplementEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.ComplementEqual_FloatFloat");
+
 	}
 
 	UObject_execComplementEqual_FloatFloat_Parms ComplementEqual_FloatFloat_Parms;
@@ -9553,7 +9908,8 @@ bool UObject::EqualEqual_FloatFloat(float A, float B)
 
 	if (!pFnEqualEqual_FloatFloat)
 	{
-		pFnEqualEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_FLOATFLOAT));
+		pFnEqualEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.EqualEqual_FloatFloat");
+
 	}
 
 	UObject_execEqualEqual_FloatFloat_Parms EqualEqual_FloatFloat_Parms;
@@ -9582,7 +9938,8 @@ bool UObject::GreaterEqual_FloatFloat(float A, float B)
 
 	if (!pFnGreaterEqual_FloatFloat)
 	{
-		pFnGreaterEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATEREQUAL_FLOATFLOAT));
+		pFnGreaterEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.GreaterEqual_FloatFloat");
+
 	}
 
 	UObject_execGreaterEqual_FloatFloat_Parms GreaterEqual_FloatFloat_Parms;
@@ -9611,7 +9968,8 @@ bool UObject::LessEqual_FloatFloat(float A, float B)
 
 	if (!pFnLessEqual_FloatFloat)
 	{
-		pFnLessEqual_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESSEQUAL_FLOATFLOAT));
+		pFnLessEqual_FloatFloat = UFunction::FindFunction("Function Core.Object.LessEqual_FloatFloat");
+
 	}
 
 	UObject_execLessEqual_FloatFloat_Parms LessEqual_FloatFloat_Parms;
@@ -9640,7 +9998,8 @@ bool UObject::Greater_FloatFloat(float A, float B)
 
 	if (!pFnGreater_FloatFloat)
 	{
-		pFnGreater_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATER_FLOATFLOAT));
+		pFnGreater_FloatFloat = UFunction::FindFunction("Function Core.Object.Greater_FloatFloat");
+
 	}
 
 	UObject_execGreater_FloatFloat_Parms Greater_FloatFloat_Parms;
@@ -9669,7 +10028,8 @@ bool UObject::Less_FloatFloat(float A, float B)
 
 	if (!pFnLess_FloatFloat)
 	{
-		pFnLess_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESS_FLOATFLOAT));
+		pFnLess_FloatFloat = UFunction::FindFunction("Function Core.Object.Less_FloatFloat");
+
 	}
 
 	UObject_execLess_FloatFloat_Parms Less_FloatFloat_Parms;
@@ -9698,7 +10058,8 @@ float UObject::Subtract_FloatFloat(float A, float B)
 
 	if (!pFnSubtract_FloatFloat)
 	{
-		pFnSubtract_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_FLOATFLOAT));
+		pFnSubtract_FloatFloat = UFunction::FindFunction("Function Core.Object.Subtract_FloatFloat");
+
 	}
 
 	UObject_execSubtract_FloatFloat_Parms Subtract_FloatFloat_Parms;
@@ -9727,7 +10088,8 @@ float UObject::Add_FloatFloat(float A, float B)
 
 	if (!pFnAdd_FloatFloat)
 	{
-		pFnAdd_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_FLOATFLOAT));
+		pFnAdd_FloatFloat = UFunction::FindFunction("Function Core.Object.Add_FloatFloat");
+
 	}
 
 	UObject_execAdd_FloatFloat_Parms Add_FloatFloat_Parms;
@@ -9756,7 +10118,8 @@ float UObject::Percent_FloatFloat(float A, float B)
 
 	if (!pFnPercent_FloatFloat)
 	{
-		pFnPercent_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PERCENT_FLOATFLOAT));
+		pFnPercent_FloatFloat = UFunction::FindFunction("Function Core.Object.Percent_FloatFloat");
+
 	}
 
 	UObject_execPercent_FloatFloat_Parms Percent_FloatFloat_Parms;
@@ -9785,7 +10148,8 @@ float UObject::Divide_FloatFloat(float A, float B)
 
 	if (!pFnDivide_FloatFloat)
 	{
-		pFnDivide_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDE_FLOATFLOAT));
+		pFnDivide_FloatFloat = UFunction::FindFunction("Function Core.Object.Divide_FloatFloat");
+
 	}
 
 	UObject_execDivide_FloatFloat_Parms Divide_FloatFloat_Parms;
@@ -9814,7 +10178,8 @@ float UObject::Multiply_FloatFloat(float A, float B)
 
 	if (!pFnMultiply_FloatFloat)
 	{
-		pFnMultiply_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_FLOATFLOAT));
+		pFnMultiply_FloatFloat = UFunction::FindFunction("Function Core.Object.Multiply_FloatFloat");
+
 	}
 
 	UObject_execMultiply_FloatFloat_Parms Multiply_FloatFloat_Parms;
@@ -9843,7 +10208,8 @@ float UObject::MultiplyMultiply_FloatFloat(float Base, float Exp)
 
 	if (!pFnMultiplyMultiply_FloatFloat)
 	{
-		pFnMultiplyMultiply_FloatFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYMULTIPLY_FLOATFLOAT));
+		pFnMultiplyMultiply_FloatFloat = UFunction::FindFunction("Function Core.Object.MultiplyMultiply_FloatFloat");
+
 	}
 
 	UObject_execMultiplyMultiply_FloatFloat_Parms MultiplyMultiply_FloatFloat_Parms;
@@ -9871,7 +10237,8 @@ float UObject::Subtract_PreFloat(float A)
 
 	if (!pFnSubtract_PreFloat)
 	{
-		pFnSubtract_PreFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_PREFLOAT));
+		pFnSubtract_PreFloat = UFunction::FindFunction("Function Core.Object.Subtract_PreFloat");
+
 	}
 
 	UObject_execSubtract_PreFloat_Parms Subtract_PreFloat_Parms;
@@ -9898,7 +10265,8 @@ struct FString UObject::ToHex(int A)
 
 	if (!pFnToHex)
 	{
-		pFnToHex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_TOHEX));
+		pFnToHex = UFunction::FindFunction("Function Core.Object.ToHex");
+
 	}
 
 	UObject_execToHex_Parms ToHex_Parms;
@@ -9927,7 +10295,8 @@ int UObject::Clamp(int V, int A, int B)
 
 	if (!pFnClamp)
 	{
-		pFnClamp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_CLAMP));
+		pFnClamp = UFunction::FindFunction("Function Core.Object.Clamp");
+
 	}
 
 	UObject_execClamp_Parms Clamp_Parms;
@@ -9957,7 +10326,8 @@ int UObject::Max(int A, int B)
 
 	if (!pFnMax)
 	{
-		pFnMax = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MAX));
+		pFnMax = UFunction::FindFunction("Function Core.Object.Max");
+
 	}
 
 	UObject_execMax_Parms Max_Parms;
@@ -9986,7 +10356,8 @@ int UObject::Min(int A, int B)
 
 	if (!pFnMin)
 	{
-		pFnMin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MIN));
+		pFnMin = UFunction::FindFunction("Function Core.Object.Min");
+
 	}
 
 	UObject_execMin_Parms Min_Parms;
@@ -10014,7 +10385,8 @@ int UObject::Rand(int Max)
 
 	if (!pFnRand)
 	{
-		pFnRand = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_RAND));
+		pFnRand = UFunction::FindFunction("Function Core.Object.Rand");
+
 	}
 
 	UObject_execRand_Parms Rand_Parms;
@@ -10030,7 +10402,7 @@ int UObject::Rand(int Max)
 };
 
 // Function Core.Object.FromHexColor
-// [0x00822003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_HasDefaults | FUNC_AllFlags)
+// [0x00832003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasDefaults | FUNC_AllFlags)
 // Parameter info:
 // struct FColor                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Hex                            (CPF_Parm | CPF_NeedCtorLink)
@@ -10041,7 +10413,8 @@ struct FColor UObject::FromHexColor(struct FString Hex)
 
 	if (!pFnFromHexColor)
 	{
-		pFnFromHexColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FROMHEXCOLOR));
+		pFnFromHexColor = UFunction::FindFunction("Function Core.Object.FromHexColor");
+
 	}
 
 	UObject_execFromHexColor_Parms FromHexColor_Parms;
@@ -10053,7 +10426,7 @@ struct FColor UObject::FromHexColor(struct FString Hex)
 };
 
 // Function Core.Object.FromHex
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Hex                            (CPF_Parm | CPF_NeedCtorLink)
@@ -10064,7 +10437,8 @@ int UObject::FromHex(struct FString Hex)
 
 	if (!pFnFromHex)
 	{
-		pFnFromHex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_FROMHEX));
+		pFnFromHex = UFunction::FindFunction("Function Core.Object.FromHex");
+
 	}
 
 	UObject_execFromHex_Parms FromHex_Parms;
@@ -10092,7 +10466,8 @@ unsigned long long UObject::QMin(unsigned long long A, unsigned long long B)
 
 	if (!pFnQMin)
 	{
-		pFnQMin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QMIN));
+		pFnQMin = UFunction::FindFunction("Function Core.Object.QMin");
+
 	}
 
 	UObject_execQMin_Parms QMin_Parms;
@@ -10121,7 +10496,8 @@ unsigned long long UObject::QMax(unsigned long long A, unsigned long long B)
 
 	if (!pFnQMax)
 	{
-		pFnQMax = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QMAX));
+		pFnQMax = UFunction::FindFunction("Function Core.Object.QMax");
+
 	}
 
 	UObject_execQMax_Parms QMax_Parms;
@@ -10138,7 +10514,7 @@ unsigned long long UObject::QMax(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.QSubtract
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long long             ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10150,7 +10526,8 @@ unsigned long long UObject::QSubtract(unsigned long long A, unsigned long long B
 
 	if (!pFnQSubtract)
 	{
-		pFnQSubtract = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_QSUBTRACT));
+		pFnQSubtract = UFunction::FindFunction("Function Core.Object.QSubtract");
+
 	}
 
 	UObject_execQSubtract_Parms QSubtract_Parms;
@@ -10167,7 +10544,7 @@ unsigned long long UObject::QSubtract(unsigned long long A, unsigned long long B
 };
 
 // Function Core.Object.NotEqual_QWordInt
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10179,7 +10556,8 @@ bool UObject::NotEqual_QWordInt(unsigned long long A, int B)
 
 	if (!pFnNotEqual_QWordInt)
 	{
-		pFnNotEqual_QWordInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_QWORDINT));
+		pFnNotEqual_QWordInt = UFunction::FindFunction("Function Core.Object.NotEqual_QWordInt");
+
 	}
 
 	UObject_execNotEqual_QWordInt_Parms NotEqual_QWordInt_Parms;
@@ -10196,7 +10574,7 @@ bool UObject::NotEqual_QWordInt(unsigned long long A, int B)
 };
 
 // Function Core.Object.EqualEqual_QWordInt
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10208,7 +10586,8 @@ bool UObject::EqualEqual_QWordInt(unsigned long long A, int B)
 
 	if (!pFnEqualEqual_QWordInt)
 	{
-		pFnEqualEqual_QWordInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_QWORDINT));
+		pFnEqualEqual_QWordInt = UFunction::FindFunction("Function Core.Object.EqualEqual_QWordInt");
+
 	}
 
 	UObject_execEqualEqual_QWordInt_Parms EqualEqual_QWordInt_Parms;
@@ -10225,7 +10604,7 @@ bool UObject::EqualEqual_QWordInt(unsigned long long A, int B)
 };
 
 // Function Core.Object.NotEqual_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10237,7 +10616,8 @@ bool UObject::NotEqual_QWordQWord(unsigned long long A, unsigned long long B)
 
 	if (!pFnNotEqual_QWordQWord)
 	{
-		pFnNotEqual_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_QWORDQWORD));
+		pFnNotEqual_QWordQWord = UFunction::FindFunction("Function Core.Object.NotEqual_QWordQWord");
+
 	}
 
 	UObject_execNotEqual_QWordQWord_Parms NotEqual_QWordQWord_Parms;
@@ -10254,7 +10634,7 @@ bool UObject::NotEqual_QWordQWord(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.EqualEqual_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10266,7 +10646,8 @@ bool UObject::EqualEqual_QWordQWord(unsigned long long A, unsigned long long B)
 
 	if (!pFnEqualEqual_QWordQWord)
 	{
-		pFnEqualEqual_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_QWORDQWORD));
+		pFnEqualEqual_QWordQWord = UFunction::FindFunction("Function Core.Object.EqualEqual_QWordQWord");
+
 	}
 
 	UObject_execEqualEqual_QWordQWord_Parms EqualEqual_QWordQWord_Parms;
@@ -10283,7 +10664,7 @@ bool UObject::EqualEqual_QWordQWord(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.GreaterEqual_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10295,7 +10676,8 @@ bool UObject::GreaterEqual_QWordQWord(unsigned long long A, unsigned long long B
 
 	if (!pFnGreaterEqual_QWordQWord)
 	{
-		pFnGreaterEqual_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATEREQUAL_QWORDQWORD));
+		pFnGreaterEqual_QWordQWord = UFunction::FindFunction("Function Core.Object.GreaterEqual_QWordQWord");
+
 	}
 
 	UObject_execGreaterEqual_QWordQWord_Parms GreaterEqual_QWordQWord_Parms;
@@ -10312,7 +10694,7 @@ bool UObject::GreaterEqual_QWordQWord(unsigned long long A, unsigned long long B
 };
 
 // Function Core.Object.LessEqual_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10324,7 +10706,8 @@ bool UObject::LessEqual_QWordQWord(unsigned long long A, unsigned long long B)
 
 	if (!pFnLessEqual_QWordQWord)
 	{
-		pFnLessEqual_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESSEQUAL_QWORDQWORD));
+		pFnLessEqual_QWordQWord = UFunction::FindFunction("Function Core.Object.LessEqual_QWordQWord");
+
 	}
 
 	UObject_execLessEqual_QWordQWord_Parms LessEqual_QWordQWord_Parms;
@@ -10341,7 +10724,7 @@ bool UObject::LessEqual_QWordQWord(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.Greater_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10353,7 +10736,8 @@ bool UObject::Greater_QWordQWord(unsigned long long A, unsigned long long B)
 
 	if (!pFnGreater_QWordQWord)
 	{
-		pFnGreater_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATER_QWORDQWORD));
+		pFnGreater_QWordQWord = UFunction::FindFunction("Function Core.Object.Greater_QWordQWord");
+
 	}
 
 	UObject_execGreater_QWordQWord_Parms Greater_QWordQWord_Parms;
@@ -10370,7 +10754,7 @@ bool UObject::Greater_QWordQWord(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.Less_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10382,7 +10766,8 @@ bool UObject::Less_QWordQWord(unsigned long long A, unsigned long long B)
 
 	if (!pFnLess_QWordQWord)
 	{
-		pFnLess_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESS_QWORDQWORD));
+		pFnLess_QWordQWord = UFunction::FindFunction("Function Core.Object.Less_QWordQWord");
+
 	}
 
 	UObject_execLess_QWordQWord_Parms Less_QWordQWord_Parms;
@@ -10399,7 +10784,7 @@ bool UObject::Less_QWordQWord(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.Subtract_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10411,7 +10796,8 @@ int UObject::Subtract_QWordQWord(unsigned long long A, unsigned long long B)
 
 	if (!pFnSubtract_QWordQWord)
 	{
-		pFnSubtract_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_QWORDQWORD));
+		pFnSubtract_QWordQWord = UFunction::FindFunction("Function Core.Object.Subtract_QWordQWord");
+
 	}
 
 	UObject_execSubtract_QWordQWord_Parms Subtract_QWordQWord_Parms;
@@ -10428,7 +10814,7 @@ int UObject::Subtract_QWordQWord(unsigned long long A, unsigned long long B)
 };
 
 // Function Core.Object.Add_QWordQWord
-// [0x00023401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00033401] (FUNC_Final | FUNC_Native | FUNC_NetResponse | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long long             ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long long             A                              (CPF_Parm)
@@ -10440,7 +10826,8 @@ unsigned long long UObject::Add_QWordQWord(unsigned long long A, unsigned long l
 
 	if (!pFnAdd_QWordQWord)
 	{
-		pFnAdd_QWordQWord = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_QWORDQWORD));
+		pFnAdd_QWordQWord = UFunction::FindFunction("Function Core.Object.Add_QWordQWord");
+
 	}
 
 	UObject_execAdd_QWordQWord_Parms Add_QWordQWord_Parms;
@@ -10468,7 +10855,8 @@ int UObject::SubtractSubtract_Int(int& A)
 
 	if (!pFnSubtractSubtract_Int)
 	{
-		pFnSubtractSubtract_Int = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTSUBTRACT_INT));
+		pFnSubtractSubtract_Int = UFunction::FindFunction("Function Core.Object.SubtractSubtract_Int");
+
 	}
 
 	UObject_execSubtractSubtract_Int_Parms SubtractSubtract_Int_Parms;
@@ -10495,7 +10883,8 @@ int UObject::AddAdd_Int(int& A)
 
 	if (!pFnAddAdd_Int)
 	{
-		pFnAddAdd_Int = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDADD_INT));
+		pFnAddAdd_Int = UFunction::FindFunction("Function Core.Object.AddAdd_Int");
+
 	}
 
 	UObject_execAddAdd_Int_Parms AddAdd_Int_Parms;
@@ -10522,7 +10911,8 @@ int UObject::SubtractSubtract_PreInt(int& A)
 
 	if (!pFnSubtractSubtract_PreInt)
 	{
-		pFnSubtractSubtract_PreInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTSUBTRACT_PREINT));
+		pFnSubtractSubtract_PreInt = UFunction::FindFunction("Function Core.Object.SubtractSubtract_PreInt");
+
 	}
 
 	UObject_execSubtractSubtract_PreInt_Parms SubtractSubtract_PreInt_Parms;
@@ -10549,7 +10939,8 @@ int UObject::AddAdd_PreInt(int& A)
 
 	if (!pFnAddAdd_PreInt)
 	{
-		pFnAddAdd_PreInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDADD_PREINT));
+		pFnAddAdd_PreInt = UFunction::FindFunction("Function Core.Object.AddAdd_PreInt");
+
 	}
 
 	UObject_execAddAdd_PreInt_Parms AddAdd_PreInt_Parms;
@@ -10577,7 +10968,8 @@ int UObject::SubtractEqual_IntInt(int B, int& A)
 
 	if (!pFnSubtractEqual_IntInt)
 	{
-		pFnSubtractEqual_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTEQUAL_INTINT));
+		pFnSubtractEqual_IntInt = UFunction::FindFunction("Function Core.Object.SubtractEqual_IntInt");
+
 	}
 
 	UObject_execSubtractEqual_IntInt_Parms SubtractEqual_IntInt_Parms;
@@ -10606,7 +10998,8 @@ int UObject::AddEqual_IntInt(int B, int& A)
 
 	if (!pFnAddEqual_IntInt)
 	{
-		pFnAddEqual_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDEQUAL_INTINT));
+		pFnAddEqual_IntInt = UFunction::FindFunction("Function Core.Object.AddEqual_IntInt");
+
 	}
 
 	UObject_execAddEqual_IntInt_Parms AddEqual_IntInt_Parms;
@@ -10635,7 +11028,8 @@ int UObject::DivideEqual_IntFloat(float B, int& A)
 
 	if (!pFnDivideEqual_IntFloat)
 	{
-		pFnDivideEqual_IntFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDEEQUAL_INTFLOAT));
+		pFnDivideEqual_IntFloat = UFunction::FindFunction("Function Core.Object.DivideEqual_IntFloat");
+
 	}
 
 	UObject_execDivideEqual_IntFloat_Parms DivideEqual_IntFloat_Parms;
@@ -10664,7 +11058,8 @@ int UObject::MultiplyEqual_IntFloat(float B, int& A)
 
 	if (!pFnMultiplyEqual_IntFloat)
 	{
-		pFnMultiplyEqual_IntFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_INTFLOAT));
+		pFnMultiplyEqual_IntFloat = UFunction::FindFunction("Function Core.Object.MultiplyEqual_IntFloat");
+
 	}
 
 	UObject_execMultiplyEqual_IntFloat_Parms MultiplyEqual_IntFloat_Parms;
@@ -10693,7 +11088,8 @@ int UObject::Or_IntInt(int A, int B)
 
 	if (!pFnOr_IntInt)
 	{
-		pFnOr_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_OR_INTINT));
+		pFnOr_IntInt = UFunction::FindFunction("Function Core.Object.Or_IntInt");
+
 	}
 
 	UObject_execOr_IntInt_Parms Or_IntInt_Parms;
@@ -10722,7 +11118,8 @@ int UObject::Xor_IntInt(int A, int B)
 
 	if (!pFnXor_IntInt)
 	{
-		pFnXor_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_XOR_INTINT));
+		pFnXor_IntInt = UFunction::FindFunction("Function Core.Object.Xor_IntInt");
+
 	}
 
 	UObject_execXor_IntInt_Parms Xor_IntInt_Parms;
@@ -10751,7 +11148,8 @@ int UObject::And_IntInt(int A, int B)
 
 	if (!pFnAnd_IntInt)
 	{
-		pFnAnd_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_AND_INTINT));
+		pFnAnd_IntInt = UFunction::FindFunction("Function Core.Object.And_IntInt");
+
 	}
 
 	UObject_execAnd_IntInt_Parms And_IntInt_Parms;
@@ -10780,7 +11178,8 @@ bool UObject::NotEqual_IntInt(int A, int B)
 
 	if (!pFnNotEqual_IntInt)
 	{
-		pFnNotEqual_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_INTINT));
+		pFnNotEqual_IntInt = UFunction::FindFunction("Function Core.Object.NotEqual_IntInt");
+
 	}
 
 	UObject_execNotEqual_IntInt_Parms NotEqual_IntInt_Parms;
@@ -10809,7 +11208,8 @@ bool UObject::EqualEqual_IntInt(int A, int B)
 
 	if (!pFnEqualEqual_IntInt)
 	{
-		pFnEqualEqual_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_INTINT));
+		pFnEqualEqual_IntInt = UFunction::FindFunction("Function Core.Object.EqualEqual_IntInt");
+
 	}
 
 	UObject_execEqualEqual_IntInt_Parms EqualEqual_IntInt_Parms;
@@ -10838,7 +11238,8 @@ bool UObject::GreaterEqual_IntInt(int A, int B)
 
 	if (!pFnGreaterEqual_IntInt)
 	{
-		pFnGreaterEqual_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATEREQUAL_INTINT));
+		pFnGreaterEqual_IntInt = UFunction::FindFunction("Function Core.Object.GreaterEqual_IntInt");
+
 	}
 
 	UObject_execGreaterEqual_IntInt_Parms GreaterEqual_IntInt_Parms;
@@ -10867,7 +11268,8 @@ bool UObject::LessEqual_IntInt(int A, int B)
 
 	if (!pFnLessEqual_IntInt)
 	{
-		pFnLessEqual_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESSEQUAL_INTINT));
+		pFnLessEqual_IntInt = UFunction::FindFunction("Function Core.Object.LessEqual_IntInt");
+
 	}
 
 	UObject_execLessEqual_IntInt_Parms LessEqual_IntInt_Parms;
@@ -10896,7 +11298,8 @@ bool UObject::Greater_IntInt(int A, int B)
 
 	if (!pFnGreater_IntInt)
 	{
-		pFnGreater_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATER_INTINT));
+		pFnGreater_IntInt = UFunction::FindFunction("Function Core.Object.Greater_IntInt");
+
 	}
 
 	UObject_execGreater_IntInt_Parms Greater_IntInt_Parms;
@@ -10925,7 +11328,8 @@ bool UObject::Less_IntInt(int A, int B)
 
 	if (!pFnLess_IntInt)
 	{
-		pFnLess_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESS_INTINT));
+		pFnLess_IntInt = UFunction::FindFunction("Function Core.Object.Less_IntInt");
+
 	}
 
 	UObject_execLess_IntInt_Parms Less_IntInt_Parms;
@@ -10954,7 +11358,8 @@ int UObject::GreaterGreaterGreater_IntInt(int A, int B)
 
 	if (!pFnGreaterGreaterGreater_IntInt)
 	{
-		pFnGreaterGreaterGreater_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATERGREATERGREATER_INTINT));
+		pFnGreaterGreaterGreater_IntInt = UFunction::FindFunction("Function Core.Object.GreaterGreaterGreater_IntInt");
+
 	}
 
 	UObject_execGreaterGreaterGreater_IntInt_Parms GreaterGreaterGreater_IntInt_Parms;
@@ -10983,7 +11388,8 @@ int UObject::GreaterGreater_IntInt(int A, int B)
 
 	if (!pFnGreaterGreater_IntInt)
 	{
-		pFnGreaterGreater_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_GREATERGREATER_INTINT));
+		pFnGreaterGreater_IntInt = UFunction::FindFunction("Function Core.Object.GreaterGreater_IntInt");
+
 	}
 
 	UObject_execGreaterGreater_IntInt_Parms GreaterGreater_IntInt_Parms;
@@ -11012,7 +11418,8 @@ int UObject::LessLess_IntInt(int A, int B)
 
 	if (!pFnLessLess_IntInt)
 	{
-		pFnLessLess_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_LESSLESS_INTINT));
+		pFnLessLess_IntInt = UFunction::FindFunction("Function Core.Object.LessLess_IntInt");
+
 	}
 
 	UObject_execLessLess_IntInt_Parms LessLess_IntInt_Parms;
@@ -11041,7 +11448,8 @@ int UObject::Subtract_IntInt(int A, int B)
 
 	if (!pFnSubtract_IntInt)
 	{
-		pFnSubtract_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_INTINT));
+		pFnSubtract_IntInt = UFunction::FindFunction("Function Core.Object.Subtract_IntInt");
+
 	}
 
 	UObject_execSubtract_IntInt_Parms Subtract_IntInt_Parms;
@@ -11070,7 +11478,8 @@ int UObject::Add_IntInt(int A, int B)
 
 	if (!pFnAdd_IntInt)
 	{
-		pFnAdd_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADD_INTINT));
+		pFnAdd_IntInt = UFunction::FindFunction("Function Core.Object.Add_IntInt");
+
 	}
 
 	UObject_execAdd_IntInt_Parms Add_IntInt_Parms;
@@ -11099,7 +11508,8 @@ int UObject::Percent_IntInt(int A, int B)
 
 	if (!pFnPercent_IntInt)
 	{
-		pFnPercent_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_PERCENT_INTINT));
+		pFnPercent_IntInt = UFunction::FindFunction("Function Core.Object.Percent_IntInt");
+
 	}
 
 	UObject_execPercent_IntInt_Parms Percent_IntInt_Parms;
@@ -11128,7 +11538,8 @@ int UObject::Divide_IntInt(int A, int B)
 
 	if (!pFnDivide_IntInt)
 	{
-		pFnDivide_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDE_INTINT));
+		pFnDivide_IntInt = UFunction::FindFunction("Function Core.Object.Divide_IntInt");
+
 	}
 
 	UObject_execDivide_IntInt_Parms Divide_IntInt_Parms;
@@ -11157,7 +11568,8 @@ int UObject::Multiply_IntInt(int A, int B)
 
 	if (!pFnMultiply_IntInt)
 	{
-		pFnMultiply_IntInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLY_INTINT));
+		pFnMultiply_IntInt = UFunction::FindFunction("Function Core.Object.Multiply_IntInt");
+
 	}
 
 	UObject_execMultiply_IntInt_Parms Multiply_IntInt_Parms;
@@ -11185,7 +11597,8 @@ int UObject::Subtract_PreInt(int A)
 
 	if (!pFnSubtract_PreInt)
 	{
-		pFnSubtract_PreInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACT_PREINT));
+		pFnSubtract_PreInt = UFunction::FindFunction("Function Core.Object.Subtract_PreInt");
+
 	}
 
 	UObject_execSubtract_PreInt_Parms Subtract_PreInt_Parms;
@@ -11212,7 +11625,8 @@ int UObject::Complement_PreInt(int A)
 
 	if (!pFnComplement_PreInt)
 	{
-		pFnComplement_PreInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_COMPLEMENT_PREINT));
+		pFnComplement_PreInt = UFunction::FindFunction("Function Core.Object.Complement_PreInt");
+
 	}
 
 	UObject_execComplement_PreInt_Parms Complement_PreInt_Parms;
@@ -11239,7 +11653,8 @@ unsigned char UObject::SubtractSubtract_Byte(unsigned char& A)
 
 	if (!pFnSubtractSubtract_Byte)
 	{
-		pFnSubtractSubtract_Byte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTSUBTRACT_BYTE));
+		pFnSubtractSubtract_Byte = UFunction::FindFunction("Function Core.Object.SubtractSubtract_Byte");
+
 	}
 
 	UObject_execSubtractSubtract_Byte_Parms SubtractSubtract_Byte_Parms;
@@ -11266,7 +11681,8 @@ unsigned char UObject::AddAdd_Byte(unsigned char& A)
 
 	if (!pFnAddAdd_Byte)
 	{
-		pFnAddAdd_Byte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDADD_BYTE));
+		pFnAddAdd_Byte = UFunction::FindFunction("Function Core.Object.AddAdd_Byte");
+
 	}
 
 	UObject_execAddAdd_Byte_Parms AddAdd_Byte_Parms;
@@ -11293,7 +11709,8 @@ unsigned char UObject::SubtractSubtract_PreByte(unsigned char& A)
 
 	if (!pFnSubtractSubtract_PreByte)
 	{
-		pFnSubtractSubtract_PreByte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTSUBTRACT_PREBYTE));
+		pFnSubtractSubtract_PreByte = UFunction::FindFunction("Function Core.Object.SubtractSubtract_PreByte");
+
 	}
 
 	UObject_execSubtractSubtract_PreByte_Parms SubtractSubtract_PreByte_Parms;
@@ -11320,7 +11737,8 @@ unsigned char UObject::AddAdd_PreByte(unsigned char& A)
 
 	if (!pFnAddAdd_PreByte)
 	{
-		pFnAddAdd_PreByte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDADD_PREBYTE));
+		pFnAddAdd_PreByte = UFunction::FindFunction("Function Core.Object.AddAdd_PreByte");
+
 	}
 
 	UObject_execAddAdd_PreByte_Parms AddAdd_PreByte_Parms;
@@ -11348,7 +11766,8 @@ unsigned char UObject::SubtractEqual_ByteByte(unsigned char B, unsigned char& A)
 
 	if (!pFnSubtractEqual_ByteByte)
 	{
-		pFnSubtractEqual_ByteByte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_SUBTRACTEQUAL_BYTEBYTE));
+		pFnSubtractEqual_ByteByte = UFunction::FindFunction("Function Core.Object.SubtractEqual_ByteByte");
+
 	}
 
 	UObject_execSubtractEqual_ByteByte_Parms SubtractEqual_ByteByte_Parms;
@@ -11377,7 +11796,8 @@ unsigned char UObject::AddEqual_ByteByte(unsigned char B, unsigned char& A)
 
 	if (!pFnAddEqual_ByteByte)
 	{
-		pFnAddEqual_ByteByte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ADDEQUAL_BYTEBYTE));
+		pFnAddEqual_ByteByte = UFunction::FindFunction("Function Core.Object.AddEqual_ByteByte");
+
 	}
 
 	UObject_execAddEqual_ByteByte_Parms AddEqual_ByteByte_Parms;
@@ -11406,7 +11826,8 @@ unsigned char UObject::DivideEqual_ByteByte(unsigned char B, unsigned char& A)
 
 	if (!pFnDivideEqual_ByteByte)
 	{
-		pFnDivideEqual_ByteByte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_DIVIDEEQUAL_BYTEBYTE));
+		pFnDivideEqual_ByteByte = UFunction::FindFunction("Function Core.Object.DivideEqual_ByteByte");
+
 	}
 
 	UObject_execDivideEqual_ByteByte_Parms DivideEqual_ByteByte_Parms;
@@ -11435,7 +11856,8 @@ unsigned char UObject::MultiplyEqual_ByteFloat(float B, unsigned char& A)
 
 	if (!pFnMultiplyEqual_ByteFloat)
 	{
-		pFnMultiplyEqual_ByteFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_BYTEFLOAT));
+		pFnMultiplyEqual_ByteFloat = UFunction::FindFunction("Function Core.Object.MultiplyEqual_ByteFloat");
+
 	}
 
 	UObject_execMultiplyEqual_ByteFloat_Parms MultiplyEqual_ByteFloat_Parms;
@@ -11464,7 +11886,8 @@ unsigned char UObject::MultiplyEqual_ByteByte(unsigned char B, unsigned char& A)
 
 	if (!pFnMultiplyEqual_ByteByte)
 	{
-		pFnMultiplyEqual_ByteByte = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_MULTIPLYEQUAL_BYTEBYTE));
+		pFnMultiplyEqual_ByteByte = UFunction::FindFunction("Function Core.Object.MultiplyEqual_ByteByte");
+
 	}
 
 	UObject_execMultiplyEqual_ByteByte_Parms MultiplyEqual_ByteByte_Parms;
@@ -11493,7 +11916,8 @@ bool UObject::OrOr_BoolBool(unsigned long A, unsigned long B)
 
 	if (!pFnOrOr_BoolBool)
 	{
-		pFnOrOr_BoolBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_OROR_BOOLBOOL));
+		pFnOrOr_BoolBool = UFunction::FindFunction("Function Core.Object.OrOr_BoolBool");
+
 	}
 
 	UObject_execOrOr_BoolBool_Parms OrOr_BoolBool_Parms;
@@ -11522,7 +11946,8 @@ bool UObject::XorXor_BoolBool(unsigned long A, unsigned long B)
 
 	if (!pFnXorXor_BoolBool)
 	{
-		pFnXorXor_BoolBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_XORXOR_BOOLBOOL));
+		pFnXorXor_BoolBool = UFunction::FindFunction("Function Core.Object.XorXor_BoolBool");
+
 	}
 
 	UObject_execXorXor_BoolBool_Parms XorXor_BoolBool_Parms;
@@ -11551,7 +11976,8 @@ bool UObject::AndAnd_BoolBool(unsigned long A, unsigned long B)
 
 	if (!pFnAndAnd_BoolBool)
 	{
-		pFnAndAnd_BoolBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_ANDAND_BOOLBOOL));
+		pFnAndAnd_BoolBool = UFunction::FindFunction("Function Core.Object.AndAnd_BoolBool");
+
 	}
 
 	UObject_execAndAnd_BoolBool_Parms AndAnd_BoolBool_Parms;
@@ -11580,7 +12006,8 @@ bool UObject::NotEqual_BoolBool(unsigned long A, unsigned long B)
 
 	if (!pFnNotEqual_BoolBool)
 	{
-		pFnNotEqual_BoolBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOTEQUAL_BOOLBOOL));
+		pFnNotEqual_BoolBool = UFunction::FindFunction("Function Core.Object.NotEqual_BoolBool");
+
 	}
 
 	UObject_execNotEqual_BoolBool_Parms NotEqual_BoolBool_Parms;
@@ -11609,7 +12036,8 @@ bool UObject::EqualEqual_BoolBool(unsigned long A, unsigned long B)
 
 	if (!pFnEqualEqual_BoolBool)
 	{
-		pFnEqualEqual_BoolBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_EQUALEQUAL_BOOLBOOL));
+		pFnEqualEqual_BoolBool = UFunction::FindFunction("Function Core.Object.EqualEqual_BoolBool");
+
 	}
 
 	UObject_execEqualEqual_BoolBool_Parms EqualEqual_BoolBool_Parms;
@@ -11637,7 +12065,8 @@ bool UObject::Not_PreBool(unsigned long A)
 
 	if (!pFnNot_PreBool)
 	{
-		pFnNot_PreBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECT_NOT_PREBOOL));
+		pFnNot_PreBool = UFunction::FindFunction("Function Core.Object.Not_PreBool");
+
 	}
 
 	UObject_execNot_PreBool_Parms Not_PreBool_Parms;
@@ -11664,7 +12093,8 @@ void UUTF8::DecodeInline(TArray<unsigned char>& Input, struct FString& Output)
 
 	if (!pFnDecodeInline)
 	{
-		pFnDecodeInline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_UTF8_DECODEINLINE));
+		pFnDecodeInline = UFunction::FindFunction("Function Core.UTF8.DecodeInline");
+
 	}
 
 	UUTF8_execDecodeInline_Parms DecodeInline_Parms;
@@ -11690,7 +12120,8 @@ struct FString UUTF8::Decode(TArray<unsigned char>& Input)
 
 	if (!pFnDecode)
 	{
-		pFnDecode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_UTF8_DECODE));
+		pFnDecode = UFunction::FindFunction("Function Core.UTF8.Decode");
+
 	}
 
 	UUTF8_execDecode_Parms Decode_Parms;
@@ -11717,7 +12148,8 @@ void UUTF8::EncodeInline(struct FString Input, TArray<unsigned char>& Output)
 
 	if (!pFnEncodeInline)
 	{
-		pFnEncodeInline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_UTF8_ENCODEINLINE));
+		pFnEncodeInline = UFunction::FindFunction("Function Core.UTF8.EncodeInline");
+
 	}
 
 	UUTF8_execEncodeInline_Parms EncodeInline_Parms;
@@ -11743,7 +12175,8 @@ TArray<unsigned char> UUTF8::Encode(struct FString Input)
 
 	if (!pFnEncode)
 	{
-		pFnEncode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_UTF8_ENCODE));
+		pFnEncode = UFunction::FindFunction("Function Core.UTF8.Encode");
+
 	}
 
 	UUTF8_execEncode_Parms Encode_Parms;
@@ -11769,7 +12202,8 @@ void USubscription::__Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74(
 
 	if (!pFn__Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74)
 	{
-		pFn__Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION___SUBSCRIPTION__TRIGGERALL_DD23D598441796B09EC4B188D6BC9F74));
+		pFn__Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74 = UFunction::FindFunction("Function Core.Subscription.__Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74");
+
 	}
 
 	USubscription_exec__Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74_Parms __Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74_Parms;
@@ -11789,7 +12223,8 @@ class USubscription* USubscription::GetNone()
 
 	if (!pFnGetNone)
 	{
-		pFnGetNone = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION_GETNONE));
+		pFnGetNone = UFunction::FindFunction("Function Core.Subscription.GetNone");
+
 	}
 
 	USubscription_execGetNone_Parms GetNone_Parms;
@@ -11814,7 +12249,8 @@ void USubscription::TriggerAll(TArray<class USubscription*>& Subscriptions)
 
 	if (!pFnTriggerAll)
 	{
-		pFnTriggerAll = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION_TRIGGERALL));
+		pFnTriggerAll = UFunction::FindFunction("Function Core.Subscription.TriggerAll");
+
 	}
 
 	USubscription_execTriggerAll_Parms TriggerAll_Parms;
@@ -11835,7 +12271,8 @@ class USubscription* USubscription::Create(struct FScriptDelegate InCallback)
 
 	if (!pFnCreate)
 	{
-		pFnCreate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION_CREATE));
+		pFnCreate = UFunction::FindFunction("Function Core.Subscription.Create");
+
 	}
 
 	USubscription_execCreate_Parms Create_Parms;
@@ -11856,7 +12293,8 @@ void USubscription::eventDispose()
 
 	if (!pFnDispose)
 	{
-		pFnDispose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION_DISPOSE));
+		pFnDispose = UFunction::FindFunction("Function Core.Subscription.Dispose");
+
 	}
 
 	USubscription_eventDispose_Parms Dispose_Parms;
@@ -11874,7 +12312,8 @@ void USubscription::TriggerCallback()
 
 	if (!pFnTriggerCallback)
 	{
-		pFnTriggerCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION_TRIGGERCALLBACK));
+		pFnTriggerCallback = UFunction::FindFunction("Function Core.Subscription.TriggerCallback");
+
 	}
 
 	USubscription_execTriggerCallback_Parms TriggerCallback_Parms;
@@ -11893,7 +12332,8 @@ void USubscription::SetCallback(struct FScriptDelegate InCallback)
 
 	if (!pFnSetCallback)
 	{
-		pFnSetCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION_SETCALLBACK));
+		pFnSetCallback = UFunction::FindFunction("Function Core.Subscription.SetCallback");
+
 	}
 
 	USubscription_execSetCallback_Parms SetCallback_Parms;
@@ -11912,7 +12352,8 @@ void USubscription::SubscriberCallback()
 
 	if (!pFnSubscriberCallback)
 	{
-		pFnSubscriberCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_SUBSCRIPTION_SUBSCRIBERCALLBACK));
+		pFnSubscriberCallback = UFunction::FindFunction("Function Core.Subscription.SubscriberCallback");
+
 	}
 
 	USubscription_execSubscriberCallback_Parms SubscriberCallback_Parms;
@@ -11931,7 +12372,8 @@ void UObjectUtil::ClearNaNValues(class UObject* InObject)
 
 	if (!pFnClearNaNValues)
 	{
-		pFnClearNaNValues = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTUTIL_CLEARNANVALUES));
+		pFnClearNaNValues = UFunction::FindFunction("Function Core.ObjectUtil.ClearNaNValues");
+
 	}
 
 	UObjectUtil_execClearNaNValues_Parms ClearNaNValues_Parms;
@@ -11957,7 +12399,8 @@ bool UObjectUtil::IdenticalDeep(class UObject* Left, class UObject* Right)
 
 	if (!pFnIdenticalDeep)
 	{
-		pFnIdenticalDeep = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTUTIL_IDENTICALDEEP));
+		pFnIdenticalDeep = UFunction::FindFunction("Function Core.ObjectUtil.IdenticalDeep");
+
 	}
 
 	UObjectUtil_execIdenticalDeep_Parms IdenticalDeep_Parms;
@@ -11986,7 +12429,8 @@ bool UObjectUtil::Identical(class UObject* Left, class UObject* Right)
 
 	if (!pFnIdentical)
 	{
-		pFnIdentical = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTUTIL_IDENTICAL));
+		pFnIdentical = UFunction::FindFunction("Function Core.ObjectUtil.Identical");
+
 	}
 
 	UObjectUtil_execIdentical_Parms Identical_Parms;
@@ -12003,7 +12447,7 @@ bool UObjectUtil::Identical(class UObject* Left, class UObject* Right)
 };
 
 // Function Core.ObjectUtil.InitProperties
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 InObject                       (CPF_Parm)
 
@@ -12013,7 +12457,8 @@ void UObjectUtil::InitProperties(class UObject* InObject)
 
 	if (!pFnInitProperties)
 	{
-		pFnInitProperties = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTUTIL_INITPROPERTIES));
+		pFnInitProperties = UFunction::FindFunction("Function Core.ObjectUtil.InitProperties");
+
 	}
 
 	UObjectUtil_execInitProperties_Parms InitProperties_Parms;
@@ -12039,7 +12484,8 @@ void UObjectUtil::AllCDOs(class UClass* BaseClass, unsigned long bIncludeAbstrac
 
 	if (!pFnAllCDOs)
 	{
-		pFnAllCDOs = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTUTIL_ALLCDOS));
+		pFnAllCDOs = UFunction::FindFunction("Function Core.ObjectUtil.AllCDOs");
+
 	}
 
 	UObjectUtil_execAllCDOs_Parms AllCDOs_Parms;
@@ -12055,7 +12501,7 @@ void UObjectUtil::AllCDOs(class UClass* BaseClass, unsigned long bIncludeAbstrac
 };
 
 // Function Core.ObjectUtil.GetCDO
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UClass*                  InClass                        (CPF_Parm)
@@ -12066,7 +12512,8 @@ class UObject* UObjectUtil::GetCDO(class UClass* InClass)
 
 	if (!pFnGetCDO)
 	{
-		pFnGetCDO = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTUTIL_GETCDO));
+		pFnGetCDO = UFunction::FindFunction("Function Core.ObjectUtil.GetCDO");
+
 	}
 
 	UObjectUtil_execGetCDO_Parms GetCDO_Parms;
@@ -12091,7 +12538,8 @@ void UFileSystem::CloseLogFile()
 
 	if (!pFnCloseLogFile)
 	{
-		pFnCloseLogFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_CLOSELOGFILE));
+		pFnCloseLogFile = UFunction::FindFunction("Function Core.FileSystem.CloseLogFile");
+
 	}
 
 	UFileSystem_execCloseLogFile_Parms CloseLogFile_Parms;
@@ -12114,7 +12562,8 @@ struct FString UFileSystem::GetLogFileName()
 
 	if (!pFnGetLogFileName)
 	{
-		pFnGetLogFileName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_GETLOGFILENAME));
+		pFnGetLogFileName = UFunction::FindFunction("Function Core.FileSystem.GetLogFileName");
+
 	}
 
 	UFileSystem_execGetLogFileName_Parms GetLogFileName_Parms;
@@ -12140,7 +12589,8 @@ bool UFileSystem::DeleteDirectoryTree(struct FString Path)
 
 	if (!pFnDeleteDirectoryTree)
 	{
-		pFnDeleteDirectoryTree = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_DELETEDIRECTORYTREE));
+		pFnDeleteDirectoryTree = UFunction::FindFunction("Function Core.FileSystem.DeleteDirectoryTree");
+
 	}
 
 	UFileSystem_execDeleteDirectoryTree_Parms DeleteDirectoryTree_Parms;
@@ -12167,7 +12617,8 @@ bool UFileSystem::DeleteFileW(struct FString Path)
 
 	if (!pFnDeleteFileW)
 	{
-		pFnDeleteFileW = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_DELETEFILE));
+		pFnDeleteFileW = UFunction::FindFunction("Function Core.FileSystem.DeleteFile");
+
 	}
 
 	UFileSystem_execDeleteFileW_Parms DeleteFileW_Parms;
@@ -12195,7 +12646,8 @@ bool UFileSystem::AppendStringToFile(struct FString Path, struct FString Text)
 
 	if (!pFnAppendStringToFile)
 	{
-		pFnAppendStringToFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_APPENDSTRINGTOFILE));
+		pFnAppendStringToFile = UFunction::FindFunction("Function Core.FileSystem.AppendStringToFile");
+
 	}
 
 	UFileSystem_execAppendStringToFile_Parms AppendStringToFile_Parms;
@@ -12224,7 +12676,8 @@ bool UFileSystem::SaveStringToFile(struct FString Path, struct FString Text)
 
 	if (!pFnSaveStringToFile)
 	{
-		pFnSaveStringToFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_SAVESTRINGTOFILE));
+		pFnSaveStringToFile = UFunction::FindFunction("Function Core.FileSystem.SaveStringToFile");
+
 	}
 
 	UFileSystem_execSaveStringToFile_Parms SaveStringToFile_Parms;
@@ -12253,7 +12706,8 @@ bool UFileSystem::SaveBytesToFile(struct FString Path, TArray<unsigned char>& By
 
 	if (!pFnSaveBytesToFile)
 	{
-		pFnSaveBytesToFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_SAVEBYTESTOFILE));
+		pFnSaveBytesToFile = UFunction::FindFunction("Function Core.FileSystem.SaveBytesToFile");
+
 	}
 
 	UFileSystem_execSaveBytesToFile_Parms SaveBytesToFile_Parms;
@@ -12284,7 +12738,8 @@ bool UFileSystem::LoadFileToBytes(struct FString Path, int StartOffset, int Leng
 
 	if (!pFnLoadFileToBytes)
 	{
-		pFnLoadFileToBytes = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_LOADFILETOBYTES));
+		pFnLoadFileToBytes = UFunction::FindFunction("Function Core.FileSystem.LoadFileToBytes");
+
 	}
 
 	UFileSystem_execLoadFileToBytes_Parms LoadFileToBytes_Parms;
@@ -12315,7 +12770,8 @@ bool UFileSystem::LoadFileToString(struct FString Path, struct FString& OutText)
 
 	if (!pFnLoadFileToString)
 	{
-		pFnLoadFileToString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_LOADFILETOSTRING));
+		pFnLoadFileToString = UFunction::FindFunction("Function Core.FileSystem.LoadFileToString");
+
 	}
 
 	UFileSystem_execLoadFileToString_Parms LoadFileToString_Parms;
@@ -12343,7 +12799,8 @@ int UFileSystem::GetFileSize(struct FString Path)
 
 	if (!pFnGetFileSize)
 	{
-		pFnGetFileSize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_GETFILESIZE));
+		pFnGetFileSize = UFunction::FindFunction("Function Core.FileSystem.GetFileSize");
+
 	}
 
 	UFileSystem_execGetFileSize_Parms GetFileSize_Parms;
@@ -12370,7 +12827,8 @@ struct FString UFileSystem::GetFileExtensionWithoutDot(struct FString Path)
 
 	if (!pFnGetFileExtensionWithoutDot)
 	{
-		pFnGetFileExtensionWithoutDot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_GETFILEEXTENSIONWITHOUTDOT));
+		pFnGetFileExtensionWithoutDot = UFunction::FindFunction("Function Core.FileSystem.GetFileExtensionWithoutDot");
+
 	}
 
 	UFileSystem_execGetFileExtensionWithoutDot_Parms GetFileExtensionWithoutDot_Parms;
@@ -12397,7 +12855,8 @@ struct FString UFileSystem::GetFileExtension(struct FString Path)
 
 	if (!pFnGetFileExtension)
 	{
-		pFnGetFileExtension = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_GETFILEEXTENSION));
+		pFnGetFileExtension = UFunction::FindFunction("Function Core.FileSystem.GetFileExtension");
+
 	}
 
 	UFileSystem_execGetFileExtension_Parms GetFileExtension_Parms;
@@ -12424,7 +12883,8 @@ struct FString UFileSystem::GetFilePathWithoutExtension(struct FString Path)
 
 	if (!pFnGetFilePathWithoutExtension)
 	{
-		pFnGetFilePathWithoutExtension = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_GETFILEPATHWITHOUTEXTENSION));
+		pFnGetFilePathWithoutExtension = UFunction::FindFunction("Function Core.FileSystem.GetFilePathWithoutExtension");
+
 	}
 
 	UFileSystem_execGetFilePathWithoutExtension_Parms GetFilePathWithoutExtension_Parms;
@@ -12451,7 +12911,8 @@ struct FString UFileSystem::GetFileNameWithoutExtension(struct FString Path)
 
 	if (!pFnGetFileNameWithoutExtension)
 	{
-		pFnGetFileNameWithoutExtension = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_GETFILENAMEWITHOUTEXTENSION));
+		pFnGetFileNameWithoutExtension = UFunction::FindFunction("Function Core.FileSystem.GetFileNameWithoutExtension");
+
 	}
 
 	UFileSystem_execGetFileNameWithoutExtension_Parms GetFileNameWithoutExtension_Parms;
@@ -12478,7 +12939,8 @@ struct FString UFileSystem::GetFilename(struct FString Path)
 
 	if (!pFnGetFilename)
 	{
-		pFnGetFilename = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_GETFILENAME));
+		pFnGetFilename = UFunction::FindFunction("Function Core.FileSystem.GetFilename");
+
 	}
 
 	UFileSystem_execGetFilename_Parms GetFilename_Parms;
@@ -12505,7 +12967,8 @@ void UFileSystem::FindFiles(struct FString Path, TArray<struct FString>& OutFile
 
 	if (!pFnFindFiles)
 	{
-		pFnFindFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_FILESYSTEM_FINDFILES));
+		pFnFindFiles = UFunction::FindFunction("Function Core.FileSystem.FindFiles");
+
 	}
 
 	UFileSystem_execFindFiles_Parms FindFiles_Parms;
@@ -12551,7 +13014,7 @@ UFunction* UFunction::FindFunction(char const* functionFullName)
 }
 
 // Function Core.ErrorType.CreateError
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UError*                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 InErrorMessage                 (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
@@ -12563,7 +13026,8 @@ class UError* UErrorType::CreateError(struct FString InErrorMessage, int InError
 
 	if (!pFnCreateError)
 	{
-		pFnCreateError = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ERRORTYPE_CREATEERROR));
+		pFnCreateError = UFunction::FindFunction("Function Core.ErrorType.CreateError");
+
 	}
 
 	UErrorType_execCreateError_Parms CreateError_Parms;
@@ -12590,7 +13054,8 @@ struct FString UErrorType::GetLocalizedMessage()
 
 	if (!pFnGetLocalizedMessage)
 	{
-		pFnGetLocalizedMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ERRORTYPE_GETLOCALIZEDMESSAGE));
+		pFnGetLocalizedMessage = UFunction::FindFunction("Function Core.ErrorType.GetLocalizedMessage");
+
 	}
 
 	UErrorType_execGetLocalizedMessage_Parms GetLocalizedMessage_Parms;
@@ -12616,7 +13081,8 @@ class UErrorType* UErrorList::GetErrorType(struct FName Error)
 
 	if (!pFnGetErrorType)
 	{
-		pFnGetErrorType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ERRORLIST_GETERRORTYPE));
+		pFnGetErrorType = UFunction::FindFunction("Function Core.ErrorList.GetErrorType");
+
 	}
 
 	UErrorList_execGetErrorType_Parms GetErrorType_Parms;
@@ -12632,7 +13098,7 @@ class UErrorType* UErrorList::GetErrorType(struct FName Error)
 };
 
 // Function Core.Error.GetDebugMessage
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -12642,7 +13108,8 @@ struct FString UError::GetDebugMessage()
 
 	if (!pFnGetDebugMessage)
 	{
-		pFnGetDebugMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ERROR_GETDEBUGMESSAGE));
+		pFnGetDebugMessage = UFunction::FindFunction("Function Core.Error.GetDebugMessage");
+
 	}
 
 	UError_execGetDebugMessage_Parms GetDebugMessage_Parms;
@@ -12663,7 +13130,8 @@ struct FString UError::GetLocalizedMessage()
 
 	if (!pFnGetLocalizedMessage)
 	{
-		pFnGetLocalizedMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ERROR_GETLOCALIZEDMESSAGE));
+		pFnGetLocalizedMessage = UFunction::FindFunction("Function Core.Error.GetLocalizedMessage");
+
 	}
 
 	UError_execGetLocalizedMessage_Parms GetLocalizedMessage_Parms;
@@ -12689,7 +13157,8 @@ struct FScriptDelegate UDelegateTracker::RemoveDelegate(int CallbackId)
 
 	if (!pFnRemoveDelegate)
 	{
-		pFnRemoveDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DELEGATETRACKER_REMOVEDELEGATE));
+		pFnRemoveDelegate = UFunction::FindFunction("Function Core.DelegateTracker.RemoveDelegate");
+
 	}
 
 	UDelegateTracker_execRemoveDelegate_Parms RemoveDelegate_Parms;
@@ -12716,7 +13185,8 @@ int UDelegateTracker::AddDelegate(struct FScriptDelegate Callback)
 
 	if (!pFnAddDelegate)
 	{
-		pFnAddDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DELEGATETRACKER_ADDDELEGATE));
+		pFnAddDelegate = UFunction::FindFunction("Function Core.DelegateTracker.AddDelegate");
+
 	}
 
 	UDelegateTracker_execAddDelegate_Parms AddDelegate_Parms;
@@ -12741,7 +13211,8 @@ void UDelegateTracker::PlaceholderDelegate()
 
 	if (!pFnPlaceholderDelegate)
 	{
-		pFnPlaceholderDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DELEGATETRACKER_PLACEHOLDERDELEGATE));
+		pFnPlaceholderDelegate = UFunction::FindFunction("Function Core.DelegateTracker.PlaceholderDelegate");
+
 	}
 
 	UDelegateTracker_execPlaceholderDelegate_Parms PlaceholderDelegate_Parms;
@@ -12759,7 +13230,8 @@ void UDebugDrawer::Reset()
 
 	if (!pFnReset)
 	{
-		pFnReset = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_RESET));
+		pFnReset = UFunction::FindFunction("Function Core.DebugDrawer.Reset");
+
 	}
 
 	UDebugDrawer_execReset_Parms Reset_Parms;
@@ -12779,7 +13251,8 @@ void UDebugDrawer::PrintText(struct FString Text, struct FColor InColor)
 
 	if (!pFnPrintText)
 	{
-		pFnPrintText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_PRINTTEXT));
+		pFnPrintText = UFunction::FindFunction("Function Core.DebugDrawer.PrintText");
+
 	}
 
 	UDebugDrawer_execPrintText_Parms PrintText_Parms;
@@ -12802,7 +13275,8 @@ void UDebugDrawer::eventPrintArrayProperty(struct FString PropertyName, int Inde
 
 	if (!pFnPrintArrayProperty)
 	{
-		pFnPrintArrayProperty = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_PRINTARRAYPROPERTY));
+		pFnPrintArrayProperty = UFunction::FindFunction("Function Core.DebugDrawer.PrintArrayProperty");
+
 	}
 
 	UDebugDrawer_eventPrintArrayProperty_Parms PrintArrayProperty_Parms;
@@ -12825,7 +13299,8 @@ void UDebugDrawer::eventPrintProperty(struct FString PropertyName, struct FStrin
 
 	if (!pFnPrintProperty)
 	{
-		pFnPrintProperty = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_PRINTPROPERTY));
+		pFnPrintProperty = UFunction::FindFunction("Function Core.DebugDrawer.PrintProperty");
+
 	}
 
 	UDebugDrawer_eventPrintProperty_Parms PrintProperty_Parms;
@@ -12845,7 +13320,8 @@ void UDebugDrawer::eventEndSection()
 
 	if (!pFnEndSection)
 	{
-		pFnEndSection = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_ENDSECTION));
+		pFnEndSection = UFunction::FindFunction("Function Core.DebugDrawer.EndSection");
+
 	}
 
 	UDebugDrawer_eventEndSection_Parms EndSection_Parms;
@@ -12863,7 +13339,8 @@ void UDebugDrawer::eventStartSection()
 
 	if (!pFnStartSection)
 	{
-		pFnStartSection = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_STARTSECTION));
+		pFnStartSection = UFunction::FindFunction("Function Core.DebugDrawer.StartSection");
+
 	}
 
 	UDebugDrawer_eventStartSection_Parms StartSection_Parms;
@@ -12883,7 +13360,8 @@ void UDebugDrawer::eventPrintObject(struct FString Title, class UObject* ForObj)
 
 	if (!pFnPrintObject)
 	{
-		pFnPrintObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_PRINTOBJECT));
+		pFnPrintObject = UFunction::FindFunction("Function Core.DebugDrawer.PrintObject");
+
 	}
 
 	UDebugDrawer_eventPrintObject_Parms PrintObject_Parms;
@@ -12903,7 +13381,8 @@ void UDebugDrawer::eventPrintSeperater()
 
 	if (!pFnPrintSeperater)
 	{
-		pFnPrintSeperater = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_PRINTSEPERATER));
+		pFnPrintSeperater = UFunction::FindFunction("Function Core.DebugDrawer.PrintSeperater");
+
 	}
 
 	UDebugDrawer_eventPrintSeperater_Parms PrintSeperater_Parms;
@@ -12924,7 +13403,8 @@ void UDebugDrawer::eventDebugArrayObject(struct FString Title, int Index, class 
 
 	if (!pFnDebugArrayObject)
 	{
-		pFnDebugArrayObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_DEBUGARRAYOBJECT));
+		pFnDebugArrayObject = UFunction::FindFunction("Function Core.DebugDrawer.DebugArrayObject");
+
 	}
 
 	UDebugDrawer_eventDebugArrayObject_Parms DebugArrayObject_Parms;
@@ -12947,7 +13427,8 @@ void UDebugDrawer::eventDebugObject(struct FString Title, class UObject* ForObj)
 
 	if (!pFnDebugObject)
 	{
-		pFnDebugObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_DEBUGOBJECT));
+		pFnDebugObject = UFunction::FindFunction("Function Core.DebugDrawer.DebugObject");
+
 	}
 
 	UDebugDrawer_eventDebugObject_Parms DebugObject_Parms;
@@ -12969,7 +13450,8 @@ bool UDebugDrawer::ShouldDisplayDebug(struct FName Category)
 
 	if (!pFnShouldDisplayDebug)
 	{
-		pFnShouldDisplayDebug = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_SHOULDDISPLAYDEBUG));
+		pFnShouldDisplayDebug = UFunction::FindFunction("Function Core.DebugDrawer.ShouldDisplayDebug");
+
 	}
 
 	UDebugDrawer_execShouldDisplayDebug_Parms ShouldDisplayDebug_Parms;
@@ -12991,7 +13473,8 @@ void UDebugDrawer::LogFunc(struct FString Str)
 
 	if (!pFnLogFunc)
 	{
-		pFnLogFunc = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DEBUGDRAWER_LOGFUNC));
+		pFnLogFunc = UFunction::FindFunction("Function Core.DebugDrawer.LogFunc");
+
 	}
 
 	UDebugDrawer_execLogFunc_Parms LogFunc_Parms;
@@ -13013,7 +13496,8 @@ bool UCompression::ZLibCompress(TArray<unsigned char>& Uncompressed, TArray<unsi
 
 	if (!pFnZLibCompress)
 	{
-		pFnZLibCompress = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_COMPRESSION_ZLIBCOMPRESS));
+		pFnZLibCompress = UFunction::FindFunction("Function Core.Compression.ZLibCompress");
+
 	}
 
 	UCompression_execZLibCompress_Parms ZLibCompress_Parms;
@@ -13041,7 +13525,8 @@ bool UStringObjectMap::Contains(struct FString Key)
 
 	if (!pFnContains)
 	{
-		pFnContains = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGOBJECTMAP_CONTAINS));
+		pFnContains = UFunction::FindFunction("Function Core.StringObjectMap.Contains");
+
 	}
 
 	UStringObjectMap_execContains_Parms Contains_Parms;
@@ -13057,7 +13542,7 @@ bool UStringObjectMap::Contains(struct FString Key)
 };
 
 // Function Core.StringObjectMap.Remove
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 Key                            (CPF_Parm | CPF_NeedCtorLink)
 
@@ -13067,7 +13552,8 @@ void UStringObjectMap::Remove(struct FString Key)
 
 	if (!pFnRemove)
 	{
-		pFnRemove = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGOBJECTMAP_REMOVE));
+		pFnRemove = UFunction::FindFunction("Function Core.StringObjectMap.Remove");
+
 	}
 
 	UStringObjectMap_execRemove_Parms Remove_Parms;
@@ -13093,7 +13579,8 @@ bool UStringObjectMap::TryGetObjectW(struct FString Key, class UObject*& OutValu
 
 	if (!pFnTryGetObjectW)
 	{
-		pFnTryGetObjectW = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGOBJECTMAP_TRYGETOBJECT));
+		pFnTryGetObjectW = UFunction::FindFunction("Function Core.StringObjectMap.TryGetObject");
+
 	}
 
 	UStringObjectMap_execTryGetObjectW_Parms TryGetObjectW_Parms;
@@ -13119,7 +13606,8 @@ void UStringObjectMap::TryGet()
 
 	if (!pFnTryGet)
 	{
-		pFnTryGet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGOBJECTMAP_TRYGET));
+		pFnTryGet = UFunction::FindFunction("Function Core.StringObjectMap.TryGet");
+
 	}
 
 	UStringObjectMap_execTryGet_Parms TryGet_Parms;
@@ -13128,7 +13616,7 @@ void UStringObjectMap::TryGet()
 };
 
 // Function Core.StringObjectMap.GetObject
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Key                            (CPF_Parm | CPF_NeedCtorLink)
@@ -13139,7 +13627,8 @@ class UObject* UStringObjectMap::GetObjectW(struct FString Key)
 
 	if (!pFnGetObjectW)
 	{
-		pFnGetObjectW = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGOBJECTMAP_GETOBJECT));
+		pFnGetObjectW = UFunction::FindFunction("Function Core.StringObjectMap.GetObject");
+
 	}
 
 	UStringObjectMap_execGetObjectW_Parms GetObjectW_Parms;
@@ -13164,7 +13653,8 @@ void UStringObjectMap::Get()
 
 	if (!pFnGet)
 	{
-		pFnGet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGOBJECTMAP_GET));
+		pFnGet = UFunction::FindFunction("Function Core.StringObjectMap.Get");
+
 	}
 
 	UStringObjectMap_execGet_Parms Get_Parms;
@@ -13173,7 +13663,7 @@ void UStringObjectMap::Get()
 };
 
 // Function Core.StringObjectMap.Set
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 Key                            (CPF_Parm | CPF_NeedCtorLink)
 // class UObject*                 Value                          (CPF_Parm)
@@ -13184,7 +13674,8 @@ void UStringObjectMap::Set(struct FString Key, class UObject* Value)
 
 	if (!pFnSet)
 	{
-		pFnSet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGOBJECTMAP_SET));
+		pFnSet = UFunction::FindFunction("Function Core.StringObjectMap.Set");
+
 	}
 
 	UStringObjectMap_execSet_Parms Set_Parms;
@@ -13199,7 +13690,7 @@ void UStringObjectMap::Set(struct FString Key, class UObject* Value)
 };
 
 // Function Core.StringMap.ForEach
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -13209,7 +13700,8 @@ void UStringMap::ForEach(struct FScriptDelegate Callback)
 
 	if (!pFnForEach)
 	{
-		pFnForEach = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_FOREACH));
+		pFnForEach = UFunction::FindFunction("Function Core.StringMap.ForEach");
+
 	}
 
 	UStringMap_execForEach_Parms ForEach_Parms;
@@ -13223,7 +13715,7 @@ void UStringMap::ForEach(struct FScriptDelegate Callback)
 };
 
 // Function Core.StringMap.Append
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UStringMap*              Other                          (CPF_Parm | CPF_EditInline)
 
@@ -13233,7 +13725,8 @@ void UStringMap::Append(class UStringMap* Other)
 
 	if (!pFnAppend)
 	{
-		pFnAppend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_APPEND));
+		pFnAppend = UFunction::FindFunction("Function Core.StringMap.Append");
+
 	}
 
 	UStringMap_execAppend_Parms Append_Parms;
@@ -13247,7 +13740,7 @@ void UStringMap::Append(class UStringMap* Other)
 };
 
 // Function Core.StringMap.Contains
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Key                            (CPF_Parm | CPF_NeedCtorLink)
@@ -13258,7 +13751,8 @@ bool UStringMap::Contains(struct FString Key)
 
 	if (!pFnContains)
 	{
-		pFnContains = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_CONTAINS));
+		pFnContains = UFunction::FindFunction("Function Core.StringMap.Contains");
+
 	}
 
 	UStringMap_execContains_Parms Contains_Parms;
@@ -13274,7 +13768,7 @@ bool UStringMap::Contains(struct FString Key)
 };
 
 // Function Core.StringMap.Remove
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 Key                            (CPF_Parm | CPF_NeedCtorLink)
 
@@ -13284,7 +13778,8 @@ void UStringMap::Remove(struct FString Key)
 
 	if (!pFnRemove)
 	{
-		pFnRemove = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_REMOVE));
+		pFnRemove = UFunction::FindFunction("Function Core.StringMap.Remove");
+
 	}
 
 	UStringMap_execRemove_Parms Remove_Parms;
@@ -13310,7 +13805,8 @@ bool UStringMap::TryGet(struct FString Key, struct FString& OutValue)
 
 	if (!pFnTryGet)
 	{
-		pFnTryGet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_TRYGET));
+		pFnTryGet = UFunction::FindFunction("Function Core.StringMap.TryGet");
+
 	}
 
 	UStringMap_execTryGet_Parms TryGet_Parms;
@@ -13327,7 +13823,7 @@ bool UStringMap::TryGet(struct FString Key, struct FString& OutValue)
 };
 
 // Function Core.StringMap.Get
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 Key                            (CPF_Parm | CPF_NeedCtorLink)
@@ -13338,7 +13834,8 @@ struct FString UStringMap::Get(struct FString Key)
 
 	if (!pFnGet)
 	{
-		pFnGet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_GET));
+		pFnGet = UFunction::FindFunction("Function Core.StringMap.Get");
+
 	}
 
 	UStringMap_execGet_Parms Get_Parms;
@@ -13354,7 +13851,7 @@ struct FString UStringMap::Get(struct FString Key)
 };
 
 // Function Core.StringMap.Set
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 Key                            (CPF_Parm | CPF_NeedCtorLink)
 // struct FString                 Value                          (CPF_Parm | CPF_CoerceParm | CPF_NeedCtorLink)
@@ -13365,7 +13862,8 @@ void UStringMap::Set(struct FString Key, struct FString Value)
 
 	if (!pFnSet)
 	{
-		pFnSet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_SET));
+		pFnSet = UFunction::FindFunction("Function Core.StringMap.Set");
+
 	}
 
 	UStringMap_execSet_Parms Set_Parms;
@@ -13391,7 +13889,8 @@ void UStringMap::PairCallback(struct FString Key, struct FString Value)
 
 	if (!pFnPairCallback)
 	{
-		pFnPairCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_STRINGMAP_PAIRCALLBACK));
+		pFnPairCallback = UFunction::FindFunction("Function Core.StringMap.PairCallback");
+
 	}
 
 	UStringMap_execPairCallback_Parms PairCallback_Parms;
@@ -13402,7 +13901,7 @@ void UStringMap::PairCallback(struct FString Key, struct FString Value)
 };
 
 // Function Core.ObjectProvider.SetParent
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObjectProvider*         InParent                       (CPF_Parm | CPF_EditInline)
 
@@ -13412,7 +13911,8 @@ void UObjectProvider::SetParent(class UObjectProvider* InParent)
 
 	if (!pFnSetParent)
 	{
-		pFnSetParent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_SETPARENT));
+		pFnSetParent = UFunction::FindFunction("Function Core.ObjectProvider.SetParent");
+
 	}
 
 	UObjectProvider_execSetParent_Parms SetParent_Parms;
@@ -13436,7 +13936,8 @@ void UObjectProvider::RemoveProxy(class UObjectProvider* InProxy)
 
 	if (!pFnRemoveProxy)
 	{
-		pFnRemoveProxy = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_REMOVEPROXY));
+		pFnRemoveProxy = UFunction::FindFunction("Function Core.ObjectProvider.RemoveProxy");
+
 	}
 
 	UObjectProvider_execRemoveProxy_Parms RemoveProxy_Parms;
@@ -13450,7 +13951,7 @@ void UObjectProvider::RemoveProxy(class UObjectProvider* InProxy)
 };
 
 // Function Core.ObjectProvider.AddProxy
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObjectProvider*         InProxy                        (CPF_Parm | CPF_EditInline)
 
@@ -13460,7 +13961,8 @@ void UObjectProvider::AddProxy(class UObjectProvider* InProxy)
 
 	if (!pFnAddProxy)
 	{
-		pFnAddProxy = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_ADDPROXY));
+		pFnAddProxy = UFunction::FindFunction("Function Core.ObjectProvider.AddProxy");
+
 	}
 
 	UObjectProvider_execAddProxy_Parms AddProxy_Parms;
@@ -13474,7 +13976,7 @@ void UObjectProvider::AddProxy(class UObjectProvider* InProxy)
 };
 
 // Function Core.ObjectProvider.SetSingleton
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UClass*                  ObjClass                       (CPF_Parm)
 // class UObject*                 Replacement                    (CPF_Parm)
@@ -13485,7 +13987,8 @@ void UObjectProvider::SetSingleton(class UClass* ObjClass, class UObject* Replac
 
 	if (!pFnSetSingleton)
 	{
-		pFnSetSingleton = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_SETSINGLETON));
+		pFnSetSingleton = UFunction::FindFunction("Function Core.ObjectProvider.SetSingleton");
+
 	}
 
 	UObjectProvider_execSetSingleton_Parms SetSingleton_Parms;
@@ -13511,7 +14014,8 @@ void UObjectProvider::Replace(class UObject* Existing, class UObject* Replacemen
 
 	if (!pFnReplace)
 	{
-		pFnReplace = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_REPLACE));
+		pFnReplace = UFunction::FindFunction("Function Core.ObjectProvider.Replace");
+
 	}
 
 	UObjectProvider_execReplace_Parms Replace_Parms;
@@ -13537,7 +14041,8 @@ void UObjectProvider::AddAndRemoveObjects(TArray<class UObject*>& AddObjects, TA
 
 	if (!pFnAddAndRemoveObjects)
 	{
-		pFnAddAndRemoveObjects = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_ADDANDREMOVEOBJECTS));
+		pFnAddAndRemoveObjects = UFunction::FindFunction("Function Core.ObjectProvider.AddAndRemoveObjects");
+
 	}
 
 	UObjectProvider_execAddAndRemoveObjects_Parms AddAndRemoveObjects_Parms;
@@ -13562,7 +14067,8 @@ void UObjectProvider::RemoveObjects(TArray<class UObject*>& InObjects)
 
 	if (!pFnRemoveObjects)
 	{
-		pFnRemoveObjects = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_REMOVEOBJECTS));
+		pFnRemoveObjects = UFunction::FindFunction("Function Core.ObjectProvider.RemoveObjects");
+
 	}
 
 	UObjectProvider_execRemoveObjects_Parms RemoveObjects_Parms;
@@ -13576,7 +14082,7 @@ void UObjectProvider::RemoveObjects(TArray<class UObject*>& InObjects)
 };
 
 // Function Core.ObjectProvider.RemoveAllObjects
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UClass*                  ObjectClass                    (CPF_Parm)
 
@@ -13586,7 +14092,8 @@ void UObjectProvider::RemoveAllObjects(class UClass* ObjectClass)
 
 	if (!pFnRemoveAllObjects)
 	{
-		pFnRemoveAllObjects = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_REMOVEALLOBJECTS));
+		pFnRemoveAllObjects = UFunction::FindFunction("Function Core.ObjectProvider.RemoveAllObjects");
+
 	}
 
 	UObjectProvider_execRemoveAllObjects_Parms RemoveAllObjects_Parms;
@@ -13600,7 +14107,7 @@ void UObjectProvider::RemoveAllObjects(class UClass* ObjectClass)
 };
 
 // Function Core.ObjectProvider.RemoveObject
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 Obj                            (CPF_Parm)
 
@@ -13610,7 +14117,8 @@ void UObjectProvider::RemoveObject(class UObject* Obj)
 
 	if (!pFnRemoveObject)
 	{
-		pFnRemoveObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_REMOVEOBJECT));
+		pFnRemoveObject = UFunction::FindFunction("Function Core.ObjectProvider.RemoveObject");
+
 	}
 
 	UObjectProvider_execRemoveObject_Parms RemoveObject_Parms;
@@ -13624,7 +14132,7 @@ void UObjectProvider::RemoveObject(class UObject* Obj)
 };
 
 // Function Core.ObjectProvider.AddObjects
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // TArray<class UObject*>         InObjects                      (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -13634,7 +14142,8 @@ void UObjectProvider::AddObjects(TArray<class UObject*>& InObjects)
 
 	if (!pFnAddObjects)
 	{
-		pFnAddObjects = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_ADDOBJECTS));
+		pFnAddObjects = UFunction::FindFunction("Function Core.ObjectProvider.AddObjects");
+
 	}
 
 	UObjectProvider_execAddObjects_Parms AddObjects_Parms;
@@ -13648,7 +14157,7 @@ void UObjectProvider::AddObjects(TArray<class UObject*>& InObjects)
 };
 
 // Function Core.ObjectProvider.AddObject
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 Obj                            (CPF_Parm)
 
@@ -13658,7 +14167,8 @@ void UObjectProvider::AddObject(class UObject* Obj)
 
 	if (!pFnAddObject)
 	{
-		pFnAddObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_ADDOBJECT));
+		pFnAddObject = UFunction::FindFunction("Function Core.ObjectProvider.AddObject");
+
 	}
 
 	UObjectProvider_execAddObject_Parms AddObject_Parms;
@@ -13683,7 +14193,8 @@ int UObjectProvider::GetExactCount(class UClass* ObjClass)
 
 	if (!pFnGetExactCount)
 	{
-		pFnGetExactCount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_GETEXACTCOUNT));
+		pFnGetExactCount = UFunction::FindFunction("Function Core.ObjectProvider.GetExactCount");
+
 	}
 
 	UObjectProvider_execGetExactCount_Parms GetExactCount_Parms;
@@ -13710,7 +14221,8 @@ int UObjectProvider::GetCount(class UClass* ObjClass)
 
 	if (!pFnGetCount)
 	{
-		pFnGetCount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_GETCOUNT));
+		pFnGetCount = UFunction::FindFunction("Function Core.ObjectProvider.GetCount");
+
 	}
 
 	UObjectProvider_execGetCount_Parms GetCount_Parms;
@@ -13726,7 +14238,7 @@ int UObjectProvider::GetCount(class UClass* ObjClass)
 };
 
 // Function Core.ObjectProvider.GetOrCreate
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UClass*                  ObjClass                       (CPF_Parm)
@@ -13737,7 +14249,8 @@ class UObject* UObjectProvider::GetOrCreate(class UClass* ObjClass)
 
 	if (!pFnGetOrCreate)
 	{
-		pFnGetOrCreate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_GETORCREATE));
+		pFnGetOrCreate = UFunction::FindFunction("Function Core.ObjectProvider.GetOrCreate");
+
 	}
 
 	UObjectProvider_execGetOrCreate_Parms GetOrCreate_Parms;
@@ -13764,7 +14277,8 @@ class UObject* UObjectProvider::GetExact(class UClass* ObjClass)
 
 	if (!pFnGetExact)
 	{
-		pFnGetExact = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_GETEXACT));
+		pFnGetExact = UFunction::FindFunction("Function Core.ObjectProvider.GetExact");
+
 	}
 
 	UObjectProvider_execGetExact_Parms GetExact_Parms;
@@ -13791,7 +14305,8 @@ class UObject* UObjectProvider::GetUnsafe(class UClass* ObjClass)
 
 	if (!pFnGetUnsafe)
 	{
-		pFnGetUnsafe = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_GETUNSAFE));
+		pFnGetUnsafe = UFunction::FindFunction("Function Core.ObjectProvider.GetUnsafe");
+
 	}
 
 	UObjectProvider_execGetUnsafe_Parms GetUnsafe_Parms;
@@ -13807,7 +14322,7 @@ class UObject* UObjectProvider::GetUnsafe(class UClass* ObjClass)
 };
 
 // Function Core.ObjectProvider.Get
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UObject*                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_CoerceParm)
 // class UClass*                  ObjClass                       (CPF_Parm)
@@ -13818,7 +14333,8 @@ class UObject* UObjectProvider::Get(class UClass* ObjClass)
 
 	if (!pFnGet)
 	{
-		pFnGet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_GET));
+		pFnGet = UFunction::FindFunction("Function Core.ObjectProvider.Get");
+
 	}
 
 	UObjectProvider_execGet_Parms Get_Parms;
@@ -13834,7 +14350,7 @@ class UObject* UObjectProvider::Get(class UClass* ObjClass)
 };
 
 // Function Core.ObjectProvider.AllObjects
-// [0x00424405] (FUNC_Final | FUNC_BlueprintAuthorityOnly | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00434405] (FUNC_Final | FUNC_BlueprintAuthorityOnly | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // class UClass*                  BaseClass                      (CPF_Parm)
 // class UClass*                  InterfaceClass                 (CPF_OptionalParm | CPF_Parm)
@@ -13846,7 +14362,8 @@ void UObjectProvider::AllObjects(class UClass* BaseClass, class UClass* Interfac
 
 	if (!pFnAllObjects)
 	{
-		pFnAllObjects = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_ALLOBJECTS));
+		pFnAllObjects = UFunction::FindFunction("Function Core.ObjectProvider.AllObjects");
+
 	}
 
 	UObjectProvider_execAllObjects_Parms AllObjects_Parms;
@@ -13873,7 +14390,8 @@ bool UObjectProvider::IsRegisteredForInjection(class UObject* Subscriber)
 
 	if (!pFnIsRegisteredForInjection)
 	{
-		pFnIsRegisteredForInjection = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_ISREGISTEREDFORINJECTION));
+		pFnIsRegisteredForInjection = UFunction::FindFunction("Function Core.ObjectProvider.IsRegisteredForInjection");
+
 	}
 
 	UObjectProvider_execIsRegisteredForInjection_Parms IsRegisteredForInjection_Parms;
@@ -13899,7 +14417,8 @@ void UObjectProvider::InjectDelayed(class UObject* Subscriber)
 
 	if (!pFnInjectDelayed)
 	{
-		pFnInjectDelayed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_INJECTDELAYED));
+		pFnInjectDelayed = UFunction::FindFunction("Function Core.ObjectProvider.InjectDelayed");
+
 	}
 
 	UObjectProvider_execInjectDelayed_Parms InjectDelayed_Parms;
@@ -13923,7 +14442,8 @@ void UObjectProvider::Inject(class UObject* Subscriber)
 
 	if (!pFnInject)
 	{
-		pFnInject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_INJECT));
+		pFnInject = UFunction::FindFunction("Function Core.ObjectProvider.Inject");
+
 	}
 
 	UObjectProvider_execInject_Parms Inject_Parms;
@@ -13947,7 +14467,8 @@ void UObjectProvider::UnsubscribeAll(class UObject* Subscriber)
 
 	if (!pFnUnsubscribeAll)
 	{
-		pFnUnsubscribeAll = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_UNSUBSCRIBEALL));
+		pFnUnsubscribeAll = UFunction::FindFunction("Function Core.ObjectProvider.UnsubscribeAll");
+
 	}
 
 	UObjectProvider_execUnsubscribeAll_Parms UnsubscribeAll_Parms;
@@ -13961,7 +14482,7 @@ void UObjectProvider::UnsubscribeAll(class UObject* Subscriber)
 };
 
 // Function Core.ObjectProvider.Unsubscribe
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 // struct FScriptDelegate         Callback2                      (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
@@ -13972,7 +14493,8 @@ void UObjectProvider::Unsubscribe(struct FScriptDelegate Callback, struct FScrip
 
 	if (!pFnUnsubscribe)
 	{
-		pFnUnsubscribe = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_UNSUBSCRIBE));
+		pFnUnsubscribe = UFunction::FindFunction("Function Core.ObjectProvider.Unsubscribe");
+
 	}
 
 	UObjectProvider_execUnsubscribe_Parms Unsubscribe_Parms;
@@ -13987,7 +14509,7 @@ void UObjectProvider::Unsubscribe(struct FScriptDelegate Callback, struct FScrip
 };
 
 // Function Core.ObjectProvider.SubscribeList
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UClass*                  BaseClass                      (CPF_Parm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -13998,7 +14520,8 @@ void UObjectProvider::SubscribeList(class UClass* BaseClass, struct FScriptDeleg
 
 	if (!pFnSubscribeList)
 	{
-		pFnSubscribeList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_SUBSCRIBELIST));
+		pFnSubscribeList = UFunction::FindFunction("Function Core.ObjectProvider.SubscribeList");
+
 	}
 
 	UObjectProvider_execSubscribeList_Parms SubscribeList_Parms;
@@ -14013,7 +14536,7 @@ void UObjectProvider::SubscribeList(class UClass* BaseClass, struct FScriptDeleg
 };
 
 // Function Core.ObjectProvider.SubscribeOnce
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UClass*                  BaseClass                      (CPF_Parm)
 // struct FScriptDelegate         OnAdd                          (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
@@ -14025,7 +14548,8 @@ void UObjectProvider::SubscribeOnce(class UClass* BaseClass, struct FScriptDeleg
 
 	if (!pFnSubscribeOnce)
 	{
-		pFnSubscribeOnce = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_SUBSCRIBEONCE));
+		pFnSubscribeOnce = UFunction::FindFunction("Function Core.ObjectProvider.SubscribeOnce");
+
 	}
 
 	UObjectProvider_execSubscribeOnce_Parms SubscribeOnce_Parms;
@@ -14041,7 +14565,7 @@ void UObjectProvider::SubscribeOnce(class UClass* BaseClass, struct FScriptDeleg
 };
 
 // Function Core.ObjectProvider.Subscribe
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UClass*                  BaseClass                      (CPF_Parm)
 // struct FScriptDelegate         OnAdd                          (CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink)
@@ -14053,7 +14577,8 @@ void UObjectProvider::Subscribe(class UClass* BaseClass, struct FScriptDelegate 
 
 	if (!pFnSubscribe)
 	{
-		pFnSubscribe = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_SUBSCRIBE));
+		pFnSubscribe = UFunction::FindFunction("Function Core.ObjectProvider.Subscribe");
+
 	}
 
 	UObjectProvider_execSubscribe_Parms Subscribe_Parms;
@@ -14078,7 +14603,8 @@ void UObjectProvider::ObjectChangeCallback()
 
 	if (!pFnObjectChangeCallback)
 	{
-		pFnObjectChangeCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_OBJECTCHANGECALLBACK));
+		pFnObjectChangeCallback = UFunction::FindFunction("Function Core.ObjectProvider.ObjectChangeCallback");
+
 	}
 
 	UObjectProvider_execObjectChangeCallback_Parms ObjectChangeCallback_Parms;
@@ -14097,7 +14623,8 @@ void UObjectProvider::ObjectListSubscriptionCallback(class UObjectProvider* Prov
 
 	if (!pFnObjectListSubscriptionCallback)
 	{
-		pFnObjectListSubscriptionCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_OBJECTLISTSUBSCRIPTIONCALLBACK));
+		pFnObjectListSubscriptionCallback = UFunction::FindFunction("Function Core.ObjectProvider.ObjectListSubscriptionCallback");
+
 	}
 
 	UObjectProvider_execObjectListSubscriptionCallback_Parms ObjectListSubscriptionCallback_Parms;
@@ -14117,7 +14644,8 @@ void UObjectProvider::ObjectSubscriptionCallback(class UObject* Obj)
 
 	if (!pFnObjectSubscriptionCallback)
 	{
-		pFnObjectSubscriptionCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_OBJECTPROVIDER_OBJECTSUBSCRIPTIONCALLBACK));
+		pFnObjectSubscriptionCallback = UFunction::FindFunction("Function Core.ObjectProvider.ObjectSubscriptionCallback");
+
 	}
 
 	UObjectProvider_execObjectSubscriptionCallback_Parms ObjectSubscriptionCallback_Parms;
@@ -14139,7 +14667,8 @@ struct FVector UDistributionVector::GetVectorValue(float F, int LastExtreme)
 
 	if (!pFnGetVectorValue)
 	{
-		pFnGetVectorValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DISTRIBUTIONVECTOR_GETVECTORVALUE));
+		pFnGetVectorValue = UFunction::FindFunction("Function Core.DistributionVector.GetVectorValue");
+
 	}
 
 	UDistributionVector_execGetVectorValue_Parms GetVectorValue_Parms;
@@ -14167,7 +14696,8 @@ float UDistributionFloat::GetFloatValue(float F)
 
 	if (!pFnGetFloatValue)
 	{
-		pFnGetFloatValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_DISTRIBUTIONFLOAT_GETFLOATVALUE));
+		pFnGetFloatValue = UFunction::FindFunction("Function Core.DistributionFloat.GetFloatValue");
+
 	}
 
 	UDistributionFloat_execGetFloatValue_Parms GetFloatValue_Parms;
@@ -14194,7 +14724,8 @@ int UHelpCommandlet::eventMain(struct FString Params)
 
 	if (!pFnMain)
 	{
-		pFnMain = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_HELPCOMMANDLET_MAIN));
+		pFnMain = UFunction::FindFunction("Function Core.HelpCommandlet.Main");
+
 	}
 
 	UHelpCommandlet_eventMain_Parms Main_Parms;
@@ -14217,7 +14748,8 @@ int UCommandlet::eventMain(struct FString Params)
 
 	if (!pFnMain)
 	{
-		pFnMain = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_COMMANDLET_MAIN));
+		pFnMain = UFunction::FindFunction("Function Core.Commandlet.Main");
+
 	}
 
 	UCommandlet_eventMain_Parms Main_Parms;
@@ -14240,7 +14772,8 @@ void UBase64::DecodeStringInline(struct FString Input, TArray<unsigned char>& Ou
 
 	if (!pFnDecodeStringInline)
 	{
-		pFnDecodeStringInline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_DECODESTRINGINLINE));
+		pFnDecodeStringInline = UFunction::FindFunction("Function Core.Base64.DecodeStringInline");
+
 	}
 
 	UBase64_execDecodeStringInline_Parms DecodeStringInline_Parms;
@@ -14266,7 +14799,8 @@ TArray<unsigned char> UBase64::DecodeString(struct FString Input)
 
 	if (!pFnDecodeString)
 	{
-		pFnDecodeString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_DECODESTRING));
+		pFnDecodeString = UFunction::FindFunction("Function Core.Base64.DecodeString");
+
 	}
 
 	UBase64_execDecodeString_Parms DecodeString_Parms;
@@ -14293,7 +14827,8 @@ void UBase64::DecodeInline(TArray<unsigned char>& Input, TArray<unsigned char>& 
 
 	if (!pFnDecodeInline)
 	{
-		pFnDecodeInline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_DECODEINLINE));
+		pFnDecodeInline = UFunction::FindFunction("Function Core.Base64.DecodeInline");
+
 	}
 
 	UBase64_execDecodeInline_Parms DecodeInline_Parms;
@@ -14319,7 +14854,8 @@ TArray<unsigned char> UBase64::Decode(TArray<unsigned char>& Input)
 
 	if (!pFnDecode)
 	{
-		pFnDecode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_DECODE));
+		pFnDecode = UFunction::FindFunction("Function Core.Base64.Decode");
+
 	}
 
 	UBase64_execDecode_Parms Decode_Parms;
@@ -14346,7 +14882,8 @@ void UBase64::EncodeStringInline(TArray<unsigned char>& Input, struct FString& O
 
 	if (!pFnEncodeStringInline)
 	{
-		pFnEncodeStringInline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_ENCODESTRINGINLINE));
+		pFnEncodeStringInline = UFunction::FindFunction("Function Core.Base64.EncodeStringInline");
+
 	}
 
 	UBase64_execEncodeStringInline_Parms EncodeStringInline_Parms;
@@ -14372,7 +14909,8 @@ struct FString UBase64::EncodeString(TArray<unsigned char>& Input)
 
 	if (!pFnEncodeString)
 	{
-		pFnEncodeString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_ENCODESTRING));
+		pFnEncodeString = UFunction::FindFunction("Function Core.Base64.EncodeString");
+
 	}
 
 	UBase64_execEncodeString_Parms EncodeString_Parms;
@@ -14399,7 +14937,8 @@ void UBase64::EncodeInline(TArray<unsigned char>& Input, TArray<unsigned char>& 
 
 	if (!pFnEncodeInline)
 	{
-		pFnEncodeInline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_ENCODEINLINE));
+		pFnEncodeInline = UFunction::FindFunction("Function Core.Base64.EncodeInline");
+
 	}
 
 	UBase64_execEncodeInline_Parms EncodeInline_Parms;
@@ -14425,7 +14964,8 @@ TArray<unsigned char> UBase64::Encode(TArray<unsigned char>& Input)
 
 	if (!pFnEncode)
 	{
-		pFnEncode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_BASE64_ENCODE));
+		pFnEncode = UFunction::FindFunction("Function Core.Base64.Encode");
+
 	}
 
 	UBase64_execEncode_Parms Encode_Parms;
@@ -14441,7 +14981,7 @@ TArray<unsigned char> UBase64::Encode(TArray<unsigned char>& Input)
 };
 
 // Function Core.AsyncTask.QueCallbacks
-// [0x00040401] (FUNC_Final | FUNC_Native | FUNC_Private | FUNC_AllFlags)
+// [0x00050401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Private | FUNC_AllFlags)
 // Parameter info:
 
 void UAsyncTask::QueCallbacks()
@@ -14450,7 +14990,8 @@ void UAsyncTask::QueCallbacks()
 
 	if (!pFnQueCallbacks)
 	{
-		pFnQueCallbacks = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_QUECALLBACKS));
+		pFnQueCallbacks = UFunction::FindFunction("Function Core.AsyncTask.QueCallbacks");
+
 	}
 
 	UAsyncTask_execQueCallbacks_Parms QueCallbacks_Parms;
@@ -14474,7 +15015,8 @@ class UAsyncTask* UAsyncTask::CreateError(class UError* InError)
 
 	if (!pFnCreateError)
 	{
-		pFnCreateError = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_CREATEERROR));
+		pFnCreateError = UFunction::FindFunction("Function Core.AsyncTask.CreateError");
+
 	}
 
 	UAsyncTask_execCreateError_Parms CreateError_Parms;
@@ -14496,7 +15038,8 @@ class UAsyncTask* UAsyncTask::CreateSuccess()
 
 	if (!pFnCreateSuccess)
 	{
-		pFnCreateSuccess = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_CREATESUCCESS));
+		pFnCreateSuccess = UFunction::FindFunction("Function Core.AsyncTask.CreateSuccess");
+
 	}
 
 	UAsyncTask_execCreateSuccess_Parms CreateSuccess_Parms;
@@ -14507,7 +15050,7 @@ class UAsyncTask* UAsyncTask::CreateSuccess()
 };
 
 // Function Core.AsyncTask.Create
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -14517,7 +15060,8 @@ class UAsyncTask* UAsyncTask::Create()
 
 	if (!pFnCreate)
 	{
-		pFnCreate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_CREATE));
+		pFnCreate = UFunction::FindFunction("Function Core.AsyncTask.Create");
+
 	}
 
 	UAsyncTask_execCreate_Parms Create_Parms;
@@ -14528,7 +15072,7 @@ class UAsyncTask* UAsyncTask::Create()
 };
 
 // Function Core.AsyncTask.Watch
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UAsyncTask*              Other                          (CPF_Parm)
@@ -14539,7 +15083,8 @@ class UAsyncTask* UAsyncTask::Watch(class UAsyncTask* Other)
 
 	if (!pFnWatch)
 	{
-		pFnWatch = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_WATCH));
+		pFnWatch = UFunction::FindFunction("Function Core.AsyncTask.Watch");
+
 	}
 
 	UAsyncTask_execWatch_Parms Watch_Parms;
@@ -14551,7 +15096,7 @@ class UAsyncTask* UAsyncTask::Watch(class UAsyncTask* Other)
 };
 
 // Function Core.AsyncTask.All
-// [0x00022003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // TArray<class UAsyncTask*>      Dependents                     (CPF_Parm | CPF_NeedCtorLink)
@@ -14562,7 +15107,8 @@ class UAsyncTask* UAsyncTask::All(TArray<class UAsyncTask*> Dependents)
 
 	if (!pFnAll)
 	{
-		pFnAll = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_ALL));
+		pFnAll = UFunction::FindFunction("Function Core.AsyncTask.All");
+
 	}
 
 	UAsyncTask_execAll_Parms All_Parms;
@@ -14574,7 +15120,7 @@ class UAsyncTask* UAsyncTask::All(TArray<class UAsyncTask*> Dependents)
 };
 
 // Function Core.AsyncTask.DependOn
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UAsyncTask*              Other                          (CPF_Parm)
@@ -14585,7 +15131,8 @@ class UAsyncTask* UAsyncTask::DependOn(class UAsyncTask* Other)
 
 	if (!pFnDependOn)
 	{
-		pFnDependOn = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_DEPENDON));
+		pFnDependOn = UFunction::FindFunction("Function Core.AsyncTask.DependOn");
+
 	}
 
 	UAsyncTask_execDependOn_Parms DependOn_Parms;
@@ -14597,7 +15144,7 @@ class UAsyncTask* UAsyncTask::DependOn(class UAsyncTask* Other)
 };
 
 // Function Core.AsyncTask.NotifyOnDispose
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -14608,7 +15155,8 @@ class UAsyncTask* UAsyncTask::eventNotifyOnDispose(struct FScriptDelegate Callba
 
 	if (!pFnNotifyOnDispose)
 	{
-		pFnNotifyOnDispose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_NOTIFYONDISPOSE));
+		pFnNotifyOnDispose = UFunction::FindFunction("Function Core.AsyncTask.NotifyOnDispose");
+
 	}
 
 	UAsyncTask_eventNotifyOnDispose_Parms NotifyOnDispose_Parms;
@@ -14620,7 +15168,7 @@ class UAsyncTask* UAsyncTask::eventNotifyOnDispose(struct FScriptDelegate Callba
 };
 
 // Function Core.AsyncTask.ClearCallbacks
-// [0x00080802] (FUNC_RequiredAPI | FUNC_Event | FUNC_Protected | FUNC_AllFlags)
+// [0x00090802] (FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Protected | FUNC_AllFlags)
 // Parameter info:
 
 void UAsyncTask::eventClearCallbacks()
@@ -14629,7 +15177,8 @@ void UAsyncTask::eventClearCallbacks()
 
 	if (!pFnClearCallbacks)
 	{
-		pFnClearCallbacks = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_CLEARCALLBACKS));
+		pFnClearCallbacks = UFunction::FindFunction("Function Core.AsyncTask.ClearCallbacks");
+
 	}
 
 	UAsyncTask_eventClearCallbacks_Parms ClearCallbacks_Parms;
@@ -14638,7 +15187,7 @@ void UAsyncTask::eventClearCallbacks()
 };
 
 // Function Core.AsyncTask.Dispose
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UAsyncTask::eventDispose()
@@ -14647,7 +15196,8 @@ void UAsyncTask::eventDispose()
 
 	if (!pFnDispose)
 	{
-		pFnDispose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_DISPOSE));
+		pFnDispose = UFunction::FindFunction("Function Core.AsyncTask.Dispose");
+
 	}
 
 	UAsyncTask_eventDispose_Parms Dispose_Parms;
@@ -14656,7 +15206,7 @@ void UAsyncTask::eventDispose()
 };
 
 // Function Core.AsyncTask.SetComplete
-// [0x00024003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UError*                  InError                        (CPF_OptionalParm | CPF_Parm)
 
@@ -14666,7 +15216,8 @@ void UAsyncTask::SetComplete(class UError* InError)
 
 	if (!pFnSetComplete)
 	{
-		pFnSetComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_SETCOMPLETE));
+		pFnSetComplete = UFunction::FindFunction("Function Core.AsyncTask.SetComplete");
+
 	}
 
 	UAsyncTask_execSetComplete_Parms SetComplete_Parms;
@@ -14676,7 +15227,7 @@ void UAsyncTask::SetComplete(class UError* InError)
 };
 
 // Function Core.AsyncTask.SetError
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UError*                  InError                        (CPF_Parm)
 
@@ -14686,7 +15237,8 @@ void UAsyncTask::eventSetError(class UError* InError)
 
 	if (!pFnSetError)
 	{
-		pFnSetError = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_SETERROR));
+		pFnSetError = UFunction::FindFunction("Function Core.AsyncTask.SetError");
+
 	}
 
 	UAsyncTask_eventSetError_Parms SetError_Parms;
@@ -14696,7 +15248,7 @@ void UAsyncTask::eventSetError(class UError* InError)
 };
 
 // Function Core.AsyncTask.NotifyOnComplete
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -14707,7 +15259,8 @@ class UAsyncTask* UAsyncTask::eventNotifyOnComplete(struct FScriptDelegate Callb
 
 	if (!pFnNotifyOnComplete)
 	{
-		pFnNotifyOnComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_NOTIFYONCOMPLETE));
+		pFnNotifyOnComplete = UFunction::FindFunction("Function Core.AsyncTask.NotifyOnComplete");
+
 	}
 
 	UAsyncTask_eventNotifyOnComplete_Parms NotifyOnComplete_Parms;
@@ -14719,7 +15272,7 @@ class UAsyncTask* UAsyncTask::eventNotifyOnComplete(struct FScriptDelegate Callb
 };
 
 // Function Core.AsyncTask.NotifyOnFail
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -14730,7 +15283,8 @@ class UAsyncTask* UAsyncTask::eventNotifyOnFail(struct FScriptDelegate Callback)
 
 	if (!pFnNotifyOnFail)
 	{
-		pFnNotifyOnFail = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_NOTIFYONFAIL));
+		pFnNotifyOnFail = UFunction::FindFunction("Function Core.AsyncTask.NotifyOnFail");
+
 	}
 
 	UAsyncTask_eventNotifyOnFail_Parms NotifyOnFail_Parms;
@@ -14742,7 +15296,7 @@ class UAsyncTask* UAsyncTask::eventNotifyOnFail(struct FScriptDelegate Callback)
 };
 
 // Function Core.AsyncTask.NotifyOnSuccess
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class UAsyncTask*              ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -14753,7 +15307,8 @@ class UAsyncTask* UAsyncTask::eventNotifyOnSuccess(struct FScriptDelegate Callba
 
 	if (!pFnNotifyOnSuccess)
 	{
-		pFnNotifyOnSuccess = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_NOTIFYONSUCCESS));
+		pFnNotifyOnSuccess = UFunction::FindFunction("Function Core.AsyncTask.NotifyOnSuccess");
+
 	}
 
 	UAsyncTask_eventNotifyOnSuccess_Parms NotifyOnSuccess_Parms;
@@ -14765,7 +15320,7 @@ class UAsyncTask* UAsyncTask::eventNotifyOnSuccess(struct FScriptDelegate Callba
 };
 
 // Function Core.AsyncTask.EventDisposed
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 
 void UAsyncTask::EventDisposed()
@@ -14774,7 +15329,8 @@ void UAsyncTask::EventDisposed()
 
 	if (!pFnEventDisposed)
 	{
-		pFnEventDisposed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_EVENTDISPOSED));
+		pFnEventDisposed = UFunction::FindFunction("Function Core.AsyncTask.EventDisposed");
+
 	}
 
 	UAsyncTask_execEventDisposed_Parms EventDisposed_Parms;
@@ -14783,7 +15339,7 @@ void UAsyncTask::EventDisposed()
 };
 
 // Function Core.AsyncTask.EventAsyncTaskComplete
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 // class UError*                  TaskError                      (CPF_Parm)
 
@@ -14793,7 +15349,8 @@ void UAsyncTask::EventAsyncTaskComplete(class UError* TaskError)
 
 	if (!pFnEventAsyncTaskComplete)
 	{
-		pFnEventAsyncTaskComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_EVENTASYNCTASKCOMPLETE));
+		pFnEventAsyncTaskComplete = UFunction::FindFunction("Function Core.AsyncTask.EventAsyncTaskComplete");
+
 	}
 
 	UAsyncTask_execEventAsyncTaskComplete_Parms EventAsyncTaskComplete_Parms;
@@ -14803,7 +15360,7 @@ void UAsyncTask::EventAsyncTaskComplete(class UError* TaskError)
 };
 
 // Function Core.AsyncTask.EventAsyncTaskFail
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 // class UError*                  TaskError                      (CPF_Parm)
 
@@ -14813,7 +15370,8 @@ void UAsyncTask::EventAsyncTaskFail(class UError* TaskError)
 
 	if (!pFnEventAsyncTaskFail)
 	{
-		pFnEventAsyncTaskFail = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_EVENTASYNCTASKFAIL));
+		pFnEventAsyncTaskFail = UFunction::FindFunction("Function Core.AsyncTask.EventAsyncTaskFail");
+
 	}
 
 	UAsyncTask_execEventAsyncTaskFail_Parms EventAsyncTaskFail_Parms;
@@ -14823,7 +15381,7 @@ void UAsyncTask::EventAsyncTaskFail(class UError* TaskError)
 };
 
 // Function Core.AsyncTask.EventAsyncTaskSuccess
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 
 void UAsyncTask::EventAsyncTaskSuccess()
@@ -14832,7 +15390,8 @@ void UAsyncTask::EventAsyncTaskSuccess()
 
 	if (!pFnEventAsyncTaskSuccess)
 	{
-		pFnEventAsyncTaskSuccess = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ASYNCTASK_EVENTASYNCTASKSUCCESS));
+		pFnEventAsyncTaskSuccess = UFunction::FindFunction("Function Core.AsyncTask.EventAsyncTaskSuccess");
+
 	}
 
 	UAsyncTask_execEventAsyncTaskSuccess_Parms EventAsyncTaskSuccess_Parms;
@@ -14850,7 +15409,8 @@ void U_LoggingDoc::TestSpecialLogging()
 
 	if (!pFnTestSpecialLogging)
 	{
-		pFnTestSpecialLogging = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE__LOGGINGDOC_TESTSPECIALLOGGING));
+		pFnTestSpecialLogging = UFunction::FindFunction("Function Core._LoggingDoc.TestSpecialLogging");
+
 	}
 
 	U_LoggingDoc_execTestSpecialLogging_Parms TestSpecialLogging_Parms;
@@ -14859,7 +15419,7 @@ void U_LoggingDoc::TestSpecialLogging()
 };
 
 // Function Core.__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812.__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void U__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812::__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812()
@@ -14868,7 +15428,8 @@ void U__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812::__AsyncTask__All_2C3F24
 
 	if (!pFn__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812)
 	{
-		pFn__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE___ASYNCTASK__ALL_2C3F245B4F175665D439CCAE11AF6812___ASYNCTASK__ALL_2C3F245B4F175665D439CCAE11AF6812));
+		pFn__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812 = UFunction::FindFunction("Function Core.__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812.__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812");
+
 	}
 
 	U__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812_exec__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812_Parms __AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812_Parms;
@@ -14886,7 +15447,8 @@ void UIDisposable::eventDispose()
 
 	if (!pFnDispose)
 	{
-		pFnDispose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_IDISPOSABLE_DISPOSE));
+		pFnDispose = UFunction::FindFunction("Function Core.IDisposable.Dispose");
+
 	}
 
 	UIDisposable_eventDispose_Parms Dispose_Parms;
@@ -14904,7 +15466,8 @@ void UArrayFuncs::GetRandomElement()
 
 	if (!pFnGetRandomElement)
 	{
-		pFnGetRandomElement = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ARRAYFUNCS_GETRANDOMELEMENT));
+		pFnGetRandomElement = UFunction::FindFunction("Function Core.ArrayFuncs.GetRandomElement");
+
 	}
 
 	UArrayFuncs_execGetRandomElement_Parms GetRandomElement_Parms;
@@ -14922,7 +15485,8 @@ void UArrayFuncs::ShuffleArray()
 
 	if (!pFnShuffleArray)
 	{
-		pFnShuffleArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_CORE_ARRAYFUNCS_SHUFFLEARRAY));
+		pFnShuffleArray = UFunction::FindFunction("Function Core.ArrayFuncs.ShuffleArray");
+
 	}
 
 	UArrayFuncs_execShuffleArray_Parms ShuffleArray_Parms;

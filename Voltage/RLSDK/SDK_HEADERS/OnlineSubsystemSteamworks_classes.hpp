@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: OnlineSubsystemSteamworks_classes.hpp
@@ -100,7 +100,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks");
 		}
 
 		return uClassPointer;
@@ -138,7 +138,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks");
 		}
 
 		return uClassPointer;
@@ -198,7 +198,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks");
 		}
 
 		return uClassPointer;
@@ -234,7 +234,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet");
 		}
 
 		return uClassPointer;
@@ -271,7 +271,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks");
 		}
 
 		return uClassPointer;
@@ -477,7 +477,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.OnlineSubsystemSteamworks");
 		}
 
 		return uClassPointer;
@@ -918,7 +918,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks");
 		}
 
 		return uClassPointer;
@@ -946,7 +946,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_STEAMWORKSHOPCOMMANDLET));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.SteamWorkshopCommandlet");
 		}
 
 		return uClassPointer;
@@ -968,7 +968,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_STEAMWORKSHOPENGINE));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.SteamWorkshopEngine");
 		}
 
 		return uClassPointer;
@@ -990,7 +990,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_IPNETDRIVERSTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.IpNetDriverSteamworks");
 		}
 
 		return uClassPointer;
@@ -1010,7 +1010,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMSTEAMWORKS_IPNETCONNECTIONSTEAMWORKS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemSteamworks.IpNetConnectionSteamworks");
 		}
 
 		return uClassPointer;

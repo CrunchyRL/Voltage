@@ -2,6 +2,10 @@
 #include "SdkHeaders.hpp"
 #include <Psapi.h>
 #include <iostream>
+#include <vector>
+#include <string>
+#include <memory>
+#include <Windows.h>
 #pragma comment(lib, "Psapi.lib")
 UProfile_TA* localProfile = nullptr;
 
@@ -9,6 +13,24 @@ namespace Utils
 {
 	// All GetInstanceOf related functions loop through the entire GObject TArray, which can be resource heavy if you're using them everywhere.
 	// So rely on hooking functions and storing classes here instead, only use GetInstanceOf functions them when needed.
+
+	FString to_fstring(const std::string& s) {
+		wchar_t* p = new wchar_t[s.size() + 1];
+		for (std::string::size_type i = 0; i < s.size(); ++i)
+			p[i] = s[i];
+
+		p[s.size()] = '\0';
+		return FString(p);
+	}
+
+	FName to_fname(const std::string& s) {
+		wchar_t* p = new wchar_t[s.size() + 1];
+		for (std::string::size_type i = 0; i < s.size(); ++i)
+			p[i] = s[i];
+
+		p[s.size()] = '\0';
+		return FName(p);
+	}
 
 	// Get the default constructor of a class type. Example: UGameData_TA* gameData = GetDefaultInstanceOf<UGameData_TA>();
 	template<typename T> T* GetDefaultInstanceOf()
@@ -50,41 +72,6 @@ namespace Utils
 		}
 
 		return nullptr;
-	}
-
-	UObject* GetInstanceOf(UClass* Class) {
-		static UObject* ObjectInstance;
-		ObjectInstance = NULL;
-
-		for (int32_t i = UObject::GObjObjects()->Num(); i > 0; i--)
-		{
-			UObject* CheckObject = (UObject::GObjObjects()->At(i));
-			if (CheckObject && CheckObject->IsA(Class))
-			{
-				if (std::string(CheckObject->GetFullName()).find("Default") == std::string::npos)
-				ObjectInstance = CheckObject;
-			}
-		}
-		return ObjectInstance;
-	}
-	template<typename T>
-	TArray<T*> oldGetAllInstancesOf(UClass* Class)
-	{
-		TArray<T*> objectInstances;
-		UClass* staticClass = UObject::StaticClass();
-
-		for (UObject* uObject : *UObject::GObjObjects())
-		{
-			if (uObject && uObject->IsA(staticClass))
-			{
-				if (std::string(uObject->GetFullName()).find("Default") == std::string::npos)
-				{
-					objectInstances.Add(reinterpret_cast<T*>(uObject));
-				}
-			}
-		}
-
-		return objectInstances;
 	}
 
 	template<typename T> // Get all active instances of a class type. Example: std::vector<APawn*> pawns = GetAllInstancesOf<APawn>();
@@ -198,24 +185,6 @@ namespace Utils
 	void Init()
 	{
 		localProfile = GetInstanceOf<UProfile_TA>();
-	}
-
-	FString to_fstring(const std::string& s) {
-		wchar_t* p = new wchar_t[s.size() + 1];
-		for (std::string::size_type i = 0; i < s.size(); ++i)
-			p[i] = s[i];
-
-		p[s.size()] = '\0';
-		return FString(p);
-	}
-
-	FName to_fname(const std::string& s) {
-		wchar_t* p = new wchar_t[s.size() + 1];
-		for (std::string::size_type i = 0; i < s.size(); ++i)
-			p[i] = s[i];
-
-		p[s.size()] = '\0';
-		return FName(p);
 	}
 
 	struct FUniqueNetId GetUniqueID()
@@ -372,5 +341,18 @@ namespace Utils
 		}
 
 		return NULL;
+	}
+
+	void ReplaceTexture(UTexture* ogTexture, UTexture* newTexture) {
+		for (UMaterialInstanceConstant* constant : Utils::GetAllInstancesOf<UMaterialInstanceConstant>())
+		{
+			for (FTextureParameterValue& paramValue : constant->TextureParameterValues)
+			{
+				if (paramValue.ParameterValue == ogTexture)
+				{
+					constant->SetTextureParameterValue(paramValue.ParameterName, newTexture);
+				}
+			}
+		}
 	}
 }

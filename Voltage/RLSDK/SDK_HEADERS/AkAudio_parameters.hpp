@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: AkAudio_parameters.h
@@ -10,7 +10,6 @@
 #############################################################################################
 */
 #pragma once
-#include "../SdkConstants.hpp"
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,7 +67,7 @@ struct UAkDevice_execGetEnvironments_Parms
 };
 
 // Function AkAudio.AkDevice.NotifyWhenInitialized
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execNotifyWhenInitialized_Parms
 {
 	struct FScriptDelegate                             Callback;                                         		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -93,14 +92,14 @@ struct UAkDevice_execPrintData_Parms
 };
 
 // Function AkAudio.AkDevice.SetDynamicRange
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execSetDynamicRange_Parms
 {
 	unsigned char                                      Type;                                             		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
 };
 
 // Function AkAudio.AkDevice.SetOutputType
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execSetOutputType_Parms
 {
 	unsigned char                                      Type;                                             		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -122,20 +121,20 @@ struct UAkDevice_execSetSplitScreenListenerEnabled_Parms
 };
 
 // Function AkAudio.AkDevice.SetSplitScreenListenerPosition
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execSetSplitScreenListenerPosition_Parms
 {
 	struct FVector                                     Location;                                         		// 0x0000 (0x000C) [0x0000000000000080] (CPF_Parm)    
 };
 
 // Function AkAudio.AkDevice.UpdateSecondaryOutputs
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execUpdateSecondaryOutputs_Parms
 {
 };
 
 // Function AkAudio.AkDevice.SetGlobalRTCP
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execSetGlobalRTCP_Parms
 {
 	struct FName                                       Key;                                              		// 0x0000 (0x0008) [0x0000000000000080] (CPF_Parm)    
@@ -157,7 +156,7 @@ struct UAkDevice_execPlayGlobalSound_Parms
 };
 
 // Function AkAudio.AkDevice.SetState
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execSetState_Parms
 {
 	struct FName                                       InStateGroup;                                     		// 0x0000 (0x0008) [0x0000000000000080] (CPF_Parm)    
@@ -174,7 +173,7 @@ struct UAkDevice_execSetSwitch_Parms
 };
 
 // Function AkAudio.AkDevice.SetRTCP
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execSetRTCP_Parms
 {
 	class AActor*                                      SourceActor;                                      		// 0x0000 (0x0008) [0x0000000000000080] (CPF_Parm)    
@@ -190,7 +189,7 @@ struct UAkDevice_execStopAllSounds_Parms
 };
 
 // Function AkAudio.AkDevice.StopSound
-// [0x04022401] 
+// [0x04032401] 
 struct UAkDevice_execStopSound_Parms
 {
 	class AActor*                                      SourceActor;                                      		// 0x0000 (0x0008) [0x0000000000000080] (CPF_Parm)    
@@ -198,7 +197,7 @@ struct UAkDevice_execStopSound_Parms
 };
 
 // Function AkAudio.AkDevice.PlaySound
-// [0x04026401] 
+// [0x04036401] 
 struct UAkDevice_execPlaySound_Parms
 {
 	class AActor*                                      SourceActor;                                      		// 0x0000 (0x0008) [0x0000000000000080] (CPF_Parm)    
@@ -312,7 +311,7 @@ struct UAkMusicDevice_execSetRTCP_Parms
 };
 
 // Function AkAudio.AkMusicDevice.StopPlayingID
-// [0x04022401] 
+// [0x04032401] 
 struct UAkMusicDevice_execStopPlayingID_Parms
 {
 	int                                                PlayingID;                                        		// 0x0000 (0x0004) [0x0000000000000080] (CPF_Parm)    
@@ -326,7 +325,7 @@ struct UAkMusicDevice_execStop_Parms
 };
 
 // Function AkAudio.AkMusicDevice.Play
-// [0x04022401] 
+// [0x04032401] 
 struct UAkMusicDevice_execPlay_Parms
 {
 	class UAkSoundCue*                                 Sound;                                            		// 0x0000 (0x0008) [0x0000000000000080] (CPF_Parm)    
@@ -699,7 +698,7 @@ struct UAkSoundSource_execEventMarker_Parms
 };
 
 // Function AkAudio.AkSoundSource.EventFinished
-// [0x00120001] 
+// [0x00130001] 
 struct UAkSoundSource_execEventFinished_Parms
 {
 	class UAkSoundSource*                              Source;                                           		// 0x0000 (0x0008) [0x0000000004000080] (CPF_Parm | CPF_EditInline)
@@ -716,7 +715,7 @@ struct USeqAct_AkPlayMusicWithCues_eventTriggerEvents_Parms
 };
 
 // Function AkAudio.SeqAct_AkPlaySound.ToggleSoundFor
-// [0x00020003] 
+// [0x00030003] 
 struct USeqAct_AkPlaySound_execToggleSoundFor_Parms
 {
 	class AActor*                                      A;                                                		// 0x0000 (0x0008) [0x0000000000000080] (CPF_Parm)    
@@ -724,7 +723,7 @@ struct USeqAct_AkPlaySound_execToggleSoundFor_Parms
 };
 
 // Function AkAudio.SeqAct_AkPlaySound.ToggleSound
-// [0x00020003] 
+// [0x00030003] 
 struct USeqAct_AkPlaySound_execToggleSound_Parms
 {
 	bool                                               bPlay : 1;                                        		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] (CPF_Parm)

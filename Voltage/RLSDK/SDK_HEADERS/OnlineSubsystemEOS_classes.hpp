@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: OnlineSubsystemEOS_classes.hpp
@@ -89,7 +89,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlineSubsystemEOS");
 		}
 
 		return uClassPointer;
@@ -231,7 +231,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINEAUTHINTERFACEEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlineAuthInterfaceEOS");
 		}
 
 		return uClassPointer;
@@ -255,7 +255,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINEFRIENDSINTERFACEEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlineFriendsInterfaceEOS");
 		}
 
 		return uClassPointer;
@@ -281,7 +281,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINEGAMEINTERFACEEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlineGameInterfaceEOS");
 		}
 
 		return uClassPointer;
@@ -305,7 +305,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS");
 		}
 
 		return uClassPointer;
@@ -410,7 +410,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlinePlayerInterfaceEOS");
 		}
 
 		return uClassPointer;
@@ -672,7 +672,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlineStatsInterfaceEOS");
 		}
 
 		return uClassPointer;
@@ -723,7 +723,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS");
 		}
 
 		return uClassPointer;
@@ -765,7 +765,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS___ONLINEPLAYERINTERFACEEOS__LINKEDACCOUNT_35478360455FC0803A7CA081E5B560AE));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE");
 		}
 
 		return uClassPointer;
@@ -788,7 +788,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_ONLINESUBSYSTEMEOS___ONLINEPLAYERINTERFACEEOS__REQUESTNATIVEPLATFORMAUTHTICKET_220AAF194826E64582E7DEA5AA114C05));
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05");
 		}
 
 		return uClassPointer;

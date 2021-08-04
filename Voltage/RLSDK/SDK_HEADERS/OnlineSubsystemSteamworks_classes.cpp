@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: OnlineSubsystemSteamworks_classes.cpp
@@ -22,7 +22,7 @@
 */
 
 // Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.RequestAuthTicket
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FUniqueNetId            PlayerID                       (CPF_Parm | CPF_NeedCtorLink)
@@ -34,7 +34,8 @@ bool UOnlineAuthInterfaceSteamworks::RequestAuthTicket(struct FUniqueNetId Playe
 
 	if (!pFnRequestAuthTicket)
 	{
-		pFnRequestAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_REQUESTAUTHTICKET));
+		pFnRequestAuthTicket = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.RequestAuthTicket");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execRequestAuthTicket_Parms RequestAuthTicket_Parms;
@@ -56,7 +57,7 @@ bool UOnlineAuthInterfaceSteamworks::RequestAuthTicket(struct FUniqueNetId Playe
 };
 
 // Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.RequiresAuthTicket
-// [0x00020002] (FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030002] (FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -66,7 +67,8 @@ bool UOnlineAuthInterfaceSteamworks::RequiresAuthTicket()
 
 	if (!pFnRequiresAuthTicket)
 	{
-		pFnRequiresAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_REQUIRESAUTHTICKET));
+		pFnRequiresAuthTicket = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.RequiresAuthTicket");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execRequiresAuthTicket_Parms RequiresAuthTicket_Parms;
@@ -89,7 +91,8 @@ bool UOnlineAuthInterfaceSteamworks::GetServerAddr(struct FIpAddr& OutServerIP, 
 
 	if (!pFnGetServerAddr)
 	{
-		pFnGetServerAddr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_GETSERVERADDR));
+		pFnGetServerAddr = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.GetServerAddr");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execGetServerAddr_Parms GetServerAddr_Parms;
@@ -122,7 +125,8 @@ bool UOnlineAuthInterfaceSteamworks::GetServerUniqueId(struct FUniqueNetId& OutS
 
 	if (!pFnGetServerUniqueId)
 	{
-		pFnGetServerUniqueId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_GETSERVERUNIQUEID));
+		pFnGetServerUniqueId = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.GetServerUniqueId");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execGetServerUniqueId_Parms GetServerUniqueId_Parms;
@@ -156,7 +160,8 @@ bool UOnlineAuthInterfaceSteamworks::VerifyServerAuthSession(struct FUniqueNetId
 
 	if (!pFnVerifyServerAuthSession)
 	{
-		pFnVerifyServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_VERIFYSERVERAUTHSESSION));
+		pFnVerifyServerAuthSession = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.VerifyServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execVerifyServerAuthSession_Parms VerifyServerAuthSession_Parms;
@@ -193,7 +198,8 @@ bool UOnlineAuthInterfaceSteamworks::CreateServerAuthSession(struct FUniqueNetId
 
 	if (!pFnCreateServerAuthSession)
 	{
-		pFnCreateServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_CREATESERVERAUTHSESSION));
+		pFnCreateServerAuthSession = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.CreateServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execCreateServerAuthSession_Parms CreateServerAuthSession_Parms;
@@ -231,7 +237,8 @@ bool UOnlineAuthInterfaceSteamworks::VerifyClientAuthSession(struct FUniqueNetId
 
 	if (!pFnVerifyClientAuthSession)
 	{
-		pFnVerifyClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_VERIFYCLIENTAUTHSESSION));
+		pFnVerifyClientAuthSession = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.VerifyClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execVerifyClientAuthSession_Parms VerifyClientAuthSession_Parms;
@@ -270,7 +277,8 @@ bool UOnlineAuthInterfaceSteamworks::CreateClientAuthSession(struct FUniqueNetId
 
 	if (!pFnCreateClientAuthSession)
 	{
-		pFnCreateClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_CREATECLIENTAUTHSESSION));
+		pFnCreateClientAuthSession = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.CreateClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execCreateClientAuthSession_Parms CreateClientAuthSession_Parms;
@@ -306,7 +314,8 @@ bool UOnlineAuthInterfaceSteamworks::SendServerAuthRequest(struct FUniqueNetId S
 
 	if (!pFnSendServerAuthRequest)
 	{
-		pFnSendServerAuthRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_SENDSERVERAUTHREQUEST));
+		pFnSendServerAuthRequest = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.SendServerAuthRequest");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execSendServerAuthRequest_Parms SendServerAuthRequest_Parms;
@@ -339,7 +348,8 @@ bool UOnlineAuthInterfaceSteamworks::SendClientAuthRequest(class UPlayer* Client
 
 	if (!pFnSendClientAuthRequest)
 	{
-		pFnSendClientAuthRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEAUTHINTERFACESTEAMWORKS_SENDCLIENTAUTHREQUEST));
+		pFnSendClientAuthRequest = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.SendClientAuthRequest");
+
 	}
 
 	UOnlineAuthInterfaceSteamworks_execSendClientAuthRequest_Parms SendClientAuthRequest_Parms;
@@ -370,7 +380,8 @@ void UOnlineCommunityContentInterfaceSteamworks::UpdateWorkshopItemUploadProgres
 
 	if (!pFnUpdateWorkshopItemUploadProgress)
 	{
-		pFnUpdateWorkshopItemUploadProgress = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_UPDATEWORKSHOPITEMUPLOADPROGRESS));
+		pFnUpdateWorkshopItemUploadProgress = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.UpdateWorkshopItemUploadProgress");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execUpdateWorkshopItemUploadProgress_Parms UpdateWorkshopItemUploadProgress_Parms;
@@ -393,7 +404,8 @@ void UOnlineCommunityContentInterfaceSteamworks::DownloadAllWorkshopData(struct 
 
 	if (!pFnDownloadAllWorkshopData)
 	{
-		pFnDownloadAllWorkshopData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_DOWNLOADALLWORKSHOPDATA));
+		pFnDownloadAllWorkshopData = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.DownloadAllWorkshopData");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execDownloadAllWorkshopData_Parms DownloadAllWorkshopData_Parms;
@@ -416,7 +428,8 @@ void UOnlineCommunityContentInterfaceSteamworks::CreateWorkshopItem()
 
 	if (!pFnCreateWorkshopItem)
 	{
-		pFnCreateWorkshopItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_CREATEWORKSHOPITEM));
+		pFnCreateWorkshopItem = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.CreateWorkshopItem");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execCreateWorkshopItem_Parms CreateWorkshopItem_Parms;
@@ -441,7 +454,8 @@ void UOnlineCommunityContentInterfaceSteamworks::RateContent(unsigned char Playe
 
 	if (!pFnRateContent)
 	{
-		pFnRateContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_RATECONTENT));
+		pFnRateContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.RateContent");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execRateContent_Parms RateContent_Parms;
@@ -463,7 +477,8 @@ void UOnlineCommunityContentInterfaceSteamworks::ClearGetContentPayloadCompleteD
 
 	if (!pFnClearGetContentPayloadCompleteDelegate)
 	{
-		pFnClearGetContentPayloadCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_CLEARGETCONTENTPAYLOADCOMPLETEDELEGATE));
+		pFnClearGetContentPayloadCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.ClearGetContentPayloadCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execClearGetContentPayloadCompleteDelegate_Parms ClearGetContentPayloadCompleteDelegate_Parms;
@@ -483,7 +498,8 @@ void UOnlineCommunityContentInterfaceSteamworks::AddGetContentPayloadCompleteDel
 
 	if (!pFnAddGetContentPayloadCompleteDelegate)
 	{
-		pFnAddGetContentPayloadCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ADDGETCONTENTPAYLOADCOMPLETEDELEGATE));
+		pFnAddGetContentPayloadCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.AddGetContentPayloadCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execAddGetContentPayloadCompleteDelegate_Parms AddGetContentPayloadCompleteDelegate_Parms;
@@ -505,7 +521,8 @@ void UOnlineCommunityContentInterfaceSteamworks::OnGetContentPayloadComplete(uns
 
 	if (!pFnOnGetContentPayloadComplete)
 	{
-		pFnOnGetContentPayloadComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ONGETCONTENTPAYLOADCOMPLETE));
+		pFnOnGetContentPayloadComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.OnGetContentPayloadComplete");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execOnGetContentPayloadComplete_Parms OnGetContentPayloadComplete_Parms;
@@ -529,7 +546,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::GetContentPayload(unsigned char
 
 	if (!pFnGetContentPayload)
 	{
-		pFnGetContentPayload = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_GETCONTENTPAYLOAD));
+		pFnGetContentPayload = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.GetContentPayload");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execGetContentPayload_Parms GetContentPayload_Parms;
@@ -552,7 +570,8 @@ void UOnlineCommunityContentInterfaceSteamworks::ClearDownloadContentCompleteDel
 
 	if (!pFnClearDownloadContentCompleteDelegate)
 	{
-		pFnClearDownloadContentCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_CLEARDOWNLOADCONTENTCOMPLETEDELEGATE));
+		pFnClearDownloadContentCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.ClearDownloadContentCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execClearDownloadContentCompleteDelegate_Parms ClearDownloadContentCompleteDelegate_Parms;
@@ -572,7 +591,8 @@ void UOnlineCommunityContentInterfaceSteamworks::AddDownloadContentCompleteDeleg
 
 	if (!pFnAddDownloadContentCompleteDelegate)
 	{
-		pFnAddDownloadContentCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ADDDOWNLOADCONTENTCOMPLETEDELEGATE));
+		pFnAddDownloadContentCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.AddDownloadContentCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execAddDownloadContentCompleteDelegate_Parms AddDownloadContentCompleteDelegate_Parms;
@@ -594,7 +614,8 @@ void UOnlineCommunityContentInterfaceSteamworks::OnDownloadContentComplete(unsig
 
 	if (!pFnOnDownloadContentComplete)
 	{
-		pFnOnDownloadContentComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ONDOWNLOADCONTENTCOMPLETE));
+		pFnOnDownloadContentComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.OnDownloadContentComplete");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execOnDownloadContentComplete_Parms OnDownloadContentComplete_Parms;
@@ -618,7 +639,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::DownloadContent(unsigned char P
 
 	if (!pFnDownloadContent)
 	{
-		pFnDownloadContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_DOWNLOADCONTENT));
+		pFnDownloadContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.DownloadContent");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execDownloadContent_Parms DownloadContent_Parms;
@@ -641,7 +663,8 @@ void UOnlineCommunityContentInterfaceSteamworks::ClearUploadContentCompleteDeleg
 
 	if (!pFnClearUploadContentCompleteDelegate)
 	{
-		pFnClearUploadContentCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_CLEARUPLOADCONTENTCOMPLETEDELEGATE));
+		pFnClearUploadContentCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.ClearUploadContentCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execClearUploadContentCompleteDelegate_Parms ClearUploadContentCompleteDelegate_Parms;
@@ -661,7 +684,8 @@ void UOnlineCommunityContentInterfaceSteamworks::AddUploadContentCompleteDelegat
 
 	if (!pFnAddUploadContentCompleteDelegate)
 	{
-		pFnAddUploadContentCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ADDUPLOADCONTENTCOMPLETEDELEGATE));
+		pFnAddUploadContentCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.AddUploadContentCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execAddUploadContentCompleteDelegate_Parms AddUploadContentCompleteDelegate_Parms;
@@ -682,7 +706,8 @@ void UOnlineCommunityContentInterfaceSteamworks::OnUploadContentComplete(unsigne
 
 	if (!pFnOnUploadContentComplete)
 	{
-		pFnOnUploadContentComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ONUPLOADCONTENTCOMPLETE));
+		pFnOnUploadContentComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.OnUploadContentComplete");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execOnUploadContentComplete_Parms OnUploadContentComplete_Parms;
@@ -706,7 +731,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::UploadContent(unsigned char Pla
 
 	if (!pFnUploadContent)
 	{
-		pFnUploadContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_UPLOADCONTENT));
+		pFnUploadContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.UploadContent");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execUploadContent_Parms UploadContent_Parms;
@@ -733,7 +759,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::GetFriendsContentList(unsigned 
 
 	if (!pFnGetFriendsContentList)
 	{
-		pFnGetFriendsContentList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_GETFRIENDSCONTENTLIST));
+		pFnGetFriendsContentList = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.GetFriendsContentList");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execGetFriendsContentList_Parms GetFriendsContentList_Parms;
@@ -757,7 +784,8 @@ void UOnlineCommunityContentInterfaceSteamworks::ClearReadFriendsContentListComp
 
 	if (!pFnClearReadFriendsContentListCompleteDelegate)
 	{
-		pFnClearReadFriendsContentListCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_CLEARREADFRIENDSCONTENTLISTCOMPLETEDELEGATE));
+		pFnClearReadFriendsContentListCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.ClearReadFriendsContentListCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execClearReadFriendsContentListCompleteDelegate_Parms ClearReadFriendsContentListCompleteDelegate_Parms;
@@ -777,7 +805,8 @@ void UOnlineCommunityContentInterfaceSteamworks::AddReadFriendsContentListComple
 
 	if (!pFnAddReadFriendsContentListCompleteDelegate)
 	{
-		pFnAddReadFriendsContentListCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ADDREADFRIENDSCONTENTLISTCOMPLETEDELEGATE));
+		pFnAddReadFriendsContentListCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.AddReadFriendsContentListCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execAddReadFriendsContentListCompleteDelegate_Parms AddReadFriendsContentListCompleteDelegate_Parms;
@@ -797,7 +826,8 @@ void UOnlineCommunityContentInterfaceSteamworks::OnReadFriendsContentListComplet
 
 	if (!pFnOnReadFriendsContentListComplete)
 	{
-		pFnOnReadFriendsContentListComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ONREADFRIENDSCONTENTLISTCOMPLETE));
+		pFnOnReadFriendsContentListComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.OnReadFriendsContentListComplete");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execOnReadFriendsContentListComplete_Parms OnReadFriendsContentListComplete_Parms;
@@ -821,7 +851,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::ReadFriendsContentList(unsigned
 
 	if (!pFnReadFriendsContentList)
 	{
-		pFnReadFriendsContentList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_READFRIENDSCONTENTLIST));
+		pFnReadFriendsContentList = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.ReadFriendsContentList");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execReadFriendsContentList_Parms ReadFriendsContentList_Parms;
@@ -848,7 +879,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::GetContentList(unsigned char Pl
 
 	if (!pFnGetContentList)
 	{
-		pFnGetContentList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_GETCONTENTLIST));
+		pFnGetContentList = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.GetContentList");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execGetContentList_Parms GetContentList_Parms;
@@ -871,7 +903,8 @@ void UOnlineCommunityContentInterfaceSteamworks::ClearReadContentListCompleteDel
 
 	if (!pFnClearReadContentListCompleteDelegate)
 	{
-		pFnClearReadContentListCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_CLEARREADCONTENTLISTCOMPLETEDELEGATE));
+		pFnClearReadContentListCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.ClearReadContentListCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execClearReadContentListCompleteDelegate_Parms ClearReadContentListCompleteDelegate_Parms;
@@ -891,7 +924,8 @@ void UOnlineCommunityContentInterfaceSteamworks::AddReadContentListCompleteDeleg
 
 	if (!pFnAddReadContentListCompleteDelegate)
 	{
-		pFnAddReadContentListCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ADDREADCONTENTLISTCOMPLETEDELEGATE));
+		pFnAddReadContentListCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.AddReadContentListCompleteDelegate");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execAddReadContentListCompleteDelegate_Parms AddReadContentListCompleteDelegate_Parms;
@@ -912,7 +946,8 @@ void UOnlineCommunityContentInterfaceSteamworks::OnReadContentListComplete(unsig
 
 	if (!pFnOnReadContentListComplete)
 	{
-		pFnOnReadContentListComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ONREADCONTENTLISTCOMPLETE));
+		pFnOnReadContentListComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.OnReadContentListComplete");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execOnReadContentListComplete_Parms OnReadContentListComplete_Parms;
@@ -938,7 +973,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::ReadContentList(unsigned char P
 
 	if (!pFnReadContentList)
 	{
-		pFnReadContentList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_READCONTENTLIST));
+		pFnReadContentList = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.ReadContentList");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execReadContentList_Parms ReadContentList_Parms;
@@ -963,7 +999,8 @@ void UOnlineCommunityContentInterfaceSteamworks::Exit()
 
 	if (!pFnExit)
 	{
-		pFnExit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_EXIT));
+		pFnExit = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.Exit");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execExit_Parms Exit_Parms;
@@ -986,7 +1023,8 @@ bool UOnlineCommunityContentInterfaceSteamworks::Init()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_INIT));
+		pFnInit = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.Init");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execInit_Parms Init_Parms;
@@ -1012,7 +1050,8 @@ void UOnlineCommunityContentInterfaceSteamworks::OnDownloadedWorkshopData(unsign
 
 	if (!pFnOnDownloadedWorkshopData)
 	{
-		pFnOnDownloadedWorkshopData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINECOMMUNITYCONTENTINTERFACESTEAMWORKS_ONDOWNLOADEDWORKSHOPDATA));
+		pFnOnDownloadedWorkshopData = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineCommunityContentInterfaceSteamworks.OnDownloadedWorkshopData");
+
 	}
 
 	UOnlineCommunityContentInterfaceSteamworks_execOnDownloadedWorkshopData_Parms OnDownloadedWorkshopData_Parms;
@@ -1033,7 +1072,8 @@ void UOnlineGameInterfaceSteamworks::PrintDebugInfoNative(class UDebugDrawer* Dr
 
 	if (!pFnPrintDebugInfoNative)
 	{
-		pFnPrintDebugInfoNative = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PRINTDEBUGINFONATIVE));
+		pFnPrintDebugInfoNative = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.PrintDebugInfoNative");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execPrintDebugInfoNative_Parms PrintDebugInfoNative_Parms;
@@ -1057,7 +1097,8 @@ void UOnlineGameInterfaceSteamworks::PrintDebugInfo(class UDebugDrawer* Drawer)
 
 	if (!pFnPrintDebugInfo)
 	{
-		pFnPrintDebugInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PRINTDEBUGINFO));
+		pFnPrintDebugInfo = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.PrintDebugInfo");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execPrintDebugInfo_Parms PrintDebugInfo_Parms;
@@ -1079,7 +1120,8 @@ bool UOnlineGameInterfaceSteamworks::QueryNonAdvertisedData(int StartAt, int Num
 
 	if (!pFnQueryNonAdvertisedData)
 	{
-		pFnQueryNonAdvertisedData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_QUERYNONADVERTISEDDATA));
+		pFnQueryNonAdvertisedData = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.QueryNonAdvertisedData");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execQueryNonAdvertisedData_Parms QueryNonAdvertisedData_Parms;
@@ -1102,7 +1144,8 @@ void UOnlineGameInterfaceSteamworks::ClearUnregisterPlayerCompleteDelegate(struc
 
 	if (!pFnClearUnregisterPlayerCompleteDelegate)
 	{
-		pFnClearUnregisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_CLEARUNREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnClearUnregisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.ClearUnregisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execClearUnregisterPlayerCompleteDelegate_Parms ClearUnregisterPlayerCompleteDelegate_Parms;
@@ -1122,7 +1165,8 @@ void UOnlineGameInterfaceSteamworks::AddUnregisterPlayerCompleteDelegate(struct 
 
 	if (!pFnAddUnregisterPlayerCompleteDelegate)
 	{
-		pFnAddUnregisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_ADDUNREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnAddUnregisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.AddUnregisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execAddUnregisterPlayerCompleteDelegate_Parms AddUnregisterPlayerCompleteDelegate_Parms;
@@ -1144,7 +1188,8 @@ void UOnlineGameInterfaceSteamworks::OnUnregisterPlayerComplete(struct FName Ses
 
 	if (!pFnOnUnregisterPlayerComplete)
 	{
-		pFnOnUnregisterPlayerComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_ONUNREGISTERPLAYERCOMPLETE));
+		pFnOnUnregisterPlayerComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.OnUnregisterPlayerComplete");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execOnUnregisterPlayerComplete_Parms OnUnregisterPlayerComplete_Parms;
@@ -1168,7 +1213,8 @@ bool UOnlineGameInterfaceSteamworks::UnregisterPlayer(struct FName SessionName, 
 
 	if (!pFnUnregisterPlayer)
 	{
-		pFnUnregisterPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_UNREGISTERPLAYER));
+		pFnUnregisterPlayer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.UnregisterPlayer");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execUnregisterPlayer_Parms UnregisterPlayer_Parms;
@@ -1200,7 +1246,8 @@ void UOnlineGameInterfaceSteamworks::ClearRegisterPlayerCompleteDelegate(struct 
 
 	if (!pFnClearRegisterPlayerCompleteDelegate)
 	{
-		pFnClearRegisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_CLEARREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnClearRegisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.ClearRegisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execClearRegisterPlayerCompleteDelegate_Parms ClearRegisterPlayerCompleteDelegate_Parms;
@@ -1220,7 +1267,8 @@ void UOnlineGameInterfaceSteamworks::AddRegisterPlayerCompleteDelegate(struct FS
 
 	if (!pFnAddRegisterPlayerCompleteDelegate)
 	{
-		pFnAddRegisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_ADDREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnAddRegisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.AddRegisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execAddRegisterPlayerCompleteDelegate_Parms AddRegisterPlayerCompleteDelegate_Parms;
@@ -1242,7 +1290,8 @@ void UOnlineGameInterfaceSteamworks::OnRegisterPlayerComplete(struct FName Sessi
 
 	if (!pFnOnRegisterPlayerComplete)
 	{
-		pFnOnRegisterPlayerComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_ONREGISTERPLAYERCOMPLETE));
+		pFnOnRegisterPlayerComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.OnRegisterPlayerComplete");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execOnRegisterPlayerComplete_Parms OnRegisterPlayerComplete_Parms;
@@ -1267,7 +1316,8 @@ bool UOnlineGameInterfaceSteamworks::RegisterPlayer(struct FName SessionName, st
 
 	if (!pFnRegisterPlayer)
 	{
-		pFnRegisterPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_REGISTERPLAYER));
+		pFnRegisterPlayer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.RegisterPlayer");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execRegisterPlayer_Parms RegisterPlayer_Parms;
@@ -1302,7 +1352,8 @@ bool UOnlineGameInterfaceSteamworks::AcceptGameInvite(unsigned char LocalUserNum
 
 	if (!pFnAcceptGameInvite)
 	{
-		pFnAcceptGameInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_ACCEPTGAMEINVITE));
+		pFnAcceptGameInvite = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.AcceptGameInvite");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execAcceptGameInvite_Parms AcceptGameInvite_Parms;
@@ -1335,7 +1386,8 @@ void UOnlineGameInterfaceSteamworks::OnGameInviteAccepted(struct FString ErrorSt
 
 	if (!pFnOnGameInviteAccepted)
 	{
-		pFnOnGameInviteAccepted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_ONGAMEINVITEACCEPTED));
+		pFnOnGameInviteAccepted = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.OnGameInviteAccepted");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execOnGameInviteAccepted_Parms OnGameInviteAccepted_Parms;
@@ -1359,7 +1411,8 @@ bool UOnlineGameInterfaceSteamworks::UpdateOnlineGame(struct FName SessionName, 
 
 	if (!pFnUpdateOnlineGame)
 	{
-		pFnUpdateOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_UPDATEONLINEGAME));
+		pFnUpdateOnlineGame = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.UpdateOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_execUpdateOnlineGame_Parms UpdateOnlineGame_Parms;
@@ -1392,7 +1445,8 @@ void UOnlineGameInterfaceSteamworks_PsyNet::ClearUnregisterPlayerCompleteDelegat
 
 	if (!pFnClearUnregisterPlayerCompleteDelegate)
 	{
-		pFnClearUnregisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_CLEARUNREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnClearUnregisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.ClearUnregisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execClearUnregisterPlayerCompleteDelegate_Parms ClearUnregisterPlayerCompleteDelegate_Parms;
@@ -1412,7 +1466,8 @@ void UOnlineGameInterfaceSteamworks_PsyNet::AddUnregisterPlayerCompleteDelegate(
 
 	if (!pFnAddUnregisterPlayerCompleteDelegate)
 	{
-		pFnAddUnregisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_ADDUNREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnAddUnregisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.AddUnregisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execAddUnregisterPlayerCompleteDelegate_Parms AddUnregisterPlayerCompleteDelegate_Parms;
@@ -1434,7 +1489,8 @@ void UOnlineGameInterfaceSteamworks_PsyNet::OnUnregisterPlayerComplete(struct FN
 
 	if (!pFnOnUnregisterPlayerComplete)
 	{
-		pFnOnUnregisterPlayerComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_ONUNREGISTERPLAYERCOMPLETE));
+		pFnOnUnregisterPlayerComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.OnUnregisterPlayerComplete");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execOnUnregisterPlayerComplete_Parms OnUnregisterPlayerComplete_Parms;
@@ -1458,7 +1514,8 @@ bool UOnlineGameInterfaceSteamworks_PsyNet::UnregisterPlayer(struct FName Sessio
 
 	if (!pFnUnregisterPlayer)
 	{
-		pFnUnregisterPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_UNREGISTERPLAYER));
+		pFnUnregisterPlayer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.UnregisterPlayer");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execUnregisterPlayer_Parms UnregisterPlayer_Parms;
@@ -1490,7 +1547,8 @@ void UOnlineGameInterfaceSteamworks_PsyNet::ClearRegisterPlayerCompleteDelegate(
 
 	if (!pFnClearRegisterPlayerCompleteDelegate)
 	{
-		pFnClearRegisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_CLEARREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnClearRegisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.ClearRegisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execClearRegisterPlayerCompleteDelegate_Parms ClearRegisterPlayerCompleteDelegate_Parms;
@@ -1510,7 +1568,8 @@ void UOnlineGameInterfaceSteamworks_PsyNet::AddRegisterPlayerCompleteDelegate(st
 
 	if (!pFnAddRegisterPlayerCompleteDelegate)
 	{
-		pFnAddRegisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_ADDREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnAddRegisterPlayerCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.AddRegisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execAddRegisterPlayerCompleteDelegate_Parms AddRegisterPlayerCompleteDelegate_Parms;
@@ -1532,7 +1591,8 @@ void UOnlineGameInterfaceSteamworks_PsyNet::OnRegisterPlayerComplete(struct FNam
 
 	if (!pFnOnRegisterPlayerComplete)
 	{
-		pFnOnRegisterPlayerComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_ONREGISTERPLAYERCOMPLETE));
+		pFnOnRegisterPlayerComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.OnRegisterPlayerComplete");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execOnRegisterPlayerComplete_Parms OnRegisterPlayerComplete_Parms;
@@ -1557,7 +1617,8 @@ bool UOnlineGameInterfaceSteamworks_PsyNet::RegisterPlayer(struct FName SessionN
 
 	if (!pFnRegisterPlayer)
 	{
-		pFnRegisterPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_REGISTERPLAYER));
+		pFnRegisterPlayer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.RegisterPlayer");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execRegisterPlayer_Parms RegisterPlayer_Parms;
@@ -1592,7 +1653,8 @@ bool UOnlineGameInterfaceSteamworks_PsyNet::QueryNonAdvertisedData(int StartAt, 
 
 	if (!pFnQueryNonAdvertisedData)
 	{
-		pFnQueryNonAdvertisedData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_QUERYNONADVERTISEDDATA));
+		pFnQueryNonAdvertisedData = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.QueryNonAdvertisedData");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execQueryNonAdvertisedData_Parms QueryNonAdvertisedData_Parms;
@@ -1617,7 +1679,8 @@ bool UOnlineGameInterfaceSteamworks_PsyNet::AcceptGameInvite(unsigned char Local
 
 	if (!pFnAcceptGameInvite)
 	{
-		pFnAcceptGameInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_ACCEPTGAMEINVITE));
+		pFnAcceptGameInvite = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.AcceptGameInvite");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execAcceptGameInvite_Parms AcceptGameInvite_Parms;
@@ -1643,7 +1706,8 @@ bool UOnlineGameInterfaceSteamworks_PsyNet::UpdateOnlineGame(struct FName Sessio
 
 	if (!pFnUpdateOnlineGame)
 	{
-		pFnUpdateOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_UPDATEONLINEGAME));
+		pFnUpdateOnlineGame = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.UpdateOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execUpdateOnlineGame_Parms UpdateOnlineGame_Parms;
@@ -1657,7 +1721,7 @@ bool UOnlineGameInterfaceSteamworks_PsyNet::UpdateOnlineGame(struct FName Sessio
 };
 
 // Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.SetFriendJoinLocation
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // struct FUniqueNetId            JoinablePlayerID               (CPF_Parm | CPF_NeedCtorLink)
 // struct FString                 ServerAddress                  (CPF_Parm | CPF_NeedCtorLink)
@@ -1669,7 +1733,8 @@ void UOnlineGameInterfaceSteamworks_PsyNet::SetFriendJoinLocation(struct FUnique
 
 	if (!pFnSetFriendJoinLocation)
 	{
-		pFnSetFriendJoinLocation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEGAMEINTERFACESTEAMWORKS_PSYNET_SETFRIENDJOINLOCATION));
+		pFnSetFriendJoinLocation = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.SetFriendJoinLocation");
+
 	}
 
 	UOnlineGameInterfaceSteamworks_PsyNet_execSetFriendJoinLocation_Parms SetFriendJoinLocation_Parms;
@@ -1703,7 +1768,8 @@ bool UOnlineLobbyInterfaceSteamworks::KickPlayer(unsigned char Reason, struct FU
 
 	if (!pFnKickPlayer)
 	{
-		pFnKickPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_KICKPLAYER));
+		pFnKickPlayer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.KickPlayer");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execKickPlayer_Parms KickPlayer_Parms;
@@ -1729,7 +1795,8 @@ bool UOnlineLobbyInterfaceSteamworks::GetLobbyFromCommandline(unsigned long bMar
 
 	if (!pFnGetLobbyFromCommandline)
 	{
-		pFnGetLobbyFromCommandline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_GETLOBBYFROMCOMMANDLINE));
+		pFnGetLobbyFromCommandline = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.GetLobbyFromCommandline");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execGetLobbyFromCommandline_Parms GetLobbyFromCommandline_Parms;
@@ -1758,7 +1825,8 @@ bool UOnlineLobbyInterfaceSteamworks::ShowInviteUI(unsigned char LocalUserNum, s
 
 	if (!pFnShowInviteUI)
 	{
-		pFnShowInviteUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SHOWINVITEUI));
+		pFnShowInviteUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.ShowInviteUI");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execShowInviteUI_Parms ShowInviteUI_Parms;
@@ -1792,7 +1860,8 @@ bool UOnlineLobbyInterfaceSteamworks::InviteToLobby(struct FUniqueLobbyId& Lobby
 
 	if (!pFnInviteToLobby)
 	{
-		pFnInviteToLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_INVITETOLOBBY));
+		pFnInviteToLobby = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.InviteToLobby");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execInviteToLobby_Parms InviteToLobby_Parms;
@@ -1826,7 +1895,8 @@ bool UOnlineLobbyInterfaceSteamworks::CanInviteToLobby(struct FUniqueLobbyId& Lo
 
 	if (!pFnCanInviteToLobby)
 	{
-		pFnCanInviteToLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_CANINVITETOLOBBY));
+		pFnCanInviteToLobby = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.CanInviteToLobby");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execCanInviteToLobby_Parms CanInviteToLobby_Parms;
@@ -1851,7 +1921,8 @@ bool UOnlineLobbyInterfaceSteamworks::SetLobbyOwner(struct FUniqueLobbyId& Lobby
 
 	if (!pFnSetLobbyOwner)
 	{
-		pFnSetLobbyOwner = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SETLOBBYOWNER));
+		pFnSetLobbyOwner = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.SetLobbyOwner");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execSetLobbyOwner_Parms SetLobbyOwner_Parms;
@@ -1885,7 +1956,8 @@ bool UOnlineLobbyInterfaceSteamworks::SetLobbyLock(unsigned long bLocked, struct
 
 	if (!pFnSetLobbyLock)
 	{
-		pFnSetLobbyLock = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SETLOBBYLOCK));
+		pFnSetLobbyLock = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.SetLobbyLock");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execSetLobbyLock_Parms SetLobbyLock_Parms;
@@ -1919,7 +1991,8 @@ bool UOnlineLobbyInterfaceSteamworks::SetLobbyType(unsigned char Type, struct FU
 
 	if (!pFnSetLobbyType)
 	{
-		pFnSetLobbyType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SETLOBBYTYPE));
+		pFnSetLobbyType = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.SetLobbyType");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execSetLobbyType_Parms SetLobbyType_Parms;
@@ -1949,7 +2022,8 @@ bool UOnlineLobbyInterfaceSteamworks::SetLobbyServer(struct FString ServerIP, st
 
 	if (!pFnSetLobbyServer)
 	{
-		pFnSetLobbyServer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SETLOBBYSERVER));
+		pFnSetLobbyServer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.SetLobbyServer");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execSetLobbyServer_Parms SetLobbyServer_Parms;
@@ -1984,7 +2058,8 @@ bool UOnlineLobbyInterfaceSteamworks::RemoveLobbySetting(struct FString Key, str
 
 	if (!pFnRemoveLobbySetting)
 	{
-		pFnRemoveLobbySetting = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_REMOVELOBBYSETTING));
+		pFnRemoveLobbySetting = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.RemoveLobbySetting");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execRemoveLobbySetting_Parms RemoveLobbySetting_Parms;
@@ -2019,7 +2094,8 @@ bool UOnlineLobbyInterfaceSteamworks::SetLobbySetting(struct FString Key, struct
 
 	if (!pFnSetLobbySetting)
 	{
-		pFnSetLobbySetting = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SETLOBBYSETTING));
+		pFnSetLobbySetting = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.SetLobbySetting");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execSetLobbySetting_Parms SetLobbySetting_Parms;
@@ -2054,7 +2130,8 @@ bool UOnlineLobbyInterfaceSteamworks::GetLobbyAdmin(struct FUniqueLobbyId& Lobby
 
 	if (!pFnGetLobbyAdmin)
 	{
-		pFnGetLobbyAdmin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_GETLOBBYADMIN));
+		pFnGetLobbyAdmin = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.GetLobbyAdmin");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execGetLobbyAdmin_Parms GetLobbyAdmin_Parms;
@@ -2087,7 +2164,8 @@ void UOnlineLobbyInterfaceSteamworks::OnLobbyKicked(int AdminIndex, struct FActi
 
 	if (!pFnOnLobbyKicked)
 	{
-		pFnOnLobbyKicked = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_ONLOBBYKICKED));
+		pFnOnLobbyKicked = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.OnLobbyKicked");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execOnLobbyKicked_Parms OnLobbyKicked_Parms;
@@ -2110,7 +2188,8 @@ bool UOnlineLobbyInterfaceSteamworks::SendLobbyBinaryData(struct FUniqueLobbyId&
 
 	if (!pFnSendLobbyBinaryData)
 	{
-		pFnSendLobbyBinaryData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SENDLOBBYBINARYDATA));
+		pFnSendLobbyBinaryData = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.SendLobbyBinaryData");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execSendLobbyBinaryData_Parms SendLobbyBinaryData_Parms;
@@ -2145,7 +2224,8 @@ bool UOnlineLobbyInterfaceSteamworks::SetLobbyUserSetting(struct FString Key, st
 
 	if (!pFnSetLobbyUserSetting)
 	{
-		pFnSetLobbyUserSetting = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_SETLOBBYUSERSETTING));
+		pFnSetLobbyUserSetting = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.SetLobbyUserSetting");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execSetLobbyUserSetting_Parms SetLobbyUserSetting_Parms;
@@ -2179,7 +2259,8 @@ bool UOnlineLobbyInterfaceSteamworks::LeaveLobby(struct FUniqueLobbyId& LobbyId)
 
 	if (!pFnLeaveLobby)
 	{
-		pFnLeaveLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_LEAVELOBBY));
+		pFnLeaveLobby = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.LeaveLobby");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execLeaveLobby_Parms LeaveLobby_Parms;
@@ -2212,7 +2293,8 @@ bool UOnlineLobbyInterfaceSteamworks::JoinLobby(int LocalPlayerNum, struct FUniq
 
 	if (!pFnJoinLobby)
 	{
-		pFnJoinLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_JOINLOBBY));
+		pFnJoinLobby = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.JoinLobby");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execJoinLobby_Parms JoinLobby_Parms;
@@ -2245,7 +2327,8 @@ bool UOnlineLobbyInterfaceSteamworks::UpdateFoundLobbies(struct FUniqueLobbyId L
 
 	if (!pFnUpdateFoundLobbies)
 	{
-		pFnUpdateFoundLobbies = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_UPDATEFOUNDLOBBIES));
+		pFnUpdateFoundLobbies = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.UpdateFoundLobbies");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execUpdateFoundLobbies_Parms UpdateFoundLobbies_Parms;
@@ -2281,7 +2364,8 @@ bool UOnlineLobbyInterfaceSteamworks::FindLobbies(int MaxResults, TArray<struct 
 
 	if (!pFnFindLobbies)
 	{
-		pFnFindLobbies = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_FINDLOBBIES));
+		pFnFindLobbies = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.FindLobbies");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execFindLobbies_Parms FindLobbies_Parms;
@@ -2320,7 +2404,8 @@ bool UOnlineLobbyInterfaceSteamworks::CreateLobby(int LocalPlayerNum, int MaxPla
 
 	if (!pFnCreateLobby)
 	{
-		pFnCreateLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINELOBBYINTERFACESTEAMWORKS_CREATELOBBY));
+		pFnCreateLobby = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineLobbyInterfaceSteamworks.CreateLobby");
+
 	}
 
 	UOnlineLobbyInterfaceSteamworks_execCreateLobby_Parms CreateLobby_Parms;
@@ -2354,7 +2439,8 @@ bool UOnlineSubsystemSteamworks::RefreshNetworkErrorToggle()
 
 	if (!pFnRefreshNetworkErrorToggle)
 	{
-		pFnRefreshNetworkErrorToggle = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REFRESHNETWORKERRORTOGGLE));
+		pFnRefreshNetworkErrorToggle = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RefreshNetworkErrorToggle");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRefreshNetworkErrorToggle_Parms RefreshNetworkErrorToggle_Parms;
@@ -2375,7 +2461,8 @@ bool UOnlineSubsystemSteamworks::TriggerScreenshot()
 
 	if (!pFnTriggerScreenshot)
 	{
-		pFnTriggerScreenshot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_TRIGGERSCREENSHOT));
+		pFnTriggerScreenshot = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.TriggerScreenshot");
+
 	}
 
 	UOnlineSubsystemSteamworks_execTriggerScreenshot_Parms TriggerScreenshot_Parms;
@@ -2406,7 +2493,8 @@ void UOnlineSubsystemSteamworks::OnControllerConnectionStatusChanged(int LocalPl
 
 	if (!pFnOnControllerConnectionStatusChanged)
 	{
-		pFnOnControllerConnectionStatusChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONCONTROLLERCONNECTIONSTATUSCHANGED));
+		pFnOnControllerConnectionStatusChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnControllerConnectionStatusChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnControllerConnectionStatusChanged_Parms OnControllerConnectionStatusChanged_Parms;
@@ -2432,7 +2520,8 @@ void UOnlineSubsystemSteamworks::OnControllerInputAPIChanged(int LocalPlayerNum,
 
 	if (!pFnOnControllerInputAPIChanged)
 	{
-		pFnOnControllerInputAPIChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONCONTROLLERINPUTAPICHANGED));
+		pFnOnControllerInputAPIChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnControllerInputAPIChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnControllerInputAPIChanged_Parms OnControllerInputAPIChanged_Parms;
@@ -2458,7 +2547,8 @@ unsigned char UOnlineSubsystemSteamworks::GetControllerPlatform(int LocalPlayerN
 
 	if (!pFnGetControllerPlatform)
 	{
-		pFnGetControllerPlatform = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETCONTROLLERPLATFORM));
+		pFnGetControllerPlatform = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetControllerPlatform");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetControllerPlatform_Parms GetControllerPlatform_Parms;
@@ -2479,7 +2569,7 @@ unsigned char UOnlineSubsystemSteamworks::GetControllerPlatform(int LocalPlayerN
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetControllerID
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            LocalPlayerNum                 (CPF_Parm)
@@ -2490,7 +2580,8 @@ int UOnlineSubsystemSteamworks::GetControllerID(int LocalPlayerNum)
 
 	if (!pFnGetControllerID)
 	{
-		pFnGetControllerID = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETCONTROLLERID));
+		pFnGetControllerID = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetControllerID");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetControllerID_Parms GetControllerID_Parms;
@@ -2516,7 +2607,8 @@ TArray<struct FName> UOnlineSubsystemSteamworks::GetConnectedControllerNames()
 
 	if (!pFnGetConnectedControllerNames)
 	{
-		pFnGetConnectedControllerNames = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETCONNECTEDCONTROLLERNAMES));
+		pFnGetConnectedControllerNames = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetConnectedControllerNames");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetConnectedControllerNames_Parms GetConnectedControllerNames_Parms;
@@ -2541,7 +2633,8 @@ void UOnlineSubsystemSteamworks::OnLocalPlayerRemoved(int LocalPlayerNum)
 
 	if (!pFnOnLocalPlayerRemoved)
 	{
-		pFnOnLocalPlayerRemoved = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLOCALPLAYERREMOVED));
+		pFnOnLocalPlayerRemoved = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnLocalPlayerRemoved");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnLocalPlayerRemoved_Parms OnLocalPlayerRemoved_Parms;
@@ -2565,7 +2658,8 @@ void UOnlineSubsystemSteamworks::UnregisterController(int LocalPlayerNum)
 
 	if (!pFnUnregisterController)
 	{
-		pFnUnregisterController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNREGISTERCONTROLLER));
+		pFnUnregisterController = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnregisterController");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUnregisterController_Parms UnregisterController_Parms;
@@ -2579,7 +2673,7 @@ void UOnlineSubsystemSteamworks::UnregisterController(int LocalPlayerNum)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RegisterController
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            LocalPlayerNum                 (CPF_Parm)
 // int                            ControllerId                   (CPF_OptionalParm | CPF_Parm)
@@ -2590,7 +2684,8 @@ void UOnlineSubsystemSteamworks::RegisterController(int LocalPlayerNum, int Cont
 
 	if (!pFnRegisterController)
 	{
-		pFnRegisterController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REGISTERCONTROLLER));
+		pFnRegisterController = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RegisterController");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRegisterController_Parms RegisterController_Parms;
@@ -2605,7 +2700,7 @@ void UOnlineSubsystemSteamworks::RegisterController(int LocalPlayerNum, int Cont
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanRegisterController
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            LocalPlayerNum                 (CPF_Parm)
@@ -2616,7 +2711,8 @@ bool UOnlineSubsystemSteamworks::CanRegisterController(int LocalPlayerNum)
 
 	if (!pFnCanRegisterController)
 	{
-		pFnCanRegisterController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANREGISTERCONTROLLER));
+		pFnCanRegisterController = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanRegisterController");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanRegisterController_Parms CanRegisterController_Parms;
@@ -2643,7 +2739,8 @@ bool UOnlineSubsystemSteamworks::ShowBindings(int ControllerId)
 
 	if (!pFnShowBindings)
 	{
-		pFnShowBindings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWBINDINGS));
+		pFnShowBindings = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowBindings");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowBindings_Parms ShowBindings_Parms;
@@ -2670,7 +2767,8 @@ void UOnlineSubsystemSteamworks::SetControllerLayout(int ControllerId, struct FN
 
 	if (!pFnSetControllerLayout)
 	{
-		pFnSetControllerLayout = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETCONTROLLERLAYOUT));
+		pFnSetControllerLayout = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetControllerLayout");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetControllerLayout_Parms SetControllerLayout_Parms;
@@ -2700,7 +2798,8 @@ void UOnlineSubsystemSteamworks::SetInputAPI(unsigned char TargetAPI)
 
 	if (!pFnSetInputAPI)
 	{
-		pFnSetInputAPI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETINPUTAPI));
+		pFnSetInputAPI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetInputAPI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetInputAPI_Parms SetInputAPI_Parms;
@@ -2724,7 +2823,8 @@ TArray<struct FName> UOnlineSubsystemSteamworks::GetActiveDiscDLC()
 
 	if (!pFnGetActiveDiscDLC)
 	{
-		pFnGetActiveDiscDLC = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETACTIVEDISCDLC));
+		pFnGetActiveDiscDLC = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetActiveDiscDLC");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetActiveDiscDLC_Parms GetActiveDiscDLC_Parms;
@@ -2735,7 +2835,7 @@ TArray<struct FName> UOnlineSubsystemSteamworks::GetActiveDiscDLC()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetOnlineSubscriptionRequirement
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bRequiresOnlineSubscription    (CPF_Parm)
 
@@ -2745,7 +2845,8 @@ void UOnlineSubsystemSteamworks::SetOnlineSubscriptionRequirement(unsigned long 
 
 	if (!pFnSetOnlineSubscriptionRequirement)
 	{
-		pFnSetOnlineSubscriptionRequirement = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETONLINESUBSCRIPTIONREQUIREMENT));
+		pFnSetOnlineSubscriptionRequirement = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetOnlineSubscriptionRequirement");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetOnlineSubscriptionRequirement_Parms SetOnlineSubscriptionRequirement_Parms;
@@ -2767,7 +2868,8 @@ void UOnlineSubsystemSteamworks::HandleGamepadConnectionStatusChanged(class UGam
 
 	if (!pFnHandleGamepadConnectionStatusChanged)
 	{
-		pFnHandleGamepadConnectionStatusChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HANDLEGAMEPADCONNECTIONSTATUSCHANGED));
+		pFnHandleGamepadConnectionStatusChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HandleGamepadConnectionStatusChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHandleGamepadConnectionStatusChanged_Parms HandleGamepadConnectionStatusChanged_Parms;
@@ -2791,7 +2893,8 @@ void UOnlineSubsystemSteamworks::HandleGamepadInputAPIChanged(class UGameViewpor
 
 	if (!pFnHandleGamepadInputAPIChanged)
 	{
-		pFnHandleGamepadInputAPIChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HANDLEGAMEPADINPUTAPICHANGED));
+		pFnHandleGamepadInputAPIChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HandleGamepadInputAPIChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHandleGamepadInputAPIChanged_Parms HandleGamepadInputAPIChanged_Parms;
@@ -2813,7 +2916,8 @@ void UOnlineSubsystemSteamworks::ClearInputAPIChangedDelegate(struct FScriptDele
 
 	if (!pFnClearInputAPIChangedDelegate)
 	{
-		pFnClearInputAPIChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARINPUTAPICHANGEDDELEGATE));
+		pFnClearInputAPIChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearInputAPIChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearInputAPIChangedDelegate_Parms ClearInputAPIChangedDelegate_Parms;
@@ -2833,7 +2937,8 @@ void UOnlineSubsystemSteamworks::AddInputAPIChangedDelegate(struct FScriptDelega
 
 	if (!pFnAddInputAPIChangedDelegate)
 	{
-		pFnAddInputAPIChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDINPUTAPICHANGEDDELEGATE));
+		pFnAddInputAPIChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddInputAPIChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddInputAPIChangedDelegate_Parms AddInputAPIChangedDelegate_Parms;
@@ -2853,7 +2958,8 @@ void UOnlineSubsystemSteamworks::ClearUnregisteredControllerDelegate(struct FScr
 
 	if (!pFnClearUnregisteredControllerDelegate)
 	{
-		pFnClearUnregisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARUNREGISTEREDCONTROLLERDELEGATE));
+		pFnClearUnregisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearUnregisteredControllerDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearUnregisteredControllerDelegate_Parms ClearUnregisteredControllerDelegate_Parms;
@@ -2873,7 +2979,8 @@ void UOnlineSubsystemSteamworks::ClearRegisteredControllerDelegate(struct FScrip
 
 	if (!pFnClearRegisteredControllerDelegate)
 	{
-		pFnClearRegisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREGISTEREDCONTROLLERDELEGATE));
+		pFnClearRegisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearRegisteredControllerDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearRegisteredControllerDelegate_Parms ClearRegisteredControllerDelegate_Parms;
@@ -2893,7 +3000,8 @@ void UOnlineSubsystemSteamworks::AddUnregisteredControllerDelegate(struct FScrip
 
 	if (!pFnAddUnregisteredControllerDelegate)
 	{
-		pFnAddUnregisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDUNREGISTEREDCONTROLLERDELEGATE));
+		pFnAddUnregisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUnregisteredControllerDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddUnregisteredControllerDelegate_Parms AddUnregisteredControllerDelegate_Parms;
@@ -2903,7 +3011,7 @@ void UOnlineSubsystemSteamworks::AddUnregisteredControllerDelegate(struct FScrip
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddRegisteredControllerDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         RegisteredControllerDelegate   (CPF_Parm | CPF_NeedCtorLink)
 
@@ -2913,7 +3021,8 @@ void UOnlineSubsystemSteamworks::AddRegisteredControllerDelegate(struct FScriptD
 
 	if (!pFnAddRegisteredControllerDelegate)
 	{
-		pFnAddRegisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREGISTEREDCONTROLLERDELEGATE));
+		pFnAddRegisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddRegisteredControllerDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddRegisteredControllerDelegate_Parms AddRegisteredControllerDelegate_Parms;
@@ -2933,7 +3042,8 @@ void UOnlineSubsystemSteamworks::OnInputAPIChanged(unsigned char TargetAPI)
 
 	if (!pFnOnInputAPIChanged)
 	{
-		pFnOnInputAPIChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONINPUTAPICHANGED));
+		pFnOnInputAPIChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnInputAPIChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnInputAPIChanged_Parms OnInputAPIChanged_Parms;
@@ -2953,7 +3063,8 @@ void UOnlineSubsystemSteamworks::OnUnregisteredController(int LocalPlayerNum)
 
 	if (!pFnOnUnregisteredController)
 	{
-		pFnOnUnregisteredController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONUNREGISTEREDCONTROLLER));
+		pFnOnUnregisteredController = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUnregisteredController");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnUnregisteredController_Parms OnUnregisteredController_Parms;
@@ -2974,7 +3085,8 @@ void UOnlineSubsystemSteamworks::OnRegisteredController(int LocalPlayerNum, int 
 
 	if (!pFnOnRegisteredController)
 	{
-		pFnOnRegisteredController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREGISTEREDCONTROLLER));
+		pFnOnRegisteredController = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnRegisteredController");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnRegisteredController_Parms OnRegisteredController_Parms;
@@ -2997,7 +3109,8 @@ bool UOnlineSubsystemSteamworks::HasIncomingFriendInvite(unsigned char LocalUser
 
 	if (!pFnHasIncomingFriendInvite)
 	{
-		pFnHasIncomingFriendInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HASINCOMINGFRIENDINVITE));
+		pFnHasIncomingFriendInvite = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HasIncomingFriendInvite");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHasIncomingFriendInvite_Parms HasIncomingFriendInvite_Parms;
@@ -3020,7 +3133,8 @@ bool UOnlineSubsystemSteamworks::HasFriendsFunctionality()
 
 	if (!pFnHasFriendsFunctionality)
 	{
-		pFnHasFriendsFunctionality = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HASFRIENDSFUNCTIONALITY));
+		pFnHasFriendsFunctionality = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HasFriendsFunctionality");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHasFriendsFunctionality_Parms HasFriendsFunctionality_Parms;
@@ -3042,7 +3156,8 @@ bool UOnlineSubsystemSteamworks::CanSendOfflinePartyInvite(struct FUniqueNetId P
 
 	if (!pFnCanSendOfflinePartyInvite)
 	{
-		pFnCanSendOfflinePartyInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANSENDOFFLINEPARTYINVITE));
+		pFnCanSendOfflinePartyInvite = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanSendOfflinePartyInvite");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanSendOfflinePartyInvite_Parms CanSendOfflinePartyInvite_Parms;
@@ -3054,7 +3169,7 @@ bool UOnlineSubsystemSteamworks::CanSendOfflinePartyInvite(struct FUniqueNetId P
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CheckParentalControlInfo
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long                  bShowUi                        (CPF_Parm)
@@ -3065,7 +3180,8 @@ bool UOnlineSubsystemSteamworks::CheckParentalControlInfo(unsigned long bShowUi)
 
 	if (!pFnCheckParentalControlInfo)
 	{
-		pFnCheckParentalControlInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CHECKPARENTALCONTROLINFO));
+		pFnCheckParentalControlInfo = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CheckParentalControlInfo");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCheckParentalControlInfo_Parms CheckParentalControlInfo_Parms;
@@ -3089,7 +3205,8 @@ bool UOnlineSubsystemSteamworks::RecordPlayersRecentlyMetKeys(unsigned char Loca
 
 	if (!pFnRecordPlayersRecentlyMetKeys)
 	{
-		pFnRecordPlayersRecentlyMetKeys = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_RECORDPLAYERSRECENTLYMETKEYS));
+		pFnRecordPlayersRecentlyMetKeys = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RecordPlayersRecentlyMetKeys");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRecordPlayersRecentlyMetKeys_Parms RecordPlayersRecentlyMetKeys_Parms;
@@ -3113,7 +3230,8 @@ bool UOnlineSubsystemSteamworks::GetPlayHistoryRegistrationKey(TArray<unsigned c
 
 	if (!pFnGetPlayHistoryRegistrationKey)
 	{
-		pFnGetPlayHistoryRegistrationKey = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETPLAYHISTORYREGISTRATIONKEY));
+		pFnGetPlayHistoryRegistrationKey = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayHistoryRegistrationKey");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetPlayHistoryRegistrationKey_Parms GetPlayHistoryRegistrationKey_Parms;
@@ -3135,7 +3253,8 @@ bool UOnlineSubsystemSteamworks::IsOriginalAppOwner()
 
 	if (!pFnIsOriginalAppOwner)
 	{
-		pFnIsOriginalAppOwner = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISORIGINALAPPOWNER));
+		pFnIsOriginalAppOwner = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsOriginalAppOwner");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsOriginalAppOwner_Parms IsOriginalAppOwner_Parms;
@@ -3166,7 +3285,8 @@ void UOnlineSubsystemSteamworks::UpdateSessionStatusFromPlayers(int CurrentPlaye
 
 	if (!pFnUpdateSessionStatusFromPlayers)
 	{
-		pFnUpdateSessionStatusFromPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UPDATESESSIONSTATUSFROMPLAYERS));
+		pFnUpdateSessionStatusFromPlayers = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UpdateSessionStatusFromPlayers");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUpdateSessionStatusFromPlayers_Parms UpdateSessionStatusFromPlayers_Parms;
@@ -3189,7 +3309,8 @@ bool UOnlineSubsystemSteamworks::IsAchievementUnlocked(unsigned char LocalUserNu
 
 	if (!pFnIsAchievementUnlocked)
 	{
-		pFnIsAchievementUnlocked = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISACHIEVEMENTUNLOCKED));
+		pFnIsAchievementUnlocked = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsAchievementUnlocked");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsAchievementUnlocked_Parms IsAchievementUnlocked_Parms;
@@ -3213,7 +3334,8 @@ void UOnlineSubsystemSteamworks::UpdateGameProgress(unsigned char LocalPlayerNum
 
 	if (!pFnUpdateGameProgress)
 	{
-		pFnUpdateGameProgress = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UPDATEGAMEPROGRESS));
+		pFnUpdateGameProgress = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UpdateGameProgress");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUpdateGameProgress_Parms UpdateGameProgress_Parms;
@@ -3234,7 +3356,8 @@ void UOnlineSubsystemSteamworks::FinishOnlineGameSession(struct FString ServerId
 
 	if (!pFnFinishOnlineGameSession)
 	{
-		pFnFinishOnlineGameSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_FINISHONLINEGAMESESSION));
+		pFnFinishOnlineGameSession = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.FinishOnlineGameSession");
+
 	}
 
 	UOnlineSubsystemSteamworks_execFinishOnlineGameSession_Parms FinishOnlineGameSession_Parms;
@@ -3254,7 +3377,8 @@ void UOnlineSubsystemSteamworks::StartOnlineGameSession(struct FString ServerId)
 
 	if (!pFnStartOnlineGameSession)
 	{
-		pFnStartOnlineGameSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_STARTONLINEGAMESESSION));
+		pFnStartOnlineGameSession = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.StartOnlineGameSession");
+
 	}
 
 	UOnlineSubsystemSteamworks_execStartOnlineGameSession_Parms StartOnlineGameSession_Parms;
@@ -3274,7 +3398,8 @@ void UOnlineSubsystemSteamworks::ClearSystemUserControllerPairingChangedDelegate
 
 	if (!pFnClearSystemUserControllerPairingChangedDelegate)
 	{
-		pFnClearSystemUserControllerPairingChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARSYSTEMUSERCONTROLLERPAIRINGCHANGEDDELEGATE));
+		pFnClearSystemUserControllerPairingChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearSystemUserControllerPairingChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearSystemUserControllerPairingChangedDelegate_Parms ClearSystemUserControllerPairingChangedDelegate_Parms;
@@ -3294,7 +3419,8 @@ void UOnlineSubsystemSteamworks::AddSystemUserControllerPairingChangedDelegate(s
 
 	if (!pFnAddSystemUserControllerPairingChangedDelegate)
 	{
-		pFnAddSystemUserControllerPairingChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDSYSTEMUSERCONTROLLERPAIRINGCHANGEDDELEGATE));
+		pFnAddSystemUserControllerPairingChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddSystemUserControllerPairingChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddSystemUserControllerPairingChangedDelegate_Parms AddSystemUserControllerPairingChangedDelegate_Parms;
@@ -3315,7 +3441,8 @@ void UOnlineSubsystemSteamworks::OnSystemUserControllerPairingChanged(int NewLoc
 
 	if (!pFnOnSystemUserControllerPairingChanged)
 	{
-		pFnOnSystemUserControllerPairingChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONSYSTEMUSERCONTROLLERPAIRINGCHANGED));
+		pFnOnSystemUserControllerPairingChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnSystemUserControllerPairingChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnSystemUserControllerPairingChanged_Parms OnSystemUserControllerPairingChanged_Parms;
@@ -3326,7 +3453,7 @@ void UOnlineSubsystemSteamworks::OnSystemUserControllerPairingChanged(int NewLoc
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAccountPickerInput
-// [0x00020000] (FUNC_Public | FUNC_AllFlags)
+// [0x00030000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::ClearAccountPickerInput()
@@ -3335,7 +3462,8 @@ void UOnlineSubsystemSteamworks::ClearAccountPickerInput()
 
 	if (!pFnClearAccountPickerInput)
 	{
-		pFnClearAccountPickerInput = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARACCOUNTPICKERINPUT));
+		pFnClearAccountPickerInput = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAccountPickerInput");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearAccountPickerInput_Parms ClearAccountPickerInput_Parms;
@@ -3353,7 +3481,8 @@ void UOnlineSubsystemSteamworks::LookForAccountPickerInput()
 
 	if (!pFnLookForAccountPickerInput)
 	{
-		pFnLookForAccountPickerInput = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_LOOKFORACCOUNTPICKERINPUT));
+		pFnLookForAccountPickerInput = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.LookForAccountPickerInput");
+
 	}
 
 	UOnlineSubsystemSteamworks_execLookForAccountPickerInput_Parms LookForAccountPickerInput_Parms;
@@ -3362,7 +3491,7 @@ void UOnlineSubsystemSteamworks::LookForAccountPickerInput()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddPlayerToSession
-// [0x00020000] (FUNC_Public | FUNC_AllFlags)
+// [0x00030000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ControllerId                   (CPF_Parm)
 
@@ -3372,7 +3501,8 @@ void UOnlineSubsystemSteamworks::AddPlayerToSession(unsigned char ControllerId)
 
 	if (!pFnAddPlayerToSession)
 	{
-		pFnAddPlayerToSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDPLAYERTOSESSION));
+		pFnAddPlayerToSession = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddPlayerToSession");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddPlayerToSession_Parms AddPlayerToSession_Parms;
@@ -3391,7 +3521,8 @@ void UOnlineSubsystemSteamworks::ClearPrimaryPlayer()
 
 	if (!pFnClearPrimaryPlayer)
 	{
-		pFnClearPrimaryPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARPRIMARYPLAYER));
+		pFnClearPrimaryPlayer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearPrimaryPlayer");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearPrimaryPlayer_Parms ClearPrimaryPlayer_Parms;
@@ -3410,7 +3541,8 @@ void UOnlineSubsystemSteamworks::RemoveUserAssociation(unsigned char ControllerI
 
 	if (!pFnRemoveUserAssociation)
 	{
-		pFnRemoveUserAssociation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REMOVEUSERASSOCIATION));
+		pFnRemoveUserAssociation = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RemoveUserAssociation");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRemoveUserAssociation_Parms RemoveUserAssociation_Parms;
@@ -3429,7 +3561,8 @@ void UOnlineSubsystemSteamworks::MapEnd()
 
 	if (!pFnMapEnd)
 	{
-		pFnMapEnd = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_MAPEND));
+		pFnMapEnd = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.MapEnd");
+
 	}
 
 	UOnlineSubsystemSteamworks_execMapEnd_Parms MapEnd_Parms;
@@ -3447,7 +3580,8 @@ void UOnlineSubsystemSteamworks::MapStart()
 
 	if (!pFnMapStart)
 	{
-		pFnMapStart = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_MAPSTART));
+		pFnMapStart = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.MapStart");
+
 	}
 
 	UOnlineSubsystemSteamworks_execMapStart_Parms MapStart_Parms;
@@ -3465,7 +3599,8 @@ void UOnlineSubsystemSteamworks::OnlineMatchEnd()
 
 	if (!pFnOnlineMatchEnd)
 	{
-		pFnOnlineMatchEnd = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLINEMATCHEND));
+		pFnOnlineMatchEnd = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnlineMatchEnd");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnlineMatchEnd_Parms OnlineMatchEnd_Parms;
@@ -3484,7 +3619,8 @@ void UOnlineSubsystemSteamworks::OnlineMatchStart(struct FString MapName)
 
 	if (!pFnOnlineMatchStart)
 	{
-		pFnOnlineMatchStart = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLINEMATCHSTART));
+		pFnOnlineMatchStart = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnlineMatchStart");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnlineMatchStart_Parms OnlineMatchStart_Parms;
@@ -3504,7 +3640,8 @@ void UOnlineSubsystemSteamworks::SetSessionDifficultyLevel(int DifficultyLevel)
 
 	if (!pFnSetSessionDifficultyLevel)
 	{
-		pFnSetSessionDifficultyLevel = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETSESSIONDIFFICULTYLEVEL));
+		pFnSetSessionDifficultyLevel = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetSessionDifficultyLevel");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetSessionDifficultyLevel_Parms SetSessionDifficultyLevel_Parms;
@@ -3524,7 +3661,8 @@ void UOnlineSubsystemSteamworks::SetSessionGameplayModeName(struct FName Gamepla
 
 	if (!pFnSetSessionGameplayModeName)
 	{
-		pFnSetSessionGameplayModeName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETSESSIONGAMEPLAYMODENAME));
+		pFnSetSessionGameplayModeName = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetSessionGameplayModeName");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetSessionGameplayModeName_Parms SetSessionGameplayModeName_Parms;
@@ -3544,7 +3682,8 @@ void UOnlineSubsystemSteamworks::SetSessionGameplayMode(int GameplayMode)
 
 	if (!pFnSetSessionGameplayMode)
 	{
-		pFnSetSessionGameplayMode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETSESSIONGAMEPLAYMODE));
+		pFnSetSessionGameplayMode = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetSessionGameplayMode");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetSessionGameplayMode_Parms SetSessionGameplayMode_Parms;
@@ -3565,7 +3704,8 @@ TArray<bool> UOnlineSubsystemSteamworks::GetSyncedAchievements(unsigned char Loc
 
 	if (!pFnGetSyncedAchievements)
 	{
-		pFnGetSyncedAchievements = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETSYNCEDACHIEVEMENTS));
+		pFnGetSyncedAchievements = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetSyncedAchievements");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetSyncedAchievements_Parms GetSyncedAchievements_Parms;
@@ -3587,7 +3727,8 @@ void UOnlineSubsystemSteamworks::SetPlayedWith(struct FUniqueNetId PlayerNetId)
 
 	if (!pFnSetPlayedWith)
 	{
-		pFnSetPlayedWith = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETPLAYEDWITH));
+		pFnSetPlayedWith = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetPlayedWith");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetPlayedWith_Parms SetPlayedWith_Parms;
@@ -3606,7 +3747,7 @@ void UOnlineSubsystemSteamworks::SetPlayedWith(struct FUniqueNetId PlayerNetId)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HandleBootMessage
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -3616,7 +3757,8 @@ bool UOnlineSubsystemSteamworks::HandleBootMessage()
 
 	if (!pFnHandleBootMessage)
 	{
-		pFnHandleBootMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HANDLEBOOTMESSAGE));
+		pFnHandleBootMessage = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HandleBootMessage");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHandleBootMessage_Parms HandleBootMessage_Parms;
@@ -3641,7 +3783,8 @@ void UOnlineSubsystemSteamworks::ClearErrorDialogClosedDelegate(struct FScriptDe
 
 	if (!pFnClearErrorDialogClosedDelegate)
 	{
-		pFnClearErrorDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARERRORDIALOGCLOSEDDELEGATE));
+		pFnClearErrorDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearErrorDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearErrorDialogClosedDelegate_Parms ClearErrorDialogClosedDelegate_Parms;
@@ -3661,7 +3804,8 @@ void UOnlineSubsystemSteamworks::AddErrorDialogClosedDelegate(struct FScriptDele
 
 	if (!pFnAddErrorDialogClosedDelegate)
 	{
-		pFnAddErrorDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDERRORDIALOGCLOSEDDELEGATE));
+		pFnAddErrorDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddErrorDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddErrorDialogClosedDelegate_Parms AddErrorDialogClosedDelegate_Parms;
@@ -3681,7 +3825,8 @@ void UOnlineSubsystemSteamworks::OnErrorDialogClosed(int LocalUserNum)
 
 	if (!pFnOnErrorDialogClosed)
 	{
-		pFnOnErrorDialogClosed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONERRORDIALOGCLOSED));
+		pFnOnErrorDialogClosed = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnErrorDialogClosed");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnErrorDialogClosed_Parms OnErrorDialogClosed_Parms;
@@ -3701,7 +3846,8 @@ void UOnlineSubsystemSteamworks::ClearCloseKickPlayerDialogDelegate(struct FScri
 
 	if (!pFnClearCloseKickPlayerDialogDelegate)
 	{
-		pFnClearCloseKickPlayerDialogDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARCLOSEKICKPLAYERDIALOGDELEGATE));
+		pFnClearCloseKickPlayerDialogDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearCloseKickPlayerDialogDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearCloseKickPlayerDialogDelegate_Parms ClearCloseKickPlayerDialogDelegate_Parms;
@@ -3721,7 +3867,8 @@ void UOnlineSubsystemSteamworks::AddCloseKickPlayerDialogDelegate(struct FScript
 
 	if (!pFnAddCloseKickPlayerDialogDelegate)
 	{
-		pFnAddCloseKickPlayerDialogDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDCLOSEKICKPLAYERDIALOGDELEGATE));
+		pFnAddCloseKickPlayerDialogDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddCloseKickPlayerDialogDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddCloseKickPlayerDialogDelegate_Parms AddCloseKickPlayerDialogDelegate_Parms;
@@ -3740,7 +3887,8 @@ void UOnlineSubsystemSteamworks::OnCloseKickPlayerDialog()
 
 	if (!pFnOnCloseKickPlayerDialog)
 	{
-		pFnOnCloseKickPlayerDialog = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONCLOSEKICKPLAYERDIALOG));
+		pFnOnCloseKickPlayerDialog = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnCloseKickPlayerDialog");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnCloseKickPlayerDialog_Parms OnCloseKickPlayerDialog_Parms;
@@ -3759,7 +3907,8 @@ void UOnlineSubsystemSteamworks::ClearCommerceDialogClosedDelegate(struct FScrip
 
 	if (!pFnClearCommerceDialogClosedDelegate)
 	{
-		pFnClearCommerceDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARCOMMERCEDIALOGCLOSEDDELEGATE));
+		pFnClearCommerceDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearCommerceDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearCommerceDialogClosedDelegate_Parms ClearCommerceDialogClosedDelegate_Parms;
@@ -3769,7 +3918,7 @@ void UOnlineSubsystemSteamworks::ClearCommerceDialogClosedDelegate(struct FScrip
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddCommerceDialogClosedDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         InDelegate                     (CPF_Parm | CPF_NeedCtorLink)
 
@@ -3779,7 +3928,8 @@ void UOnlineSubsystemSteamworks::AddCommerceDialogClosedDelegate(struct FScriptD
 
 	if (!pFnAddCommerceDialogClosedDelegate)
 	{
-		pFnAddCommerceDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDCOMMERCEDIALOGCLOSEDDELEGATE));
+		pFnAddCommerceDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddCommerceDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddCommerceDialogClosedDelegate_Parms AddCommerceDialogClosedDelegate_Parms;
@@ -3798,7 +3948,8 @@ void UOnlineSubsystemSteamworks::OnCommerceDialogClosed()
 
 	if (!pFnOnCommerceDialogClosed)
 	{
-		pFnOnCommerceDialogClosed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONCOMMERCEDIALOGCLOSED));
+		pFnOnCommerceDialogClosed = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnCommerceDialogClosed");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnCommerceDialogClosed_Parms OnCommerceDialogClosed_Parms;
@@ -3807,7 +3958,7 @@ void UOnlineSubsystemSteamworks::OnCommerceDialogClosed()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WordFilterSanitizeString
-// [0x00024001] (FUNC_Final | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034001] (FUNC_Final | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Comment                        (CPF_Const | CPF_Parm | CPF_NeedCtorLink)
@@ -3820,7 +3971,8 @@ bool UOnlineSubsystemSteamworks::WordFilterSanitizeString(struct FString Comment
 
 	if (!pFnWordFilterSanitizeString)
 	{
-		pFnWordFilterSanitizeString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WORDFILTERSANITIZESTRING));
+		pFnWordFilterSanitizeString = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WordFilterSanitizeString");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWordFilterSanitizeString_Parms WordFilterSanitizeString_Parms;
@@ -3844,7 +3996,8 @@ void UOnlineSubsystemSteamworks::RemoveCanPlayOnlineChangedDelegate(struct FScri
 
 	if (!pFnRemoveCanPlayOnlineChangedDelegate)
 	{
-		pFnRemoveCanPlayOnlineChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REMOVECANPLAYONLINECHANGEDDELEGATE));
+		pFnRemoveCanPlayOnlineChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RemoveCanPlayOnlineChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRemoveCanPlayOnlineChangedDelegate_Parms RemoveCanPlayOnlineChangedDelegate_Parms;
@@ -3854,7 +4007,7 @@ void UOnlineSubsystemSteamworks::RemoveCanPlayOnlineChangedDelegate(struct FScri
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddCanPlayOnlineChangedDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -3864,7 +4017,8 @@ void UOnlineSubsystemSteamworks::AddCanPlayOnlineChangedDelegate(struct FScriptD
 
 	if (!pFnAddCanPlayOnlineChangedDelegate)
 	{
-		pFnAddCanPlayOnlineChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDCANPLAYONLINECHANGEDDELEGATE));
+		pFnAddCanPlayOnlineChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddCanPlayOnlineChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddCanPlayOnlineChangedDelegate_Parms AddCanPlayOnlineChangedDelegate_Parms;
@@ -3887,7 +4041,8 @@ bool UOnlineSubsystemSteamworks::RecordPlayersRecentlyMet(unsigned char LocalUse
 
 	if (!pFnRecordPlayersRecentlyMet)
 	{
-		pFnRecordPlayersRecentlyMet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_RECORDPLAYERSRECENTLYMET));
+		pFnRecordPlayersRecentlyMet = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RecordPlayersRecentlyMet");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRecordPlayersRecentlyMet_Parms RecordPlayersRecentlyMet_Parms;
@@ -3911,7 +4066,8 @@ void UOnlineSubsystemSteamworks::ClearSaveDataNoSpaceDialogCompleteDelegate(stru
 
 	if (!pFnClearSaveDataNoSpaceDialogCompleteDelegate)
 	{
-		pFnClearSaveDataNoSpaceDialogCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARSAVEDATANOSPACEDIALOGCOMPLETEDELEGATE));
+		pFnClearSaveDataNoSpaceDialogCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearSaveDataNoSpaceDialogCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearSaveDataNoSpaceDialogCompleteDelegate_Parms ClearSaveDataNoSpaceDialogCompleteDelegate_Parms;
@@ -3921,7 +4077,7 @@ void UOnlineSubsystemSteamworks::ClearSaveDataNoSpaceDialogCompleteDelegate(stru
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddSaveDataNoSpaceDialogCompleteDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         DeviceDelegate                 (CPF_Parm | CPF_NeedCtorLink)
 
@@ -3931,7 +4087,8 @@ void UOnlineSubsystemSteamworks::AddSaveDataNoSpaceDialogCompleteDelegate(struct
 
 	if (!pFnAddSaveDataNoSpaceDialogCompleteDelegate)
 	{
-		pFnAddSaveDataNoSpaceDialogCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDSAVEDATANOSPACEDIALOGCOMPLETEDELEGATE));
+		pFnAddSaveDataNoSpaceDialogCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddSaveDataNoSpaceDialogCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddSaveDataNoSpaceDialogCompleteDelegate_Parms AddSaveDataNoSpaceDialogCompleteDelegate_Parms;
@@ -3951,7 +4108,8 @@ void UOnlineSubsystemSteamworks::OnSaveDataNoSpaceDialogComplete(unsigned long b
 
 	if (!pFnOnSaveDataNoSpaceDialogComplete)
 	{
-		pFnOnSaveDataNoSpaceDialogComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONSAVEDATANOSPACEDIALOGCOMPLETE));
+		pFnOnSaveDataNoSpaceDialogComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnSaveDataNoSpaceDialogComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnSaveDataNoSpaceDialogComplete_Parms OnSaveDataNoSpaceDialogComplete_Parms;
@@ -3971,7 +4129,8 @@ void UOnlineSubsystemSteamworks::ClearUnlockedDLCChangeDelegate(struct FScriptDe
 
 	if (!pFnClearUnlockedDLCChangeDelegate)
 	{
-		pFnClearUnlockedDLCChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARUNLOCKEDDLCCHANGEDELEGATE));
+		pFnClearUnlockedDLCChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearUnlockedDLCChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearUnlockedDLCChangeDelegate_Parms ClearUnlockedDLCChangeDelegate_Parms;
@@ -3981,7 +4140,7 @@ void UOnlineSubsystemSteamworks::ClearUnlockedDLCChangeDelegate(struct FScriptDe
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUnlockedDLCChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         InDelegate                     (CPF_Parm | CPF_NeedCtorLink)
 
@@ -3991,7 +4150,8 @@ void UOnlineSubsystemSteamworks::AddUnlockedDLCChangeDelegate(struct FScriptDele
 
 	if (!pFnAddUnlockedDLCChangeDelegate)
 	{
-		pFnAddUnlockedDLCChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDUNLOCKEDDLCCHANGEDELEGATE));
+		pFnAddUnlockedDLCChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUnlockedDLCChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddUnlockedDLCChangeDelegate_Parms AddUnlockedDLCChangeDelegate_Parms;
@@ -4001,7 +4161,7 @@ void UOnlineSubsystemSteamworks::AddUnlockedDLCChangeDelegate(struct FScriptDele
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetUnlockedDLC
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // TArray<struct FName>           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -4011,7 +4171,8 @@ TArray<struct FName> UOnlineSubsystemSteamworks::GetUnlockedDLC()
 
 	if (!pFnGetUnlockedDLC)
 	{
-		pFnGetUnlockedDLC = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETUNLOCKEDDLC));
+		pFnGetUnlockedDLC = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetUnlockedDLC");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetUnlockedDLC_Parms GetUnlockedDLC_Parms;
@@ -4022,7 +4183,7 @@ TArray<struct FName> UOnlineSubsystemSteamworks::GetUnlockedDLC()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUnlockedDLCChange
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::OnUnlockedDLCChange()
@@ -4031,7 +4192,8 @@ void UOnlineSubsystemSteamworks::OnUnlockedDLCChange()
 
 	if (!pFnOnUnlockedDLCChange)
 	{
-		pFnOnUnlockedDLCChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONUNLOCKEDDLCCHANGE));
+		pFnOnUnlockedDLCChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUnlockedDLCChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnUnlockedDLCChange_Parms OnUnlockedDLCChange_Parms;
@@ -4050,7 +4212,8 @@ bool UOnlineSubsystemSteamworks::GetOverlayEnabled()
 
 	if (!pFnGetOverlayEnabled)
 	{
-		pFnGetOverlayEnabled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETOVERLAYENABLED));
+		pFnGetOverlayEnabled = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetOverlayEnabled");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetOverlayEnabled_Parms GetOverlayEnabled_Parms;
@@ -4076,7 +4239,8 @@ int UOnlineSubsystemSteamworks::GetDLCPurchaseTime(struct FName AppName)
 
 	if (!pFnGetDLCPurchaseTime)
 	{
-		pFnGetDLCPurchaseTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETDLCPURCHASETIME));
+		pFnGetDLCPurchaseTime = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetDLCPurchaseTime");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetDLCPurchaseTime_Parms GetDLCPurchaseTime_Parms;
@@ -4103,7 +4267,8 @@ void UOnlineSubsystemSteamworks::HandleGetUserInfoComplete(struct FName NewCurre
 
 	if (!pFnHandleGetUserInfoComplete)
 	{
-		pFnHandleGetUserInfoComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HANDLEGETUSERINFOCOMPLETE));
+		pFnHandleGetUserInfoComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HandleGetUserInfoComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHandleGetUserInfoComplete_Parms HandleGetUserInfoComplete_Parms;
@@ -4124,7 +4289,8 @@ void UOnlineSubsystemSteamworks::GetPlayerCountry(unsigned char LocalUserNum)
 
 	if (!pFnGetPlayerCountry)
 	{
-		pFnGetPlayerCountry = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETPLAYERCOUNTRY));
+		pFnGetPlayerCountry = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayerCountry");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetPlayerCountry_Parms GetPlayerCountry_Parms;
@@ -4145,7 +4311,8 @@ struct FString UOnlineSubsystemSteamworks::GetPlayerLanguage(unsigned char Local
 
 	if (!pFnGetPlayerLanguage)
 	{
-		pFnGetPlayerLanguage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETPLAYERLANGUAGE));
+		pFnGetPlayerLanguage = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayerLanguage");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetPlayerLanguage_Parms GetPlayerLanguage_Parms;
@@ -4172,7 +4339,8 @@ void UOnlineSubsystemSteamworks::ClearReadPlayerCountryDelegate(unsigned char Lo
 
 	if (!pFnClearReadPlayerCountryDelegate)
 	{
-		pFnClearReadPlayerCountryDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADPLAYERCOUNTRYDELEGATE));
+		pFnClearReadPlayerCountryDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadPlayerCountryDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadPlayerCountryDelegate_Parms ClearReadPlayerCountryDelegate_Parms;
@@ -4194,7 +4362,8 @@ void UOnlineSubsystemSteamworks::AddReadPlayerCountryDelegate(unsigned char Loca
 
 	if (!pFnAddReadPlayerCountryDelegate)
 	{
-		pFnAddReadPlayerCountryDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADPLAYERCOUNTRYDELEGATE));
+		pFnAddReadPlayerCountryDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadPlayerCountryDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadPlayerCountryDelegate_Parms AddReadPlayerCountryDelegate_Parms;
@@ -4215,7 +4384,8 @@ bool UOnlineSubsystemSteamworks::AnyPlayerChatRestricted()
 
 	if (!pFnAnyPlayerChatRestricted)
 	{
-		pFnAnyPlayerChatRestricted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ANYPLAYERCHATRESTRICTED));
+		pFnAnyPlayerChatRestricted = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AnyPlayerChatRestricted");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAnyPlayerChatRestricted_Parms AnyPlayerChatRestricted_Parms;
@@ -4230,7 +4400,7 @@ bool UOnlineSubsystemSteamworks::AnyPlayerChatRestricted()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.InitializeTrophyAPI
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::InitializeTrophyAPI()
@@ -4239,7 +4409,8 @@ void UOnlineSubsystemSteamworks::InitializeTrophyAPI()
 
 	if (!pFnInitializeTrophyAPI)
 	{
-		pFnInitializeTrophyAPI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_INITIALIZETROPHYAPI));
+		pFnInitializeTrophyAPI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.InitializeTrophyAPI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execInitializeTrophyAPI_Parms InitializeTrophyAPI_Parms;
@@ -4259,7 +4430,8 @@ void UOnlineSubsystemSteamworks::OpenStoreForItems(unsigned char LocalUserNum, T
 
 	if (!pFnOpenStoreForItems)
 	{
-		pFnOpenStoreForItems = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_OPENSTOREFORITEMS));
+		pFnOpenStoreForItems = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OpenStoreForItems");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOpenStoreForItems_Parms OpenStoreForItems_Parms;
@@ -4285,7 +4457,8 @@ void UOnlineSubsystemSteamworks::OpenStoreForDLC(unsigned char LocalUserNum, str
 
 	if (!pFnOpenStoreForDLC)
 	{
-		pFnOpenStoreForDLC = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_OPENSTOREFORDLC));
+		pFnOpenStoreForDLC = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OpenStoreForDLC");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOpenStoreForDLC_Parms OpenStoreForDLC_Parms;
@@ -4312,7 +4485,8 @@ void UOnlineSubsystemSteamworks::OpenStoreForItemsAsync(unsigned char LocalUserN
 
 	if (!pFnOpenStoreForItemsAsync)
 	{
-		pFnOpenStoreForItemsAsync = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_OPENSTOREFORITEMSASYNC));
+		pFnOpenStoreForItemsAsync = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OpenStoreForItemsAsync");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOpenStoreForItemsAsync_Parms OpenStoreForItemsAsync_Parms;
@@ -4333,7 +4507,8 @@ void UOnlineSubsystemSteamworks::OnStorePurchaseCompleteDelegate()
 
 	if (!pFnOnStorePurchaseCompleteDelegate)
 	{
-		pFnOnStorePurchaseCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONSTOREPURCHASECOMPLETEDELEGATE));
+		pFnOnStorePurchaseCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnStorePurchaseCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnStorePurchaseCompleteDelegate_Parms OnStorePurchaseCompleteDelegate_Parms;
@@ -4353,7 +4528,8 @@ void UOnlineSubsystemSteamworks::OpenErrorDialog(unsigned char LocalUserNum, uns
 
 	if (!pFnOpenErrorDialog)
 	{
-		pFnOpenErrorDialog = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_OPENERRORDIALOG));
+		pFnOpenErrorDialog = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OpenErrorDialog");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOpenErrorDialog_Parms OpenErrorDialog_Parms;
@@ -4377,7 +4553,8 @@ void UOnlineSubsystemSteamworks::OpenPS4DisplayMode(unsigned char LocalUserNum, 
 
 	if (!pFnOpenPS4DisplayMode)
 	{
-		pFnOpenPS4DisplayMode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_OPENPS4DISPLAYMODE));
+		pFnOpenPS4DisplayMode = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OpenPS4DisplayMode");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOpenPS4DisplayMode_Parms OpenPS4DisplayMode_Parms;
@@ -4400,7 +4577,8 @@ void UOnlineSubsystemSteamworks::ResetControllerColor(int ControllerId)
 
 	if (!pFnResetControllerColor)
 	{
-		pFnResetControllerColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_RESETCONTROLLERCOLOR));
+		pFnResetControllerColor = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ResetControllerColor");
+
 	}
 
 	UOnlineSubsystemSteamworks_execResetControllerColor_Parms ResetControllerColor_Parms;
@@ -4421,7 +4599,8 @@ void UOnlineSubsystemSteamworks::SetControllerColor(int ControllerId, struct FCo
 
 	if (!pFnSetControllerColor)
 	{
-		pFnSetControllerColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETCONTROLLERCOLOR));
+		pFnSetControllerColor = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetControllerColor");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetControllerColor_Parms SetControllerColor_Parms;
@@ -4445,7 +4624,8 @@ bool UOnlineSubsystemSteamworks::AddInGamePost(struct FString InPostID, unsigned
 
 	if (!pFnAddInGamePost)
 	{
-		pFnAddInGamePost = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDINGAMEPOST));
+		pFnAddInGamePost = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddInGamePost");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddInGamePost_Parms AddInGamePost_Parms;
@@ -4469,7 +4649,8 @@ bool UOnlineSubsystemSteamworks::IsEnabled()
 
 	if (!pFnIsEnabled)
 	{
-		pFnIsEnabled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISENABLED));
+		pFnIsEnabled = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsEnabled");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsEnabled_Parms IsEnabled_Parms;
@@ -4489,7 +4670,7 @@ bool UOnlineSubsystemSteamworks::IsEnabled()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetRichPresence
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FString                 PresenceString                 (CPF_Parm | CPF_NeedCtorLink)
@@ -4501,7 +4682,8 @@ void UOnlineSubsystemSteamworks::SetRichPresence(unsigned char LocalUserNum, str
 
 	if (!pFnSetRichPresence)
 	{
-		pFnSetRichPresence = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETRICHPRESENCE));
+		pFnSetRichPresence = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetRichPresence");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetRichPresence_Parms SetRichPresence_Parms;
@@ -4526,7 +4708,8 @@ void UOnlineSubsystemSteamworks::ClearAllDelegates()
 
 	if (!pFnClearAllDelegates)
 	{
-		pFnClearAllDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARALLDELEGATES));
+		pFnClearAllDelegates = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAllDelegates");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearAllDelegates_Parms ClearAllDelegates_Parms;
@@ -4545,7 +4728,8 @@ void UOnlineSubsystemSteamworks::ClearWriteSharedFileCompleteDelegate(struct FSc
 
 	if (!pFnClearWriteSharedFileCompleteDelegate)
 	{
-		pFnClearWriteSharedFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARWRITESHAREDFILECOMPLETEDELEGATE));
+		pFnClearWriteSharedFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearWriteSharedFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearWriteSharedFileCompleteDelegate_Parms ClearWriteSharedFileCompleteDelegate_Parms;
@@ -4565,7 +4749,8 @@ void UOnlineSubsystemSteamworks::AddWriteSharedFileCompleteDelegate(struct FScri
 
 	if (!pFnAddWriteSharedFileCompleteDelegate)
 	{
-		pFnAddWriteSharedFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDWRITESHAREDFILECOMPLETEDELEGATE));
+		pFnAddWriteSharedFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddWriteSharedFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddWriteSharedFileCompleteDelegate_Parms AddWriteSharedFileCompleteDelegate_Parms;
@@ -4588,7 +4773,8 @@ bool UOnlineSubsystemSteamworks::WriteSharedFile(struct FString UserId, struct F
 
 	if (!pFnWriteSharedFile)
 	{
-		pFnWriteSharedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WRITESHAREDFILE));
+		pFnWriteSharedFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WriteSharedFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWriteSharedFile_Parms WriteSharedFile_Parms;
@@ -4619,7 +4805,8 @@ void UOnlineSubsystemSteamworks::OnWriteSharedFileComplete(unsigned long bWasSuc
 
 	if (!pFnOnWriteSharedFileComplete)
 	{
-		pFnOnWriteSharedFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONWRITESHAREDFILECOMPLETE));
+		pFnOnWriteSharedFileComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnWriteSharedFileComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnWriteSharedFileComplete_Parms OnWriteSharedFileComplete_Parms;
@@ -4642,7 +4829,8 @@ void UOnlineSubsystemSteamworks::ClearReadSharedFileCompleteDelegate(struct FScr
 
 	if (!pFnClearReadSharedFileCompleteDelegate)
 	{
-		pFnClearReadSharedFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADSHAREDFILECOMPLETEDELEGATE));
+		pFnClearReadSharedFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadSharedFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadSharedFileCompleteDelegate_Parms ClearReadSharedFileCompleteDelegate_Parms;
@@ -4662,7 +4850,8 @@ void UOnlineSubsystemSteamworks::AddReadSharedFileCompleteDelegate(struct FScrip
 
 	if (!pFnAddReadSharedFileCompleteDelegate)
 	{
-		pFnAddReadSharedFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADSHAREDFILECOMPLETEDELEGATE));
+		pFnAddReadSharedFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadSharedFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadSharedFileCompleteDelegate_Parms AddReadSharedFileCompleteDelegate_Parms;
@@ -4683,7 +4872,8 @@ bool UOnlineSubsystemSteamworks::ReadSharedFile(struct FString SharedHandle)
 
 	if (!pFnReadSharedFile)
 	{
-		pFnReadSharedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READSHAREDFILE));
+		pFnReadSharedFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadSharedFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadSharedFile_Parms ReadSharedFile_Parms;
@@ -4710,7 +4900,8 @@ void UOnlineSubsystemSteamworks::OnReadSharedFileComplete(unsigned long bWasSucc
 
 	if (!pFnOnReadSharedFileComplete)
 	{
-		pFnOnReadSharedFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADSHAREDFILECOMPLETE));
+		pFnOnReadSharedFileComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadSharedFileComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadSharedFileComplete_Parms OnReadSharedFileComplete_Parms;
@@ -4732,7 +4923,8 @@ bool UOnlineSubsystemSteamworks::ClearSharedFile(struct FString SharedHandle)
 
 	if (!pFnClearSharedFile)
 	{
-		pFnClearSharedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARSHAREDFILE));
+		pFnClearSharedFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearSharedFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearSharedFile_Parms ClearSharedFile_Parms;
@@ -4758,7 +4950,8 @@ bool UOnlineSubsystemSteamworks::ClearSharedFiles()
 
 	if (!pFnClearSharedFiles)
 	{
-		pFnClearSharedFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARSHAREDFILES));
+		pFnClearSharedFiles = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearSharedFiles");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearSharedFiles_Parms ClearSharedFiles_Parms;
@@ -4785,7 +4978,8 @@ bool UOnlineSubsystemSteamworks::GetSharedFileContents(struct FString SharedHand
 
 	if (!pFnGetSharedFileContents)
 	{
-		pFnGetSharedFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETSHAREDFILECONTENTS));
+		pFnGetSharedFileContents = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetSharedFileContents");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetSharedFileContents_Parms GetSharedFileContents_Parms;
@@ -4812,7 +5006,8 @@ void UOnlineSubsystemSteamworks::ClearDeleteUserFileCompleteDelegate(struct FScr
 
 	if (!pFnClearDeleteUserFileCompleteDelegate)
 	{
-		pFnClearDeleteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARDELETEUSERFILECOMPLETEDELEGATE));
+		pFnClearDeleteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearDeleteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearDeleteUserFileCompleteDelegate_Parms ClearDeleteUserFileCompleteDelegate_Parms;
@@ -4832,7 +5027,8 @@ void UOnlineSubsystemSteamworks::AddDeleteUserFileCompleteDelegate(struct FScrip
 
 	if (!pFnAddDeleteUserFileCompleteDelegate)
 	{
-		pFnAddDeleteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDDELETEUSERFILECOMPLETEDELEGATE));
+		pFnAddDeleteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddDeleteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddDeleteUserFileCompleteDelegate_Parms AddDeleteUserFileCompleteDelegate_Parms;
@@ -4856,7 +5052,8 @@ bool UOnlineSubsystemSteamworks::DeleteUserFile(struct FString UserId, struct FS
 
 	if (!pFnDeleteUserFile)
 	{
-		pFnDeleteUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_DELETEUSERFILE));
+		pFnDeleteUserFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.DeleteUserFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execDeleteUserFile_Parms DeleteUserFile_Parms;
@@ -4887,7 +5084,8 @@ void UOnlineSubsystemSteamworks::OnDeleteUserFileComplete(unsigned long bWasSucc
 
 	if (!pFnOnDeleteUserFileComplete)
 	{
-		pFnOnDeleteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONDELETEUSERFILECOMPLETE));
+		pFnOnDeleteUserFileComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnDeleteUserFileComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnDeleteUserFileComplete_Parms OnDeleteUserFileComplete_Parms;
@@ -4909,7 +5107,8 @@ void UOnlineSubsystemSteamworks::ClearWriteUserFileCompleteDelegate(struct FScri
 
 	if (!pFnClearWriteUserFileCompleteDelegate)
 	{
-		pFnClearWriteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARWRITEUSERFILECOMPLETEDELEGATE));
+		pFnClearWriteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearWriteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearWriteUserFileCompleteDelegate_Parms ClearWriteUserFileCompleteDelegate_Parms;
@@ -4929,7 +5128,8 @@ void UOnlineSubsystemSteamworks::AddWriteUserFileCompleteDelegate(struct FScript
 
 	if (!pFnAddWriteUserFileCompleteDelegate)
 	{
-		pFnAddWriteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDWRITEUSERFILECOMPLETEDELEGATE));
+		pFnAddWriteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddWriteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddWriteUserFileCompleteDelegate_Parms AddWriteUserFileCompleteDelegate_Parms;
@@ -4952,7 +5152,8 @@ bool UOnlineSubsystemSteamworks::WriteUserFile(struct FString UserId, struct FSt
 
 	if (!pFnWriteUserFile)
 	{
-		pFnWriteUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WRITEUSERFILE));
+		pFnWriteUserFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WriteUserFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWriteUserFile_Parms WriteUserFile_Parms;
@@ -4982,7 +5183,8 @@ void UOnlineSubsystemSteamworks::OnWriteUserFileComplete(unsigned long bWasSucce
 
 	if (!pFnOnWriteUserFileComplete)
 	{
-		pFnOnWriteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONWRITEUSERFILECOMPLETE));
+		pFnOnWriteUserFileComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnWriteUserFileComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnWriteUserFileComplete_Parms OnWriteUserFileComplete_Parms;
@@ -5004,7 +5206,8 @@ void UOnlineSubsystemSteamworks::ClearReadUserFileCompleteDelegate(struct FScrip
 
 	if (!pFnClearReadUserFileCompleteDelegate)
 	{
-		pFnClearReadUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADUSERFILECOMPLETEDELEGATE));
+		pFnClearReadUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadUserFileCompleteDelegate_Parms ClearReadUserFileCompleteDelegate_Parms;
@@ -5024,7 +5227,8 @@ void UOnlineSubsystemSteamworks::AddReadUserFileCompleteDelegate(struct FScriptD
 
 	if (!pFnAddReadUserFileCompleteDelegate)
 	{
-		pFnAddReadUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADUSERFILECOMPLETEDELEGATE));
+		pFnAddReadUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadUserFileCompleteDelegate_Parms AddReadUserFileCompleteDelegate_Parms;
@@ -5046,7 +5250,8 @@ bool UOnlineSubsystemSteamworks::ReadUserFile(struct FString UserId, struct FStr
 
 	if (!pFnReadUserFile)
 	{
-		pFnReadUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READUSERFILE));
+		pFnReadUserFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadUserFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadUserFile_Parms ReadUserFile_Parms;
@@ -5075,7 +5280,8 @@ void UOnlineSubsystemSteamworks::OnReadUserFileComplete(unsigned long bWasSucces
 
 	if (!pFnOnReadUserFileComplete)
 	{
-		pFnOnReadUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADUSERFILECOMPLETE));
+		pFnOnReadUserFileComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadUserFileComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadUserFileComplete_Parms OnReadUserFileComplete_Parms;
@@ -5098,7 +5304,8 @@ void UOnlineSubsystemSteamworks::GetUserFileList(struct FString UserId, TArray<s
 
 	if (!pFnGetUserFileList)
 	{
-		pFnGetUserFileList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETUSERFILELIST));
+		pFnGetUserFileList = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetUserFileList");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetUserFileList_Parms GetUserFileList_Parms;
@@ -5123,7 +5330,8 @@ void UOnlineSubsystemSteamworks::ClearEnumerateUserFileCompleteDelegate(struct F
 
 	if (!pFnClearEnumerateUserFileCompleteDelegate)
 	{
-		pFnClearEnumerateUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARENUMERATEUSERFILECOMPLETEDELEGATE));
+		pFnClearEnumerateUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearEnumerateUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearEnumerateUserFileCompleteDelegate_Parms ClearEnumerateUserFileCompleteDelegate_Parms;
@@ -5143,7 +5351,8 @@ void UOnlineSubsystemSteamworks::AddEnumerateUserFileCompleteDelegate(struct FSc
 
 	if (!pFnAddEnumerateUserFileCompleteDelegate)
 	{
-		pFnAddEnumerateUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDENUMERATEUSERFILECOMPLETEDELEGATE));
+		pFnAddEnumerateUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddEnumerateUserFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddEnumerateUserFileCompleteDelegate_Parms AddEnumerateUserFileCompleteDelegate_Parms;
@@ -5163,7 +5372,8 @@ void UOnlineSubsystemSteamworks::EnumerateUserFiles(struct FString UserId)
 
 	if (!pFnEnumerateUserFiles)
 	{
-		pFnEnumerateUserFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ENUMERATEUSERFILES));
+		pFnEnumerateUserFiles = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.EnumerateUserFiles");
+
 	}
 
 	UOnlineSubsystemSteamworks_execEnumerateUserFiles_Parms EnumerateUserFiles_Parms;
@@ -5188,7 +5398,8 @@ void UOnlineSubsystemSteamworks::OnEnumerateUserFilesComplete(unsigned long bWas
 
 	if (!pFnOnEnumerateUserFilesComplete)
 	{
-		pFnOnEnumerateUserFilesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONENUMERATEUSERFILESCOMPLETE));
+		pFnOnEnumerateUserFilesComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnEnumerateUserFilesComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnEnumerateUserFilesComplete_Parms OnEnumerateUserFilesComplete_Parms;
@@ -5211,7 +5422,8 @@ bool UOnlineSubsystemSteamworks::ClearFile(struct FString UserId, struct FString
 
 	if (!pFnClearFile)
 	{
-		pFnClearFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFILE));
+		pFnClearFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFile_Parms ClearFile_Parms;
@@ -5239,7 +5451,8 @@ bool UOnlineSubsystemSteamworks::ClearFiles(struct FString UserId)
 
 	if (!pFnClearFiles)
 	{
-		pFnClearFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFILES));
+		pFnClearFiles = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFiles");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFiles_Parms ClearFiles_Parms;
@@ -5268,7 +5481,8 @@ bool UOnlineSubsystemSteamworks::GetFileContents(struct FString UserId, struct F
 
 	if (!pFnGetFileContents)
 	{
-		pFnGetFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETFILECONTENTS));
+		pFnGetFileContents = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFileContents");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetFileContents_Parms GetFileContents_Parms;
@@ -5299,7 +5513,8 @@ bool UOnlineSubsystemSteamworks::WriteUserFileInternal(struct FString UserId, st
 
 	if (!pFnWriteUserFileInternal)
 	{
-		pFnWriteUserFileInternal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WRITEUSERFILEINTERNAL));
+		pFnWriteUserFileInternal = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WriteUserFileInternal");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWriteUserFileInternal_Parms WriteUserFileInternal_Parms;
@@ -5317,7 +5532,7 @@ bool UOnlineSubsystemSteamworks::WriteUserFileInternal(struct FString UserId, st
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetVoiceReceiveVolume
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // float                          VoiceVolume                    (CPF_Parm)
@@ -5328,7 +5543,8 @@ bool UOnlineSubsystemSteamworks::SetVoiceReceiveVolume(float VoiceVolume)
 
 	if (!pFnSetVoiceReceiveVolume)
 	{
-		pFnSetVoiceReceiveVolume = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETVOICERECEIVEVOLUME));
+		pFnSetVoiceReceiveVolume = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetVoiceReceiveVolume");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetVoiceReceiveVolume_Parms SetVoiceReceiveVolume_Parms;
@@ -5357,7 +5573,8 @@ bool UOnlineSubsystemSteamworks::GetFriendJoinURL(struct FUniqueNetId FriendUID,
 
 	if (!pFnGetFriendJoinURL)
 	{
-		pFnGetFriendJoinURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETFRIENDJOINURL));
+		pFnGetFriendJoinURL = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendJoinURL");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetFriendJoinURL_Parms GetFriendJoinURL_Parms;
@@ -5388,7 +5605,8 @@ bool UOnlineSubsystemSteamworks::GetCommandlineJoinURL(unsigned long bMarkAsJoin
 
 	if (!pFnGetCommandlineJoinURL)
 	{
-		pFnGetCommandlineJoinURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETCOMMANDLINEJOINURL));
+		pFnGetCommandlineJoinURL = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetCommandlineJoinURL");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetCommandlineJoinURL_Parms GetCommandlineJoinURL_Parms;
@@ -5418,7 +5636,8 @@ bool UOnlineSubsystemSteamworks::Int64ToUniqueNetId(struct FString UIDString, st
 
 	if (!pFnInt64ToUniqueNetId)
 	{
-		pFnInt64ToUniqueNetId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_INT64TOUNIQUENETID));
+		pFnInt64ToUniqueNetId = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Int64ToUniqueNetId");
+
 	}
 
 	UOnlineSubsystemSteamworks_execInt64ToUniqueNetId_Parms Int64ToUniqueNetId_Parms;
@@ -5446,7 +5665,8 @@ struct FString UOnlineSubsystemSteamworks::UniqueNetIdToInt64(struct FUniqueNetI
 
 	if (!pFnUniqueNetIdToInt64)
 	{
-		pFnUniqueNetIdToInt64 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNIQUENETIDTOINT64));
+		pFnUniqueNetIdToInt64 = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UniqueNetIdToInt64");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUniqueNetIdToInt64_Parms UniqueNetIdToInt64_Parms;
@@ -5472,7 +5692,8 @@ void UOnlineSubsystemSteamworks::NotifyVOIPPlaybackFinished(class UAudioComponen
 
 	if (!pFnNotifyVOIPPlaybackFinished)
 	{
-		pFnNotifyVOIPPlaybackFinished = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_NOTIFYVOIPPLAYBACKFINISHED));
+		pFnNotifyVOIPPlaybackFinished = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.NotifyVOIPPlaybackFinished");
+
 	}
 
 	UOnlineSubsystemSteamworks_execNotifyVOIPPlaybackFinished_Parms NotifyVOIPPlaybackFinished_Parms;
@@ -5496,7 +5717,8 @@ void UOnlineSubsystemSteamworks::OnVOIPPlaybackFinished(class UAudioComponent* A
 
 	if (!pFnOnVOIPPlaybackFinished)
 	{
-		pFnOnVOIPPlaybackFinished = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONVOIPPLAYBACKFINISHED));
+		pFnOnVOIPPlaybackFinished = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnVOIPPlaybackFinished");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnVOIPPlaybackFinished_Parms OnVOIPPlaybackFinished_Parms;
@@ -5519,7 +5741,8 @@ bool UOnlineSubsystemSteamworks::ShowProfileUI(unsigned char LocalUserNum, struc
 
 	if (!pFnShowProfileUI)
 	{
-		pFnShowProfileUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWPROFILEUI));
+		pFnShowProfileUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowProfileUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowProfileUI_Parms ShowProfileUI_Parms;
@@ -5548,7 +5771,8 @@ struct FString UOnlineSubsystemSteamworks::UniqueNetIdToPlayerName(struct FUniqu
 
 	if (!pFnUniqueNetIdToPlayerName)
 	{
-		pFnUniqueNetIdToPlayerName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNIQUENETIDTOPLAYERNAME));
+		pFnUniqueNetIdToPlayerName = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UniqueNetIdToPlayerName");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUniqueNetIdToPlayerName_Parms UniqueNetIdToPlayerName_Parms;
@@ -5577,7 +5801,8 @@ bool UOnlineSubsystemSteamworks::DisplayAchievementProgress(int AchievementId, i
 
 	if (!pFnDisplayAchievementProgress)
 	{
-		pFnDisplayAchievementProgress = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_DISPLAYACHIEVEMENTPROGRESS));
+		pFnDisplayAchievementProgress = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.DisplayAchievementProgress");
+
 	}
 
 	UOnlineSubsystemSteamworks_execDisplayAchievementProgress_Parms DisplayAchievementProgress_Parms;
@@ -5608,7 +5833,8 @@ bool UOnlineSubsystemSteamworks::CreateLeaderboard(struct FString LeaderboardNam
 
 	if (!pFnCreateLeaderboard)
 	{
-		pFnCreateLeaderboard = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CREATELEADERBOARD));
+		pFnCreateLeaderboard = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CreateLeaderboard");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCreateLeaderboard_Parms CreateLeaderboard_Parms;
@@ -5637,7 +5863,8 @@ bool UOnlineSubsystemSteamworks::ResetStats(unsigned long bResetAchievements)
 
 	if (!pFnResetStats)
 	{
-		pFnResetStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_RESETSTATS));
+		pFnResetStats = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ResetStats");
+
 	}
 
 	UOnlineSubsystemSteamworks_execResetStats_Parms ResetStats_Parms;
@@ -5673,7 +5900,8 @@ bool UOnlineSubsystemSteamworks::ShowCustomMessageUI(unsigned char LocalUserNum,
 
 	if (!pFnShowCustomMessageUI)
 	{
-		pFnShowCustomMessageUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWCUSTOMMESSAGEUI));
+		pFnShowCustomMessageUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowCustomMessageUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowCustomMessageUI_Parms ShowCustomMessageUI_Parms;
@@ -5700,7 +5928,8 @@ void UOnlineSubsystemSteamworks::ClearCrossTitleProfileSettings(unsigned char Lo
 
 	if (!pFnClearCrossTitleProfileSettings)
 	{
-		pFnClearCrossTitleProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARCROSSTITLEPROFILESETTINGS));
+		pFnClearCrossTitleProfileSettings = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearCrossTitleProfileSettings");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearCrossTitleProfileSettings_Parms ClearCrossTitleProfileSettings_Parms;
@@ -5723,7 +5952,8 @@ class UOnlineProfileSettings* UOnlineSubsystemSteamworks::GetCrossTitleProfileSe
 
 	if (!pFnGetCrossTitleProfileSettings)
 	{
-		pFnGetCrossTitleProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETCROSSTITLEPROFILESETTINGS));
+		pFnGetCrossTitleProfileSettings = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetCrossTitleProfileSettings");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetCrossTitleProfileSettings_Parms GetCrossTitleProfileSettings_Parms;
@@ -5747,7 +5977,8 @@ void UOnlineSubsystemSteamworks::ClearReadCrossTitleProfileSettingsCompleteDeleg
 
 	if (!pFnClearReadCrossTitleProfileSettingsCompleteDelegate)
 	{
-		pFnClearReadCrossTitleProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADCROSSTITLEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnClearReadCrossTitleProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadCrossTitleProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadCrossTitleProfileSettingsCompleteDelegate_Parms ClearReadCrossTitleProfileSettingsCompleteDelegate_Parms;
@@ -5769,7 +6000,8 @@ void UOnlineSubsystemSteamworks::AddReadCrossTitleProfileSettingsCompleteDelegat
 
 	if (!pFnAddReadCrossTitleProfileSettingsCompleteDelegate)
 	{
-		pFnAddReadCrossTitleProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADCROSSTITLEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnAddReadCrossTitleProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadCrossTitleProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadCrossTitleProfileSettingsCompleteDelegate_Parms AddReadCrossTitleProfileSettingsCompleteDelegate_Parms;
@@ -5792,7 +6024,8 @@ void UOnlineSubsystemSteamworks::OnReadCrossTitleProfileSettingsComplete(unsigne
 
 	if (!pFnOnReadCrossTitleProfileSettingsComplete)
 	{
-		pFnOnReadCrossTitleProfileSettingsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADCROSSTITLEPROFILESETTINGSCOMPLETE));
+		pFnOnReadCrossTitleProfileSettingsComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadCrossTitleProfileSettingsComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadCrossTitleProfileSettingsComplete_Parms OnReadCrossTitleProfileSettingsComplete_Parms;
@@ -5817,7 +6050,8 @@ bool UOnlineSubsystemSteamworks::ReadCrossTitleProfileSettings(unsigned char Loc
 
 	if (!pFnReadCrossTitleProfileSettings)
 	{
-		pFnReadCrossTitleProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READCROSSTITLEPROFILESETTINGS));
+		pFnReadCrossTitleProfileSettings = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadCrossTitleProfileSettings");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadCrossTitleProfileSettings_Parms ReadCrossTitleProfileSettings_Parms;
@@ -5841,7 +6075,8 @@ void UOnlineSubsystemSteamworks::GetSteamClanData(TArray<struct FSteamPlayerClan
 
 	if (!pFnGetSteamClanData)
 	{
-		pFnGetSteamClanData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETSTEAMCLANDATA));
+		pFnGetSteamClanData = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetSteamClanData");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetSteamClanData_Parms GetSteamClanData_Parms;
@@ -5865,7 +6100,8 @@ void UOnlineSubsystemSteamworks::ClearGetNumberOfCurrentPlayersCompleteDelegate(
 
 	if (!pFnClearGetNumberOfCurrentPlayersCompleteDelegate)
 	{
-		pFnClearGetNumberOfCurrentPlayersCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARGETNUMBEROFCURRENTPLAYERSCOMPLETEDELEGATE));
+		pFnClearGetNumberOfCurrentPlayersCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearGetNumberOfCurrentPlayersCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearGetNumberOfCurrentPlayersCompleteDelegate_Parms ClearGetNumberOfCurrentPlayersCompleteDelegate_Parms;
@@ -5885,7 +6121,8 @@ void UOnlineSubsystemSteamworks::AddGetNumberOfCurrentPlayersCompleteDelegate(st
 
 	if (!pFnAddGetNumberOfCurrentPlayersCompleteDelegate)
 	{
-		pFnAddGetNumberOfCurrentPlayersCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDGETNUMBEROFCURRENTPLAYERSCOMPLETEDELEGATE));
+		pFnAddGetNumberOfCurrentPlayersCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddGetNumberOfCurrentPlayersCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddGetNumberOfCurrentPlayersCompleteDelegate_Parms AddGetNumberOfCurrentPlayersCompleteDelegate_Parms;
@@ -5905,7 +6142,8 @@ void UOnlineSubsystemSteamworks::OnGetNumberOfCurrentPlayersComplete(int TotalPl
 
 	if (!pFnOnGetNumberOfCurrentPlayersComplete)
 	{
-		pFnOnGetNumberOfCurrentPlayersComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONGETNUMBEROFCURRENTPLAYERSCOMPLETE));
+		pFnOnGetNumberOfCurrentPlayersComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnGetNumberOfCurrentPlayersComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnGetNumberOfCurrentPlayersComplete_Parms OnGetNumberOfCurrentPlayersComplete_Parms;
@@ -5925,7 +6163,8 @@ bool UOnlineSubsystemSteamworks::GetNumberOfCurrentPlayers()
 
 	if (!pFnGetNumberOfCurrentPlayers)
 	{
-		pFnGetNumberOfCurrentPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETNUMBEROFCURRENTPLAYERS));
+		pFnGetNumberOfCurrentPlayers = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetNumberOfCurrentPlayers");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetNumberOfCurrentPlayers_Parms GetNumberOfCurrentPlayers_Parms;
@@ -5940,7 +6179,7 @@ bool UOnlineSubsystemSteamworks::GetNumberOfCurrentPlayers()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadOnlineAvatars
-// [0x00420400] (FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags) iNative [0x0004]
+// [0x00430400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // unsigned char                  Size                           (CPF_Parm)
 // struct FScriptDelegate         ReadOnlineAvatarCompleteDelegate (CPF_Parm | CPF_NeedCtorLink)
@@ -5952,7 +6191,8 @@ void UOnlineSubsystemSteamworks::ReadOnlineAvatars(unsigned char Size, struct FS
 
 	if (!pFnReadOnlineAvatars)
 	{
-		pFnReadOnlineAvatars = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READONLINEAVATARS));
+		pFnReadOnlineAvatars = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadOnlineAvatars");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadOnlineAvatars_Parms ReadOnlineAvatars_Parms;
@@ -5987,7 +6227,8 @@ bool UOnlineSubsystemSteamworks::ShowCustomPlayersUI(unsigned char LocalUserNum,
 
 	if (!pFnShowCustomPlayersUI)
 	{
-		pFnShowCustomPlayersUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWCUSTOMPLAYERSUI));
+		pFnShowCustomPlayersUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowCustomPlayersUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowCustomPlayersUI_Parms ShowCustomPlayersUI_Parms;
@@ -6006,7 +6247,7 @@ bool UOnlineSubsystemSteamworks::ShowCustomPlayersUI(unsigned char LocalUserNum,
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetAchievements
-// [0x00424401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00434401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -6019,7 +6260,8 @@ unsigned char UOnlineSubsystemSteamworks::GetAchievements(unsigned char LocalUse
 
 	if (!pFnGetAchievements)
 	{
-		pFnGetAchievements = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETACHIEVEMENTS));
+		pFnGetAchievements = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetAchievements");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetAchievements_Parms GetAchievements_Parms;
@@ -6048,7 +6290,8 @@ void UOnlineSubsystemSteamworks::ClearReadAchievementsCompleteDelegate(unsigned 
 
 	if (!pFnClearReadAchievementsCompleteDelegate)
 	{
-		pFnClearReadAchievementsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADACHIEVEMENTSCOMPLETEDELEGATE));
+		pFnClearReadAchievementsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadAchievementsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadAchievementsCompleteDelegate_Parms ClearReadAchievementsCompleteDelegate_Parms;
@@ -6059,7 +6302,7 @@ void UOnlineSubsystemSteamworks::ClearReadAchievementsCompleteDelegate(unsigned 
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadAchievementsCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         ReadAchievementsCompleteDelegate (CPF_Parm | CPF_NeedCtorLink)
@@ -6070,7 +6313,8 @@ void UOnlineSubsystemSteamworks::AddReadAchievementsCompleteDelegate(unsigned ch
 
 	if (!pFnAddReadAchievementsCompleteDelegate)
 	{
-		pFnAddReadAchievementsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADACHIEVEMENTSCOMPLETEDELEGATE));
+		pFnAddReadAchievementsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadAchievementsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadAchievementsCompleteDelegate_Parms AddReadAchievementsCompleteDelegate_Parms;
@@ -6091,7 +6335,8 @@ void UOnlineSubsystemSteamworks::OnReadAchievementsComplete(int TitleId)
 
 	if (!pFnOnReadAchievementsComplete)
 	{
-		pFnOnReadAchievementsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADACHIEVEMENTSCOMPLETE));
+		pFnOnReadAchievementsComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadAchievementsComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadAchievementsComplete_Parms OnReadAchievementsComplete_Parms;
@@ -6101,7 +6346,7 @@ void UOnlineSubsystemSteamworks::OnReadAchievementsComplete(int TitleId)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadAchievements
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -6115,7 +6360,8 @@ bool UOnlineSubsystemSteamworks::ReadAchievements(unsigned char LocalUserNum, in
 
 	if (!pFnReadAchievements)
 	{
-		pFnReadAchievements = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READACHIEVEMENTS));
+		pFnReadAchievements = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadAchievements");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadAchievements_Parms ReadAchievements_Parms;
@@ -6145,7 +6391,8 @@ bool UOnlineSubsystemSteamworks::ShowPlayersUI(unsigned char LocalUserNum)
 
 	if (!pFnShowPlayersUI)
 	{
-		pFnShowPlayersUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWPLAYERSUI));
+		pFnShowPlayersUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowPlayersUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowPlayersUI_Parms ShowPlayersUI_Parms;
@@ -6173,7 +6420,8 @@ bool UOnlineSubsystemSteamworks::ShowFriendsInviteUI(unsigned char LocalUserNum,
 
 	if (!pFnShowFriendsInviteUI)
 	{
-		pFnShowFriendsInviteUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWFRIENDSINVITEUI));
+		pFnShowFriendsInviteUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowFriendsInviteUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowFriendsInviteUI_Parms ShowFriendsInviteUI_Parms;
@@ -6201,7 +6449,8 @@ bool UOnlineSubsystemSteamworks::ShowFriendsUI(unsigned char LocalUserNum)
 
 	if (!pFnShowFriendsUI)
 	{
-		pFnShowFriendsUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWFRIENDSUI));
+		pFnShowFriendsUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowFriendsUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowFriendsUI_Parms ShowFriendsUI_Parms;
@@ -6228,7 +6477,8 @@ void UOnlineSubsystemSteamworks::ClearProfileDataChangedDelegate(unsigned char L
 
 	if (!pFnClearProfileDataChangedDelegate)
 	{
-		pFnClearProfileDataChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARPROFILEDATACHANGEDDELEGATE));
+		pFnClearProfileDataChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearProfileDataChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearProfileDataChangedDelegate_Parms ClearProfileDataChangedDelegate_Parms;
@@ -6250,7 +6500,8 @@ void UOnlineSubsystemSteamworks::AddProfileDataChangedDelegate(unsigned char Loc
 
 	if (!pFnAddProfileDataChangedDelegate)
 	{
-		pFnAddProfileDataChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDPROFILEDATACHANGEDDELEGATE));
+		pFnAddProfileDataChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddProfileDataChangedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddProfileDataChangedDelegate_Parms AddProfileDataChangedDelegate_Parms;
@@ -6270,7 +6521,8 @@ void UOnlineSubsystemSteamworks::OnProfileDataChanged()
 
 	if (!pFnOnProfileDataChanged)
 	{
-		pFnOnProfileDataChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONPROFILEDATACHANGED));
+		pFnOnProfileDataChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnProfileDataChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnProfileDataChanged_Parms OnProfileDataChanged_Parms;
@@ -6291,7 +6543,8 @@ bool UOnlineSubsystemSteamworks::UnlockGamerPicture(unsigned char LocalUserNum, 
 
 	if (!pFnUnlockGamerPicture)
 	{
-		pFnUnlockGamerPicture = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNLOCKGAMERPICTURE));
+		pFnUnlockGamerPicture = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnlockGamerPicture");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUnlockGamerPicture_Parms UnlockGamerPicture_Parms;
@@ -6315,7 +6568,8 @@ void UOnlineSubsystemSteamworks::ClearUnlockAchievementCompleteDelegate(unsigned
 
 	if (!pFnClearUnlockAchievementCompleteDelegate)
 	{
-		pFnClearUnlockAchievementCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARUNLOCKACHIEVEMENTCOMPLETEDELEGATE));
+		pFnClearUnlockAchievementCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearUnlockAchievementCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearUnlockAchievementCompleteDelegate_Parms ClearUnlockAchievementCompleteDelegate_Parms;
@@ -6337,7 +6591,8 @@ void UOnlineSubsystemSteamworks::AddUnlockAchievementCompleteDelegate(unsigned c
 
 	if (!pFnAddUnlockAchievementCompleteDelegate)
 	{
-		pFnAddUnlockAchievementCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDUNLOCKACHIEVEMENTCOMPLETEDELEGATE));
+		pFnAddUnlockAchievementCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUnlockAchievementCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddUnlockAchievementCompleteDelegate_Parms AddUnlockAchievementCompleteDelegate_Parms;
@@ -6358,7 +6613,8 @@ void UOnlineSubsystemSteamworks::OnUnlockAchievementComplete(unsigned long bWasS
 
 	if (!pFnOnUnlockAchievementComplete)
 	{
-		pFnOnUnlockAchievementComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONUNLOCKACHIEVEMENTCOMPLETE));
+		pFnOnUnlockAchievementComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUnlockAchievementComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnUnlockAchievementComplete_Parms OnUnlockAchievementComplete_Parms;
@@ -6381,7 +6637,8 @@ bool UOnlineSubsystemSteamworks::UnlockAchievement(unsigned char LocalUserNum, i
 
 	if (!pFnUnlockAchievement)
 	{
-		pFnUnlockAchievement = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNLOCKACHIEVEMENT));
+		pFnUnlockAchievement = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnlockAchievement");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUnlockAchievement_Parms UnlockAchievement_Parms;
@@ -6412,7 +6669,8 @@ bool UOnlineSubsystemSteamworks::UpdateStat(unsigned char LocalUserNum, struct F
 
 	if (!pFnUpdateStat)
 	{
-		pFnUpdateStat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UPDATESTAT));
+		pFnUpdateStat = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UpdateStat");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUpdateStat_Parms UpdateStat_Parms;
@@ -6438,7 +6696,8 @@ bool UOnlineSubsystemSteamworks::IsDeviceValid(int DeviceID, int SizeNeeded)
 
 	if (!pFnIsDeviceValid)
 	{
-		pFnIsDeviceValid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISDEVICEVALID));
+		pFnIsDeviceValid = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsDeviceValid");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsDeviceValid_Parms IsDeviceValid_Parms;
@@ -6463,7 +6722,8 @@ int UOnlineSubsystemSteamworks::GetDeviceSelectionResults(unsigned char LocalUse
 
 	if (!pFnGetDeviceSelectionResults)
 	{
-		pFnGetDeviceSelectionResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETDEVICESELECTIONRESULTS));
+		pFnGetDeviceSelectionResults = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetDeviceSelectionResults");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetDeviceSelectionResults_Parms GetDeviceSelectionResults_Parms;
@@ -6487,7 +6747,8 @@ void UOnlineSubsystemSteamworks::ClearDeviceSelectionDoneDelegate(unsigned char 
 
 	if (!pFnClearDeviceSelectionDoneDelegate)
 	{
-		pFnClearDeviceSelectionDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARDEVICESELECTIONDONEDELEGATE));
+		pFnClearDeviceSelectionDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearDeviceSelectionDoneDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearDeviceSelectionDoneDelegate_Parms ClearDeviceSelectionDoneDelegate_Parms;
@@ -6509,7 +6770,8 @@ void UOnlineSubsystemSteamworks::AddDeviceSelectionDoneDelegate(unsigned char Lo
 
 	if (!pFnAddDeviceSelectionDoneDelegate)
 	{
-		pFnAddDeviceSelectionDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDDEVICESELECTIONDONEDELEGATE));
+		pFnAddDeviceSelectionDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddDeviceSelectionDoneDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddDeviceSelectionDoneDelegate_Parms AddDeviceSelectionDoneDelegate_Parms;
@@ -6530,7 +6792,8 @@ void UOnlineSubsystemSteamworks::OnDeviceSelectionComplete(unsigned long bWasSuc
 
 	if (!pFnOnDeviceSelectionComplete)
 	{
-		pFnOnDeviceSelectionComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONDEVICESELECTIONCOMPLETE));
+		pFnOnDeviceSelectionComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnDeviceSelectionComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnDeviceSelectionComplete_Parms OnDeviceSelectionComplete_Parms;
@@ -6553,7 +6816,8 @@ bool UOnlineSubsystemSteamworks::ShowDeviceSelectionUI(unsigned char LocalUserNu
 
 	if (!pFnShowDeviceSelectionUI)
 	{
-		pFnShowDeviceSelectionUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWDEVICESELECTIONUI));
+		pFnShowDeviceSelectionUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowDeviceSelectionUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowDeviceSelectionUI_Parms ShowDeviceSelectionUI_Parms;
@@ -6580,7 +6844,8 @@ bool UOnlineSubsystemSteamworks::ShowContentMarketplaceUI(unsigned char LocalUse
 
 	if (!pFnShowContentMarketplaceUI)
 	{
-		pFnShowContentMarketplaceUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWCONTENTMARKETPLACEUI));
+		pFnShowContentMarketplaceUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowContentMarketplaceUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowContentMarketplaceUI_Parms ShowContentMarketplaceUI_Parms;
@@ -6610,7 +6875,8 @@ bool UOnlineSubsystemSteamworks::ShowInviteUI(unsigned char LocalUserNum, struct
 
 	if (!pFnShowInviteUI)
 	{
-		pFnShowInviteUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWINVITEUI));
+		pFnShowInviteUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowInviteUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowInviteUI_Parms ShowInviteUI_Parms;
@@ -6638,7 +6904,8 @@ bool UOnlineSubsystemSteamworks::ShowAchievementsUI(unsigned char LocalUserNum)
 
 	if (!pFnShowAchievementsUI)
 	{
-		pFnShowAchievementsUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWACHIEVEMENTSUI));
+		pFnShowAchievementsUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowAchievementsUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowAchievementsUI_Parms ShowAchievementsUI_Parms;
@@ -6665,7 +6932,8 @@ bool UOnlineSubsystemSteamworks::ShowMessagesUI(unsigned char LocalUserNum)
 
 	if (!pFnShowMessagesUI)
 	{
-		pFnShowMessagesUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWMESSAGESUI));
+		pFnShowMessagesUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowMessagesUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowMessagesUI_Parms ShowMessagesUI_Parms;
@@ -6694,7 +6962,8 @@ bool UOnlineSubsystemSteamworks::ShowGamerCardUI(unsigned char LocalUserNum, str
 
 	if (!pFnShowGamerCardUI)
 	{
-		pFnShowGamerCardUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWGAMERCARDUI));
+		pFnShowGamerCardUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowGamerCardUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowGamerCardUI_Parms ShowGamerCardUI_Parms;
@@ -6724,7 +6993,8 @@ bool UOnlineSubsystemSteamworks::ShowFeedbackUI(unsigned char LocalUserNum, stru
 
 	if (!pFnShowFeedbackUI)
 	{
-		pFnShowFeedbackUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWFEEDBACKUI));
+		pFnShowFeedbackUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowFeedbackUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowFeedbackUI_Parms ShowFeedbackUI_Parms;
@@ -6753,7 +7023,8 @@ bool UOnlineSubsystemSteamworks::DeleteMessage(unsigned char LocalUserNum, int M
 
 	if (!pFnDeleteMessage)
 	{
-		pFnDeleteMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_DELETEMESSAGE));
+		pFnDeleteMessage = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.DeleteMessage");
+
 	}
 
 	UOnlineSubsystemSteamworks_execDeleteMessage_Parms DeleteMessage_Parms;
@@ -6777,7 +7048,8 @@ bool UOnlineSubsystemSteamworks::UnmuteAll(unsigned char LocalUserNum)
 
 	if (!pFnUnmuteAll)
 	{
-		pFnUnmuteAll = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNMUTEALL));
+		pFnUnmuteAll = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnmuteAll");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUnmuteAll_Parms UnmuteAll_Parms;
@@ -6801,7 +7073,8 @@ bool UOnlineSubsystemSteamworks::MuteAll(unsigned char LocalUserNum, unsigned lo
 
 	if (!pFnMuteAll)
 	{
-		pFnMuteAll = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_MUTEALL));
+		pFnMuteAll = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.MuteAll");
+
 	}
 
 	UOnlineSubsystemSteamworks_execMuteAll_Parms MuteAll_Parms;
@@ -6826,7 +7099,8 @@ bool UOnlineSubsystemSteamworks::RegisterStatGuid(struct FUniqueNetId PlayerID, 
 
 	if (!pFnRegisterStatGuid)
 	{
-		pFnRegisterStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REGISTERSTATGUID));
+		pFnRegisterStatGuid = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RegisterStatGuid");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRegisterStatGuid_Parms RegisterStatGuid_Parms;
@@ -6849,7 +7123,8 @@ struct FString UOnlineSubsystemSteamworks::GetClientStatGuid()
 
 	if (!pFnGetClientStatGuid)
 	{
-		pFnGetClientStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETCLIENTSTATGUID));
+		pFnGetClientStatGuid = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetClientStatGuid");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetClientStatGuid_Parms GetClientStatGuid_Parms;
@@ -6870,7 +7145,8 @@ void UOnlineSubsystemSteamworks::ClearRegisterHostStatGuidCompleteDelegateDelega
 
 	if (!pFnClearRegisterHostStatGuidCompleteDelegateDelegate)
 	{
-		pFnClearRegisterHostStatGuidCompleteDelegateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREGISTERHOSTSTATGUIDCOMPLETEDELEGATEDELEGATE));
+		pFnClearRegisterHostStatGuidCompleteDelegateDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearRegisterHostStatGuidCompleteDelegateDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearRegisterHostStatGuidCompleteDelegateDelegate_Parms ClearRegisterHostStatGuidCompleteDelegateDelegate_Parms;
@@ -6890,7 +7166,8 @@ void UOnlineSubsystemSteamworks::AddRegisterHostStatGuidCompleteDelegate(struct 
 
 	if (!pFnAddRegisterHostStatGuidCompleteDelegate)
 	{
-		pFnAddRegisterHostStatGuidCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREGISTERHOSTSTATGUIDCOMPLETEDELEGATE));
+		pFnAddRegisterHostStatGuidCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddRegisterHostStatGuidCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddRegisterHostStatGuidCompleteDelegate_Parms AddRegisterHostStatGuidCompleteDelegate_Parms;
@@ -6910,7 +7187,8 @@ void UOnlineSubsystemSteamworks::OnRegisterHostStatGuidComplete(unsigned long bW
 
 	if (!pFnOnRegisterHostStatGuidComplete)
 	{
-		pFnOnRegisterHostStatGuidComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREGISTERHOSTSTATGUIDCOMPLETE));
+		pFnOnRegisterHostStatGuidComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnRegisterHostStatGuidComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnRegisterHostStatGuidComplete_Parms OnRegisterHostStatGuidComplete_Parms;
@@ -6931,7 +7209,8 @@ bool UOnlineSubsystemSteamworks::RegisterHostStatGuid(struct FString& HostStatGu
 
 	if (!pFnRegisterHostStatGuid)
 	{
-		pFnRegisterHostStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REGISTERHOSTSTATGUID));
+		pFnRegisterHostStatGuid = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RegisterHostStatGuid");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRegisterHostStatGuid_Parms RegisterHostStatGuid_Parms;
@@ -6953,7 +7232,8 @@ struct FString UOnlineSubsystemSteamworks::GetHostStatGuid()
 
 	if (!pFnGetHostStatGuid)
 	{
-		pFnGetHostStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETHOSTSTATGUID));
+		pFnGetHostStatGuid = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetHostStatGuid");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetHostStatGuid_Parms GetHostStatGuid_Parms;
@@ -6975,7 +7255,8 @@ void UOnlineSubsystemSteamworks::ClearFriendMessageReceivedDelegate(unsigned cha
 
 	if (!pFnClearFriendMessageReceivedDelegate)
 	{
-		pFnClearFriendMessageReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFRIENDMESSAGERECEIVEDDELEGATE));
+		pFnClearFriendMessageReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFriendMessageReceivedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFriendMessageReceivedDelegate_Parms ClearFriendMessageReceivedDelegate_Parms;
@@ -6997,7 +7278,8 @@ void UOnlineSubsystemSteamworks::AddFriendMessageReceivedDelegate(unsigned char 
 
 	if (!pFnAddFriendMessageReceivedDelegate)
 	{
-		pFnAddFriendMessageReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFRIENDMESSAGERECEIVEDDELEGATE));
+		pFnAddFriendMessageReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendMessageReceivedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFriendMessageReceivedDelegate_Parms AddFriendMessageReceivedDelegate_Parms;
@@ -7021,7 +7303,8 @@ void UOnlineSubsystemSteamworks::OnFriendMessageReceived(unsigned char LocalUser
 
 	if (!pFnOnFriendMessageReceived)
 	{
-		pFnOnFriendMessageReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONFRIENDMESSAGERECEIVED));
+		pFnOnFriendMessageReceived = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnFriendMessageReceived");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnFriendMessageReceived_Parms OnFriendMessageReceived_Parms;
@@ -7045,7 +7328,8 @@ void UOnlineSubsystemSteamworks::GetFriendMessages(unsigned char LocalUserNum, T
 
 	if (!pFnGetFriendMessages)
 	{
-		pFnGetFriendMessages = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETFRIENDMESSAGES));
+		pFnGetFriendMessages = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendMessages");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetFriendMessages_Parms GetFriendMessages_Parms;
@@ -7066,7 +7350,8 @@ void UOnlineSubsystemSteamworks::ClearJoinFriendGameCompleteDelegate(struct FScr
 
 	if (!pFnClearJoinFriendGameCompleteDelegate)
 	{
-		pFnClearJoinFriendGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARJOINFRIENDGAMECOMPLETEDELEGATE));
+		pFnClearJoinFriendGameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearJoinFriendGameCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearJoinFriendGameCompleteDelegate_Parms ClearJoinFriendGameCompleteDelegate_Parms;
@@ -7086,7 +7371,8 @@ void UOnlineSubsystemSteamworks::AddJoinFriendGameCompleteDelegate(struct FScrip
 
 	if (!pFnAddJoinFriendGameCompleteDelegate)
 	{
-		pFnAddJoinFriendGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDJOINFRIENDGAMECOMPLETEDELEGATE));
+		pFnAddJoinFriendGameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddJoinFriendGameCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddJoinFriendGameCompleteDelegate_Parms AddJoinFriendGameCompleteDelegate_Parms;
@@ -7106,7 +7392,8 @@ void UOnlineSubsystemSteamworks::OnJoinFriendGameComplete(unsigned long bWasSucc
 
 	if (!pFnOnJoinFriendGameComplete)
 	{
-		pFnOnJoinFriendGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONJOINFRIENDGAMECOMPLETE));
+		pFnOnJoinFriendGameComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnJoinFriendGameComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnJoinFriendGameComplete_Parms OnJoinFriendGameComplete_Parms;
@@ -7128,7 +7415,8 @@ bool UOnlineSubsystemSteamworks::JoinFriendGame(unsigned char LocalUserNum, stru
 
 	if (!pFnJoinFriendGame)
 	{
-		pFnJoinFriendGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_JOINFRIENDGAME));
+		pFnJoinFriendGame = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.JoinFriendGame");
+
 	}
 
 	UOnlineSubsystemSteamworks_execJoinFriendGame_Parms JoinFriendGame_Parms;
@@ -7156,7 +7444,8 @@ void UOnlineSubsystemSteamworks::ClearReceivedGameInviteDelegate(unsigned char L
 
 	if (!pFnClearReceivedGameInviteDelegate)
 	{
-		pFnClearReceivedGameInviteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARRECEIVEDGAMEINVITEDELEGATE));
+		pFnClearReceivedGameInviteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReceivedGameInviteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReceivedGameInviteDelegate_Parms ClearReceivedGameInviteDelegate_Parms;
@@ -7178,7 +7467,8 @@ void UOnlineSubsystemSteamworks::AddReceivedGameInviteDelegate(unsigned char Loc
 
 	if (!pFnAddReceivedGameInviteDelegate)
 	{
-		pFnAddReceivedGameInviteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDRECEIVEDGAMEINVITEDELEGATE));
+		pFnAddReceivedGameInviteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReceivedGameInviteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReceivedGameInviteDelegate_Parms AddReceivedGameInviteDelegate_Parms;
@@ -7200,7 +7490,8 @@ void UOnlineSubsystemSteamworks::OnReceivedGameInvite(unsigned char LocalUserNum
 
 	if (!pFnOnReceivedGameInvite)
 	{
-		pFnOnReceivedGameInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONRECEIVEDGAMEINVITE));
+		pFnOnReceivedGameInvite = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReceivedGameInvite");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReceivedGameInvite_Parms OnReceivedGameInvite_Parms;
@@ -7224,7 +7515,8 @@ bool UOnlineSubsystemSteamworks::SendGameInviteToFriends(unsigned char LocalUser
 
 	if (!pFnSendGameInviteToFriends)
 	{
-		pFnSendGameInviteToFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SENDGAMEINVITETOFRIENDS));
+		pFnSendGameInviteToFriends = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SendGameInviteToFriends");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSendGameInviteToFriends_Parms SendGameInviteToFriends_Parms;
@@ -7255,7 +7547,8 @@ bool UOnlineSubsystemSteamworks::SendGameInviteToFriend(unsigned char LocalUserN
 
 	if (!pFnSendGameInviteToFriend)
 	{
-		pFnSendGameInviteToFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SENDGAMEINVITETOFRIEND));
+		pFnSendGameInviteToFriend = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SendGameInviteToFriend");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSendGameInviteToFriend_Parms SendGameInviteToFriend_Parms;
@@ -7286,7 +7579,8 @@ bool UOnlineSubsystemSteamworks::SendMessageToFriend(unsigned char LocalUserNum,
 
 	if (!pFnSendMessageToFriend)
 	{
-		pFnSendMessageToFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SENDMESSAGETOFRIEND));
+		pFnSendMessageToFriend = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SendMessageToFriend");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSendMessageToFriend_Parms SendMessageToFriend_Parms;
@@ -7315,7 +7609,8 @@ void UOnlineSubsystemSteamworks::ClearFriendInviteCanceledDelegate(unsigned char
 
 	if (!pFnClearFriendInviteCanceledDelegate)
 	{
-		pFnClearFriendInviteCanceledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFRIENDINVITECANCELEDDELEGATE));
+		pFnClearFriendInviteCanceledDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFriendInviteCanceledDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFriendInviteCanceledDelegate_Parms ClearFriendInviteCanceledDelegate_Parms;
@@ -7337,7 +7632,8 @@ void UOnlineSubsystemSteamworks::AddFriendInviteCanceledDelegate(unsigned char L
 
 	if (!pFnAddFriendInviteCanceledDelegate)
 	{
-		pFnAddFriendInviteCanceledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFRIENDINVITECANCELEDDELEGATE));
+		pFnAddFriendInviteCanceledDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendInviteCanceledDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFriendInviteCanceledDelegate_Parms AddFriendInviteCanceledDelegate_Parms;
@@ -7359,7 +7655,8 @@ void UOnlineSubsystemSteamworks::OnFriendInviteCanceled(unsigned char LocalUserN
 
 	if (!pFnOnFriendInviteCanceled)
 	{
-		pFnOnFriendInviteCanceled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONFRIENDINVITECANCELED));
+		pFnOnFriendInviteCanceled = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnFriendInviteCanceled");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnFriendInviteCanceled_Parms OnFriendInviteCanceled_Parms;
@@ -7381,7 +7678,8 @@ void UOnlineSubsystemSteamworks::ClearFriendInviteReceivedDelegate(unsigned char
 
 	if (!pFnClearFriendInviteReceivedDelegate)
 	{
-		pFnClearFriendInviteReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFRIENDINVITERECEIVEDDELEGATE));
+		pFnClearFriendInviteReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFriendInviteReceivedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFriendInviteReceivedDelegate_Parms ClearFriendInviteReceivedDelegate_Parms;
@@ -7403,7 +7701,8 @@ void UOnlineSubsystemSteamworks::AddFriendInviteReceivedDelegate(unsigned char L
 
 	if (!pFnAddFriendInviteReceivedDelegate)
 	{
-		pFnAddFriendInviteReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFRIENDINVITERECEIVEDDELEGATE));
+		pFnAddFriendInviteReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendInviteReceivedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFriendInviteReceivedDelegate_Parms AddFriendInviteReceivedDelegate_Parms;
@@ -7427,7 +7726,8 @@ void UOnlineSubsystemSteamworks::OnFriendInviteReceived(unsigned char LocalUserN
 
 	if (!pFnOnFriendInviteReceived)
 	{
-		pFnOnFriendInviteReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONFRIENDINVITERECEIVED));
+		pFnOnFriendInviteReceived = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnFriendInviteReceived");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnFriendInviteReceived_Parms OnFriendInviteReceived_Parms;
@@ -7452,7 +7752,8 @@ bool UOnlineSubsystemSteamworks::DenyFriendInvite(unsigned char LocalUserNum, st
 
 	if (!pFnDenyFriendInvite)
 	{
-		pFnDenyFriendInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_DENYFRIENDINVITE));
+		pFnDenyFriendInvite = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.DenyFriendInvite");
+
 	}
 
 	UOnlineSubsystemSteamworks_execDenyFriendInvite_Parms DenyFriendInvite_Parms;
@@ -7480,7 +7781,8 @@ void UOnlineSubsystemSteamworks::ClearDenyFriendInviteCompleteDelegate(unsigned 
 
 	if (!pFnClearDenyFriendInviteCompleteDelegate)
 	{
-		pFnClearDenyFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARDENYFRIENDINVITECOMPLETEDELEGATE));
+		pFnClearDenyFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearDenyFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearDenyFriendInviteCompleteDelegate_Parms ClearDenyFriendInviteCompleteDelegate_Parms;
@@ -7502,7 +7804,8 @@ void UOnlineSubsystemSteamworks::AddDenyFriendInviteCompleteDelegate(unsigned ch
 
 	if (!pFnAddDenyFriendInviteCompleteDelegate)
 	{
-		pFnAddDenyFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDDENYFRIENDINVITECOMPLETEDELEGATE));
+		pFnAddDenyFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddDenyFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddDenyFriendInviteCompleteDelegate_Parms AddDenyFriendInviteCompleteDelegate_Parms;
@@ -7524,7 +7827,8 @@ void UOnlineSubsystemSteamworks::OnDenyFriendInviteComplete(struct FUniqueNetId 
 
 	if (!pFnOnDenyFriendInviteComplete)
 	{
-		pFnOnDenyFriendInviteComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONDENYFRIENDINVITECOMPLETE));
+		pFnOnDenyFriendInviteComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnDenyFriendInviteComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnDenyFriendInviteComplete_Parms OnDenyFriendInviteComplete_Parms;
@@ -7547,7 +7851,8 @@ bool UOnlineSubsystemSteamworks::AcceptFriendInvite(unsigned char LocalUserNum, 
 
 	if (!pFnAcceptFriendInvite)
 	{
-		pFnAcceptFriendInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ACCEPTFRIENDINVITE));
+		pFnAcceptFriendInvite = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AcceptFriendInvite");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAcceptFriendInvite_Parms AcceptFriendInvite_Parms;
@@ -7575,7 +7880,8 @@ void UOnlineSubsystemSteamworks::ClearAcceptFriendInviteCompleteDelegate(unsigne
 
 	if (!pFnClearAcceptFriendInviteCompleteDelegate)
 	{
-		pFnClearAcceptFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARACCEPTFRIENDINVITECOMPLETEDELEGATE));
+		pFnClearAcceptFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAcceptFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearAcceptFriendInviteCompleteDelegate_Parms ClearAcceptFriendInviteCompleteDelegate_Parms;
@@ -7597,7 +7903,8 @@ void UOnlineSubsystemSteamworks::AddAcceptFriendInviteCompleteDelegate(unsigned 
 
 	if (!pFnAddAcceptFriendInviteCompleteDelegate)
 	{
-		pFnAddAcceptFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDACCEPTFRIENDINVITECOMPLETEDELEGATE));
+		pFnAddAcceptFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddAcceptFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddAcceptFriendInviteCompleteDelegate_Parms AddAcceptFriendInviteCompleteDelegate_Parms;
@@ -7619,7 +7926,8 @@ void UOnlineSubsystemSteamworks::OnAcceptFriendInviteComplete(struct FUniqueNetI
 
 	if (!pFnOnAcceptFriendInviteComplete)
 	{
-		pFnOnAcceptFriendInviteComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONACCEPTFRIENDINVITECOMPLETE));
+		pFnOnAcceptFriendInviteComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnAcceptFriendInviteComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnAcceptFriendInviteComplete_Parms OnAcceptFriendInviteComplete_Parms;
@@ -7642,7 +7950,8 @@ bool UOnlineSubsystemSteamworks::RemoveFriend(unsigned char LocalUserNum, struct
 
 	if (!pFnRemoveFriend)
 	{
-		pFnRemoveFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REMOVEFRIEND));
+		pFnRemoveFriend = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RemoveFriend");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRemoveFriend_Parms RemoveFriend_Parms;
@@ -7670,7 +7979,8 @@ void UOnlineSubsystemSteamworks::ClearRemoveFriendCompleteDelegate(unsigned char
 
 	if (!pFnClearRemoveFriendCompleteDelegate)
 	{
-		pFnClearRemoveFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREMOVEFRIENDCOMPLETEDELEGATE));
+		pFnClearRemoveFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearRemoveFriendCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearRemoveFriendCompleteDelegate_Parms ClearRemoveFriendCompleteDelegate_Parms;
@@ -7692,7 +8002,8 @@ void UOnlineSubsystemSteamworks::AddRemoveFriendCompleteDelegate(unsigned char L
 
 	if (!pFnAddRemoveFriendCompleteDelegate)
 	{
-		pFnAddRemoveFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREMOVEFRIENDCOMPLETEDELEGATE));
+		pFnAddRemoveFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddRemoveFriendCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddRemoveFriendCompleteDelegate_Parms AddRemoveFriendCompleteDelegate_Parms;
@@ -7714,7 +8025,8 @@ void UOnlineSubsystemSteamworks::OnRemoveFriendComplete(unsigned long bWasSucces
 
 	if (!pFnOnRemoveFriendComplete)
 	{
-		pFnOnRemoveFriendComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREMOVEFRIENDCOMPLETE));
+		pFnOnRemoveFriendComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnRemoveFriendComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnRemoveFriendComplete_Parms OnRemoveFriendComplete_Parms;
@@ -7736,7 +8048,8 @@ void UOnlineSubsystemSteamworks::ClearAddFriendByNameCompleteDelegate(unsigned c
 
 	if (!pFnClearAddFriendByNameCompleteDelegate)
 	{
-		pFnClearAddFriendByNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARADDFRIENDBYNAMECOMPLETEDELEGATE));
+		pFnClearAddFriendByNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAddFriendByNameCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearAddFriendByNameCompleteDelegate_Parms ClearAddFriendByNameCompleteDelegate_Parms;
@@ -7758,7 +8071,8 @@ void UOnlineSubsystemSteamworks::AddAddFriendByNameCompleteDelegate(unsigned cha
 
 	if (!pFnAddAddFriendByNameCompleteDelegate)
 	{
-		pFnAddAddFriendByNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDADDFRIENDBYNAMECOMPLETEDELEGATE));
+		pFnAddAddFriendByNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddAddFriendByNameCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddAddFriendByNameCompleteDelegate_Parms AddAddFriendByNameCompleteDelegate_Parms;
@@ -7779,7 +8093,8 @@ void UOnlineSubsystemSteamworks::OnAddFriendByNameComplete(unsigned long bWasSuc
 
 	if (!pFnOnAddFriendByNameComplete)
 	{
-		pFnOnAddFriendByNameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONADDFRIENDBYNAMECOMPLETE));
+		pFnOnAddFriendByNameComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnAddFriendByNameComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnAddFriendByNameComplete_Parms OnAddFriendByNameComplete_Parms;
@@ -7802,7 +8117,8 @@ bool UOnlineSubsystemSteamworks::AddFriendByName(unsigned char LocalUserNum, str
 
 	if (!pFnAddFriendByName)
 	{
-		pFnAddFriendByName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFRIENDBYNAME));
+		pFnAddFriendByName = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendByName");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFriendByName_Parms AddFriendByName_Parms;
@@ -7832,7 +8148,8 @@ bool UOnlineSubsystemSteamworks::QueryUserByDisplayName(unsigned char LocalUserN
 
 	if (!pFnQueryUserByDisplayName)
 	{
-		pFnQueryUserByDisplayName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_QUERYUSERBYDISPLAYNAME));
+		pFnQueryUserByDisplayName = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.QueryUserByDisplayName");
+
 	}
 
 	UOnlineSubsystemSteamworks_execQueryUserByDisplayName_Parms QueryUserByDisplayName_Parms;
@@ -7856,7 +8173,8 @@ void UOnlineSubsystemSteamworks::ClearQueryUserByDisplayNameCompleteDelegate(uns
 
 	if (!pFnClearQueryUserByDisplayNameCompleteDelegate)
 	{
-		pFnClearQueryUserByDisplayNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARQUERYUSERBYDISPLAYNAMECOMPLETEDELEGATE));
+		pFnClearQueryUserByDisplayNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearQueryUserByDisplayNameCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearQueryUserByDisplayNameCompleteDelegate_Parms ClearQueryUserByDisplayNameCompleteDelegate_Parms;
@@ -7878,7 +8196,8 @@ void UOnlineSubsystemSteamworks::AddQueryUserByDisplayNameCompleteDelegate(unsig
 
 	if (!pFnAddQueryUserByDisplayNameCompleteDelegate)
 	{
-		pFnAddQueryUserByDisplayNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDQUERYUSERBYDISPLAYNAMECOMPLETEDELEGATE));
+		pFnAddQueryUserByDisplayNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddQueryUserByDisplayNameCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddQueryUserByDisplayNameCompleteDelegate_Parms AddQueryUserByDisplayNameCompleteDelegate_Parms;
@@ -7901,7 +8220,8 @@ void UOnlineSubsystemSteamworks::OnQueryUserByDisplayName(unsigned long bWasSucc
 
 	if (!pFnOnQueryUserByDisplayName)
 	{
-		pFnOnQueryUserByDisplayName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONQUERYUSERBYDISPLAYNAME));
+		pFnOnQueryUserByDisplayName = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnQueryUserByDisplayName");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnQueryUserByDisplayName_Parms OnQueryUserByDisplayName_Parms;
@@ -7926,7 +8246,8 @@ bool UOnlineSubsystemSteamworks::AddFriend(unsigned char LocalUserNum, struct FU
 
 	if (!pFnAddFriend)
 	{
-		pFnAddFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFRIEND));
+		pFnAddFriend = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriend");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFriend_Parms AddFriend_Parms;
@@ -7955,7 +8276,8 @@ void UOnlineSubsystemSteamworks::ClearAddFriendCompleteDelegate(unsigned char Lo
 
 	if (!pFnClearAddFriendCompleteDelegate)
 	{
-		pFnClearAddFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARADDFRIENDCOMPLETEDELEGATE));
+		pFnClearAddFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAddFriendCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearAddFriendCompleteDelegate_Parms ClearAddFriendCompleteDelegate_Parms;
@@ -7977,7 +8299,8 @@ void UOnlineSubsystemSteamworks::AddAddFriendCompleteDelegate(unsigned char Loca
 
 	if (!pFnAddAddFriendCompleteDelegate)
 	{
-		pFnAddAddFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDADDFRIENDCOMPLETEDELEGATE));
+		pFnAddAddFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddAddFriendCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddAddFriendCompleteDelegate_Parms AddAddFriendCompleteDelegate_Parms;
@@ -7999,7 +8322,8 @@ void UOnlineSubsystemSteamworks::OnAddFriendComplete(struct FUniqueNetId NewFrie
 
 	if (!pFnOnAddFriendComplete)
 	{
-		pFnOnAddFriendComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONADDFRIENDCOMPLETE));
+		pFnOnAddFriendComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnAddFriendComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnAddFriendComplete_Parms OnAddFriendComplete_Parms;
@@ -8021,7 +8345,8 @@ struct FString UOnlineSubsystemSteamworks::GetKeyboardInputResults(unsigned char
 
 	if (!pFnGetKeyboardInputResults)
 	{
-		pFnGetKeyboardInputResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETKEYBOARDINPUTRESULTS));
+		pFnGetKeyboardInputResults = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetKeyboardInputResults");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetKeyboardInputResults_Parms GetKeyboardInputResults_Parms;
@@ -8033,7 +8358,7 @@ struct FString UOnlineSubsystemSteamworks::GetKeyboardInputResults(unsigned char
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearKeyboardInputDoneDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         InputDelegate                  (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8043,7 +8368,8 @@ void UOnlineSubsystemSteamworks::ClearKeyboardInputDoneDelegate(struct FScriptDe
 
 	if (!pFnClearKeyboardInputDoneDelegate)
 	{
-		pFnClearKeyboardInputDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARKEYBOARDINPUTDONEDELEGATE));
+		pFnClearKeyboardInputDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearKeyboardInputDoneDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearKeyboardInputDoneDelegate_Parms ClearKeyboardInputDoneDelegate_Parms;
@@ -8063,7 +8389,8 @@ void UOnlineSubsystemSteamworks::AddKeyboardInputDoneDelegate(struct FScriptDele
 
 	if (!pFnAddKeyboardInputDoneDelegate)
 	{
-		pFnAddKeyboardInputDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDKEYBOARDINPUTDONEDELEGATE));
+		pFnAddKeyboardInputDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddKeyboardInputDoneDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddKeyboardInputDoneDelegate_Parms AddKeyboardInputDoneDelegate_Parms;
@@ -8083,7 +8410,8 @@ void UOnlineSubsystemSteamworks::OnKeyboardInputComplete(unsigned long bWasSucce
 
 	if (!pFnOnKeyboardInputComplete)
 	{
-		pFnOnKeyboardInputComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONKEYBOARDINPUTCOMPLETE));
+		pFnOnKeyboardInputComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnKeyboardInputComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnKeyboardInputComplete_Parms OnKeyboardInputComplete_Parms;
@@ -8093,7 +8421,7 @@ void UOnlineSubsystemSteamworks::OnKeyboardInputComplete(unsigned long bWasSucce
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HideKeyboardUI
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -8104,7 +8432,8 @@ bool UOnlineSubsystemSteamworks::HideKeyboardUI(unsigned char LocalUserNum)
 
 	if (!pFnHideKeyboardUI)
 	{
-		pFnHideKeyboardUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HIDEKEYBOARDUI));
+		pFnHideKeyboardUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HideKeyboardUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHideKeyboardUI_Parms HideKeyboardUI_Parms;
@@ -8133,7 +8462,8 @@ bool UOnlineSubsystemSteamworks::ShowKeyboardUI(unsigned char LocalUserNum, stru
 
 	if (!pFnShowKeyboardUI)
 	{
-		pFnShowKeyboardUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWKEYBOARDUI));
+		pFnShowKeyboardUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowKeyboardUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowKeyboardUI_Parms ShowKeyboardUI_Parms;
@@ -8168,7 +8498,8 @@ void UOnlineSubsystemSteamworks::SetOnlineStatus(unsigned char LocalUserNum, int
 
 	if (!pFnSetOnlineStatus)
 	{
-		pFnSetOnlineStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETONLINESTATUS));
+		pFnSetOnlineStatus = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetOnlineStatus");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetOnlineStatus_Parms SetOnlineStatus_Parms;
@@ -8196,7 +8527,8 @@ unsigned char UOnlineSubsystemSteamworks::GetTitleFileState(struct FString Filen
 
 	if (!pFnGetTitleFileState)
 	{
-		pFnGetTitleFileState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETTITLEFILESTATE));
+		pFnGetTitleFileState = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetTitleFileState");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetTitleFileState_Parms GetTitleFileState_Parms;
@@ -8220,7 +8552,8 @@ bool UOnlineSubsystemSteamworks::GetTitleFileContents(struct FString Filename, T
 
 	if (!pFnGetTitleFileContents)
 	{
-		pFnGetTitleFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETTITLEFILECONTENTS));
+		pFnGetTitleFileContents = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetTitleFileContents");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetTitleFileContents_Parms GetTitleFileContents_Parms;
@@ -8247,7 +8580,8 @@ void UOnlineSubsystemSteamworks::ClearReadTitleFileCompleteDelegate(struct FScri
 
 	if (!pFnClearReadTitleFileCompleteDelegate)
 	{
-		pFnClearReadTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADTITLEFILECOMPLETEDELEGATE));
+		pFnClearReadTitleFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadTitleFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadTitleFileCompleteDelegate_Parms ClearReadTitleFileCompleteDelegate_Parms;
@@ -8267,7 +8601,8 @@ void UOnlineSubsystemSteamworks::AddReadTitleFileCompleteDelegate(struct FScript
 
 	if (!pFnAddReadTitleFileCompleteDelegate)
 	{
-		pFnAddReadTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADTITLEFILECOMPLETEDELEGATE));
+		pFnAddReadTitleFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadTitleFileCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadTitleFileCompleteDelegate_Parms AddReadTitleFileCompleteDelegate_Parms;
@@ -8288,7 +8623,8 @@ bool UOnlineSubsystemSteamworks::ReadTitleFile(struct FString FileToRead)
 
 	if (!pFnReadTitleFile)
 	{
-		pFnReadTitleFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READTITLEFILE));
+		pFnReadTitleFile = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadTitleFile");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadTitleFile_Parms ReadTitleFile_Parms;
@@ -8315,7 +8651,8 @@ void UOnlineSubsystemSteamworks::OnReadTitleFileComplete(unsigned long bWasSucce
 
 	if (!pFnOnReadTitleFileComplete)
 	{
-		pFnOnReadTitleFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADTITLEFILECOMPLETE));
+		pFnOnReadTitleFileComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadTitleFileComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadTitleFileComplete_Parms OnReadTitleFileComplete_Parms;
@@ -8336,7 +8673,8 @@ void UOnlineSubsystemSteamworks::ClearStorageDeviceChangeDelegate(struct FScript
 
 	if (!pFnClearStorageDeviceChangeDelegate)
 	{
-		pFnClearStorageDeviceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARSTORAGEDEVICECHANGEDELEGATE));
+		pFnClearStorageDeviceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearStorageDeviceChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearStorageDeviceChangeDelegate_Parms ClearStorageDeviceChangeDelegate_Parms;
@@ -8356,7 +8694,8 @@ void UOnlineSubsystemSteamworks::AddStorageDeviceChangeDelegate(struct FScriptDe
 
 	if (!pFnAddStorageDeviceChangeDelegate)
 	{
-		pFnAddStorageDeviceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDSTORAGEDEVICECHANGEDELEGATE));
+		pFnAddStorageDeviceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddStorageDeviceChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddStorageDeviceChangeDelegate_Parms AddStorageDeviceChangeDelegate_Parms;
@@ -8375,7 +8714,8 @@ void UOnlineSubsystemSteamworks::OnStorageDeviceChange()
 
 	if (!pFnOnStorageDeviceChange)
 	{
-		pFnOnStorageDeviceChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONSTORAGEDEVICECHANGE));
+		pFnOnStorageDeviceChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnStorageDeviceChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnStorageDeviceChange_Parms OnStorageDeviceChange_Parms;
@@ -8394,7 +8734,8 @@ unsigned char UOnlineSubsystemSteamworks::GetNATType()
 
 	if (!pFnGetNATType)
 	{
-		pFnGetNATType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETNATTYPE));
+		pFnGetNATType = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetNATType");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetNATType_Parms GetNATType_Parms;
@@ -8419,7 +8760,8 @@ void UOnlineSubsystemSteamworks::ClearConnectionStatusChangeDelegate(struct FScr
 
 	if (!pFnClearConnectionStatusChangeDelegate)
 	{
-		pFnClearConnectionStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARCONNECTIONSTATUSCHANGEDELEGATE));
+		pFnClearConnectionStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearConnectionStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearConnectionStatusChangeDelegate_Parms ClearConnectionStatusChangeDelegate_Parms;
@@ -8429,7 +8771,7 @@ void UOnlineSubsystemSteamworks::ClearConnectionStatusChangeDelegate(struct FScr
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddConnectionStatusChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         ConnectionStatusDelegate       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8439,7 +8781,8 @@ void UOnlineSubsystemSteamworks::AddConnectionStatusChangeDelegate(struct FScrip
 
 	if (!pFnAddConnectionStatusChangeDelegate)
 	{
-		pFnAddConnectionStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDCONNECTIONSTATUSCHANGEDELEGATE));
+		pFnAddConnectionStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddConnectionStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddConnectionStatusChangeDelegate_Parms AddConnectionStatusChangeDelegate_Parms;
@@ -8459,7 +8802,8 @@ void UOnlineSubsystemSteamworks::OnConnectionStatusChange(unsigned char Connecti
 
 	if (!pFnOnConnectionStatusChange)
 	{
-		pFnOnConnectionStatusChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONCONNECTIONSTATUSCHANGE));
+		pFnOnConnectionStatusChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnConnectionStatusChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnConnectionStatusChange_Parms OnConnectionStatusChange_Parms;
@@ -8479,7 +8823,8 @@ unsigned char UOnlineSubsystemSteamworks::GetCurrentConnectionStatus()
 
 	if (!pFnGetCurrentConnectionStatus)
 	{
-		pFnGetCurrentConnectionStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETCURRENTCONNECTIONSTATUS));
+		pFnGetCurrentConnectionStatus = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetCurrentConnectionStatus");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetCurrentConnectionStatus_Parms GetCurrentConnectionStatus_Parms;
@@ -8501,7 +8846,8 @@ bool UOnlineSubsystemSteamworks::IsControllerConnected(int ControllerId)
 
 	if (!pFnIsControllerConnected)
 	{
-		pFnIsControllerConnected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISCONTROLLERCONNECTED));
+		pFnIsControllerConnected = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsControllerConnected");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsControllerConnected_Parms IsControllerConnected_Parms;
@@ -8523,7 +8869,8 @@ void UOnlineSubsystemSteamworks::ClearUserRestoredDelegate(struct FScriptDelegat
 
 	if (!pFnClearUserRestoredDelegate)
 	{
-		pFnClearUserRestoredDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARUSERRESTOREDDELEGATE));
+		pFnClearUserRestoredDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearUserRestoredDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearUserRestoredDelegate_Parms ClearUserRestoredDelegate_Parms;
@@ -8533,7 +8880,7 @@ void UOnlineSubsystemSteamworks::ClearUserRestoredDelegate(struct FScriptDelegat
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserRestoredDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         UserRestoredDelegate           (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8543,7 +8890,8 @@ void UOnlineSubsystemSteamworks::AddUserRestoredDelegate(struct FScriptDelegate 
 
 	if (!pFnAddUserRestoredDelegate)
 	{
-		pFnAddUserRestoredDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDUSERRESTOREDDELEGATE));
+		pFnAddUserRestoredDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserRestoredDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddUserRestoredDelegate_Parms AddUserRestoredDelegate_Parms;
@@ -8563,7 +8911,8 @@ void UOnlineSubsystemSteamworks::OnUserRestored(unsigned char ControllerId)
 
 	if (!pFnOnUserRestored)
 	{
-		pFnOnUserRestored = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONUSERRESTORED));
+		pFnOnUserRestored = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUserRestored");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnUserRestored_Parms OnUserRestored_Parms;
@@ -8583,7 +8932,8 @@ void UOnlineSubsystemSteamworks::ClearUserOrphanedDelegate(struct FScriptDelegat
 
 	if (!pFnClearUserOrphanedDelegate)
 	{
-		pFnClearUserOrphanedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARUSERORPHANEDDELEGATE));
+		pFnClearUserOrphanedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearUserOrphanedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearUserOrphanedDelegate_Parms ClearUserOrphanedDelegate_Parms;
@@ -8593,7 +8943,7 @@ void UOnlineSubsystemSteamworks::ClearUserOrphanedDelegate(struct FScriptDelegat
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserOrphanedDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         UserOrphanedDelegate           (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8603,7 +8953,8 @@ void UOnlineSubsystemSteamworks::AddUserOrphanedDelegate(struct FScriptDelegate 
 
 	if (!pFnAddUserOrphanedDelegate)
 	{
-		pFnAddUserOrphanedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDUSERORPHANEDDELEGATE));
+		pFnAddUserOrphanedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserOrphanedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddUserOrphanedDelegate_Parms AddUserOrphanedDelegate_Parms;
@@ -8623,7 +8974,8 @@ void UOnlineSubsystemSteamworks::OnUserOrphaned(unsigned char ControllerId)
 
 	if (!pFnOnUserOrphaned)
 	{
-		pFnOnUserOrphaned = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONUSERORPHANED));
+		pFnOnUserOrphaned = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUserOrphaned");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnUserOrphaned_Parms OnUserOrphaned_Parms;
@@ -8643,7 +8995,8 @@ void UOnlineSubsystemSteamworks::ClearControllerChangeDelegate(struct FScriptDel
 
 	if (!pFnClearControllerChangeDelegate)
 	{
-		pFnClearControllerChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARCONTROLLERCHANGEDELEGATE));
+		pFnClearControllerChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearControllerChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearControllerChangeDelegate_Parms ClearControllerChangeDelegate_Parms;
@@ -8653,7 +9006,7 @@ void UOnlineSubsystemSteamworks::ClearControllerChangeDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddControllerChangeDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         ControllerChangeDelegate       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8663,7 +9016,8 @@ void UOnlineSubsystemSteamworks::AddControllerChangeDelegate(struct FScriptDeleg
 
 	if (!pFnAddControllerChangeDelegate)
 	{
-		pFnAddControllerChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDCONTROLLERCHANGEDELEGATE));
+		pFnAddControllerChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddControllerChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddControllerChangeDelegate_Parms AddControllerChangeDelegate_Parms;
@@ -8684,7 +9038,8 @@ void UOnlineSubsystemSteamworks::OnControllerChange(int ControllerId, unsigned l
 
 	if (!pFnOnControllerChange)
 	{
-		pFnOnControllerChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONCONTROLLERCHANGE));
+		pFnOnControllerChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnControllerChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnControllerChange_Parms OnControllerChange_Parms;
@@ -8705,7 +9060,8 @@ void UOnlineSubsystemSteamworks::SetNetworkNotificationPosition(unsigned char Ne
 
 	if (!pFnSetNetworkNotificationPosition)
 	{
-		pFnSetNetworkNotificationPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETNETWORKNOTIFICATIONPOSITION));
+		pFnSetNetworkNotificationPosition = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetNetworkNotificationPosition");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetNetworkNotificationPosition_Parms SetNetworkNotificationPosition_Parms;
@@ -8729,7 +9085,8 @@ unsigned char UOnlineSubsystemSteamworks::GetNetworkNotificationPosition()
 
 	if (!pFnGetNetworkNotificationPosition)
 	{
-		pFnGetNetworkNotificationPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETNETWORKNOTIFICATIONPOSITION));
+		pFnGetNetworkNotificationPosition = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetNetworkNotificationPosition");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetNetworkNotificationPosition_Parms GetNetworkNotificationPosition_Parms;
@@ -8750,7 +9107,8 @@ void UOnlineSubsystemSteamworks::ClearExternalUIChangeDelegate(struct FScriptDel
 
 	if (!pFnClearExternalUIChangeDelegate)
 	{
-		pFnClearExternalUIChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEAREXTERNALUICHANGEDELEGATE));
+		pFnClearExternalUIChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearExternalUIChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearExternalUIChangeDelegate_Parms ClearExternalUIChangeDelegate_Parms;
@@ -8760,7 +9118,7 @@ void UOnlineSubsystemSteamworks::ClearExternalUIChangeDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddExternalUIChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         ExternalUIDelegate             (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8770,7 +9128,8 @@ void UOnlineSubsystemSteamworks::AddExternalUIChangeDelegate(struct FScriptDeleg
 
 	if (!pFnAddExternalUIChangeDelegate)
 	{
-		pFnAddExternalUIChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDEXTERNALUICHANGEDELEGATE));
+		pFnAddExternalUIChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddExternalUIChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddExternalUIChangeDelegate_Parms AddExternalUIChangeDelegate_Parms;
@@ -8790,7 +9149,8 @@ void UOnlineSubsystemSteamworks::OnExternalUIChange(unsigned long bIsOpening)
 
 	if (!pFnOnExternalUIChange)
 	{
-		pFnOnExternalUIChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONEXTERNALUICHANGE));
+		pFnOnExternalUIChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnExternalUIChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnExternalUIChange_Parms OnExternalUIChange_Parms;
@@ -8810,7 +9170,8 @@ void UOnlineSubsystemSteamworks::ClearLinkStatusChangeDelegate(struct FScriptDel
 
 	if (!pFnClearLinkStatusChangeDelegate)
 	{
-		pFnClearLinkStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARLINKSTATUSCHANGEDELEGATE));
+		pFnClearLinkStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearLinkStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearLinkStatusChangeDelegate_Parms ClearLinkStatusChangeDelegate_Parms;
@@ -8820,7 +9181,7 @@ void UOnlineSubsystemSteamworks::ClearLinkStatusChangeDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLinkStatusChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LinkStatusDelegate             (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8830,7 +9191,8 @@ void UOnlineSubsystemSteamworks::AddLinkStatusChangeDelegate(struct FScriptDeleg
 
 	if (!pFnAddLinkStatusChangeDelegate)
 	{
-		pFnAddLinkStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDLINKSTATUSCHANGEDELEGATE));
+		pFnAddLinkStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLinkStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddLinkStatusChangeDelegate_Parms AddLinkStatusChangeDelegate_Parms;
@@ -8850,7 +9212,8 @@ void UOnlineSubsystemSteamworks::OnLinkStatusChange(unsigned long bIsConnected)
 
 	if (!pFnOnLinkStatusChange)
 	{
-		pFnOnLinkStatusChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLINKSTATUSCHANGE));
+		pFnOnLinkStatusChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnLinkStatusChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnLinkStatusChange_Parms OnLinkStatusChange_Parms;
@@ -8860,7 +9223,7 @@ void UOnlineSubsystemSteamworks::OnLinkStatusChange(unsigned long bIsConnected)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HasLinkConnection
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -8870,7 +9233,8 @@ bool UOnlineSubsystemSteamworks::HasLinkConnection()
 
 	if (!pFnHasLinkConnection)
 	{
-		pFnHasLinkConnection = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_HASLINKCONNECTION));
+		pFnHasLinkConnection = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HasLinkConnection");
+
 	}
 
 	UOnlineSubsystemSteamworks_execHasLinkConnection_Parms HasLinkConnection_Parms;
@@ -8896,7 +9260,8 @@ struct FString UOnlineSubsystemSteamworks::eventGetPlayerNicknameFromIndex(int U
 
 	if (!pFnGetPlayerNicknameFromIndex)
 	{
-		pFnGetPlayerNicknameFromIndex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETPLAYERNICKNAMEFROMINDEX));
+		pFnGetPlayerNicknameFromIndex = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayerNicknameFromIndex");
+
 	}
 
 	UOnlineSubsystemSteamworks_eventGetPlayerNicknameFromIndex_Parms GetPlayerNicknameFromIndex_Parms;
@@ -8921,7 +9286,8 @@ bool UOnlineSubsystemSteamworks::WriteOnlinePlayerScores(struct FName SessionNam
 
 	if (!pFnWriteOnlinePlayerScores)
 	{
-		pFnWriteOnlinePlayerScores = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WRITEONLINEPLAYERSCORES));
+		pFnWriteOnlinePlayerScores = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WriteOnlinePlayerScores");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWriteOnlinePlayerScores_Parms WriteOnlinePlayerScores_Parms;
@@ -8949,7 +9315,8 @@ void UOnlineSubsystemSteamworks::ClearFlushOnlineStatsCompleteDelegate(struct FS
 
 	if (!pFnClearFlushOnlineStatsCompleteDelegate)
 	{
-		pFnClearFlushOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFLUSHONLINESTATSCOMPLETEDELEGATE));
+		pFnClearFlushOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFlushOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFlushOnlineStatsCompleteDelegate_Parms ClearFlushOnlineStatsCompleteDelegate_Parms;
@@ -8969,7 +9336,8 @@ void UOnlineSubsystemSteamworks::AddFlushOnlineStatsCompleteDelegate(struct FScr
 
 	if (!pFnAddFlushOnlineStatsCompleteDelegate)
 	{
-		pFnAddFlushOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFLUSHONLINESTATSCOMPLETEDELEGATE));
+		pFnAddFlushOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFlushOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFlushOnlineStatsCompleteDelegate_Parms AddFlushOnlineStatsCompleteDelegate_Parms;
@@ -8990,7 +9358,8 @@ void UOnlineSubsystemSteamworks::OnFlushOnlineStatsComplete(struct FName Session
 
 	if (!pFnOnFlushOnlineStatsComplete)
 	{
-		pFnOnFlushOnlineStatsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONFLUSHONLINESTATSCOMPLETE));
+		pFnOnFlushOnlineStatsComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnFlushOnlineStatsComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnFlushOnlineStatsComplete_Parms OnFlushOnlineStatsComplete_Parms;
@@ -9012,7 +9381,8 @@ bool UOnlineSubsystemSteamworks::FlushOnlineStats(struct FName SessionName)
 
 	if (!pFnFlushOnlineStats)
 	{
-		pFnFlushOnlineStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_FLUSHONLINESTATS));
+		pFnFlushOnlineStats = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.FlushOnlineStats");
+
 	}
 
 	UOnlineSubsystemSteamworks_execFlushOnlineStats_Parms FlushOnlineStats_Parms;
@@ -9041,7 +9411,8 @@ bool UOnlineSubsystemSteamworks::WriteOnlineStats(struct FName SessionName, stru
 
 	if (!pFnWriteOnlineStats)
 	{
-		pFnWriteOnlineStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WRITEONLINESTATS));
+		pFnWriteOnlineStats = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WriteOnlineStats");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWriteOnlineStats_Parms WriteOnlineStats_Parms;
@@ -9069,7 +9440,8 @@ void UOnlineSubsystemSteamworks::FreeStats(class UOnlineStatsRead* StatsRead)
 
 	if (!pFnFreeStats)
 	{
-		pFnFreeStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_FREESTATS));
+		pFnFreeStats = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.FreeStats");
+
 	}
 
 	UOnlineSubsystemSteamworks_execFreeStats_Parms FreeStats_Parms;
@@ -9093,7 +9465,8 @@ void UOnlineSubsystemSteamworks::ClearReadOnlineStatsCompleteDelegate(struct FSc
 
 	if (!pFnClearReadOnlineStatsCompleteDelegate)
 	{
-		pFnClearReadOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADONLINESTATSCOMPLETEDELEGATE));
+		pFnClearReadOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadOnlineStatsCompleteDelegate_Parms ClearReadOnlineStatsCompleteDelegate_Parms;
@@ -9113,7 +9486,8 @@ void UOnlineSubsystemSteamworks::AddReadOnlineStatsCompleteDelegate(struct FScri
 
 	if (!pFnAddReadOnlineStatsCompleteDelegate)
 	{
-		pFnAddReadOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADONLINESTATSCOMPLETEDELEGATE));
+		pFnAddReadOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadOnlineStatsCompleteDelegate_Parms AddReadOnlineStatsCompleteDelegate_Parms;
@@ -9133,7 +9507,8 @@ void UOnlineSubsystemSteamworks::OnReadOnlineStatsComplete(unsigned long bWasSuc
 
 	if (!pFnOnReadOnlineStatsComplete)
 	{
-		pFnOnReadOnlineStatsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADONLINESTATSCOMPLETE));
+		pFnOnReadOnlineStatsComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadOnlineStatsComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadOnlineStatsComplete_Parms OnReadOnlineStatsComplete_Parms;
@@ -9156,7 +9531,8 @@ bool UOnlineSubsystemSteamworks::ReadOnlineStatsByRankAroundPlayer(unsigned char
 
 	if (!pFnReadOnlineStatsByRankAroundPlayer)
 	{
-		pFnReadOnlineStatsByRankAroundPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READONLINESTATSBYRANKAROUNDPLAYER));
+		pFnReadOnlineStatsByRankAroundPlayer = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadOnlineStatsByRankAroundPlayer");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadOnlineStatsByRankAroundPlayer_Parms ReadOnlineStatsByRankAroundPlayer_Parms;
@@ -9188,7 +9564,8 @@ bool UOnlineSubsystemSteamworks::ReadOnlineStatsByRank(unsigned char LocalUserNu
 
 	if (!pFnReadOnlineStatsByRank)
 	{
-		pFnReadOnlineStatsByRank = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READONLINESTATSBYRANK));
+		pFnReadOnlineStatsByRank = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadOnlineStatsByRank");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadOnlineStatsByRank_Parms ReadOnlineStatsByRank_Parms;
@@ -9219,7 +9596,8 @@ bool UOnlineSubsystemSteamworks::ReadOnlineStatsForFriends(unsigned char LocalUs
 
 	if (!pFnReadOnlineStatsForFriends)
 	{
-		pFnReadOnlineStatsForFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READONLINESTATSFORFRIENDS));
+		pFnReadOnlineStatsForFriends = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadOnlineStatsForFriends");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadOnlineStatsForFriends_Parms ReadOnlineStatsForFriends_Parms;
@@ -9249,7 +9627,8 @@ bool UOnlineSubsystemSteamworks::ReadOnlineStats(unsigned char LocalUserNum, cla
 
 	if (!pFnReadOnlineStats)
 	{
-		pFnReadOnlineStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READONLINESTATS));
+		pFnReadOnlineStats = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadOnlineStats");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadOnlineStats_Parms ReadOnlineStats_Parms;
@@ -9279,7 +9658,8 @@ bool UOnlineSubsystemSteamworks::SetSpeechRecognitionObject(unsigned char LocalU
 
 	if (!pFnSetSpeechRecognitionObject)
 	{
-		pFnSetSpeechRecognitionObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETSPEECHRECOGNITIONOBJECT));
+		pFnSetSpeechRecognitionObject = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetSpeechRecognitionObject");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetSpeechRecognitionObject_Parms SetSpeechRecognitionObject_Parms;
@@ -9308,7 +9688,8 @@ bool UOnlineSubsystemSteamworks::SelectVocabulary(unsigned char LocalUserNum, in
 
 	if (!pFnSelectVocabulary)
 	{
-		pFnSelectVocabulary = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SELECTVOCABULARY));
+		pFnSelectVocabulary = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SelectVocabulary");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSelectVocabulary_Parms SelectVocabulary_Parms;
@@ -9336,7 +9717,8 @@ void UOnlineSubsystemSteamworks::ClearRecognitionCompleteDelegate(unsigned char 
 
 	if (!pFnClearRecognitionCompleteDelegate)
 	{
-		pFnClearRecognitionCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARRECOGNITIONCOMPLETEDELEGATE));
+		pFnClearRecognitionCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearRecognitionCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearRecognitionCompleteDelegate_Parms ClearRecognitionCompleteDelegate_Parms;
@@ -9358,7 +9740,8 @@ void UOnlineSubsystemSteamworks::AddRecognitionCompleteDelegate(unsigned char Lo
 
 	if (!pFnAddRecognitionCompleteDelegate)
 	{
-		pFnAddRecognitionCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDRECOGNITIONCOMPLETEDELEGATE));
+		pFnAddRecognitionCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddRecognitionCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddRecognitionCompleteDelegate_Parms AddRecognitionCompleteDelegate_Parms;
@@ -9378,7 +9761,8 @@ void UOnlineSubsystemSteamworks::OnRecognitionComplete()
 
 	if (!pFnOnRecognitionComplete)
 	{
-		pFnOnRecognitionComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONRECOGNITIONCOMPLETE));
+		pFnOnRecognitionComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnRecognitionComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnRecognitionComplete_Parms OnRecognitionComplete_Parms;
@@ -9399,7 +9783,8 @@ bool UOnlineSubsystemSteamworks::GetRecognitionResults(unsigned char LocalUserNu
 
 	if (!pFnGetRecognitionResults)
 	{
-		pFnGetRecognitionResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETRECOGNITIONRESULTS));
+		pFnGetRecognitionResults = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetRecognitionResults");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetRecognitionResults_Parms GetRecognitionResults_Parms;
@@ -9427,7 +9812,8 @@ bool UOnlineSubsystemSteamworks::StopSpeechRecognition(unsigned char LocalUserNu
 
 	if (!pFnStopSpeechRecognition)
 	{
-		pFnStopSpeechRecognition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_STOPSPEECHRECOGNITION));
+		pFnStopSpeechRecognition = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.StopSpeechRecognition");
+
 	}
 
 	UOnlineSubsystemSteamworks_execStopSpeechRecognition_Parms StopSpeechRecognition_Parms;
@@ -9454,7 +9840,8 @@ bool UOnlineSubsystemSteamworks::StartSpeechRecognition(unsigned char LocalUserN
 
 	if (!pFnStartSpeechRecognition)
 	{
-		pFnStartSpeechRecognition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_STARTSPEECHRECOGNITION));
+		pFnStartSpeechRecognition = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.StartSpeechRecognition");
+
 	}
 
 	UOnlineSubsystemSteamworks_execStartSpeechRecognition_Parms StartSpeechRecognition_Parms;
@@ -9470,7 +9857,7 @@ bool UOnlineSubsystemSteamworks::StartSpeechRecognition(unsigned char LocalUserN
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.StopNetworkedVoice
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 
@@ -9480,7 +9867,8 @@ void UOnlineSubsystemSteamworks::StopNetworkedVoice(unsigned char LocalUserNum)
 
 	if (!pFnStopNetworkedVoice)
 	{
-		pFnStopNetworkedVoice = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_STOPNETWORKEDVOICE));
+		pFnStopNetworkedVoice = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.StopNetworkedVoice");
+
 	}
 
 	UOnlineSubsystemSteamworks_execStopNetworkedVoice_Parms StopNetworkedVoice_Parms;
@@ -9504,7 +9892,8 @@ void UOnlineSubsystemSteamworks::StartNetworkedVoice(unsigned char LocalUserNum)
 
 	if (!pFnStartNetworkedVoice)
 	{
-		pFnStartNetworkedVoice = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_STARTNETWORKEDVOICE));
+		pFnStartNetworkedVoice = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.StartNetworkedVoice");
+
 	}
 
 	UOnlineSubsystemSteamworks_execStartNetworkedVoice_Parms StartNetworkedVoice_Parms;
@@ -9528,7 +9917,8 @@ void UOnlineSubsystemSteamworks::ClearPlayerTalkingDelegate(struct FScriptDelega
 
 	if (!pFnClearPlayerTalkingDelegate)
 	{
-		pFnClearPlayerTalkingDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARPLAYERTALKINGDELEGATE));
+		pFnClearPlayerTalkingDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearPlayerTalkingDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearPlayerTalkingDelegate_Parms ClearPlayerTalkingDelegate_Parms;
@@ -9538,7 +9928,7 @@ void UOnlineSubsystemSteamworks::ClearPlayerTalkingDelegate(struct FScriptDelega
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddPlayerTalkingDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         TalkerDelegate                 (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9548,7 +9938,8 @@ void UOnlineSubsystemSteamworks::AddPlayerTalkingDelegate(struct FScriptDelegate
 
 	if (!pFnAddPlayerTalkingDelegate)
 	{
-		pFnAddPlayerTalkingDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDPLAYERTALKINGDELEGATE));
+		pFnAddPlayerTalkingDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddPlayerTalkingDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddPlayerTalkingDelegate_Parms AddPlayerTalkingDelegate_Parms;
@@ -9569,7 +9960,8 @@ void UOnlineSubsystemSteamworks::OnPlayerTalkingStateChange(struct FUniqueNetId 
 
 	if (!pFnOnPlayerTalkingStateChange)
 	{
-		pFnOnPlayerTalkingStateChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONPLAYERTALKINGSTATECHANGE));
+		pFnOnPlayerTalkingStateChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnPlayerTalkingStateChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnPlayerTalkingStateChange_Parms OnPlayerTalkingStateChange_Parms;
@@ -9593,7 +9985,8 @@ bool UOnlineSubsystemSteamworks::UnmuteRemoteTalker(unsigned char LocalUserNum, 
 
 	if (!pFnUnmuteRemoteTalker)
 	{
-		pFnUnmuteRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNMUTEREMOTETALKER));
+		pFnUnmuteRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnmuteRemoteTalker");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUnmuteRemoteTalker_Parms UnmuteRemoteTalker_Parms;
@@ -9624,7 +10017,8 @@ bool UOnlineSubsystemSteamworks::MuteRemoteTalker(unsigned char LocalUserNum, st
 
 	if (!pFnMuteRemoteTalker)
 	{
-		pFnMuteRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_MUTEREMOTETALKER));
+		pFnMuteRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.MuteRemoteTalker");
+
 	}
 
 	UOnlineSubsystemSteamworks_execMuteRemoteTalker_Parms MuteRemoteTalker_Parms;
@@ -9655,7 +10049,8 @@ bool UOnlineSubsystemSteamworks::SetRemoteTalkerPriority(unsigned char LocalUser
 
 	if (!pFnSetRemoteTalkerPriority)
 	{
-		pFnSetRemoteTalkerPriority = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETREMOTETALKERPRIORITY));
+		pFnSetRemoteTalkerPriority = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetRemoteTalkerPriority");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetRemoteTalkerPriority_Parms SetRemoteTalkerPriority_Parms;
@@ -9684,7 +10079,8 @@ bool UOnlineSubsystemSteamworks::IsHeadsetPresent(unsigned char LocalUserNum)
 
 	if (!pFnIsHeadsetPresent)
 	{
-		pFnIsHeadsetPresent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISHEADSETPRESENT));
+		pFnIsHeadsetPresent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsHeadsetPresent");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsHeadsetPresent_Parms IsHeadsetPresent_Parms;
@@ -9711,7 +10107,8 @@ bool UOnlineSubsystemSteamworks::IsRemotePlayerTalking(struct FUniqueNetId Playe
 
 	if (!pFnIsRemotePlayerTalking)
 	{
-		pFnIsRemotePlayerTalking = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISREMOTEPLAYERTALKING));
+		pFnIsRemotePlayerTalking = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsRemotePlayerTalking");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsRemotePlayerTalking_Parms IsRemotePlayerTalking_Parms;
@@ -9738,7 +10135,8 @@ bool UOnlineSubsystemSteamworks::IsLocalPlayerTalking(unsigned char LocalUserNum
 
 	if (!pFnIsLocalPlayerTalking)
 	{
-		pFnIsLocalPlayerTalking = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISLOCALPLAYERTALKING));
+		pFnIsLocalPlayerTalking = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsLocalPlayerTalking");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsLocalPlayerTalking_Parms IsLocalPlayerTalking_Parms;
@@ -9765,7 +10163,8 @@ bool UOnlineSubsystemSteamworks::UnregisterRemoteTalker(struct FUniqueNetId Play
 
 	if (!pFnUnregisterRemoteTalker)
 	{
-		pFnUnregisterRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNREGISTERREMOTETALKER));
+		pFnUnregisterRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnregisterRemoteTalker");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUnregisterRemoteTalker_Parms UnregisterRemoteTalker_Parms;
@@ -9792,7 +10191,8 @@ bool UOnlineSubsystemSteamworks::RegisterRemoteTalker(struct FUniqueNetId Player
 
 	if (!pFnRegisterRemoteTalker)
 	{
-		pFnRegisterRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REGISTERREMOTETALKER));
+		pFnRegisterRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RegisterRemoteTalker");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRegisterRemoteTalker_Parms RegisterRemoteTalker_Parms;
@@ -9808,7 +10208,7 @@ bool UOnlineSubsystemSteamworks::RegisterRemoteTalker(struct FUniqueNetId Player
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnregisterLocalTalker
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -9819,7 +10219,8 @@ bool UOnlineSubsystemSteamworks::UnregisterLocalTalker(unsigned char LocalUserNu
 
 	if (!pFnUnregisterLocalTalker)
 	{
-		pFnUnregisterLocalTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_UNREGISTERLOCALTALKER));
+		pFnUnregisterLocalTalker = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnregisterLocalTalker");
+
 	}
 
 	UOnlineSubsystemSteamworks_execUnregisterLocalTalker_Parms UnregisterLocalTalker_Parms;
@@ -9846,7 +10247,8 @@ bool UOnlineSubsystemSteamworks::RegisterLocalTalker(unsigned char LocalUserNum)
 
 	if (!pFnRegisterLocalTalker)
 	{
-		pFnRegisterLocalTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REGISTERLOCALTALKER));
+		pFnRegisterLocalTalker = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RegisterLocalTalker");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRegisterLocalTalker_Parms RegisterLocalTalker_Parms;
@@ -9862,7 +10264,7 @@ bool UOnlineSubsystemSteamworks::RegisterLocalTalker(unsigned char LocalUserNum)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendsList
-// [0x00424401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00434401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -9876,7 +10278,8 @@ unsigned char UOnlineSubsystemSteamworks::GetFriendsList(unsigned char LocalUser
 
 	if (!pFnGetFriendsList)
 	{
-		pFnGetFriendsList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETFRIENDSLIST));
+		pFnGetFriendsList = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendsList");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetFriendsList_Parms GetFriendsList_Parms;
@@ -9906,7 +10309,8 @@ void UOnlineSubsystemSteamworks::ClearReadFriendsCompleteDelegate(unsigned char 
 
 	if (!pFnClearReadFriendsCompleteDelegate)
 	{
-		pFnClearReadFriendsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADFRIENDSCOMPLETEDELEGATE));
+		pFnClearReadFriendsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadFriendsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadFriendsCompleteDelegate_Parms ClearReadFriendsCompleteDelegate_Parms;
@@ -9928,7 +10332,8 @@ void UOnlineSubsystemSteamworks::AddReadFriendsCompleteDelegate(unsigned char Lo
 
 	if (!pFnAddReadFriendsCompleteDelegate)
 	{
-		pFnAddReadFriendsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADFRIENDSCOMPLETEDELEGATE));
+		pFnAddReadFriendsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadFriendsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadFriendsCompleteDelegate_Parms AddReadFriendsCompleteDelegate_Parms;
@@ -9949,7 +10354,8 @@ void UOnlineSubsystemSteamworks::OnReadFriendsComplete(unsigned long bWasSuccess
 
 	if (!pFnOnReadFriendsComplete)
 	{
-		pFnOnReadFriendsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADFRIENDSCOMPLETE));
+		pFnOnReadFriendsComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadFriendsComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadFriendsComplete_Parms OnReadFriendsComplete_Parms;
@@ -9959,7 +10365,7 @@ void UOnlineSubsystemSteamworks::OnReadFriendsComplete(unsigned long bWasSuccess
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadFriendsList
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -9972,7 +10378,8 @@ bool UOnlineSubsystemSteamworks::ReadFriendsList(unsigned char LocalUserNum, int
 
 	if (!pFnReadFriendsList)
 	{
-		pFnReadFriendsList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READFRIENDSLIST));
+		pFnReadFriendsList = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadFriendsList");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadFriendsList_Parms ReadFriendsList_Parms;
@@ -10001,7 +10408,8 @@ void UOnlineSubsystemSteamworks::ClearWritePlayerStorageCompleteDelegate(unsigne
 
 	if (!pFnClearWritePlayerStorageCompleteDelegate)
 	{
-		pFnClearWritePlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARWRITEPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnClearWritePlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearWritePlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearWritePlayerStorageCompleteDelegate_Parms ClearWritePlayerStorageCompleteDelegate_Parms;
@@ -10023,7 +10431,8 @@ void UOnlineSubsystemSteamworks::AddWritePlayerStorageCompleteDelegate(unsigned 
 
 	if (!pFnAddWritePlayerStorageCompleteDelegate)
 	{
-		pFnAddWritePlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDWRITEPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnAddWritePlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddWritePlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddWritePlayerStorageCompleteDelegate_Parms AddWritePlayerStorageCompleteDelegate_Parms;
@@ -10045,7 +10454,8 @@ void UOnlineSubsystemSteamworks::OnWritePlayerStorageComplete(unsigned char Loca
 
 	if (!pFnOnWritePlayerStorageComplete)
 	{
-		pFnOnWritePlayerStorageComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONWRITEPLAYERSTORAGECOMPLETE));
+		pFnOnWritePlayerStorageComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnWritePlayerStorageComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnWritePlayerStorageComplete_Parms OnWritePlayerStorageComplete_Parms;
@@ -10069,7 +10479,8 @@ bool UOnlineSubsystemSteamworks::WritePlayerStorage(unsigned char LocalUserNum, 
 
 	if (!pFnWritePlayerStorage)
 	{
-		pFnWritePlayerStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WRITEPLAYERSTORAGE));
+		pFnWritePlayerStorage = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WritePlayerStorage");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWritePlayerStorage_Parms WritePlayerStorage_Parms;
@@ -10094,7 +10505,8 @@ class UOnlinePlayerStorage* UOnlineSubsystemSteamworks::GetPlayerStorage(unsigne
 
 	if (!pFnGetPlayerStorage)
 	{
-		pFnGetPlayerStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETPLAYERSTORAGE));
+		pFnGetPlayerStorage = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayerStorage");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetPlayerStorage_Parms GetPlayerStorage_Parms;
@@ -10117,7 +10529,8 @@ void UOnlineSubsystemSteamworks::ClearReadPlayerStorageForNetIdCompleteDelegate(
 
 	if (!pFnClearReadPlayerStorageForNetIdCompleteDelegate)
 	{
-		pFnClearReadPlayerStorageForNetIdCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADPLAYERSTORAGEFORNETIDCOMPLETEDELEGATE));
+		pFnClearReadPlayerStorageForNetIdCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadPlayerStorageForNetIdCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadPlayerStorageForNetIdCompleteDelegate_Parms ClearReadPlayerStorageForNetIdCompleteDelegate_Parms;
@@ -10139,7 +10552,8 @@ void UOnlineSubsystemSteamworks::AddReadPlayerStorageForNetIdCompleteDelegate(st
 
 	if (!pFnAddReadPlayerStorageForNetIdCompleteDelegate)
 	{
-		pFnAddReadPlayerStorageForNetIdCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADPLAYERSTORAGEFORNETIDCOMPLETEDELEGATE));
+		pFnAddReadPlayerStorageForNetIdCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadPlayerStorageForNetIdCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadPlayerStorageForNetIdCompleteDelegate_Parms AddReadPlayerStorageForNetIdCompleteDelegate_Parms;
@@ -10161,7 +10575,8 @@ void UOnlineSubsystemSteamworks::OnReadPlayerStorageForNetIdComplete(struct FUni
 
 	if (!pFnOnReadPlayerStorageForNetIdComplete)
 	{
-		pFnOnReadPlayerStorageForNetIdComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADPLAYERSTORAGEFORNETIDCOMPLETE));
+		pFnOnReadPlayerStorageForNetIdComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadPlayerStorageForNetIdComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadPlayerStorageForNetIdComplete_Parms OnReadPlayerStorageForNetIdComplete_Parms;
@@ -10185,7 +10600,8 @@ bool UOnlineSubsystemSteamworks::ReadPlayerStorageForNetId(unsigned char LocalUs
 
 	if (!pFnReadPlayerStorageForNetId)
 	{
-		pFnReadPlayerStorageForNetId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READPLAYERSTORAGEFORNETID));
+		pFnReadPlayerStorageForNetId = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadPlayerStorageForNetId");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadPlayerStorageForNetId_Parms ReadPlayerStorageForNetId_Parms;
@@ -10210,7 +10626,8 @@ void UOnlineSubsystemSteamworks::ClearReadPlayerStorageCompleteDelegate(unsigned
 
 	if (!pFnClearReadPlayerStorageCompleteDelegate)
 	{
-		pFnClearReadPlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnClearReadPlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadPlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadPlayerStorageCompleteDelegate_Parms ClearReadPlayerStorageCompleteDelegate_Parms;
@@ -10232,7 +10649,8 @@ void UOnlineSubsystemSteamworks::AddReadPlayerStorageCompleteDelegate(unsigned c
 
 	if (!pFnAddReadPlayerStorageCompleteDelegate)
 	{
-		pFnAddReadPlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnAddReadPlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadPlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadPlayerStorageCompleteDelegate_Parms AddReadPlayerStorageCompleteDelegate_Parms;
@@ -10254,7 +10672,8 @@ void UOnlineSubsystemSteamworks::OnReadPlayerStorageComplete(unsigned char Local
 
 	if (!pFnOnReadPlayerStorageComplete)
 	{
-		pFnOnReadPlayerStorageComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADPLAYERSTORAGECOMPLETE));
+		pFnOnReadPlayerStorageComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadPlayerStorageComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadPlayerStorageComplete_Parms OnReadPlayerStorageComplete_Parms;
@@ -10278,7 +10697,8 @@ bool UOnlineSubsystemSteamworks::ReadPlayerStorage(unsigned char LocalUserNum, c
 
 	if (!pFnReadPlayerStorage)
 	{
-		pFnReadPlayerStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READPLAYERSTORAGE));
+		pFnReadPlayerStorage = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadPlayerStorage");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadPlayerStorage_Parms ReadPlayerStorage_Parms;
@@ -10303,7 +10723,8 @@ void UOnlineSubsystemSteamworks::ClearWriteProfileSettingsCompleteDelegate(unsig
 
 	if (!pFnClearWriteProfileSettingsCompleteDelegate)
 	{
-		pFnClearWriteProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARWRITEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnClearWriteProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearWriteProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearWriteProfileSettingsCompleteDelegate_Parms ClearWriteProfileSettingsCompleteDelegate_Parms;
@@ -10325,7 +10746,8 @@ void UOnlineSubsystemSteamworks::AddWriteProfileSettingsCompleteDelegate(unsigne
 
 	if (!pFnAddWriteProfileSettingsCompleteDelegate)
 	{
-		pFnAddWriteProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDWRITEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnAddWriteProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddWriteProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddWriteProfileSettingsCompleteDelegate_Parms AddWriteProfileSettingsCompleteDelegate_Parms;
@@ -10347,7 +10769,8 @@ void UOnlineSubsystemSteamworks::OnWriteProfileSettingsComplete(unsigned char Lo
 
 	if (!pFnOnWriteProfileSettingsComplete)
 	{
-		pFnOnWriteProfileSettingsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONWRITEPROFILESETTINGSCOMPLETE));
+		pFnOnWriteProfileSettingsComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnWriteProfileSettingsComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnWriteProfileSettingsComplete_Parms OnWriteProfileSettingsComplete_Parms;
@@ -10370,7 +10793,8 @@ bool UOnlineSubsystemSteamworks::WriteProfileSettings(unsigned char LocalUserNum
 
 	if (!pFnWriteProfileSettings)
 	{
-		pFnWriteProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_WRITEPROFILESETTINGS));
+		pFnWriteProfileSettings = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WriteProfileSettings");
+
 	}
 
 	UOnlineSubsystemSteamworks_execWriteProfileSettings_Parms WriteProfileSettings_Parms;
@@ -10398,7 +10822,8 @@ class UOnlineProfileSettings* UOnlineSubsystemSteamworks::GetProfileSettings(uns
 
 	if (!pFnGetProfileSettings)
 	{
-		pFnGetProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETPROFILESETTINGS));
+		pFnGetProfileSettings = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetProfileSettings");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetProfileSettings_Parms GetProfileSettings_Parms;
@@ -10421,7 +10846,8 @@ void UOnlineSubsystemSteamworks::ClearReadProfileSettingsCompleteDelegate(unsign
 
 	if (!pFnClearReadProfileSettingsCompleteDelegate)
 	{
-		pFnClearReadProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARREADPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnClearReadProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearReadProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearReadProfileSettingsCompleteDelegate_Parms ClearReadProfileSettingsCompleteDelegate_Parms;
@@ -10443,7 +10869,8 @@ void UOnlineSubsystemSteamworks::AddReadProfileSettingsCompleteDelegate(unsigned
 
 	if (!pFnAddReadProfileSettingsCompleteDelegate)
 	{
-		pFnAddReadProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDREADPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnAddReadProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddReadProfileSettingsCompleteDelegate_Parms AddReadProfileSettingsCompleteDelegate_Parms;
@@ -10465,7 +10892,8 @@ void UOnlineSubsystemSteamworks::OnReadProfileSettingsComplete(unsigned char Loc
 
 	if (!pFnOnReadProfileSettingsComplete)
 	{
-		pFnOnReadProfileSettingsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONREADPROFILESETTINGSCOMPLETE));
+		pFnOnReadProfileSettingsComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnReadProfileSettingsComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnReadProfileSettingsComplete_Parms OnReadProfileSettingsComplete_Parms;
@@ -10488,7 +10916,8 @@ bool UOnlineSubsystemSteamworks::ReadProfileSettings(unsigned char LocalUserNum,
 
 	if (!pFnReadProfileSettings)
 	{
-		pFnReadProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_READPROFILESETTINGS));
+		pFnReadProfileSettings = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadProfileSettings");
+
 	}
 
 	UOnlineSubsystemSteamworks_execReadProfileSettings_Parms ReadProfileSettings_Parms;
@@ -10516,7 +10945,8 @@ void UOnlineSubsystemSteamworks::ClearFriendsChangeDelegate(unsigned char LocalU
 
 	if (!pFnClearFriendsChangeDelegate)
 	{
-		pFnClearFriendsChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFRIENDSCHANGEDELEGATE));
+		pFnClearFriendsChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFriendsChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFriendsChangeDelegate_Parms ClearFriendsChangeDelegate_Parms;
@@ -10538,7 +10968,8 @@ void UOnlineSubsystemSteamworks::ClearAvatarChangeDelegate(unsigned char LocalUs
 
 	if (!pFnClearAvatarChangeDelegate)
 	{
-		pFnClearAvatarChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARAVATARCHANGEDELEGATE));
+		pFnClearAvatarChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAvatarChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearAvatarChangeDelegate_Parms ClearAvatarChangeDelegate_Parms;
@@ -10560,7 +10991,8 @@ void UOnlineSubsystemSteamworks::AddAvatarChangeDelegate(unsigned char LocalUser
 
 	if (!pFnAddAvatarChangeDelegate)
 	{
-		pFnAddAvatarChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDAVATARCHANGEDELEGATE));
+		pFnAddAvatarChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddAvatarChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddAvatarChangeDelegate_Parms AddAvatarChangeDelegate_Parms;
@@ -10571,7 +11003,7 @@ void UOnlineSubsystemSteamworks::AddAvatarChangeDelegate(unsigned char LocalUser
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendPresence
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FOnlineFriend           FriendData                     (CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -10581,7 +11013,8 @@ void UOnlineSubsystemSteamworks::GetFriendPresence(struct FOnlineFriend& FriendD
 
 	if (!pFnGetFriendPresence)
 	{
-		pFnGetFriendPresence = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETFRIENDPRESENCE));
+		pFnGetFriendPresence = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendPresence");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetFriendPresence_Parms GetFriendPresence_Parms;
@@ -10606,7 +11039,8 @@ void UOnlineSubsystemSteamworks::ClearFriendPresenceChangeDelegate(unsigned char
 
 	if (!pFnClearFriendPresenceChangeDelegate)
 	{
-		pFnClearFriendPresenceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARFRIENDPRESENCECHANGEDELEGATE));
+		pFnClearFriendPresenceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearFriendPresenceChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearFriendPresenceChangeDelegate_Parms ClearFriendPresenceChangeDelegate_Parms;
@@ -10617,7 +11051,7 @@ void UOnlineSubsystemSteamworks::ClearFriendPresenceChangeDelegate(unsigned char
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendPresenceChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         PresenceDelegate               (CPF_Parm | CPF_NeedCtorLink)
@@ -10628,7 +11062,8 @@ void UOnlineSubsystemSteamworks::AddFriendPresenceChangeDelegate(unsigned char L
 
 	if (!pFnAddFriendPresenceChangeDelegate)
 	{
-		pFnAddFriendPresenceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFRIENDPRESENCECHANGEDELEGATE));
+		pFnAddFriendPresenceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendPresenceChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFriendPresenceChangeDelegate_Parms AddFriendPresenceChangeDelegate_Parms;
@@ -10639,7 +11074,7 @@ void UOnlineSubsystemSteamworks::AddFriendPresenceChangeDelegate(unsigned char L
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendsChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         FriendsDelegate                (CPF_Parm | CPF_NeedCtorLink)
@@ -10650,7 +11085,8 @@ void UOnlineSubsystemSteamworks::AddFriendsChangeDelegate(unsigned char LocalUse
 
 	if (!pFnAddFriendsChangeDelegate)
 	{
-		pFnAddFriendsChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDFRIENDSCHANGEDELEGATE));
+		pFnAddFriendsChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendsChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddFriendsChangeDelegate_Parms AddFriendsChangeDelegate_Parms;
@@ -10671,7 +11107,8 @@ void UOnlineSubsystemSteamworks::ClearMutingChangeDelegate(struct FScriptDelegat
 
 	if (!pFnClearMutingChangeDelegate)
 	{
-		pFnClearMutingChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARMUTINGCHANGEDELEGATE));
+		pFnClearMutingChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearMutingChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearMutingChangeDelegate_Parms ClearMutingChangeDelegate_Parms;
@@ -10691,7 +11128,8 @@ void UOnlineSubsystemSteamworks::AddMutingChangeDelegate(struct FScriptDelegate 
 
 	if (!pFnAddMutingChangeDelegate)
 	{
-		pFnAddMutingChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDMUTINGCHANGEDELEGATE));
+		pFnAddMutingChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddMutingChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddMutingChangeDelegate_Parms AddMutingChangeDelegate_Parms;
@@ -10711,7 +11149,8 @@ void UOnlineSubsystemSteamworks::ClearLoginCancelledDelegate(struct FScriptDeleg
 
 	if (!pFnClearLoginCancelledDelegate)
 	{
-		pFnClearLoginCancelledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARLOGINCANCELLEDDELEGATE));
+		pFnClearLoginCancelledDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearLoginCancelledDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearLoginCancelledDelegate_Parms ClearLoginCancelledDelegate_Parms;
@@ -10731,7 +11170,8 @@ void UOnlineSubsystemSteamworks::AddLoginCancelledDelegate(struct FScriptDelegat
 
 	if (!pFnAddLoginCancelledDelegate)
 	{
-		pFnAddLoginCancelledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDLOGINCANCELLEDDELEGATE));
+		pFnAddLoginCancelledDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginCancelledDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddLoginCancelledDelegate_Parms AddLoginCancelledDelegate_Parms;
@@ -10752,7 +11192,8 @@ void UOnlineSubsystemSteamworks::ClearLoginStatusChangeDelegate(struct FScriptDe
 
 	if (!pFnClearLoginStatusChangeDelegate)
 	{
-		pFnClearLoginStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARLOGINSTATUSCHANGEDELEGATE));
+		pFnClearLoginStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearLoginStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearLoginStatusChangeDelegate_Parms ClearLoginStatusChangeDelegate_Parms;
@@ -10763,7 +11204,7 @@ void UOnlineSubsystemSteamworks::ClearLoginStatusChangeDelegate(struct FScriptDe
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginStatusChangeDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LoginStatusDelegate            (CPF_Parm | CPF_NeedCtorLink)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -10774,7 +11215,8 @@ void UOnlineSubsystemSteamworks::AddLoginStatusChangeDelegate(struct FScriptDele
 
 	if (!pFnAddLoginStatusChangeDelegate)
 	{
-		pFnAddLoginStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDLOGINSTATUSCHANGEDELEGATE));
+		pFnAddLoginStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddLoginStatusChangeDelegate_Parms AddLoginStatusChangeDelegate_Parms;
@@ -10796,7 +11238,8 @@ void UOnlineSubsystemSteamworks::OnLoginStatusChange(unsigned char NewStatus, st
 
 	if (!pFnOnLoginStatusChange)
 	{
-		pFnOnLoginStatusChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLOGINSTATUSCHANGE));
+		pFnOnLoginStatusChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnLoginStatusChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnLoginStatusChange_Parms OnLoginStatusChange_Parms;
@@ -10817,7 +11260,8 @@ void UOnlineSubsystemSteamworks::ClearLoginChangeDelegate(struct FScriptDelegate
 
 	if (!pFnClearLoginChangeDelegate)
 	{
-		pFnClearLoginChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARLOGINCHANGEDELEGATE));
+		pFnClearLoginChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearLoginChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearLoginChangeDelegate_Parms ClearLoginChangeDelegate_Parms;
@@ -10827,7 +11271,7 @@ void UOnlineSubsystemSteamworks::ClearLoginChangeDelegate(struct FScriptDelegate
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LoginDelegate                  (CPF_Parm | CPF_NeedCtorLink)
 
@@ -10837,7 +11281,8 @@ void UOnlineSubsystemSteamworks::AddLoginChangeDelegate(struct FScriptDelegate L
 
 	if (!pFnAddLoginChangeDelegate)
 	{
-		pFnAddLoginChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDLOGINCHANGEDELEGATE));
+		pFnAddLoginChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginChangeDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddLoginChangeDelegate_Parms AddLoginChangeDelegate_Parms;
@@ -10857,7 +11302,8 @@ void UOnlineSubsystemSteamworks::ClearUserSignInCompleteDelegate(struct FScriptD
 
 	if (!pFnClearUserSignInCompleteDelegate)
 	{
-		pFnClearUserSignInCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARUSERSIGNINCOMPLETEDELEGATE));
+		pFnClearUserSignInCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearUserSignInCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearUserSignInCompleteDelegate_Parms ClearUserSignInCompleteDelegate_Parms;
@@ -10877,7 +11323,8 @@ void UOnlineSubsystemSteamworks::AddUserSignInCompleteDelegate(struct FScriptDel
 
 	if (!pFnAddUserSignInCompleteDelegate)
 	{
-		pFnAddUserSignInCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDUSERSIGNINCOMPLETEDELEGATE));
+		pFnAddUserSignInCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserSignInCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddUserSignInCompleteDelegate_Parms AddUserSignInCompleteDelegate_Parms;
@@ -10897,7 +11344,8 @@ void UOnlineSubsystemSteamworks::ClearUserSwitchCompleteDelegate(struct FScriptD
 
 	if (!pFnClearUserSwitchCompleteDelegate)
 	{
-		pFnClearUserSwitchCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARUSERSWITCHCOMPLETEDELEGATE));
+		pFnClearUserSwitchCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearUserSwitchCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearUserSwitchCompleteDelegate_Parms ClearUserSwitchCompleteDelegate_Parms;
@@ -10907,7 +11355,7 @@ void UOnlineSubsystemSteamworks::ClearUserSwitchCompleteDelegate(struct FScriptD
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserSwitchCompleteDelegate
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         UserSwitchCompleteDelegate     (CPF_Parm | CPF_NeedCtorLink)
 
@@ -10917,7 +11365,8 @@ void UOnlineSubsystemSteamworks::AddUserSwitchCompleteDelegate(struct FScriptDel
 
 	if (!pFnAddUserSwitchCompleteDelegate)
 	{
-		pFnAddUserSwitchCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDUSERSWITCHCOMPLETEDELEGATE));
+		pFnAddUserSwitchCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserSwitchCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddUserSwitchCompleteDelegate_Parms AddUserSwitchCompleteDelegate_Parms;
@@ -10927,7 +11376,7 @@ void UOnlineSubsystemSteamworks::AddUserSwitchCompleteDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetPrimaryPlayerGamepadToLastInput
-// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
+// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::SetPrimaryPlayerGamepadToLastInput()
@@ -10936,7 +11385,8 @@ void UOnlineSubsystemSteamworks::SetPrimaryPlayerGamepadToLastInput()
 
 	if (!pFnSetPrimaryPlayerGamepadToLastInput)
 	{
-		pFnSetPrimaryPlayerGamepadToLastInput = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETPRIMARYPLAYERGAMEPADTOLASTINPUT));
+		pFnSetPrimaryPlayerGamepadToLastInput = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetPrimaryPlayerGamepadToLastInput");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetPrimaryPlayerGamepadToLastInput_Parms SetPrimaryPlayerGamepadToLastInput_Parms;
@@ -10957,7 +11407,8 @@ bool UOnlineSubsystemSteamworks::IsMuted(unsigned char LocalUserNum, struct FUni
 
 	if (!pFnIsMuted)
 	{
-		pFnIsMuted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISMUTED));
+		pFnIsMuted = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsMuted");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsMuted_Parms IsMuted_Parms;
@@ -10982,7 +11433,8 @@ bool UOnlineSubsystemSteamworks::AreAnyFriends(unsigned char LocalUserNum, TArra
 
 	if (!pFnAreAnyFriends)
 	{
-		pFnAreAnyFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_AREANYFRIENDS));
+		pFnAreAnyFriends = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AreAnyFriends");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAreAnyFriends_Parms AreAnyFriends_Parms;
@@ -11011,7 +11463,8 @@ bool UOnlineSubsystemSteamworks::IsFriend(unsigned char LocalUserNum, struct FUn
 
 	if (!pFnIsFriend)
 	{
-		pFnIsFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISFRIEND));
+		pFnIsFriend = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsFriend");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsFriend_Parms IsFriend_Parms;
@@ -11039,7 +11492,8 @@ void UOnlineSubsystemSteamworks::RequestRestrictedFeatureMessaging(unsigned char
 
 	if (!pFnRequestRestrictedFeatureMessaging)
 	{
-		pFnRequestRestrictedFeatureMessaging = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_REQUESTRESTRICTEDFEATUREMESSAGING));
+		pFnRequestRestrictedFeatureMessaging = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RequestRestrictedFeatureMessaging");
+
 	}
 
 	UOnlineSubsystemSteamworks_execRequestRestrictedFeatureMessaging_Parms RequestRestrictedFeatureMessaging_Parms;
@@ -11064,7 +11518,8 @@ bool UOnlineSubsystemSteamworks::CanUploadFitnessData(unsigned char LocalUserNum
 
 	if (!pFnCanUploadFitnessData)
 	{
-		pFnCanUploadFitnessData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANUPLOADFITNESSDATA));
+		pFnCanUploadFitnessData = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanUploadFitnessData");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanUploadFitnessData_Parms CanUploadFitnessData_Parms;
@@ -11093,7 +11548,8 @@ bool UOnlineSubsystemSteamworks::CanShareKinectContent(unsigned char LocalUserNu
 
 	if (!pFnCanShareKinectContent)
 	{
-		pFnCanShareKinectContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANSHAREKINECTCONTENT));
+		pFnCanShareKinectContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanShareKinectContent");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanShareKinectContent_Parms CanShareKinectContent_Parms;
@@ -11122,7 +11578,8 @@ bool UOnlineSubsystemSteamworks::CanShareWithSocialNetwork(unsigned char LocalUs
 
 	if (!pFnCanShareWithSocialNetwork)
 	{
-		pFnCanShareWithSocialNetwork = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANSHAREWITHSOCIALNETWORK));
+		pFnCanShareWithSocialNetwork = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanShareWithSocialNetwork");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanShareWithSocialNetwork_Parms CanShareWithSocialNetwork_Parms;
@@ -11151,7 +11608,8 @@ bool UOnlineSubsystemSteamworks::CanBrowseInternet(unsigned char LocalUserNum, u
 
 	if (!pFnCanBrowseInternet)
 	{
-		pFnCanBrowseInternet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANBROWSEINTERNET));
+		pFnCanBrowseInternet = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanBrowseInternet");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanBrowseInternet_Parms CanBrowseInternet_Parms;
@@ -11180,7 +11638,8 @@ bool UOnlineSubsystemSteamworks::CanAccessPremiumVideoContent(unsigned char Loca
 
 	if (!pFnCanAccessPremiumVideoContent)
 	{
-		pFnCanAccessPremiumVideoContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANACCESSPREMIUMVIDEOCONTENT));
+		pFnCanAccessPremiumVideoContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanAccessPremiumVideoContent");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanAccessPremiumVideoContent_Parms CanAccessPremiumVideoContent_Parms;
@@ -11209,7 +11668,8 @@ bool UOnlineSubsystemSteamworks::CanAccessPremiumContent(unsigned char LocalUser
 
 	if (!pFnCanAccessPremiumContent)
 	{
-		pFnCanAccessPremiumContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANACCESSPREMIUMCONTENT));
+		pFnCanAccessPremiumContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanAccessPremiumContent");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanAccessPremiumContent_Parms CanAccessPremiumContent_Parms;
@@ -11238,7 +11698,8 @@ bool UOnlineSubsystemSteamworks::CanUseCloudStorage(unsigned char LocalUserNum, 
 
 	if (!pFnCanUseCloudStorage)
 	{
-		pFnCanUseCloudStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANUSECLOUDSTORAGE));
+		pFnCanUseCloudStorage = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanUseCloudStorage");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanUseCloudStorage_Parms CanUseCloudStorage_Parms;
@@ -11267,7 +11728,8 @@ bool UOnlineSubsystemSteamworks::CanRecordDVRClips(unsigned char LocalUserNum, u
 
 	if (!pFnCanRecordDVRClips)
 	{
-		pFnCanRecordDVRClips = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANRECORDDVRCLIPS));
+		pFnCanRecordDVRClips = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanRecordDVRClips");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanRecordDVRClips_Parms CanRecordDVRClips_Parms;
@@ -11296,7 +11758,8 @@ bool UOnlineSubsystemSteamworks::CanShowPresenceInformation(unsigned char LocalU
 
 	if (!pFnCanShowPresenceInformation)
 	{
-		pFnCanShowPresenceInformation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANSHOWPRESENCEINFORMATION));
+		pFnCanShowPresenceInformation = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanShowPresenceInformation");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanShowPresenceInformation_Parms CanShowPresenceInformation_Parms;
@@ -11325,7 +11788,8 @@ bool UOnlineSubsystemSteamworks::CanViewPlayerProfiles(unsigned char LocalUserNu
 
 	if (!pFnCanViewPlayerProfiles)
 	{
-		pFnCanViewPlayerProfiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANVIEWPLAYERPROFILES));
+		pFnCanViewPlayerProfiles = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanViewPlayerProfiles");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanViewPlayerProfiles_Parms CanViewPlayerProfiles_Parms;
@@ -11354,7 +11818,8 @@ bool UOnlineSubsystemSteamworks::CanPurchaseContent(unsigned char LocalUserNum, 
 
 	if (!pFnCanPurchaseContent)
 	{
-		pFnCanPurchaseContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANPURCHASECONTENT));
+		pFnCanPurchaseContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanPurchaseContent");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanPurchaseContent_Parms CanPurchaseContent_Parms;
@@ -11383,7 +11848,8 @@ bool UOnlineSubsystemSteamworks::CanDownloadUserContent(unsigned char LocalUserN
 
 	if (!pFnCanDownloadUserContent)
 	{
-		pFnCanDownloadUserContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANDOWNLOADUSERCONTENT));
+		pFnCanDownloadUserContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanDownloadUserContent");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanDownloadUserContent_Parms CanDownloadUserContent_Parms;
@@ -11412,7 +11878,8 @@ bool UOnlineSubsystemSteamworks::CanShareUserCreatedContent(unsigned char LocalU
 
 	if (!pFnCanShareUserCreatedContent)
 	{
-		pFnCanShareUserCreatedContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANSHAREUSERCREATEDCONTENT));
+		pFnCanShareUserCreatedContent = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanShareUserCreatedContent");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanShareUserCreatedContent_Parms CanShareUserCreatedContent_Parms;
@@ -11441,7 +11908,8 @@ bool UOnlineSubsystemSteamworks::CanCommunicateVoice(unsigned char LocalUserNum,
 
 	if (!pFnCanCommunicateVoice)
 	{
-		pFnCanCommunicateVoice = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANCOMMUNICATEVOICE));
+		pFnCanCommunicateVoice = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanCommunicateVoice");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanCommunicateVoice_Parms CanCommunicateVoice_Parms;
@@ -11470,7 +11938,8 @@ bool UOnlineSubsystemSteamworks::CanCommunicateVideo(unsigned char LocalUserNum,
 
 	if (!pFnCanCommunicateVideo)
 	{
-		pFnCanCommunicateVideo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANCOMMUNICATEVIDEO));
+		pFnCanCommunicateVideo = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanCommunicateVideo");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanCommunicateVideo_Parms CanCommunicateVideo_Parms;
@@ -11499,7 +11968,8 @@ bool UOnlineSubsystemSteamworks::CanCommunicateText(unsigned char LocalUserNum, 
 
 	if (!pFnCanCommunicateText)
 	{
-		pFnCanCommunicateText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANCOMMUNICATETEXT));
+		pFnCanCommunicateText = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanCommunicateText");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanCommunicateText_Parms CanCommunicateText_Parms;
@@ -11514,7 +11984,7 @@ bool UOnlineSubsystemSteamworks::CanCommunicateText(unsigned char LocalUserNum, 
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanCommunicate
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -11527,7 +11997,8 @@ unsigned char UOnlineSubsystemSteamworks::CanCommunicate(unsigned char LocalUser
 
 	if (!pFnCanCommunicate)
 	{
-		pFnCanCommunicate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANCOMMUNICATE));
+		pFnCanCommunicate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanCommunicate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanCommunicate_Parms CanCommunicate_Parms;
@@ -11559,7 +12030,8 @@ bool UOnlineSubsystemSteamworks::CanPlayOnline(unsigned char LocalUserNum, unsig
 
 	if (!pFnCanPlayOnline)
 	{
-		pFnCanPlayOnline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANPLAYONLINE));
+		pFnCanPlayOnline = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanPlayOnline");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanPlayOnline_Parms CanPlayOnline_Parms;
@@ -11578,7 +12050,7 @@ bool UOnlineSubsystemSteamworks::CanPlayOnline(unsigned char LocalUserNum, unsig
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayerNickname
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -11589,7 +12061,8 @@ struct FString UOnlineSubsystemSteamworks::GetPlayerNickname(unsigned char Local
 
 	if (!pFnGetPlayerNickname)
 	{
-		pFnGetPlayerNickname = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETPLAYERNICKNAME));
+		pFnGetPlayerNickname = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayerNickname");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetPlayerNickname_Parms GetPlayerNickname_Parms;
@@ -11601,7 +12074,7 @@ struct FString UOnlineSubsystemSteamworks::GetPlayerNickname(unsigned char Local
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetUniquePlayerId
-// [0x00420003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -11613,7 +12086,8 @@ bool UOnlineSubsystemSteamworks::GetUniquePlayerId(unsigned char LocalUserNum, s
 
 	if (!pFnGetUniquePlayerId)
 	{
-		pFnGetUniquePlayerId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETUNIQUEPLAYERID));
+		pFnGetUniquePlayerId = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetUniquePlayerId");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetUniquePlayerId_Parms GetUniquePlayerId_Parms;
@@ -11637,7 +12111,8 @@ bool UOnlineSubsystemSteamworks::IsGuestLogin(unsigned char LocalUserNum)
 
 	if (!pFnIsGuestLogin)
 	{
-		pFnIsGuestLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISGUESTLOGIN));
+		pFnIsGuestLogin = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsGuestLogin");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsGuestLogin_Parms IsGuestLogin_Parms;
@@ -11649,7 +12124,7 @@ bool UOnlineSubsystemSteamworks::IsGuestLogin(unsigned char LocalUserNum)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetLoginStatus
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -11660,7 +12135,8 @@ unsigned char UOnlineSubsystemSteamworks::GetLoginStatus(unsigned char LocalUser
 
 	if (!pFnGetLoginStatus)
 	{
-		pFnGetLoginStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_GETLOGINSTATUS));
+		pFnGetLoginStatus = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetLoginStatus");
+
 	}
 
 	UOnlineSubsystemSteamworks_execGetLoginStatus_Parms GetLoginStatus_Parms;
@@ -11687,7 +12163,8 @@ void UOnlineSubsystemSteamworks::ClearLogoutCompletedDelegate(unsigned char Loca
 
 	if (!pFnClearLogoutCompletedDelegate)
 	{
-		pFnClearLogoutCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARLOGOUTCOMPLETEDDELEGATE));
+		pFnClearLogoutCompletedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearLogoutCompletedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearLogoutCompletedDelegate_Parms ClearLogoutCompletedDelegate_Parms;
@@ -11709,7 +12186,8 @@ void UOnlineSubsystemSteamworks::AddLogoutCompletedDelegate(unsigned char LocalU
 
 	if (!pFnAddLogoutCompletedDelegate)
 	{
-		pFnAddLogoutCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDLOGOUTCOMPLETEDDELEGATE));
+		pFnAddLogoutCompletedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLogoutCompletedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddLogoutCompletedDelegate_Parms AddLogoutCompletedDelegate_Parms;
@@ -11730,7 +12208,8 @@ void UOnlineSubsystemSteamworks::OnLogoutCompleted(unsigned long bWasSuccessful)
 
 	if (!pFnOnLogoutCompleted)
 	{
-		pFnOnLogoutCompleted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLOGOUTCOMPLETED));
+		pFnOnLogoutCompleted = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnLogoutCompleted");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnLogoutCompleted_Parms OnLogoutCompleted_Parms;
@@ -11751,7 +12230,8 @@ bool UOnlineSubsystemSteamworks::Logout(unsigned char LocalUserNum)
 
 	if (!pFnLogout)
 	{
-		pFnLogout = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_LOGOUT));
+		pFnLogout = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Logout");
+
 	}
 
 	UOnlineSubsystemSteamworks_execLogout_Parms Logout_Parms;
@@ -11774,7 +12254,8 @@ void UOnlineSubsystemSteamworks::ClearLoginFailedDelegate(unsigned char LocalUse
 
 	if (!pFnClearLoginFailedDelegate)
 	{
-		pFnClearLoginFailedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CLEARLOGINFAILEDDELEGATE));
+		pFnClearLoginFailedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearLoginFailedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execClearLoginFailedDelegate_Parms ClearLoginFailedDelegate_Parms;
@@ -11785,7 +12266,7 @@ void UOnlineSubsystemSteamworks::ClearLoginFailedDelegate(unsigned char LocalUse
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginFailedDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         LoginFailedDelegate            (CPF_Parm | CPF_NeedCtorLink)
@@ -11796,7 +12277,8 @@ void UOnlineSubsystemSteamworks::AddLoginFailedDelegate(unsigned char LocalUserN
 
 	if (!pFnAddLoginFailedDelegate)
 	{
-		pFnAddLoginFailedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ADDLOGINFAILEDDELEGATE));
+		pFnAddLoginFailedDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginFailedDelegate");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAddLoginFailedDelegate_Parms AddLoginFailedDelegate_Parms;
@@ -11818,7 +12300,8 @@ void UOnlineSubsystemSteamworks::OnLoginFailed(unsigned char LocalUserNum, unsig
 
 	if (!pFnOnLoginFailed)
 	{
-		pFnOnLoginFailed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLOGINFAILED));
+		pFnOnLoginFailed = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnLoginFailed");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnLoginFailed_Parms OnLoginFailed_Parms;
@@ -11839,7 +12322,8 @@ bool UOnlineSubsystemSteamworks::AutoLogin()
 
 	if (!pFnAutoLogin)
 	{
-		pFnAutoLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_AUTOLOGIN));
+		pFnAutoLogin = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AutoLogin");
+
 	}
 
 	UOnlineSubsystemSteamworks_execAutoLogin_Parms AutoLogin_Parms;
@@ -11854,7 +12338,7 @@ bool UOnlineSubsystemSteamworks::AutoLogin()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Login
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -11868,7 +12352,8 @@ bool UOnlineSubsystemSteamworks::Login(unsigned char LocalUserNum, struct FStrin
 
 	if (!pFnLogin)
 	{
-		pFnLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_LOGIN));
+		pFnLogin = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Login");
+
 	}
 
 	UOnlineSubsystemSteamworks_execLogin_Parms Login_Parms;
@@ -11897,7 +12382,8 @@ void UOnlineSubsystemSteamworks::SetKickPlayerDialogActive(unsigned long Active)
 
 	if (!pFnSetKickPlayerDialogActive)
 	{
-		pFnSetKickPlayerDialogActive = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETKICKPLAYERDIALOGACTIVE));
+		pFnSetKickPlayerDialogActive = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetKickPlayerDialogActive");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetKickPlayerDialogActive_Parms SetKickPlayerDialogActive_Parms;
@@ -11917,7 +12403,8 @@ bool UOnlineSubsystemSteamworks::IsUserSwitchActive()
 
 	if (!pFnIsUserSwitchActive)
 	{
-		pFnIsUserSwitchActive = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ISUSERSWITCHACTIVE));
+		pFnIsUserSwitchActive = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.IsUserSwitchActive");
+
 	}
 
 	UOnlineSubsystemSteamworks_execIsUserSwitchActive_Parms IsUserSwitchActive_Parms;
@@ -11938,7 +12425,8 @@ void UOnlineSubsystemSteamworks::SetKickPreviousUser(unsigned char LocalUserNum)
 
 	if (!pFnSetKickPreviousUser)
 	{
-		pFnSetKickPreviousUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SETKICKPREVIOUSUSER));
+		pFnSetKickPreviousUser = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetKickPreviousUser");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSetKickPreviousUser_Parms SetKickPreviousUser_Parms;
@@ -11958,7 +12446,8 @@ bool UOnlineSubsystemSteamworks::SupportInGameLogin()
 
 	if (!pFnSupportInGameLogin)
 	{
-		pFnSupportInGameLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SUPPORTINGAMELOGIN));
+		pFnSupportInGameLogin = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SupportInGameLogin");
+
 	}
 
 	UOnlineSubsystemSteamworks_execSupportInGameLogin_Parms SupportInGameLogin_Parms;
@@ -11979,7 +12468,8 @@ bool UOnlineSubsystemSteamworks::ShowControllerUI()
 
 	if (!pFnShowControllerUI)
 	{
-		pFnShowControllerUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWCONTROLLERUI));
+		pFnShowControllerUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowControllerUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowControllerUI_Parms ShowControllerUI_Parms;
@@ -12001,7 +12491,8 @@ bool UOnlineSubsystemSteamworks::ShowLoginUIForOrphanedUser(unsigned char LocalU
 
 	if (!pFnShowLoginUIForOrphanedUser)
 	{
-		pFnShowLoginUIForOrphanedUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWLOGINUIFORORPHANEDUSER));
+		pFnShowLoginUIForOrphanedUser = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowLoginUIForOrphanedUser");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowLoginUIForOrphanedUser_Parms ShowLoginUIForOrphanedUser_Parms;
@@ -12025,7 +12516,8 @@ bool UOnlineSubsystemSteamworks::ShowLoginUI(unsigned char LocalUserNum, unsigne
 
 	if (!pFnShowLoginUI)
 	{
-		pFnShowLoginUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_SHOWLOGINUI));
+		pFnShowLoginUI = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ShowLoginUI");
+
 	}
 
 	UOnlineSubsystemSteamworks_execShowLoginUI_Parms ShowLoginUI_Parms;
@@ -12048,7 +12540,8 @@ void UOnlineSubsystemSteamworks::OnAvatarChange(struct FUniqueNetId PlayerID)
 
 	if (!pFnOnAvatarChange)
 	{
-		pFnOnAvatarChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONAVATARCHANGE));
+		pFnOnAvatarChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnAvatarChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnAvatarChange_Parms OnAvatarChange_Parms;
@@ -12068,7 +12561,8 @@ void UOnlineSubsystemSteamworks::FriendPresenceChange(struct FUniqueNetId Player
 
 	if (!pFnFriendPresenceChange)
 	{
-		pFnFriendPresenceChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_FRIENDPRESENCECHANGE));
+		pFnFriendPresenceChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.FriendPresenceChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execFriendPresenceChange_Parms FriendPresenceChange_Parms;
@@ -12087,7 +12581,8 @@ void UOnlineSubsystemSteamworks::OnFriendsChange()
 
 	if (!pFnOnFriendsChange)
 	{
-		pFnOnFriendsChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONFRIENDSCHANGE));
+		pFnOnFriendsChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnFriendsChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnFriendsChange_Parms OnFriendsChange_Parms;
@@ -12105,7 +12600,8 @@ void UOnlineSubsystemSteamworks::OnMutingChange()
 
 	if (!pFnOnMutingChange)
 	{
-		pFnOnMutingChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONMUTINGCHANGE));
+		pFnOnMutingChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnMutingChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnMutingChange_Parms OnMutingChange_Parms;
@@ -12123,7 +12619,8 @@ void UOnlineSubsystemSteamworks::OnLoginCancelled()
 
 	if (!pFnOnLoginCancelled)
 	{
-		pFnOnLoginCancelled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLOGINCANCELLED));
+		pFnOnLoginCancelled = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnLoginCancelled");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnLoginCancelled_Parms OnLoginCancelled_Parms;
@@ -12142,7 +12639,8 @@ void UOnlineSubsystemSteamworks::OnLoginChange(unsigned char LocalUserNum)
 
 	if (!pFnOnLoginChange)
 	{
-		pFnOnLoginChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONLOGINCHANGE));
+		pFnOnLoginChange = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnLoginChange");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnLoginChange_Parms OnLoginChange_Parms;
@@ -12162,7 +12660,8 @@ void UOnlineSubsystemSteamworks::OnUserSignInComplete(unsigned char LocalUserNum
 
 	if (!pFnOnUserSignInComplete)
 	{
-		pFnOnUserSignInComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONUSERSIGNINCOMPLETE));
+		pFnOnUserSignInComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUserSignInComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnUserSignInComplete_Parms OnUserSignInComplete_Parms;
@@ -12182,7 +12681,8 @@ void UOnlineSubsystemSteamworks::OnUserSwitchComplete(unsigned char LocalUserNum
 
 	if (!pFnOnUserSwitchComplete)
 	{
-		pFnOnUserSwitchComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_ONUSERSWITCHCOMPLETE));
+		pFnOnUserSwitchComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUserSwitchComplete");
+
 	}
 
 	UOnlineSubsystemSteamworks_execOnUserSwitchComplete_Parms OnUserSwitchComplete_Parms;
@@ -12201,7 +12701,8 @@ void UOnlineSubsystemSteamworks::eventExit()
 
 	if (!pFnExit)
 	{
-		pFnExit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_EXIT));
+		pFnExit = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Exit");
+
 	}
 
 	UOnlineSubsystemSteamworks_eventExit_Parms Exit_Parms;
@@ -12219,7 +12720,7 @@ void UOnlineSubsystemSteamworks::eventExit()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.PostInit
-// [0x00020802] (FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030802] (FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -12229,7 +12730,8 @@ bool UOnlineSubsystemSteamworks::eventPostInit()
 
 	if (!pFnPostInit)
 	{
-		pFnPostInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_POSTINIT));
+		pFnPostInit = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.PostInit");
+
 	}
 
 	UOnlineSubsystemSteamworks_eventPostInit_Parms PostInit_Parms;
@@ -12240,7 +12742,7 @@ bool UOnlineSubsystemSteamworks::eventPostInit()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Init
-// [0x00020C00] (FUNC_Native | FUNC_Event | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030C00] (FUNC_Native | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -12250,7 +12752,8 @@ bool UOnlineSubsystemSteamworks::eventInit()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_INIT));
+		pFnInit = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Init");
+
 	}
 
 	UOnlineSubsystemSteamworks_eventInit_Parms Init_Parms;
@@ -12280,7 +12783,8 @@ void UOnlineSubsystemSteamworks::CanPlayOnlineChanged(unsigned char LocalUserNum
 
 	if (!pFnCanPlayOnlineChanged)
 	{
-		pFnCanPlayOnlineChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINESUBSYSTEMSTEAMWORKS_CANPLAYONLINECHANGED));
+		pFnCanPlayOnlineChanged = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanPlayOnlineChanged");
+
 	}
 
 	UOnlineSubsystemSteamworks_execCanPlayOnlineChanged_Parms CanPlayOnlineChanged_Parms;
@@ -12300,7 +12804,8 @@ void UOnlinePurchaseInterfaceSteamworks::ClearMicroTxnResponseDelegate(struct FS
 
 	if (!pFnClearMicroTxnResponseDelegate)
 	{
-		pFnClearMicroTxnResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS_CLEARMICROTXNRESPONSEDELEGATE));
+		pFnClearMicroTxnResponseDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.ClearMicroTxnResponseDelegate");
+
 	}
 
 	UOnlinePurchaseInterfaceSteamworks_execClearMicroTxnResponseDelegate_Parms ClearMicroTxnResponseDelegate_Parms;
@@ -12320,7 +12825,8 @@ void UOnlinePurchaseInterfaceSteamworks::AddMicroTxnResponseDelegate(struct FScr
 
 	if (!pFnAddMicroTxnResponseDelegate)
 	{
-		pFnAddMicroTxnResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS_ADDMICROTXNRESPONSEDELEGATE));
+		pFnAddMicroTxnResponseDelegate = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.AddMicroTxnResponseDelegate");
+
 	}
 
 	UOnlinePurchaseInterfaceSteamworks_execAddMicroTxnResponseDelegate_Parms AddMicroTxnResponseDelegate_Parms;
@@ -12342,7 +12848,8 @@ struct FString UOnlinePurchaseInterfaceSteamworks::FormatCurrency(struct FString
 
 	if (!pFnFormatCurrency)
 	{
-		pFnFormatCurrency = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS_FORMATCURRENCY));
+		pFnFormatCurrency = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.FormatCurrency");
+
 	}
 
 	UOnlinePurchaseInterfaceSteamworks_execFormatCurrency_Parms FormatCurrency_Parms;
@@ -12355,7 +12862,7 @@ struct FString UOnlinePurchaseInterfaceSteamworks::FormatCurrency(struct FString
 };
 
 // Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.HandleGetAppPriceInfoComplete
-// [0x00840003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Private | FUNC_HasDefaults | FUNC_AllFlags)
+// [0x00850003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Private | FUNC_HasDefaults | FUNC_AllFlags)
 // Parameter info:
 // class UHttpRequestInterface*   Request                        (CPF_Parm)
 // class UHttpResponseInterface*  Response                       (CPF_Parm)
@@ -12367,7 +12874,8 @@ void UOnlinePurchaseInterfaceSteamworks::HandleGetAppPriceInfoComplete(class UHt
 
 	if (!pFnHandleGetAppPriceInfoComplete)
 	{
-		pFnHandleGetAppPriceInfoComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS_HANDLEGETAPPPRICEINFOCOMPLETE));
+		pFnHandleGetAppPriceInfoComplete = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.HandleGetAppPriceInfoComplete");
+
 	}
 
 	UOnlinePurchaseInterfaceSteamworks_execHandleGetAppPriceInfoComplete_Parms HandleGetAppPriceInfoComplete_Parms;
@@ -12379,7 +12887,7 @@ void UOnlinePurchaseInterfaceSteamworks::HandleGetAppPriceInfoComplete(class UHt
 };
 
 // Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.GetAppPriceInfo
-// [0x00C20002] (FUNC_RequiredAPI | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_AllFlags)
+// [0x00C30002] (FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -12392,7 +12900,8 @@ bool UOnlinePurchaseInterfaceSteamworks::GetAppPriceInfo(struct FScriptDelegate 
 
 	if (!pFnGetAppPriceInfo)
 	{
-		pFnGetAppPriceInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS_GETAPPPRICEINFO));
+		pFnGetAppPriceInfo = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.GetAppPriceInfo");
+
 	}
 
 	UOnlinePurchaseInterfaceSteamworks_execGetAppPriceInfo_Parms GetAppPriceInfo_Parms;
@@ -12419,7 +12928,8 @@ bool UOnlinePurchaseInterfaceSteamworks::AppIdToName(struct FString AppID, unsig
 
 	if (!pFnAppIdToName)
 	{
-		pFnAppIdToName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS_APPIDTONAME));
+		pFnAppIdToName = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.AppIdToName");
+
 	}
 
 	UOnlinePurchaseInterfaceSteamworks_execAppIdToName_Parms AppIdToName_Parms;
@@ -12446,7 +12956,8 @@ bool UOnlinePurchaseInterfaceSteamworks::AppNameToId(struct FName AppName, unsig
 
 	if (!pFnAppNameToId)
 	{
-		pFnAppNameToId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_ONLINEPURCHASEINTERFACESTEAMWORKS_APPNAMETOID));
+		pFnAppNameToId = UFunction::FindFunction("Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.AppNameToId");
+
 	}
 
 	UOnlinePurchaseInterfaceSteamworks_execAppNameToId_Parms AppNameToId_Parms;
@@ -12470,7 +12981,8 @@ bool USteamWorkshopCommandlet::eventInit()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMSTEAMWORKS_STEAMWORKSHOPCOMMANDLET_INIT));
+		pFnInit = UFunction::FindFunction("Function OnlineSubsystemSteamworks.SteamWorkshopCommandlet.Init");
+
 	}
 
 	USteamWorkshopCommandlet_eventInit_Parms Init_Parms;

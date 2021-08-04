@@ -67,7 +67,6 @@ private:
 	UProductAttribute_TitleID_TA* TitleIdAttribute = nullptr;
 	UProductAttribute_Certified_TA* CertifiedAttribute = nullptr;
 	UGFxData_PlayerTitles_TA* playertitles = nullptr;
-	UOnlineSubsystemSteamworks* onlineSubsystem = nullptr;
 	UGFxShell_TA* gfxshell = nullptr;
 	UGFxModal_X* gfxmodal = nullptr;
 	UGFxModal_X* newmodal = nullptr;
@@ -75,9 +74,16 @@ private:
 	FASColorTransform ColorTransform = FASColorTransform{};
 	uintptr_t gfxhudaddy = 0;
 	TArray<struct VCustomTitleInfo> customtitles;
+	TArray<class APRI_TA*>APRIs;
 	std::shared_ptr<ImageWrapper> image;
+	UTexture* billboards1 = nullptr;
+	UTexture* billboards2 = nullptr;
+	UTexture* stadiumlinerads1 = nullptr;
+	UTexture* stadiumlinerads2 = nullptr;
 private:
 	std::string localVersion = "147";
+	int titleHexColor;
+	int titleHexGlowColor;
 	bool versionSafe = false;
 	bool userAuthorized = false;
 	bool classesSafe = false;
@@ -89,9 +95,11 @@ private:
 	int tempitemid = 0;
 	int temppaintid = 0;
 	int tempqualityid = 0;
+	int tempcertid = 0;
 	int itemId = 0;
 	int paintId = 0;
 	int qualityId = 0;
+	int certId = 0;
 	int setRankID = 0;
 	int rankId = 0;
 	int setSeasonRewardID = 0;
@@ -100,15 +108,19 @@ private:
 	int crateitem_paint = 0;
 	int tick = 0;
 	int newping = 0;
+	int HUDTick = 0;
+	int rgbTick = 0;
 	bool allalphaboost = false;
-	bool testudasjklds = true;
+	bool setrealtitle = true;
 	bool alphabetLOL = false;
 	bool superspeedball = false;
 	bool bSetCustomTitle;
+	bool bSetCrunchyTitle;
 	int selectedtitlenum = 0;
 	int pp = 0;
 	int titleSet = 0;
 	bool bapplesauyce = false;
+	bool bapplesauyce12 = false;
 	unsigned long long largestInstanceID = 0;
 	std::vector<int> ownedProducts;
 	std::vector<int> ownedDLCs;
@@ -116,6 +128,9 @@ private:
 	std::vector<int> crateproductpaint;
 	std::vector<unsigned long long> spawneditemsInstanceIds;
 	std::shared_ptr<int> notifySpawn;
+	std::shared_ptr<int> savedCustomTitleColor;
+	std::shared_ptr<int> savedCustomTitleGlowColor;
+	std::shared_ptr<std::string> savedCustomTitleText;
 	std::shared_ptr<int> spawnPaintedSet;
 	std::filesystem::path VoltageFolder = "Voltage";
 	//std::filesystem::path CustomTexturesFolder = VoltageFolder.u8string() + "\\CustomTextureDownloads";
@@ -124,6 +139,12 @@ private:
 	TArray<struct VCustomTitleInfo> customTitles;	
 	int productidindex = 0;
 	char ACWheelsURL[256] = "https://i.imgur.com/SvEZpGf.png";
+	char CustomOrangeTeamLogoURL[256] = "https://i.imgur.com/FzIu7En.png";
+	char CustomBlueTeamLogoURL[256] = "https://i.imgur.com/FzIu7En.png";
+	char CustomAds1[256] = "https://i.imgur.com/FzIu7En.png";
+	char CustomAds2[256] = "https://i.imgur.com/FzIu7En.png";
+	char CustomAds3[256] = "https://i.imgur.com/FzIu7En.png";
+	char CustomAds4[256] = "https://i.imgur.com/FzIu7En.png";
 	char CustomTitleText[256] = "";
 	char Nothing[256] = "";
 	int	 CustomTitleColorR = 0;
@@ -132,6 +153,7 @@ private:
 	int	 CustomTitleGlowColorR = 0;
 	int	 CustomTitleGlowColorG = 0;
 	int	 CustomTitleGlowColorB = 0;
+	bool setCustomAds;
 public:
 	void checkVersion();
 	void checkUserAuthed();
@@ -161,7 +183,7 @@ public:
 	void ShowModal();
 	void SetModalBody(std::string bodytext);
 	void AddModalButton(std::string label);
-	void SetModalColor(const float& r, const float& g, const float& b);
+	void SetModalColor(int r, int g, int b);
 	void revealSequence();
 	void dumpItems();
 	void dumpTitles();
@@ -178,7 +200,7 @@ public:
 	void spawnProductCRATEITEMS(int productId, int paintId);
 	void userGiveProduct(std::vector<std::string> params);
 	void userGivePaintedProduct(std::vector<std::string> params);
-	void GiveProduct(int productId, int paintId, int qualityId);
+	UOnlineProduct_TA* GiveProduct(int productId, int paintId, int qualityId, int certId);
 	void userGiveTitle(std::vector<std::string> params);
 	void GiveTitle(FString titleid);
 	void sync(bool exiting);
@@ -189,6 +211,8 @@ public:
 	void renderCustomTexturesTab();
 	void renderGuiShitTab();
 	void renderMiscTab();
+	void renderPRIeditorTab();
+	TArray<APRI_TA*> GetPRIs();
 	void spawnDLC();
 	void spawnAllPainted();
 	void spawnCrates();
@@ -204,11 +228,12 @@ public:
 	void spawnAlphaRewards();
 	void spawnBlackMarkets();
 	UTexture* DownloadTexture(const char* url, const wchar_t* fileName);
+	void replaceAds(UTexture* billboards1, UTexture* billboards2, UTexture* stadiumlinerads1, UTexture* stadiumlinerads);
 	void RefreshCar();
 	bool SetPlayerTitle(UGFxData_PRI_TA* pri, std::string titletext, FColor titleColor, FColor titleGlowColor);
 	void SetCGTTextures();
 
-	FString TitleIDs[343]
+	std::vector<FString> TitleIDs
 	{
 FString(L"CRL_Analyst"),
 FString(L"CRL_Season_1_Champion"),
@@ -553,6 +578,9 @@ FString(L"AutoTour_03_SuperSonicLegend_1"),
 FString(L"AutoTour_03_SuperSonicLegend_2"),
 FString(L"RLOC_Season_9_Elite"),
 FString(L"White_Hat_Legend"),
+FString(L"SE_FordFreestyler"),
+FString(L"SE_FordFreestyleFinalist"),
+FString(L"SE_FordFreestyleChampion"),
 	};
 
 };

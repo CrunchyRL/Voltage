@@ -27,6 +27,7 @@
 #include <ws2tcpip.h>
 #include <comdef.h>
 #include <tchar.h>
+#include <cmath>
 #pragma comment(lib,"WinInet.Lib" )
 #pragma comment(lib,"Urlmon.Lib" )
 #pragma comment(lib,"ws2_32.lib")
@@ -51,6 +52,16 @@ std::wstring widen(const std::string& str)
 	return wstm.str();
 }
 
+std::string charToString(char* a, int size)
+{
+	int i;
+	std::string s = "";
+	for (i = 0; i < size; i++) {
+		s = s + a[i];
+	}
+	return s;
+}
+
 std::string rgbtohex(int r, int g, int b)
 {
 	std::stringstream ss;
@@ -67,6 +78,24 @@ std::string fcolortohex(FColor rgb)
 	return ss.str();
 }
 
+typedef struct
+RGB
+{
+	double r;
+	double g;
+	double b;
+};
+
+struct RGB
+color_converter(std::string hexValue)
+{
+	int IhexValue = stoi(hexValue);
+	struct RGB rgbColor;
+	rgbColor.r = ((IhexValue >> 16) & 0xFF) / 255.0; // Extract the RR byte
+	rgbColor.g = ((IhexValue >> 8) & 0xFF) / 255.0; // Extract the GG byte
+	rgbColor.b = ((IhexValue) & 0xFF) / 255.0; // Extract the BB byte
+	return (rgbColor);
+}
 
 int rgbtoint(int r, int g, int b)
 {
@@ -93,15 +122,20 @@ struct FColor fcolor(unsigned char r, unsigned char g, unsigned char b)
 	return fcolor;
 }
 
+struct FColor fcolor(FLinearColor lincolor)
+{
+	FColor fcolor;
+	fcolor.R = lincolor.R;
+	fcolor.G = lincolor.G;
+	fcolor.B = lincolor.B;
+	fcolor.A = true;
+
+	return fcolor;
+}
+
 struct FLinearColor flincolor(unsigned char r, unsigned char g, unsigned char b)
 {
-	FLinearColor flincolor;
-	flincolor.R = r;
-	flincolor.G = g;
-	flincolor.B = b;
-	flincolor.A = true;
-
-	return flincolor;
+	return Utils::GetDefaultInstanceOf<UObject>()->ColorToLinearColor(FColor{r, g, b});
 }
 
 class UProduct_TA* Voltage::GetProductFromId(const int32_t& productId)
@@ -110,13 +144,9 @@ class UProduct_TA* Voltage::GetProductFromId(const int32_t& productId)
 	{
 		if (ProductDatabase)
 		{
-			for (UProduct_TA* product : ProductDatabase->Products_New)
-			{
-				if (product && product->GetID() == productId)
-				{
-					return product;
-				}
-			}
+			UProduct_TA* product = ProductDatabase->Products_New[productId];
+				if (product)
+				return product;
 		}
 		else
 		{
@@ -125,7 +155,7 @@ class UProduct_TA* Voltage::GetProductFromId(const int32_t& productId)
 	}
 	else
 	{
-		Console.Error("(GetProductFromId) Error: RLSDK Classes are wrong, please contact Crunchy!");
+		Console.Error("[GetProductFromId] Error: RLSDK Classes are wrong, please contact Crunchy!");
 	}
 
 	return nullptr;
@@ -194,12 +224,13 @@ void Voltage::checkUserAuthed()
 	ofile.clear();
 
 	ofile << "Error! Couldn't Download the File :(" << std::endl;
+	ofile << crunchysteamid << std::endl;
 
 	ofile.close();
 
 	const wchar_t* srcURL;
-	srcURL = L"https://pastebin.com/raw/jQ2qXBGC"; 
-	if (srcURL != L"https://pastebin.com/raw/jQ2qXBGC")
+	srcURL = L"https://pastebin.com/raw/zj4ktJam"; 
+	if (srcURL != L"https://pastebin.com/raw/zj4ktJam")
 		return;
 	const wchar_t* destFile = L"authedusers.txt";
 	URLDownloadToFile(NULL, srcURL, destFile, 0, NULL);
@@ -223,10 +254,34 @@ void Voltage::checkUserAuthed()
 			{
 				userAuthorized = true;
 			}
+			else if (gameWrapper->GetSteamID() == 76561198198599905)
+			{
+				userAuthorized = true;
+			}
+			else if (gameWrapper->GetSteamID() == 76561199041479774)
+			{
+				userAuthorized = true;
+			}
+			else if (gameWrapper->GetSteamID() == 76561199070685139)
+			{
+				userAuthorized = true;
+			}
+			else if (gameWrapper->GetSteamID() == 76561199000420814)
+			{
+				userAuthorized = true;
+			}
+			else if (gameWrapper->GetSteamID() == 76561198802144166)
+			{
+				userAuthorized = true;
+			}
 		}
 		if (gameWrapper->IsUsingEpicVersion())
 		{
 			if (names.find(gameWrapper->GetEpicID()) != names.end())
+			{
+				userAuthorized = true;
+			}
+			else if (gameWrapper->GetEpicID() == "4d2214d764294baf8c9b00131f21c3c5")
 			{
 				userAuthorized = true;
 			}
@@ -256,158 +311,124 @@ void Voltage::onLoad()
 
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error(Console.GetTimestamp(true) + "[Authorization] User is not authorized!");
 			return;
 		}
 		else
 		{
-			Console.Success("(Authorization) User is authorized");
+			Console.Success(Console.GetTimestamp(true) + "[Authorization] User is authorized");
 		}
 		if (gameWrapper->IsUsingSteamVersion())
 		{
 			uintptr_t entryPoint = reinterpret_cast<uintptr_t>(GetModuleHandle(NULL));
-			uintptr_t GObjectsAddress = entryPoint + GObjects_Offset;
-			uintptr_t GNamesAddress = entryPoint + GNames_Offset;
+			uintptr_t GObjectsAddress = entryPoint + STEAMGObjects_Offset;
+			uintptr_t GNamesAddress = entryPoint + STEAMGNames_Offset;
 			GObjects = reinterpret_cast<TArray<UObject*>*>(GObjectsAddress);
 			GNames = reinterpret_cast<TArray<FNameEntry*>*>(GNamesAddress);
+		}
+		else
+		{
+			uintptr_t entryPoint = reinterpret_cast<uintptr_t>(GetModuleHandle(NULL));
+			uintptr_t GObjectsAddress = entryPoint + EPICGObjects_Offset;
+			uintptr_t GNamesAddress = entryPoint + EPICGNames_Offset;
+			GObjects = reinterpret_cast<TArray<UObject*>*>(GObjectsAddress);
+			GNames = reinterpret_cast<TArray<FNameEntry*>*>(GNamesAddress);
+		}
+		if (areGObjectsValid() && areGNamesValid())
+		{
+			Console.Initialize(VoltageFolder.u8string(), "Voltage.log");
 
-			if (areGObjectsValid() && areGNamesValid())
-			{
-				Console.Initialize(VoltageFolder.u8string(), "Voltage.log");
+			uintptr_t entryPoint = reinterpret_cast<uintptr_t>(GetModuleHandle(NULL));
 
-				Console.Notify("[Core Module] Entry Point " + Format::Hex(entryPoint, sizeof(entryPoint)));
-				Console.Notify("[Core Module] Global Objects: " + Format::Hex(GObjectsAddress, sizeof(GObjects)));
-				Console.Notify("[Core Module] Global Names: " + Format::Hex(GNamesAddress, sizeof(GNames)));
+			Console.Notify("[Core Module] Entry Point " + Format::Hex(entryPoint, sizeof(entryPoint)) + " Size: " + std::to_string(sizeof(entryPoint)));
+			Console.Notify("[Core Module] Global Objects: " + Format::Hex((uintptr_t)GObjects, sizeof(GObjects)) + " Size: " + std::to_string(sizeof(GObjects)));
+			Console.Notify("[Core Module] Global Names: " + Format::Hex((uintptr_t)GNames, sizeof(GNames)) + " Size: " + std::to_string(sizeof(GNames)));
 
-				Console.Write("[Core Module] Initialized!");
-				classesSafe = true;	
+			Console.Write("[Core Module] Initialized!");
+			classesSafe = true;
 
-				loadInstances(true);
+			loadInstances(true);
 
-				notifySpawn = std::make_shared<int>(0);
-				cvarManager->registerNotifier("mtn_dump_services", [this](std::vector<std::string> params) {dumpServices(); }, "Dumps all Rocket League Services to a json file.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_dump_functions", [this](std::vector<std::string> params) {dumpFunctions(); }, "Dumps all Rocket League Functions to a json file.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_dump_items", [this](std::vector<std::string> params) {dumpItems(); }, "Dumps all Rocket League Products to a json file.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_dump_titles", [this](std::vector<std::string> params) {dumpTitles(); }, "Dumps all Rocket League PlayerTitles to a json file.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_dump_slots", [this](std::vector<std::string> params) {dumpSlots(); }, "Dumps all Rocket League ProductSlots to a json file.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_dump_savedata", [this](std::vector<std::string> params) {dumpSaveData(); }, "Dumps all Rocket League Paints and Qualities to a json file.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_spawn", [this](std::vector<std::string> params) {userGiveProduct(params); }, "Spawns in a Item of your choice with any paint or quality value.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_paint", [this](std::vector<std::string> params) {makePaintColor(params); }, "Changes every painted item to be whatever R G B value you want.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_spawn_paintedset", [this](std::vector<std::string> params) {userGivePaintedProduct(params); }, "Spawns in a painted set of Items of your choice with any paint or quality value.", PERMISSION_MENU);
-				cvarManager->registerNotifier("mtn_sync", [this](std::vector<std::string> params) {sync(false); }, "Removes all spawned in Items from your inventory.", PERMISSION_ALL);
-				cvarManager->registerNotifier("mtn_spawn_set", [this](std::vector<std::string> params) {spawnSet(params); }, "Spawns in a set of items.", PERMISSION_ALL);
-				cvarManager->registerNotifier("mtn_crate", [this](std::vector<std::string> params) {cratesim(params); }, "Spawns in a random item from 4 types of available crates", PERMISSION_ALL);
-				cvarManager->registerNotifier("mtn_debug", [this](std::vector<std::string> params) {debug(); }, "Debug command.", PERMISSION_ALL);
-				cvarManager->registerNotifier("mtn_title", [this](std::vector<std::string> params) {userGiveTitle(params); }, "Spawns in a Title of your choice.", PERMISSION_MENU);
-				cvarManager->registerCvar("mtn_notify", "1", "Enables/disables notifying you when a MTN Dew Voltage bottle gets spawned.", true, true, 0, true, 1).bindTo(notifySpawn);
-				cvarManager->registerNotifier("123imgui_voltage", [this](std::vector<std::string> params) {Render(); }, "penis", PERMISSION_MENU);
+			notifySpawn = std::make_shared<int>(0);
+			cvarManager->registerNotifier("mtn_dump_services", [this](std::vector<std::string> params) {dumpServices(); }, "Dumps all Rocket League Services to a json file.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_dump_functions", [this](std::vector<std::string> params) {dumpFunctions(); }, "Dumps all Rocket League Functions to a json file.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_dump_items", [this](std::vector<std::string> params) {dumpItems(); }, "Dumps all Rocket League Products to a json file.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_dump_titles", [this](std::vector<std::string> params) {dumpTitles(); }, "Dumps all Rocket League PlayerTitles to a json file.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_dump_slots", [this](std::vector<std::string> params) {dumpSlots(); }, "Dumps all Rocket League ProductSlots to a json file.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_dump_savedata", [this](std::vector<std::string> params) {dumpSaveData(); }, "Dumps all Rocket League Paints and Qualities to a json file.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_spawn", [this](std::vector<std::string> params) {userGiveProduct(params); }, "Spawns in a Item of your choice with any paint or quality value.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_paint", [this](std::vector<std::string> params) {makePaintColor(params); }, "Changes every painted item to be whatever R G B value you want.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_spawn_paintedset", [this](std::vector<std::string> params) {userGivePaintedProduct(params); }, "Spawns in a painted set of Items of your choice with any paint or quality value.", PERMISSION_MENU);
+			cvarManager->registerNotifier("mtn_sync", [this](std::vector<std::string> params) {sync(false); }, "Removes all spawned in Items from your inventory.", PERMISSION_ALL);
+			cvarManager->registerNotifier("mtn_spawn_set", [this](std::vector<std::string> params) {spawnSet(params); }, "Spawns in a set of items.", PERMISSION_ALL);
+			cvarManager->registerNotifier("mtn_crate", [this](std::vector<std::string> params) {cratesim(params); }, "Spawns in a random item from 4 types of available crates", PERMISSION_ALL);
+			cvarManager->registerNotifier("mtn_debug", [this](std::vector<std::string> params) {debug(); }, "Debug command.", PERMISSION_ALL);
+			cvarManager->registerNotifier("mtn_title", [this](std::vector<std::string> params) {userGiveTitle(params); }, "Spawns in a Title of your choice.", PERMISSION_MENU);
+			cvarManager->registerCvar("mtn_notify", "1", "Enables/disables notifying you when a MTN Dew Voltage bottle gets spawned.", true, true, 0, true, 1).bindTo(notifySpawn);
+			cvarManager->registerNotifier("123imgui_voltage", [this](std::vector<std::string> params) {Render(); }, "penis", PERMISSION_MENU);
 
-				cvarManager->executeCommand("bind F9 123imgui_voltage");
+			cvarManager->executeCommand("bind F9 123imgui_voltage");
 
-				//gameWrapper->HookEvent("Function ProjectX.CheckReservation_X.StartSearch", [this](...) { getEquippedTitle(); });
-				gameWrapper->HookEvent("Function TAGame.MenuSequencer_TA.Tick", [this](...)
+			gameWrapper->HookEvent("Function TAGame.AdManager_TA.GetNextImage", [this](...)
+				{
+					if (setCustomAds)
 					{
-						UGFxData_PlayerTitles_TA* playertitles = Utils::GetInstanceOf<UGFxData_PlayerTitles_TA>();
-						if (playertitles)
+						if (billboards1 != nullptr)
 						{
-							UGFxDataStore_X* dataStore = Utils::GetInstanceOf<UGFxDataStore_X>();
-							if (dataStore)
-							{
-								FName t = FName(L"PlayerTitlesPlayerTitles");
-								FASValue count;
-								if (Utils::GetInstanceOf<UOnline_X>()->IsInMainMenu() == true && selectedtitlenum != playertitles->SelectedTitle)
-								{
-									selectedtitlenum = playertitles->SelectedTitle;
-								}
-								if (gameWrapper->GetSteamID() == crunchysteamid)
-								{
-									if (count.I != selectedtitlenum)
-									{
-										count.I = selectedtitlenum;
-										if (bSetCustomTitle)
-										{
-											dataStore->SetStringValue(t, count.I, L"Text", L"Voltage Developer");
-											dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(173, 216, 230));
-											dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(173, 216, 230));
-										}
-									}
-								}
-								else
-								{
-									if (count.I != selectedtitlenum)
-									{
-										count.I = selectedtitlenum;
-										if (bSetCustomTitle == true)
-										{
-											std::string titleText = "**BlackListed**";
-											if (CustomTitleText == "Voltage Developer" || CustomTitleText == "Voltage Owner" || CustomTitleText == "Voltage Founder" || CustomTitleText == "Nigga" || CustomTitleText == "Niga" || CustomTitleText == "Nigger" || CustomTitleText == "Faggot" || CustomTitleText == "Fag" || std::string(CustomTitleText).find("Voltage") != std::string::npos || std::string(CustomTitleText).find("Nigger") != std::string::npos || std::string(CustomTitleText).find("Nigga") != std::string::npos)
-											{
-											}
-											else
-											{
-												titleText = CustomTitleText;
-											}
-											dataStore->SetStringValue(t, count.I, L"Text", Utils::to_fstring(titleText));
-											dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(CustomTitleColorR, CustomTitleColorG, CustomTitleColorB));
-											dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
-										}
-									}
-								}
-							}
+							replaceAds(billboards1, 0, 0, 0);
 						}
-						pp++;
-					});
-				gameWrapper->HookEventWithCaller<ServerWrapper>("Function TAGame.GFxHUD_TA.UpdatePRIData", [this](ServerWrapper sw, void* params, std::string eventName)
+						if (billboards2 != nullptr)
+						{
+							replaceAds(0, billboards2, 0, 0);
+						}
+						if (stadiumlinerads1 != nullptr)
+						{
+							replaceAds(0, 0, stadiumlinerads1, 0);
+						}
+						if (stadiumlinerads2 != nullptr)
+						{
+							replaceAds(0, 0, 0, stadiumlinerads2);
+						}
+					}
+				});
+			//gameWrapper->HookEvent("Function ProjectX.CheckReservation_X.StartSearch", [this](...) { getEquippedTitle(); });
+			gameWrapper->HookEvent("Function TAGame.MenuSequencer_TA.Tick", [this](...)
+				{
+					UGFxData_PlayerTitles_TA* playertitles = Utils::GetInstanceOf<UGFxData_PlayerTitles_TA>();
+					if (playertitles)
 					{
-						AGFxHUD_TA* hud = reinterpret_cast<AGFxHUD_TA*>(sw.memory_address);
-						if (hud)
+						UGFxDataStore_X* dataStore = Utils::GetInstanceOf<UGFxDataStore_X>();
+						if (dataStore)
 						{
-							for (UGFxData_PRI_TA* pri : hud->PRIData)
+							FName t = FName(L"PlayerTitlesPlayerTitles");
+							FASValue count;
+							if (Utils::GetInstanceOf<UOnline_X>()->IsInMainMenu() == true && selectedtitlenum != playertitles->SelectedTitle)
 							{
-								if (!pri)
-									continue;
-
-								if (pri->PlayerID.Uid == 76561198252921625 && pri->PlayerID.Platform == 1)
-								{
-									SetPlayerTitle(pri, "Voltage Developer", fcolor(173, 216, 230), fcolor(173, 216, 230));
-								}
-								else
-								{
-									if (gameWrapper->IsUsingEpicVersion() && pri->PlayerID.EpicAccountId.ToString() == gameWrapper->GetEpicID())
-									{
-										SetPlayerTitle(pri, std::string(CustomTitleText), fcolor(CustomTitleColorR, CustomTitleColorG, CustomTitleColorB), fcolor(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
-									}
-									if (gameWrapper->IsUsingSteamVersion() && pri->PlayerID.Uid == gameWrapper->GetSteamID() && pri->PlayerID.Uid)
-									{
-										SetPlayerTitle(pri, std::string(CustomTitleText), fcolor(CustomTitleColorR, CustomTitleColorG, CustomTitleColorB), fcolor(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
-									}
-								}
+								selectedtitlenum = playertitles->SelectedTitle;
 							}
-						}
-
-						FName t = FName(L"PlayerTitlesPlayerTitles");
-						FASValue count;
-						if (gameWrapper->GetSteamID() == 76561198252921625)
-						{
-							count.I = selectedtitlenum;
-							if (bSetCustomTitle)
-							{
-								dataStore->SetStringValue(t, count.I, L"Text", L"Voltage Developer");
-								dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(173, 216, 230));
-								dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(173, 216, 230));
-							}
-						}
-						else
-						{
+							//if (gameWrapper->GetSteamID() == crunchysteamid)
+							//{
+							//	if (count.I != selectedtitlenum)
+							//	{
+							//		count.I = selectedtitlenum;
+							//		if (bSetCustomTitle)
+							//		{
+							//			dataStore->SetStringValue(t, count.I, L"Text", L"Voltage Developer");
+							//			dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(173, 216, 230));
+							//			dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(173, 216, 230));
+							//		}
+							//	}
+							//}
+							//else
+							//{
 							if (count.I != selectedtitlenum)
 							{
 								count.I = selectedtitlenum;
 								if (bSetCustomTitle == true)
 								{
-									std::string titleText = "NULL";
+									std::string titleText = "**BlackListed**";
 									if (CustomTitleText == "Voltage Developer" || CustomTitleText == "Voltage Owner" || CustomTitleText == "Voltage Founder" || CustomTitleText == "Nigga" || CustomTitleText == "Niga" || CustomTitleText == "Nigger" || CustomTitleText == "Faggot" || CustomTitleText == "Fag" || std::string(CustomTitleText).find("Voltage") != std::string::npos || std::string(CustomTitleText).find("Nigger") != std::string::npos || std::string(CustomTitleText).find("Nigga") != std::string::npos)
 									{
-										titleText = "**BlackListed**";
 									}
 									else
 									{
@@ -418,24 +439,66 @@ void Voltage::onLoad()
 									dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
 								}
 							}
+							//}
 						}
+					}
 				});
-			}
-			else
-			{
-				Console.Error("(onLoad) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
-			}
+			gameWrapper->HookEventWithCaller<ServerWrapper>("Function TAGame.GFxHUD_TA.UpdatePRIData", [this](ServerWrapper sw, void* params, std::string eventName)
+				{
+					AGFxHUD_TA* hud = reinterpret_cast<AGFxHUD_TA*>(sw.memory_address);
+					if (hud)
+					{
+						auto localpri = hud->GetPRIDataFromID(Utils::GetUniqueID());
+						if (localpri)
+						{
+							SetPlayerTitle(localpri, std::string(CustomTitleText), fcolor(CustomTitleColorR, CustomTitleColorG, CustomTitleColorB), fcolor(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
+						}
+					}
+					FName t = FName(L"PlayerTitlesPlayerTitles");
+					FASValue count;
+					//if (gameWrapper->GetSteamID() == 76561198252921625)
+					//{
+					//	count.I = selectedtitlenum;
+					//	if (bSetCustomTitle)
+					//	{
+					//		dataStore->SetStringValue(t, count.I, L"Text", L"Voltage Developer");
+					//		dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(173, 216, 230));
+					//		dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(173, 216, 230));
+					//	}
+					//}
+					//else
+					//{
+					if (count.I != selectedtitlenum)
+					{
+						count.I = selectedtitlenum;
+						if (bSetCustomTitle == true)
+						{
+							std::string titleText = "NULL";
+							if (CustomTitleText == "Voltage Developer" || CustomTitleText == "Voltage Owner" || CustomTitleText == "Voltage Founder" || CustomTitleText == "Nigga" || CustomTitleText == "Niga" || CustomTitleText == "Nigger" || CustomTitleText == "Faggot" || CustomTitleText == "Fag" || std::string(CustomTitleText).find("Voltage") != std::string::npos || std::string(CustomTitleText).find("Nigger") != std::string::npos || std::string(CustomTitleText).find("Nigga") != std::string::npos)
+							{
+								titleText = "**BlackListed**";
+							}
+							else
+							{
+								titleText = CustomTitleText;
+							}
+							dataStore->SetStringValue(t, count.I, L"Text", Utils::to_fstring(titleText));
+							dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(CustomTitleColorR, CustomTitleColorG, CustomTitleColorB));
+							dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
+						}
+					}
+					//}
+				});
 		}
 		else
 		{
-			Console.Warning("Error! You are using the wrong version of Voltage, make sure you downloaded: Voltage-EPIC.dll and not: Voltage.dll");
-			return;		
+			Console.Error("[Core Module] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 		cvarManager->executeCommand("cl_settings_refreshplugins");
 	}
 }
 
-bool testudasjklds = true;
+bool setrealtitle = true;
 
 void Voltage::onUnload()
 {
@@ -450,8 +513,8 @@ void Voltage::onUnload()
 void Voltage::getEquippedTitle()
 {
 	gameWrapper->UnhookEvent("Function TAGame.GFxHUD_TA.Tick");
-	cock = 0;
-	testudasjklds = true;
+	HUDTick = 0;
+	setrealtitle = true;
 	UGFxData_PlayerTitles_TA* playertitles = Utils::GetInstanceOf<UGFxData_PlayerTitles_TA>();
 	memcpy_s(&selectedtitle, sizeof(FName), &playertitles->PlayerTitles[playertitles->SelectedTitle].Id, sizeof(FName));
 	Console.Notify("Currently Equipped Title: " + selectedtitle.ToString());
@@ -469,11 +532,11 @@ void Voltage::setPRIGFxHUD(uintptr_t gfxhudaddress)
 		gfxhudaddy = gfxhudaddress;
 		for (UGFxData_PRI_TA* pri : pris)
 		{
-			if (cock > 100)
+			if (HUDTick > 100)
 			{
-				if (testudasjklds)
+				if (setrealtitle)
 				{
-					testudasjklds = false;
+					setrealtitle = false;
 						if (gameWrapper->IsUsingSteamVersion())
 						{
 							if (pri->PlayerID.Uid == gameWrapper->GetSteamID())
@@ -493,7 +556,7 @@ void Voltage::setPRIGFxHUD(uintptr_t gfxhudaddress)
 				}
 			}
 		}
-		cock++;
+		HUDTick++;
 	}
 }
 
@@ -515,7 +578,6 @@ void Voltage::loadInstances(bool log)
 		{
 			Console.Write("[Custom Titles Mod] Initialized!");
 		}
-		onlineSubsystem = Utils::GetInstanceOf<UOnlineSubsystemSteamworks>();
 		gfxshell = Utils::GetInstanceOf<UGFxShell_TA>();
 		if (gfxshell && log)
 		{
@@ -580,34 +642,13 @@ void Voltage::loadInstances(bool log)
 			if (largestInstanceID == 0)
 			{
 				classesSafe = false;
-				Console.Error("(loadInstances) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+				Console.Error("[Core Module] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 			}
 			else
 			{
 				instancesLoaded = true;
 				if (log)
 				{
-					if (gameWrapper->GetSteamID() == crunchysteamid)
-					{
-						TArray<int>AlphaItems;
-						AlphaItems.Add(32);
-						AlphaItems.Add(358);
-						AlphaItems.Add(6);
-						AlphaItems.Add(224);
-
-						for (int i = 0; i < AlphaItems.Num(); i++)
-						{
-							FOnlineProductData onlineProduct;
-							onlineProduct.ProductID = AlphaItems[i];
-							onlineProduct.AddedTimestamp = 0;
-							onlineProduct.InstanceID = newInstanceID();
-							onlineProduct.SeriesID = 0;
-							onlineProduct.TradeHold = 0;
-							UOnlineProduct_TA* product = SaveData->GiveOnlineProductData(onlineProduct);;
-							SaveData->GiveOnlineProduct(product);
-							SaveData->GiveOnlineProductHelper(product);
-						}
-					}
 					Console.Write("[Inventory Mod] Initialized! Largest instance id: " + std::to_string(largestInstanceID));
 				}
 			}
@@ -620,10 +661,12 @@ void Voltage::loadInstances(bool log)
 		else
 		{
 			classesSafe = false;
-			Console.Error("(loadInstances) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Core Module Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 }
+
+const char* cvarValue;
 
 void Voltage::dumpServices()
 {
@@ -632,7 +675,7 @@ void Voltage::dumpServices()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
@@ -661,7 +704,7 @@ void Voltage::dumpServices()
 
 		file.close();
 
-		Console.Success("(DumpServices) Successfully dumped " + std::to_string(totalServices) + " services to \"services.txt\"!");
+		Console.Success("[Dump Services] Successfully Dumped " + std::to_string(totalServices) + " services to \"services.txt\"!");
 	}
 }
 
@@ -672,7 +715,7 @@ void Voltage::dumpFunctions()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
@@ -696,7 +739,7 @@ void Voltage::dumpFunctions()
 
 		if (totalFunctions > 0)
 		{
-			Console.Success("Successfully dumped " + std::to_string(totalFunctions) + " functions to \"functions.txt\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
+			Console.Success("Successfully Dumped " + std::to_string(totalFunctions) + " functions to \"functions.txt\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
 		}
 		else
 		{
@@ -713,7 +756,7 @@ void Voltage::dumpObjectsForClass(UClass* StaticClass)
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
@@ -739,7 +782,7 @@ void Voltage::dumpObjectsForClass(UClass* StaticClass)
 
 			if (totalFunctions > 0)
 			{
-				Console.Success("Successfully dumped " + std::to_string(totalFunctions) + " objects to \"objects.txt\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
+				Console.Success("Successfully Dumped " + std::to_string(totalFunctions) + " objects to \"objects.txt\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
 			}
 			else
 			{
@@ -755,7 +798,7 @@ void Voltage::dumpObjectsForClass(UClass* StaticClass)
 	}
 	else
 	{
-		Console.Error("(Dump) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Dump] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -766,7 +809,7 @@ void Voltage::dumpItems()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 		UProductDatabase_TA* ProductDatabase = Utils::GetInstanceOf<UProductDatabase_TA>();
@@ -820,7 +863,7 @@ void Voltage::dumpItems()
 
 			ss.close();
 
-			Console.Success("Successfully dumped " + std::to_string(totalProducts) + " products to \"items.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
+			Console.Success("Successfully Dumped " + std::to_string(totalProducts) + " products to \"items.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
 		}
 		else
 		{
@@ -830,7 +873,7 @@ void Voltage::dumpItems()
 	}
 	else
 	{
-		cvarManager->log("(Dump) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		cvarManager->log("[Dump] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -841,7 +884,7 @@ void Voltage::dumpTitles()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
@@ -891,12 +934,12 @@ void Voltage::dumpTitles()
 
 		ss.close();
 
-		Console.Success("Successfully dumped " + std::to_string(totalTitles) + " titles to \"titles.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
+		Console.Success("Successfully Dumped " + std::to_string(totalTitles) + " titles to \"titles.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
 
 	}
 	else
 	{
-		Console.Error("(Dump) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Dump] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -907,7 +950,7 @@ void Voltage::dumpSlots()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
@@ -942,12 +985,12 @@ void Voltage::dumpSlots()
 
 		ss.close();
 
-		Console.Success("Successfully dumped " + std::to_string(totalSlots) + " slots to \"slots.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
+		Console.Success("Successfully Dumped " + std::to_string(totalSlots) + " slots to \"slots.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
 
 	}
 	else
 	{
-		Console.Error("(Dump) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Dump] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -958,7 +1001,7 @@ void Voltage::dumpSaveData()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
@@ -1058,7 +1101,7 @@ void Voltage::dumpSaveData()
 
 			ss.close();
 
-			Console.Success("Successfully dumped info from your save file to \"savedata.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
+			Console.Success("Successfully Dumped info from your save file to \"savedata.json\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
 		}
 		else
 		{
@@ -1068,7 +1111,7 @@ void Voltage::dumpSaveData()
 	}
 	else
 	{
-		cvarManager->log("(Dump) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		cvarManager->log("[Inventory Dumper] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -1076,48 +1119,56 @@ void Voltage::userGiveProduct(std::vector<std::string> params)
 {
 	if (classesSafe && instancesLoaded)
 	{
-		if (params.size() == 4)
+		if (params.size() == 5)
 		{
 			if (ProductDatabase)
 			{
 				int productId = stringToInt(params.at(1));
 				int paintId = stringToInt(params.at(2));
 				int qualityId = stringToInt(params.at(3));
+				int certId = stringToInt(params.at(4));
 
 				if (paintId > -1 && paintId < 19)
 				{
 					if (qualityId > -1 && qualityId < 10)
 					{
-						auto product = GetProductFromId(productId);
-
-						if (product)
+						if (certId > -1 && certId < 16)
 						{
-							GiveProduct(productId, paintId, qualityId);
+							auto product = GetProductFromId(productId);
+
+							if (product)
+							{
+								GiveProduct(productId, paintId, qualityId, certId);
+							}
+							else
+							{
+								Console.Error("[Inventory Mod] Error: Invalid product id");
+							}
 						}
 						else
 						{
-							Console.Error("(GiveProduct) Error: Invalid product id");
+							Console.Error("[Inventory Mod] Error: Invalid certification id!");
 						}
 					}
 					else
 					{
-						Console.Error("(GiveProduct) Error: Invalid quality id!");
+						Console.Error("[Inventory Mod] Error: Invalid quality id!");
 					}
 				}
 				else
 				{
-					Console.Error("(GiveProduct) Error: Invalid paint id!");
+					Console.Error("[Inventory Mod] Error: Invalid paint id!");
 				}
 			}
 			else
 			{
 				classesSafe = false;
-				Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+				Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 			}
 		}
 		else
 		{
-			Console.Write("Usage: mtn_spawn <product_id> <paint_id> <quality_id> (Enter 0 for no paint or quality)", TextColors::LightYellow);
+			Console.Warning("[Inventory Mod] Usage: mtn_spawn <product_id> <paint_id> <quality_id> <cert_id> (Enter 0 for no paint, quality or cert)");
 		}
 	}
 }
@@ -1136,24 +1187,24 @@ void Voltage::userGivePaintedProduct(std::vector<std::string> params)
 
 					if (product)
 					{	
-						GiveProduct(productId, 0, -1);
-						GiveProduct(productId, 1, -1);
-						GiveProduct(productId, 2, -1);
-						GiveProduct(productId, 3, -1);
-						GiveProduct(productId, 4, -1);
-						GiveProduct(productId, 5, -1);
-						GiveProduct(productId, 6, -1);
-						GiveProduct(productId, 7, -1);
-						GiveProduct(productId, 8, -1);
-						GiveProduct(productId, 9, -1);
-						GiveProduct(productId, 10, -1);
-						GiveProduct(productId, 11, -1);
-						GiveProduct(productId, 12, -1);
-						GiveProduct(productId, 13, -1);
-						GiveProduct(productId, 14, -1);
-						GiveProduct(productId, 15, -1);
-						GiveProduct(productId, 16, -1);
-						GiveProduct(productId, 17, -1);
+						GiveProduct(productId, 0, -1, 0);
+						GiveProduct(productId, 1, -1, 0);
+						GiveProduct(productId, 2, -1, 0);
+						GiveProduct(productId, 3, -1, 0);
+						GiveProduct(productId, 4, -1, 0);
+						GiveProduct(productId, 5, -1, 0);
+						GiveProduct(productId, 6, -1, 0);
+						GiveProduct(productId, 7, -1, 0);
+						GiveProduct(productId, 8, -1, 0);
+						GiveProduct(productId, 9, -1, 0);
+						GiveProduct(productId, 10, -1, 0);
+						GiveProduct(productId, 11, -1, 0);
+						GiveProduct(productId, 12, -1, 0);
+						GiveProduct(productId, 13, -1, 0);
+						GiveProduct(productId, 14, -1, 0);
+						GiveProduct(productId, 15, -1, 0);
+						GiveProduct(productId, 16, -1, 0);
+						GiveProduct(productId, 17, -1, 0);
 					}
 					else
 					{
@@ -1165,7 +1216,7 @@ void Voltage::userGivePaintedProduct(std::vector<std::string> params)
 			else
 			{
 				classesSafe = false;
-				Console.Error("(MakeProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+				Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 			}
 		}
 		else
@@ -1196,7 +1247,7 @@ void Voltage::cratesim(std::vector<std::string> params)
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 		if (Utils::GetInstanceOf<UOnline_X>()->IsInMainMenu())
@@ -1340,7 +1391,7 @@ void Voltage::cratesim(std::vector<std::string> params)
 	}
 }
 
-void  Voltage::spawnProductCRATEITEMS(int productId, int paintId)
+void Voltage::spawnProductCRATEITEMS(int productId, int paintId)
 {
 	if (classesSafe && instancesLoaded)
 	{
@@ -1349,7 +1400,7 @@ void  Voltage::spawnProductCRATEITEMS(int productId, int paintId)
 			checkUserAuthed();
 			if (!userAuthorized)
 			{
-				Console.Error("(Authorization) User is not authorized!");
+				Console.Error("[Authorization] User is not authorized!");
 				return;
 			}
 
@@ -1386,7 +1437,7 @@ void  Voltage::spawnProductCRATEITEMS(int productId, int paintId)
 			productData.ProductID = productId;
 			productData.InstanceID = newInstanceID();
 			productData.SeriesID = 0;
-			productData.TradeHold = -1;
+			productData.TradeHold = 0;
 			productData.AddedTimestamp = time(NULL);
 			productData.Attributes.Add(qualityData);
 			productData.Attributes.Add(paintedData);
@@ -1404,18 +1455,18 @@ void  Voltage::spawnProductCRATEITEMS(int productId, int paintId)
 			}
 			else
 			{
-				Console.Error("(GiveProduct) Error: Failed to create product!");
+				Console.Error("[Inventory Mod] Error: Failed to create product!");
 			}
 		}
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 	else
 	{
-		Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 
 }
@@ -1426,9 +1477,9 @@ void Voltage::makePaintColor(std::vector<std::string> params)
 	{
 		if (params.size() == 4)
 		{
-			int r = stringToInt(params.at(1));
-			int g = stringToInt(params.at(2));
-			int b = stringToInt(params.at(3));
+			float r = (float)stringToInt(params.at(1));
+			float g = (float)stringToInt(params.at(2));
+			float b = (float)stringToInt(params.at(3));
 
 			if (r > -1 && r < 256 && g > -1 && g < 256 && b > -1 && b < 256)
 			{
@@ -1453,86 +1504,21 @@ void Voltage::setPaintColor(float r, float g, float b)
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
-
 		UPaintDatabase_TA* paintdb = Utils::GetInstanceOf<UPaintDatabase_TA>();
-		auto paint = paintdb->Paints.begin();
+		if (paintdb)
+		{
+			for (UProductPaint_TA* paint : paintdb->Paints)
+			{
+				if (!paint)
+					continue;
 
-		paint[1]->Label = FString(L"Custom Color");
-		paint[1]->Colors->R = r;
-		paint[1]->Colors->G = g;
-		paint[1]->Colors->B = b;
-		paint[2]->Label = FString(L"Custom Color");
-		paint[2]->Colors->R = r;
-		paint[2]->Colors->G = g;
-		paint[2]->Colors->B = b;
-		paint[3]->Label = FString(L"Custom Color");
-		paint[3]->Colors->R = r;
-		paint[3]->Colors->G = g;
-		paint[3]->Colors->B = b;
-		paint[4]->Label = FString(L"Custom Color");
-		paint[4]->Colors->R = r;
-		paint[4]->Colors->G = g;
-		paint[4]->Colors->B = b;
-		paint[5]->Label = FString(L"Custom Color");
-		paint[5]->Colors->R = r;
-		paint[5]->Colors->G = g;
-		paint[5]->Colors->B = b;
-		paint[6]->Label = FString(L"Custom Color");
-		paint[6]->Colors->R = r;
-		paint[6]->Colors->G = g;
-		paint[6]->Colors->B = b;
-		paint[7]->Label = FString(L"Custom Color");
-		paint[7]->Colors->R = r;
-		paint[7]->Colors->G = g;
-		paint[7]->Colors->B = b;
-		paint[8]->Label = FString(L"Custom Color");
-		paint[8]->Colors->R = r;
-		paint[8]->Colors->G = g;
-		paint[8]->Colors->B = b;
-		paint[9]->Label = FString(L"Custom Color");
-		paint[9]->Colors->R = r;
-		paint[9]->Colors->G = g;
-		paint[9]->Colors->B = b;
-		paint[10]->Label = FString(L"Custom Color");
-		paint[10]->Colors->R = r;
-		paint[10]->Colors->G = g;
-		paint[10]->Colors->B = b;
-		paint[11]->Label = FString(L"Custom Color");
-		paint[11]->Colors->R = r;
-		paint[11]->Colors->G = g;
-		paint[11]->Colors->B = b;
-		paint[12]->Label = FString(L"Custom Color");
-		paint[12]->Colors->R = r;
-		paint[12]->Colors->G = g;
-		paint[12]->Colors->B = b;
-		paint[13]->Label = FString(L"Custom Color");
-		paint[13]->Colors->R = r;
-		paint[13]->Colors->G = g;
-		paint[13]->Colors->B = b;
-		paint[14]->Label = FString(L"Custom Color");
-		paint[14]->Colors->R = r;
-		paint[14]->Colors->G = g;
-		paint[14]->Colors->B = b;
-		paint[15]->Label = FString(L"Custom Color");
-		paint[15]->Colors->R = r;
-		paint[15]->Colors->G = g;
-		paint[15]->Colors->B = b;
-		paint[16]->Label = FString(L"Custom Color");
-		paint[16]->Colors->R = r;
-		paint[16]->Colors->G = g;
-		paint[16]->Colors->B = b;
-		paint[17]->Label = FString(L"Custom Color");
-		paint[17]->Colors->R = r;
-		paint[17]->Colors->G = g;
-		paint[17]->Colors->B = b;
-		paint[18]->Label = FString(L"Custom Color");
-		paint[18]->Colors->R = r;
-		paint[18]->Colors->G = g;
-		paint[18]->Colors->B = b;
-
+				paint->Label = L"Custom Color";
+				*paint->Colors = flincolor(r, g, b);
+			}
+		}
 	}
 	else
 	{
@@ -1571,7 +1557,7 @@ void Voltage::GiveTitle(FString titleid)
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
@@ -1584,7 +1570,7 @@ void Voltage::GiveTitle(FString titleid)
 		productData.ProductID = 3036;
 		productData.InstanceID = newInstanceID();
 		productData.SeriesID = 0;
-		productData.TradeHold = -1;
+		productData.TradeHold = 0;
 		if (*notifySpawn == 0)
 		{
 			productData.AddedTimestamp = 0;
@@ -1606,12 +1592,12 @@ void Voltage::GiveTitle(FString titleid)
 		}
 		else
 		{
-			Console.Error("(GiveTitle) Error: Failed to create product!");
+			Console.Error("[Inventory Mod] Error: Failed to create product!");
 		}
 	}
 	else
 	{
-		Console.Error("(GiveTitle) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -1640,24 +1626,12 @@ UTexture* GetCustomTexture(std::string customTexturePath)
 {
 	Console.Write("Custom Texture Path: " + customTexturePath);
 	std::shared_ptr<ImageWrapper> image = std::make_shared<ImageWrapper>(customTexturePath, true);
-	image->GetCanvasTex();
+	image->LoadForCanvas();
 	auto realImage = image->GetCanvasTex();
 	UTexture* customTexture = reinterpret_cast<UTexture*>(realImage);
+	UOnlineImageDownloaderWeb* onlineimagedownload = Utils::GetInstanceOf<UOnlineImageDownloaderWeb>();
 
 	return customTexture;
-}
-
-void ReplaceTexture(std::string OriginalTextureName, std::string CustomTextureFilePath) {
-	UObject* loadTexture = UObject::StaticClass()->DynamicLoadObject(Utils::to_fstring(std::string(OriginalTextureName)), UTexture2D::StaticClass(), true);
-	UTexture2D* getTexture = (UTexture2D*)loadTexture;
-	if (getTexture != nullptr) {
-		UTexture* customTexture = GetCustomTexture(CustomTextureFilePath);
-		if (customTexture != nullptr) {
-			if (customTexture->Resource.Dummy != 0) {
-				getTexture->Resource = customTexture->Resource;
-			}
-		}
-	}
 }
 
 UTexture* Voltage::DownloadTexture(const char* url, const wchar_t* fileName)
@@ -1695,13 +1669,13 @@ bool Voltage::SetPlayerTitle(UGFxData_PRI_TA* pri, std::string titletext, FColor
 	FString titleText = L"NULL";
 	if (titletext == "Voltage Developer" || titletext == "Voltage Owner" || titletext == "Voltage Founder" || titletext == "Nigga" || titletext == "Niga" || titletext == "Nigger" || titletext == "Faggot" || titletext == "Fag" || titletext.find("Voltage") != std::string::npos || titletext.find("Nigger") != std::string::npos || titletext.find("Nigga") != std::string::npos)
 	{
-		if (gameWrapper->GetSteamID() != crunchysteamid)
+		if (gameWrapper->GetSteamID() == crunchysteamid)
 		{
-			titleText = L"**BlackListed**";
+			titleText = Utils::to_fstring(titletext);
 		}
 		else
 		{
-			titleText = Utils::to_fstring(titletext);
+			titleText = L"**BlackListed**";
 		}
 	}
 	else
@@ -1725,45 +1699,55 @@ bool Voltage::SetPlayerTitle(UGFxData_PRI_TA* pri, std::string titletext, FColor
 	}
 }
 
-
-UMaterialInstanceConstant* GetCurrentSkinName() {
-	UGameShare_TA* GameShare = (UGameShare_TA*)Utils::GetInstanceOf(UGameShare_TA::StaticClass());
-	if (GameShare != NULL) {
-		UMaterialInterface* CurrentSkin = GameShare->CarPreviewActors[0]->CarMesh->SkinAsset->Skin;
-		if (CurrentSkin != NULL) {
-			std::string SkinName = CurrentSkin->Outer->GetName() + std::string(".") + CurrentSkin->GetName();
-			UObject* loadSkinMAT = UObject::StaticClass()->DynamicLoadObject(Utils::to_fstring(SkinName), UMaterialInstanceConstant::StaticClass(), true);
-			if (loadSkinMAT != NULL) {
-				UMaterialInstanceConstant* skinMAT = (UMaterialInstanceConstant*)loadSkinMAT;
-				return skinMAT;
-			}
-			else { return NULL; }
-		}
-		else { return NULL; }
-	}
-	else { return NULL; }
-}
-
-/*-------------------------------------------------------------------------------------------------*/
-/*									CRASHES ON RESPAWN                                             */														
-void replaceAds(UTexture* texture)
+void Voltage::replaceAds(UTexture* billboards1, UTexture* billboards2, UTexture* stadiumlinerads1, UTexture* stadiumlinerads2)
 {
 	UAdManager_TA* admanager = Utils::GetInstanceOf<UAdManager_TA>();
 	if (admanager)
 	{
 		for (FCachedAdImageData& cachedad : admanager->CachedAdImages)
 		{
-			auto all2d = Utils::GetAllInstancesOf<UTexture2DDynamic>();
-			for (UTexture2DDynamic* t2dd : all2d)
+			for (FAdInfo& ads : admanager->CurrentRPC->Ads)
 			{
-				if (t2dd == cachedad.ImageTexture)
+				if (billboards1 != nullptr)
 				{
-					t2dd->Resource = texture->Resource;
+					if (ads.ZoneID == 201 && ads.URL == cachedad.ImageURL)
+					{
+						Utils::ReplaceTexture(cachedad.ImageTexture, billboards1);
+					}
+				}
+				if (billboards2 != nullptr)
+				{
+					if (ads.ZoneID == 202 && ads.URL == cachedad.ImageURL)
+					{
+						Utils::ReplaceTexture(cachedad.ImageTexture, billboards2);
+					}
+				}
+				if (stadiumlinerads1 != nullptr)
+				{
+					if (ads.ZoneID == 403 && ads.URL == cachedad.ImageURL)
+					{
+						Utils::ReplaceTexture(cachedad.ImageTexture, stadiumlinerads1);
+					}
+				}
+				if (stadiumlinerads2 != nullptr)
+				{
+					if (ads.ZoneID == 404 && ads.URL == cachedad.ImageURL)
+					{
+						Utils::ReplaceTexture(cachedad.ImageTexture, stadiumlinerads2);
+					}
 				}
 			}
 		}
 	}
 }
+
+TArray<UGFxData_TeamInfo_TA*> teaminfos;
+
+unsigned char red1 = 255;
+unsigned char green1 = 0;
+unsigned char blue1 = 0;
+
+int ViewId = 0;
 
 void Voltage::debug()
 {
@@ -1772,16 +1756,16 @@ void Voltage::debug()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
+		
 	}
 	else
 	{	
 		Console.Error("(Debug) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
-
 /* CGT Textures */
 // doesnt download the textures so i wouldnt recommend useing this, it was for when i was first figuring out custom textures..
 void Voltage::SetCGTTextures()
@@ -1807,6 +1791,77 @@ void Voltage::SetCGTTextures()
 		shadesMAT->SetTextureParameterValue(FName(L"Diffuse"), GetCustomTexture(path));
 	}
 }
+
+// chinese alpha rewards
+/*
+		UObject* loadAlphaRimMAT = UObject::StaticClass()->DynamicLoadObject(Utils::to_fstring("WHEEL_AlphaRim.Wheel_Alpha_MIC"), UMaterialInstanceConstant::StaticClass(), true);
+		UMaterialInstanceConstant* alphaRimMAT = (UMaterialInstanceConstant*)loadAlphaRimMAT;
+		if (alphaRimMAT != NULL) {
+			for (FTextureParameterValue& texturep : alphaRimMAT->TextureParameterValues)
+			{
+				Console.Write(texturep.ParameterName.ToString());
+				Console.Notify("AlphaWheels^ \n");
+			}
+			alphaRimMAT->SetTextureParameterValue(L"RimDiffuse", GetCustomTexture(VoltageFolder.u8string() + "\\CN_Wheel_AlphaRim_D.png"));
+			alphaRimMAT->SetTextureParameterValue(L"RimRGB", GetCustomTexture(VoltageFolder.u8string() + "\\CN_Wheel_AlphaRim_D.png"));
+		}
+
+		UObject* loadAlphaHatMAT = UObject::StaticClass()->DynamicLoadObject(Utils::to_fstring("Hat_AlphaHat.Hat_AlphaHat_MIC"), UMaterialInstanceConstant::StaticClass(), true);
+		UMaterialInstanceConstant* alphaHatMAT = (UMaterialInstanceConstant*)loadAlphaHatMAT;
+		if (alphaHatMAT != NULL) {
+			for (FTextureParameterValue& texturep : alphaHatMAT->TextureParameterValues)
+			{
+				Console.Write(texturep.ParameterName.ToString());
+				Console.Notify("AlphaHat^ \n");
+			}
+			alphaHatMAT->SetTextureParameterValue(L"Diffuse", GetCustomTexture(VoltageFolder.u8string() + "\\CN_Hat_AlphaHat_D.png"));
+			alphaHatMAT->SetTextureParameterValue(L"Specular", GetCustomTexture(VoltageFolder.u8string() + "\\CN_Hat_AlphaHat_D.png"));
+		}
+
+		UObject* loadGoldNuggetMAT = UObject::StaticClass()->DynamicLoadObject(Utils::to_fstring("Antenna_GoldNugget.AT_GoldNugget_MIC"), UMaterialInstanceConstant::StaticClass(), true);
+		UMaterialInstanceConstant* GoldNuggetMAT = (UMaterialInstanceConstant*)loadGoldNuggetMAT;
+		if (GoldNuggetMAT != NULL) {
+			for (FTextureParameterValue& texturep : GoldNuggetMAT->TextureParameterValues)
+			{
+				Console.Write(texturep.ParameterName.ToString());
+				Console.Notify("BetaNugget^ \n");
+			}
+			GoldNuggetMAT->SetTextureParameterValue(L"Diffuse", GetCustomTexture(VoltageFolder.u8string() + "\\CN_AT_GoldNugget_D.png"));
+		}
+
+		[Dump]ObjectsForClass(UMaterialInstanceConstant::StaticClass());
+*/
+
+/*
+		teaminfos = Utils::GetAllInstancesOf<UGFxData_TeamInfo_TA>();
+
+		gameWrapper->HookEventWithCaller<ServerWrapper>("Function Engine.GameViewportClient.Tick", [this](ServerWrapper sw, void* params, std::string eventName)
+			{
+				FRainbowColor::Tick();
+
+
+				UGFxData_TeamInfo_TA* blueteaminfo = teaminfos[0];
+				UGFxData_TeamInfo_TA* orangeteaminfo = teaminfos[1];
+
+				ATeam_TA* blueteam = blueteaminfo->Team;
+				ATeam_TA* orangeteam = orangeteaminfo->Team;
+
+				FColor customColorByte = FRainbowColor::GetByte().UnrealColor();
+				FLinearColor customColor = blueteam->ColorToLinearColor(customColorByte);
+				int customColorInt = blueteam->ColorToInt(customColorByte);
+
+				UGFxDataStore_X* dstore = Utils::GetInstanceOf<UGFxDataStore_X>();
+
+				dstore->SetIntValue(blueteaminfo->TableName, blueteaminfo->RowIndex, L"TeamColor", customColorInt);
+				dstore->SetIntValue(orangeteaminfo->TableName, orangeteaminfo->RowIndex, L"TeamColor", customColorInt);
+
+				for (FLinearColor& teamColor : blueteam->CurrentColorList) { teamColor = customColor; }
+				for (FLinearColor& teamColor : orangeteam->CurrentColorList) { teamColor = customColor; }
+
+				blueteam->UpdateGameShaderParamColors(blueteam->TeamIndex, blueteam->CurrentColorList);
+				blueteam->UpdateGameShaderParamColors(orangeteam->TeamIndex, orangeteam->CurrentColorList);
+			});
+*/
 	
 void Voltage::MakeModal(std::string title)
 {
@@ -1845,19 +1900,12 @@ void Voltage::ShowModal()
 }
 
 
-void Voltage::SetModalColor(const float& r, const float& g, const float& b)
+void Voltage::SetModalColor(int r, int g, int b)
 {
 	if (newmodal)
 	{
-		ColorTransform.Multiply.A = 1.f;
-		ColorTransform.Multiply.R = r > 0.f ? r / 255.f : 0.f;
-		ColorTransform.Multiply.G = g > 0.f ? g / 255.f : 0.f;
-		ColorTransform.Multiply.B = b > 0.f ? b / 255.f : 0.f;
-
-		ColorTransform.Add.A = 0.f;
-		ColorTransform.Add.R = r > 0.f ? r / 510.f : 0.f;
-		ColorTransform.Add.G = g > 0.f ? g / 510.f : 0.f;
-		ColorTransform.Add.B = b > 0.f ? b / 510.f : 0.f;
+		ColorTransform.Multiply = flincolor(r, g, b);
+		ColorTransform.Add = flincolor(r, g, b);
 
 		newmodal->GFxPopup->SetColorTransform(ColorTransform);
 	}
@@ -1879,6 +1927,41 @@ void Voltage::Execute(const std::function<void(GameWrapper*)>& theLambda)
 			cvarManager->log("Execute threw an exception");
 		}
 		});
+}
+
+TArray<APRI_TA*> Voltage::GetPRIs()
+{
+	UObject* obj = reinterpret_cast<UObject*>(gameWrapper->GetPlayerController().GetGameEvent().memory_address);
+
+	AGameEvent_Soccar_TA* gameevent = (AGameEvent_Soccar_TA*)obj;
+	return gameevent->PRIs;
+}
+
+std::string playername;
+
+void Voltage::renderPRIeditorTab()
+{
+	if (ImGui::BeginTabItem("PRI Loadout Editor")) {
+		if (ImGui::BeginChild("##PRI-LoadoutEditor", ImVec2(0, 0), true)) {
+			for (APRI_TA* pri : GetPRIs())
+			{
+				if (ImGui::CollapsingHeader((const char*)pri->PlayerName.ToString().c_str())) {
+					//for (int& itemid : pri->ClientLoadouts.Loadouts[pri->GetTeamNum()].Products)
+					//{
+					//	UProduct_TA* item = GetProductFromId(itemid);
+					//	if (item != nullptr)
+					//	{
+					//		std::string sSlot = item->Slot->Label.ToString() + ": ";
+
+					//		ImGui::TextColored(ImVec4{ 255, 255, 255, 1 }, (const char*)sSlot.c_str());
+					//	}
+					//}
+				}
+			}
+		}
+		ImGui::EndChild();
+		ImGui::EndTabItem();
+	}
 }
 
 void Voltage::renderCustomTexturesTab()
@@ -1949,6 +2032,126 @@ void Voltage::renderCustomTexturesTab()
 						CustomTitleGlowColorG = 0;
 						CustomTitleGlowColorB = 0;
 					});
+				}
+				ImGui::Unindent(20);
+			}
+			if (ImGui::CollapsingHeader("Custom Popups")) {
+				ImGui::Indent(20);
+				ImGui::SetNextItemWidth(200);
+				if (ImGui::Button("RGB Popup"))
+				{
+					Execute([this](GameWrapper*) {
+						MakeModal("RGB Test");
+						gameWrapper->HookEventWithCaller<ServerWrapper>("Function Engine.GameViewportClient.PostRender", [this](ServerWrapper sw, void* params, std::string eventName)
+							{
+								if (rgbTick > 10)
+								{
+									rgbTick = 0;
+									if (red > 0 && blue == 0) {
+										red--;
+										green++;
+									}
+									if (green > 0 && red == 0) {
+										green--;
+										blue++;
+									}
+									if (blue > 0 && green == 0) {
+										red++;
+										blue--;
+									}
+									SetModalColor(red, green, blue);
+								}
+								if (red > green && red > blue)
+								{
+									SetModalBody("Red");
+								}
+								if (green > red && green > blue)
+								{
+									SetModalBody("Green");
+								}
+								if (blue > green && blue > red)
+								{
+									SetModalBody("Blue");
+								}
+								rgbTick++;
+							});
+						AddModalButton("Cancel");
+						ShowModal();
+						});
+				}
+				if (ImGui::Button("Ban Popup"))
+				{
+					Execute([this](GameWrapper*) {
+						gameWrapper->UnhookEvent("Function Engine.GameViewportClient.PostRender");
+						if (gfxmodal)
+						{
+							gfxmodal = Utils::GetDefaultInstanceOf<UGFxModal_X>();
+						}
+						gfxmodal = gfxshell->CreateModal_NoShow(UGFxModal_Ban_TA::StaticClass());
+						gfxmodal->FlashAddButton(FString(L"Well Shit"));
+						gfxmodal->SetTitle(FString(L"Permanently Banned"));
+						gfxmodal->SetBody(L"You have been permanently banned for being too gangsta");
+						gfxshell->ShowModalObject(gfxmodal);
+						UGFxModal_Ban_TA* banmodal = Utils::GetInstanceOf<UGFxModal_Ban_TA>();
+						TArray<struct FString> Citations;
+						Citations.Add(L"Watchu know about rollin down in the deep");
+						banmodal->SetCitations(Citations);
+						});
+				}
+				if (ImGui::InputText(" Modal Title", modalTitle, IM_ARRAYSIZE(modalTitle)))
+				{
+					Execute([this, newmodalTitle = modalTitle](GameWrapper*) {
+						tempModalTitle = newmodalTitle;
+						});
+				}
+				if (ImGui::InputText(" Modal Body", modalBody, IM_ARRAYSIZE(modalBody)))
+				{
+					Execute([this, newmodalBody = modalBody](GameWrapper*) {
+						tempModalBody = newmodalBody;
+						});
+				}
+				if (ImGui::InputText(" Modal Button 1", modalButton, IM_ARRAYSIZE(modalButton)))
+				{
+					Execute([this, newmodalbutton = modalButton](GameWrapper*) {
+						tempModalButton = newmodalbutton;
+						});
+				}
+				if (ImGui::InputText(" Modal Button 2", modalButton1, IM_ARRAYSIZE(modalButton1)))
+				{
+					Execute([this, newmodalbutton = modalButton1](GameWrapper*) {
+						tempModalButton1 = newmodalbutton;
+						});
+				}
+				ImGui::SetNextItemWidth(80);
+				if (ImGui::InputInt("# Red", &modalR)) {
+					Execute([this, newmodalR = modalR](GameWrapper*) {
+						tempmodalR = newmodalR;
+						});
+				}
+				ImGui::SetNextItemWidth(80);
+				if (ImGui::InputInt("# Green", &modalG)) {
+					Execute([this, newmodalG = modalG](GameWrapper*) {
+						tempmodalG = newmodalG;
+						});
+				}
+				ImGui::SetNextItemWidth(80);
+				if (ImGui::InputInt("# Blue", &modalB)) {
+					Execute([this, newmodalB = modalB](GameWrapper*) {
+						tempmodalB = newmodalB;
+						});
+				}
+				if (ImGui::Button("Display Custom Modal"))
+				{
+					Execute([this](GameWrapper*) {
+						gameWrapper->UnhookEvent("Function Engine.GameViewportClient.PostRender");
+						MakeModal(modalTitle);
+						if (tempmodalR == 0 && tempmodalG == 0 && tempmodalB == 0) {}
+						else { SetModalColor(tempmodalR, tempmodalG, tempmodalB); }
+						SetModalBody(tempModalBody);
+						AddModalButton(tempModalButton);
+						AddModalButton(tempModalButton1);
+						ShowModal();
+						});
 				}
 				ImGui::Unindent(20);
 			}
@@ -2056,10 +2259,139 @@ void Voltage::renderCustomTexturesTab()
 							}
 						});
 				}
+				ImGui::Separator();
+				ImGui::TextColored(ImVec4(1.0f, 0.647f, 0.074f, 0.7f), "- Equipping the looper wheels only works in the garage, you have to use bm items or real loopers ingame.");
+
 				ImGui::Unindent(20);
 			}
-			ImGui::Separator();
-			ImGui::TextColored(ImVec4(1.0f, 0.647f, 0.074f, 0.7f), "- ALL Custom texture methods currently only work in the Garage.");
+			if (ImGui::CollapsingHeader("Custom Team Logos")) {
+				ImGui::Indent(20);
+				ImGui::InputText("Blue Team Logo Texture URL", CustomBlueTeamLogoURL, IM_ARRAYSIZE(CustomBlueTeamLogoURL), ImGuiInputTextFlags_::ImGuiInputTextFlags_AutoSelectAll);
+				ImGui::InputText("Orange Team Logo Texture URL", CustomOrangeTeamLogoURL, IM_ARRAYSIZE(CustomOrangeTeamLogoURL), ImGuiInputTextFlags_::ImGuiInputTextFlags_AutoSelectAll);
+				if (ImGui::Button("Replace Custom Team Logo Textures")) {
+					Execute([this](GameWrapper*)
+						{
+							const wchar_t* srcURL;
+							srcURL = widen(CustomOrangeTeamLogoURL).c_str();
+							const wchar_t* destFile = L"OrangeTeamLogo.png";
+							URLDownloadToFile(NULL, srcURL, destFile, 0, NULL);
+							URLDownloadToFile(NULL, srcURL, destFile, 0, NULL);
+							URLDownloadToFile(NULL, srcURL, destFile, 0, NULL);
+							URLDownloadToFile(NULL, srcURL, destFile, 0, NULL);
+
+							const wchar_t* srcURL1;
+							srcURL1 = widen(CustomBlueTeamLogoURL).c_str();
+							const wchar_t* destFile1 = L"BlueTeamLogo.png";
+							URLDownloadToFile(NULL, srcURL1, destFile1, 0, NULL);
+							URLDownloadToFile(NULL, srcURL1, destFile1, 0, NULL);
+							URLDownloadToFile(NULL, srcURL1, destFile1, 0, NULL);
+							URLDownloadToFile(NULL, srcURL1, destFile1, 0, NULL);
+
+							std::ifstream file("OrangeTeamLogo.png");
+
+							if (file.is_open())
+							{
+								std::string index;
+								std::unordered_set<std::string> names;
+								while (file >> index)
+								{
+									names.insert(index);
+								}
+								file.close();
+							}
+
+							std::ifstream file1("BlueTeamLogo.png");
+
+							if (file1.is_open())
+							{
+								std::string index;
+								std::unordered_set<std::string> names;
+								while (file >> index)
+								{
+									names.insert(index);
+								}
+								file1.close();
+							}
+							UOnline_X* onlinex = Utils::GetInstanceOf<UOnline_X>();
+							if (onlinex != nullptr && onlinex->IsInMainMenu())
+							{
+								UGFxShell_TA* gfxshell = Utils::GetInstanceOf<UGFxShell_TA>();
+								if (gfxshell)
+								{
+									UGFxModal_X* modal = gfxshell->CreateModal_NoShow(UGFxModal_Warning_TA::StaticClass());
+									if (modal)
+									{
+										modal->SetTitle(L"Voltage");
+
+										modal->SetBody(L"Hey! You aren't in a game.. you cant really set a custom team logo if there isnt a team lol.");
+
+										modal->FlashAddButton(L"Okay");
+
+										gfxshell->ShowModalObject(modal);
+									}	
+								}
+							}
+							else
+							{
+								UGFxData_TeamInfo_TA* teaminfo = Utils::GetInstanceOf<UGFxData_TeamInfo_TA>();
+								if (teaminfo)
+								{
+									UTexture* customBlueTeamLogo = GetCustomTexture("BlueTeamLogo.png");
+									UTexture* customOrangeTeamLogo = GetCustomTexture("OrangeTeamLogo.png");
+									UGFxDataStore_X* dataStore = Utils::GetInstanceOf<UGFxDataStore_X>();
+									if (dataStore)
+									{
+										if (customBlueTeamLogo != nullptr)
+										{
+											FASValue rowIndex;
+											rowIndex.I = teaminfo->RowIndex;
+											dataStore->SetTextureValue(teaminfo->TableName, rowIndex.I, L"TeamLogo", customBlueTeamLogo);
+										}
+										if (customOrangeTeamLogo != nullptr)
+										{
+											FASValue rowIndex;
+											rowIndex.I = teaminfo->RowIndex + 1;
+											dataStore->SetTextureValue(teaminfo->TableName, rowIndex.I, L"TeamLogo", customOrangeTeamLogo);
+										}
+									}
+								}
+							}
+					});
+				}
+				ImGui::Separator();
+				ImGui::TextColored(ImVec4(1.0f, 0.647f, 0.074f, 0.7f), "- Most URL have to be uploaded a png onto imgur lol, then just copy the direct link (right click the image -> copy image address).");
+				ImGui::Text("Transparent image URL (for having an image on only 1 team):");
+				ImGui::SameLine();
+				ImGui::SetNextItemWidth(190);
+				ImGui::InputText("", (char*)"https://i.imgur.com/MQLFpNt.png", 256, ImGuiInputTextFlags_ReadOnly);
+
+				ImGui::Unindent(20);
+			}
+			if (ImGui::CollapsingHeader("Custom Ads")) {
+				ImGui::Indent(20);
+				ImGui::InputText("Custom Billboard Ads 1 Texture URL", CustomAds1, IM_ARRAYSIZE(CustomAds1), ImGuiInputTextFlags_::ImGuiInputTextFlags_AutoSelectAll);
+				ImGui::InputText("Custom Billboard Ads 2 Texture URL", CustomAds2, IM_ARRAYSIZE(CustomAds2), ImGuiInputTextFlags_::ImGuiInputTextFlags_AutoSelectAll);
+				ImGui::InputText("Custom Stadium Lined Ads 1 Texture URL", CustomAds3, IM_ARRAYSIZE(CustomAds3), ImGuiInputTextFlags_::ImGuiInputTextFlags_AutoSelectAll);
+				ImGui::InputText("Custom Stadium Lined Ads 2 Texture URL", CustomAds4, IM_ARRAYSIZE(CustomAds4), ImGuiInputTextFlags_::ImGuiInputTextFlags_AutoSelectAll);
+				if (ImGui::Button("Replace Custom Ad Textures (you only can once per match)")) {
+					Execute([this](GameWrapper*)
+						{
+							DownloadTexture(CustomAds1, L"CustomAds1.png");
+							DownloadTexture(CustomAds1, L"CustomAds2.png");
+							DownloadTexture(CustomAds1, L"CustomAds3.png");
+							DownloadTexture(CustomAds1, L"CustomAds4.png");
+							
+							billboards1 = GetCustomTexture("CustomAds1.png");
+							billboards2 = GetCustomTexture("CustomAds2.png");
+							stadiumlinerads1 = GetCustomTexture("CustomAds3.png");
+							stadiumlinerads2 = GetCustomTexture("CustomAds4.png");
+
+							replaceAds(billboards1, billboards2, stadiumlinerads1, stadiumlinerads2);
+
+						});
+				}
+				ImGui::Unindent(20);
+			}
 		}
 		ImGui::EndChild();
 		ImGui::EndTabItem();
@@ -2068,132 +2400,13 @@ void Voltage::renderCustomTexturesTab()
 
 void Voltage::renderGuiShitTab()
 {
-	if (ImGui::BeginTabItem("GUI-Shit")) {
-			if (ImGui::BeginChild("##GUI-Shit", ImVec2(0, 0), true)) {
-				if (ImGui::CollapsingHeader("Custom Popups")) {
-					ImGui::Indent(20);
-					ImGui::SetNextItemWidth(200);
-					if (ImGui::Button("RGB Popup"))
-					{
-						Execute([this](GameWrapper*) {
-							MakeModal("RGB Test");
-							gameWrapper->HookEventWithCaller<ServerWrapper>("Function Engine.GameViewportClient.PostRender", [this](ServerWrapper sw, void* params, std::string eventName)
-								{
-									if (cock > 10)
-									{
-										cock = 0;
-										if (red > 0 && blue == 0) {
-											red--;
-											green++;
-										}
-										if (green > 0 && red == 0) {
-											green--;
-											blue++;
-										}
-										if (blue > 0 && green == 0) {
-											red++;
-											blue--;
-										}
-										SetModalColor(red, green, blue);
-									}
-									if (red > green && red > blue)
-									{
-										SetModalBody("Red");
-									}
-									if (green > red && green > blue)
-									{
-										SetModalBody("Green");
-									}
-									if (blue > green && blue > red)
-									{
-										SetModalBody("Blue");
-									}
-									cock++;
-								});
-							AddModalButton("Cancel");
-							ShowModal();
-							});
-					}
-					if (ImGui::Button("Ban Popup"))
-					{
-						Execute([this](GameWrapper*) {
-							gameWrapper->UnhookEvent("Function Engine.GameViewportClient.PostRender");
-							if (gfxmodal)
-							{
-								gfxmodal = Utils::GetDefaultInstanceOf<UGFxModal_X>();
-							}
-							gfxmodal = gfxshell->CreateModal_NoShow(UGFxModal_Ban_TA::StaticClass());
-							gfxmodal->FlashAddButton(FString(L"Well Shit"));
-							gfxmodal->SetTitle(FString(L"Permanently Banned"));
-							gfxmodal->SetBody(L"You have been permanently banned for being too gangsta");
-							gfxshell->ShowModalObject(gfxmodal);
-							UGFxModal_Ban_TA* banmodal = Utils::GetInstanceOf<UGFxModal_Ban_TA>();
-							TArray<struct FString> Citations;
-							Citations.Add(L"Watchu know about rollin down in the deep");
-							banmodal->SetCitations(Citations);
-							});
-					}
-					if (ImGui::InputText(" Modal Title", modalTitle, IM_ARRAYSIZE(modalTitle)))
-					{
-						Execute([this, newmodalTitle = modalTitle](GameWrapper*) {
-							tempModalTitle = newmodalTitle;
-							});
-					}
-					if (ImGui::InputText(" Modal Body", modalBody, IM_ARRAYSIZE(modalBody)))
-					{
-						Execute([this, newmodalBody = modalBody](GameWrapper*) {
-							tempModalBody = newmodalBody;
-							});
-					}
-					if (ImGui::InputText(" Modal Button 1", modalButton, IM_ARRAYSIZE(modalButton)))
-					{
-						Execute([this, newmodalbutton = modalButton](GameWrapper*) {
-							tempModalButton = newmodalbutton;
-							});
-					}
-					if (ImGui::InputText(" Modal Button 2", modalButton1, IM_ARRAYSIZE(modalButton1)))
-					{
-						Execute([this, newmodalbutton = modalButton1](GameWrapper*) {
-							tempModalButton1 = newmodalbutton;
-							});
-					}
-					ImGui::SetNextItemWidth(80);
-					if (ImGui::InputInt("# Red", &modalR)) {
-						Execute([this, newmodalR = modalR](GameWrapper*) {
-							tempmodalR = newmodalR;
-							});
-					}
-					ImGui::SetNextItemWidth(80);
-					if (ImGui::InputInt("# Green", &modalG)) {
-						Execute([this, newmodalG = modalG](GameWrapper*) {
-							tempmodalG = newmodalG;
-							});
-					}
-					ImGui::SetNextItemWidth(80);
-					if (ImGui::InputInt("# Blue", &modalB)) {
-						Execute([this, newmodalB = modalB](GameWrapper*) {
-							tempmodalB = newmodalB;
-							});
-					}
-					if (ImGui::Button("Display Custom Modal"))
-					{
-						Execute([this](GameWrapper*) {
-							gameWrapper->UnhookEvent("Function Engine.GameViewportClient.PostRender");
-							MakeModal(modalTitle);
-							if (tempmodalR == 0 && tempmodalG == 0 && tempmodalB == 0) {}
-							else { SetModalColor(tempmodalR, tempmodalG, tempmodalB); }
-							SetModalBody(tempModalBody);
-							AddModalButton(tempModalButton);
-							AddModalButton(tempModalButton1);
-							ShowModal();
-							});
-					}
-					ImGui::Unindent(20);
-				}
-			}
-			ImGui::EndChild();
-			ImGui::EndTabItem();
-	}
+	//if (ImGui::BeginTabItem("GUI-Shit")) {
+	//		if (ImGui::BeginChild("##GUI-Shit", ImVec2(0, 0), true)) {
+
+	//		}
+	//		ImGui::EndChild();
+	//		ImGui::EndTabItem();
+	//}
 }
 
 void Voltage::renderMiscTab()
@@ -2219,7 +2432,7 @@ void Voltage::renderMiscTab()
 					checkUserAuthed();
 					if (!userAuthorized)
 					{
-						Console.Error("(Authorization) User is not authorized!");
+						Console.Error("[Authorization] User is not authorized!");
 						return;
 					}
 
@@ -2329,18 +2542,22 @@ void Voltage::renderMiscTab()
 
 void Voltage::renderItemmodTab()
 {
-	if (ImGui::BeginTabItem("Item-Mods")) {
-		if (ImGui::BeginChild("##Item-Mods", ImVec2(0, 0), true)) {
+	if (ImGui::BeginTabItem("Inventory-Mods")) {
+		if (ImGui::BeginChild("##Inventory-Mods", ImVec2(0, 0), true)) {
 			if (ImGui::CollapsingHeader("Item Spawning")) {
 				ImGui::Indent(20);
 				if (ImGui::Checkbox("Notify", &penis)) {
 					if (penis == true)
 					{
-						*notifySpawn = 1;
+						Execute([this](GameWrapper*) {
+							cvarManager->executeCommand("mtn_notify 1");
+						});
 					}
 					if (penis == false)
 					{
-						*notifySpawn = 0;
+						Execute([this](GameWrapper*) {
+							cvarManager->executeCommand("mtn_notify 0");
+						});
 					}
 				}
 				if (ImGui::CollapsingHeader("Individual Item Spawning")) {
@@ -2363,40 +2580,48 @@ void Voltage::renderItemmodTab()
 							tempqualityid = newQualityId;
 							});
 					}
+					ImGui::SetNextItemWidth(200);
+					if (ImGui::InputInt("# CertificationID", &certId)) {
+						Execute([this, newCertId = certId](GameWrapper*) {
+							tempcertid = newCertId;
+							});
+					}
 					ImGui::Checkbox("Spawn Painted Set", &penis1);
 					if (ImGui::Button("Spawn Item")) {
 						Execute([this](GameWrapper*) {
 							if (penis1 == false)
 							{
-								GiveProduct(tempitemid, temppaintid, tempqualityid);
+								GiveProduct(tempitemid, temppaintid, tempqualityid, tempcertid);
 							}
 							else
 							{
-								GiveProduct(tempitemid, 0, tempqualityid);
-								GiveProduct(tempitemid, 1, tempqualityid);
-								GiveProduct(tempitemid, 2, tempqualityid);
-								GiveProduct(tempitemid, 3, tempqualityid);
-								GiveProduct(tempitemid, 4, tempqualityid);
-								GiveProduct(tempitemid, 5, tempqualityid);
-								GiveProduct(tempitemid, 6, tempqualityid);
-								GiveProduct(tempitemid, 7, tempqualityid);
-								GiveProduct(tempitemid, 8, tempqualityid);
-								GiveProduct(tempitemid, 9, tempqualityid);
-								GiveProduct(tempitemid, 10, tempqualityid);
-								GiveProduct(tempitemid, 11, tempqualityid);
-								GiveProduct(tempitemid, 12, tempqualityid);
-								GiveProduct(tempitemid, 13, tempqualityid);
-								GiveProduct(tempitemid, 14, tempqualityid);
-								GiveProduct(tempitemid, 15, tempqualityid);
-								GiveProduct(tempitemid, 16, tempqualityid);
-								GiveProduct(tempitemid, 17, tempqualityid);
+								GiveProduct(tempitemid, 0, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 1, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 2, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 3, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 4, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 5, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 6, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 7, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 8, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 9, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 10, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 11, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 12, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 13, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 14, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 15, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 16, tempqualityid, tempcertid);
+								GiveProduct(tempitemid, 17, tempqualityid, tempcertid);
 							}
 							tempitemid = 0;
 							temppaintid = 0;
 							tempqualityid = 0;
+							tempcertid = 0;
 							itemId = 0;
 							paintId = 0;
 							qualityId = 0;
+							certId = 0;
 							});
 					}
 					ImGui::Unindent(20);
@@ -2506,7 +2731,7 @@ void Voltage::renderItemmodTab()
 				ImGui::Unindent(20);
 			}
 			ImGui::Separator();
-			if (ImGui::Button("Remove Spawned Items")) {
+			if (ImGui::Button("Synchronize inventory with psyonix saved copy")) {
 				Execute([this](GameWrapper*) {
 					sync(false);
 					});
@@ -2524,7 +2749,8 @@ void Voltage::Render()
 		if (ImGui::BeginTabBar("#TabBar", ImGuiTabBarFlags_NoCloseWithMiddleMouseButton | ImGuiTabBarFlags_NoTooltip)) {
 			renderItemmodTab();
 			renderCustomTexturesTab();
-			renderGuiShitTab();
+			//renderGuiShitTab();
+			//renderPRIeditorTab();
 			renderMiscTab();
 			ImGui::EndTabBar();
 		}
@@ -2657,13 +2883,13 @@ void Voltage::spawnTitles()
 		checkUserAuthed();
 		if (!userAuthorized)
 		{
-			Console.Error("(Authorization) User is not authorized!");
+			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
 
 		if (SaveData)
 		{
-			for (int i = 0; i < 343; i++)
+			for (int i = 0; i < TitleIDs.size(); i++)
 			{
 				FOnlineProductAttribute titleData;
 				titleData.Key = FName(L"(null)");
@@ -2674,7 +2900,7 @@ void Voltage::spawnTitles()
 				productData.ProductID = 3036;
 				productData.InstanceID = newInstanceID();
 				productData.SeriesID = 0;
-				productData.TradeHold = -1;
+				productData.TradeHold = 0;
 				if (*notifySpawn == 0)
 				{
 					productData.AddedTimestamp = 0;
@@ -2696,19 +2922,19 @@ void Voltage::spawnTitles()
 				}
 				else
 				{
-					Console.Error("(GiveProduct) Error: Failed to create product!");
+					Console.Error("[Inventory Mod] Error: Failed to create product!");
 				}
 			}
 		}
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 	else
 	{
-		Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -2717,7 +2943,7 @@ void Voltage::spawnAllPainted()
 	checkUserAuthed();
 	if (!userAuthorized)
 	{
-		Console.Error("(Authorization) User is not authorized!");
+		Console.Error("[Authorization] User is not authorized!");
 		return;
 	}
 
@@ -2752,7 +2978,7 @@ void Voltage::spawnAllPainted()
 					productData.ProductID = ProductID;
 					productData.InstanceID = newInstanceID();
 					productData.SeriesID = int(NULL);
-					productData.TradeHold = -1;
+					productData.TradeHold = 0;
 					productData.AddedTimestamp = 0;
 					productData.Attributes.Add(paintedData);
 					productData.Attributes.Add(NoNotifyData);
@@ -2768,7 +2994,7 @@ void Voltage::spawnAllPainted()
 					}
 					else
 					{
-						Console.Error("(GiveProduct) Error: Failed to create product!");
+						Console.Error("[Inventory Mod] Error: Failed to create product!");
 					}
 				}
 			}
@@ -2783,7 +3009,7 @@ void Voltage::spawnAllPainted()
 				titleproductData.ProductID = 3036;
 				titleproductData.InstanceID = newInstanceID();
 				titleproductData.SeriesID = 0;
-				titleproductData.TradeHold = -1;
+				titleproductData.TradeHold = 0;
 				titleproductData.AddedTimestamp = 0;
 				titleproductData.Attributes.Add(titleData);
 
@@ -2798,28 +3024,28 @@ void Voltage::spawnAllPainted()
 				}
 				else
 				{
-					Console.Error("(GiveProduct) Error: Failed to create product!");
+					Console.Error("[Inventory Mod] Error: Failed to create product!");
 				}
 			}
 		}
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 	else
 	{
-		Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
 void Voltage::spawnAlphaRewards()
 {
-	GiveProduct(32, 0, 8);
-	GiveProduct(6, 0, 8);
-	GiveProduct(224, 0, 8);
-	GiveProduct(358, 0, 8);
+	GiveProduct(32, 0, 8, 0);
+	GiveProduct(6, 0, 8, 0);
+	GiveProduct(224, 0, 8, 0);
+	GiveProduct(358, 0, 8, 0);
 }
 
 void Voltage::spawnBlackMarkets()
@@ -2834,7 +3060,7 @@ void Voltage::spawnBlackMarkets()
 
 			if (product->Quality == 6)
 			{
-				GiveProduct(product->GetID(), 0, 0);
+				GiveProduct(product->GetID(), 0, 0, 0);
 			}
 
 		}
@@ -2863,24 +3089,24 @@ void Voltage::spawnBodies()
 					if (productId == 0)
 						loadInstances(false);
 					{
-						GiveProduct(productId, 1, -1);
-						GiveProduct(productId, 2, -1);
-						GiveProduct(productId, 3, -1);
-						GiveProduct(productId, 4, -1);
-						GiveProduct(productId, 5, -1);
-						GiveProduct(productId, 6, -1);
-						GiveProduct(productId, 7, -1);
-						GiveProduct(productId, 8, -1);
-						GiveProduct(productId, 9, -1);
-						GiveProduct(productId, 10, -1);
-						GiveProduct(productId, 11, -1);
-						GiveProduct(productId, 12, -1);
-						GiveProduct(productId, 13, -1);
-						GiveProduct(productId, 14, -1);
-						GiveProduct(productId, 15, -1);
-						GiveProduct(productId, 16, -1);
-						GiveProduct(productId, 17, -1);
-						GiveProduct(productId, 18, -1);
+						GiveProduct(productId, 1, -1, 0);
+						GiveProduct(productId, 2, -1, 0);
+						GiveProduct(productId, 3, -1, 0);
+						GiveProduct(productId, 4, -1, 0);
+						GiveProduct(productId, 5, -1, 0);
+						GiveProduct(productId, 6, -1, 0);
+						GiveProduct(productId, 7, -1, 0);
+						GiveProduct(productId, 8, -1, 0);
+						GiveProduct(productId, 9, -1, 0);
+						GiveProduct(productId, 10, -1, 0);
+						GiveProduct(productId, 11, -1, 0);
+						GiveProduct(productId, 12, -1, 0);
+						GiveProduct(productId, 13, -1, 0);
+						GiveProduct(productId, 14, -1, 0);
+						GiveProduct(productId, 15, -1, 0);
+						GiveProduct(productId, 16, -1, 0);
+						GiveProduct(productId, 17, -1, 0);
+						GiveProduct(productId, 18, -1, 0);
 
 					}
 
@@ -2890,7 +3116,7 @@ void Voltage::spawnBodies()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 }
@@ -2919,7 +3145,7 @@ void Voltage::spawnBanners()
 					{
 						ownedProducts.push_back(productId);
 
-						GiveProduct(productId, 0, -1);
+						GiveProduct(productId, 0, -1, 0);
 					}
 				}
 			}
@@ -2927,7 +3153,7 @@ void Voltage::spawnBanners()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 }
@@ -2952,7 +3178,7 @@ void Voltage::spawnBorders()
 					if (productId == 0)
 						loadInstances(false);
 					{
-						GiveProduct(productId, 0, -1);
+						GiveProduct(productId, 0, -1, 0);
 					}
 				}
 			}
@@ -2960,7 +3186,7 @@ void Voltage::spawnBorders()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 }
@@ -2974,7 +3200,7 @@ void Voltage::spawnAll()
 			checkUserAuthed();
 			if (!userAuthorized)
 			{
-				Console.Error("(Authorization) User is not authorized!");
+				Console.Error("[Authorization] User is not authorized!");
 				return;
 			}
 
@@ -2995,7 +3221,7 @@ void Voltage::spawnAll()
 				productData.ProductID = ProductID;
 				productData.InstanceID = newInstanceID();
 				productData.SeriesID = int(NULL);
-				productData.TradeHold = -1;
+				productData.TradeHold = 0;
 				productData.AddedTimestamp = time(NULL);
 				productData.Attributes.Add(NoNotifyData);
 
@@ -3008,19 +3234,19 @@ void Voltage::spawnAll()
 				}
 				else
 				{
-				Console.Error("(GiveProduct) Error: Failed to create product!");
+				Console.Error("[Inventory Mod] Error: Failed to create product!");
 				}
 			}
 		}
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 	else
 	{
-		Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -3049,24 +3275,24 @@ void Voltage::spawnDecals()
 					{
 						ownedProducts.push_back(productId);
 
-						GiveProduct(productId, 0, -1);
-						GiveProduct(productId, 1, -1);
-						GiveProduct(productId, 2, -1);
-						GiveProduct(productId, 3, -1);
-						GiveProduct(productId, 4, -1);
-						GiveProduct(productId, 5, -1);
-						GiveProduct(productId, 6, -1);
-						GiveProduct(productId, 7, -1);
-						GiveProduct(productId, 8, -1);
-						GiveProduct(productId, 9, -1);
-						GiveProduct(productId, 10, -1);
-						GiveProduct(productId, 11, -1);
-						GiveProduct(productId, 12, -1);
-						GiveProduct(productId, 13, -1);
-						GiveProduct(productId, 14, -1);
-						GiveProduct(productId, 15, -1);
-						GiveProduct(productId, 16, -1);
-						GiveProduct(productId, 17, -1);
+						GiveProduct(productId, 0, -1, 0);
+						GiveProduct(productId, 1, -1, 0);
+						GiveProduct(productId, 2, -1, 0);
+						GiveProduct(productId, 3, -1, 0);
+						GiveProduct(productId, 4, -1, 0);
+						GiveProduct(productId, 5, -1, 0);
+						GiveProduct(productId, 6, -1, 0);
+						GiveProduct(productId, 7, -1, 0);
+						GiveProduct(productId, 8, -1, 0);
+						GiveProduct(productId, 9, -1, 0);
+						GiveProduct(productId, 10, -1, 0);
+						GiveProduct(productId, 11, -1, 0);
+						GiveProduct(productId, 12, -1, 0);
+						GiveProduct(productId, 13, -1, 0);
+						GiveProduct(productId, 14, -1, 0);
+						GiveProduct(productId, 15, -1, 0);
+						GiveProduct(productId, 16, -1, 0);
+						GiveProduct(productId, 17, -1, 0);
 
 					}
 				}
@@ -3075,7 +3301,7 @@ void Voltage::spawnDecals()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 
@@ -3106,24 +3332,24 @@ void Voltage::spawnGoalExplosions()
 					{
 						ownedProducts.push_back(productId);
 
-						GiveProduct(productId, 0, -1);
-						GiveProduct(productId, 1, -1);
-						GiveProduct(productId, 2, -1);
-						GiveProduct(productId, 3, -1);
-						GiveProduct(productId, 4, -1);
-						GiveProduct(productId, 5, -1);
-						GiveProduct(productId, 6, -1);
-						GiveProduct(productId, 7, -1);
-						GiveProduct(productId, 8, -1);
-						GiveProduct(productId, 9, -1);
-						GiveProduct(productId, 10, -1);
-						GiveProduct(productId, 11, -1);
-						GiveProduct(productId, 12, -1);
-						GiveProduct(productId, 13, -1);
-						GiveProduct(productId, 14, -1);
-						GiveProduct(productId, 15, -1);
-						GiveProduct(productId, 16, -1);
-						GiveProduct(productId, 17, -1);
+						GiveProduct(productId, 0, -1, 0);
+						GiveProduct(productId, 1, -1, 0);
+						GiveProduct(productId, 2, -1, 0);
+						GiveProduct(productId, 3, -1, 0);
+						GiveProduct(productId, 4, -1, 0);
+						GiveProduct(productId, 5, -1, 0);
+						GiveProduct(productId, 6, -1, 0);
+						GiveProduct(productId, 7, -1, 0);
+						GiveProduct(productId, 8, -1, 0);
+						GiveProduct(productId, 9, -1, 0);
+						GiveProduct(productId, 10, -1, 0);
+						GiveProduct(productId, 11, -1, 0);
+						GiveProduct(productId, 12, -1, 0);
+						GiveProduct(productId, 13, -1, 0);
+						GiveProduct(productId, 14, -1, 0);
+						GiveProduct(productId, 15, -1, 0);
+						GiveProduct(productId, 16, -1, 0);
+						GiveProduct(productId, 17, -1, 0);
 					}
 				}
 			}
@@ -3131,7 +3357,7 @@ void Voltage::spawnGoalExplosions()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 }
@@ -3161,24 +3387,24 @@ void Voltage::spawnAntennaTrailTopper()
 					{
 						ownedProducts.push_back(productId);
 
-						GiveProduct(productId, 0, -1);
-						GiveProduct(productId, 1, -1);
-						GiveProduct(productId, 2, -1);
-						GiveProduct(productId, 3, -1);
-						GiveProduct(productId, 4, -1);
-						GiveProduct(productId, 5, -1);
-						GiveProduct(productId, 6, -1);
-						GiveProduct(productId, 7, -1);
-						GiveProduct(productId, 8, -1);
-						GiveProduct(productId, 9, -1);
-						GiveProduct(productId, 10, -1);
-						GiveProduct(productId, 11, -1);
-						GiveProduct(productId, 12, -1);
-						GiveProduct(productId, 13, -1);
-						GiveProduct(productId, 14, -1);
-						GiveProduct(productId, 15, -1);
-						GiveProduct(productId, 16, -1);
-						GiveProduct(productId, 17, -1);
+						GiveProduct(productId, 0, -1, 0);
+						GiveProduct(productId, 1, -1, 0);
+						GiveProduct(productId, 2, -1, 0);
+						GiveProduct(productId, 3, -1, 0);
+						GiveProduct(productId, 4, -1, 0);
+						GiveProduct(productId, 5, -1, 0);
+						GiveProduct(productId, 6, -1, 0);
+						GiveProduct(productId, 7, -1, 0);
+						GiveProduct(productId, 8, -1, 0);
+						GiveProduct(productId, 9, -1, 0);
+						GiveProduct(productId, 10, -1, 0);
+						GiveProduct(productId, 11, -1, 0);
+						GiveProduct(productId, 12, -1, 0);
+						GiveProduct(productId, 13, -1, 0);
+						GiveProduct(productId, 14, -1, 0);
+						GiveProduct(productId, 15, -1, 0);
+						GiveProduct(productId, 16, -1, 0);
+						GiveProduct(productId, 17, -1, 0);
 
 					}
 				}
@@ -3187,7 +3413,7 @@ void Voltage::spawnAntennaTrailTopper()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 
 	}
@@ -3217,24 +3443,24 @@ void Voltage::spawnWheels()
 					{
 						ownedProducts.push_back(productId);
 
-						GiveProduct(productId, 0, -1);
-						GiveProduct(productId, 1, -1);
-						GiveProduct(productId, 2, -1);
-						GiveProduct(productId, 3, -1);
-						GiveProduct(productId, 4, -1);
-						GiveProduct(productId, 5, -1);
-						GiveProduct(productId, 6, -1);
-						GiveProduct(productId, 7, -1);
-						GiveProduct(productId, 8, -1);
-						GiveProduct(productId, 9, -1);
-						GiveProduct(productId, 10, -1);
-						GiveProduct(productId, 11, -1);
-						GiveProduct(productId, 12, -1);
-						GiveProduct(productId, 13, -1);
-						GiveProduct(productId, 14, -1);
-						GiveProduct(productId, 15, -1);
-						GiveProduct(productId, 16, -1);
-						GiveProduct(productId, 17, -1);
+						GiveProduct(productId, 0, -1, 0);
+						GiveProduct(productId, 1, -1, 0);
+						GiveProduct(productId, 2, -1, 0);
+						GiveProduct(productId, 3, -1, 0);
+						GiveProduct(productId, 4, -1, 0);
+						GiveProduct(productId, 5, -1, 0);
+						GiveProduct(productId, 6, -1, 0);
+						GiveProduct(productId, 7, -1, 0);
+						GiveProduct(productId, 8, -1, 0);
+						GiveProduct(productId, 9, -1, 0);
+						GiveProduct(productId, 10, -1, 0);
+						GiveProduct(productId, 11, -1, 0);
+						GiveProduct(productId, 12, -1, 0);
+						GiveProduct(productId, 13, -1, 0);
+						GiveProduct(productId, 14, -1, 0);
+						GiveProduct(productId, 15, -1, 0);
+						GiveProduct(productId, 16, -1, 0);
+						GiveProduct(productId, 17, -1, 0);
 
 					}
 
@@ -3244,19 +3470,19 @@ void Voltage::spawnWheels()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 }
 
 void Voltage::spawnHackerItems()
 {
-	GiveProduct(1412, 0, -1);
-	GiveProduct(3315, 0, -1);
-	GiveProduct(3316, 0, -1);
-	GiveProduct(1470, 0, -1);
-	GiveProduct(3138, 0, -1);
-	GiveProduct(2764, 0, -1);
+	GiveProduct(1412, 0, -1, 0);
+	GiveProduct(3315, 0, -1, 0);
+	GiveProduct(3316, 0, -1, 0);
+	GiveProduct(1470, 0, -1, 0);
+	GiveProduct(3138, 0, -1, 0);
+	GiveProduct(2764, 0, -1, 0);
 }
 
 void Voltage::spawnCrates()
@@ -3282,7 +3508,7 @@ void Voltage::spawnCrates()
 					if (std::find(ownedProducts.begin(), ownedProducts.end(), productId) == ownedProducts.end())
 					{
 						ownedProducts.push_back(productId);
-						GiveProduct(productId, -1, -1);
+						GiveProduct(productId, -1, -1, 0);
 					}
 				}
 			}
@@ -3290,7 +3516,7 @@ void Voltage::spawnCrates()
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 }
@@ -3306,7 +3532,7 @@ void Voltage::spawnDLC()
 
 			if (Product->Quality == 7)
 			{
-				GiveProduct(Product->GetID(), 0, 0);
+				GiveProduct(Product->GetID(), 0, 0, 0);
 			}
 
 		}
@@ -3314,7 +3540,7 @@ void Voltage::spawnDLC()
 
 }
 
-void Voltage::GiveProduct(int productId, int paintId, int qualityId)
+UOnlineProduct_TA* Voltage::GiveProduct(int productId, int paintId, int qualityId, int certId)
 {
 	if (classesSafe && instancesLoaded)
 	{
@@ -3323,15 +3549,24 @@ void Voltage::GiveProduct(int productId, int paintId, int qualityId)
 			checkUserAuthed();
 			if (!userAuthorized)
 			{
-				Console.Error("(Authorization) User is not authorized!");
-				return;
+				Console.Error("[Authorization] User is not authorized!");
+				return NULL;
 			}
 
 			FOnlineProductAttribute qualityData;
-			FOnlineProductAttribute paintedData;
-			FOnlineProductAttribute NoNotifyData;
+			qualityData.Key = FName(L"None");
+			qualityData.Value = FString(L"None");
 
-			if (paintId > 0 && paintId < 19)
+			FOnlineProductAttribute paintedData;
+			paintedData.Key = FName(L"None");
+			paintedData.Value = FString(L"None");
+
+			FOnlineProductAttribute NoNotifyData;
+			NoNotifyData.Key = FName(L"None");
+			NoNotifyData.Value = FString(L"None");
+
+
+			if (paintId > 0 && paintId < Utils::GetInstanceOf<UPaintDatabase_TA>()->Paints.Num())
 			{
 				PaintedAttribute->PaintID = paintId;
 				paintedData = PaintedAttribute->InstanceOnlineProductAttribute();
@@ -3348,11 +3583,15 @@ void Voltage::GiveProduct(int productId, int paintId, int qualityId)
 				NoNotifyData = NoNotifyAttribute->InstanceOnlineProductAttribute();
 			}
 
+			FOnlineProductAttribute certData;
+			certData.Key = FName(L"Certified");
+			certData.Value = Utils::to_fstring(std::to_string(certId));
+
 			FOnlineProductData productData;
 			productData.ProductID = productId;
 			productData.InstanceID = newInstanceID();
 			productData.SeriesID = 0;
-			productData.TradeHold = -1;
+			productData.TradeHold = 0;
 			productData.AddedTimestamp = time(NULL);
 
 			if (qualityData.Key.GetDisplayIndex() != 0)
@@ -3364,6 +3603,8 @@ void Voltage::GiveProduct(int productId, int paintId, int qualityId)
 			if (NoNotifyData.Key.GetDisplayIndex() != 0)
 				productData.Attributes.Add(NoNotifyData);
 
+			if (certData.Key.GetDisplayIndex() != 0)
+				productData.Attributes.Add(certData);
 
 			UOnlineProduct_TA* onlineProduct = SaveData->GiveOnlineProductData(productData);
 
@@ -3371,27 +3612,31 @@ void Voltage::GiveProduct(int productId, int paintId, int qualityId)
 			{
 				SaveData->GiveOnlineProduct(onlineProduct);
 				SaveData->GiveOnlineProductHelper(onlineProduct);
-				SaveData->OnNewOnlineProduct(onlineProduct);
 
-				Console.Write("[Inventory Mod] Successfully spawned in product: " + onlineProduct->GetLongLabel().ToString() + "\"");
+				Console.Write("[Inventory Mod] Successfully spawned in product: " + onlineProduct->GetLongLabel().ToString());
 				Console.Write("[Inventory Mod] InstanceID: " + std::to_string(onlineProduct->InstanceID));
 				Console.Write("[Inventory Mod] Paint Value: " + paintedData.Value.ToString());
 				Console.Write("[Inventory Mod] Quality Value: " + qualityData.Value.ToString());
-			}
+				Console.Write("[Inventory Mod] Certification Value: " + certData.Value.ToString());
+				Console.Write("[Inventory Mod] Notify: " + std::string(*notifySpawn == 0 ? "false" : "true"));
+
+				return onlineProduct;
+			}	
 			else
 			{
 				Console.Error("[Inventory Mod] Error: Failed to create product!");
+				return NULL;
 			}
 		}
 		else
 		{
 			classesSafe = false;
-			Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 	else
 	{
-		Console.Error("(GiveProduct) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Inventory Mod] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 
@@ -3401,73 +3646,41 @@ void Voltage::sync(bool exiting)
 	{
 		if (SaveData)
 		{
-			UOnlineGameSkill_X* skillz = Utils::GetInstanceOf<UOnlineGameSkill_X>();
-			FScriptDelegate fsdelegate = skillz->__EventSkillSynced__Delegate;
-			skillz->SyncPlayerSkill(SaveData->GetOnlinePlayer()->PlayerID, fsdelegate);
-			checkUserAuthed();
-			if (!userAuthorized)
-			{
-				Console.Error("(Authorization) User is not authorized!");
-				return;
-			}
-
-			if (exiting)
+			if (!exiting)
 			{
 				SaveData->SyncOnlineProducts();
-				//for (unsigned long long iid : spawneditemsInstanceIds)
-				//{
-				//	SaveData->RemoveOnlineProductId(iid);
-				//	if (playertitles)
-				//	{
-				//		playertitles->UpdatePlayerTitles();
-				//	}
-				//	Console.Notify("Removed Item's Instance ID: " + std::to_string(iid));
-				//}
+				UOnlineGameSkill_X* skillz = Utils::GetInstanceOf<UOnlineGameSkill_X>();
+				if (skillz)
+				{
+					FUniqueNetId localID = Utils::GetUniqueID();
+					if (localID.Platform != NULL)
+					{
+						FScriptDelegate fsdelegate = skillz->__EventSkillSynced__Delegate;
+						skillz->SyncPlayerSkill(localID, fsdelegate);
+					}
+				}
+				instancesLoaded = false;
+				loadInstances(false);
+
+				Console.Notify("[Inventory Mod] Successfully removed all Bottles of Voltage MTN Dew from your inventory.");
+				checkUserAuthed();
+				if (!userAuthorized)
+				{
+					Console.Error("[Authorization] User is not authorized!");
+					return;
+				}
 			}
 			else
 			{
 				SaveData->SyncOnlineProducts();
-				//for (unsigned long long iid : spawneditemsInstanceIds)
-				//{
-				//	SaveData->RemoveOnlineProductId(iid);
-				//	if (playertitles)
-				//	{
-				//		playertitles->UpdatePlayerTitles();
-				//	}
-				//	Console.Notify("Removed Item's Instance ID: " + std::to_string(iid));
-				//}
-				instancesLoaded = false;
-				loadInstances(false);
-
-				Console.Success("[Inventory Mod] Successfully removed all Bottles of Voltage MTN Dew from your inventory.");
-
-				if (ProductDatabase)
+				UOnlineGameSkill_X* skillz = Utils::GetInstanceOf<UOnlineGameSkill_X>();
+				if (skillz)
 				{
-					for (int i = 0; i < ProductDatabase->Products_New.Num(); i++)
+					FUniqueNetId localID = Utils::GetUniqueID();
+					if (localID.Platform != NULL)
 					{
-						if (!classesSafe)
-							return;
-
-						UProduct_TA* product = ProductDatabase->Products_New[i];
-
-						if (!product)
-							continue;
-
-						int slotIndex = product->Slot->SlotIndex;
-
-						if (slotIndex == borderIndex || slotIndex == bannerIndex || slotIndex == boostIndex || slotIndex == bodiesIndex || slotIndex == decalIndex || slotIndex == geIndex || slotIndex == topperIndex || slotIndex == trailIndex || slotIndex == currencyIndex || slotIndex == blueprintIndex || slotIndex == esportIndex || slotIndex == wheelsIndex || slotIndex == themeIndex || slotIndex == paintfinishIndex || slotIndex == antennaIndex)
-						{
-							int productId = product->GetID();
-
-							if (productId == 0)
-								loadInstances(false);
-
-
-							if (std::find(ownedProducts.begin(), ownedProducts.end(), productId) == ownedProducts.end())
-							{
-								ownedProducts.push_back(productId);
-							}
-						}
+						FScriptDelegate fsdelegate = skillz->__EventSkillSynced__Delegate;
+						skillz->SyncPlayerSkill(localID, fsdelegate);
 					}
 				}
 			}
@@ -3475,12 +3688,12 @@ void Voltage::sync(bool exiting)
 		else
 		{
 			classesSafe = false;
-			Console.Error("(sync) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+			Console.Error("[Inventory sync] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 		}
 	}
 	else
 	{
-		Console.Error("(sync) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
+		Console.Error("[Inventory sync] Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
 

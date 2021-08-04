@@ -24,7 +24,7 @@ ConsoleComponent::ConsoleComponent(const std::string& directory, const std::stri
 
 	// Open the standard out stream and show the window, then grab its handle so we can set the text color.
 
-	//AllocConsole();
+	AllocConsole();
 	freopen_s(&OutputFile, "CONOUT$", "w", stdout);
 	ShowWindow(GetConsoleWindow(), SW_SHOW);
 	OutputHandle = GetStdHandle(STD_OUTPUT_HANDLE);

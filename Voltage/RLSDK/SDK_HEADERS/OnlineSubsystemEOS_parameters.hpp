@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: OnlineSubsystemEOS_parameters.h
@@ -10,7 +10,6 @@
 #############################################################################################
 */
 #pragma once
-#include "../SdkConstants.hpp"
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -230,7 +229,7 @@ struct UOnlineSubsystemEOS_execGetUnlockedDLC_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnUnlockedDLCChange
-// [0x00120001] 
+// [0x00130001] 
 struct UOnlineSubsystemEOS_execOnUnlockedDLCChange_Parms
 {
 };
@@ -526,7 +525,7 @@ struct UOnlineSubsystemEOS_execClearExternalUIChangeDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddExternalUIChangeDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlineSubsystemEOS_execAddExternalUIChangeDelegate_Parms
 {
 	struct FScriptDelegate                             InDelegate;                                       		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -962,7 +961,7 @@ struct UOnlineAuthInterfaceEOS_execRequiresAuthTicket_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlineAuthInterfaceEOS.RequestAuthTicket
-// [0x00020400]  iNative [0x0004]
+// [0x00030400]  iNative [0x0004]
 struct UOnlineAuthInterfaceEOS_execRequestAuthTicket_Parms
 {
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0000 (0x0048) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -990,7 +989,7 @@ struct UOnlineFriendsInterfaceEOS_execGetActivePlatformId_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlineFriendsInterfaceEOS.RequestLinkedAccounts
-// [0x00020400]  iNative [0x0004]
+// [0x00030400]  iNative [0x0004]
 struct UOnlineFriendsInterfaceEOS_execRequestLinkedAccounts_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -1036,7 +1035,7 @@ struct UOnlinePersistentAuthInterfaceEOS_execAuthWithNintendoAccountToken_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.GetAuthExpirationTimestamp
-// [0x00020400]  iNative [0x0004]
+// [0x00030400]  iNative [0x0004]
 struct UOnlinePersistentAuthInterfaceEOS_execGetAuthExpirationTimestamp_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -1110,7 +1109,7 @@ struct UOnlinePlayerInterfaceEOS_execShowGamerCardUI_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetRichPresence
-// [0x00020401] 
+// [0x00030401] 
 struct UOnlinePlayerInterfaceEOS_execSetRichPresence_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -1119,7 +1118,7 @@ struct UOnlinePlayerInterfaceEOS_execSetRichPresence_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetFriendPresence
-// [0x00420401] 
+// [0x00430401] 
 struct UOnlinePlayerInterfaceEOS_execGetFriendPresence_Parms
 {
 	struct FOnlineFriend                               FriendData;                                       		// 0x0000 (0x0130) [0x0000000000400180] (CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
@@ -1216,7 +1215,7 @@ struct UOnlinePlayerInterfaceEOS_execClearFriendPresenceChangeDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendPresenceChangeDelegate
-// [0x00020803] 
+// [0x00030803] 
 struct UOnlinePlayerInterfaceEOS_eventAddFriendPresenceChangeDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -1224,7 +1223,7 @@ struct UOnlinePlayerInterfaceEOS_eventAddFriendPresenceChangeDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.FriendPresenceChange
-// [0x00120001] 
+// [0x00130001] 
 struct UOnlinePlayerInterfaceEOS_execFriendPresenceChange_Parms
 {
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0000 (0x0048) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -2345,7 +2344,7 @@ struct UOnlinePlayerInterfaceEOS_execClearFriendInviteCanceledDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendInviteCanceledDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddFriendInviteCanceledDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2369,7 +2368,7 @@ struct UOnlinePlayerInterfaceEOS_execClearFriendInviteReceivedDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendInviteReceivedDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddFriendInviteReceivedDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2404,7 +2403,7 @@ struct UOnlinePlayerInterfaceEOS_execClearRemoveFriendCompleteDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddRemoveFriendCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddRemoveFriendCompleteDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2437,7 +2436,7 @@ struct UOnlinePlayerInterfaceEOS_execClearDenyFriendInviteCompleteDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddDenyFriendInviteCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddDenyFriendInviteCompleteDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2470,7 +2469,7 @@ struct UOnlinePlayerInterfaceEOS_execClearAcceptFriendInviteCompleteDelegate_Par
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAcceptFriendInviteCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddAcceptFriendInviteCompleteDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2536,7 +2535,7 @@ struct UOnlinePlayerInterfaceEOS_execClearQueryUserByDisplayNameCompleteDelegate
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddQueryUserByDisplayNameCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddQueryUserByDisplayNameCompleteDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2571,7 +2570,7 @@ struct UOnlinePlayerInterfaceEOS_execClearAddFriendCompleteDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAddFriendCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddAddFriendCompleteDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2640,7 +2639,7 @@ struct UOnlinePlayerInterfaceEOS_execSetOnlineStatus_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetFriendsList
-// [0x00424401] 
+// [0x00434401] 
 struct UOnlinePlayerInterfaceEOS_execGetFriendsList_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2660,7 +2659,7 @@ struct UOnlinePlayerInterfaceEOS_execClearReadFriendsCompleteDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadFriendsCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePlayerInterfaceEOS_execAddReadFriendsCompleteDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2675,7 +2674,7 @@ struct UOnlinePlayerInterfaceEOS_execOnReadFriendsComplete_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadFriendsList
-// [0x00024401] 
+// [0x00034401] 
 struct UOnlinePlayerInterfaceEOS_execReadFriendsList_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2770,7 +2769,7 @@ struct UOnlinePlayerInterfaceEOS_execClearFriendsChangeDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendsChangeDelegate
-// [0x00020803] 
+// [0x00030803] 
 struct UOnlinePlayerInterfaceEOS_eventAddFriendsChangeDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2815,7 +2814,7 @@ struct UOnlinePlayerInterfaceEOS_execClearLoginChangeDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginChangeDelegate
-// [0x00020401] 
+// [0x00030401] 
 struct UOnlinePlayerInterfaceEOS_execAddLoginChangeDelegate_Parms
 {
 	struct FScriptDelegate                             LoginDelegate;                                    		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -2922,7 +2921,7 @@ struct UOnlinePlayerInterfaceEOS_execCanPlayOnline_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetPlayerNickname
-// [0x00020401] 
+// [0x00030401] 
 struct UOnlinePlayerInterfaceEOS_execGetPlayerNickname_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2930,7 +2929,7 @@ struct UOnlinePlayerInterfaceEOS_execGetPlayerNickname_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetUniquePlayerId
-// [0x00420401] 
+// [0x00430401] 
 struct UOnlinePlayerInterfaceEOS_execGetUniquePlayerId_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2939,7 +2938,7 @@ struct UOnlinePlayerInterfaceEOS_execGetUniquePlayerId_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetLoginStatus
-// [0x00020401] 
+// [0x00030401] 
 struct UOnlinePlayerInterfaceEOS_execGetLoginStatus_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -2987,7 +2986,7 @@ struct UOnlinePlayerInterfaceEOS_execClearLoginFailedDelegate_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginFailedDelegate
-// [0x00020401] 
+// [0x00030401] 
 struct UOnlinePlayerInterfaceEOS_execAddLoginFailedDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -3021,7 +3020,7 @@ struct UOnlinePlayerInterfaceEOS_execAutoLogin_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.Login
-// [0x00024401] 
+// [0x00034401] 
 struct UOnlinePlayerInterfaceEOS_execLogin_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -3284,14 +3283,14 @@ struct UOnlineUserCloudFileInterfaceEOS_execClearWriteUserFileCompleteDelegate_P
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddWriteUserFileCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlineUserCloudFileInterfaceEOS_execAddWriteUserFileCompleteDelegate_Parms
 {
 	struct FScriptDelegate                             WriteUserFileCompleteDelegate;                    		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.WriteUserFile
-// [0x00420401] 
+// [0x00430401] 
 struct UOnlineUserCloudFileInterfaceEOS_execWriteUserFile_Parms
 {
 	struct FString                                     UserId;                                           		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -3317,14 +3316,14 @@ struct UOnlineUserCloudFileInterfaceEOS_execClearReadUserFileCompleteDelegate_Pa
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddReadUserFileCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlineUserCloudFileInterfaceEOS_execAddReadUserFileCompleteDelegate_Parms
 {
 	struct FScriptDelegate                             ReadUserFileCompleteDelegate;                     		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ReadUserFile
-// [0x00020401] 
+// [0x00030401] 
 struct UOnlineUserCloudFileInterfaceEOS_execReadUserFile_Parms
 {
 	struct FString                                     UserId;                                           		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -3342,7 +3341,7 @@ struct UOnlineUserCloudFileInterfaceEOS_execOnReadUserFileComplete_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.GetUserFileList
-// [0x00420401] 
+// [0x00430401] 
 struct UOnlineUserCloudFileInterfaceEOS_execGetUserFileList_Parms
 {
 	struct FString                                     UserId;                                           		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -3357,14 +3356,14 @@ struct UOnlineUserCloudFileInterfaceEOS_execClearEnumerateUserFileCompleteDelega
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddEnumerateUserFileCompleteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlineUserCloudFileInterfaceEOS_execAddEnumerateUserFileCompleteDelegate_Parms
 {
 	struct FScriptDelegate                             EnumerateUserFileCompleteDelegate;                		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.EnumerateUserFiles
-// [0x00020401] 
+// [0x00030401] 
 struct UOnlineUserCloudFileInterfaceEOS_execEnumerateUserFiles_Parms
 {
 	struct FString                                     UserId;                                           		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -3396,7 +3395,7 @@ struct UOnlineUserCloudFileInterfaceEOS_execClearFiles_Parms
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.GetFileContents
-// [0x00420401] 
+// [0x00430401] 
 struct UOnlineUserCloudFileInterfaceEOS_execGetFileContents_Parms
 {
 	struct FString                                     UserId;                                           		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)

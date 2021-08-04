@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: GameDefines.hpp
@@ -20,9 +20,18 @@
 #include <map>
 
 // GObjects
-#define GObjects_Offset 		  (uintptr_t)0x247d218
+#define STEAMGObjects_Offset 		  (uintptr_t)0x247d218
+#define EPICGObjects_Offset 		  (uintptr_t)0x23f7cf8
 // GNames
-#define GNames_Offset 			  (uintptr_t)0x247d1d0
+#define STEAMGNames_Offset 			  (uintptr_t)0x247d1d0
+#define EPICGNames_Offset 			  (uintptr_t)0x23f7cb0
+
+// GObjects
+#define GObjects_Pattern		(const uint8_t*)"\xE8\x00\x00\x00\x00\xEB\x82"
+#define GObjects_Mask			(const char*)"x????xx"
+// GNames
+#define GNames_Pattern			(const uint8_t*)"\xE8\x00\x00\x00\x00\x48\x83\xCF\xFF\x45\x85\xFF"
+#define GNames_Mask				(const char*)"x????xxxxxxx"
 
 /*
 # ========================================================================================= #
@@ -31,7 +40,7 @@
 */
 
 template<typename TArray>
-struct TIterator
+class TIterator
 {
 public:
 	using ElementType = typename TArray::ElementType;
@@ -55,7 +64,7 @@ public:
 		return *this;
 	}
 
-	TIterator operator++(int)
+	TIterator operator++(int32_t)
 	{
 		TIterator iteratorCopy = *this;
 		++(*this);
@@ -68,7 +77,7 @@ public:
 		return *this;
 	}
 
-	TIterator operator--(int)
+	TIterator operator--(int32_t)
 	{
 		TIterator iteratorCopy = *this;
 		--(*this);
@@ -77,7 +86,7 @@ public:
 
 	ElementReference operator[](int32_t index)
 	{
-		return (IteratorData[index]);
+		return *(IteratorData[index]);
 	}
 
 	ElementPointer operator->()
@@ -90,6 +99,7 @@ public:
 		return *IteratorData;
 	}
 
+public:
 	bool operator==(const TIterator& other) const
 	{
 		return (IteratorData == other.IteratorData);
@@ -100,7 +110,6 @@ public:
 		return !(*this == other);
 	}
 };
-
 template<typename InElementType>
 struct TArray
 {
@@ -149,7 +158,7 @@ public:
 		} 
 	}
 
-	ElementConstReference At(const int32_t index) const
+	ElementConstReference At(int32_t index) const
 	{
 		if (index <= ArrayCount)
 		{
@@ -157,7 +166,7 @@ public:
 		} 
 	}
 
-	ElementReference At(const int32_t index)
+	ElementReference At(int32_t index)
 	{
 		if (index <= ArrayCount)
 		{
@@ -257,7 +266,7 @@ template<typename TKey, typename TValue>
 struct TMap
 {
 private:
-struct TPair
+	struct TPair
 	{
 		TKey Key;
 		TValue Value;
@@ -413,6 +422,7 @@ struct FNameEntry
 {
 	unsigned char	UnknownData00[0x18];
 	wchar_t			Name[0x100];
+
 };
 
 struct FName
@@ -642,7 +652,7 @@ struct FPointer
 
 struct FScriptDelegate
 {
-	unsigned char	UnknownData00[0x18];
+	unsigned char UnknownData00[0x18];
 };
 
 /*

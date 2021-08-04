@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: GFxUI_classes.cpp
@@ -22,7 +22,7 @@
 */
 
 // Function GFxUI.GFxEngine.UpdateMovieLoadingInfo
-// [0x00428401] (FUNC_Final | FUNC_Native | FUNC_UbergraphFunction | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00438401] (FUNC_Final | FUNC_Native | FUNC_UbergraphFunction | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FLoadingMovieMapInfo    LoadingInfo                    (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -32,7 +32,8 @@ void UGFxEngine::UpdateMovieLoadingInfo(struct FLoadingMovieMapInfo& LoadingInfo
 
 	if (!pFnUpdateMovieLoadingInfo)
 	{
-		pFnUpdateMovieLoadingInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXENGINE_UPDATEMOVIELOADINGINFO));
+		pFnUpdateMovieLoadingInfo = UFunction::FindFunction("Function GFxUI.GFxEngine.UpdateMovieLoadingInfo");
+
 	}
 
 	UGFxEngine_execUpdateMovieLoadingInfo_Parms UpdateMovieLoadingInfo_Parms;
@@ -56,7 +57,8 @@ void UGFxEngine::eventTick(float DeltaTime)
 
 	if (!pFnTick)
 	{
-		pFnTick = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXENGINE_TICK));
+		pFnTick = UFunction::FindFunction("Function GFxUI.GFxEngine.Tick");
+
 	}
 
 	UGFxEngine_eventTick_Parms Tick_Parms;
@@ -80,7 +82,8 @@ bool UGFxFSCmdHandler::eventFSCommand(class UGFxMoviePlayer* Movie, class UGFxEv
 
 	if (!pFnFSCommand)
 	{
-		pFnFSCommand = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXFSCMDHANDLER_FSCOMMAND));
+		pFnFSCommand = UFunction::FindFunction("Function GFxUI.GFxFSCmdHandler.FSCommand");
+
 	}
 
 	UGFxFSCmdHandler_eventFSCommand_Parms FSCommand_Parms;
@@ -109,7 +112,8 @@ void UGFxInteraction::DebugInputKey(int ControllerId, struct FName Key, unsigned
 
 	if (!pFnDebugInputKey)
 	{
-		pFnDebugInputKey = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXINTERACTION_DEBUGINPUTKEY));
+		pFnDebugInputKey = UFunction::FindFunction("Function GFxUI.GFxInteraction.DebugInputKey");
+
 	}
 
 	UGFxInteraction_execDebugInputKey_Parms DebugInputKey_Parms;
@@ -136,7 +140,8 @@ void UGFxInteraction::CloseAllMoviePlayers()
 
 	if (!pFnCloseAllMoviePlayers)
 	{
-		pFnCloseAllMoviePlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXINTERACTION_CLOSEALLMOVIEPLAYERS));
+		pFnCloseAllMoviePlayers = UFunction::FindFunction("Function GFxUI.GFxInteraction.CloseAllMoviePlayers");
+
 	}
 
 	UGFxInteraction_execCloseAllMoviePlayers_Parms CloseAllMoviePlayers_Parms;
@@ -158,7 +163,8 @@ void UGFxInteraction::NotifySplitscreenLayoutChanged()
 
 	if (!pFnNotifySplitscreenLayoutChanged)
 	{
-		pFnNotifySplitscreenLayoutChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXINTERACTION_NOTIFYSPLITSCREENLAYOUTCHANGED));
+		pFnNotifySplitscreenLayoutChanged = UFunction::FindFunction("Function GFxUI.GFxInteraction.NotifySplitscreenLayoutChanged");
+
 	}
 
 	UGFxInteraction_execNotifySplitscreenLayoutChanged_Parms NotifySplitscreenLayoutChanged_Parms;
@@ -182,7 +188,8 @@ void UGFxInteraction::NotifyPlayerRemoved(int PlayerIndex, class ULocalPlayer* R
 
 	if (!pFnNotifyPlayerRemoved)
 	{
-		pFnNotifyPlayerRemoved = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXINTERACTION_NOTIFYPLAYERREMOVED));
+		pFnNotifyPlayerRemoved = UFunction::FindFunction("Function GFxUI.GFxInteraction.NotifyPlayerRemoved");
+
 	}
 
 	UGFxInteraction_execNotifyPlayerRemoved_Parms NotifyPlayerRemoved_Parms;
@@ -202,7 +209,7 @@ void UGFxInteraction::NotifyPlayerRemoved(int PlayerIndex, class ULocalPlayer* R
 };
 
 // Function GFxUI.GFxInteraction.NotifyPlayerAdded
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // int                            PlayerIndex                    (CPF_Parm)
 // class ULocalPlayer*            AddedPlayer                    (CPF_Parm)
@@ -213,7 +220,8 @@ void UGFxInteraction::NotifyPlayerAdded(int PlayerIndex, class ULocalPlayer* Add
 
 	if (!pFnNotifyPlayerAdded)
 	{
-		pFnNotifyPlayerAdded = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXINTERACTION_NOTIFYPLAYERADDED));
+		pFnNotifyPlayerAdded = UFunction::FindFunction("Function GFxUI.GFxInteraction.NotifyPlayerAdded");
+
 	}
 
 	UGFxInteraction_execNotifyPlayerAdded_Parms NotifyPlayerAdded_Parms;
@@ -233,7 +241,7 @@ void UGFxInteraction::NotifyPlayerAdded(int PlayerIndex, class ULocalPlayer* Add
 };
 
 // Function GFxUI.GFxInteraction.NotifyGameSessionEnded
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 
 void UGFxInteraction::NotifyGameSessionEnded()
@@ -242,7 +250,8 @@ void UGFxInteraction::NotifyGameSessionEnded()
 
 	if (!pFnNotifyGameSessionEnded)
 	{
-		pFnNotifyGameSessionEnded = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXINTERACTION_NOTIFYGAMESESSIONENDED));
+		pFnNotifyGameSessionEnded = UFunction::FindFunction("Function GFxUI.GFxInteraction.NotifyGameSessionEnded");
+
 	}
 
 	UGFxInteraction_execNotifyGameSessionEnded_Parms NotifyGameSessionEnded_Parms;
@@ -271,7 +280,8 @@ class UGFxMoviePlayer* UGFxInteraction::GetFocusMovie(int ControllerId)
 
 	if (!pFnGetFocusMovie)
 	{
-		pFnGetFocusMovie = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXINTERACTION_GETFOCUSMOVIE));
+		pFnGetFocusMovie = UFunction::FindFunction("Function GFxUI.GFxInteraction.GetFocusMovie");
+
 	}
 
 	UGFxInteraction_execGetFocusMovie_Parms GetFocusMovie_Parms;
@@ -297,7 +307,8 @@ void UGFxMoviePlayer::SetFullScreen(unsigned long bFullScreen)
 
 	if (!pFnSetFullScreen)
 	{
-		pFnSetFullScreen = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETFULLSCREEN));
+		pFnSetFullScreen = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetFullScreen");
+
 	}
 
 	UGFxMoviePlayer_execSetFullScreen_Parms SetFullScreen_Parms;
@@ -321,7 +332,8 @@ bool UGFxMoviePlayer::IsHidden()
 
 	if (!pFnIsHidden)
 	{
-		pFnIsHidden = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ISHIDDEN));
+		pFnIsHidden = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.IsHidden");
+
 	}
 
 	UGFxMoviePlayer_execIsHidden_Parms IsHidden_Parms;
@@ -346,7 +358,8 @@ void UGFxMoviePlayer::SetHidden(unsigned long bHidden)
 
 	if (!pFnSetHidden)
 	{
-		pFnSetHidden = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETHIDDEN));
+		pFnSetHidden = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetHidden");
+
 	}
 
 	UGFxMoviePlayer_execSetHidden_Parms SetHidden_Parms;
@@ -369,7 +382,8 @@ void UGFxMoviePlayer::RenderOnce()
 
 	if (!pFnRenderOnce)
 	{
-		pFnRenderOnce = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_RENDERONCE));
+		pFnRenderOnce = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.RenderOnce");
+
 	}
 
 	UGFxMoviePlayer_execRenderOnce_Parms RenderOnce_Parms;
@@ -391,7 +405,8 @@ void UGFxMoviePlayer::UpdateSplitscreenLayout()
 
 	if (!pFnUpdateSplitscreenLayout)
 	{
-		pFnUpdateSplitscreenLayout = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_UPDATESPLITSCREENLAYOUT));
+		pFnUpdateSplitscreenLayout = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.UpdateSplitscreenLayout");
+
 	}
 
 	UGFxMoviePlayer_execUpdateSplitscreenLayout_Parms UpdateSplitscreenLayout_Parms;
@@ -414,7 +429,8 @@ void UGFxMoviePlayer::ApplyPriorityVisibilityEffect(unsigned long bRemoveEffect)
 
 	if (!pFnApplyPriorityVisibilityEffect)
 	{
-		pFnApplyPriorityVisibilityEffect = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_APPLYPRIORITYVISIBILITYEFFECT));
+		pFnApplyPriorityVisibilityEffect = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ApplyPriorityVisibilityEffect");
+
 	}
 
 	UGFxMoviePlayer_execApplyPriorityVisibilityEffect_Parms ApplyPriorityVisibilityEffect_Parms;
@@ -434,7 +450,8 @@ void UGFxMoviePlayer::ApplyPriorityBlurEffect(unsigned long bRemoveEffect)
 
 	if (!pFnApplyPriorityBlurEffect)
 	{
-		pFnApplyPriorityBlurEffect = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_APPLYPRIORITYBLUREFFECT));
+		pFnApplyPriorityBlurEffect = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ApplyPriorityBlurEffect");
+
 	}
 
 	UGFxMoviePlayer_execApplyPriorityBlurEffect_Parms ApplyPriorityBlurEffect_Parms;
@@ -444,7 +461,7 @@ void UGFxMoviePlayer::ApplyPriorityBlurEffect(unsigned long bRemoveEffect)
 };
 
 // Function GFxUI.GFxMoviePlayer.ApplyPriorityEffect
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bRequestedBlurState            (CPF_Parm)
 // unsigned long                  bRequestedHiddenState          (CPF_Parm)
@@ -455,7 +472,8 @@ void UGFxMoviePlayer::eventApplyPriorityEffect(unsigned long bRequestedBlurState
 
 	if (!pFnApplyPriorityEffect)
 	{
-		pFnApplyPriorityEffect = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_APPLYPRIORITYEFFECT));
+		pFnApplyPriorityEffect = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ApplyPriorityEffect");
+
 	}
 
 	UGFxMoviePlayer_eventApplyPriorityEffect_Parms ApplyPriorityEffect_Parms;
@@ -477,7 +495,8 @@ void UGFxMoviePlayer::eventPlaySoundFromTheme(struct FName EventName, struct FNa
 
 	if (!pFnPlaySoundFromTheme)
 	{
-		pFnPlaySoundFromTheme = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_PLAYSOUNDFROMTHEME));
+		pFnPlaySoundFromTheme = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.PlaySoundFromTheme");
+
 	}
 
 	UGFxMoviePlayer_eventPlaySoundFromTheme_Parms PlaySoundFromTheme_Parms;
@@ -488,7 +507,7 @@ void UGFxMoviePlayer::eventPlaySoundFromTheme(struct FName EventName, struct FNa
 };
 
 // Function GFxUI.GFxMoviePlayer.OnFocusLost
-// [0x00020801] (FUNC_Final | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030801] (FUNC_Final | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            LocalPlayerIndex               (CPF_Parm)
 
@@ -498,7 +517,8 @@ void UGFxMoviePlayer::eventOnFocusLost(int LocalPlayerIndex)
 
 	if (!pFnOnFocusLost)
 	{
-		pFnOnFocusLost = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ONFOCUSLOST));
+		pFnOnFocusLost = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.OnFocusLost");
+
 	}
 
 	UGFxMoviePlayer_eventOnFocusLost_Parms OnFocusLost_Parms;
@@ -508,7 +528,7 @@ void UGFxMoviePlayer::eventOnFocusLost(int LocalPlayerIndex)
 };
 
 // Function GFxUI.GFxMoviePlayer.OnFocusGained
-// [0x00020801] (FUNC_Final | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030801] (FUNC_Final | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            LocalPlayerIndex               (CPF_Parm)
 
@@ -518,7 +538,8 @@ void UGFxMoviePlayer::eventOnFocusGained(int LocalPlayerIndex)
 
 	if (!pFnOnFocusGained)
 	{
-		pFnOnFocusGained = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ONFOCUSGAINED));
+		pFnOnFocusGained = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.OnFocusGained");
+
 	}
 
 	UGFxMoviePlayer_eventOnFocusGained_Parms OnFocusGained_Parms;
@@ -538,7 +559,8 @@ void UGFxMoviePlayer::ConsoleCommand(struct FString Command)
 
 	if (!pFnConsoleCommand)
 	{
-		pFnConsoleCommand = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_CONSOLECOMMAND));
+		pFnConsoleCommand = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ConsoleCommand");
+
 	}
 
 	UGFxMoviePlayer_execConsoleCommand_Parms ConsoleCommand_Parms;
@@ -548,7 +570,7 @@ void UGFxMoviePlayer::ConsoleCommand(struct FString Command)
 };
 
 // Function GFxUI.GFxMoviePlayer.GetPC
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class APlayerController*       ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -558,7 +580,8 @@ class APlayerController* UGFxMoviePlayer::eventGetPC()
 
 	if (!pFnGetPC)
 	{
-		pFnGetPC = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETPC));
+		pFnGetPC = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetPC");
+
 	}
 
 	UGFxMoviePlayer_eventGetPC_Parms GetPC_Parms;
@@ -569,7 +592,7 @@ class APlayerController* UGFxMoviePlayer::eventGetPC()
 };
 
 // Function GFxUI.GFxMoviePlayer.GetLP
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class ULocalPlayer*            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -579,7 +602,8 @@ class ULocalPlayer* UGFxMoviePlayer::eventGetLP()
 
 	if (!pFnGetLP)
 	{
-		pFnGetLP = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETLP));
+		pFnGetLP = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetLP");
+
 	}
 
 	UGFxMoviePlayer_eventGetLP_Parms GetLP_Parms;
@@ -600,7 +624,8 @@ void UGFxMoviePlayer::Init(class ULocalPlayer* LocPlay)
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_INIT));
+		pFnInit = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.Init");
+
 	}
 
 	UGFxMoviePlayer_execInit_Parms Init_Parms;
@@ -621,7 +646,8 @@ void UGFxMoviePlayer::SetWidgetPathBinding(class UGFxObject* WidgetToBind, struc
 
 	if (!pFnSetWidgetPathBinding)
 	{
-		pFnSetWidgetPathBinding = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETWIDGETPATHBINDING));
+		pFnSetWidgetPathBinding = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetWidgetPathBinding");
+
 	}
 
 	UGFxMoviePlayer_execSetWidgetPathBinding_Parms SetWidgetPathBinding_Parms;
@@ -645,7 +671,8 @@ void UGFxMoviePlayer::eventPostWidgetInit()
 
 	if (!pFnPostWidgetInit)
 	{
-		pFnPostWidgetInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_POSTWIDGETINIT));
+		pFnPostWidgetInit = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.PostWidgetInit");
+
 	}
 
 	UGFxMoviePlayer_eventPostWidgetInit_Parms PostWidgetInit_Parms;
@@ -667,7 +694,8 @@ bool UGFxMoviePlayer::eventWidgetUnloaded(struct FName WidgetName, struct FName 
 
 	if (!pFnWidgetUnloaded)
 	{
-		pFnWidgetUnloaded = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_WIDGETUNLOADED));
+		pFnWidgetUnloaded = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.WidgetUnloaded");
+
 	}
 
 	UGFxMoviePlayer_eventWidgetUnloaded_Parms WidgetUnloaded_Parms;
@@ -694,7 +722,8 @@ bool UGFxMoviePlayer::eventWidgetInitialized(struct FName WidgetName, struct FNa
 
 	if (!pFnWidgetInitialized)
 	{
-		pFnWidgetInitialized = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_WIDGETINITIALIZED));
+		pFnWidgetInitialized = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.WidgetInitialized");
+
 	}
 
 	UGFxMoviePlayer_eventWidgetInitialized_Parms WidgetInitialized_Parms;
@@ -719,7 +748,8 @@ class UGFxObject* UGFxMoviePlayer::ActionScriptConstructor(struct FString ClassN
 
 	if (!pFnActionScriptConstructor)
 	{
-		pFnActionScriptConstructor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ACTIONSCRIPTCONSTRUCTOR));
+		pFnActionScriptConstructor = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ActionScriptConstructor");
+
 	}
 
 	UGFxMoviePlayer_execActionScriptConstructor_Parms ActionScriptConstructor_Parms;
@@ -746,7 +776,8 @@ class UGFxObject* UGFxMoviePlayer::ActionScriptObject(struct FString Path)
 
 	if (!pFnActionScriptObject)
 	{
-		pFnActionScriptObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ACTIONSCRIPTOBJECT));
+		pFnActionScriptObject = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ActionScriptObject");
+
 	}
 
 	UGFxMoviePlayer_execActionScriptObject_Parms ActionScriptObject_Parms;
@@ -773,7 +804,8 @@ struct FString UGFxMoviePlayer::ActionScriptString(struct FString Path)
 
 	if (!pFnActionScriptString)
 	{
-		pFnActionScriptString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ACTIONSCRIPTSTRING));
+		pFnActionScriptString = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ActionScriptString");
+
 	}
 
 	UGFxMoviePlayer_execActionScriptString_Parms ActionScriptString_Parms;
@@ -800,7 +832,8 @@ float UGFxMoviePlayer::ActionScriptFloat(struct FString Path)
 
 	if (!pFnActionScriptFloat)
 	{
-		pFnActionScriptFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ACTIONSCRIPTFLOAT));
+		pFnActionScriptFloat = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ActionScriptFloat");
+
 	}
 
 	UGFxMoviePlayer_execActionScriptFloat_Parms ActionScriptFloat_Parms;
@@ -827,7 +860,8 @@ int UGFxMoviePlayer::ActionScriptInt(struct FString Path)
 
 	if (!pFnActionScriptInt)
 	{
-		pFnActionScriptInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ACTIONSCRIPTINT));
+		pFnActionScriptInt = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ActionScriptInt");
+
 	}
 
 	UGFxMoviePlayer_execActionScriptInt_Parms ActionScriptInt_Parms;
@@ -853,7 +887,8 @@ void UGFxMoviePlayer::ActionScriptVoid(struct FString Path)
 
 	if (!pFnActionScriptVoid)
 	{
-		pFnActionScriptVoid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ACTIONSCRIPTVOID));
+		pFnActionScriptVoid = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ActionScriptVoid");
+
 	}
 
 	UGFxMoviePlayer_execActionScriptVoid_Parms ActionScriptVoid_Parms;
@@ -879,7 +914,8 @@ struct FASValue UGFxMoviePlayer::Invoke(struct FString method, TArray<struct FAS
 
 	if (!pFnInvoke)
 	{
-		pFnInvoke = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_INVOKE));
+		pFnInvoke = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.Invoke");
+
 	}
 
 	UGFxMoviePlayer_execInvoke_Parms Invoke_Parms;
@@ -907,7 +943,8 @@ void UGFxMoviePlayer::ActionScriptSetFunction(class UGFxObject* Object, struct F
 
 	if (!pFnActionScriptSetFunction)
 	{
-		pFnActionScriptSetFunction = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ACTIONSCRIPTSETFUNCTION));
+		pFnActionScriptSetFunction = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ActionScriptSetFunction");
+
 	}
 
 	UGFxMoviePlayer_execActionScriptSetFunction_Parms ActionScriptSetFunction_Parms;
@@ -932,7 +969,8 @@ class UGFxObject* UGFxMoviePlayer::CreateArray()
 
 	if (!pFnCreateArray)
 	{
-		pFnCreateArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_CREATEARRAY));
+		pFnCreateArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.CreateArray");
+
 	}
 
 	UGFxMoviePlayer_execCreateArray_Parms CreateArray_Parms;
@@ -960,7 +998,8 @@ class UGFxObject* UGFxMoviePlayer::CreateObject(struct FString ASClass, class UC
 
 	if (!pFnCreateObject)
 	{
-		pFnCreateObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_CREATEOBJECT));
+		pFnCreateObject = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.CreateObject");
+
 	}
 
 	UGFxMoviePlayer_execCreateObject_Parms CreateObject_Parms;
@@ -991,7 +1030,8 @@ bool UGFxMoviePlayer::SetVariableStringArray(struct FString Path, int Index, TAr
 
 	if (!pFnSetVariableStringArray)
 	{
-		pFnSetVariableStringArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLESTRINGARRAY));
+		pFnSetVariableStringArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableStringArray");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableStringArray_Parms SetVariableStringArray_Parms;
@@ -1022,7 +1062,8 @@ bool UGFxMoviePlayer::SetVariableFloatArray(struct FString Path, int Index, TArr
 
 	if (!pFnSetVariableFloatArray)
 	{
-		pFnSetVariableFloatArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLEFLOATARRAY));
+		pFnSetVariableFloatArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableFloatArray");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableFloatArray_Parms SetVariableFloatArray_Parms;
@@ -1053,7 +1094,8 @@ bool UGFxMoviePlayer::SetVariableIntArray(struct FString Path, int Index, TArray
 
 	if (!pFnSetVariableIntArray)
 	{
-		pFnSetVariableIntArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLEINTARRAY));
+		pFnSetVariableIntArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableIntArray");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableIntArray_Parms SetVariableIntArray_Parms;
@@ -1084,7 +1126,8 @@ bool UGFxMoviePlayer::SetVariableArray(struct FString Path, int Index, TArray<st
 
 	if (!pFnSetVariableArray)
 	{
-		pFnSetVariableArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLEARRAY));
+		pFnSetVariableArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableArray");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableArray_Parms SetVariableArray_Parms;
@@ -1115,7 +1158,8 @@ bool UGFxMoviePlayer::GetVariableStringArray(struct FString Path, int Index, TAr
 
 	if (!pFnGetVariableStringArray)
 	{
-		pFnGetVariableStringArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLESTRINGARRAY));
+		pFnGetVariableStringArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableStringArray");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableStringArray_Parms GetVariableStringArray_Parms;
@@ -1146,7 +1190,8 @@ bool UGFxMoviePlayer::GetVariableFloatArray(struct FString Path, int Index, TArr
 
 	if (!pFnGetVariableFloatArray)
 	{
-		pFnGetVariableFloatArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLEFLOATARRAY));
+		pFnGetVariableFloatArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableFloatArray");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableFloatArray_Parms GetVariableFloatArray_Parms;
@@ -1177,7 +1222,8 @@ bool UGFxMoviePlayer::GetVariableIntArray(struct FString Path, int Index, TArray
 
 	if (!pFnGetVariableIntArray)
 	{
-		pFnGetVariableIntArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLEINTARRAY));
+		pFnGetVariableIntArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableIntArray");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableIntArray_Parms GetVariableIntArray_Parms;
@@ -1208,7 +1254,8 @@ bool UGFxMoviePlayer::GetVariableArray(struct FString Path, int Index, TArray<st
 
 	if (!pFnGetVariableArray)
 	{
-		pFnGetVariableArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLEARRAY));
+		pFnGetVariableArray = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableArray");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableArray_Parms GetVariableArray_Parms;
@@ -1237,7 +1284,8 @@ void UGFxMoviePlayer::SetVariableObject(struct FString Path, class UGFxObject* O
 
 	if (!pFnSetVariableObject)
 	{
-		pFnSetVariableObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLEOBJECT));
+		pFnSetVariableObject = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableObject");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableObject_Parms SetVariableObject_Parms;
@@ -1263,7 +1311,8 @@ void UGFxMoviePlayer::SetVariableString(struct FString Path, struct FString S)
 
 	if (!pFnSetVariableString)
 	{
-		pFnSetVariableString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLESTRING));
+		pFnSetVariableString = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableString");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableString_Parms SetVariableString_Parms;
@@ -1289,7 +1338,8 @@ void UGFxMoviePlayer::SetVariableInt(struct FString Path, int I)
 
 	if (!pFnSetVariableInt)
 	{
-		pFnSetVariableInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLEINT));
+		pFnSetVariableInt = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableInt");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableInt_Parms SetVariableInt_Parms;
@@ -1315,7 +1365,8 @@ void UGFxMoviePlayer::SetVariableNumber(struct FString Path, float F)
 
 	if (!pFnSetVariableNumber)
 	{
-		pFnSetVariableNumber = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLENUMBER));
+		pFnSetVariableNumber = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableNumber");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableNumber_Parms SetVariableNumber_Parms;
@@ -1341,7 +1392,8 @@ void UGFxMoviePlayer::SetVariableBool(struct FString Path, unsigned long B)
 
 	if (!pFnSetVariableBool)
 	{
-		pFnSetVariableBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLEBOOL));
+		pFnSetVariableBool = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariableBool");
+
 	}
 
 	UGFxMoviePlayer_execSetVariableBool_Parms SetVariableBool_Parms;
@@ -1367,7 +1419,8 @@ void UGFxMoviePlayer::SetVariable(struct FString Path, struct FASValue Arg)
 
 	if (!pFnSetVariable)
 	{
-		pFnSetVariable = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVARIABLE));
+		pFnSetVariable = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetVariable");
+
 	}
 
 	UGFxMoviePlayer_execSetVariable_Parms SetVariable_Parms;
@@ -1394,7 +1447,8 @@ class UGFxObject* UGFxMoviePlayer::GetVariableObject(struct FString Path, class 
 
 	if (!pFnGetVariableObject)
 	{
-		pFnGetVariableObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLEOBJECT));
+		pFnGetVariableObject = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableObject");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableObject_Parms GetVariableObject_Parms;
@@ -1422,7 +1476,8 @@ struct FString UGFxMoviePlayer::GetVariableString(struct FString Path)
 
 	if (!pFnGetVariableString)
 	{
-		pFnGetVariableString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLESTRING));
+		pFnGetVariableString = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableString");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableString_Parms GetVariableString_Parms;
@@ -1449,7 +1504,8 @@ int UGFxMoviePlayer::GetVariableInt(struct FString Path)
 
 	if (!pFnGetVariableInt)
 	{
-		pFnGetVariableInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLEINT));
+		pFnGetVariableInt = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableInt");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableInt_Parms GetVariableInt_Parms;
@@ -1476,7 +1532,8 @@ float UGFxMoviePlayer::GetVariableNumber(struct FString Path)
 
 	if (!pFnGetVariableNumber)
 	{
-		pFnGetVariableNumber = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLENUMBER));
+		pFnGetVariableNumber = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableNumber");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableNumber_Parms GetVariableNumber_Parms;
@@ -1503,7 +1560,8 @@ bool UGFxMoviePlayer::GetVariableBool(struct FString Path)
 
 	if (!pFnGetVariableBool)
 	{
-		pFnGetVariableBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLEBOOL));
+		pFnGetVariableBool = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariableBool");
+
 	}
 
 	UGFxMoviePlayer_execGetVariableBool_Parms GetVariableBool_Parms;
@@ -1530,7 +1588,8 @@ struct FASValue UGFxMoviePlayer::GetVariable(struct FString Path)
 
 	if (!pFnGetVariable)
 	{
-		pFnGetVariable = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVARIABLE));
+		pFnGetVariable = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVariable");
+
 	}
 
 	UGFxMoviePlayer_execGetVariable_Parms GetVariable_Parms;
@@ -1556,7 +1615,8 @@ int UGFxMoviePlayer::GetAVMVersion()
 
 	if (!pFnGetAVMVersion)
 	{
-		pFnGetAVMVersion = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETAVMVERSION));
+		pFnGetAVMVersion = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetAVMVersion");
+
 	}
 
 	UGFxMoviePlayer_execGetAVMVersion_Parms GetAVMVersion_Parms;
@@ -1571,7 +1631,7 @@ int UGFxMoviePlayer::GetAVMVersion()
 };
 
 // Function GFxUI.GFxMoviePlayer.FilterButtonInput
-// [0x00020801] (FUNC_Final | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030801] (FUNC_Final | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            ControllerId                   (CPF_Parm)
@@ -1584,7 +1644,8 @@ bool UGFxMoviePlayer::eventFilterButtonInput(int ControllerId, struct FName Butt
 
 	if (!pFnFilterButtonInput)
 	{
-		pFnFilterButtonInput = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_FILTERBUTTONINPUT));
+		pFnFilterButtonInput = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.FilterButtonInput");
+
 	}
 
 	UGFxMoviePlayer_eventFilterButtonInput_Parms FilterButtonInput_Parms;
@@ -1598,7 +1659,7 @@ bool UGFxMoviePlayer::eventFilterButtonInput(int ControllerId, struct FName Butt
 };
 
 // Function GFxUI.GFxMoviePlayer.FlushPlayerInput
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  capturekeysonly                (CPF_Parm)
 
@@ -1608,7 +1669,8 @@ void UGFxMoviePlayer::FlushPlayerInput(unsigned long capturekeysonly)
 
 	if (!pFnFlushPlayerInput)
 	{
-		pFnFlushPlayerInput = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_FLUSHPLAYERINPUT));
+		pFnFlushPlayerInput = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.FlushPlayerInput");
+
 	}
 
 	UGFxMoviePlayer_execFlushPlayerInput_Parms FlushPlayerInput_Parms;
@@ -1631,7 +1693,8 @@ void UGFxMoviePlayer::ClearFocusIgnoreKeys()
 
 	if (!pFnClearFocusIgnoreKeys)
 	{
-		pFnClearFocusIgnoreKeys = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_CLEARFOCUSIGNOREKEYS));
+		pFnClearFocusIgnoreKeys = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ClearFocusIgnoreKeys");
+
 	}
 
 	UGFxMoviePlayer_execClearFocusIgnoreKeys_Parms ClearFocusIgnoreKeys_Parms;
@@ -1654,7 +1717,8 @@ void UGFxMoviePlayer::AddFocusIgnoreKey(struct FName Key)
 
 	if (!pFnAddFocusIgnoreKey)
 	{
-		pFnAddFocusIgnoreKey = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ADDFOCUSIGNOREKEY));
+		pFnAddFocusIgnoreKey = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.AddFocusIgnoreKey");
+
 	}
 
 	UGFxMoviePlayer_execAddFocusIgnoreKey_Parms AddFocusIgnoreKey_Parms;
@@ -1677,7 +1741,8 @@ void UGFxMoviePlayer::ClearCaptureKeys()
 
 	if (!pFnClearCaptureKeys)
 	{
-		pFnClearCaptureKeys = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_CLEARCAPTUREKEYS));
+		pFnClearCaptureKeys = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ClearCaptureKeys");
+
 	}
 
 	UGFxMoviePlayer_execClearCaptureKeys_Parms ClearCaptureKeys_Parms;
@@ -1700,7 +1765,8 @@ void UGFxMoviePlayer::AddCaptureKey(struct FName Key)
 
 	if (!pFnAddCaptureKey)
 	{
-		pFnAddCaptureKey = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ADDCAPTUREKEY));
+		pFnAddCaptureKey = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.AddCaptureKey");
+
 	}
 
 	UGFxMoviePlayer_execAddCaptureKey_Parms AddCaptureKey_Parms;
@@ -1714,7 +1780,7 @@ void UGFxMoviePlayer::AddCaptureKey(struct FName Key)
 };
 
 // Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveInput
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bCanReceiveInput               (CPF_Parm)
 
@@ -1724,7 +1790,8 @@ void UGFxMoviePlayer::SetMovieCanReceiveInput(unsigned long bCanReceiveInput)
 
 	if (!pFnSetMovieCanReceiveInput)
 	{
-		pFnSetMovieCanReceiveInput = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETMOVIECANRECEIVEINPUT));
+		pFnSetMovieCanReceiveInput = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveInput");
+
 	}
 
 	UGFxMoviePlayer_execSetMovieCanReceiveInput_Parms SetMovieCanReceiveInput_Parms;
@@ -1738,7 +1805,7 @@ void UGFxMoviePlayer::SetMovieCanReceiveInput(unsigned long bCanReceiveInput)
 };
 
 // Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveFocus
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bCanReceiveFocus               (CPF_Parm)
 
@@ -1748,7 +1815,8 @@ void UGFxMoviePlayer::SetMovieCanReceiveFocus(unsigned long bCanReceiveFocus)
 
 	if (!pFnSetMovieCanReceiveFocus)
 	{
-		pFnSetMovieCanReceiveFocus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETMOVIECANRECEIVEFOCUS));
+		pFnSetMovieCanReceiveFocus = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveFocus");
+
 	}
 
 	UGFxMoviePlayer_execSetMovieCanReceiveFocus_Parms SetMovieCanReceiveFocus_Parms;
@@ -1772,7 +1840,8 @@ void UGFxMoviePlayer::SetPerspective3D(struct FMatrix& matPersp)
 
 	if (!pFnSetPerspective3D)
 	{
-		pFnSetPerspective3D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETPERSPECTIVE3D));
+		pFnSetPerspective3D = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetPerspective3D");
+
 	}
 
 	UGFxMoviePlayer_execSetPerspective3D_Parms SetPerspective3D_Parms;
@@ -1796,7 +1865,8 @@ void UGFxMoviePlayer::SetView3D(struct FMatrix& matView)
 
 	if (!pFnSetView3D)
 	{
-		pFnSetView3D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVIEW3D));
+		pFnSetView3D = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetView3D");
+
 	}
 
 	UGFxMoviePlayer_execSetView3D_Parms SetView3D_Parms;
@@ -1823,7 +1893,8 @@ void UGFxMoviePlayer::GetVisibleFrameRect(float& x0, float& y0, float& X1, float
 
 	if (!pFnGetVisibleFrameRect)
 	{
-		pFnGetVisibleFrameRect = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETVISIBLEFRAMERECT));
+		pFnGetVisibleFrameRect = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetVisibleFrameRect");
+
 	}
 
 	UGFxMoviePlayer_execGetVisibleFrameRect_Parms GetVisibleFrameRect_Parms;
@@ -1850,7 +1921,8 @@ void UGFxMoviePlayer::SetAlignment(unsigned char A)
 
 	if (!pFnSetAlignment)
 	{
-		pFnSetAlignment = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETALIGNMENT));
+		pFnSetAlignment = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetAlignment");
+
 	}
 
 	UGFxMoviePlayer_execSetAlignment_Parms SetAlignment_Parms;
@@ -1874,7 +1946,8 @@ void UGFxMoviePlayer::SetViewScaleMode(unsigned char SM)
 
 	if (!pFnSetViewScaleMode)
 	{
-		pFnSetViewScaleMode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVIEWSCALEMODE));
+		pFnSetViewScaleMode = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetViewScaleMode");
+
 	}
 
 	UGFxMoviePlayer_execSetViewScaleMode_Parms SetViewScaleMode_Parms;
@@ -1901,7 +1974,8 @@ void UGFxMoviePlayer::SetViewport(int X, int Y, int Width, int Height)
 
 	if (!pFnSetViewport)
 	{
-		pFnSetViewport = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETVIEWPORT));
+		pFnSetViewport = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetViewport");
+
 	}
 
 	UGFxMoviePlayer_execSetViewport_Parms SetViewport_Parms;
@@ -1928,7 +2002,8 @@ class UGameViewportClient* UGFxMoviePlayer::GetGameViewportClient()
 
 	if (!pFnGetGameViewportClient)
 	{
-		pFnGetGameViewportClient = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_GETGAMEVIEWPORTCLIENT));
+		pFnGetGameViewportClient = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.GetGameViewportClient");
+
 	}
 
 	UGFxMoviePlayer_execGetGameViewportClient_Parms GetGameViewportClient_Parms;
@@ -1953,7 +2028,8 @@ void UGFxMoviePlayer::SetPriority(unsigned char NewPriority)
 
 	if (!pFnSetPriority)
 	{
-		pFnSetPriority = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETPRIORITY));
+		pFnSetPriority = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetPriority");
+
 	}
 
 	UGFxMoviePlayer_execSetPriority_Parms SetPriority_Parms;
@@ -1979,7 +2055,8 @@ bool UGFxMoviePlayer::SetExternalTexture(struct FString Resource, class UTexture
 
 	if (!pFnSetExternalTexture)
 	{
-		pFnSetExternalTexture = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETEXTERNALTEXTURE));
+		pFnSetExternalTexture = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetExternalTexture");
+
 	}
 
 	UGFxMoviePlayer_execSetExternalTexture_Parms SetExternalTexture_Parms;
@@ -2006,7 +2083,8 @@ void UGFxMoviePlayer::SetExternalInterface(class UObject* H)
 
 	if (!pFnSetExternalInterface)
 	{
-		pFnSetExternalInterface = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETEXTERNALINTERFACE));
+		pFnSetExternalInterface = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetExternalInterface");
+
 	}
 
 	UGFxMoviePlayer_execSetExternalInterface_Parms SetExternalInterface_Parms;
@@ -2026,7 +2104,8 @@ void UGFxMoviePlayer::SetTimingMode(unsigned char Mode)
 
 	if (!pFnSetTimingMode)
 	{
-		pFnSetTimingMode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETTIMINGMODE));
+		pFnSetTimingMode = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetTimingMode");
+
 	}
 
 	UGFxMoviePlayer_execSetTimingMode_Parms SetTimingMode_Parms;
@@ -2050,7 +2129,8 @@ void UGFxMoviePlayer::SetMovieInfo(class USwfMovie* Data)
 
 	if (!pFnSetMovieInfo)
 	{
-		pFnSetMovieInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETMOVIEINFO));
+		pFnSetMovieInfo = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetMovieInfo");
+
 	}
 
 	UGFxMoviePlayer_execSetMovieInfo_Parms SetMovieInfo_Parms;
@@ -2069,7 +2149,8 @@ void UGFxMoviePlayer::eventConditionalClearPause()
 
 	if (!pFnConditionalClearPause)
 	{
-		pFnConditionalClearPause = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_CONDITIONALCLEARPAUSE));
+		pFnConditionalClearPause = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.ConditionalClearPause");
+
 	}
 
 	UGFxMoviePlayer_eventConditionalClearPause_Parms ConditionalClearPause_Parms;
@@ -2087,7 +2168,8 @@ void UGFxMoviePlayer::eventOnCleanup()
 
 	if (!pFnOnCleanup)
 	{
-		pFnOnCleanup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ONCLEANUP));
+		pFnOnCleanup = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.OnCleanup");
+
 	}
 
 	UGFxMoviePlayer_eventOnCleanup_Parms OnCleanup_Parms;
@@ -2105,7 +2187,8 @@ void UGFxMoviePlayer::eventOnClose()
 
 	if (!pFnOnClose)
 	{
-		pFnOnClose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ONCLOSE));
+		pFnOnClose = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.OnClose");
+
 	}
 
 	UGFxMoviePlayer_eventOnClose_Parms OnClose_Parms;
@@ -2124,7 +2207,8 @@ void UGFxMoviePlayer::Close(unsigned long Unload)
 
 	if (!pFnClose)
 	{
-		pFnClose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_CLOSE));
+		pFnClose = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.Close");
+
 	}
 
 	UGFxMoviePlayer_execClose_Parms Close_Parms;
@@ -2148,7 +2232,8 @@ void UGFxMoviePlayer::SetPause(unsigned long bPausePlayback)
 
 	if (!pFnSetPause)
 	{
-		pFnSetPause = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_SETPAUSE));
+		pFnSetPause = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.SetPause");
+
 	}
 
 	UGFxMoviePlayer_execSetPause_Parms SetPause_Parms;
@@ -2172,7 +2257,8 @@ void UGFxMoviePlayer::OnPostAdvance(float DeltaTime)
 
 	if (!pFnOnPostAdvance)
 	{
-		pFnOnPostAdvance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ONPOSTADVANCE));
+		pFnOnPostAdvance = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.OnPostAdvance");
+
 	}
 
 	UGFxMoviePlayer_execOnPostAdvance_Parms OnPostAdvance_Parms;
@@ -2192,7 +2278,8 @@ void UGFxMoviePlayer::PostAdvance(float DeltaTime)
 
 	if (!pFnPostAdvance)
 	{
-		pFnPostAdvance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_POSTADVANCE));
+		pFnPostAdvance = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.PostAdvance");
+
 	}
 
 	UGFxMoviePlayer_execPostAdvance_Parms PostAdvance_Parms;
@@ -2206,7 +2293,7 @@ void UGFxMoviePlayer::PostAdvance(float DeltaTime)
 };
 
 // Function GFxUI.GFxMoviePlayer.Advance
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          Time                           (CPF_Parm)
 
@@ -2216,7 +2303,8 @@ void UGFxMoviePlayer::Advance(float Time)
 
 	if (!pFnAdvance)
 	{
-		pFnAdvance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_ADVANCE));
+		pFnAdvance = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.Advance");
+
 	}
 
 	UGFxMoviePlayer_execAdvance_Parms Advance_Parms;
@@ -2241,7 +2329,8 @@ bool UGFxMoviePlayer::eventStart(unsigned long StartPaused)
 
 	if (!pFnStart)
 	{
-		pFnStart = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXMOVIEPLAYER_START));
+		pFnStart = UFunction::FindFunction("Function GFxUI.GFxMoviePlayer.Start");
+
 	}
 
 	UGFxMoviePlayer_eventStart_Parms Start_Parms;
@@ -2270,7 +2359,8 @@ bool UGFxObject::eventWidgetUnloaded(struct FName WidgetName, struct FName Widge
 
 	if (!pFnWidgetUnloaded)
 	{
-		pFnWidgetUnloaded = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_WIDGETUNLOADED));
+		pFnWidgetUnloaded = UFunction::FindFunction("Function GFxUI.GFxObject.WidgetUnloaded");
+
 	}
 
 	UGFxObject_eventWidgetUnloaded_Parms WidgetUnloaded_Parms;
@@ -2297,7 +2387,8 @@ bool UGFxObject::eventWidgetInitialized(struct FName WidgetName, struct FName Wi
 
 	if (!pFnWidgetInitialized)
 	{
-		pFnWidgetInitialized = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_WIDGETINITIALIZED));
+		pFnWidgetInitialized = UFunction::FindFunction("Function GFxUI.GFxObject.WidgetInitialized");
+
 	}
 
 	UGFxObject_eventWidgetInitialized_Parms WidgetInitialized_Parms;
@@ -2325,7 +2416,8 @@ class UGFxObject* UGFxObject::AttachMovie(struct FString symbolname, struct FStr
 
 	if (!pFnAttachMovie)
 	{
-		pFnAttachMovie = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ATTACHMOVIE));
+		pFnAttachMovie = UFunction::FindFunction("Function GFxUI.GFxObject.AttachMovie");
+
 	}
 
 	UGFxObject_execAttachMovie_Parms AttachMovie_Parms;
@@ -2357,7 +2449,8 @@ class UGFxObject* UGFxObject::CreateEmptyMovieClip(struct FString instancename, 
 
 	if (!pFnCreateEmptyMovieClip)
 	{
-		pFnCreateEmptyMovieClip = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_CREATEEMPTYMOVIECLIP));
+		pFnCreateEmptyMovieClip = UFunction::FindFunction("Function GFxUI.GFxObject.CreateEmptyMovieClip");
+
 	}
 
 	UGFxObject_execCreateEmptyMovieClip_Parms CreateEmptyMovieClip_Parms;
@@ -2385,7 +2478,8 @@ void UGFxObject::GotoAndStopI(int frame)
 
 	if (!pFnGotoAndStopI)
 	{
-		pFnGotoAndStopI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GOTOANDSTOPI));
+		pFnGotoAndStopI = UFunction::FindFunction("Function GFxUI.GFxObject.GotoAndStopI");
+
 	}
 
 	UGFxObject_execGotoAndStopI_Parms GotoAndStopI_Parms;
@@ -2409,7 +2503,8 @@ void UGFxObject::GotoAndStop(struct FString frame)
 
 	if (!pFnGotoAndStop)
 	{
-		pFnGotoAndStop = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GOTOANDSTOP));
+		pFnGotoAndStop = UFunction::FindFunction("Function GFxUI.GFxObject.GotoAndStop");
+
 	}
 
 	UGFxObject_execGotoAndStop_Parms GotoAndStop_Parms;
@@ -2433,7 +2528,8 @@ void UGFxObject::GotoAndPlayI(int frame)
 
 	if (!pFnGotoAndPlayI)
 	{
-		pFnGotoAndPlayI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GOTOANDPLAYI));
+		pFnGotoAndPlayI = UFunction::FindFunction("Function GFxUI.GFxObject.GotoAndPlayI");
+
 	}
 
 	UGFxObject_execGotoAndPlayI_Parms GotoAndPlayI_Parms;
@@ -2457,7 +2553,8 @@ void UGFxObject::GotoAndPlay(struct FString frame)
 
 	if (!pFnGotoAndPlay)
 	{
-		pFnGotoAndPlay = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GOTOANDPLAY));
+		pFnGotoAndPlay = UFunction::FindFunction("Function GFxUI.GFxObject.GotoAndPlay");
+
 	}
 
 	UGFxObject_execGotoAndPlay_Parms GotoAndPlay_Parms;
@@ -2482,7 +2579,8 @@ TArray<class UGFxObject*> UGFxObject::ActionScriptArray(struct FString Path)
 
 	if (!pFnActionScriptArray)
 	{
-		pFnActionScriptArray = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTARRAY));
+		pFnActionScriptArray = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptArray");
+
 	}
 
 	UGFxObject_execActionScriptArray_Parms ActionScriptArray_Parms;
@@ -2509,7 +2607,8 @@ class UGFxObject* UGFxObject::ActionScriptObject(struct FString Path)
 
 	if (!pFnActionScriptObject)
 	{
-		pFnActionScriptObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTOBJECT));
+		pFnActionScriptObject = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptObject");
+
 	}
 
 	UGFxObject_execActionScriptObject_Parms ActionScriptObject_Parms;
@@ -2536,7 +2635,8 @@ struct FString UGFxObject::ActionScriptString(struct FString method)
 
 	if (!pFnActionScriptString)
 	{
-		pFnActionScriptString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTSTRING));
+		pFnActionScriptString = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptString");
+
 	}
 
 	UGFxObject_execActionScriptString_Parms ActionScriptString_Parms;
@@ -2563,7 +2663,8 @@ float UGFxObject::ActionScriptFloat(struct FString method)
 
 	if (!pFnActionScriptFloat)
 	{
-		pFnActionScriptFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTFLOAT));
+		pFnActionScriptFloat = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptFloat");
+
 	}
 
 	UGFxObject_execActionScriptFloat_Parms ActionScriptFloat_Parms;
@@ -2590,7 +2691,8 @@ int UGFxObject::ActionScriptInt(struct FString method)
 
 	if (!pFnActionScriptInt)
 	{
-		pFnActionScriptInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTINT));
+		pFnActionScriptInt = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptInt");
+
 	}
 
 	UGFxObject_execActionScriptInt_Parms ActionScriptInt_Parms;
@@ -2616,7 +2718,8 @@ void UGFxObject::ActionScriptVoid(struct FString method)
 
 	if (!pFnActionScriptVoid)
 	{
-		pFnActionScriptVoid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTVOID));
+		pFnActionScriptVoid = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptVoid");
+
 	}
 
 	UGFxObject_execActionScriptVoid_Parms ActionScriptVoid_Parms;
@@ -2642,7 +2745,8 @@ struct FASValue UGFxObject::Invoke(struct FString Member, TArray<struct FASValue
 
 	if (!pFnInvoke)
 	{
-		pFnInvoke = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_INVOKE));
+		pFnInvoke = UFunction::FindFunction("Function GFxUI.GFxObject.Invoke");
+
 	}
 
 	UGFxObject_execInvoke_Parms Invoke_Parms;
@@ -2670,7 +2774,8 @@ void UGFxObject::ActionScriptSetFunctionOn(class UGFxObject* Target, struct FStr
 
 	if (!pFnActionScriptSetFunctionOn)
 	{
-		pFnActionScriptSetFunctionOn = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTSETFUNCTIONON));
+		pFnActionScriptSetFunctionOn = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptSetFunctionOn");
+
 	}
 
 	UGFxObject_execActionScriptSetFunctionOn_Parms ActionScriptSetFunctionOn_Parms;
@@ -2695,7 +2800,8 @@ void UGFxObject::ActionScriptSetFunction(struct FString Member)
 
 	if (!pFnActionScriptSetFunction)
 	{
-		pFnActionScriptSetFunction = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_ACTIONSCRIPTSETFUNCTION));
+		pFnActionScriptSetFunction = UFunction::FindFunction("Function GFxUI.GFxObject.ActionScriptSetFunction");
+
 	}
 
 	UGFxObject_execActionScriptSetFunction_Parms ActionScriptSetFunction_Parms;
@@ -2721,7 +2827,8 @@ void UGFxObject::SetElementMemberString(int Index, struct FString Member, struct
 
 	if (!pFnSetElementMemberString)
 	{
-		pFnSetElementMemberString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTMEMBERSTRING));
+		pFnSetElementMemberString = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementMemberString");
+
 	}
 
 	UGFxObject_execSetElementMemberString_Parms SetElementMemberString_Parms;
@@ -2749,7 +2856,8 @@ void UGFxObject::SetElementMemberInt(int Index, struct FString Member, int I)
 
 	if (!pFnSetElementMemberInt)
 	{
-		pFnSetElementMemberInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTMEMBERINT));
+		pFnSetElementMemberInt = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementMemberInt");
+
 	}
 
 	UGFxObject_execSetElementMemberInt_Parms SetElementMemberInt_Parms;
@@ -2777,7 +2885,8 @@ void UGFxObject::SetElementMemberFloat(int Index, struct FString Member, float F
 
 	if (!pFnSetElementMemberFloat)
 	{
-		pFnSetElementMemberFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTMEMBERFLOAT));
+		pFnSetElementMemberFloat = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementMemberFloat");
+
 	}
 
 	UGFxObject_execSetElementMemberFloat_Parms SetElementMemberFloat_Parms;
@@ -2805,7 +2914,8 @@ void UGFxObject::SetElementMemberBool(int Index, struct FString Member, unsigned
 
 	if (!pFnSetElementMemberBool)
 	{
-		pFnSetElementMemberBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTMEMBERBOOL));
+		pFnSetElementMemberBool = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementMemberBool");
+
 	}
 
 	UGFxObject_execSetElementMemberBool_Parms SetElementMemberBool_Parms;
@@ -2833,7 +2943,8 @@ void UGFxObject::SetElementMemberObject(int Index, struct FString Member, class 
 
 	if (!pFnSetElementMemberObject)
 	{
-		pFnSetElementMemberObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTMEMBEROBJECT));
+		pFnSetElementMemberObject = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementMemberObject");
+
 	}
 
 	UGFxObject_execSetElementMemberObject_Parms SetElementMemberObject_Parms;
@@ -2861,7 +2972,8 @@ void UGFxObject::SetElementMember(int Index, struct FString Member, struct FASVa
 
 	if (!pFnSetElementMember)
 	{
-		pFnSetElementMember = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTMEMBER));
+		pFnSetElementMember = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementMember");
+
 	}
 
 	UGFxObject_execSetElementMember_Parms SetElementMember_Parms;
@@ -2889,7 +3001,8 @@ struct FString UGFxObject::GetElementMemberString(int Index, struct FString Memb
 
 	if (!pFnGetElementMemberString)
 	{
-		pFnGetElementMemberString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTMEMBERSTRING));
+		pFnGetElementMemberString = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementMemberString");
+
 	}
 
 	UGFxObject_execGetElementMemberString_Parms GetElementMemberString_Parms;
@@ -2918,7 +3031,8 @@ int UGFxObject::GetElementMemberInt(int Index, struct FString Member)
 
 	if (!pFnGetElementMemberInt)
 	{
-		pFnGetElementMemberInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTMEMBERINT));
+		pFnGetElementMemberInt = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementMemberInt");
+
 	}
 
 	UGFxObject_execGetElementMemberInt_Parms GetElementMemberInt_Parms;
@@ -2947,7 +3061,8 @@ float UGFxObject::GetElementMemberFloat(int Index, struct FString Member)
 
 	if (!pFnGetElementMemberFloat)
 	{
-		pFnGetElementMemberFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTMEMBERFLOAT));
+		pFnGetElementMemberFloat = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementMemberFloat");
+
 	}
 
 	UGFxObject_execGetElementMemberFloat_Parms GetElementMemberFloat_Parms;
@@ -2976,7 +3091,8 @@ bool UGFxObject::GetElementMemberBool(int Index, struct FString Member)
 
 	if (!pFnGetElementMemberBool)
 	{
-		pFnGetElementMemberBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTMEMBERBOOL));
+		pFnGetElementMemberBool = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementMemberBool");
+
 	}
 
 	UGFxObject_execGetElementMemberBool_Parms GetElementMemberBool_Parms;
@@ -3006,7 +3122,8 @@ class UGFxObject* UGFxObject::GetElementMemberObject(int Index, struct FString M
 
 	if (!pFnGetElementMemberObject)
 	{
-		pFnGetElementMemberObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTMEMBEROBJECT));
+		pFnGetElementMemberObject = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementMemberObject");
+
 	}
 
 	UGFxObject_execGetElementMemberObject_Parms GetElementMemberObject_Parms;
@@ -3036,7 +3153,8 @@ struct FASValue UGFxObject::GetElementMember(int Index, struct FString Member)
 
 	if (!pFnGetElementMember)
 	{
-		pFnGetElementMember = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTMEMBER));
+		pFnGetElementMember = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementMember");
+
 	}
 
 	UGFxObject_execGetElementMember_Parms GetElementMember_Parms;
@@ -3064,7 +3182,8 @@ void UGFxObject::SetElementColorTransform(int Index, struct FASColorTransform cx
 
 	if (!pFnSetElementColorTransform)
 	{
-		pFnSetElementColorTransform = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTCOLORTRANSFORM));
+		pFnSetElementColorTransform = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementColorTransform");
+
 	}
 
 	UGFxObject_execSetElementColorTransform_Parms SetElementColorTransform_Parms;
@@ -3091,7 +3210,8 @@ void UGFxObject::SetElementPosition(int Index, float X, float Y)
 
 	if (!pFnSetElementPosition)
 	{
-		pFnSetElementPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTPOSITION));
+		pFnSetElementPosition = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementPosition");
+
 	}
 
 	UGFxObject_execSetElementPosition_Parms SetElementPosition_Parms;
@@ -3118,7 +3238,8 @@ void UGFxObject::SetElementVisible(int Index, unsigned long Visible)
 
 	if (!pFnSetElementVisible)
 	{
-		pFnSetElementVisible = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTVISIBLE));
+		pFnSetElementVisible = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementVisible");
+
 	}
 
 	UGFxObject_execSetElementVisible_Parms SetElementVisible_Parms;
@@ -3144,7 +3265,8 @@ void UGFxObject::SetElementDisplayMatrix(int Index, struct FMatrix M)
 
 	if (!pFnSetElementDisplayMatrix)
 	{
-		pFnSetElementDisplayMatrix = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTDISPLAYMATRIX));
+		pFnSetElementDisplayMatrix = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementDisplayMatrix");
+
 	}
 
 	UGFxObject_execSetElementDisplayMatrix_Parms SetElementDisplayMatrix_Parms;
@@ -3170,7 +3292,8 @@ void UGFxObject::SetElementDisplayInfo(int Index, struct FASDisplayInfo D)
 
 	if (!pFnSetElementDisplayInfo)
 	{
-		pFnSetElementDisplayInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTDISPLAYINFO));
+		pFnSetElementDisplayInfo = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementDisplayInfo");
+
 	}
 
 	UGFxObject_execSetElementDisplayInfo_Parms SetElementDisplayInfo_Parms;
@@ -3196,7 +3319,8 @@ struct FMatrix UGFxObject::GetElementDisplayMatrix(int Index)
 
 	if (!pFnGetElementDisplayMatrix)
 	{
-		pFnGetElementDisplayMatrix = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTDISPLAYMATRIX));
+		pFnGetElementDisplayMatrix = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementDisplayMatrix");
+
 	}
 
 	UGFxObject_execGetElementDisplayMatrix_Parms GetElementDisplayMatrix_Parms;
@@ -3223,7 +3347,8 @@ struct FASDisplayInfo UGFxObject::GetElementDisplayInfo(int Index)
 
 	if (!pFnGetElementDisplayInfo)
 	{
-		pFnGetElementDisplayInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTDISPLAYINFO));
+		pFnGetElementDisplayInfo = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementDisplayInfo");
+
 	}
 
 	UGFxObject_execGetElementDisplayInfo_Parms GetElementDisplayInfo_Parms;
@@ -3250,7 +3375,8 @@ void UGFxObject::SetElementString(int Index, struct FString S)
 
 	if (!pFnSetElementString)
 	{
-		pFnSetElementString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTSTRING));
+		pFnSetElementString = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementString");
+
 	}
 
 	UGFxObject_execSetElementString_Parms SetElementString_Parms;
@@ -3276,7 +3402,8 @@ void UGFxObject::SetElementInt(int Index, int I)
 
 	if (!pFnSetElementInt)
 	{
-		pFnSetElementInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTINT));
+		pFnSetElementInt = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementInt");
+
 	}
 
 	UGFxObject_execSetElementInt_Parms SetElementInt_Parms;
@@ -3302,7 +3429,8 @@ void UGFxObject::SetElementFloat(int Index, float F)
 
 	if (!pFnSetElementFloat)
 	{
-		pFnSetElementFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTFLOAT));
+		pFnSetElementFloat = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementFloat");
+
 	}
 
 	UGFxObject_execSetElementFloat_Parms SetElementFloat_Parms;
@@ -3328,7 +3456,8 @@ void UGFxObject::SetElementBool(int Index, unsigned long B)
 
 	if (!pFnSetElementBool)
 	{
-		pFnSetElementBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTBOOL));
+		pFnSetElementBool = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementBool");
+
 	}
 
 	UGFxObject_execSetElementBool_Parms SetElementBool_Parms;
@@ -3354,7 +3483,8 @@ void UGFxObject::SetElementObject(int Index, class UGFxObject* val)
 
 	if (!pFnSetElementObject)
 	{
-		pFnSetElementObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENTOBJECT));
+		pFnSetElementObject = UFunction::FindFunction("Function GFxUI.GFxObject.SetElementObject");
+
 	}
 
 	UGFxObject_execSetElementObject_Parms SetElementObject_Parms;
@@ -3380,7 +3510,8 @@ void UGFxObject::SetElement(int Index, struct FASValue Arg)
 
 	if (!pFnSetElement)
 	{
-		pFnSetElement = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETELEMENT));
+		pFnSetElement = UFunction::FindFunction("Function GFxUI.GFxObject.SetElement");
+
 	}
 
 	UGFxObject_execSetElement_Parms SetElement_Parms;
@@ -3406,7 +3537,8 @@ struct FString UGFxObject::GetElementString(int Index)
 
 	if (!pFnGetElementString)
 	{
-		pFnGetElementString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTSTRING));
+		pFnGetElementString = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementString");
+
 	}
 
 	UGFxObject_execGetElementString_Parms GetElementString_Parms;
@@ -3433,7 +3565,8 @@ int UGFxObject::GetElementInt(int Index)
 
 	if (!pFnGetElementInt)
 	{
-		pFnGetElementInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTINT));
+		pFnGetElementInt = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementInt");
+
 	}
 
 	UGFxObject_execGetElementInt_Parms GetElementInt_Parms;
@@ -3460,7 +3593,8 @@ float UGFxObject::GetElementFloat(int Index)
 
 	if (!pFnGetElementFloat)
 	{
-		pFnGetElementFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTFLOAT));
+		pFnGetElementFloat = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementFloat");
+
 	}
 
 	UGFxObject_execGetElementFloat_Parms GetElementFloat_Parms;
@@ -3487,7 +3621,8 @@ bool UGFxObject::GetElementBool(int Index)
 
 	if (!pFnGetElementBool)
 	{
-		pFnGetElementBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTBOOL));
+		pFnGetElementBool = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementBool");
+
 	}
 
 	UGFxObject_execGetElementBool_Parms GetElementBool_Parms;
@@ -3515,7 +3650,8 @@ class UGFxObject* UGFxObject::GetElementObject(int Index, class UClass* Type)
 
 	if (!pFnGetElementObject)
 	{
-		pFnGetElementObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENTOBJECT));
+		pFnGetElementObject = UFunction::FindFunction("Function GFxUI.GFxObject.GetElementObject");
+
 	}
 
 	UGFxObject_execGetElementObject_Parms GetElementObject_Parms;
@@ -3543,7 +3679,8 @@ struct FASValue UGFxObject::GetElement(int Index)
 
 	if (!pFnGetElement)
 	{
-		pFnGetElement = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETELEMENT));
+		pFnGetElement = UFunction::FindFunction("Function GFxUI.GFxObject.GetElement");
+
 	}
 
 	UGFxObject_execGetElement_Parms GetElement_Parms;
@@ -3570,7 +3707,8 @@ void UGFxObject::SetText(struct FString Text, class UTranslationContext* InConte
 
 	if (!pFnSetText)
 	{
-		pFnSetText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETTEXT));
+		pFnSetText = UFunction::FindFunction("Function GFxUI.GFxObject.SetText");
+
 	}
 
 	UGFxObject_execSetText_Parms SetText_Parms;
@@ -3595,7 +3733,8 @@ struct FString UGFxObject::GetText()
 
 	if (!pFnGetText)
 	{
-		pFnGetText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETTEXT));
+		pFnGetText = UFunction::FindFunction("Function GFxUI.GFxObject.GetText");
+
 	}
 
 	UGFxObject_execGetText_Parms GetText_Parms;
@@ -3620,7 +3759,8 @@ void UGFxObject::SetVisible(unsigned long Visible)
 
 	if (!pFnSetVisible)
 	{
-		pFnSetVisible = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETVISIBLE));
+		pFnSetVisible = UFunction::FindFunction("Function GFxUI.GFxObject.SetVisible");
+
 	}
 
 	UGFxObject_execSetVisible_Parms SetVisible_Parms;
@@ -3644,7 +3784,8 @@ void UGFxObject::SetDisplayMatrix3D(struct FMatrix M)
 
 	if (!pFnSetDisplayMatrix3D)
 	{
-		pFnSetDisplayMatrix3D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETDISPLAYMATRIX3D));
+		pFnSetDisplayMatrix3D = UFunction::FindFunction("Function GFxUI.GFxObject.SetDisplayMatrix3D");
+
 	}
 
 	UGFxObject_execSetDisplayMatrix3D_Parms SetDisplayMatrix3D_Parms;
@@ -3668,7 +3809,8 @@ void UGFxObject::SetDisplayMatrix(struct FMatrix M)
 
 	if (!pFnSetDisplayMatrix)
 	{
-		pFnSetDisplayMatrix = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETDISPLAYMATRIX));
+		pFnSetDisplayMatrix = UFunction::FindFunction("Function GFxUI.GFxObject.SetDisplayMatrix");
+
 	}
 
 	UGFxObject_execSetDisplayMatrix_Parms SetDisplayMatrix_Parms;
@@ -3692,7 +3834,8 @@ void UGFxObject::SetColorTransform(struct FASColorTransform cxform)
 
 	if (!pFnSetColorTransform)
 	{
-		pFnSetColorTransform = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETCOLORTRANSFORM));
+		pFnSetColorTransform = UFunction::FindFunction("Function GFxUI.GFxObject.SetColorTransform");
+
 	}
 
 	UGFxObject_execSetColorTransform_Parms SetColorTransform_Parms;
@@ -3717,7 +3860,8 @@ void UGFxObject::SetPosition(float X, float Y)
 
 	if (!pFnSetPosition)
 	{
-		pFnSetPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETPOSITION));
+		pFnSetPosition = UFunction::FindFunction("Function GFxUI.GFxObject.SetPosition");
+
 	}
 
 	UGFxObject_execSetPosition_Parms SetPosition_Parms;
@@ -3742,7 +3886,8 @@ void UGFxObject::SetDisplayInfo(struct FASDisplayInfo D)
 
 	if (!pFnSetDisplayInfo)
 	{
-		pFnSetDisplayInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETDISPLAYINFO));
+		pFnSetDisplayInfo = UFunction::FindFunction("Function GFxUI.GFxObject.SetDisplayInfo");
+
 	}
 
 	UGFxObject_execSetDisplayInfo_Parms SetDisplayInfo_Parms;
@@ -3766,7 +3911,8 @@ struct FMatrix UGFxObject::GetDisplayMatrix3D()
 
 	if (!pFnGetDisplayMatrix3D)
 	{
-		pFnGetDisplayMatrix3D = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETDISPLAYMATRIX3D));
+		pFnGetDisplayMatrix3D = UFunction::FindFunction("Function GFxUI.GFxObject.GetDisplayMatrix3D");
+
 	}
 
 	UGFxObject_execGetDisplayMatrix3D_Parms GetDisplayMatrix3D_Parms;
@@ -3791,7 +3937,8 @@ struct FMatrix UGFxObject::GetDisplayMatrix()
 
 	if (!pFnGetDisplayMatrix)
 	{
-		pFnGetDisplayMatrix = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETDISPLAYMATRIX));
+		pFnGetDisplayMatrix = UFunction::FindFunction("Function GFxUI.GFxObject.GetDisplayMatrix");
+
 	}
 
 	UGFxObject_execGetDisplayMatrix_Parms GetDisplayMatrix_Parms;
@@ -3816,7 +3963,8 @@ struct FASColorTransform UGFxObject::GetColorTransform()
 
 	if (!pFnGetColorTransform)
 	{
-		pFnGetColorTransform = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETCOLORTRANSFORM));
+		pFnGetColorTransform = UFunction::FindFunction("Function GFxUI.GFxObject.GetColorTransform");
+
 	}
 
 	UGFxObject_execGetColorTransform_Parms GetColorTransform_Parms;
@@ -3843,7 +3991,8 @@ bool UGFxObject::GetPosition(float& X, float& Y)
 
 	if (!pFnGetPosition)
 	{
-		pFnGetPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETPOSITION));
+		pFnGetPosition = UFunction::FindFunction("Function GFxUI.GFxObject.GetPosition");
+
 	}
 
 	UGFxObject_execGetPosition_Parms GetPosition_Parms;
@@ -3870,7 +4019,8 @@ struct FASDisplayInfo UGFxObject::GetDisplayInfo()
 
 	if (!pFnGetDisplayInfo)
 	{
-		pFnGetDisplayInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETDISPLAYINFO));
+		pFnGetDisplayInfo = UFunction::FindFunction("Function GFxUI.GFxObject.GetDisplayInfo");
+
 	}
 
 	UGFxObject_execGetDisplayInfo_Parms GetDisplayInfo_Parms;
@@ -3897,7 +4047,8 @@ struct FString UGFxObject::TranslateString(struct FString StringToTranslate, cla
 
 	if (!pFnTranslateString)
 	{
-		pFnTranslateString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_TRANSLATESTRING));
+		pFnTranslateString = UFunction::FindFunction("Function GFxUI.GFxObject.TranslateString");
+
 	}
 
 	UGFxObject_execTranslateString_Parms TranslateString_Parms;
@@ -3926,7 +4077,8 @@ void UGFxObject::SetFunction(struct FString Member, class UObject* Context, stru
 
 	if (!pFnSetFunction)
 	{
-		pFnSetFunction = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETFUNCTION));
+		pFnSetFunction = UFunction::FindFunction("Function GFxUI.GFxObject.SetFunction");
+
 	}
 
 	UGFxObject_execSetFunction_Parms SetFunction_Parms;
@@ -3953,7 +4105,8 @@ void UGFxObject::SetObject(struct FString Member, class UGFxObject* val)
 
 	if (!pFnSetObject)
 	{
-		pFnSetObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETOBJECT));
+		pFnSetObject = UFunction::FindFunction("Function GFxUI.GFxObject.SetObject");
+
 	}
 
 	UGFxObject_execSetObject_Parms SetObject_Parms;
@@ -3980,7 +4133,8 @@ void UGFxObject::SetString(struct FString Member, struct FString S, class UTrans
 
 	if (!pFnSetString)
 	{
-		pFnSetString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETSTRING));
+		pFnSetString = UFunction::FindFunction("Function GFxUI.GFxObject.SetString");
+
 	}
 
 	UGFxObject_execSetString_Parms SetString_Parms;
@@ -4007,7 +4161,8 @@ void UGFxObject::SetInt(struct FString Member, int I)
 
 	if (!pFnSetInt)
 	{
-		pFnSetInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETINT));
+		pFnSetInt = UFunction::FindFunction("Function GFxUI.GFxObject.SetInt");
+
 	}
 
 	UGFxObject_execSetInt_Parms SetInt_Parms;
@@ -4033,7 +4188,8 @@ void UGFxObject::SetFloat(struct FString Member, float F)
 
 	if (!pFnSetFloat)
 	{
-		pFnSetFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETFLOAT));
+		pFnSetFloat = UFunction::FindFunction("Function GFxUI.GFxObject.SetFloat");
+
 	}
 
 	UGFxObject_execSetFloat_Parms SetFloat_Parms;
@@ -4059,7 +4215,8 @@ void UGFxObject::SetBool(struct FString Member, unsigned long B)
 
 	if (!pFnSetBool)
 	{
-		pFnSetBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SETBOOL));
+		pFnSetBool = UFunction::FindFunction("Function GFxUI.GFxObject.SetBool");
+
 	}
 
 	UGFxObject_execSetBool_Parms SetBool_Parms;
@@ -4085,7 +4242,8 @@ void UGFxObject::Set(struct FString Member, struct FASValue Arg)
 
 	if (!pFnSet)
 	{
-		pFnSet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_SET));
+		pFnSet = UFunction::FindFunction("Function GFxUI.GFxObject.Set");
+
 	}
 
 	UGFxObject_execSet_Parms Set_Parms;
@@ -4112,7 +4270,8 @@ class UGFxObject* UGFxObject::GetObjectW(struct FString Member, class UClass* Ty
 
 	if (!pFnGetObjectW)
 	{
-		pFnGetObjectW = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETOBJECT));
+		pFnGetObjectW = UFunction::FindFunction("Function GFxUI.GFxObject.GetObject");
+
 	}
 
 	UGFxObject_execGetObjectW_Parms GetObjectW_Parms;
@@ -4140,7 +4299,8 @@ struct FString UGFxObject::GetString(struct FString Member)
 
 	if (!pFnGetString)
 	{
-		pFnGetString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETSTRING));
+		pFnGetString = UFunction::FindFunction("Function GFxUI.GFxObject.GetString");
+
 	}
 
 	UGFxObject_execGetString_Parms GetString_Parms;
@@ -4167,7 +4327,8 @@ int UGFxObject::GetInt(struct FString Member)
 
 	if (!pFnGetInt)
 	{
-		pFnGetInt = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETINT));
+		pFnGetInt = UFunction::FindFunction("Function GFxUI.GFxObject.GetInt");
+
 	}
 
 	UGFxObject_execGetInt_Parms GetInt_Parms;
@@ -4194,7 +4355,8 @@ float UGFxObject::GetFloat(struct FString Member)
 
 	if (!pFnGetFloat)
 	{
-		pFnGetFloat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETFLOAT));
+		pFnGetFloat = UFunction::FindFunction("Function GFxUI.GFxObject.GetFloat");
+
 	}
 
 	UGFxObject_execGetFloat_Parms GetFloat_Parms;
@@ -4221,7 +4383,8 @@ bool UGFxObject::GetBool(struct FString Member)
 
 	if (!pFnGetBool)
 	{
-		pFnGetBool = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GETBOOL));
+		pFnGetBool = UFunction::FindFunction("Function GFxUI.GFxObject.GetBool");
+
 	}
 
 	UGFxObject_execGetBool_Parms GetBool_Parms;
@@ -4248,7 +4411,8 @@ struct FASValue UGFxObject::Get(struct FString Member)
 
 	if (!pFnGet)
 	{
-		pFnGet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXOBJECT_GET));
+		pFnGet = UFunction::FindFunction("Function GFxUI.GFxObject.Get");
+
 	}
 
 	UGFxObject_execGet_Parms Get_Parms;
@@ -4274,7 +4438,8 @@ bool UGFxAction_CloseMovie::eventIsValidLevelSequenceObject()
 
 	if (!pFnIsValidLevelSequenceObject)
 	{
-		pFnIsValidLevelSequenceObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXACTION_CLOSEMOVIE_ISVALIDLEVELSEQUENCEOBJECT));
+		pFnIsValidLevelSequenceObject = UFunction::FindFunction("Function GFxUI.GFxAction_CloseMovie.IsValidLevelSequenceObject");
+
 	}
 
 	UGFxAction_CloseMovie_eventIsValidLevelSequenceObject_Parms IsValidLevelSequenceObject_Parms;
@@ -4295,7 +4460,8 @@ bool UGFxAction_GetVariable::eventIsValidLevelSequenceObject()
 
 	if (!pFnIsValidLevelSequenceObject)
 	{
-		pFnIsValidLevelSequenceObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXACTION_GETVARIABLE_ISVALIDLEVELSEQUENCEOBJECT));
+		pFnIsValidLevelSequenceObject = UFunction::FindFunction("Function GFxUI.GFxAction_GetVariable.IsValidLevelSequenceObject");
+
 	}
 
 	UGFxAction_GetVariable_eventIsValidLevelSequenceObject_Parms IsValidLevelSequenceObject_Parms;
@@ -4316,7 +4482,8 @@ bool UGFxAction_Invoke::eventIsValidLevelSequenceObject()
 
 	if (!pFnIsValidLevelSequenceObject)
 	{
-		pFnIsValidLevelSequenceObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXACTION_INVOKE_ISVALIDLEVELSEQUENCEOBJECT));
+		pFnIsValidLevelSequenceObject = UFunction::FindFunction("Function GFxUI.GFxAction_Invoke.IsValidLevelSequenceObject");
+
 	}
 
 	UGFxAction_Invoke_eventIsValidLevelSequenceObject_Parms IsValidLevelSequenceObject_Parms;
@@ -4337,7 +4504,8 @@ bool UGFxAction_OpenMovie::eventIsValidLevelSequenceObject()
 
 	if (!pFnIsValidLevelSequenceObject)
 	{
-		pFnIsValidLevelSequenceObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXACTION_OPENMOVIE_ISVALIDLEVELSEQUENCEOBJECT));
+		pFnIsValidLevelSequenceObject = UFunction::FindFunction("Function GFxUI.GFxAction_OpenMovie.IsValidLevelSequenceObject");
+
 	}
 
 	UGFxAction_OpenMovie_eventIsValidLevelSequenceObject_Parms IsValidLevelSequenceObject_Parms;
@@ -4358,7 +4526,8 @@ bool UGFxAction_SetVariable::eventIsValidLevelSequenceObject()
 
 	if (!pFnIsValidLevelSequenceObject)
 	{
-		pFnIsValidLevelSequenceObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXACTION_SETVARIABLE_ISVALIDLEVELSEQUENCEOBJECT));
+		pFnIsValidLevelSequenceObject = UFunction::FindFunction("Function GFxUI.GFxAction_SetVariable.IsValidLevelSequenceObject");
+
 	}
 
 	UGFxAction_SetVariable_eventIsValidLevelSequenceObject_Parms IsValidLevelSequenceObject_Parms;
@@ -4383,7 +4552,8 @@ bool UGFxFSCmdHandler_Kismet::eventFSCommand(class UGFxMoviePlayer* Movie, class
 
 	if (!pFnFSCommand)
 	{
-		pFnFSCommand = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXFSCMDHANDLER_KISMET_FSCOMMAND));
+		pFnFSCommand = UFunction::FindFunction("Function GFxUI.GFxFSCmdHandler_Kismet.FSCommand");
+
 	}
 
 	UGFxFSCmdHandler_Kismet_eventFSCommand_Parms FSCommand_Parms;
@@ -4417,7 +4587,8 @@ void UGFxClikWidget::ASRemoveAllEventListeners(struct FString Event)
 
 	if (!pFnASRemoveAllEventListeners)
 	{
-		pFnASRemoveAllEventListeners = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_ASREMOVEALLEVENTLISTENERS));
+		pFnASRemoveAllEventListeners = UFunction::FindFunction("Function GFxUI.GFxClikWidget.ASRemoveAllEventListeners");
+
 	}
 
 	UGFxClikWidget_execASRemoveAllEventListeners_Parms ASRemoveAllEventListeners_Parms;
@@ -4441,7 +4612,8 @@ void UGFxClikWidget::AS3AddEventListener(struct FString Type, class UGFxObject* 
 
 	if (!pFnAS3AddEventListener)
 	{
-		pFnAS3AddEventListener = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_AS3ADDEVENTLISTENER));
+		pFnAS3AddEventListener = UFunction::FindFunction("Function GFxUI.GFxClikWidget.AS3AddEventListener");
+
 	}
 
 	UGFxClikWidget_execAS3AddEventListener_Parms AS3AddEventListener_Parms;
@@ -4467,7 +4639,8 @@ void UGFxClikWidget::ASAddEventListener(struct FString Type, class UGFxObject* O
 
 	if (!pFnASAddEventListener)
 	{
-		pFnASAddEventListener = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_ASADDEVENTLISTENER));
+		pFnASAddEventListener = UFunction::FindFunction("Function GFxUI.GFxClikWidget.ASAddEventListener");
+
 	}
 
 	UGFxClikWidget_execASAddEventListener_Parms ASAddEventListener_Parms;
@@ -4491,7 +4664,8 @@ void UGFxClikWidget::SetListener(class UGFxObject* O, struct FString Member, str
 
 	if (!pFnSetListener)
 	{
-		pFnSetListener = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_SETLISTENER));
+		pFnSetListener = UFunction::FindFunction("Function GFxUI.GFxClikWidget.SetListener");
+
 	}
 
 	UGFxClikWidget_execSetListener_Parms SetListener_Parms;
@@ -4514,7 +4688,8 @@ struct FString UGFxClikWidget::GetEventStringFromTypename(struct FName Typename)
 
 	if (!pFnGetEventStringFromTypename)
 	{
-		pFnGetEventStringFromTypename = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_GETEVENTSTRINGFROMTYPENAME));
+		pFnGetEventStringFromTypename = UFunction::FindFunction("Function GFxUI.GFxClikWidget.GetEventStringFromTypename");
+
 	}
 
 	UGFxClikWidget_execGetEventStringFromTypename_Parms GetEventStringFromTypename_Parms;
@@ -4536,7 +4711,8 @@ void UGFxClikWidget::RemoveAllEventListeners(struct FString Event)
 
 	if (!pFnRemoveAllEventListeners)
 	{
-		pFnRemoveAllEventListeners = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_REMOVEALLEVENTLISTENERS));
+		pFnRemoveAllEventListeners = UFunction::FindFunction("Function GFxUI.GFxClikWidget.RemoveAllEventListeners");
+
 	}
 
 	UGFxClikWidget_execRemoveAllEventListeners_Parms RemoveAllEventListeners_Parms;
@@ -4560,7 +4736,8 @@ void UGFxClikWidget::AddEventListener(struct FName Type, struct FScriptDelegate 
 
 	if (!pFnAddEventListener)
 	{
-		pFnAddEventListener = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_ADDEVENTLISTENER));
+		pFnAddEventListener = UFunction::FindFunction("Function GFxUI.GFxClikWidget.AddEventListener");
+
 	}
 
 	UGFxClikWidget_execAddEventListener_Parms AddEventListener_Parms;
@@ -4584,7 +4761,8 @@ void UGFxClikWidget::EventListener(struct FEventData Data)
 
 	if (!pFnEventListener)
 	{
-		pFnEventListener = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_GFXUI_GFXCLIKWIDGET_EVENTLISTENER));
+		pFnEventListener = UFunction::FindFunction("Function GFxUI.GFxClikWidget.EventListener");
+
 	}
 
 	UGFxClikWidget_execEventListener_Parms EventListener_Parms;

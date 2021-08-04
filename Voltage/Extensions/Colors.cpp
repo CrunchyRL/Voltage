@@ -6,16 +6,18 @@ CRColor::CRColor(const uint8_t rgba) : R(rgba), G(rgba), B(rgba), A(rgba) { }
 
 CRColor::CRColor(const uint8_t r, const uint8_t g, const uint8_t b, const uint8_t a) : R(r), G(g), B(b), A(a) { }
 
-CRColor::CRColor(const struct FColor& unrealColor) : R(unrealColor.R), G(unrealColor.G), B(unrealColor.B), A(unrealColor.A) { }
+CRColor::CRColor(const CRColor& other) : R(other.R), G(other.G), B(other.B), A(other.A) { }
+
+CRColor::CRColor(const struct FColor& other) : R(other.R), G(other.G), B(other.B), A(other.A) { }
 
 CRColor::~CRColor() { }
 
 struct FColor CRColor::UnrealColor()
 {
-	return FColor { B, G, R, A };
+	return FColor{ B, G, R, A }; // Your game might be in a different format (RGBA), so be aware of that.
 }
 
-struct CRColor CRColor::operator=(const struct CRColor& other)
+CRColor CRColor::operator=(const CRColor& other)
 {
 	R = other.R;
 	G = other.G;
@@ -24,13 +26,26 @@ struct CRColor CRColor::operator=(const struct CRColor& other)
 	return *this;
 }
 
-struct CRColor CRColor::operator=(const struct FColor& other)
+CRColor CRColor::operator=(const struct FColor& other)
 {
 	R = other.R;
 	G = other.G;
 	B = other.B;
 	A = other.A;
 	return *this;
+}
+
+bool CRColor::operator==(const CRColor& other)
+{
+	if (R != other.R
+		|| G != other.G
+		|| B != other.B
+		|| A != other.A)
+	{
+		return false;
+	}
+
+	return true;
 }
 
 bool CRColor::operator==(const struct FColor& other)
@@ -44,6 +59,19 @@ bool CRColor::operator==(const struct FColor& other)
 	}
 
 	return true;
+}
+
+bool CRColor::operator!=(const CRColor& other)
+{
+	if (R != other.R
+		|| G != other.G
+		|| B != other.B
+		|| A != other.A)
+	{
+		return true;
+	}
+
+	return false;
 }
 
 bool CRColor::operator!=(const struct FColor& other)
@@ -65,16 +93,18 @@ CRLinearColor::CRLinearColor(const float rgba) : R(rgba), G(rgba), B(rgba), A(rg
 
 CRLinearColor::CRLinearColor(const float r, const float g, const float b, const float a) : R(r), G(g), B(b), A(a) { }
 
-CRLinearColor::CRLinearColor(const struct FLinearColor& unrealColor) : R(unrealColor.R), G(unrealColor.G), B(unrealColor.B), A(unrealColor.A) { }
+CRLinearColor::CRLinearColor(const CRLinearColor& other) : R(other.R), G(other.G), B(other.B), A(other.A) { }
+
+CRLinearColor::CRLinearColor(const struct FLinearColor& other) : R(other.R), G(other.G), B(other.B), A(other.A) { }
 
 CRLinearColor::~CRLinearColor() { }
 
 struct FLinearColor CRLinearColor::UnrealColor()
 {
-	return FLinearColor { R, G, B, A };
+	return FLinearColor{ R, G, B, A };
 }
 
-struct CRLinearColor CRLinearColor::operator=(const struct CRLinearColor& other)
+CRLinearColor CRLinearColor::operator=(const CRLinearColor& other)
 {
 	R = other.R;
 	G = other.G;
@@ -83,13 +113,26 @@ struct CRLinearColor CRLinearColor::operator=(const struct CRLinearColor& other)
 	return *this;
 }
 
-struct CRLinearColor CRLinearColor::operator=(const struct FLinearColor& other)
+CRLinearColor CRLinearColor::operator=(const struct FLinearColor& other)
 {
 	R = other.R;
 	G = other.G;
 	B = other.B;
 	A = other.A;
 	return *this;
+}
+
+bool CRLinearColor::operator==(const CRLinearColor& other)
+{
+	if (R != other.R
+		|| G != other.G
+		|| B != other.B
+		|| A != other.A)
+	{
+		return false;
+	}
+
+	return true;
 }
 
 bool CRLinearColor::operator==(const struct FLinearColor& other)
@@ -105,6 +148,19 @@ bool CRLinearColor::operator==(const struct FLinearColor& other)
 	return true;
 }
 
+bool CRLinearColor::operator!=(const CRLinearColor& other)
+{
+	if (R != other.R
+		|| G != other.G
+		|| B != other.B
+		|| A != other.A)
+	{
+		return true;
+	}
+
+	return false;
+}
+
 bool CRLinearColor::operator!=(const struct FLinearColor& other)
 {
 	if (R != other.R
@@ -116,6 +172,16 @@ bool CRLinearColor::operator!=(const struct FLinearColor& other)
 	}
 
 	return false;
+}
+
+CRColor FRainbowColor::GetByte()
+{
+	return ByteRainbow;
+}
+
+CRLinearColor FRainbowColor::GetLinear()
+{
+	return LinearRainbow;
 }
 
 void FRainbowColor::Tick()
@@ -184,7 +250,7 @@ namespace Colors
 		return hexColor;
 	}
 
-	struct CRColor DecimalToColor(const int32_t decimal)
+	CRColor DecimalToColor(const int32_t decimal)
 	{
 		CRColor returnColor;
 
@@ -195,7 +261,7 @@ namespace Colors
 		return returnColor;
 	}
 
-	struct CRLinearColor DecimalToLinearColor(const int32_t decimal)
+	CRLinearColor DecimalToLinearColor(const int32_t decimal)
 	{
 		CRLinearColor returnColor;
 

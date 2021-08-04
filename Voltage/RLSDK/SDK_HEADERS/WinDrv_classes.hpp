@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: WinDrv_classes.hpp
@@ -48,7 +48,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_WINDRV_FACEBOOKWINDOWS));
+			uClassPointer = UObject::FindClass("Class WinDrv.FacebookWindows");
 		}
 
 		return uClassPointer;
@@ -83,7 +83,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_WINDRV_HTTPREQUESTWINDOWS));
+			uClassPointer = UObject::FindClass("Class WinDrv.HttpRequestWindows");
 		}
 
 		return uClassPointer;
@@ -119,7 +119,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_WINDRV_HTTPRESPONSEWINDOWS));
+			uClassPointer = UObject::FindClass("Class WinDrv.HttpResponseWindows");
 		}
 
 		return uClassPointer;
@@ -153,7 +153,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_WINDRV_WINDOWSCLIENT));
+			uClassPointer = UObject::FindClass("Class WinDrv.WindowsClient");
 		}
 
 		return uClassPointer;
@@ -174,7 +174,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_WINDRV_XNAFORCEFEEDBACKMANAGER));
+			uClassPointer = UObject::FindClass("Class WinDrv.XnaForceFeedbackManager");
 		}
 
 		return uClassPointer;
@@ -196,7 +196,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_WINDRV_HTTPREQUESTWINDOWSMCP));
+			uClassPointer = UObject::FindClass("Class WinDrv.HttpRequestWindowsMcp");
 		}
 
 		return uClassPointer;

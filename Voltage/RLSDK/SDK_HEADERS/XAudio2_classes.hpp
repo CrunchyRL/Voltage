@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: XAudio2_classes.hpp
@@ -47,7 +47,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_XAUDIO2_XAUDIO2DEVICE));
+			uClassPointer = UObject::FindClass("Class XAudio2.XAudio2Device");
 		}
 
 		return uClassPointer;

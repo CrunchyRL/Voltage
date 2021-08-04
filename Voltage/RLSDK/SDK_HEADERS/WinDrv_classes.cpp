@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: WinDrv_classes.cpp
@@ -34,7 +34,8 @@ void UFacebookWindows::OnFacebookFriendsRequestComplete(class UHttpRequestInterf
 
 	if (!pFnOnFacebookFriendsRequestComplete)
 	{
-		pFnOnFacebookFriendsRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_ONFACEBOOKFRIENDSREQUESTCOMPLETE));
+		pFnOnFacebookFriendsRequestComplete = UFunction::FindFunction("Function WinDrv.FacebookWindows.OnFacebookFriendsRequestComplete");
+
 	}
 
 	UFacebookWindows_execOnFacebookFriendsRequestComplete_Parms OnFacebookFriendsRequestComplete_Parms;
@@ -55,7 +56,8 @@ void UFacebookWindows::eventRequestFacebookFriends()
 
 	if (!pFnRequestFacebookFriends)
 	{
-		pFnRequestFacebookFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_REQUESTFACEBOOKFRIENDS));
+		pFnRequestFacebookFriends = UFunction::FindFunction("Function WinDrv.FacebookWindows.RequestFacebookFriends");
+
 	}
 
 	UFacebookWindows_eventRequestFacebookFriends_Parms RequestFacebookFriends_Parms;
@@ -76,7 +78,8 @@ void UFacebookWindows::OnFacebookMeRequestComplete(class UHttpRequestInterface* 
 
 	if (!pFnOnFacebookMeRequestComplete)
 	{
-		pFnOnFacebookMeRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_ONFACEBOOKMEREQUESTCOMPLETE));
+		pFnOnFacebookMeRequestComplete = UFunction::FindFunction("Function WinDrv.FacebookWindows.OnFacebookMeRequestComplete");
+
 	}
 
 	UFacebookWindows_execOnFacebookMeRequestComplete_Parms OnFacebookMeRequestComplete_Parms;
@@ -97,7 +100,8 @@ void UFacebookWindows::eventRequestFacebookMeInfo()
 
 	if (!pFnRequestFacebookMeInfo)
 	{
-		pFnRequestFacebookMeInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_REQUESTFACEBOOKMEINFO));
+		pFnRequestFacebookMeInfo = UFunction::FindFunction("Function WinDrv.FacebookWindows.RequestFacebookMeInfo");
+
 	}
 
 	UFacebookWindows_eventRequestFacebookMeInfo_Parms RequestFacebookMeInfo_Parms;
@@ -118,7 +122,8 @@ void UFacebookWindows::FacebookRequestCallback(class UHttpRequestInterface* Orig
 
 	if (!pFnFacebookRequestCallback)
 	{
-		pFnFacebookRequestCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_FACEBOOKREQUESTCALLBACK));
+		pFnFacebookRequestCallback = UFunction::FindFunction("Function WinDrv.FacebookWindows.FacebookRequestCallback");
+
 	}
 
 	UFacebookWindows_execFacebookRequestCallback_Parms FacebookRequestCallback_Parms;
@@ -141,7 +146,8 @@ void UFacebookWindows::ProcessFacebookRequest(struct FString Payload, int Respon
 
 	if (!pFnProcessFacebookRequest)
 	{
-		pFnProcessFacebookRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_PROCESSFACEBOOKREQUEST));
+		pFnProcessFacebookRequest = UFunction::FindFunction("Function WinDrv.FacebookWindows.ProcessFacebookRequest");
+
 	}
 
 	UFacebookWindows_execProcessFacebookRequest_Parms ProcessFacebookRequest_Parms;
@@ -168,7 +174,8 @@ void UFacebookWindows::FacebookRequest(struct FString GraphRequest, struct FStri
 
 	if (!pFnFacebookRequest)
 	{
-		pFnFacebookRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_FACEBOOKREQUEST));
+		pFnFacebookRequest = UFunction::FindFunction("Function WinDrv.FacebookWindows.FacebookRequest");
+
 	}
 
 	UFacebookWindows_execFacebookRequest_Parms FacebookRequest_Parms;
@@ -189,7 +196,8 @@ void UFacebookWindows::Disconnect()
 
 	if (!pFnDisconnect)
 	{
-		pFnDisconnect = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_DISCONNECT));
+		pFnDisconnect = UFunction::FindFunction("Function WinDrv.FacebookWindows.Disconnect");
+
 	}
 
 	UFacebookWindows_execDisconnect_Parms Disconnect_Parms;
@@ -217,7 +225,8 @@ bool UFacebookWindows::IsAuthorized()
 
 	if (!pFnIsAuthorized)
 	{
-		pFnIsAuthorized = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_ISAUTHORIZED));
+		pFnIsAuthorized = UFunction::FindFunction("Function WinDrv.FacebookWindows.IsAuthorized");
+
 	}
 
 	UFacebookWindows_execIsAuthorized_Parms IsAuthorized_Parms;
@@ -247,7 +256,8 @@ bool UFacebookWindows::Authorize()
 
 	if (!pFnAuthorize)
 	{
-		pFnAuthorize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_AUTHORIZE));
+		pFnAuthorize = UFunction::FindFunction("Function WinDrv.FacebookWindows.Authorize");
+
 	}
 
 	UFacebookWindows_execAuthorize_Parms Authorize_Parms;
@@ -277,7 +287,8 @@ bool UFacebookWindows::Init()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_FACEBOOKWINDOWS_INIT));
+		pFnInit = UFunction::FindFunction("Function WinDrv.FacebookWindows.Init");
+
 	}
 
 	UFacebookWindows_execInit_Parms Init_Parms;
@@ -307,7 +318,8 @@ bool UHttpRequestWindows::ProcessRequest()
 
 	if (!pFnProcessRequest)
 	{
-		pFnProcessRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_PROCESSREQUEST));
+		pFnProcessRequest = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.ProcessRequest");
+
 	}
 
 	UHttpRequestWindows_execProcessRequest_Parms ProcessRequest_Parms;
@@ -339,7 +351,8 @@ class UHttpRequestInterface* UHttpRequestWindows::SetHeader(struct FString Heade
 
 	if (!pFnSetHeader)
 	{
-		pFnSetHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_SETHEADER));
+		pFnSetHeader = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.SetHeader");
+
 	}
 
 	UHttpRequestWindows_execSetHeader_Parms SetHeader_Parms;
@@ -372,7 +385,8 @@ class UHttpRequestInterface* UHttpRequestWindows::SetContentAsString(struct FStr
 
 	if (!pFnSetContentAsString)
 	{
-		pFnSetContentAsString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_SETCONTENTASSTRING));
+		pFnSetContentAsString = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.SetContentAsString");
+
 	}
 
 	UHttpRequestWindows_execSetContentAsString_Parms SetContentAsString_Parms;
@@ -404,7 +418,8 @@ class UHttpRequestInterface* UHttpRequestWindows::SetContent(TArray<unsigned cha
 
 	if (!pFnSetContent)
 	{
-		pFnSetContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_SETCONTENT));
+		pFnSetContent = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.SetContent");
+
 	}
 
 	UHttpRequestWindows_execSetContent_Parms SetContent_Parms;
@@ -436,7 +451,8 @@ class UHttpRequestInterface* UHttpRequestWindows::SetURL(struct FString URL)
 
 	if (!pFnSetURL)
 	{
-		pFnSetURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_SETURL));
+		pFnSetURL = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.SetURL");
+
 	}
 
 	UHttpRequestWindows_execSetURL_Parms SetURL_Parms;
@@ -468,7 +484,8 @@ class UHttpRequestInterface* UHttpRequestWindows::SetVerb(struct FString Verb)
 
 	if (!pFnSetVerb)
 	{
-		pFnSetVerb = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_SETVERB));
+		pFnSetVerb = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.SetVerb");
+
 	}
 
 	UHttpRequestWindows_execSetVerb_Parms SetVerb_Parms;
@@ -499,7 +516,8 @@ struct FString UHttpRequestWindows::GetVerb()
 
 	if (!pFnGetVerb)
 	{
-		pFnGetVerb = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETVERB));
+		pFnGetVerb = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetVerb");
+
 	}
 
 	UHttpRequestWindows_execGetVerb_Parms GetVerb_Parms;
@@ -529,7 +547,8 @@ void UHttpRequestWindows::GetContent(TArray<unsigned char>& Content)
 
 	if (!pFnGetContent)
 	{
-		pFnGetContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETCONTENT));
+		pFnGetContent = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetContent");
+
 	}
 
 	UHttpRequestWindows_execGetContent_Parms GetContent_Parms;
@@ -558,7 +577,8 @@ struct FString UHttpRequestWindows::GetURL()
 
 	if (!pFnGetURL)
 	{
-		pFnGetURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETURL));
+		pFnGetURL = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetURL");
+
 	}
 
 	UHttpRequestWindows_execGetURL_Parms GetURL_Parms;
@@ -588,7 +608,8 @@ int UHttpRequestWindows::GetContentLength()
 
 	if (!pFnGetContentLength)
 	{
-		pFnGetContentLength = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETCONTENTLENGTH));
+		pFnGetContentLength = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetContentLength");
+
 	}
 
 	UHttpRequestWindows_execGetContentLength_Parms GetContentLength_Parms;
@@ -618,7 +639,8 @@ struct FString UHttpRequestWindows::GetContentType()
 
 	if (!pFnGetContentType)
 	{
-		pFnGetContentType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETCONTENTTYPE));
+		pFnGetContentType = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetContentType");
+
 	}
 
 	UHttpRequestWindows_execGetContentType_Parms GetContentType_Parms;
@@ -649,7 +671,8 @@ struct FString UHttpRequestWindows::GetURLParameter(struct FString ParameterName
 
 	if (!pFnGetURLParameter)
 	{
-		pFnGetURLParameter = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETURLPARAMETER));
+		pFnGetURLParameter = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetURLParameter");
+
 	}
 
 	UHttpRequestWindows_execGetURLParameter_Parms GetURLParameter_Parms;
@@ -680,7 +703,8 @@ TArray<struct FString> UHttpRequestWindows::GetHeaders()
 
 	if (!pFnGetHeaders)
 	{
-		pFnGetHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETHEADERS));
+		pFnGetHeaders = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetHeaders");
+
 	}
 
 	UHttpRequestWindows_execGetHeaders_Parms GetHeaders_Parms;
@@ -711,7 +735,8 @@ struct FString UHttpRequestWindows::GetHeader(struct FString HeaderName)
 
 	if (!pFnGetHeader)
 	{
-		pFnGetHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWS_GETHEADER));
+		pFnGetHeader = UFunction::FindFunction("Function WinDrv.HttpRequestWindows.GetHeader");
+
 	}
 
 	UHttpRequestWindows_execGetHeader_Parms GetHeader_Parms;
@@ -742,7 +767,8 @@ int UHttpResponseWindows::GetResponseCode()
 
 	if (!pFnGetResponseCode)
 	{
-		pFnGetResponseCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETRESPONSECODE));
+		pFnGetResponseCode = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetResponseCode");
+
 	}
 
 	UHttpResponseWindows_execGetResponseCode_Parms GetResponseCode_Parms;
@@ -772,7 +798,8 @@ struct FString UHttpResponseWindows::GetContentAsString()
 
 	if (!pFnGetContentAsString)
 	{
-		pFnGetContentAsString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETCONTENTASSTRING));
+		pFnGetContentAsString = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetContentAsString");
+
 	}
 
 	UHttpResponseWindows_execGetContentAsString_Parms GetContentAsString_Parms;
@@ -802,7 +829,8 @@ void UHttpResponseWindows::GetContent(TArray<unsigned char>& Content)
 
 	if (!pFnGetContent)
 	{
-		pFnGetContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETCONTENT));
+		pFnGetContent = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetContent");
+
 	}
 
 	UHttpResponseWindows_execGetContent_Parms GetContent_Parms;
@@ -831,7 +859,8 @@ struct FString UHttpResponseWindows::GetURL()
 
 	if (!pFnGetURL)
 	{
-		pFnGetURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETURL));
+		pFnGetURL = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetURL");
+
 	}
 
 	UHttpResponseWindows_execGetURL_Parms GetURL_Parms;
@@ -861,7 +890,8 @@ int UHttpResponseWindows::GetContentLength()
 
 	if (!pFnGetContentLength)
 	{
-		pFnGetContentLength = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETCONTENTLENGTH));
+		pFnGetContentLength = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetContentLength");
+
 	}
 
 	UHttpResponseWindows_execGetContentLength_Parms GetContentLength_Parms;
@@ -891,7 +921,8 @@ struct FString UHttpResponseWindows::GetContentType()
 
 	if (!pFnGetContentType)
 	{
-		pFnGetContentType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETCONTENTTYPE));
+		pFnGetContentType = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetContentType");
+
 	}
 
 	UHttpResponseWindows_execGetContentType_Parms GetContentType_Parms;
@@ -922,7 +953,8 @@ struct FString UHttpResponseWindows::GetURLParameter(struct FString ParameterNam
 
 	if (!pFnGetURLParameter)
 	{
-		pFnGetURLParameter = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETURLPARAMETER));
+		pFnGetURLParameter = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetURLParameter");
+
 	}
 
 	UHttpResponseWindows_execGetURLParameter_Parms GetURLParameter_Parms;
@@ -953,7 +985,8 @@ TArray<struct FString> UHttpResponseWindows::GetHeaders()
 
 	if (!pFnGetHeaders)
 	{
-		pFnGetHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETHEADERS));
+		pFnGetHeaders = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetHeaders");
+
 	}
 
 	UHttpResponseWindows_execGetHeaders_Parms GetHeaders_Parms;
@@ -984,7 +1017,8 @@ struct FString UHttpResponseWindows::GetHeader(struct FString HeaderName)
 
 	if (!pFnGetHeader)
 	{
-		pFnGetHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPRESPONSEWINDOWS_GETHEADER));
+		pFnGetHeader = UFunction::FindFunction("Function WinDrv.HttpResponseWindows.GetHeader");
+
 	}
 
 	UHttpResponseWindows_execGetHeader_Parms GetHeader_Parms;
@@ -1015,7 +1049,8 @@ bool UHttpRequestWindowsMcp::ProcessRequest()
 
 	if (!pFnProcessRequest)
 	{
-		pFnProcessRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_WINDRV_HTTPREQUESTWINDOWSMCP_PROCESSREQUEST));
+		pFnProcessRequest = UFunction::FindFunction("Function WinDrv.HttpRequestWindowsMcp.ProcessRequest");
+
 	}
 
 	UHttpRequestWindowsMcp_execProcessRequest_Parms ProcessRequest_Parms;

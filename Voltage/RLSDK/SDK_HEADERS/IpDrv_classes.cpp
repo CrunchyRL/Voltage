@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: IpDrv_classes.cpp
@@ -31,7 +31,8 @@ void UAdHocDelegates::EventAdHocDestroyed()
 
 	if (!pFnEventAdHocDestroyed)
 	{
-		pFnEventAdHocDestroyed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTADHOCDESTROYED));
+		pFnEventAdHocDestroyed = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventAdHocDestroyed");
+
 	}
 
 	UAdHocDelegates_execEventAdHocDestroyed_Parms EventAdHocDestroyed_Parms;
@@ -49,7 +50,8 @@ void UAdHocDelegates::EventAdHocFinalized()
 
 	if (!pFnEventAdHocFinalized)
 	{
-		pFnEventAdHocFinalized = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTADHOCFINALIZED));
+		pFnEventAdHocFinalized = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventAdHocFinalized");
+
 	}
 
 	UAdHocDelegates_execEventAdHocFinalized_Parms EventAdHocFinalized_Parms;
@@ -67,7 +69,8 @@ void UAdHocDelegates::EventStationDisconnected()
 
 	if (!pFnEventStationDisconnected)
 	{
-		pFnEventStationDisconnected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTSTATIONDISCONNECTED));
+		pFnEventStationDisconnected = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventStationDisconnected");
+
 	}
 
 	UAdHocDelegates_execEventStationDisconnected_Parms EventStationDisconnected_Parms;
@@ -85,7 +88,8 @@ void UAdHocDelegates::EventStationConnected()
 
 	if (!pFnEventStationConnected)
 	{
-		pFnEventStationConnected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTSTATIONCONNECTED));
+		pFnEventStationConnected = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventStationConnected");
+
 	}
 
 	UAdHocDelegates_execEventStationConnected_Parms EventStationConnected_Parms;
@@ -103,7 +107,8 @@ void UAdHocDelegates::EventBecomeStation()
 
 	if (!pFnEventBecomeStation)
 	{
-		pFnEventBecomeStation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTBECOMESTATION));
+		pFnEventBecomeStation = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventBecomeStation");
+
 	}
 
 	UAdHocDelegates_execEventBecomeStation_Parms EventBecomeStation_Parms;
@@ -121,7 +126,8 @@ void UAdHocDelegates::EventAccessPointCreated()
 
 	if (!pFnEventAccessPointCreated)
 	{
-		pFnEventAccessPointCreated = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTACCESSPOINTCREATED));
+		pFnEventAccessPointCreated = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventAccessPointCreated");
+
 	}
 
 	UAdHocDelegates_execEventAccessPointCreated_Parms EventAccessPointCreated_Parms;
@@ -139,7 +145,8 @@ void UAdHocDelegates::EventAdHocInitialized()
 
 	if (!pFnEventAdHocInitialized)
 	{
-		pFnEventAdHocInitialized = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTADHOCINITIALIZED));
+		pFnEventAdHocInitialized = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventAdHocInitialized");
+
 	}
 
 	UAdHocDelegates_execEventAdHocInitialized_Parms EventAdHocInitialized_Parms;
@@ -158,7 +165,8 @@ void UAdHocDelegates::EventAdHocError(class UError* Error)
 
 	if (!pFnEventAdHocError)
 	{
-		pFnEventAdHocError = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTADHOCERROR));
+		pFnEventAdHocError = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventAdHocError");
+
 	}
 
 	UAdHocDelegates_execEventAdHocError_Parms EventAdHocError_Parms;
@@ -178,7 +186,8 @@ void UAdHocDelegates::EventAdHocOnNetworkChanged(TArray<struct FAdHocAccessPoint
 
 	if (!pFnEventAdHocOnNetworkChanged)
 	{
-		pFnEventAdHocOnNetworkChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ADHOCDELEGATES_EVENTADHOCONNETWORKCHANGED));
+		pFnEventAdHocOnNetworkChanged = UFunction::FindFunction("Function IpDrv.AdHocDelegates.EventAdHocOnNetworkChanged");
+
 	}
 
 	UAdHocDelegates_execEventAdHocOnNetworkChanged_Parms EventAdHocOnNetworkChanged_Parms;
@@ -199,7 +208,8 @@ void UOnlineSubsystemCommonImpl::GetRegisteredPlayers(struct FName SessionName, 
 
 	if (!pFnGetRegisteredPlayers)
 	{
-		pFnGetRegisteredPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINESUBSYSTEMCOMMONIMPL_GETREGISTEREDPLAYERS));
+		pFnGetRegisteredPlayers = UFunction::FindFunction("Function IpDrv.OnlineSubsystemCommonImpl.GetRegisteredPlayers");
+
 	}
 
 	UOnlineSubsystemCommonImpl_execGetRegisteredPlayers_Parms GetRegisteredPlayers_Parms;
@@ -222,7 +232,8 @@ bool UOnlineSubsystemCommonImpl::IsPlayerInSession(struct FName SessionName, str
 
 	if (!pFnIsPlayerInSession)
 	{
-		pFnIsPlayerInSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINESUBSYSTEMCOMMONIMPL_ISPLAYERINSESSION));
+		pFnIsPlayerInSession = UFunction::FindFunction("Function IpDrv.OnlineSubsystemCommonImpl.IsPlayerInSession");
+
 	}
 
 	UOnlineSubsystemCommonImpl_execIsPlayerInSession_Parms IsPlayerInSession_Parms;
@@ -250,7 +261,8 @@ struct FString UOnlineSubsystemCommonImpl::eventGetPlayerNicknameFromIndex(int U
 
 	if (!pFnGetPlayerNicknameFromIndex)
 	{
-		pFnGetPlayerNicknameFromIndex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINESUBSYSTEMCOMMONIMPL_GETPLAYERNICKNAMEFROMINDEX));
+		pFnGetPlayerNicknameFromIndex = UFunction::FindFunction("Function IpDrv.OnlineSubsystemCommonImpl.GetPlayerNicknameFromIndex");
+
 	}
 
 	UOnlineSubsystemCommonImpl_eventGetPlayerNicknameFromIndex_Parms GetPlayerNicknameFromIndex_Parms;
@@ -273,7 +285,8 @@ void UOnlineSubsystemCommonImpl::OnPlayerCountryRetrieved(struct FUniqueNetId Pl
 
 	if (!pFnOnPlayerCountryRetrieved)
 	{
-		pFnOnPlayerCountryRetrieved = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINESUBSYSTEMCOMMONIMPL_ONPLAYERCOUNTRYRETRIEVED));
+		pFnOnPlayerCountryRetrieved = UFunction::FindFunction("Function IpDrv.OnlineSubsystemCommonImpl.OnPlayerCountryRetrieved");
+
 	}
 
 	UOnlineSubsystemCommonImpl_execOnPlayerCountryRetrieved_Parms OnPlayerCountryRetrieved_Parms;
@@ -294,7 +307,8 @@ void UOnlineSubsystemCommonImpl::OnSanitizeStringComplete(struct FWordFilterResu
 
 	if (!pFnOnSanitizeStringComplete)
 	{
-		pFnOnSanitizeStringComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINESUBSYSTEMCOMMONIMPL_ONSANITIZESTRINGCOMPLETE));
+		pFnOnSanitizeStringComplete = UFunction::FindFunction("Function IpDrv.OnlineSubsystemCommonImpl.OnSanitizeStringComplete");
+
 	}
 
 	UOnlineSubsystemCommonImpl_execOnSanitizeStringComplete_Parms OnSanitizeStringComplete_Parms;
@@ -314,7 +328,8 @@ void UAvatarDownloadComponent::TriggerAvatarCallbacks(class UAvatarDownload* Ava
 
 	if (!pFnTriggerAvatarCallbacks)
 	{
-		pFnTriggerAvatarCallbacks = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_TRIGGERAVATARCALLBACKS));
+		pFnTriggerAvatarCallbacks = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.TriggerAvatarCallbacks");
+
 	}
 
 	UAvatarDownloadComponent_execTriggerAvatarCallbacks_Parms TriggerAvatarCallbacks_Parms;
@@ -334,7 +349,8 @@ void UAvatarDownloadComponent::HandleOnlineImageDownloaded(struct FOnlineImageDo
 
 	if (!pFnHandleOnlineImageDownloaded)
 	{
-		pFnHandleOnlineImageDownloaded = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_HANDLEONLINEIMAGEDOWNLOADED));
+		pFnHandleOnlineImageDownloaded = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.HandleOnlineImageDownloaded");
+
 	}
 
 	UAvatarDownloadComponent_execHandleOnlineImageDownloaded_Parms HandleOnlineImageDownloaded_Parms;
@@ -356,7 +372,8 @@ class UAvatarDownload* UAvatarDownloadComponent::GetAvatar(struct FUniqueNetId P
 
 	if (!pFnGetAvatar)
 	{
-		pFnGetAvatar = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_GETAVATAR));
+		pFnGetAvatar = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.GetAvatar");
+
 	}
 
 	UAvatarDownloadComponent_execGetAvatar_Parms GetAvatar_Parms;
@@ -378,7 +395,8 @@ void UAvatarDownloadComponent::ClearPendingDownloads()
 
 	if (!pFnClearPendingDownloads)
 	{
-		pFnClearPendingDownloads = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_CLEARPENDINGDOWNLOADS));
+		pFnClearPendingDownloads = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.ClearPendingDownloads");
+
 	}
 
 	UAvatarDownloadComponent_execClearPendingDownloads_Parms ClearPendingDownloads_Parms;
@@ -396,7 +414,8 @@ void UAvatarDownloadComponent::CleanupAvatars()
 
 	if (!pFnCleanupAvatars)
 	{
-		pFnCleanupAvatars = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_CLEANUPAVATARS));
+		pFnCleanupAvatars = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.CleanupAvatars");
+
 	}
 
 	UAvatarDownloadComponent_execCleanupAvatars_Parms CleanupAvatars_Parms;
@@ -417,7 +436,8 @@ void UAvatarDownloadComponent::DownloadAvatar(struct FUniqueNetId PlayerID, unsi
 
 	if (!pFnDownloadAvatar)
 	{
-		pFnDownloadAvatar = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_DOWNLOADAVATAR));
+		pFnDownloadAvatar = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.DownloadAvatar");
+
 	}
 
 	UAvatarDownloadComponent_execDownloadAvatar_Parms DownloadAvatar_Parms;
@@ -441,7 +461,8 @@ void UAvatarDownloadComponent::StoreNewAvatars(unsigned char Size, struct FScrip
 
 	if (!pFnStoreNewAvatars)
 	{
-		pFnStoreNewAvatars = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_STORENEWAVATARS));
+		pFnStoreNewAvatars = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.StoreNewAvatars");
+
 	}
 
 	UAvatarDownloadComponent_execStoreNewAvatars_Parms StoreNewAvatars_Parms;
@@ -470,7 +491,8 @@ void UAvatarDownloadComponent::ProcessOldRequests(unsigned char SizeType, struct
 
 	if (!pFnProcessOldRequests)
 	{
-		pFnProcessOldRequests = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_PROCESSOLDREQUESTS));
+		pFnProcessOldRequests = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.ProcessOldRequests");
+
 	}
 
 	UAvatarDownloadComponent_execProcessOldRequests_Parms ProcessOldRequests_Parms;
@@ -500,7 +522,8 @@ bool UAvatarDownloadComponent::TryAddAvatarTextureCallback(struct FUniqueNetId P
 
 	if (!pFnTryAddAvatarTextureCallback)
 	{
-		pFnTryAddAvatarTextureCallback = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADCOMPONENT_TRYADDAVATARTEXTURECALLBACK));
+		pFnTryAddAvatarTextureCallback = UFunction::FindFunction("Function IpDrv.AvatarDownloadComponent.TryAddAvatarTextureCallback");
+
 	}
 
 	UAvatarDownloadComponent_execTryAddAvatarTextureCallback_Parms TryAddAvatarTextureCallback_Parms;
@@ -529,7 +552,8 @@ bool UAvatarDownloadMap::ContainsImage(struct FString Key)
 
 	if (!pFnContainsImage)
 	{
-		pFnContainsImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_CONTAINSIMAGE));
+		pFnContainsImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.ContainsImage");
+
 	}
 
 	UAvatarDownloadMap_execContainsImage_Parms ContainsImage_Parms;
@@ -556,7 +580,8 @@ bool UAvatarDownloadMap::ContainsAvatar(struct FAvatarKey& Key)
 
 	if (!pFnContainsAvatar)
 	{
-		pFnContainsAvatar = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_CONTAINSAVATAR));
+		pFnContainsAvatar = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.ContainsAvatar");
+
 	}
 
 	UAvatarDownloadMap_execContainsAvatar_Parms ContainsAvatar_Parms;
@@ -582,7 +607,8 @@ void UAvatarDownloadMap::OnAvatarReceivedImage(class UAvatarDownload* Avatar)
 
 	if (!pFnOnAvatarReceivedImage)
 	{
-		pFnOnAvatarReceivedImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_ONAVATARRECEIVEDIMAGE));
+		pFnOnAvatarReceivedImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.OnAvatarReceivedImage");
+
 	}
 
 	UAvatarDownloadMap_execOnAvatarReceivedImage_Parms OnAvatarReceivedImage_Parms;
@@ -606,7 +632,8 @@ void UAvatarDownloadMap::RemoveImage(struct FString Key)
 
 	if (!pFnRemoveImage)
 	{
-		pFnRemoveImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_REMOVEIMAGE));
+		pFnRemoveImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.RemoveImage");
+
 	}
 
 	UAvatarDownloadMap_execRemoveImage_Parms RemoveImage_Parms;
@@ -630,7 +657,8 @@ void UAvatarDownloadMap::RemoveAvatar(struct FAvatarKey& Key)
 
 	if (!pFnRemoveAvatar)
 	{
-		pFnRemoveAvatar = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_REMOVEAVATAR));
+		pFnRemoveAvatar = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.RemoveAvatar");
+
 	}
 
 	UAvatarDownloadMap_execRemoveAvatar_Parms RemoveAvatar_Parms;
@@ -654,7 +682,8 @@ void UAvatarDownloadMap::RemoveAllNetIDs(struct FUniqueNetId& PlayerID)
 
 	if (!pFnRemoveAllNetIDs)
 	{
-		pFnRemoveAllNetIDs = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_REMOVEALLNETIDS));
+		pFnRemoveAllNetIDs = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.RemoveAllNetIDs");
+
 	}
 
 	UAvatarDownloadMap_execRemoveAllNetIDs_Parms RemoveAllNetIDs_Parms;
@@ -677,7 +706,8 @@ void UAvatarDownloadMap::ClearAvatarsPendingImages()
 
 	if (!pFnClearAvatarsPendingImages)
 	{
-		pFnClearAvatarsPendingImages = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_CLEARAVATARSPENDINGIMAGES));
+		pFnClearAvatarsPendingImages = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.ClearAvatarsPendingImages");
+
 	}
 
 	UAvatarDownloadMap_execClearAvatarsPendingImages_Parms ClearAvatarsPendingImages_Parms;
@@ -699,7 +729,8 @@ void UAvatarDownloadMap::ClearImages()
 
 	if (!pFnClearImages)
 	{
-		pFnClearImages = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_CLEARIMAGES));
+		pFnClearImages = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.ClearImages");
+
 	}
 
 	UAvatarDownloadMap_execClearImages_Parms ClearImages_Parms;
@@ -721,7 +752,8 @@ void UAvatarDownloadMap::ClearAvatars()
 
 	if (!pFnClearAvatars)
 	{
-		pFnClearAvatars = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_CLEARAVATARS));
+		pFnClearAvatars = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.ClearAvatars");
+
 	}
 
 	UAvatarDownloadMap_execClearAvatars_Parms ClearAvatars_Parms;
@@ -743,7 +775,8 @@ void UAvatarDownloadMap::Clear()
 
 	if (!pFnClear)
 	{
-		pFnClear = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_CLEAR));
+		pFnClear = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.Clear");
+
 	}
 
 	UAvatarDownloadMap_execClear_Parms Clear_Parms;
@@ -768,7 +801,8 @@ bool UAvatarDownloadMap::TryGetImage(struct FString Key, class UTexture*& OutVal
 
 	if (!pFnTryGetImage)
 	{
-		pFnTryGetImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_TRYGETIMAGE));
+		pFnTryGetImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.TryGetImage");
+
 	}
 
 	UAvatarDownloadMap_execTryGetImage_Parms TryGetImage_Parms;
@@ -797,7 +831,8 @@ bool UAvatarDownloadMap::TryGetAvatar(struct FAvatarKey& Key, class UAvatarDownl
 
 	if (!pFnTryGetAvatar)
 	{
-		pFnTryGetAvatar = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_TRYGETAVATAR));
+		pFnTryGetAvatar = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.TryGetAvatar");
+
 	}
 
 	UAvatarDownloadMap_execTryGetAvatar_Parms TryGetAvatar_Parms;
@@ -825,7 +860,8 @@ void UAvatarDownloadMap::GetAvatarsPendingImage(struct FString Key, TArray<class
 
 	if (!pFnGetAvatarsPendingImage)
 	{
-		pFnGetAvatarsPendingImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_GETAVATARSPENDINGIMAGE));
+		pFnGetAvatarsPendingImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.GetAvatarsPendingImage");
+
 	}
 
 	UAvatarDownloadMap_execGetAvatarsPendingImage_Parms GetAvatarsPendingImage_Parms;
@@ -851,7 +887,8 @@ class UTexture* UAvatarDownloadMap::GetImage(struct FString Key)
 
 	if (!pFnGetImage)
 	{
-		pFnGetImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_GETIMAGE));
+		pFnGetImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.GetImage");
+
 	}
 
 	UAvatarDownloadMap_execGetImage_Parms GetImage_Parms;
@@ -878,7 +915,8 @@ class UAvatarDownload* UAvatarDownloadMap::GetAvatar(struct FAvatarKey& Key)
 
 	if (!pFnGetAvatar)
 	{
-		pFnGetAvatar = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_GETAVATAR));
+		pFnGetAvatar = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.GetAvatar");
+
 	}
 
 	UAvatarDownloadMap_execGetAvatar_Parms GetAvatar_Parms;
@@ -904,7 +942,8 @@ void UAvatarDownloadMap::AddAvatarPendingImage(class UAvatarDownload* Avatar)
 
 	if (!pFnAddAvatarPendingImage)
 	{
-		pFnAddAvatarPendingImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_ADDAVATARPENDINGIMAGE));
+		pFnAddAvatarPendingImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.AddAvatarPendingImage");
+
 	}
 
 	UAvatarDownloadMap_execAddAvatarPendingImage_Parms AddAvatarPendingImage_Parms;
@@ -929,7 +968,8 @@ void UAvatarDownloadMap::SetImage(struct FString URL, class UTexture* Value)
 
 	if (!pFnSetImage)
 	{
-		pFnSetImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_SETIMAGE));
+		pFnSetImage = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.SetImage");
+
 	}
 
 	UAvatarDownloadMap_execSetImage_Parms SetImage_Parms;
@@ -954,7 +994,8 @@ void UAvatarDownloadMap::SetAvatar(class UAvatarDownload* Value)
 
 	if (!pFnSetAvatar)
 	{
-		pFnSetAvatar = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_SETAVATAR));
+		pFnSetAvatar = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.SetAvatar");
+
 	}
 
 	UAvatarDownloadMap_execSetAvatar_Parms SetAvatar_Parms;
@@ -978,7 +1019,8 @@ int UAvatarDownloadMap::CountAvatars()
 
 	if (!pFnCountAvatars)
 	{
-		pFnCountAvatars = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_COUNTAVATARS));
+		pFnCountAvatars = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.CountAvatars");
+
 	}
 
 	UAvatarDownloadMap_execCountAvatars_Parms CountAvatars_Parms;
@@ -1005,7 +1047,8 @@ void UAvatarDownloadMap::AllValues(int StartIndex, int MaxValues, class UAvatarD
 
 	if (!pFnAllValues)
 	{
-		pFnAllValues = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_AVATARDOWNLOADMAP_ALLVALUES));
+		pFnAllValues = UFunction::FindFunction("Function IpDrv.AvatarDownloadMap.AllValues");
+
 	}
 
 	UAvatarDownloadMap_execAllValues_Parms AllValues_Parms;
@@ -1021,7 +1064,7 @@ void UAvatarDownloadMap::AllValues(int StartIndex, int MaxValues, class UAvatarD
 };
 
 // Function IpDrv.HttpRequestCurl.ProcessRequest
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1031,7 +1074,8 @@ bool UHttpRequestCurl::ProcessRequest()
 
 	if (!pFnProcessRequest)
 	{
-		pFnProcessRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_PROCESSREQUEST));
+		pFnProcessRequest = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.ProcessRequest");
+
 	}
 
 	UHttpRequestCurl_execProcessRequest_Parms ProcessRequest_Parms;
@@ -1063,7 +1107,8 @@ class UHttpRequestInterface* UHttpRequestCurl::SetHeader(struct FString HeaderNa
 
 	if (!pFnSetHeader)
 	{
-		pFnSetHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_SETHEADER));
+		pFnSetHeader = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.SetHeader");
+
 	}
 
 	UHttpRequestCurl_execSetHeader_Parms SetHeader_Parms;
@@ -1096,7 +1141,8 @@ class UHttpRequestInterface* UHttpRequestCurl::SetContentAsString(struct FString
 
 	if (!pFnSetContentAsString)
 	{
-		pFnSetContentAsString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_SETCONTENTASSTRING));
+		pFnSetContentAsString = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.SetContentAsString");
+
 	}
 
 	UHttpRequestCurl_execSetContentAsString_Parms SetContentAsString_Parms;
@@ -1128,7 +1174,8 @@ class UHttpRequestInterface* UHttpRequestCurl::SetContent(TArray<unsigned char>&
 
 	if (!pFnSetContent)
 	{
-		pFnSetContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_SETCONTENT));
+		pFnSetContent = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.SetContent");
+
 	}
 
 	UHttpRequestCurl_execSetContent_Parms SetContent_Parms;
@@ -1149,7 +1196,7 @@ class UHttpRequestInterface* UHttpRequestCurl::SetContent(TArray<unsigned char>&
 };
 
 // Function IpDrv.HttpRequestCurl.SetURL
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // class UHttpRequestInterface*   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 URL                            (CPF_Parm | CPF_NeedCtorLink)
@@ -1160,7 +1207,8 @@ class UHttpRequestInterface* UHttpRequestCurl::SetURL(struct FString URL)
 
 	if (!pFnSetURL)
 	{
-		pFnSetURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_SETURL));
+		pFnSetURL = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.SetURL");
+
 	}
 
 	UHttpRequestCurl_execSetURL_Parms SetURL_Parms;
@@ -1181,7 +1229,7 @@ class UHttpRequestInterface* UHttpRequestCurl::SetURL(struct FString URL)
 };
 
 // Function IpDrv.HttpRequestCurl.SetVerb
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // class UHttpRequestInterface*   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Verb                           (CPF_Parm | CPF_NeedCtorLink)
@@ -1192,7 +1240,8 @@ class UHttpRequestInterface* UHttpRequestCurl::SetVerb(struct FString Verb)
 
 	if (!pFnSetVerb)
 	{
-		pFnSetVerb = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_SETVERB));
+		pFnSetVerb = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.SetVerb");
+
 	}
 
 	UHttpRequestCurl_execSetVerb_Parms SetVerb_Parms;
@@ -1223,7 +1272,8 @@ struct FString UHttpRequestCurl::GetVerb()
 
 	if (!pFnGetVerb)
 	{
-		pFnGetVerb = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETVERB));
+		pFnGetVerb = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetVerb");
+
 	}
 
 	UHttpRequestCurl_execGetVerb_Parms GetVerb_Parms;
@@ -1253,7 +1303,8 @@ void UHttpRequestCurl::GetContent(TArray<unsigned char>& Content)
 
 	if (!pFnGetContent)
 	{
-		pFnGetContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETCONTENT));
+		pFnGetContent = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetContent");
+
 	}
 
 	UHttpRequestCurl_execGetContent_Parms GetContent_Parms;
@@ -1282,7 +1333,8 @@ struct FString UHttpRequestCurl::GetURL()
 
 	if (!pFnGetURL)
 	{
-		pFnGetURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETURL));
+		pFnGetURL = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetURL");
+
 	}
 
 	UHttpRequestCurl_execGetURL_Parms GetURL_Parms;
@@ -1312,7 +1364,8 @@ int UHttpRequestCurl::GetContentLength()
 
 	if (!pFnGetContentLength)
 	{
-		pFnGetContentLength = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETCONTENTLENGTH));
+		pFnGetContentLength = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetContentLength");
+
 	}
 
 	UHttpRequestCurl_execGetContentLength_Parms GetContentLength_Parms;
@@ -1342,7 +1395,8 @@ struct FString UHttpRequestCurl::GetContentType()
 
 	if (!pFnGetContentType)
 	{
-		pFnGetContentType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETCONTENTTYPE));
+		pFnGetContentType = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetContentType");
+
 	}
 
 	UHttpRequestCurl_execGetContentType_Parms GetContentType_Parms;
@@ -1373,7 +1427,8 @@ struct FString UHttpRequestCurl::GetURLParameter(struct FString ParameterName)
 
 	if (!pFnGetURLParameter)
 	{
-		pFnGetURLParameter = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETURLPARAMETER));
+		pFnGetURLParameter = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetURLParameter");
+
 	}
 
 	UHttpRequestCurl_execGetURLParameter_Parms GetURLParameter_Parms;
@@ -1404,7 +1459,8 @@ TArray<struct FString> UHttpRequestCurl::GetHeaders()
 
 	if (!pFnGetHeaders)
 	{
-		pFnGetHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETHEADERS));
+		pFnGetHeaders = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetHeaders");
+
 	}
 
 	UHttpRequestCurl_execGetHeaders_Parms GetHeaders_Parms;
@@ -1435,7 +1491,8 @@ struct FString UHttpRequestCurl::GetHeader(struct FString HeaderName)
 
 	if (!pFnGetHeader)
 	{
-		pFnGetHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPREQUESTCURL_GETHEADER));
+		pFnGetHeader = UFunction::FindFunction("Function IpDrv.HttpRequestCurl.GetHeader");
+
 	}
 
 	UHttpRequestCurl_execGetHeader_Parms GetHeader_Parms;
@@ -1466,7 +1523,8 @@ int UHttpResponseCurl::GetResponseCode()
 
 	if (!pFnGetResponseCode)
 	{
-		pFnGetResponseCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETRESPONSECODE));
+		pFnGetResponseCode = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetResponseCode");
+
 	}
 
 	UHttpResponseCurl_execGetResponseCode_Parms GetResponseCode_Parms;
@@ -1486,7 +1544,7 @@ int UHttpResponseCurl::GetResponseCode()
 };
 
 // Function IpDrv.HttpResponseCurl.GetContentAsString
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -1496,7 +1554,8 @@ struct FString UHttpResponseCurl::GetContentAsString()
 
 	if (!pFnGetContentAsString)
 	{
-		pFnGetContentAsString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETCONTENTASSTRING));
+		pFnGetContentAsString = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetContentAsString");
+
 	}
 
 	UHttpResponseCurl_execGetContentAsString_Parms GetContentAsString_Parms;
@@ -1526,7 +1585,8 @@ void UHttpResponseCurl::GetContent(TArray<unsigned char>& Content)
 
 	if (!pFnGetContent)
 	{
-		pFnGetContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETCONTENT));
+		pFnGetContent = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetContent");
+
 	}
 
 	UHttpResponseCurl_execGetContent_Parms GetContent_Parms;
@@ -1555,7 +1615,8 @@ struct FString UHttpResponseCurl::GetURL()
 
 	if (!pFnGetURL)
 	{
-		pFnGetURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETURL));
+		pFnGetURL = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetURL");
+
 	}
 
 	UHttpResponseCurl_execGetURL_Parms GetURL_Parms;
@@ -1585,7 +1646,8 @@ int UHttpResponseCurl::GetContentLength()
 
 	if (!pFnGetContentLength)
 	{
-		pFnGetContentLength = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETCONTENTLENGTH));
+		pFnGetContentLength = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetContentLength");
+
 	}
 
 	UHttpResponseCurl_execGetContentLength_Parms GetContentLength_Parms;
@@ -1615,7 +1677,8 @@ struct FString UHttpResponseCurl::GetContentType()
 
 	if (!pFnGetContentType)
 	{
-		pFnGetContentType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETCONTENTTYPE));
+		pFnGetContentType = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetContentType");
+
 	}
 
 	UHttpResponseCurl_execGetContentType_Parms GetContentType_Parms;
@@ -1646,7 +1709,8 @@ struct FString UHttpResponseCurl::GetURLParameter(struct FString ParameterName)
 
 	if (!pFnGetURLParameter)
 	{
-		pFnGetURLParameter = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETURLPARAMETER));
+		pFnGetURLParameter = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetURLParameter");
+
 	}
 
 	UHttpResponseCurl_execGetURLParameter_Parms GetURLParameter_Parms;
@@ -1677,7 +1741,8 @@ TArray<struct FString> UHttpResponseCurl::GetHeaders()
 
 	if (!pFnGetHeaders)
 	{
-		pFnGetHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETHEADERS));
+		pFnGetHeaders = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetHeaders");
+
 	}
 
 	UHttpResponseCurl_execGetHeaders_Parms GetHeaders_Parms;
@@ -1708,7 +1773,8 @@ struct FString UHttpResponseCurl::GetHeader(struct FString HeaderName)
 
 	if (!pFnGetHeader)
 	{
-		pFnGetHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HTTPRESPONSECURL_GETHEADER));
+		pFnGetHeader = UFunction::FindFunction("Function IpDrv.HttpResponseCurl.GetHeader");
+
 	}
 
 	UHttpResponseCurl_execGetHeader_Parms GetHeader_Parms;
@@ -1729,7 +1795,7 @@ struct FString UHttpResponseCurl::GetHeader(struct FString HeaderName)
 };
 
 // Function IpDrv.ImageDecoder.RequestDecodeImage
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 RequestURL                     (CPF_Parm | CPF_NeedCtorLink)
 // unsigned char                  ImageType                      (CPF_Parm)
@@ -1742,7 +1808,8 @@ void UImageDecoder::RequestDecodeImage(struct FString RequestURL, unsigned char 
 
 	if (!pFnRequestDecodeImage)
 	{
-		pFnRequestDecodeImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_IMAGEDECODER_REQUESTDECODEIMAGE));
+		pFnRequestDecodeImage = UFunction::FindFunction("Function IpDrv.ImageDecoder.RequestDecodeImage");
+
 	}
 
 	UImageDecoder_execRequestDecodeImage_Parms RequestDecodeImage_Parms;
@@ -1770,7 +1837,8 @@ void UImageDecoder::ImageDecodedDelegate(struct FString RequestURL, struct FImag
 
 	if (!pFnImageDecodedDelegate)
 	{
-		pFnImageDecodedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_IMAGEDECODER_IMAGEDECODEDDELEGATE));
+		pFnImageDecodedDelegate = UFunction::FindFunction("Function IpDrv.ImageDecoder.ImageDecodedDelegate");
+
 	}
 
 	UImageDecoder_execImageDecodedDelegate_Parms ImageDecodedDelegate_Parms;
@@ -1790,7 +1858,8 @@ void AInternetLink::eventResolveFailed()
 
 	if (!pFnResolveFailed)
 	{
-		pFnResolveFailed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_RESOLVEFAILED));
+		pFnResolveFailed = UFunction::FindFunction("Function IpDrv.InternetLink.ResolveFailed");
+
 	}
 
 	AInternetLink_eventResolveFailed_Parms ResolveFailed_Parms;
@@ -1809,7 +1878,8 @@ void AInternetLink::eventResolved(struct FIpAddr Addr)
 
 	if (!pFnResolved)
 	{
-		pFnResolved = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_RESOLVED));
+		pFnResolved = UFunction::FindFunction("Function IpDrv.InternetLink.Resolved");
+
 	}
 
 	AInternetLink_eventResolved_Parms Resolved_Parms;
@@ -1829,7 +1899,8 @@ void AInternetLink::GetLocalIP(struct FIpAddr& Arg)
 
 	if (!pFnGetLocalIP)
 	{
-		pFnGetLocalIP = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_GETLOCALIP));
+		pFnGetLocalIP = UFunction::FindFunction("Function IpDrv.InternetLink.GetLocalIP");
+
 	}
 
 	AInternetLink_execGetLocalIP_Parms GetLocalIP_Parms;
@@ -1855,7 +1926,8 @@ bool AInternetLink::StringToIpAddr(struct FString Str, struct FIpAddr& Addr)
 
 	if (!pFnStringToIpAddr)
 	{
-		pFnStringToIpAddr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_STRINGTOIPADDR));
+		pFnStringToIpAddr = UFunction::FindFunction("Function IpDrv.InternetLink.StringToIpAddr");
+
 	}
 
 	AInternetLink_execStringToIpAddr_Parms StringToIpAddr_Parms;
@@ -1883,7 +1955,8 @@ struct FString AInternetLink::IpAddrToString(struct FIpAddr Arg)
 
 	if (!pFnIpAddrToString)
 	{
-		pFnIpAddrToString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_IPADDRTOSTRING));
+		pFnIpAddrToString = UFunction::FindFunction("Function IpDrv.InternetLink.IpAddrToString");
+
 	}
 
 	AInternetLink_execIpAddrToString_Parms IpAddrToString_Parms;
@@ -1909,7 +1982,8 @@ int AInternetLink::GetLastError()
 
 	if (!pFnGetLastError)
 	{
-		pFnGetLastError = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_GETLASTERROR));
+		pFnGetLastError = UFunction::FindFunction("Function IpDrv.InternetLink.GetLastError");
+
 	}
 
 	AInternetLink_execGetLastError_Parms GetLastError_Parms;
@@ -1934,7 +2008,8 @@ void AInternetLink::Resolve(struct FString Domain)
 
 	if (!pFnResolve)
 	{
-		pFnResolve = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_RESOLVE));
+		pFnResolve = UFunction::FindFunction("Function IpDrv.InternetLink.Resolve");
+
 	}
 
 	AInternetLink_execResolve_Parms Resolve_Parms;
@@ -1963,7 +2038,8 @@ bool AInternetLink::ParseURL(struct FString URL, struct FString& Addr, int& Port
 
 	if (!pFnParseURL)
 	{
-		pFnParseURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_PARSEURL));
+		pFnParseURL = UFunction::FindFunction("Function IpDrv.InternetLink.ParseURL");
+
 	}
 
 	AInternetLink_execParseURL_Parms ParseURL_Parms;
@@ -1993,7 +2069,8 @@ bool AInternetLink::IsDataPending()
 
 	if (!pFnIsDataPending)
 	{
-		pFnIsDataPending = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_INTERNETLINK_ISDATAPENDING));
+		pFnIsDataPending = UFunction::FindFunction("Function IpDrv.InternetLink.IsDataPending");
+
 	}
 
 	AInternetLink_execIsDataPending_Parms IsDataPending_Parms;
@@ -2019,7 +2096,8 @@ void ATcpLink::eventReceivedBinary(int Count, unsigned char B)
 
 	if (!pFnReceivedBinary)
 	{
-		pFnReceivedBinary = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_RECEIVEDBINARY));
+		pFnReceivedBinary = UFunction::FindFunction("Function IpDrv.TcpLink.ReceivedBinary");
+
 	}
 
 	ATcpLink_eventReceivedBinary_Parms ReceivedBinary_Parms;
@@ -2040,7 +2118,8 @@ void ATcpLink::eventReceivedLine(struct FString Line)
 
 	if (!pFnReceivedLine)
 	{
-		pFnReceivedLine = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_RECEIVEDLINE));
+		pFnReceivedLine = UFunction::FindFunction("Function IpDrv.TcpLink.ReceivedLine");
+
 	}
 
 	ATcpLink_eventReceivedLine_Parms ReceivedLine_Parms;
@@ -2060,7 +2139,8 @@ void ATcpLink::eventReceivedText(struct FString Text)
 
 	if (!pFnReceivedText)
 	{
-		pFnReceivedText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_RECEIVEDTEXT));
+		pFnReceivedText = UFunction::FindFunction("Function IpDrv.TcpLink.ReceivedText");
+
 	}
 
 	ATcpLink_eventReceivedText_Parms ReceivedText_Parms;
@@ -2079,7 +2159,8 @@ void ATcpLink::eventClosed()
 
 	if (!pFnClosed)
 	{
-		pFnClosed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_CLOSED));
+		pFnClosed = UFunction::FindFunction("Function IpDrv.TcpLink.Closed");
+
 	}
 
 	ATcpLink_eventClosed_Parms Closed_Parms;
@@ -2097,7 +2178,8 @@ void ATcpLink::eventOpened()
 
 	if (!pFnOpened)
 	{
-		pFnOpened = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_OPENED));
+		pFnOpened = UFunction::FindFunction("Function IpDrv.TcpLink.Opened");
+
 	}
 
 	ATcpLink_eventOpened_Parms Opened_Parms;
@@ -2115,7 +2197,8 @@ void ATcpLink::eventAccepted()
 
 	if (!pFnAccepted)
 	{
-		pFnAccepted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_ACCEPTED));
+		pFnAccepted = UFunction::FindFunction("Function IpDrv.TcpLink.Accepted");
+
 	}
 
 	ATcpLink_eventAccepted_Parms Accepted_Parms;
@@ -2136,7 +2219,8 @@ int ATcpLink::ReadBinary(int Count, unsigned char& B)
 
 	if (!pFnReadBinary)
 	{
-		pFnReadBinary = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_READBINARY));
+		pFnReadBinary = UFunction::FindFunction("Function IpDrv.TcpLink.ReadBinary");
+
 	}
 
 	ATcpLink_execReadBinary_Parms ReadBinary_Parms;
@@ -2164,7 +2248,8 @@ int ATcpLink::ReadText(struct FString& Str)
 
 	if (!pFnReadText)
 	{
-		pFnReadText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_READTEXT));
+		pFnReadText = UFunction::FindFunction("Function IpDrv.TcpLink.ReadText");
+
 	}
 
 	ATcpLink_execReadText_Parms ReadText_Parms;
@@ -2192,7 +2277,8 @@ int ATcpLink::SendBinary(int Count, unsigned char B)
 
 	if (!pFnSendBinary)
 	{
-		pFnSendBinary = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_SENDBINARY));
+		pFnSendBinary = UFunction::FindFunction("Function IpDrv.TcpLink.SendBinary");
+
 	}
 
 	ATcpLink_execSendBinary_Parms SendBinary_Parms;
@@ -2220,7 +2306,8 @@ int ATcpLink::SendText(struct FString Str)
 
 	if (!pFnSendText)
 	{
-		pFnSendText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_SENDTEXT));
+		pFnSendText = UFunction::FindFunction("Function IpDrv.TcpLink.SendText");
+
 	}
 
 	ATcpLink_execSendText_Parms SendText_Parms;
@@ -2246,7 +2333,8 @@ bool ATcpLink::IsConnected()
 
 	if (!pFnIsConnected)
 	{
-		pFnIsConnected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_ISCONNECTED));
+		pFnIsConnected = UFunction::FindFunction("Function IpDrv.TcpLink.IsConnected");
+
 	}
 
 	ATcpLink_execIsConnected_Parms IsConnected_Parms;
@@ -2271,7 +2359,8 @@ bool ATcpLink::Close()
 
 	if (!pFnClose)
 	{
-		pFnClose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_CLOSE));
+		pFnClose = UFunction::FindFunction("Function IpDrv.TcpLink.Close");
+
 	}
 
 	ATcpLink_execClose_Parms Close_Parms;
@@ -2297,7 +2386,8 @@ bool ATcpLink::Open(struct FIpAddr Addr)
 
 	if (!pFnOpen)
 	{
-		pFnOpen = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_OPEN));
+		pFnOpen = UFunction::FindFunction("Function IpDrv.TcpLink.Open");
+
 	}
 
 	ATcpLink_execOpen_Parms Open_Parms;
@@ -2323,7 +2413,8 @@ bool ATcpLink::Listen()
 
 	if (!pFnListen)
 	{
-		pFnListen = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_LISTEN));
+		pFnListen = UFunction::FindFunction("Function IpDrv.TcpLink.Listen");
+
 	}
 
 	ATcpLink_execListen_Parms Listen_Parms;
@@ -2350,7 +2441,8 @@ int ATcpLink::BindPort(int PortNum, unsigned long bUseNextAvailable)
 
 	if (!pFnBindPort)
 	{
-		pFnBindPort = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TCPLINK_BINDPORT));
+		pFnBindPort = UFunction::FindFunction("Function IpDrv.TcpLink.BindPort");
+
 	}
 
 	ATcpLink_execBindPort_Parms BindPort_Parms;
@@ -2378,7 +2470,8 @@ struct FString UMcpServiceBase::GetUserAuthURL(struct FString McpId)
 
 	if (!pFnGetUserAuthURL)
 	{
-		pFnGetUserAuthURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVICEBASE_GETUSERAUTHURL));
+		pFnGetUserAuthURL = UFunction::FindFunction("Function IpDrv.McpServiceBase.GetUserAuthURL");
+
 	}
 
 	UMcpServiceBase_execGetUserAuthURL_Parms GetUserAuthURL_Parms;
@@ -2400,7 +2493,8 @@ struct FString UMcpServiceBase::GetAppAccessURL()
 
 	if (!pFnGetAppAccessURL)
 	{
-		pFnGetAppAccessURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVICEBASE_GETAPPACCESSURL));
+		pFnGetAppAccessURL = UFunction::FindFunction("Function IpDrv.McpServiceBase.GetAppAccessURL");
+
 	}
 
 	UMcpServiceBase_execGetAppAccessURL_Parms GetAppAccessURL_Parms;
@@ -2421,7 +2515,8 @@ struct FString UMcpServiceBase::GetBaseURL()
 
 	if (!pFnGetBaseURL)
 	{
-		pFnGetBaseURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVICEBASE_GETBASEURL));
+		pFnGetBaseURL = UFunction::FindFunction("Function IpDrv.McpServiceBase.GetBaseURL");
+
 	}
 
 	UMcpServiceBase_execGetBaseURL_Parms GetBaseURL_Parms;
@@ -2441,7 +2536,8 @@ void UMcpServiceBase::eventInit()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVICEBASE_INIT));
+		pFnInit = UFunction::FindFunction("Function IpDrv.McpServiceBase.Init");
+
 	}
 
 	UMcpServiceBase_eventInit_Parms Init_Parms;
@@ -2462,7 +2558,8 @@ bool UOnlineEventsInterfaceMcp::UploadMatchmakingStats(struct FUniqueNetId Uniqu
 
 	if (!pFnUploadMatchmakingStats)
 	{
-		pFnUploadMatchmakingStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEEVENTSINTERFACEMCP_UPLOADMATCHMAKINGSTATS));
+		pFnUploadMatchmakingStats = UFunction::FindFunction("Function IpDrv.OnlineEventsInterfaceMcp.UploadMatchmakingStats");
+
 	}
 
 	UOnlineEventsInterfaceMcp_execUploadMatchmakingStats_Parms UploadMatchmakingStats_Parms;
@@ -2491,7 +2588,8 @@ bool UOnlineEventsInterfaceMcp::UpdatePlaylistPopulation(int PlaylistId, int Num
 
 	if (!pFnUpdatePlaylistPopulation)
 	{
-		pFnUpdatePlaylistPopulation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEEVENTSINTERFACEMCP_UPDATEPLAYLISTPOPULATION));
+		pFnUpdatePlaylistPopulation = UFunction::FindFunction("Function IpDrv.OnlineEventsInterfaceMcp.UpdatePlaylistPopulation");
+
 	}
 
 	UOnlineEventsInterfaceMcp_execUpdatePlaylistPopulation_Parms UpdatePlaylistPopulation_Parms;
@@ -2520,7 +2618,8 @@ bool UOnlineEventsInterfaceMcp::UploadGameplayEventsData(struct FUniqueNetId Uni
 
 	if (!pFnUploadGameplayEventsData)
 	{
-		pFnUploadGameplayEventsData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEEVENTSINTERFACEMCP_UPLOADGAMEPLAYEVENTSDATA));
+		pFnUploadGameplayEventsData = UFunction::FindFunction("Function IpDrv.OnlineEventsInterfaceMcp.UploadGameplayEventsData");
+
 	}
 
 	UOnlineEventsInterfaceMcp_execUploadGameplayEventsData_Parms UploadGameplayEventsData_Parms;
@@ -2551,7 +2650,8 @@ bool UOnlineEventsInterfaceMcp::UploadPlayerData(struct FUniqueNetId UniqueId, s
 
 	if (!pFnUploadPlayerData)
 	{
-		pFnUploadPlayerData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEEVENTSINTERFACEMCP_UPLOADPLAYERDATA));
+		pFnUploadPlayerData = UFunction::FindFunction("Function IpDrv.OnlineEventsInterfaceMcp.UploadPlayerData");
+
 	}
 
 	UOnlineEventsInterfaceMcp_execUploadPlayerData_Parms UploadPlayerData_Parms;
@@ -2582,7 +2682,8 @@ struct FString UOnlineNewsInterfaceMcp::GetNews(unsigned char LocalUserNum, unsi
 
 	if (!pFnGetNews)
 	{
-		pFnGetNews = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINENEWSINTERFACEMCP_GETNEWS));
+		pFnGetNews = UFunction::FindFunction("Function IpDrv.OnlineNewsInterfaceMcp.GetNews");
+
 	}
 
 	UOnlineNewsInterfaceMcp_execGetNews_Parms GetNews_Parms;
@@ -2605,7 +2706,8 @@ void UOnlineNewsInterfaceMcp::ClearReadNewsCompletedDelegate(struct FScriptDeleg
 
 	if (!pFnClearReadNewsCompletedDelegate)
 	{
-		pFnClearReadNewsCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINENEWSINTERFACEMCP_CLEARREADNEWSCOMPLETEDDELEGATE));
+		pFnClearReadNewsCompletedDelegate = UFunction::FindFunction("Function IpDrv.OnlineNewsInterfaceMcp.ClearReadNewsCompletedDelegate");
+
 	}
 
 	UOnlineNewsInterfaceMcp_execClearReadNewsCompletedDelegate_Parms ClearReadNewsCompletedDelegate_Parms;
@@ -2625,7 +2727,8 @@ void UOnlineNewsInterfaceMcp::AddReadNewsCompletedDelegate(struct FScriptDelegat
 
 	if (!pFnAddReadNewsCompletedDelegate)
 	{
-		pFnAddReadNewsCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINENEWSINTERFACEMCP_ADDREADNEWSCOMPLETEDDELEGATE));
+		pFnAddReadNewsCompletedDelegate = UFunction::FindFunction("Function IpDrv.OnlineNewsInterfaceMcp.AddReadNewsCompletedDelegate");
+
 	}
 
 	UOnlineNewsInterfaceMcp_execAddReadNewsCompletedDelegate_Parms AddReadNewsCompletedDelegate_Parms;
@@ -2646,7 +2749,8 @@ void UOnlineNewsInterfaceMcp::OnReadNewsCompleted(unsigned long bWasSuccessful, 
 
 	if (!pFnOnReadNewsCompleted)
 	{
-		pFnOnReadNewsCompleted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINENEWSINTERFACEMCP_ONREADNEWSCOMPLETED));
+		pFnOnReadNewsCompleted = UFunction::FindFunction("Function IpDrv.OnlineNewsInterfaceMcp.OnReadNewsCompleted");
+
 	}
 
 	UOnlineNewsInterfaceMcp_execOnReadNewsCompleted_Parms OnReadNewsCompleted_Parms;
@@ -2669,7 +2773,8 @@ bool UOnlineNewsInterfaceMcp::ReadNews(unsigned char LocalUserNum, unsigned char
 
 	if (!pFnReadNews)
 	{
-		pFnReadNews = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINENEWSINTERFACEMCP_READNEWS));
+		pFnReadNews = UFunction::FindFunction("Function IpDrv.OnlineNewsInterfaceMcp.ReadNews");
+
 	}
 
 	UOnlineNewsInterfaceMcp_execReadNews_Parms ReadNews_Parms;
@@ -2697,7 +2802,8 @@ struct FString UOnlineTitleFileDownloadBase::GetUrlForFile(struct FString Filena
 
 	if (!pFnGetUrlForFile)
 	{
-		pFnGetUrlForFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_GETURLFORFILE));
+		pFnGetUrlForFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.GetUrlForFile");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execGetUrlForFile_Parms GetUrlForFile_Parms;
@@ -2723,7 +2829,8 @@ void UOnlineTitleFileDownloadBase::ClearRequestTitleFileListCompleteDelegate(str
 
 	if (!pFnClearRequestTitleFileListCompleteDelegate)
 	{
-		pFnClearRequestTitleFileListCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_CLEARREQUESTTITLEFILELISTCOMPLETEDELEGATE));
+		pFnClearRequestTitleFileListCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.ClearRequestTitleFileListCompleteDelegate");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execClearRequestTitleFileListCompleteDelegate_Parms ClearRequestTitleFileListCompleteDelegate_Parms;
@@ -2743,7 +2850,8 @@ void UOnlineTitleFileDownloadBase::AddRequestTitleFileListCompleteDelegate(struc
 
 	if (!pFnAddRequestTitleFileListCompleteDelegate)
 	{
-		pFnAddRequestTitleFileListCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_ADDREQUESTTITLEFILELISTCOMPLETEDELEGATE));
+		pFnAddRequestTitleFileListCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.AddRequestTitleFileListCompleteDelegate");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execAddRequestTitleFileListCompleteDelegate_Parms AddRequestTitleFileListCompleteDelegate_Parms;
@@ -2764,7 +2872,8 @@ void UOnlineTitleFileDownloadBase::OnRequestTitleFileListComplete(unsigned long 
 
 	if (!pFnOnRequestTitleFileListComplete)
 	{
-		pFnOnRequestTitleFileListComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_ONREQUESTTITLEFILELISTCOMPLETE));
+		pFnOnRequestTitleFileListComplete = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.OnRequestTitleFileListComplete");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execOnRequestTitleFileListComplete_Parms OnRequestTitleFileListComplete_Parms;
@@ -2785,7 +2894,8 @@ bool UOnlineTitleFileDownloadBase::RequestTitleFileList()
 
 	if (!pFnRequestTitleFileList)
 	{
-		pFnRequestTitleFileList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_REQUESTTITLEFILELIST));
+		pFnRequestTitleFileList = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.RequestTitleFileList");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execRequestTitleFileList_Parms RequestTitleFileList_Parms;
@@ -2807,7 +2917,8 @@ bool UOnlineTitleFileDownloadBase::ClearDownloadedFile(struct FString Filename)
 
 	if (!pFnClearDownloadedFile)
 	{
-		pFnClearDownloadedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_CLEARDOWNLOADEDFILE));
+		pFnClearDownloadedFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.ClearDownloadedFile");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execClearDownloadedFile_Parms ClearDownloadedFile_Parms;
@@ -2829,7 +2940,8 @@ bool UOnlineTitleFileDownloadBase::ClearDownloadedFiles()
 
 	if (!pFnClearDownloadedFiles)
 	{
-		pFnClearDownloadedFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_CLEARDOWNLOADEDFILES));
+		pFnClearDownloadedFiles = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.ClearDownloadedFiles");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execClearDownloadedFiles_Parms ClearDownloadedFiles_Parms;
@@ -2851,7 +2963,8 @@ unsigned char UOnlineTitleFileDownloadBase::GetTitleFileState(struct FString Fil
 
 	if (!pFnGetTitleFileState)
 	{
-		pFnGetTitleFileState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_GETTITLEFILESTATE));
+		pFnGetTitleFileState = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.GetTitleFileState");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execGetTitleFileState_Parms GetTitleFileState_Parms;
@@ -2875,7 +2988,8 @@ bool UOnlineTitleFileDownloadBase::GetTitleFileContents(struct FString Filename,
 
 	if (!pFnGetTitleFileContents)
 	{
-		pFnGetTitleFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_GETTITLEFILECONTENTS));
+		pFnGetTitleFileContents = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.GetTitleFileContents");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execGetTitleFileContents_Parms GetTitleFileContents_Parms;
@@ -2898,7 +3012,8 @@ void UOnlineTitleFileDownloadBase::ClearReadTitleFileCompleteDelegate(struct FSc
 
 	if (!pFnClearReadTitleFileCompleteDelegate)
 	{
-		pFnClearReadTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_CLEARREADTITLEFILECOMPLETEDELEGATE));
+		pFnClearReadTitleFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.ClearReadTitleFileCompleteDelegate");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execClearReadTitleFileCompleteDelegate_Parms ClearReadTitleFileCompleteDelegate_Parms;
@@ -2918,7 +3033,8 @@ void UOnlineTitleFileDownloadBase::AddReadTitleFileCompleteDelegate(struct FScri
 
 	if (!pFnAddReadTitleFileCompleteDelegate)
 	{
-		pFnAddReadTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_ADDREADTITLEFILECOMPLETEDELEGATE));
+		pFnAddReadTitleFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.AddReadTitleFileCompleteDelegate");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execAddReadTitleFileCompleteDelegate_Parms AddReadTitleFileCompleteDelegate_Parms;
@@ -2940,7 +3056,8 @@ bool UOnlineTitleFileDownloadBase::ReadTitleFile(struct FString FileToRead, unsi
 
 	if (!pFnReadTitleFile)
 	{
-		pFnReadTitleFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_READTITLEFILE));
+		pFnReadTitleFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.ReadTitleFile");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execReadTitleFile_Parms ReadTitleFile_Parms;
@@ -2964,7 +3081,8 @@ void UOnlineTitleFileDownloadBase::OnReadTitleFileComplete(unsigned long bWasSuc
 
 	if (!pFnOnReadTitleFileComplete)
 	{
-		pFnOnReadTitleFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADBASE_ONREADTITLEFILECOMPLETE));
+		pFnOnReadTitleFileComplete = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadBase.OnReadTitleFileComplete");
+
 	}
 
 	UOnlineTitleFileDownloadBase_execOnReadTitleFileComplete_Parms OnReadTitleFileComplete_Parms;
@@ -2986,7 +3104,8 @@ bool UOnlineTitleFileDownloadMcp::ClearDownloadedFile(struct FString Filename)
 
 	if (!pFnClearDownloadedFile)
 	{
-		pFnClearDownloadedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADMCP_CLEARDOWNLOADEDFILE));
+		pFnClearDownloadedFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadMcp.ClearDownloadedFile");
+
 	}
 
 	UOnlineTitleFileDownloadMcp_execClearDownloadedFile_Parms ClearDownloadedFile_Parms;
@@ -3017,7 +3136,8 @@ bool UOnlineTitleFileDownloadMcp::ClearDownloadedFiles()
 
 	if (!pFnClearDownloadedFiles)
 	{
-		pFnClearDownloadedFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADMCP_CLEARDOWNLOADEDFILES));
+		pFnClearDownloadedFiles = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadMcp.ClearDownloadedFiles");
+
 	}
 
 	UOnlineTitleFileDownloadMcp_execClearDownloadedFiles_Parms ClearDownloadedFiles_Parms;
@@ -3048,7 +3168,8 @@ unsigned char UOnlineTitleFileDownloadMcp::GetTitleFileState(struct FString File
 
 	if (!pFnGetTitleFileState)
 	{
-		pFnGetTitleFileState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADMCP_GETTITLEFILESTATE));
+		pFnGetTitleFileState = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadMcp.GetTitleFileState");
+
 	}
 
 	UOnlineTitleFileDownloadMcp_execGetTitleFileState_Parms GetTitleFileState_Parms;
@@ -3072,7 +3193,8 @@ bool UOnlineTitleFileDownloadMcp::GetTitleFileContents(struct FString Filename, 
 
 	if (!pFnGetTitleFileContents)
 	{
-		pFnGetTitleFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADMCP_GETTITLEFILECONTENTS));
+		pFnGetTitleFileContents = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadMcp.GetTitleFileContents");
+
 	}
 
 	UOnlineTitleFileDownloadMcp_execGetTitleFileContents_Parms GetTitleFileContents_Parms;
@@ -3106,7 +3228,8 @@ bool UOnlineTitleFileDownloadMcp::ReadTitleFile(struct FString FileToRead, unsig
 
 	if (!pFnReadTitleFile)
 	{
-		pFnReadTitleFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADMCP_READTITLEFILE));
+		pFnReadTitleFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadMcp.ReadTitleFile");
+
 	}
 
 	UOnlineTitleFileDownloadMcp_execReadTitleFile_Parms ReadTitleFile_Parms;
@@ -3139,7 +3262,8 @@ struct FString UOnlineTitleFileDownloadWeb::GetUrlForFile(struct FString Filenam
 
 	if (!pFnGetUrlForFile)
 	{
-		pFnGetUrlForFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_GETURLFORFILE));
+		pFnGetUrlForFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.GetUrlForFile");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execGetUrlForFile_Parms GetUrlForFile_Parms;
@@ -3163,7 +3287,8 @@ void UOnlineTitleFileDownloadWeb::OnFileListReceived(class UHttpRequestInterface
 
 	if (!pFnOnFileListReceived)
 	{
-		pFnOnFileListReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_ONFILELISTRECEIVED));
+		pFnOnFileListReceived = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.OnFileListReceived");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execOnFileListReceived_Parms OnFileListReceived_Parms;
@@ -3185,7 +3310,8 @@ bool UOnlineTitleFileDownloadWeb::RequestTitleFileList()
 
 	if (!pFnRequestTitleFileList)
 	{
-		pFnRequestTitleFileList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_REQUESTTITLEFILELIST));
+		pFnRequestTitleFileList = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.RequestTitleFileList");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execRequestTitleFileList_Parms RequestTitleFileList_Parms;
@@ -3207,7 +3333,8 @@ bool UOnlineTitleFileDownloadWeb::ClearDownloadedFile(struct FString Filename)
 
 	if (!pFnClearDownloadedFile)
 	{
-		pFnClearDownloadedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_CLEARDOWNLOADEDFILE));
+		pFnClearDownloadedFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.ClearDownloadedFile");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execClearDownloadedFile_Parms ClearDownloadedFile_Parms;
@@ -3238,7 +3365,8 @@ bool UOnlineTitleFileDownloadWeb::ClearDownloadedFiles()
 
 	if (!pFnClearDownloadedFiles)
 	{
-		pFnClearDownloadedFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_CLEARDOWNLOADEDFILES));
+		pFnClearDownloadedFiles = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.ClearDownloadedFiles");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execClearDownloadedFiles_Parms ClearDownloadedFiles_Parms;
@@ -3269,7 +3397,8 @@ unsigned char UOnlineTitleFileDownloadWeb::GetTitleFileState(struct FString File
 
 	if (!pFnGetTitleFileState)
 	{
-		pFnGetTitleFileState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_GETTITLEFILESTATE));
+		pFnGetTitleFileState = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.GetTitleFileState");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execGetTitleFileState_Parms GetTitleFileState_Parms;
@@ -3293,7 +3422,8 @@ bool UOnlineTitleFileDownloadWeb::GetTitleFileContents(struct FString Filename, 
 
 	if (!pFnGetTitleFileContents)
 	{
-		pFnGetTitleFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_GETTITLEFILECONTENTS));
+		pFnGetTitleFileContents = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.GetTitleFileContents");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execGetTitleFileContents_Parms GetTitleFileContents_Parms;
@@ -3326,7 +3456,8 @@ void UOnlineTitleFileDownloadWeb::TriggerDelegates(unsigned long bSuccess, struc
 
 	if (!pFnTriggerDelegates)
 	{
-		pFnTriggerDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_TRIGGERDELEGATES));
+		pFnTriggerDelegates = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.TriggerDelegates");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execTriggerDelegates_Parms TriggerDelegates_Parms;
@@ -3353,7 +3484,8 @@ void UOnlineTitleFileDownloadWeb::OnFileDownloadComplete(class UHttpRequestInter
 
 	if (!pFnOnFileDownloadComplete)
 	{
-		pFnOnFileDownloadComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_ONFILEDOWNLOADCOMPLETE));
+		pFnOnFileDownloadComplete = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.OnFileDownloadComplete");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execOnFileDownloadComplete_Parms OnFileDownloadComplete_Parms;
@@ -3377,7 +3509,8 @@ bool UOnlineTitleFileDownloadWeb::ReadTitleFile(struct FString FileToRead, unsig
 
 	if (!pFnReadTitleFile)
 	{
-		pFnReadTitleFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_READTITLEFILE));
+		pFnReadTitleFile = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.ReadTitleFile");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execReadTitleFile_Parms ReadTitleFile_Parms;
@@ -3403,7 +3536,8 @@ bool UOnlineTitleFileDownloadWeb::UncompressTitleFileContents(unsigned char File
 
 	if (!pFnUncompressTitleFileContents)
 	{
-		pFnUncompressTitleFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINETITLEFILEDOWNLOADWEB_UNCOMPRESSTITLEFILECONTENTS));
+		pFnUncompressTitleFileContents = UFunction::FindFunction("Function IpDrv.OnlineTitleFileDownloadWeb.UncompressTitleFileContents");
+
 	}
 
 	UOnlineTitleFileDownloadWeb_execUncompressTitleFileContents_Parms UncompressTitleFileContents_Parms;
@@ -3432,7 +3566,8 @@ bool UTitleFileDownloadCache::DeleteTitleFile(struct FString Filename)
 
 	if (!pFnDeleteTitleFile)
 	{
-		pFnDeleteTitleFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_DELETETITLEFILE));
+		pFnDeleteTitleFile = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.DeleteTitleFile");
+
 	}
 
 	UTitleFileDownloadCache_execDeleteTitleFile_Parms DeleteTitleFile_Parms;
@@ -3459,7 +3594,8 @@ bool UTitleFileDownloadCache::DeleteTitleFiles(float MaxAgeSeconds)
 
 	if (!pFnDeleteTitleFiles)
 	{
-		pFnDeleteTitleFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_DELETETITLEFILES));
+		pFnDeleteTitleFiles = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.DeleteTitleFiles");
+
 	}
 
 	UTitleFileDownloadCache_execDeleteTitleFiles_Parms DeleteTitleFiles_Parms;
@@ -3486,7 +3622,8 @@ bool UTitleFileDownloadCache::ClearCachedFile(struct FString Filename)
 
 	if (!pFnClearCachedFile)
 	{
-		pFnClearCachedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_CLEARCACHEDFILE));
+		pFnClearCachedFile = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.ClearCachedFile");
+
 	}
 
 	UTitleFileDownloadCache_execClearCachedFile_Parms ClearCachedFile_Parms;
@@ -3512,7 +3649,8 @@ bool UTitleFileDownloadCache::ClearCachedFiles()
 
 	if (!pFnClearCachedFiles)
 	{
-		pFnClearCachedFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_CLEARCACHEDFILES));
+		pFnClearCachedFiles = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.ClearCachedFiles");
+
 	}
 
 	UTitleFileDownloadCache_execClearCachedFiles_Parms ClearCachedFiles_Parms;
@@ -3538,7 +3676,8 @@ struct FString UTitleFileDownloadCache::GetTitleFileLogicalName(struct FString F
 
 	if (!pFnGetTitleFileLogicalName)
 	{
-		pFnGetTitleFileLogicalName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_GETTITLEFILELOGICALNAME));
+		pFnGetTitleFileLogicalName = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.GetTitleFileLogicalName");
+
 	}
 
 	UTitleFileDownloadCache_execGetTitleFileLogicalName_Parms GetTitleFileLogicalName_Parms;
@@ -3565,7 +3704,8 @@ struct FString UTitleFileDownloadCache::GetTitleFileHash(struct FString Filename
 
 	if (!pFnGetTitleFileHash)
 	{
-		pFnGetTitleFileHash = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_GETTITLEFILEHASH));
+		pFnGetTitleFileHash = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.GetTitleFileHash");
+
 	}
 
 	UTitleFileDownloadCache_execGetTitleFileHash_Parms GetTitleFileHash_Parms;
@@ -3592,7 +3732,8 @@ unsigned char UTitleFileDownloadCache::GetTitleFileState(struct FString Filename
 
 	if (!pFnGetTitleFileState)
 	{
-		pFnGetTitleFileState = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_GETTITLEFILESTATE));
+		pFnGetTitleFileState = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.GetTitleFileState");
+
 	}
 
 	UTitleFileDownloadCache_execGetTitleFileState_Parms GetTitleFileState_Parms;
@@ -3620,7 +3761,8 @@ bool UTitleFileDownloadCache::GetTitleFileContents(struct FString Filename, TArr
 
 	if (!pFnGetTitleFileContents)
 	{
-		pFnGetTitleFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_GETTITLEFILECONTENTS));
+		pFnGetTitleFileContents = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.GetTitleFileContents");
+
 	}
 
 	UTitleFileDownloadCache_execGetTitleFileContents_Parms GetTitleFileContents_Parms;
@@ -3647,7 +3789,8 @@ void UTitleFileDownloadCache::ClearSaveTitleFileCompleteDelegate(struct FScriptD
 
 	if (!pFnClearSaveTitleFileCompleteDelegate)
 	{
-		pFnClearSaveTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_CLEARSAVETITLEFILECOMPLETEDELEGATE));
+		pFnClearSaveTitleFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.ClearSaveTitleFileCompleteDelegate");
+
 	}
 
 	UTitleFileDownloadCache_execClearSaveTitleFileCompleteDelegate_Parms ClearSaveTitleFileCompleteDelegate_Parms;
@@ -3667,7 +3810,8 @@ void UTitleFileDownloadCache::AddSaveTitleFileCompleteDelegate(struct FScriptDel
 
 	if (!pFnAddSaveTitleFileCompleteDelegate)
 	{
-		pFnAddSaveTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_ADDSAVETITLEFILECOMPLETEDELEGATE));
+		pFnAddSaveTitleFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.AddSaveTitleFileCompleteDelegate");
+
 	}
 
 	UTitleFileDownloadCache_execAddSaveTitleFileCompleteDelegate_Parms AddSaveTitleFileCompleteDelegate_Parms;
@@ -3688,7 +3832,8 @@ void UTitleFileDownloadCache::OnSaveTitleFileComplete(unsigned long bWasSuccessf
 
 	if (!pFnOnSaveTitleFileComplete)
 	{
-		pFnOnSaveTitleFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_ONSAVETITLEFILECOMPLETE));
+		pFnOnSaveTitleFileComplete = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.OnSaveTitleFileComplete");
+
 	}
 
 	UTitleFileDownloadCache_execOnSaveTitleFileComplete_Parms OnSaveTitleFileComplete_Parms;
@@ -3712,7 +3857,8 @@ bool UTitleFileDownloadCache::SaveTitleFile(struct FString Filename, struct FStr
 
 	if (!pFnSaveTitleFile)
 	{
-		pFnSaveTitleFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_SAVETITLEFILE));
+		pFnSaveTitleFile = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.SaveTitleFile");
+
 	}
 
 	UTitleFileDownloadCache_execSaveTitleFile_Parms SaveTitleFile_Parms;
@@ -3740,7 +3886,8 @@ void UTitleFileDownloadCache::ClearLoadTitleFileCompleteDelegate(struct FScriptD
 
 	if (!pFnClearLoadTitleFileCompleteDelegate)
 	{
-		pFnClearLoadTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_CLEARLOADTITLEFILECOMPLETEDELEGATE));
+		pFnClearLoadTitleFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.ClearLoadTitleFileCompleteDelegate");
+
 	}
 
 	UTitleFileDownloadCache_execClearLoadTitleFileCompleteDelegate_Parms ClearLoadTitleFileCompleteDelegate_Parms;
@@ -3760,7 +3907,8 @@ void UTitleFileDownloadCache::AddLoadTitleFileCompleteDelegate(struct FScriptDel
 
 	if (!pFnAddLoadTitleFileCompleteDelegate)
 	{
-		pFnAddLoadTitleFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_ADDLOADTITLEFILECOMPLETEDELEGATE));
+		pFnAddLoadTitleFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.AddLoadTitleFileCompleteDelegate");
+
 	}
 
 	UTitleFileDownloadCache_execAddLoadTitleFileCompleteDelegate_Parms AddLoadTitleFileCompleteDelegate_Parms;
@@ -3781,7 +3929,8 @@ void UTitleFileDownloadCache::OnLoadTitleFileComplete(unsigned long bWasSuccessf
 
 	if (!pFnOnLoadTitleFileComplete)
 	{
-		pFnOnLoadTitleFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_ONLOADTITLEFILECOMPLETE));
+		pFnOnLoadTitleFileComplete = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.OnLoadTitleFileComplete");
+
 	}
 
 	UTitleFileDownloadCache_execOnLoadTitleFileComplete_Parms OnLoadTitleFileComplete_Parms;
@@ -3803,7 +3952,8 @@ bool UTitleFileDownloadCache::LoadTitleFile(struct FString Filename)
 
 	if (!pFnLoadTitleFile)
 	{
-		pFnLoadTitleFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_TITLEFILEDOWNLOADCACHE_LOADTITLEFILE));
+		pFnLoadTitleFile = UFunction::FindFunction("Function IpDrv.TitleFileDownloadCache.LoadTitleFile");
+
 	}
 
 	UTitleFileDownloadCache_execLoadTitleFile_Parms LoadTitleFile_Parms;
@@ -3831,7 +3981,8 @@ bool UMcpMessageBase::CacheMessageContents(struct FString MessageId, TArray<unsi
 
 	if (!pFnCacheMessageContents)
 	{
-		pFnCacheMessageContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_CACHEMESSAGECONTENTS));
+		pFnCacheMessageContents = UFunction::FindFunction("Function IpDrv.McpMessageBase.CacheMessageContents");
+
 	}
 
 	UMcpMessageBase_execCacheMessageContents_Parms CacheMessageContents_Parms;
@@ -3854,7 +4005,8 @@ void UMcpMessageBase::CacheMessage(struct FMcpMessage Message)
 
 	if (!pFnCacheMessage)
 	{
-		pFnCacheMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_CACHEMESSAGE));
+		pFnCacheMessage = UFunction::FindFunction("Function IpDrv.McpMessageBase.CacheMessage");
+
 	}
 
 	UMcpMessageBase_execCacheMessage_Parms CacheMessage_Parms;
@@ -3876,7 +4028,8 @@ bool UMcpMessageBase::GetMessageContents(struct FString MessageId, TArray<unsign
 
 	if (!pFnGetMessageContents)
 	{
-		pFnGetMessageContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_GETMESSAGECONTENTS));
+		pFnGetMessageContents = UFunction::FindFunction("Function IpDrv.McpMessageBase.GetMessageContents");
+
 	}
 
 	UMcpMessageBase_execGetMessageContents_Parms GetMessageContents_Parms;
@@ -3901,7 +4054,8 @@ void UMcpMessageBase::OnQueryMessageContentsComplete(struct FString MessageId, u
 
 	if (!pFnOnQueryMessageContentsComplete)
 	{
-		pFnOnQueryMessageContentsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_ONQUERYMESSAGECONTENTSCOMPLETE));
+		pFnOnQueryMessageContentsComplete = UFunction::FindFunction("Function IpDrv.McpMessageBase.OnQueryMessageContentsComplete");
+
 	}
 
 	UMcpMessageBase_execOnQueryMessageContentsComplete_Parms OnQueryMessageContentsComplete_Parms;
@@ -3923,7 +4077,8 @@ void UMcpMessageBase::QueryMessageContents(struct FString MessageId)
 
 	if (!pFnQueryMessageContents)
 	{
-		pFnQueryMessageContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_QUERYMESSAGECONTENTS));
+		pFnQueryMessageContents = UFunction::FindFunction("Function IpDrv.McpMessageBase.QueryMessageContents");
+
 	}
 
 	UMcpMessageBase_execQueryMessageContents_Parms QueryMessageContents_Parms;
@@ -3944,7 +4099,8 @@ void UMcpMessageBase::GetMessageList(struct FString ToUniqueUserId, struct FMcpM
 
 	if (!pFnGetMessageList)
 	{
-		pFnGetMessageList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_GETMESSAGELIST));
+		pFnGetMessageList = UFunction::FindFunction("Function IpDrv.McpMessageBase.GetMessageList");
+
 	}
 
 	UMcpMessageBase_execGetMessageList_Parms GetMessageList_Parms;
@@ -3967,7 +4123,8 @@ void UMcpMessageBase::OnQueryMessagesComplete(struct FString UserId, unsigned lo
 
 	if (!pFnOnQueryMessagesComplete)
 	{
-		pFnOnQueryMessagesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_ONQUERYMESSAGESCOMPLETE));
+		pFnOnQueryMessagesComplete = UFunction::FindFunction("Function IpDrv.McpMessageBase.OnQueryMessagesComplete");
+
 	}
 
 	UMcpMessageBase_execOnQueryMessagesComplete_Parms OnQueryMessagesComplete_Parms;
@@ -3989,7 +4146,8 @@ void UMcpMessageBase::QueryMessages(struct FString ToUniqueUserId)
 
 	if (!pFnQueryMessages)
 	{
-		pFnQueryMessages = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_QUERYMESSAGES));
+		pFnQueryMessages = UFunction::FindFunction("Function IpDrv.McpMessageBase.QueryMessages");
+
 	}
 
 	UMcpMessageBase_execQueryMessages_Parms QueryMessages_Parms;
@@ -4011,7 +4169,8 @@ void UMcpMessageBase::OnDeleteMessageComplete(struct FString MessageId, unsigned
 
 	if (!pFnOnDeleteMessageComplete)
 	{
-		pFnOnDeleteMessageComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_ONDELETEMESSAGECOMPLETE));
+		pFnOnDeleteMessageComplete = UFunction::FindFunction("Function IpDrv.McpMessageBase.OnDeleteMessageComplete");
+
 	}
 
 	UMcpMessageBase_execOnDeleteMessageComplete_Parms OnDeleteMessageComplete_Parms;
@@ -4033,7 +4192,8 @@ void UMcpMessageBase::DeleteMessage(struct FString MessageId)
 
 	if (!pFnDeleteMessage)
 	{
-		pFnDeleteMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_DELETEMESSAGE));
+		pFnDeleteMessage = UFunction::FindFunction("Function IpDrv.McpMessageBase.DeleteMessage");
+
 	}
 
 	UMcpMessageBase_execDeleteMessage_Parms DeleteMessage_Parms;
@@ -4055,7 +4215,8 @@ void UMcpMessageBase::OnCreateMessageComplete(struct FMcpMessage Message, unsign
 
 	if (!pFnOnCreateMessageComplete)
 	{
-		pFnOnCreateMessageComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_ONCREATEMESSAGECOMPLETE));
+		pFnOnCreateMessageComplete = UFunction::FindFunction("Function IpDrv.McpMessageBase.OnCreateMessageComplete");
+
 	}
 
 	UMcpMessageBase_execOnCreateMessageComplete_Parms OnCreateMessageComplete_Parms;
@@ -4083,7 +4244,8 @@ void UMcpMessageBase::CreateMessage(struct FString FromUniqueUserId, struct FStr
 
 	if (!pFnCreateMessage)
 	{
-		pFnCreateMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_CREATEMESSAGE));
+		pFnCreateMessage = UFunction::FindFunction("Function IpDrv.McpMessageBase.CreateMessage");
+
 	}
 
 	UMcpMessageBase_execCreateMessage_Parms CreateMessage_Parms;
@@ -4109,7 +4271,8 @@ class UMcpMessageBase* UMcpMessageBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpMessageBase.CreateInstance");
+
 	}
 
 	UMcpMessageBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -4132,7 +4295,8 @@ bool UMcpMessageManager::CacheMessageContents(struct FString MessageId, TArray<u
 
 	if (!pFnCacheMessageContents)
 	{
-		pFnCacheMessageContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_CACHEMESSAGECONTENTS));
+		pFnCacheMessageContents = UFunction::FindFunction("Function IpDrv.McpMessageManager.CacheMessageContents");
+
 	}
 
 	UMcpMessageManager_execCacheMessageContents_Parms CacheMessageContents_Parms;
@@ -4157,7 +4321,8 @@ bool UMcpMessageManager::GetMessageById(struct FString MessageId, struct FMcpMes
 
 	if (!pFnGetMessageById)
 	{
-		pFnGetMessageById = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_GETMESSAGEBYID));
+		pFnGetMessageById = UFunction::FindFunction("Function IpDrv.McpMessageManager.GetMessageById");
+
 	}
 
 	UMcpMessageManager_execGetMessageById_Parms GetMessageById_Parms;
@@ -4180,7 +4345,8 @@ void UMcpMessageManager::CacheMessage(struct FMcpMessage Message)
 
 	if (!pFnCacheMessage)
 	{
-		pFnCacheMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_CACHEMESSAGE));
+		pFnCacheMessage = UFunction::FindFunction("Function IpDrv.McpMessageManager.CacheMessage");
+
 	}
 
 	UMcpMessageManager_execCacheMessage_Parms CacheMessage_Parms;
@@ -4202,7 +4368,8 @@ bool UMcpMessageManager::GetMessageContents(struct FString MessageId, TArray<uns
 
 	if (!pFnGetMessageContents)
 	{
-		pFnGetMessageContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_GETMESSAGECONTENTS));
+		pFnGetMessageContents = UFunction::FindFunction("Function IpDrv.McpMessageManager.GetMessageContents");
+
 	}
 
 	UMcpMessageManager_execGetMessageContents_Parms GetMessageContents_Parms;
@@ -4227,7 +4394,8 @@ void UMcpMessageManager::OnQueryMessageContentsRequestComplete(class UHttpReques
 
 	if (!pFnOnQueryMessageContentsRequestComplete)
 	{
-		pFnOnQueryMessageContentsRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_ONQUERYMESSAGECONTENTSREQUESTCOMPLETE));
+		pFnOnQueryMessageContentsRequestComplete = UFunction::FindFunction("Function IpDrv.McpMessageManager.OnQueryMessageContentsRequestComplete");
+
 	}
 
 	UMcpMessageManager_execOnQueryMessageContentsRequestComplete_Parms OnQueryMessageContentsRequestComplete_Parms;
@@ -4249,7 +4417,8 @@ void UMcpMessageManager::QueryMessageContents(struct FString MessageId)
 
 	if (!pFnQueryMessageContents)
 	{
-		pFnQueryMessageContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_QUERYMESSAGECONTENTS));
+		pFnQueryMessageContents = UFunction::FindFunction("Function IpDrv.McpMessageManager.QueryMessageContents");
+
 	}
 
 	UMcpMessageManager_execQueryMessageContents_Parms QueryMessageContents_Parms;
@@ -4270,7 +4439,8 @@ void UMcpMessageManager::GetMessageList(struct FString ToUniqueUserId, struct FM
 
 	if (!pFnGetMessageList)
 	{
-		pFnGetMessageList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_GETMESSAGELIST));
+		pFnGetMessageList = UFunction::FindFunction("Function IpDrv.McpMessageManager.GetMessageList");
+
 	}
 
 	UMcpMessageManager_execGetMessageList_Parms GetMessageList_Parms;
@@ -4293,7 +4463,8 @@ void UMcpMessageManager::OnQueryMessagesRequestComplete(class UHttpRequestInterf
 
 	if (!pFnOnQueryMessagesRequestComplete)
 	{
-		pFnOnQueryMessagesRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_ONQUERYMESSAGESREQUESTCOMPLETE));
+		pFnOnQueryMessagesRequestComplete = UFunction::FindFunction("Function IpDrv.McpMessageManager.OnQueryMessagesRequestComplete");
+
 	}
 
 	UMcpMessageManager_execOnQueryMessagesRequestComplete_Parms OnQueryMessagesRequestComplete_Parms;
@@ -4315,7 +4486,8 @@ void UMcpMessageManager::QueryMessages(struct FString ToUniqueUserId)
 
 	if (!pFnQueryMessages)
 	{
-		pFnQueryMessages = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_QUERYMESSAGES));
+		pFnQueryMessages = UFunction::FindFunction("Function IpDrv.McpMessageManager.QueryMessages");
+
 	}
 
 	UMcpMessageManager_execQueryMessages_Parms QueryMessages_Parms;
@@ -4337,7 +4509,8 @@ void UMcpMessageManager::OnDeleteMessageRequestComplete(class UHttpRequestInterf
 
 	if (!pFnOnDeleteMessageRequestComplete)
 	{
-		pFnOnDeleteMessageRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_ONDELETEMESSAGEREQUESTCOMPLETE));
+		pFnOnDeleteMessageRequestComplete = UFunction::FindFunction("Function IpDrv.McpMessageManager.OnDeleteMessageRequestComplete");
+
 	}
 
 	UMcpMessageManager_execOnDeleteMessageRequestComplete_Parms OnDeleteMessageRequestComplete_Parms;
@@ -4359,7 +4532,8 @@ void UMcpMessageManager::DeleteMessage(struct FString MessageId)
 
 	if (!pFnDeleteMessage)
 	{
-		pFnDeleteMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_DELETEMESSAGE));
+		pFnDeleteMessage = UFunction::FindFunction("Function IpDrv.McpMessageManager.DeleteMessage");
+
 	}
 
 	UMcpMessageManager_execDeleteMessage_Parms DeleteMessage_Parms;
@@ -4381,7 +4555,8 @@ void UMcpMessageManager::OnCreateMessageRequestComplete(class UHttpRequestInterf
 
 	if (!pFnOnCreateMessageRequestComplete)
 	{
-		pFnOnCreateMessageRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_ONCREATEMESSAGEREQUESTCOMPLETE));
+		pFnOnCreateMessageRequestComplete = UFunction::FindFunction("Function IpDrv.McpMessageManager.OnCreateMessageRequestComplete");
+
 	}
 
 	UMcpMessageManager_execOnCreateMessageRequestComplete_Parms OnCreateMessageRequestComplete_Parms;
@@ -4409,7 +4584,8 @@ void UMcpMessageManager::CreateMessage(struct FString FromUniqueUserId, struct F
 
 	if (!pFnCreateMessage)
 	{
-		pFnCreateMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_CREATEMESSAGE));
+		pFnCreateMessage = UFunction::FindFunction("Function IpDrv.McpMessageManager.CreateMessage");
+
 	}
 
 	UMcpMessageManager_execCreateMessage_Parms CreateMessage_Parms;
@@ -4437,7 +4613,8 @@ void UMcpMessageManager::eventFinishedAsyncUncompression(unsigned long bWasSucce
 
 	if (!pFnFinishedAsyncUncompression)
 	{
-		pFnFinishedAsyncUncompression = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_FINISHEDASYNCUNCOMPRESSION));
+		pFnFinishedAsyncUncompression = UFunction::FindFunction("Function IpDrv.McpMessageManager.FinishedAsyncUncompression");
+
 	}
 
 	UMcpMessageManager_eventFinishedAsyncUncompression_Parms FinishedAsyncUncompression_Parms;
@@ -4462,7 +4639,8 @@ bool UMcpMessageManager::StartAsyncUncompression(struct FString MessageId, unsig
 
 	if (!pFnStartAsyncUncompression)
 	{
-		pFnStartAsyncUncompression = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_STARTASYNCUNCOMPRESSION));
+		pFnStartAsyncUncompression = UFunction::FindFunction("Function IpDrv.McpMessageManager.StartAsyncUncompression");
+
 	}
 
 	UMcpMessageManager_execStartAsyncUncompression_Parms StartAsyncUncompression_Parms;
@@ -4493,7 +4671,8 @@ bool UMcpMessageManager::StartAsyncCompression(unsigned char MessageCompressionT
 
 	if (!pFnStartAsyncCompression)
 	{
-		pFnStartAsyncCompression = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMESSAGEMANAGER_STARTASYNCCOMPRESSION));
+		pFnStartAsyncCompression = UFunction::FindFunction("Function IpDrv.McpMessageManager.StartAsyncCompression");
+
 	}
 
 	UMcpMessageManager_execStartAsyncCompression_Parms StartAsyncCompression_Parms;
@@ -4520,7 +4699,8 @@ void UMcpUserCloudFileDownload::ClearAllDelegates()
 
 	if (!pFnClearAllDelegates)
 	{
-		pFnClearAllDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CLEARALLDELEGATES));
+		pFnClearAllDelegates = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ClearAllDelegates");
+
 	}
 
 	UMcpUserCloudFileDownload_execClearAllDelegates_Parms ClearAllDelegates_Parms;
@@ -4539,7 +4719,8 @@ void UMcpUserCloudFileDownload::ClearDeleteUserFileCompleteDelegate(struct FScri
 
 	if (!pFnClearDeleteUserFileCompleteDelegate)
 	{
-		pFnClearDeleteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CLEARDELETEUSERFILECOMPLETEDELEGATE));
+		pFnClearDeleteUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ClearDeleteUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execClearDeleteUserFileCompleteDelegate_Parms ClearDeleteUserFileCompleteDelegate_Parms;
@@ -4559,7 +4740,8 @@ void UMcpUserCloudFileDownload::AddDeleteUserFileCompleteDelegate(struct FScript
 
 	if (!pFnAddDeleteUserFileCompleteDelegate)
 	{
-		pFnAddDeleteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ADDDELETEUSERFILECOMPLETEDELEGATE));
+		pFnAddDeleteUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.AddDeleteUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execAddDeleteUserFileCompleteDelegate_Parms AddDeleteUserFileCompleteDelegate_Parms;
@@ -4581,7 +4763,8 @@ void UMcpUserCloudFileDownload::CallDeleteUserFileCompleteDelegates(unsigned lon
 
 	if (!pFnCallDeleteUserFileCompleteDelegates)
 	{
-		pFnCallDeleteUserFileCompleteDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CALLDELETEUSERFILECOMPLETEDELEGATES));
+		pFnCallDeleteUserFileCompleteDelegates = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.CallDeleteUserFileCompleteDelegates");
+
 	}
 
 	UMcpUserCloudFileDownload_execCallDeleteUserFileCompleteDelegates_Parms CallDeleteUserFileCompleteDelegates_Parms;
@@ -4605,7 +4788,8 @@ void UMcpUserCloudFileDownload::OnDeleteUserFileComplete(unsigned long bWasSucce
 
 	if (!pFnOnDeleteUserFileComplete)
 	{
-		pFnOnDeleteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONDELETEUSERFILECOMPLETE));
+		pFnOnDeleteUserFileComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnDeleteUserFileComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnDeleteUserFileComplete_Parms OnDeleteUserFileComplete_Parms;
@@ -4629,7 +4813,8 @@ void UMcpUserCloudFileDownload::OnHTTPRequestDeleteUserFileComplete(class UHttpR
 
 	if (!pFnOnHTTPRequestDeleteUserFileComplete)
 	{
-		pFnOnHTTPRequestDeleteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONHTTPREQUESTDELETEUSERFILECOMPLETE));
+		pFnOnHTTPRequestDeleteUserFileComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnHTTPRequestDeleteUserFileComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnHTTPRequestDeleteUserFileComplete_Parms OnHTTPRequestDeleteUserFileComplete_Parms;
@@ -4655,7 +4840,8 @@ bool UMcpUserCloudFileDownload::DeleteUserFile(struct FString UserId, struct FSt
 
 	if (!pFnDeleteUserFile)
 	{
-		pFnDeleteUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_DELETEUSERFILE));
+		pFnDeleteUserFile = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.DeleteUserFile");
+
 	}
 
 	UMcpUserCloudFileDownload_execDeleteUserFile_Parms DeleteUserFile_Parms;
@@ -4680,7 +4866,8 @@ void UMcpUserCloudFileDownload::ClearWriteUserFileCompleteDelegate(struct FScrip
 
 	if (!pFnClearWriteUserFileCompleteDelegate)
 	{
-		pFnClearWriteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CLEARWRITEUSERFILECOMPLETEDELEGATE));
+		pFnClearWriteUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ClearWriteUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execClearWriteUserFileCompleteDelegate_Parms ClearWriteUserFileCompleteDelegate_Parms;
@@ -4700,7 +4887,8 @@ void UMcpUserCloudFileDownload::AddWriteUserFileCompleteDelegate(struct FScriptD
 
 	if (!pFnAddWriteUserFileCompleteDelegate)
 	{
-		pFnAddWriteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ADDWRITEUSERFILECOMPLETEDELEGATE));
+		pFnAddWriteUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.AddWriteUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execAddWriteUserFileCompleteDelegate_Parms AddWriteUserFileCompleteDelegate_Parms;
@@ -4722,7 +4910,8 @@ void UMcpUserCloudFileDownload::CallWriteUserFileCompleteDelegates(unsigned long
 
 	if (!pFnCallWriteUserFileCompleteDelegates)
 	{
-		pFnCallWriteUserFileCompleteDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CALLWRITEUSERFILECOMPLETEDELEGATES));
+		pFnCallWriteUserFileCompleteDelegates = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.CallWriteUserFileCompleteDelegates");
+
 	}
 
 	UMcpUserCloudFileDownload_execCallWriteUserFileCompleteDelegates_Parms CallWriteUserFileCompleteDelegates_Parms;
@@ -4746,7 +4935,8 @@ void UMcpUserCloudFileDownload::OnWriteUserFileComplete(unsigned long bWasSucces
 
 	if (!pFnOnWriteUserFileComplete)
 	{
-		pFnOnWriteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONWRITEUSERFILECOMPLETE));
+		pFnOnWriteUserFileComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnWriteUserFileComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnWriteUserFileComplete_Parms OnWriteUserFileComplete_Parms;
@@ -4770,7 +4960,8 @@ void UMcpUserCloudFileDownload::OnHTTPRequestWriteUserFileComplete(class UHttpRe
 
 	if (!pFnOnHTTPRequestWriteUserFileComplete)
 	{
-		pFnOnHTTPRequestWriteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONHTTPREQUESTWRITEUSERFILECOMPLETE));
+		pFnOnHTTPRequestWriteUserFileComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnHTTPRequestWriteUserFileComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnHTTPRequestWriteUserFileComplete_Parms OnHTTPRequestWriteUserFileComplete_Parms;
@@ -4794,7 +4985,8 @@ void UMcpUserCloudFileDownload::GetUserFileIndexForRequest(class UHttpRequestInt
 
 	if (!pFnGetUserFileIndexForRequest)
 	{
-		pFnGetUserFileIndexForRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_GETUSERFILEINDEXFORREQUEST));
+		pFnGetUserFileIndexForRequest = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.GetUserFileIndexForRequest");
+
 	}
 
 	UMcpUserCloudFileDownload_execGetUserFileIndexForRequest_Parms GetUserFileIndexForRequest_Parms;
@@ -4819,7 +5011,8 @@ bool UMcpUserCloudFileDownload::WriteUserFile(struct FString UserId, struct FStr
 
 	if (!pFnWriteUserFile)
 	{
-		pFnWriteUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_WRITEUSERFILE));
+		pFnWriteUserFile = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.WriteUserFile");
+
 	}
 
 	UMcpUserCloudFileDownload_execWriteUserFile_Parms WriteUserFile_Parms;
@@ -4843,7 +5036,8 @@ void UMcpUserCloudFileDownload::ClearReadUserFileCompleteDelegate(struct FScript
 
 	if (!pFnClearReadUserFileCompleteDelegate)
 	{
-		pFnClearReadUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CLEARREADUSERFILECOMPLETEDELEGATE));
+		pFnClearReadUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ClearReadUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execClearReadUserFileCompleteDelegate_Parms ClearReadUserFileCompleteDelegate_Parms;
@@ -4863,7 +5057,8 @@ void UMcpUserCloudFileDownload::AddReadUserFileCompleteDelegate(struct FScriptDe
 
 	if (!pFnAddReadUserFileCompleteDelegate)
 	{
-		pFnAddReadUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ADDREADUSERFILECOMPLETEDELEGATE));
+		pFnAddReadUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.AddReadUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execAddReadUserFileCompleteDelegate_Parms AddReadUserFileCompleteDelegate_Parms;
@@ -4885,7 +5080,8 @@ void UMcpUserCloudFileDownload::CallReadUserFileCompleteDelegates(unsigned long 
 
 	if (!pFnCallReadUserFileCompleteDelegates)
 	{
-		pFnCallReadUserFileCompleteDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CALLREADUSERFILECOMPLETEDELEGATES));
+		pFnCallReadUserFileCompleteDelegates = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.CallReadUserFileCompleteDelegates");
+
 	}
 
 	UMcpUserCloudFileDownload_execCallReadUserFileCompleteDelegates_Parms CallReadUserFileCompleteDelegates_Parms;
@@ -4909,7 +5105,8 @@ void UMcpUserCloudFileDownload::OnReadUserFileComplete(unsigned long bWasSuccess
 
 	if (!pFnOnReadUserFileComplete)
 	{
-		pFnOnReadUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONREADUSERFILECOMPLETE));
+		pFnOnReadUserFileComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnReadUserFileComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnReadUserFileComplete_Parms OnReadUserFileComplete_Parms;
@@ -4933,7 +5130,8 @@ void UMcpUserCloudFileDownload::OnHTTPRequestReadUserFileComplete(class UHttpReq
 
 	if (!pFnOnHTTPRequestReadUserFileComplete)
 	{
-		pFnOnHTTPRequestReadUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONHTTPREQUESTREADUSERFILECOMPLETE));
+		pFnOnHTTPRequestReadUserFileComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnHTTPRequestReadUserFileComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnHTTPRequestReadUserFileComplete_Parms OnHTTPRequestReadUserFileComplete_Parms;
@@ -4957,7 +5155,8 @@ bool UMcpUserCloudFileDownload::ReadUserFile(struct FString UserId, struct FStri
 
 	if (!pFnReadUserFile)
 	{
-		pFnReadUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_READUSERFILE));
+		pFnReadUserFile = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ReadUserFile");
+
 	}
 
 	UMcpUserCloudFileDownload_execReadUserFile_Parms ReadUserFile_Parms;
@@ -4981,7 +5180,8 @@ void UMcpUserCloudFileDownload::GetUserFileList(struct FString UserId, TArray<st
 
 	if (!pFnGetUserFileList)
 	{
-		pFnGetUserFileList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_GETUSERFILELIST));
+		pFnGetUserFileList = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.GetUserFileList");
+
 	}
 
 	UMcpUserCloudFileDownload_execGetUserFileList_Parms GetUserFileList_Parms;
@@ -5002,7 +5202,8 @@ void UMcpUserCloudFileDownload::ClearEnumerateUserFileCompleteDelegate(struct FS
 
 	if (!pFnClearEnumerateUserFileCompleteDelegate)
 	{
-		pFnClearEnumerateUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CLEARENUMERATEUSERFILECOMPLETEDELEGATE));
+		pFnClearEnumerateUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ClearEnumerateUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execClearEnumerateUserFileCompleteDelegate_Parms ClearEnumerateUserFileCompleteDelegate_Parms;
@@ -5022,7 +5223,8 @@ void UMcpUserCloudFileDownload::AddEnumerateUserFileCompleteDelegate(struct FScr
 
 	if (!pFnAddEnumerateUserFileCompleteDelegate)
 	{
-		pFnAddEnumerateUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ADDENUMERATEUSERFILECOMPLETEDELEGATE));
+		pFnAddEnumerateUserFileCompleteDelegate = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.AddEnumerateUserFileCompleteDelegate");
+
 	}
 
 	UMcpUserCloudFileDownload_execAddEnumerateUserFileCompleteDelegate_Parms AddEnumerateUserFileCompleteDelegate_Parms;
@@ -5043,7 +5245,8 @@ void UMcpUserCloudFileDownload::CallEnumerateUserFileCompleteDelegates(unsigned 
 
 	if (!pFnCallEnumerateUserFileCompleteDelegates)
 	{
-		pFnCallEnumerateUserFileCompleteDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CALLENUMERATEUSERFILECOMPLETEDELEGATES));
+		pFnCallEnumerateUserFileCompleteDelegates = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.CallEnumerateUserFileCompleteDelegates");
+
 	}
 
 	UMcpUserCloudFileDownload_execCallEnumerateUserFileCompleteDelegates_Parms CallEnumerateUserFileCompleteDelegates_Parms;
@@ -5065,7 +5268,8 @@ void UMcpUserCloudFileDownload::OnEnumerateUserFilesComplete(unsigned long bWasS
 
 	if (!pFnOnEnumerateUserFilesComplete)
 	{
-		pFnOnEnumerateUserFilesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONENUMERATEUSERFILESCOMPLETE));
+		pFnOnEnumerateUserFilesComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnEnumerateUserFilesComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnEnumerateUserFilesComplete_Parms OnEnumerateUserFilesComplete_Parms;
@@ -5088,7 +5292,8 @@ void UMcpUserCloudFileDownload::OnHTTPRequestEnumerateUserFilesComplete(class UH
 
 	if (!pFnOnHTTPRequestEnumerateUserFilesComplete)
 	{
-		pFnOnHTTPRequestEnumerateUserFilesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ONHTTPREQUESTENUMERATEUSERFILESCOMPLETE));
+		pFnOnHTTPRequestEnumerateUserFilesComplete = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.OnHTTPRequestEnumerateUserFilesComplete");
+
 	}
 
 	UMcpUserCloudFileDownload_execOnHTTPRequestEnumerateUserFilesComplete_Parms OnHTTPRequestEnumerateUserFilesComplete_Parms;
@@ -5110,7 +5315,8 @@ void UMcpUserCloudFileDownload::EnumerateUserFiles(struct FString UserId)
 
 	if (!pFnEnumerateUserFiles)
 	{
-		pFnEnumerateUserFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_ENUMERATEUSERFILES));
+		pFnEnumerateUserFiles = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.EnumerateUserFiles");
+
 	}
 
 	UMcpUserCloudFileDownload_execEnumerateUserFiles_Parms EnumerateUserFiles_Parms;
@@ -5132,7 +5338,8 @@ bool UMcpUserCloudFileDownload::ClearFile(struct FString UserId, struct FString 
 
 	if (!pFnClearFile)
 	{
-		pFnClearFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CLEARFILE));
+		pFnClearFile = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ClearFile");
+
 	}
 
 	UMcpUserCloudFileDownload_execClearFile_Parms ClearFile_Parms;
@@ -5156,7 +5363,8 @@ bool UMcpUserCloudFileDownload::ClearFiles(struct FString UserId)
 
 	if (!pFnClearFiles)
 	{
-		pFnClearFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_CLEARFILES));
+		pFnClearFiles = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.ClearFiles");
+
 	}
 
 	UMcpUserCloudFileDownload_execClearFiles_Parms ClearFiles_Parms;
@@ -5181,7 +5389,8 @@ bool UMcpUserCloudFileDownload::GetFileContents(struct FString UserId, struct FS
 
 	if (!pFnGetFileContents)
 	{
-		pFnGetFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERCLOUDFILEDOWNLOAD_GETFILECONTENTS));
+		pFnGetFileContents = UFunction::FindFunction("Function IpDrv.McpUserCloudFileDownload.GetFileContents");
+
 	}
 
 	UMcpUserCloudFileDownload_execGetFileContents_Parms GetFileContents_Parms;
@@ -5204,7 +5413,8 @@ void UMeshBeacon::eventDestroyBeacon()
 
 	if (!pFnDestroyBeacon)
 	{
-		pFnDestroyBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACON_DESTROYBEACON));
+		pFnDestroyBeacon = UFunction::FindFunction("Function IpDrv.MeshBeacon.DestroyBeacon");
+
 	}
 
 	UMeshBeacon_eventDestroyBeacon_Parms DestroyBeacon_Parms;
@@ -5231,7 +5441,8 @@ bool UMeshBeaconClient::SendHostNewGameSessionResponse(unsigned long bSuccess, s
 
 	if (!pFnSendHostNewGameSessionResponse)
 	{
-		pFnSendHostNewGameSessionResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_SENDHOSTNEWGAMESESSIONRESPONSE));
+		pFnSendHostNewGameSessionResponse = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.SendHostNewGameSessionResponse");
+
 	}
 
 	UMeshBeaconClient_execSendHostNewGameSessionResponse_Parms SendHostNewGameSessionResponse_Parms;
@@ -5262,7 +5473,8 @@ void UMeshBeaconClient::OnCreateNewSessionRequestReceived(struct FName SessionNa
 
 	if (!pFnOnCreateNewSessionRequestReceived)
 	{
-		pFnOnCreateNewSessionRequestReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_ONCREATENEWSESSIONREQUESTRECEIVED));
+		pFnOnCreateNewSessionRequestReceived = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.OnCreateNewSessionRequestReceived");
+
 	}
 
 	UMeshBeaconClient_execOnCreateNewSessionRequestReceived_Parms OnCreateNewSessionRequestReceived_Parms;
@@ -5286,7 +5498,8 @@ void UMeshBeaconClient::OnTravelRequestReceived(struct FName SessionName, class 
 
 	if (!pFnOnTravelRequestReceived)
 	{
-		pFnOnTravelRequestReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_ONTRAVELREQUESTRECEIVED));
+		pFnOnTravelRequestReceived = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.OnTravelRequestReceived");
+
 	}
 
 	UMeshBeaconClient_execOnTravelRequestReceived_Parms OnTravelRequestReceived_Parms;
@@ -5310,7 +5523,8 @@ void UMeshBeaconClient::OnReceivedBandwidthTestResults(unsigned char TestType, u
 
 	if (!pFnOnReceivedBandwidthTestResults)
 	{
-		pFnOnReceivedBandwidthTestResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_ONRECEIVEDBANDWIDTHTESTRESULTS));
+		pFnOnReceivedBandwidthTestResults = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.OnReceivedBandwidthTestResults");
+
 	}
 
 	UMeshBeaconClient_execOnReceivedBandwidthTestResults_Parms OnReceivedBandwidthTestResults_Parms;
@@ -5332,7 +5546,8 @@ void UMeshBeaconClient::OnReceivedBandwidthTestRequest(unsigned char TestType)
 
 	if (!pFnOnReceivedBandwidthTestRequest)
 	{
-		pFnOnReceivedBandwidthTestRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_ONRECEIVEDBANDWIDTHTESTREQUEST));
+		pFnOnReceivedBandwidthTestRequest = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.OnReceivedBandwidthTestRequest");
+
 	}
 
 	UMeshBeaconClient_execOnReceivedBandwidthTestRequest_Parms OnReceivedBandwidthTestRequest_Parms;
@@ -5352,7 +5567,8 @@ void UMeshBeaconClient::OnConnectionRequestResult(unsigned char ConnectionResult
 
 	if (!pFnOnConnectionRequestResult)
 	{
-		pFnOnConnectionRequestResult = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_ONCONNECTIONREQUESTRESULT));
+		pFnOnConnectionRequestResult = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.OnConnectionRequestResult");
+
 	}
 
 	UMeshBeaconClient_execOnConnectionRequestResult_Parms OnConnectionRequestResult_Parms;
@@ -5374,7 +5590,8 @@ bool UMeshBeaconClient::BeginBandwidthTest(unsigned char TestType, int TestBuffe
 
 	if (!pFnBeginBandwidthTest)
 	{
-		pFnBeginBandwidthTest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_BEGINBANDWIDTHTEST));
+		pFnBeginBandwidthTest = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.BeginBandwidthTest");
+
 	}
 
 	UMeshBeaconClient_execBeginBandwidthTest_Parms BeginBandwidthTest_Parms;
@@ -5404,7 +5621,8 @@ bool UMeshBeaconClient::RequestConnection(unsigned long bRegisterSecureAddress, 
 
 	if (!pFnRequestConnection)
 	{
-		pFnRequestConnection = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_REQUESTCONNECTION));
+		pFnRequestConnection = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.RequestConnection");
+
 	}
 
 	UMeshBeaconClient_execRequestConnection_Parms RequestConnection_Parms;
@@ -5431,7 +5649,8 @@ void UMeshBeaconClient::eventDestroyBeacon()
 
 	if (!pFnDestroyBeacon)
 	{
-		pFnDestroyBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONCLIENT_DESTROYBEACON));
+		pFnDestroyBeacon = UFunction::FindFunction("Function IpDrv.MeshBeaconClient.DestroyBeacon");
+
 	}
 
 	UMeshBeaconClient_eventDestroyBeacon_Parms DestroyBeacon_Parms;
@@ -5462,7 +5681,8 @@ void UMeshBeaconHost::OnReceivedClientCreateNewSessionResult(unsigned long bSucc
 
 	if (!pFnOnReceivedClientCreateNewSessionResult)
 	{
-		pFnOnReceivedClientCreateNewSessionResult = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_ONRECEIVEDCLIENTCREATENEWSESSIONRESULT));
+		pFnOnReceivedClientCreateNewSessionResult = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.OnReceivedClientCreateNewSessionResult");
+
 	}
 
 	UMeshBeaconHost_execOnReceivedClientCreateNewSessionResult_Parms OnReceivedClientCreateNewSessionResult_Parms;
@@ -5489,7 +5709,8 @@ bool UMeshBeaconHost::RequestClientCreateNewSession(struct FUniqueNetId PlayerNe
 
 	if (!pFnRequestClientCreateNewSession)
 	{
-		pFnRequestClientCreateNewSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_REQUESTCLIENTCREATENEWSESSION));
+		pFnRequestClientCreateNewSession = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.RequestClientCreateNewSession");
+
 	}
 
 	UMeshBeaconHost_execRequestClientCreateNewSession_Parms RequestClientCreateNewSession_Parms;
@@ -5520,7 +5741,8 @@ void UMeshBeaconHost::TellClientsToTravel(struct FName SessionName, class UClass
 
 	if (!pFnTellClientsToTravel)
 	{
-		pFnTellClientsToTravel = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_TELLCLIENTSTOTRAVEL));
+		pFnTellClientsToTravel = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.TellClientsToTravel");
+
 	}
 
 	UMeshBeaconHost_execTellClientsToTravel_Parms TellClientsToTravel_Parms;
@@ -5545,7 +5767,8 @@ void UMeshBeaconHost::OnAllPendingPlayersConnected()
 
 	if (!pFnOnAllPendingPlayersConnected)
 	{
-		pFnOnAllPendingPlayersConnected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_ONALLPENDINGPLAYERSCONNECTED));
+		pFnOnAllPendingPlayersConnected = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.OnAllPendingPlayersConnected");
+
 	}
 
 	UMeshBeaconHost_execOnAllPendingPlayersConnected_Parms OnAllPendingPlayersConnected_Parms;
@@ -5565,7 +5788,8 @@ bool UMeshBeaconHost::AllPlayersConnected(TArray<struct FUniqueNetId>& Players)
 
 	if (!pFnAllPlayersConnected)
 	{
-		pFnAllPlayersConnected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_ALLPLAYERSCONNECTED));
+		pFnAllPlayersConnected = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.AllPlayersConnected");
+
 	}
 
 	UMeshBeaconHost_execAllPlayersConnected_Parms AllPlayersConnected_Parms;
@@ -5592,7 +5816,8 @@ int UMeshBeaconHost::GetConnectionIndexForPlayer(struct FUniqueNetId PlayerNetId
 
 	if (!pFnGetConnectionIndexForPlayer)
 	{
-		pFnGetConnectionIndexForPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_GETCONNECTIONINDEXFORPLAYER));
+		pFnGetConnectionIndexForPlayer = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.GetConnectionIndexForPlayer");
+
 	}
 
 	UMeshBeaconHost_execGetConnectionIndexForPlayer_Parms GetConnectionIndexForPlayer_Parms;
@@ -5618,7 +5843,8 @@ void UMeshBeaconHost::SetPendingPlayerConnections(TArray<struct FUniqueNetId>& P
 
 	if (!pFnSetPendingPlayerConnections)
 	{
-		pFnSetPendingPlayerConnections = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_SETPENDINGPLAYERCONNECTIONS));
+		pFnSetPendingPlayerConnections = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.SetPendingPlayerConnections");
+
 	}
 
 	UMeshBeaconHost_execSetPendingPlayerConnections_Parms SetPendingPlayerConnections_Parms;
@@ -5641,7 +5867,8 @@ void UMeshBeaconHost::OnFinishedBandwidthTest(struct FUniqueNetId PlayerNetId, u
 
 	if (!pFnOnFinishedBandwidthTest)
 	{
-		pFnOnFinishedBandwidthTest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_ONFINISHEDBANDWIDTHTEST));
+		pFnOnFinishedBandwidthTest = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.OnFinishedBandwidthTest");
+
 	}
 
 	UMeshBeaconHost_execOnFinishedBandwidthTest_Parms OnFinishedBandwidthTest_Parms;
@@ -5665,7 +5892,8 @@ void UMeshBeaconHost::OnStartedBandwidthTest(struct FUniqueNetId PlayerNetId, un
 
 	if (!pFnOnStartedBandwidthTest)
 	{
-		pFnOnStartedBandwidthTest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_ONSTARTEDBANDWIDTHTEST));
+		pFnOnStartedBandwidthTest = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.OnStartedBandwidthTest");
+
 	}
 
 	UMeshBeaconHost_execOnStartedBandwidthTest_Parms OnStartedBandwidthTest_Parms;
@@ -5686,7 +5914,8 @@ void UMeshBeaconHost::OnReceivedClientConnectionRequest(struct FClientMeshBeacon
 
 	if (!pFnOnReceivedClientConnectionRequest)
 	{
-		pFnOnReceivedClientConnectionRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_ONRECEIVEDCLIENTCONNECTIONREQUEST));
+		pFnOnReceivedClientConnectionRequest = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.OnReceivedClientConnectionRequest");
+
 	}
 
 	UMeshBeaconHost_execOnReceivedClientConnectionRequest_Parms OnReceivedClientConnectionRequest_Parms;
@@ -5706,7 +5935,8 @@ void UMeshBeaconHost::AllowBandwidthTesting(unsigned long bEnabled)
 
 	if (!pFnAllowBandwidthTesting)
 	{
-		pFnAllowBandwidthTesting = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_ALLOWBANDWIDTHTESTING));
+		pFnAllowBandwidthTesting = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.AllowBandwidthTesting");
+
 	}
 
 	UMeshBeaconHost_execAllowBandwidthTesting_Parms AllowBandwidthTesting_Parms;
@@ -5725,7 +5955,8 @@ void UMeshBeaconHost::CancelPendingBandwidthTests()
 
 	if (!pFnCancelPendingBandwidthTests)
 	{
-		pFnCancelPendingBandwidthTests = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_CANCELPENDINGBANDWIDTHTESTS));
+		pFnCancelPendingBandwidthTests = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.CancelPendingBandwidthTests");
+
 	}
 
 	UMeshBeaconHost_execCancelPendingBandwidthTests_Parms CancelPendingBandwidthTests_Parms;
@@ -5748,7 +5979,8 @@ bool UMeshBeaconHost::HasPendingBandwidthTest()
 
 	if (!pFnHasPendingBandwidthTest)
 	{
-		pFnHasPendingBandwidthTest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_HASPENDINGBANDWIDTHTEST));
+		pFnHasPendingBandwidthTest = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.HasPendingBandwidthTest");
+
 	}
 
 	UMeshBeaconHost_execHasPendingBandwidthTest_Parms HasPendingBandwidthTest_Parms;
@@ -5772,7 +6004,8 @@ void UMeshBeaconHost::CancelInProgressBandwidthTests()
 
 	if (!pFnCancelInProgressBandwidthTests)
 	{
-		pFnCancelInProgressBandwidthTests = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_CANCELINPROGRESSBANDWIDTHTESTS));
+		pFnCancelInProgressBandwidthTests = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.CancelInProgressBandwidthTests");
+
 	}
 
 	UMeshBeaconHost_execCancelInProgressBandwidthTests_Parms CancelInProgressBandwidthTests_Parms;
@@ -5795,7 +6028,8 @@ bool UMeshBeaconHost::HasInProgressBandwidthTest()
 
 	if (!pFnHasInProgressBandwidthTest)
 	{
-		pFnHasInProgressBandwidthTest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_HASINPROGRESSBANDWIDTHTEST));
+		pFnHasInProgressBandwidthTest = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.HasInProgressBandwidthTest");
+
 	}
 
 	UMeshBeaconHost_execHasInProgressBandwidthTest_Parms HasInProgressBandwidthTest_Parms;
@@ -5823,7 +6057,8 @@ bool UMeshBeaconHost::RequestClientBandwidthTest(struct FUniqueNetId PlayerNetId
 
 	if (!pFnRequestClientBandwidthTest)
 	{
-		pFnRequestClientBandwidthTest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_REQUESTCLIENTBANDWIDTHTEST));
+		pFnRequestClientBandwidthTest = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.RequestClientBandwidthTest");
+
 	}
 
 	UMeshBeaconHost_execRequestClientBandwidthTest_Parms RequestClientBandwidthTest_Parms;
@@ -5850,7 +6085,8 @@ void UMeshBeaconHost::eventDestroyBeacon()
 
 	if (!pFnDestroyBeacon)
 	{
-		pFnDestroyBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_DESTROYBEACON));
+		pFnDestroyBeacon = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.DestroyBeacon");
+
 	}
 
 	UMeshBeaconHost_eventDestroyBeacon_Parms DestroyBeacon_Parms;
@@ -5879,7 +6115,8 @@ bool UMeshBeaconHost::InitHostBeacon(struct FUniqueNetId InOwningPlayerId)
 
 	if (!pFnInitHostBeacon)
 	{
-		pFnInitHostBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MESHBEACONHOST_INITHOSTBEACON));
+		pFnInitHostBeacon = UFunction::FindFunction("Function IpDrv.MeshBeaconHost.InitHostBeacon");
+
 	}
 
 	UMeshBeaconHost_execInitHostBeacon_Parms InitHostBeacon_Parms;
@@ -5907,7 +6144,8 @@ class UAsyncTask* UOnlineAuthInterfaceImpl::RequestAccountAuthorization(struct F
 
 	if (!pFnRequestAccountAuthorization)
 	{
-		pFnRequestAccountAuthorization = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_REQUESTACCOUNTAUTHORIZATION));
+		pFnRequestAccountAuthorization = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.RequestAccountAuthorization");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execRequestAccountAuthorization_Parms RequestAccountAuthorization_Parms;
@@ -5930,7 +6168,8 @@ void UOnlineAuthInterfaceImpl::OnAccountAuthorization(struct FString Token)
 
 	if (!pFnOnAccountAuthorization)
 	{
-		pFnOnAccountAuthorization = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONACCOUNTAUTHORIZATION));
+		pFnOnAccountAuthorization = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnAccountAuthorization");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnAccountAuthorization_Parms OnAccountAuthorization_Parms;
@@ -5940,7 +6179,7 @@ void UOnlineAuthInterfaceImpl::OnAccountAuthorization(struct FString Token)
 };
 
 // Function IpDrv.OnlineAuthInterfaceImpl.OnLoginChanged
-// [0x00020000] (FUNC_Public | FUNC_AllFlags)
+// [0x00030000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bLoggedIn                      (CPF_Parm)
 
@@ -5950,7 +6189,8 @@ void UOnlineAuthInterfaceImpl::OnLoginChanged(unsigned long bLoggedIn)
 
 	if (!pFnOnLoginChanged)
 	{
-		pFnOnLoginChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONLOGINCHANGED));
+		pFnOnLoginChanged = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnLoginChanged");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnLoginChanged_Parms OnLoginChanged_Parms;
@@ -5972,7 +6212,8 @@ bool UOnlineAuthInterfaceImpl::RequestMtxCode(struct FUniqueNetId PlayerID, stru
 
 	if (!pFnRequestMtxCode)
 	{
-		pFnRequestMtxCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_REQUESTMTXCODE));
+		pFnRequestMtxCode = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.RequestMtxCode");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execRequestMtxCode_Parms RequestMtxCode_Parms;
@@ -5997,7 +6238,8 @@ bool UOnlineAuthInterfaceImpl::RequestAuthTicket(struct FUniqueNetId PlayerID, s
 
 	if (!pFnRequestAuthTicket)
 	{
-		pFnRequestAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_REQUESTAUTHTICKET));
+		pFnRequestAuthTicket = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.RequestAuthTicket");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execRequestAuthTicket_Parms RequestAuthTicket_Parms;
@@ -6020,7 +6262,8 @@ bool UOnlineAuthInterfaceImpl::RequiresAuthTicket()
 
 	if (!pFnRequiresAuthTicket)
 	{
-		pFnRequiresAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_REQUIRESAUTHTICKET));
+		pFnRequiresAuthTicket = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.RequiresAuthTicket");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execRequiresAuthTicket_Parms RequiresAuthTicket_Parms;
@@ -6031,7 +6274,7 @@ bool UOnlineAuthInterfaceImpl::RequiresAuthTicket()
 };
 
 // Function IpDrv.OnlineAuthInterfaceImpl.OnReceivedAuthCode
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bSuccess                       (CPF_Parm)
 // struct FString                 Code                           (CPF_Parm | CPF_NeedCtorLink)
@@ -6042,7 +6285,8 @@ void UOnlineAuthInterfaceImpl::OnReceivedAuthCode(unsigned long bSuccess, struct
 
 	if (!pFnOnReceivedAuthCode)
 	{
-		pFnOnReceivedAuthCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONRECEIVEDAUTHCODE));
+		pFnOnReceivedAuthCode = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnReceivedAuthCode");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnReceivedAuthCode_Parms OnReceivedAuthCode_Parms;
@@ -6065,7 +6309,8 @@ bool UOnlineAuthInterfaceImpl::GetServerAddr(struct FIpAddr& OutServerIP, int& O
 
 	if (!pFnGetServerAddr)
 	{
-		pFnGetServerAddr = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_GETSERVERADDR));
+		pFnGetServerAddr = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.GetServerAddr");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execGetServerAddr_Parms GetServerAddr_Parms;
@@ -6089,7 +6334,8 @@ bool UOnlineAuthInterfaceImpl::GetServerUniqueId(struct FUniqueNetId& OutServerU
 
 	if (!pFnGetServerUniqueId)
 	{
-		pFnGetServerUniqueId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_GETSERVERUNIQUEID));
+		pFnGetServerUniqueId = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.GetServerUniqueId");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execGetServerUniqueId_Parms GetServerUniqueId_Parms;
@@ -6113,7 +6359,8 @@ bool UOnlineAuthInterfaceImpl::FindLocalServerAuthSession(class UPlayer* ClientC
 
 	if (!pFnFindLocalServerAuthSession)
 	{
-		pFnFindLocalServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_FINDLOCALSERVERAUTHSESSION));
+		pFnFindLocalServerAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.FindLocalServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execFindLocalServerAuthSession_Parms FindLocalServerAuthSession_Parms;
@@ -6142,7 +6389,8 @@ bool UOnlineAuthInterfaceImpl::FindServerAuthSession(class UPlayer* ServerConnec
 
 	if (!pFnFindServerAuthSession)
 	{
-		pFnFindServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_FINDSERVERAUTHSESSION));
+		pFnFindServerAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.FindServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execFindServerAuthSession_Parms FindServerAuthSession_Parms;
@@ -6171,7 +6419,8 @@ bool UOnlineAuthInterfaceImpl::FindLocalClientAuthSession(class UPlayer* ServerC
 
 	if (!pFnFindLocalClientAuthSession)
 	{
-		pFnFindLocalClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_FINDLOCALCLIENTAUTHSESSION));
+		pFnFindLocalClientAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.FindLocalClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execFindLocalClientAuthSession_Parms FindLocalClientAuthSession_Parms;
@@ -6200,7 +6449,8 @@ bool UOnlineAuthInterfaceImpl::FindClientAuthSession(class UPlayer* ClientConnec
 
 	if (!pFnFindClientAuthSession)
 	{
-		pFnFindClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_FINDCLIENTAUTHSESSION));
+		pFnFindClientAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.FindClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execFindClientAuthSession_Parms FindClientAuthSession_Parms;
@@ -6227,7 +6477,8 @@ void UOnlineAuthInterfaceImpl::AllLocalServerAuthSessions(struct FLocalAuthSessi
 
 	if (!pFnAllLocalServerAuthSessions)
 	{
-		pFnAllLocalServerAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ALLLOCALSERVERAUTHSESSIONS));
+		pFnAllLocalServerAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AllLocalServerAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAllLocalServerAuthSessions_Parms AllLocalServerAuthSessions_Parms;
@@ -6251,7 +6502,8 @@ void UOnlineAuthInterfaceImpl::AllServerAuthSessions(struct FAuthSession& OutSes
 
 	if (!pFnAllServerAuthSessions)
 	{
-		pFnAllServerAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ALLSERVERAUTHSESSIONS));
+		pFnAllServerAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AllServerAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAllServerAuthSessions_Parms AllServerAuthSessions_Parms;
@@ -6275,7 +6527,8 @@ void UOnlineAuthInterfaceImpl::AllLocalClientAuthSessions(struct FLocalAuthSessi
 
 	if (!pFnAllLocalClientAuthSessions)
 	{
-		pFnAllLocalClientAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ALLLOCALCLIENTAUTHSESSIONS));
+		pFnAllLocalClientAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AllLocalClientAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAllLocalClientAuthSessions_Parms AllLocalClientAuthSessions_Parms;
@@ -6299,7 +6552,8 @@ void UOnlineAuthInterfaceImpl::AllClientAuthSessions(struct FAuthSession& OutSes
 
 	if (!pFnAllClientAuthSessions)
 	{
-		pFnAllClientAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ALLCLIENTAUTHSESSIONS));
+		pFnAllClientAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AllClientAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAllClientAuthSessions_Parms AllClientAuthSessions_Parms;
@@ -6322,7 +6576,8 @@ void UOnlineAuthInterfaceImpl::EndAllRemoteServerAuthSessions()
 
 	if (!pFnEndAllRemoteServerAuthSessions)
 	{
-		pFnEndAllRemoteServerAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDALLREMOTESERVERAUTHSESSIONS));
+		pFnEndAllRemoteServerAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndAllRemoteServerAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndAllRemoteServerAuthSessions_Parms EndAllRemoteServerAuthSessions_Parms;
@@ -6344,7 +6599,8 @@ void UOnlineAuthInterfaceImpl::EndAllLocalServerAuthSessions()
 
 	if (!pFnEndAllLocalServerAuthSessions)
 	{
-		pFnEndAllLocalServerAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDALLLOCALSERVERAUTHSESSIONS));
+		pFnEndAllLocalServerAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndAllLocalServerAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndAllLocalServerAuthSessions_Parms EndAllLocalServerAuthSessions_Parms;
@@ -6368,7 +6624,8 @@ void UOnlineAuthInterfaceImpl::EndRemoteServerAuthSession(struct FUniqueNetId Se
 
 	if (!pFnEndRemoteServerAuthSession)
 	{
-		pFnEndRemoteServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDREMOTESERVERAUTHSESSION));
+		pFnEndRemoteServerAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndRemoteServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndRemoteServerAuthSession_Parms EndRemoteServerAuthSession_Parms;
@@ -6394,7 +6651,8 @@ void UOnlineAuthInterfaceImpl::EndLocalServerAuthSession(struct FUniqueNetId Cli
 
 	if (!pFnEndLocalServerAuthSession)
 	{
-		pFnEndLocalServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDLOCALSERVERAUTHSESSION));
+		pFnEndLocalServerAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndLocalServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndLocalServerAuthSession_Parms EndLocalServerAuthSession_Parms;
@@ -6422,7 +6680,8 @@ bool UOnlineAuthInterfaceImpl::VerifyServerAuthSession(struct FUniqueNetId Serve
 
 	if (!pFnVerifyServerAuthSession)
 	{
-		pFnVerifyServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_VERIFYSERVERAUTHSESSION));
+		pFnVerifyServerAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.VerifyServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execVerifyServerAuthSession_Parms VerifyServerAuthSession_Parms;
@@ -6450,7 +6709,8 @@ bool UOnlineAuthInterfaceImpl::CreateServerAuthSession(struct FUniqueNetId Clien
 
 	if (!pFnCreateServerAuthSession)
 	{
-		pFnCreateServerAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CREATESERVERAUTHSESSION));
+		pFnCreateServerAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.CreateServerAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execCreateServerAuthSession_Parms CreateServerAuthSession_Parms;
@@ -6474,7 +6734,8 @@ void UOnlineAuthInterfaceImpl::EndAllRemoteClientAuthSessions()
 
 	if (!pFnEndAllRemoteClientAuthSessions)
 	{
-		pFnEndAllRemoteClientAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDALLREMOTECLIENTAUTHSESSIONS));
+		pFnEndAllRemoteClientAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndAllRemoteClientAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndAllRemoteClientAuthSessions_Parms EndAllRemoteClientAuthSessions_Parms;
@@ -6496,7 +6757,8 @@ void UOnlineAuthInterfaceImpl::EndAllLocalClientAuthSessions()
 
 	if (!pFnEndAllLocalClientAuthSessions)
 	{
-		pFnEndAllLocalClientAuthSessions = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDALLLOCALCLIENTAUTHSESSIONS));
+		pFnEndAllLocalClientAuthSessions = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndAllLocalClientAuthSessions");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndAllLocalClientAuthSessions_Parms EndAllLocalClientAuthSessions_Parms;
@@ -6520,7 +6782,8 @@ void UOnlineAuthInterfaceImpl::EndRemoteClientAuthSession(struct FUniqueNetId Cl
 
 	if (!pFnEndRemoteClientAuthSession)
 	{
-		pFnEndRemoteClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDREMOTECLIENTAUTHSESSION));
+		pFnEndRemoteClientAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndRemoteClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndRemoteClientAuthSession_Parms EndRemoteClientAuthSession_Parms;
@@ -6547,7 +6810,8 @@ void UOnlineAuthInterfaceImpl::EndLocalClientAuthSession(struct FUniqueNetId Ser
 
 	if (!pFnEndLocalClientAuthSession)
 	{
-		pFnEndLocalClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ENDLOCALCLIENTAUTHSESSION));
+		pFnEndLocalClientAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.EndLocalClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execEndLocalClientAuthSession_Parms EndLocalClientAuthSession_Parms;
@@ -6577,7 +6841,8 @@ bool UOnlineAuthInterfaceImpl::VerifyClientAuthSession(struct FUniqueNetId Clien
 
 	if (!pFnVerifyClientAuthSession)
 	{
-		pFnVerifyClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_VERIFYCLIENTAUTHSESSION));
+		pFnVerifyClientAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.VerifyClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execVerifyClientAuthSession_Parms VerifyClientAuthSession_Parms;
@@ -6607,7 +6872,8 @@ bool UOnlineAuthInterfaceImpl::CreateClientAuthSession(struct FUniqueNetId Serve
 
 	if (!pFnCreateClientAuthSession)
 	{
-		pFnCreateClientAuthSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CREATECLIENTAUTHSESSION));
+		pFnCreateClientAuthSession = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.CreateClientAuthSession");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execCreateClientAuthSession_Parms CreateClientAuthSession_Parms;
@@ -6633,7 +6899,8 @@ bool UOnlineAuthInterfaceImpl::SendServerAuthRetryRequest()
 
 	if (!pFnSendServerAuthRetryRequest)
 	{
-		pFnSendServerAuthRetryRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_SENDSERVERAUTHRETRYREQUEST));
+		pFnSendServerAuthRetryRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.SendServerAuthRetryRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execSendServerAuthRetryRequest_Parms SendServerAuthRetryRequest_Parms;
@@ -6659,7 +6926,8 @@ bool UOnlineAuthInterfaceImpl::SendClientAuthEndSessionRequest(class UPlayer* Cl
 
 	if (!pFnSendClientAuthEndSessionRequest)
 	{
-		pFnSendClientAuthEndSessionRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_SENDCLIENTAUTHENDSESSIONREQUEST));
+		pFnSendClientAuthEndSessionRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.SendClientAuthEndSessionRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execSendClientAuthEndSessionRequest_Parms SendClientAuthEndSessionRequest_Parms;
@@ -6687,7 +6955,8 @@ bool UOnlineAuthInterfaceImpl::SendServerAuthResponse(class UPlayer* ClientConne
 
 	if (!pFnSendServerAuthResponse)
 	{
-		pFnSendServerAuthResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_SENDSERVERAUTHRESPONSE));
+		pFnSendServerAuthResponse = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.SendServerAuthResponse");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execSendServerAuthResponse_Parms SendServerAuthResponse_Parms;
@@ -6715,7 +6984,8 @@ bool UOnlineAuthInterfaceImpl::SendClientAuthResponse(int AuthTicketUID)
 
 	if (!pFnSendClientAuthResponse)
 	{
-		pFnSendClientAuthResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_SENDCLIENTAUTHRESPONSE));
+		pFnSendClientAuthResponse = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.SendClientAuthResponse");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execSendClientAuthResponse_Parms SendClientAuthResponse_Parms;
@@ -6742,7 +7012,8 @@ bool UOnlineAuthInterfaceImpl::SendServerAuthRequest(struct FUniqueNetId ServerU
 
 	if (!pFnSendServerAuthRequest)
 	{
-		pFnSendServerAuthRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_SENDSERVERAUTHREQUEST));
+		pFnSendServerAuthRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.SendServerAuthRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execSendServerAuthRequest_Parms SendServerAuthRequest_Parms;
@@ -6766,7 +7037,8 @@ bool UOnlineAuthInterfaceImpl::SendClientAuthRequest(class UPlayer* ClientConnec
 
 	if (!pFnSendClientAuthRequest)
 	{
-		pFnSendClientAuthRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_SENDCLIENTAUTHREQUEST));
+		pFnSendClientAuthRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.SendClientAuthRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execSendClientAuthRequest_Parms SendClientAuthRequest_Parms;
@@ -6789,7 +7061,8 @@ void UOnlineAuthInterfaceImpl::ClearServerConnectionCloseDelegate(struct FScript
 
 	if (!pFnClearServerConnectionCloseDelegate)
 	{
-		pFnClearServerConnectionCloseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARSERVERCONNECTIONCLOSEDELEGATE));
+		pFnClearServerConnectionCloseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearServerConnectionCloseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearServerConnectionCloseDelegate_Parms ClearServerConnectionCloseDelegate_Parms;
@@ -6809,7 +7082,8 @@ void UOnlineAuthInterfaceImpl::AddServerConnectionCloseDelegate(struct FScriptDe
 
 	if (!pFnAddServerConnectionCloseDelegate)
 	{
-		pFnAddServerConnectionCloseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDSERVERCONNECTIONCLOSEDELEGATE));
+		pFnAddServerConnectionCloseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddServerConnectionCloseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddServerConnectionCloseDelegate_Parms AddServerConnectionCloseDelegate_Parms;
@@ -6829,7 +7103,8 @@ void UOnlineAuthInterfaceImpl::OnServerConnectionClose(class UPlayer* ServerConn
 
 	if (!pFnOnServerConnectionClose)
 	{
-		pFnOnServerConnectionClose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONSERVERCONNECTIONCLOSE));
+		pFnOnServerConnectionClose = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnServerConnectionClose");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnServerConnectionClose_Parms OnServerConnectionClose_Parms;
@@ -6849,7 +7124,8 @@ void UOnlineAuthInterfaceImpl::ClearClientConnectionCloseDelegate(struct FScript
 
 	if (!pFnClearClientConnectionCloseDelegate)
 	{
-		pFnClearClientConnectionCloseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARCLIENTCONNECTIONCLOSEDELEGATE));
+		pFnClearClientConnectionCloseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearClientConnectionCloseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearClientConnectionCloseDelegate_Parms ClearClientConnectionCloseDelegate_Parms;
@@ -6869,7 +7145,8 @@ void UOnlineAuthInterfaceImpl::AddClientConnectionCloseDelegate(struct FScriptDe
 
 	if (!pFnAddClientConnectionCloseDelegate)
 	{
-		pFnAddClientConnectionCloseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDCLIENTCONNECTIONCLOSEDELEGATE));
+		pFnAddClientConnectionCloseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddClientConnectionCloseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddClientConnectionCloseDelegate_Parms AddClientConnectionCloseDelegate_Parms;
@@ -6889,7 +7166,8 @@ void UOnlineAuthInterfaceImpl::OnClientConnectionClose(class UPlayer* ClientConn
 
 	if (!pFnOnClientConnectionClose)
 	{
-		pFnOnClientConnectionClose = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONCLIENTCONNECTIONCLOSE));
+		pFnOnClientConnectionClose = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnClientConnectionClose");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnClientConnectionClose_Parms OnClientConnectionClose_Parms;
@@ -6909,7 +7187,8 @@ void UOnlineAuthInterfaceImpl::ClearServerAuthRetryRequestDelegate(struct FScrip
 
 	if (!pFnClearServerAuthRetryRequestDelegate)
 	{
-		pFnClearServerAuthRetryRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARSERVERAUTHRETRYREQUESTDELEGATE));
+		pFnClearServerAuthRetryRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearServerAuthRetryRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearServerAuthRetryRequestDelegate_Parms ClearServerAuthRetryRequestDelegate_Parms;
@@ -6929,7 +7208,8 @@ void UOnlineAuthInterfaceImpl::AddServerAuthRetryRequestDelegate(struct FScriptD
 
 	if (!pFnAddServerAuthRetryRequestDelegate)
 	{
-		pFnAddServerAuthRetryRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDSERVERAUTHRETRYREQUESTDELEGATE));
+		pFnAddServerAuthRetryRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddServerAuthRetryRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddServerAuthRetryRequestDelegate_Parms AddServerAuthRetryRequestDelegate_Parms;
@@ -6949,7 +7229,8 @@ void UOnlineAuthInterfaceImpl::OnServerAuthRetryRequest(class UPlayer* ClientCon
 
 	if (!pFnOnServerAuthRetryRequest)
 	{
-		pFnOnServerAuthRetryRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONSERVERAUTHRETRYREQUEST));
+		pFnOnServerAuthRetryRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnServerAuthRetryRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnServerAuthRetryRequest_Parms OnServerAuthRetryRequest_Parms;
@@ -6969,7 +7250,8 @@ void UOnlineAuthInterfaceImpl::ClearClientAuthEndSessionRequestDelegate(struct F
 
 	if (!pFnClearClientAuthEndSessionRequestDelegate)
 	{
-		pFnClearClientAuthEndSessionRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARCLIENTAUTHENDSESSIONREQUESTDELEGATE));
+		pFnClearClientAuthEndSessionRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearClientAuthEndSessionRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearClientAuthEndSessionRequestDelegate_Parms ClearClientAuthEndSessionRequestDelegate_Parms;
@@ -6989,7 +7271,8 @@ void UOnlineAuthInterfaceImpl::AddClientAuthEndSessionRequestDelegate(struct FSc
 
 	if (!pFnAddClientAuthEndSessionRequestDelegate)
 	{
-		pFnAddClientAuthEndSessionRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDCLIENTAUTHENDSESSIONREQUESTDELEGATE));
+		pFnAddClientAuthEndSessionRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddClientAuthEndSessionRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddClientAuthEndSessionRequestDelegate_Parms AddClientAuthEndSessionRequestDelegate_Parms;
@@ -7009,7 +7292,8 @@ void UOnlineAuthInterfaceImpl::OnClientAuthEndSessionRequest(class UPlayer* Serv
 
 	if (!pFnOnClientAuthEndSessionRequest)
 	{
-		pFnOnClientAuthEndSessionRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONCLIENTAUTHENDSESSIONREQUEST));
+		pFnOnClientAuthEndSessionRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnClientAuthEndSessionRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnClientAuthEndSessionRequest_Parms OnClientAuthEndSessionRequest_Parms;
@@ -7029,7 +7313,8 @@ void UOnlineAuthInterfaceImpl::ClearServerAuthCompleteDelegate(struct FScriptDel
 
 	if (!pFnClearServerAuthCompleteDelegate)
 	{
-		pFnClearServerAuthCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARSERVERAUTHCOMPLETEDELEGATE));
+		pFnClearServerAuthCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearServerAuthCompleteDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearServerAuthCompleteDelegate_Parms ClearServerAuthCompleteDelegate_Parms;
@@ -7049,7 +7334,8 @@ void UOnlineAuthInterfaceImpl::AddServerAuthCompleteDelegate(struct FScriptDeleg
 
 	if (!pFnAddServerAuthCompleteDelegate)
 	{
-		pFnAddServerAuthCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDSERVERAUTHCOMPLETEDELEGATE));
+		pFnAddServerAuthCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddServerAuthCompleteDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddServerAuthCompleteDelegate_Parms AddServerAuthCompleteDelegate_Parms;
@@ -7072,7 +7358,8 @@ void UOnlineAuthInterfaceImpl::OnServerAuthComplete(unsigned long bSuccess, stru
 
 	if (!pFnOnServerAuthComplete)
 	{
-		pFnOnServerAuthComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONSERVERAUTHCOMPLETE));
+		pFnOnServerAuthComplete = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnServerAuthComplete");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnServerAuthComplete_Parms OnServerAuthComplete_Parms;
@@ -7095,7 +7382,8 @@ void UOnlineAuthInterfaceImpl::ClearClientAuthCompleteDelegate(struct FScriptDel
 
 	if (!pFnClearClientAuthCompleteDelegate)
 	{
-		pFnClearClientAuthCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARCLIENTAUTHCOMPLETEDELEGATE));
+		pFnClearClientAuthCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearClientAuthCompleteDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearClientAuthCompleteDelegate_Parms ClearClientAuthCompleteDelegate_Parms;
@@ -7115,7 +7403,8 @@ void UOnlineAuthInterfaceImpl::AddClientAuthCompleteDelegate(struct FScriptDeleg
 
 	if (!pFnAddClientAuthCompleteDelegate)
 	{
-		pFnAddClientAuthCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDCLIENTAUTHCOMPLETEDELEGATE));
+		pFnAddClientAuthCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddClientAuthCompleteDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddClientAuthCompleteDelegate_Parms AddClientAuthCompleteDelegate_Parms;
@@ -7138,7 +7427,8 @@ void UOnlineAuthInterfaceImpl::OnClientAuthComplete(unsigned long bSuccess, stru
 
 	if (!pFnOnClientAuthComplete)
 	{
-		pFnOnClientAuthComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONCLIENTAUTHCOMPLETE));
+		pFnOnClientAuthComplete = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnClientAuthComplete");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnClientAuthComplete_Parms OnClientAuthComplete_Parms;
@@ -7161,7 +7451,8 @@ void UOnlineAuthInterfaceImpl::ClearServerAuthResponseDelegate(struct FScriptDel
 
 	if (!pFnClearServerAuthResponseDelegate)
 	{
-		pFnClearServerAuthResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARSERVERAUTHRESPONSEDELEGATE));
+		pFnClearServerAuthResponseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearServerAuthResponseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearServerAuthResponseDelegate_Parms ClearServerAuthResponseDelegate_Parms;
@@ -7181,7 +7472,8 @@ void UOnlineAuthInterfaceImpl::AddServerAuthResponseDelegate(struct FScriptDeleg
 
 	if (!pFnAddServerAuthResponseDelegate)
 	{
-		pFnAddServerAuthResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDSERVERAUTHRESPONSEDELEGATE));
+		pFnAddServerAuthResponseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddServerAuthResponseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddServerAuthResponseDelegate_Parms AddServerAuthResponseDelegate_Parms;
@@ -7203,7 +7495,8 @@ void UOnlineAuthInterfaceImpl::OnServerAuthResponse(struct FUniqueNetId ServerUI
 
 	if (!pFnOnServerAuthResponse)
 	{
-		pFnOnServerAuthResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONSERVERAUTHRESPONSE));
+		pFnOnServerAuthResponse = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnServerAuthResponse");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnServerAuthResponse_Parms OnServerAuthResponse_Parms;
@@ -7225,7 +7518,8 @@ void UOnlineAuthInterfaceImpl::ClearClientAuthResponseDelegate(struct FScriptDel
 
 	if (!pFnClearClientAuthResponseDelegate)
 	{
-		pFnClearClientAuthResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARCLIENTAUTHRESPONSEDELEGATE));
+		pFnClearClientAuthResponseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearClientAuthResponseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearClientAuthResponseDelegate_Parms ClearClientAuthResponseDelegate_Parms;
@@ -7245,7 +7539,8 @@ void UOnlineAuthInterfaceImpl::AddClientAuthResponseDelegate(struct FScriptDeleg
 
 	if (!pFnAddClientAuthResponseDelegate)
 	{
-		pFnAddClientAuthResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDCLIENTAUTHRESPONSEDELEGATE));
+		pFnAddClientAuthResponseDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddClientAuthResponseDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddClientAuthResponseDelegate_Parms AddClientAuthResponseDelegate_Parms;
@@ -7267,7 +7562,8 @@ void UOnlineAuthInterfaceImpl::OnClientAuthResponse(struct FUniqueNetId ClientUI
 
 	if (!pFnOnClientAuthResponse)
 	{
-		pFnOnClientAuthResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONCLIENTAUTHRESPONSE));
+		pFnOnClientAuthResponse = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnClientAuthResponse");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnClientAuthResponse_Parms OnClientAuthResponse_Parms;
@@ -7289,7 +7585,8 @@ void UOnlineAuthInterfaceImpl::ClearServerAuthRequestDelegate(struct FScriptDele
 
 	if (!pFnClearServerAuthRequestDelegate)
 	{
-		pFnClearServerAuthRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARSERVERAUTHREQUESTDELEGATE));
+		pFnClearServerAuthRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearServerAuthRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearServerAuthRequestDelegate_Parms ClearServerAuthRequestDelegate_Parms;
@@ -7309,7 +7606,8 @@ void UOnlineAuthInterfaceImpl::AddServerAuthRequestDelegate(struct FScriptDelega
 
 	if (!pFnAddServerAuthRequestDelegate)
 	{
-		pFnAddServerAuthRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDSERVERAUTHREQUESTDELEGATE));
+		pFnAddServerAuthRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddServerAuthRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddServerAuthRequestDelegate_Parms AddServerAuthRequestDelegate_Parms;
@@ -7332,7 +7630,8 @@ void UOnlineAuthInterfaceImpl::OnServerAuthRequest(class UPlayer* ClientConnecti
 
 	if (!pFnOnServerAuthRequest)
 	{
-		pFnOnServerAuthRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONSERVERAUTHREQUEST));
+		pFnOnServerAuthRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnServerAuthRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnServerAuthRequest_Parms OnServerAuthRequest_Parms;
@@ -7355,7 +7654,8 @@ void UOnlineAuthInterfaceImpl::ClearClientAuthRequestDelegate(struct FScriptDele
 
 	if (!pFnClearClientAuthRequestDelegate)
 	{
-		pFnClearClientAuthRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARCLIENTAUTHREQUESTDELEGATE));
+		pFnClearClientAuthRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearClientAuthRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearClientAuthRequestDelegate_Parms ClearClientAuthRequestDelegate_Parms;
@@ -7375,7 +7675,8 @@ void UOnlineAuthInterfaceImpl::AddClientAuthRequestDelegate(struct FScriptDelega
 
 	if (!pFnAddClientAuthRequestDelegate)
 	{
-		pFnAddClientAuthRequestDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDCLIENTAUTHREQUESTDELEGATE));
+		pFnAddClientAuthRequestDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddClientAuthRequestDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddClientAuthRequestDelegate_Parms AddClientAuthRequestDelegate_Parms;
@@ -7398,7 +7699,8 @@ void UOnlineAuthInterfaceImpl::OnClientAuthRequest(struct FUniqueNetId ServerUID
 
 	if (!pFnOnClientAuthRequest)
 	{
-		pFnOnClientAuthRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONCLIENTAUTHREQUEST));
+		pFnOnClientAuthRequest = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnClientAuthRequest");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnClientAuthRequest_Parms OnClientAuthRequest_Parms;
@@ -7421,7 +7723,8 @@ void UOnlineAuthInterfaceImpl::ClearAuthReadyDelegate(struct FScriptDelegate Aut
 
 	if (!pFnClearAuthReadyDelegate)
 	{
-		pFnClearAuthReadyDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_CLEARAUTHREADYDELEGATE));
+		pFnClearAuthReadyDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.ClearAuthReadyDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execClearAuthReadyDelegate_Parms ClearAuthReadyDelegate_Parms;
@@ -7441,7 +7744,8 @@ void UOnlineAuthInterfaceImpl::AddAuthReadyDelegate(struct FScriptDelegate AuthR
 
 	if (!pFnAddAuthReadyDelegate)
 	{
-		pFnAddAuthReadyDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ADDAUTHREADYDELEGATE));
+		pFnAddAuthReadyDelegate = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.AddAuthReadyDelegate");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execAddAuthReadyDelegate_Parms AddAuthReadyDelegate_Parms;
@@ -7460,7 +7764,8 @@ void UOnlineAuthInterfaceImpl::OnAuthReady()
 
 	if (!pFnOnAuthReady)
 	{
-		pFnOnAuthReady = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ONAUTHREADY));
+		pFnOnAuthReady = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.OnAuthReady");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execOnAuthReady_Parms OnAuthReady_Parms;
@@ -7479,7 +7784,8 @@ bool UOnlineAuthInterfaceImpl::IsReady()
 
 	if (!pFnIsReady)
 	{
-		pFnIsReady = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEAUTHINTERFACEIMPL_ISREADY));
+		pFnIsReady = UFunction::FindFunction("Function IpDrv.OnlineAuthInterfaceImpl.IsReady");
+
 	}
 
 	UOnlineAuthInterfaceImpl_execIsReady_Parms IsReady_Parms;
@@ -7503,7 +7809,8 @@ bool UOnlineFriendsInterfaceImpl::GetActivePlatformId(unsigned char LocalUserNum
 
 	if (!pFnGetActivePlatformId)
 	{
-		pFnGetActivePlatformId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEFRIENDSINTERFACEIMPL_GETACTIVEPLATFORMID));
+		pFnGetActivePlatformId = UFunction::FindFunction("Function IpDrv.OnlineFriendsInterfaceImpl.GetActivePlatformId");
+
 	}
 
 	UOnlineFriendsInterfaceImpl_execGetActivePlatformId_Parms GetActivePlatformId_Parms;
@@ -7530,7 +7837,8 @@ bool UOnlineFriendsInterfaceImpl::RequestLinkedAccounts(unsigned char LocalUserN
 
 	if (!pFnRequestLinkedAccounts)
 	{
-		pFnRequestLinkedAccounts = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEFRIENDSINTERFACEIMPL_REQUESTLINKEDACCOUNTS));
+		pFnRequestLinkedAccounts = UFunction::FindFunction("Function IpDrv.OnlineFriendsInterfaceImpl.RequestLinkedAccounts");
+
 	}
 
 	UOnlineFriendsInterfaceImpl_execRequestLinkedAccounts_Parms RequestLinkedAccounts_Parms;
@@ -7555,7 +7863,8 @@ void UOnlineFriendsInterfaceImpl::OnReceivedLinkedAccount(unsigned long bSuccess
 
 	if (!pFnOnReceivedLinkedAccount)
 	{
-		pFnOnReceivedLinkedAccount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEFRIENDSINTERFACEIMPL_ONRECEIVEDLINKEDACCOUNT));
+		pFnOnReceivedLinkedAccount = UFunction::FindFunction("Function IpDrv.OnlineFriendsInterfaceImpl.OnReceivedLinkedAccount");
+
 	}
 
 	UOnlineFriendsInterfaceImpl_execOnReceivedLinkedAccount_Parms OnReceivedLinkedAccount_Parms;
@@ -7576,7 +7885,8 @@ void UOnlineGameInterfaceImpl::ClearGamePlayersChangedDelegate(struct FScriptDel
 
 	if (!pFnClearGamePlayersChangedDelegate)
 	{
-		pFnClearGamePlayersChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARGAMEPLAYERSCHANGEDDELEGATE));
+		pFnClearGamePlayersChangedDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearGamePlayersChangedDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearGamePlayersChangedDelegate_Parms ClearGamePlayersChangedDelegate_Parms;
@@ -7596,7 +7906,8 @@ void UOnlineGameInterfaceImpl::AddGamePlayersChangedDelegate(struct FScriptDeleg
 
 	if (!pFnAddGamePlayersChangedDelegate)
 	{
-		pFnAddGamePlayersChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDGAMEPLAYERSCHANGEDDELEGATE));
+		pFnAddGamePlayersChangedDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddGamePlayersChangedDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddGamePlayersChangedDelegate_Parms AddGamePlayersChangedDelegate_Parms;
@@ -7617,7 +7928,8 @@ void UOnlineGameInterfaceImpl::OnGamePlayersChanged(struct FName SessionName, TA
 
 	if (!pFnOnGamePlayersChanged)
 	{
-		pFnOnGamePlayersChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONGAMEPLAYERSCHANGED));
+		pFnOnGamePlayersChanged = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnGamePlayersChanged");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnGamePlayersChanged_Parms OnGamePlayersChanged_Parms;
@@ -7640,7 +7952,8 @@ void UOnlineGameInterfaceImpl::SetFriendJoinLocation(struct FUniqueNetId Joinabl
 
 	if (!pFnSetFriendJoinLocation)
 	{
-		pFnSetFriendJoinLocation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_SETFRIENDJOINLOCATION));
+		pFnSetFriendJoinLocation = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.SetFriendJoinLocation");
+
 	}
 
 	UOnlineGameInterfaceImpl_execSetFriendJoinLocation_Parms SetFriendJoinLocation_Parms;
@@ -7662,7 +7975,8 @@ void UOnlineGameInterfaceImpl::ClearReportMatchmakingInfoDelegate(struct FScript
 
 	if (!pFnClearReportMatchmakingInfoDelegate)
 	{
-		pFnClearReportMatchmakingInfoDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARREPORTMATCHMAKINGINFODELEGATE));
+		pFnClearReportMatchmakingInfoDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearReportMatchmakingInfoDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearReportMatchmakingInfoDelegate_Parms ClearReportMatchmakingInfoDelegate_Parms;
@@ -7682,7 +7996,8 @@ void UOnlineGameInterfaceImpl::AddReportMatchmakingInfoDelegate(struct FScriptDe
 
 	if (!pFnAddReportMatchmakingInfoDelegate)
 	{
-		pFnAddReportMatchmakingInfoDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDREPORTMATCHMAKINGINFODELEGATE));
+		pFnAddReportMatchmakingInfoDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddReportMatchmakingInfoDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddReportMatchmakingInfoDelegate_Parms AddReportMatchmakingInfoDelegate_Parms;
@@ -7702,7 +8017,8 @@ void UOnlineGameInterfaceImpl::EventReportMatchmakingInfo(struct FString NewInfo
 
 	if (!pFnEventReportMatchmakingInfo)
 	{
-		pFnEventReportMatchmakingInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_EVENTREPORTMATCHMAKINGINFO));
+		pFnEventReportMatchmakingInfo = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.EventReportMatchmakingInfo");
+
 	}
 
 	UOnlineGameInterfaceImpl_execEventReportMatchmakingInfo_Parms EventReportMatchmakingInfo_Parms;
@@ -7722,7 +8038,8 @@ void UOnlineGameInterfaceImpl::ClearQosStatusChangedDelegate(struct FScriptDeleg
 
 	if (!pFnClearQosStatusChangedDelegate)
 	{
-		pFnClearQosStatusChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARQOSSTATUSCHANGEDDELEGATE));
+		pFnClearQosStatusChangedDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearQosStatusChangedDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearQosStatusChangedDelegate_Parms ClearQosStatusChangedDelegate_Parms;
@@ -7742,7 +8059,8 @@ void UOnlineGameInterfaceImpl::AddQosStatusChangedDelegate(struct FScriptDelegat
 
 	if (!pFnAddQosStatusChangedDelegate)
 	{
-		pFnAddQosStatusChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDQOSSTATUSCHANGEDDELEGATE));
+		pFnAddQosStatusChangedDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddQosStatusChangedDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddQosStatusChangedDelegate_Parms AddQosStatusChangedDelegate_Parms;
@@ -7763,7 +8081,8 @@ void UOnlineGameInterfaceImpl::OnQosStatusChanged(int NumComplete, int NumTotal)
 
 	if (!pFnOnQosStatusChanged)
 	{
-		pFnOnQosStatusChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONQOSSTATUSCHANGED));
+		pFnOnQosStatusChanged = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnQosStatusChanged");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnQosStatusChanged_Parms OnQosStatusChanged_Parms;
@@ -7787,7 +8106,8 @@ bool UOnlineGameInterfaceImpl::BindPlatformSpecificSessionToSearch(unsigned char
 
 	if (!pFnBindPlatformSpecificSessionToSearch)
 	{
-		pFnBindPlatformSpecificSessionToSearch = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_BINDPLATFORMSPECIFICSESSIONTOSEARCH));
+		pFnBindPlatformSpecificSessionToSearch = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.BindPlatformSpecificSessionToSearch");
+
 	}
 
 	UOnlineGameInterfaceImpl_execBindPlatformSpecificSessionToSearch_Parms BindPlatformSpecificSessionToSearch_Parms;
@@ -7817,7 +8137,8 @@ bool UOnlineGameInterfaceImpl::ReadPlatformSpecificSessionInfoBySessionName(stru
 
 	if (!pFnReadPlatformSpecificSessionInfoBySessionName)
 	{
-		pFnReadPlatformSpecificSessionInfoBySessionName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_READPLATFORMSPECIFICSESSIONINFOBYSESSIONNAME));
+		pFnReadPlatformSpecificSessionInfoBySessionName = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ReadPlatformSpecificSessionInfoBySessionName");
+
 	}
 
 	UOnlineGameInterfaceImpl_execReadPlatformSpecificSessionInfoBySessionName_Parms ReadPlatformSpecificSessionInfoBySessionName_Parms;
@@ -7842,7 +8163,8 @@ bool UOnlineGameInterfaceImpl::ReadPlatformSpecificSessionInfo(struct FOnlineGam
 
 	if (!pFnReadPlatformSpecificSessionInfo)
 	{
-		pFnReadPlatformSpecificSessionInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_READPLATFORMSPECIFICSESSIONINFO));
+		pFnReadPlatformSpecificSessionInfo = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ReadPlatformSpecificSessionInfo");
+
 	}
 
 	UOnlineGameInterfaceImpl_execReadPlatformSpecificSessionInfo_Parms ReadPlatformSpecificSessionInfo_Parms;
@@ -7871,7 +8193,8 @@ bool UOnlineGameInterfaceImpl::QueryNonAdvertisedData(int StartAt, int NumberToQ
 
 	if (!pFnQueryNonAdvertisedData)
 	{
-		pFnQueryNonAdvertisedData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_QUERYNONADVERTISEDDATA));
+		pFnQueryNonAdvertisedData = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.QueryNonAdvertisedData");
+
 	}
 
 	UOnlineGameInterfaceImpl_execQueryNonAdvertisedData_Parms QueryNonAdvertisedData_Parms;
@@ -7894,7 +8217,8 @@ void UOnlineGameInterfaceImpl::ClearJoinMigratedOnlineGameCompleteDelegate(struc
 
 	if (!pFnClearJoinMigratedOnlineGameCompleteDelegate)
 	{
-		pFnClearJoinMigratedOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARJOINMIGRATEDONLINEGAMECOMPLETEDELEGATE));
+		pFnClearJoinMigratedOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearJoinMigratedOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearJoinMigratedOnlineGameCompleteDelegate_Parms ClearJoinMigratedOnlineGameCompleteDelegate_Parms;
@@ -7914,7 +8238,8 @@ void UOnlineGameInterfaceImpl::AddJoinMigratedOnlineGameCompleteDelegate(struct 
 
 	if (!pFnAddJoinMigratedOnlineGameCompleteDelegate)
 	{
-		pFnAddJoinMigratedOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDJOINMIGRATEDONLINEGAMECOMPLETEDELEGATE));
+		pFnAddJoinMigratedOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddJoinMigratedOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddJoinMigratedOnlineGameCompleteDelegate_Parms AddJoinMigratedOnlineGameCompleteDelegate_Parms;
@@ -7935,7 +8260,8 @@ void UOnlineGameInterfaceImpl::OnJoinMigratedOnlineGameComplete(struct FName Ses
 
 	if (!pFnOnJoinMigratedOnlineGameComplete)
 	{
-		pFnOnJoinMigratedOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONJOINMIGRATEDONLINEGAMECOMPLETE));
+		pFnOnJoinMigratedOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnJoinMigratedOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnJoinMigratedOnlineGameComplete_Parms OnJoinMigratedOnlineGameComplete_Parms;
@@ -7959,7 +8285,8 @@ bool UOnlineGameInterfaceImpl::JoinMigratedOnlineGame(unsigned char PlayerNum, s
 
 	if (!pFnJoinMigratedOnlineGame)
 	{
-		pFnJoinMigratedOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_JOINMIGRATEDONLINEGAME));
+		pFnJoinMigratedOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.JoinMigratedOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execJoinMigratedOnlineGame_Parms JoinMigratedOnlineGame_Parms;
@@ -7983,7 +8310,8 @@ void UOnlineGameInterfaceImpl::ClearMigrateOnlineGameCompleteDelegate(struct FSc
 
 	if (!pFnClearMigrateOnlineGameCompleteDelegate)
 	{
-		pFnClearMigrateOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARMIGRATEONLINEGAMECOMPLETEDELEGATE));
+		pFnClearMigrateOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearMigrateOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearMigrateOnlineGameCompleteDelegate_Parms ClearMigrateOnlineGameCompleteDelegate_Parms;
@@ -8003,7 +8331,8 @@ void UOnlineGameInterfaceImpl::AddMigrateOnlineGameCompleteDelegate(struct FScri
 
 	if (!pFnAddMigrateOnlineGameCompleteDelegate)
 	{
-		pFnAddMigrateOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDMIGRATEONLINEGAMECOMPLETEDELEGATE));
+		pFnAddMigrateOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddMigrateOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddMigrateOnlineGameCompleteDelegate_Parms AddMigrateOnlineGameCompleteDelegate_Parms;
@@ -8024,7 +8353,8 @@ void UOnlineGameInterfaceImpl::OnMigrateOnlineGameComplete(struct FName SessionN
 
 	if (!pFnOnMigrateOnlineGameComplete)
 	{
-		pFnOnMigrateOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONMIGRATEONLINEGAMECOMPLETE));
+		pFnOnMigrateOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnMigrateOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnMigrateOnlineGameComplete_Parms OnMigrateOnlineGameComplete_Parms;
@@ -8047,7 +8377,8 @@ bool UOnlineGameInterfaceImpl::MigrateOnlineGame(unsigned char HostingPlayerNum,
 
 	if (!pFnMigrateOnlineGame)
 	{
-		pFnMigrateOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_MIGRATEONLINEGAME));
+		pFnMigrateOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.MigrateOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execMigrateOnlineGame_Parms MigrateOnlineGame_Parms;
@@ -8070,7 +8401,8 @@ void UOnlineGameInterfaceImpl::ClearRecalculateSkillRatingCompleteDelegate(struc
 
 	if (!pFnClearRecalculateSkillRatingCompleteDelegate)
 	{
-		pFnClearRecalculateSkillRatingCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARRECALCULATESKILLRATINGCOMPLETEDELEGATE));
+		pFnClearRecalculateSkillRatingCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearRecalculateSkillRatingCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearRecalculateSkillRatingCompleteDelegate_Parms ClearRecalculateSkillRatingCompleteDelegate_Parms;
@@ -8090,7 +8422,8 @@ void UOnlineGameInterfaceImpl::AddRecalculateSkillRatingCompleteDelegate(struct 
 
 	if (!pFnAddRecalculateSkillRatingCompleteDelegate)
 	{
-		pFnAddRecalculateSkillRatingCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDRECALCULATESKILLRATINGCOMPLETEDELEGATE));
+		pFnAddRecalculateSkillRatingCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddRecalculateSkillRatingCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddRecalculateSkillRatingCompleteDelegate_Parms AddRecalculateSkillRatingCompleteDelegate_Parms;
@@ -8111,7 +8444,8 @@ void UOnlineGameInterfaceImpl::OnRecalculateSkillRatingComplete(struct FName Ses
 
 	if (!pFnOnRecalculateSkillRatingComplete)
 	{
-		pFnOnRecalculateSkillRatingComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONRECALCULATESKILLRATINGCOMPLETE));
+		pFnOnRecalculateSkillRatingComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnRecalculateSkillRatingComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnRecalculateSkillRatingComplete_Parms OnRecalculateSkillRatingComplete_Parms;
@@ -8134,7 +8468,8 @@ bool UOnlineGameInterfaceImpl::RecalculateSkillRating(struct FName SessionName, 
 
 	if (!pFnRecalculateSkillRating)
 	{
-		pFnRecalculateSkillRating = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_RECALCULATESKILLRATING));
+		pFnRecalculateSkillRating = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.RecalculateSkillRating");
+
 	}
 
 	UOnlineGameInterfaceImpl_execRecalculateSkillRating_Parms RecalculateSkillRating_Parms;
@@ -8159,7 +8494,8 @@ bool UOnlineGameInterfaceImpl::AcceptGameInvite(unsigned char LocalUserNum, stru
 
 	if (!pFnAcceptGameInvite)
 	{
-		pFnAcceptGameInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ACCEPTGAMEINVITE));
+		pFnAcceptGameInvite = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AcceptGameInvite");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAcceptGameInvite_Parms AcceptGameInvite_Parms;
@@ -8183,7 +8519,8 @@ void UOnlineGameInterfaceImpl::ClearGameInviteAcceptedDelegate(unsigned char Loc
 
 	if (!pFnClearGameInviteAcceptedDelegate)
 	{
-		pFnClearGameInviteAcceptedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARGAMEINVITEACCEPTEDDELEGATE));
+		pFnClearGameInviteAcceptedDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearGameInviteAcceptedDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearGameInviteAcceptedDelegate_Parms ClearGameInviteAcceptedDelegate_Parms;
@@ -8194,7 +8531,7 @@ void UOnlineGameInterfaceImpl::ClearGameInviteAcceptedDelegate(unsigned char Loc
 };
 
 // Function IpDrv.OnlineGameInterfaceImpl.AddGameInviteAcceptedDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         GameInviteAcceptedDelegate     (CPF_Parm | CPF_NeedCtorLink)
@@ -8205,7 +8542,8 @@ void UOnlineGameInterfaceImpl::AddGameInviteAcceptedDelegate(unsigned char Local
 
 	if (!pFnAddGameInviteAcceptedDelegate)
 	{
-		pFnAddGameInviteAcceptedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDGAMEINVITEACCEPTEDDELEGATE));
+		pFnAddGameInviteAcceptedDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddGameInviteAcceptedDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddGameInviteAcceptedDelegate_Parms AddGameInviteAcceptedDelegate_Parms;
@@ -8227,7 +8565,8 @@ void UOnlineGameInterfaceImpl::OnGameInviteAccepted(struct FString ErrorString, 
 
 	if (!pFnOnGameInviteAccepted)
 	{
-		pFnOnGameInviteAccepted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONGAMEINVITEACCEPTED));
+		pFnOnGameInviteAccepted = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnGameInviteAccepted");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnGameInviteAccepted_Parms OnGameInviteAccepted_Parms;
@@ -8249,7 +8588,8 @@ TArray<struct FOnlineArbitrationRegistrant> UOnlineGameInterfaceImpl::GetArbitra
 
 	if (!pFnGetArbitratedPlayers)
 	{
-		pFnGetArbitratedPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_GETARBITRATEDPLAYERS));
+		pFnGetArbitratedPlayers = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.GetArbitratedPlayers");
+
 	}
 
 	UOnlineGameInterfaceImpl_execGetArbitratedPlayers_Parms GetArbitratedPlayers_Parms;
@@ -8271,7 +8611,8 @@ void UOnlineGameInterfaceImpl::ClearArbitrationRegistrationCompleteDelegate(stru
 
 	if (!pFnClearArbitrationRegistrationCompleteDelegate)
 	{
-		pFnClearArbitrationRegistrationCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARARBITRATIONREGISTRATIONCOMPLETEDELEGATE));
+		pFnClearArbitrationRegistrationCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearArbitrationRegistrationCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearArbitrationRegistrationCompleteDelegate_Parms ClearArbitrationRegistrationCompleteDelegate_Parms;
@@ -8291,7 +8632,8 @@ void UOnlineGameInterfaceImpl::AddArbitrationRegistrationCompleteDelegate(struct
 
 	if (!pFnAddArbitrationRegistrationCompleteDelegate)
 	{
-		pFnAddArbitrationRegistrationCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDARBITRATIONREGISTRATIONCOMPLETEDELEGATE));
+		pFnAddArbitrationRegistrationCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddArbitrationRegistrationCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddArbitrationRegistrationCompleteDelegate_Parms AddArbitrationRegistrationCompleteDelegate_Parms;
@@ -8312,7 +8654,8 @@ void UOnlineGameInterfaceImpl::OnArbitrationRegistrationComplete(struct FName Se
 
 	if (!pFnOnArbitrationRegistrationComplete)
 	{
-		pFnOnArbitrationRegistrationComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONARBITRATIONREGISTRATIONCOMPLETE));
+		pFnOnArbitrationRegistrationComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnArbitrationRegistrationComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnArbitrationRegistrationComplete_Parms OnArbitrationRegistrationComplete_Parms;
@@ -8334,7 +8677,8 @@ bool UOnlineGameInterfaceImpl::RegisterForArbitration(struct FName SessionName)
 
 	if (!pFnRegisterForArbitration)
 	{
-		pFnRegisterForArbitration = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_REGISTERFORARBITRATION));
+		pFnRegisterForArbitration = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.RegisterForArbitration");
+
 	}
 
 	UOnlineGameInterfaceImpl_execRegisterForArbitration_Parms RegisterForArbitration_Parms;
@@ -8356,7 +8700,8 @@ void UOnlineGameInterfaceImpl::ClearEndOnlineGameCompleteDelegate(struct FScript
 
 	if (!pFnClearEndOnlineGameCompleteDelegate)
 	{
-		pFnClearEndOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARENDONLINEGAMECOMPLETEDELEGATE));
+		pFnClearEndOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearEndOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearEndOnlineGameCompleteDelegate_Parms ClearEndOnlineGameCompleteDelegate_Parms;
@@ -8376,7 +8721,8 @@ void UOnlineGameInterfaceImpl::AddEndOnlineGameCompleteDelegate(struct FScriptDe
 
 	if (!pFnAddEndOnlineGameCompleteDelegate)
 	{
-		pFnAddEndOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDENDONLINEGAMECOMPLETEDELEGATE));
+		pFnAddEndOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddEndOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddEndOnlineGameCompleteDelegate_Parms AddEndOnlineGameCompleteDelegate_Parms;
@@ -8397,7 +8743,8 @@ void UOnlineGameInterfaceImpl::OnEndOnlineGameComplete(struct FName SessionName,
 
 	if (!pFnOnEndOnlineGameComplete)
 	{
-		pFnOnEndOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONENDONLINEGAMECOMPLETE));
+		pFnOnEndOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnEndOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnEndOnlineGameComplete_Parms OnEndOnlineGameComplete_Parms;
@@ -8419,7 +8766,8 @@ bool UOnlineGameInterfaceImpl::EndOnlineGame(struct FName SessionName)
 
 	if (!pFnEndOnlineGame)
 	{
-		pFnEndOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ENDONLINEGAME));
+		pFnEndOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.EndOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execEndOnlineGame_Parms EndOnlineGame_Parms;
@@ -8445,7 +8793,8 @@ void UOnlineGameInterfaceImpl::ClearStartOnlineGameCompleteDelegate(struct FScri
 
 	if (!pFnClearStartOnlineGameCompleteDelegate)
 	{
-		pFnClearStartOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARSTARTONLINEGAMECOMPLETEDELEGATE));
+		pFnClearStartOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearStartOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearStartOnlineGameCompleteDelegate_Parms ClearStartOnlineGameCompleteDelegate_Parms;
@@ -8465,7 +8814,8 @@ void UOnlineGameInterfaceImpl::AddStartOnlineGameCompleteDelegate(struct FScript
 
 	if (!pFnAddStartOnlineGameCompleteDelegate)
 	{
-		pFnAddStartOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDSTARTONLINEGAMECOMPLETEDELEGATE));
+		pFnAddStartOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddStartOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddStartOnlineGameCompleteDelegate_Parms AddStartOnlineGameCompleteDelegate_Parms;
@@ -8486,7 +8836,8 @@ void UOnlineGameInterfaceImpl::OnStartOnlineGameComplete(struct FName SessionNam
 
 	if (!pFnOnStartOnlineGameComplete)
 	{
-		pFnOnStartOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONSTARTONLINEGAMECOMPLETE));
+		pFnOnStartOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnStartOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnStartOnlineGameComplete_Parms OnStartOnlineGameComplete_Parms;
@@ -8508,7 +8859,8 @@ bool UOnlineGameInterfaceImpl::StartOnlineGame(struct FName SessionName)
 
 	if (!pFnStartOnlineGame)
 	{
-		pFnStartOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_STARTONLINEGAME));
+		pFnStartOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.StartOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execStartOnlineGame_Parms StartOnlineGame_Parms;
@@ -8534,7 +8886,8 @@ void UOnlineGameInterfaceImpl::ClearUnregisterPlayerCompleteDelegate(struct FScr
 
 	if (!pFnClearUnregisterPlayerCompleteDelegate)
 	{
-		pFnClearUnregisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARUNREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnClearUnregisterPlayerCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearUnregisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearUnregisterPlayerCompleteDelegate_Parms ClearUnregisterPlayerCompleteDelegate_Parms;
@@ -8554,7 +8907,8 @@ void UOnlineGameInterfaceImpl::AddUnregisterPlayerCompleteDelegate(struct FScrip
 
 	if (!pFnAddUnregisterPlayerCompleteDelegate)
 	{
-		pFnAddUnregisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDUNREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnAddUnregisterPlayerCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddUnregisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddUnregisterPlayerCompleteDelegate_Parms AddUnregisterPlayerCompleteDelegate_Parms;
@@ -8576,7 +8930,8 @@ void UOnlineGameInterfaceImpl::OnUnregisterPlayerComplete(struct FName SessionNa
 
 	if (!pFnOnUnregisterPlayerComplete)
 	{
-		pFnOnUnregisterPlayerComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONUNREGISTERPLAYERCOMPLETE));
+		pFnOnUnregisterPlayerComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnUnregisterPlayerComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnUnregisterPlayerComplete_Parms OnUnregisterPlayerComplete_Parms;
@@ -8600,7 +8955,8 @@ bool UOnlineGameInterfaceImpl::UnregisterPlayers(struct FName SessionName, TArra
 
 	if (!pFnUnregisterPlayers)
 	{
-		pFnUnregisterPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_UNREGISTERPLAYERS));
+		pFnUnregisterPlayers = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.UnregisterPlayers");
+
 	}
 
 	UOnlineGameInterfaceImpl_execUnregisterPlayers_Parms UnregisterPlayers_Parms;
@@ -8625,7 +8981,8 @@ bool UOnlineGameInterfaceImpl::UnregisterPlayer(struct FName SessionName, struct
 
 	if (!pFnUnregisterPlayer)
 	{
-		pFnUnregisterPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_UNREGISTERPLAYER));
+		pFnUnregisterPlayer = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.UnregisterPlayer");
+
 	}
 
 	UOnlineGameInterfaceImpl_execUnregisterPlayer_Parms UnregisterPlayer_Parms;
@@ -8648,7 +9005,8 @@ void UOnlineGameInterfaceImpl::ClearRegisterPlayerCompleteDelegate(struct FScrip
 
 	if (!pFnClearRegisterPlayerCompleteDelegate)
 	{
-		pFnClearRegisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnClearRegisterPlayerCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearRegisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearRegisterPlayerCompleteDelegate_Parms ClearRegisterPlayerCompleteDelegate_Parms;
@@ -8668,7 +9026,8 @@ void UOnlineGameInterfaceImpl::AddRegisterPlayerCompleteDelegate(struct FScriptD
 
 	if (!pFnAddRegisterPlayerCompleteDelegate)
 	{
-		pFnAddRegisterPlayerCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDREGISTERPLAYERCOMPLETEDELEGATE));
+		pFnAddRegisterPlayerCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddRegisterPlayerCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddRegisterPlayerCompleteDelegate_Parms AddRegisterPlayerCompleteDelegate_Parms;
@@ -8690,7 +9049,8 @@ void UOnlineGameInterfaceImpl::OnRegisterPlayerComplete(struct FName SessionName
 
 	if (!pFnOnRegisterPlayerComplete)
 	{
-		pFnOnRegisterPlayerComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONREGISTERPLAYERCOMPLETE));
+		pFnOnRegisterPlayerComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnRegisterPlayerComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnRegisterPlayerComplete_Parms OnRegisterPlayerComplete_Parms;
@@ -8714,7 +9074,8 @@ bool UOnlineGameInterfaceImpl::RegisterPlayers(struct FName SessionName, TArray<
 
 	if (!pFnRegisterPlayers)
 	{
-		pFnRegisterPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_REGISTERPLAYERS));
+		pFnRegisterPlayers = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.RegisterPlayers");
+
 	}
 
 	UOnlineGameInterfaceImpl_execRegisterPlayers_Parms RegisterPlayers_Parms;
@@ -8740,7 +9101,8 @@ bool UOnlineGameInterfaceImpl::RegisterPlayer(struct FName SessionName, struct F
 
 	if (!pFnRegisterPlayer)
 	{
-		pFnRegisterPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_REGISTERPLAYER));
+		pFnRegisterPlayer = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.RegisterPlayer");
+
 	}
 
 	UOnlineGameInterfaceImpl_execRegisterPlayer_Parms RegisterPlayer_Parms;
@@ -8766,7 +9128,8 @@ bool UOnlineGameInterfaceImpl::GetResolvedConnectString(struct FName SessionName
 
 	if (!pFnGetResolvedConnectString)
 	{
-		pFnGetResolvedConnectString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_GETRESOLVEDCONNECTSTRING));
+		pFnGetResolvedConnectString = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.GetResolvedConnectString");
+
 	}
 
 	UOnlineGameInterfaceImpl_execGetResolvedConnectString_Parms GetResolvedConnectString_Parms;
@@ -8793,7 +9156,8 @@ void UOnlineGameInterfaceImpl::ClearJoinOnlineGameCompleteDelegate(struct FScrip
 
 	if (!pFnClearJoinOnlineGameCompleteDelegate)
 	{
-		pFnClearJoinOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARJOINONLINEGAMECOMPLETEDELEGATE));
+		pFnClearJoinOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearJoinOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearJoinOnlineGameCompleteDelegate_Parms ClearJoinOnlineGameCompleteDelegate_Parms;
@@ -8813,7 +9177,8 @@ void UOnlineGameInterfaceImpl::AddJoinOnlineGameCompleteDelegate(struct FScriptD
 
 	if (!pFnAddJoinOnlineGameCompleteDelegate)
 	{
-		pFnAddJoinOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDJOINONLINEGAMECOMPLETEDELEGATE));
+		pFnAddJoinOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddJoinOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddJoinOnlineGameCompleteDelegate_Parms AddJoinOnlineGameCompleteDelegate_Parms;
@@ -8834,7 +9199,8 @@ void UOnlineGameInterfaceImpl::OnJoinOnlineGameComplete(struct FName SessionName
 
 	if (!pFnOnJoinOnlineGameComplete)
 	{
-		pFnOnJoinOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONJOINONLINEGAMECOMPLETE));
+		pFnOnJoinOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnJoinOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnJoinOnlineGameComplete_Parms OnJoinOnlineGameComplete_Parms;
@@ -8858,7 +9224,8 @@ bool UOnlineGameInterfaceImpl::JoinOnlineGame(unsigned char PlayerNum, struct FN
 
 	if (!pFnJoinOnlineGame)
 	{
-		pFnJoinOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_JOINONLINEGAME));
+		pFnJoinOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.JoinOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execJoinOnlineGame_Parms JoinOnlineGame_Parms;
@@ -8887,7 +9254,8 @@ bool UOnlineGameInterfaceImpl::FreeSearchResults(class UOnlineGameSearch* Search
 
 	if (!pFnFreeSearchResults)
 	{
-		pFnFreeSearchResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_FREESEARCHRESULTS));
+		pFnFreeSearchResults = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.FreeSearchResults");
+
 	}
 
 	UOnlineGameInterfaceImpl_execFreeSearchResults_Parms FreeSearchResults_Parms;
@@ -8913,7 +9281,8 @@ void UOnlineGameInterfaceImpl::ClearCancelFindOnlineGamesCompleteDelegate(struct
 
 	if (!pFnClearCancelFindOnlineGamesCompleteDelegate)
 	{
-		pFnClearCancelFindOnlineGamesCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARCANCELFINDONLINEGAMESCOMPLETEDELEGATE));
+		pFnClearCancelFindOnlineGamesCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearCancelFindOnlineGamesCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearCancelFindOnlineGamesCompleteDelegate_Parms ClearCancelFindOnlineGamesCompleteDelegate_Parms;
@@ -8933,7 +9302,8 @@ void UOnlineGameInterfaceImpl::AddCancelFindOnlineGamesCompleteDelegate(struct F
 
 	if (!pFnAddCancelFindOnlineGamesCompleteDelegate)
 	{
-		pFnAddCancelFindOnlineGamesCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDCANCELFINDONLINEGAMESCOMPLETEDELEGATE));
+		pFnAddCancelFindOnlineGamesCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddCancelFindOnlineGamesCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddCancelFindOnlineGamesCompleteDelegate_Parms AddCancelFindOnlineGamesCompleteDelegate_Parms;
@@ -8953,7 +9323,8 @@ void UOnlineGameInterfaceImpl::OnCancelFindOnlineGamesComplete(unsigned long bWa
 
 	if (!pFnOnCancelFindOnlineGamesComplete)
 	{
-		pFnOnCancelFindOnlineGamesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONCANCELFINDONLINEGAMESCOMPLETE));
+		pFnOnCancelFindOnlineGamesComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnCancelFindOnlineGamesComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnCancelFindOnlineGamesComplete_Parms OnCancelFindOnlineGamesComplete_Parms;
@@ -8973,7 +9344,8 @@ bool UOnlineGameInterfaceImpl::CancelFindOnlineGames()
 
 	if (!pFnCancelFindOnlineGames)
 	{
-		pFnCancelFindOnlineGames = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CANCELFINDONLINEGAMES));
+		pFnCancelFindOnlineGames = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.CancelFindOnlineGames");
+
 	}
 
 	UOnlineGameInterfaceImpl_execCancelFindOnlineGames_Parms CancelFindOnlineGames_Parms;
@@ -8998,7 +9370,8 @@ void UOnlineGameInterfaceImpl::ClearFindOnlineGamesCompleteDelegate(struct FScri
 
 	if (!pFnClearFindOnlineGamesCompleteDelegate)
 	{
-		pFnClearFindOnlineGamesCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARFINDONLINEGAMESCOMPLETEDELEGATE));
+		pFnClearFindOnlineGamesCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearFindOnlineGamesCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearFindOnlineGamesCompleteDelegate_Parms ClearFindOnlineGamesCompleteDelegate_Parms;
@@ -9018,7 +9391,8 @@ void UOnlineGameInterfaceImpl::AddFindOnlineGamesCompleteDelegate(struct FScript
 
 	if (!pFnAddFindOnlineGamesCompleteDelegate)
 	{
-		pFnAddFindOnlineGamesCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDFINDONLINEGAMESCOMPLETEDELEGATE));
+		pFnAddFindOnlineGamesCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddFindOnlineGamesCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddFindOnlineGamesCompleteDelegate_Parms AddFindOnlineGamesCompleteDelegate_Parms;
@@ -9040,7 +9414,8 @@ bool UOnlineGameInterfaceImpl::FindOnlineGames(unsigned char SearchingPlayerNum,
 
 	if (!pFnFindOnlineGames)
 	{
-		pFnFindOnlineGames = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_FINDONLINEGAMES));
+		pFnFindOnlineGames = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.FindOnlineGames");
+
 	}
 
 	UOnlineGameInterfaceImpl_execFindOnlineGames_Parms FindOnlineGames_Parms;
@@ -9067,7 +9442,8 @@ void UOnlineGameInterfaceImpl::ClearDestroyOnlineGameCompleteDelegate(struct FSc
 
 	if (!pFnClearDestroyOnlineGameCompleteDelegate)
 	{
-		pFnClearDestroyOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARDESTROYONLINEGAMECOMPLETEDELEGATE));
+		pFnClearDestroyOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearDestroyOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearDestroyOnlineGameCompleteDelegate_Parms ClearDestroyOnlineGameCompleteDelegate_Parms;
@@ -9087,7 +9463,8 @@ void UOnlineGameInterfaceImpl::AddDestroyOnlineGameCompleteDelegate(struct FScri
 
 	if (!pFnAddDestroyOnlineGameCompleteDelegate)
 	{
-		pFnAddDestroyOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDDESTROYONLINEGAMECOMPLETEDELEGATE));
+		pFnAddDestroyOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddDestroyOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddDestroyOnlineGameCompleteDelegate_Parms AddDestroyOnlineGameCompleteDelegate_Parms;
@@ -9108,7 +9485,8 @@ void UOnlineGameInterfaceImpl::OnDestroyOnlineGameComplete(struct FName SessionN
 
 	if (!pFnOnDestroyOnlineGameComplete)
 	{
-		pFnOnDestroyOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONDESTROYONLINEGAMECOMPLETE));
+		pFnOnDestroyOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnDestroyOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnDestroyOnlineGameComplete_Parms OnDestroyOnlineGameComplete_Parms;
@@ -9130,7 +9508,8 @@ bool UOnlineGameInterfaceImpl::DestroyOnlineGame(struct FName SessionName)
 
 	if (!pFnDestroyOnlineGame)
 	{
-		pFnDestroyOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_DESTROYONLINEGAME));
+		pFnDestroyOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.DestroyOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execDestroyOnlineGame_Parms DestroyOnlineGame_Parms;
@@ -9156,7 +9535,8 @@ void UOnlineGameInterfaceImpl::ClearUpdateOnlineGameCompleteDelegate(struct FScr
 
 	if (!pFnClearUpdateOnlineGameCompleteDelegate)
 	{
-		pFnClearUpdateOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARUPDATEONLINEGAMECOMPLETEDELEGATE));
+		pFnClearUpdateOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearUpdateOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearUpdateOnlineGameCompleteDelegate_Parms ClearUpdateOnlineGameCompleteDelegate_Parms;
@@ -9176,7 +9556,8 @@ void UOnlineGameInterfaceImpl::AddUpdateOnlineGameCompleteDelegate(struct FScrip
 
 	if (!pFnAddUpdateOnlineGameCompleteDelegate)
 	{
-		pFnAddUpdateOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDUPDATEONLINEGAMECOMPLETEDELEGATE));
+		pFnAddUpdateOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddUpdateOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddUpdateOnlineGameCompleteDelegate_Parms AddUpdateOnlineGameCompleteDelegate_Parms;
@@ -9197,7 +9578,8 @@ void UOnlineGameInterfaceImpl::OnUpdateOnlineGameComplete(struct FName SessionNa
 
 	if (!pFnOnUpdateOnlineGameComplete)
 	{
-		pFnOnUpdateOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONUPDATEONLINEGAMECOMPLETE));
+		pFnOnUpdateOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnUpdateOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnUpdateOnlineGameComplete_Parms OnUpdateOnlineGameComplete_Parms;
@@ -9221,7 +9603,8 @@ bool UOnlineGameInterfaceImpl::UpdateOnlineGame(struct FName SessionName, class 
 
 	if (!pFnUpdateOnlineGame)
 	{
-		pFnUpdateOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_UPDATEONLINEGAME));
+		pFnUpdateOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.UpdateOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execUpdateOnlineGame_Parms UpdateOnlineGame_Parms;
@@ -9245,7 +9628,8 @@ void UOnlineGameInterfaceImpl::ClearCreateOnlineGameCompleteDelegate(struct FScr
 
 	if (!pFnClearCreateOnlineGameCompleteDelegate)
 	{
-		pFnClearCreateOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CLEARCREATEONLINEGAMECOMPLETEDELEGATE));
+		pFnClearCreateOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.ClearCreateOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execClearCreateOnlineGameCompleteDelegate_Parms ClearCreateOnlineGameCompleteDelegate_Parms;
@@ -9265,7 +9649,8 @@ void UOnlineGameInterfaceImpl::AddCreateOnlineGameCompleteDelegate(struct FScrip
 
 	if (!pFnAddCreateOnlineGameCompleteDelegate)
 	{
-		pFnAddCreateOnlineGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ADDCREATEONLINEGAMECOMPLETEDELEGATE));
+		pFnAddCreateOnlineGameCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.AddCreateOnlineGameCompleteDelegate");
+
 	}
 
 	UOnlineGameInterfaceImpl_execAddCreateOnlineGameCompleteDelegate_Parms AddCreateOnlineGameCompleteDelegate_Parms;
@@ -9286,7 +9671,8 @@ void UOnlineGameInterfaceImpl::OnCreateOnlineGameComplete(struct FName SessionNa
 
 	if (!pFnOnCreateOnlineGameComplete)
 	{
-		pFnOnCreateOnlineGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONCREATEONLINEGAMECOMPLETE));
+		pFnOnCreateOnlineGameComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnCreateOnlineGameComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnCreateOnlineGameComplete_Parms OnCreateOnlineGameComplete_Parms;
@@ -9310,7 +9696,8 @@ bool UOnlineGameInterfaceImpl::CreateOnlineGame(unsigned char HostingPlayerNum, 
 
 	if (!pFnCreateOnlineGame)
 	{
-		pFnCreateOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_CREATEONLINEGAME));
+		pFnCreateOnlineGame = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.CreateOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceImpl_execCreateOnlineGame_Parms CreateOnlineGame_Parms;
@@ -9338,7 +9725,8 @@ class UOnlineGameSearch* UOnlineGameInterfaceImpl::GetGameSearch()
 
 	if (!pFnGetGameSearch)
 	{
-		pFnGetGameSearch = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_GETGAMESEARCH));
+		pFnGetGameSearch = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.GetGameSearch");
+
 	}
 
 	UOnlineGameInterfaceImpl_execGetGameSearch_Parms GetGameSearch_Parms;
@@ -9360,7 +9748,8 @@ class UOnlineGameSettings* UOnlineGameInterfaceImpl::GetGameSettings(struct FNam
 
 	if (!pFnGetGameSettings)
 	{
-		pFnGetGameSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_GETGAMESETTINGS));
+		pFnGetGameSettings = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.GetGameSettings");
+
 	}
 
 	UOnlineGameInterfaceImpl_execGetGameSettings_Parms GetGameSettings_Parms;
@@ -9382,7 +9771,8 @@ void UOnlineGameInterfaceImpl::OnFindOnlineGamesComplete(unsigned long bWasSucce
 
 	if (!pFnOnFindOnlineGamesComplete)
 	{
-		pFnOnFindOnlineGamesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEGAMEINTERFACEIMPL_ONFINDONLINEGAMESCOMPLETE));
+		pFnOnFindOnlineGamesComplete = UFunction::FindFunction("Function IpDrv.OnlineGameInterfaceImpl.OnFindOnlineGamesComplete");
+
 	}
 
 	UOnlineGameInterfaceImpl_execOnFindOnlineGamesComplete_Parms OnFindOnlineGamesComplete_Parms;
@@ -9392,7 +9782,7 @@ void UOnlineGameInterfaceImpl::OnFindOnlineGamesComplete(unsigned long bWasSucce
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.GetImageType
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 ContentType                    (CPF_Parm | CPF_NeedCtorLink)
@@ -9403,7 +9793,8 @@ unsigned char UOnlineImageDownloaderWeb::GetImageType(struct FString ContentType
 
 	if (!pFnGetImageType)
 	{
-		pFnGetImageType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_GETIMAGETYPE));
+		pFnGetImageType = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.GetImageType");
+
 	}
 
 	UOnlineImageDownloaderWeb_execGetImageType_Parms GetImageType_Parms;
@@ -9432,7 +9823,8 @@ void UOnlineImageDownloaderWeb::QueueURLForDownload(struct FString NewURL, struc
 
 	if (!pFnQueueURLForDownload)
 	{
-		pFnQueueURLForDownload = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_QUEUEURLFORDOWNLOAD));
+		pFnQueueURLForDownload = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.QueueURLForDownload");
+
 	}
 
 	UOnlineImageDownloaderWeb_execQueueURLForDownload_Parms QueueURLForDownload_Parms;
@@ -9455,7 +9847,8 @@ void UOnlineImageDownloaderWeb::DebugDraw(class UCanvas* Canvas)
 
 	if (!pFnDebugDraw)
 	{
-		pFnDebugDraw = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_DEBUGDRAW));
+		pFnDebugDraw = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.DebugDraw");
+
 	}
 
 	UOnlineImageDownloaderWeb_execDebugDraw_Parms DebugDraw_Parms;
@@ -9477,7 +9870,8 @@ void UOnlineImageDownloaderWeb::OnDownloadComplete(class UHttpRequestInterface* 
 
 	if (!pFnOnDownloadComplete)
 	{
-		pFnOnDownloadComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ONDOWNLOADCOMPLETE));
+		pFnOnDownloadComplete = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.OnDownloadComplete");
+
 	}
 
 	UOnlineImageDownloaderWeb_execOnDownloadComplete_Parms OnDownloadComplete_Parms;
@@ -9489,7 +9883,7 @@ void UOnlineImageDownloaderWeb::OnDownloadComplete(class UHttpRequestInterface* 
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.DownloadNextImage
-// [0x00040003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Private | FUNC_AllFlags)
+// [0x00050003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Private | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineImageDownloaderWeb::DownloadNextImage()
@@ -9498,7 +9892,8 @@ void UOnlineImageDownloaderWeb::DownloadNextImage()
 
 	if (!pFnDownloadNextImage)
 	{
-		pFnDownloadNextImage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_DOWNLOADNEXTIMAGE));
+		pFnDownloadNextImage = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.DownloadNextImage");
+
 	}
 
 	UOnlineImageDownloaderWeb_execDownloadNextImage_Parms DownloadNextImage_Parms;
@@ -9507,7 +9902,7 @@ void UOnlineImageDownloaderWeb::DownloadNextImage()
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.RequestOnlineImages
-// [0x00424003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00434003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         FinishedCallback               (CPF_Parm | CPF_NeedCtorLink)
 // unsigned long                  bSupportSRGB                   (CPF_OptionalParm | CPF_Parm)
@@ -9519,7 +9914,8 @@ void UOnlineImageDownloaderWeb::RequestOnlineImages(struct FScriptDelegate Finis
 
 	if (!pFnRequestOnlineImages)
 	{
-		pFnRequestOnlineImages = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_REQUESTONLINEIMAGES));
+		pFnRequestOnlineImages = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.RequestOnlineImages");
+
 	}
 
 	UOnlineImageDownloaderWeb_execRequestOnlineImages_Parms RequestOnlineImages_Parms;
@@ -9542,7 +9938,8 @@ class UTexture* UOnlineImageDownloaderWeb::GetOnlineImageTexture(struct FString 
 
 	if (!pFnGetOnlineImageTexture)
 	{
-		pFnGetOnlineImageTexture = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_GETONLINEIMAGETEXTURE));
+		pFnGetOnlineImageTexture = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.GetOnlineImageTexture");
+
 	}
 
 	UOnlineImageDownloaderWeb_execGetOnlineImageTexture_Parms GetOnlineImageTexture_Parms;
@@ -9563,7 +9960,8 @@ void UOnlineImageDownloaderWeb::ClearQueue()
 
 	if (!pFnClearQueue)
 	{
-		pFnClearQueue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_CLEARQUEUE));
+		pFnClearQueue = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.ClearQueue");
+
 	}
 
 	UOnlineImageDownloaderWeb_execClearQueue_Parms ClearQueue_Parms;
@@ -9586,7 +9984,8 @@ struct FString UOnlineImageDownloaderWeb::Dequeue()
 
 	if (!pFnDequeue)
 	{
-		pFnDequeue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_DEQUEUE));
+		pFnDequeue = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.Dequeue");
+
 	}
 
 	UOnlineImageDownloaderWeb_execDequeue_Parms Dequeue_Parms;
@@ -9611,7 +10010,8 @@ void UOnlineImageDownloaderWeb::Enqueue(struct FString URL)
 
 	if (!pFnEnqueue)
 	{
-		pFnEnqueue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ENQUEUE));
+		pFnEnqueue = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.Enqueue");
+
 	}
 
 	UOnlineImageDownloaderWeb_execEnqueue_Parms Enqueue_Parms;
@@ -9634,7 +10034,8 @@ void UOnlineImageDownloaderWeb::ClearActiveDownloads()
 
 	if (!pFnClearActiveDownloads)
 	{
-		pFnClearActiveDownloads = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_CLEARACTIVEDOWNLOADS));
+		pFnClearActiveDownloads = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.ClearActiveDownloads");
+
 	}
 
 	UOnlineImageDownloaderWeb_execClearActiveDownloads_Parms ClearActiveDownloads_Parms;
@@ -9656,7 +10057,8 @@ void UOnlineImageDownloaderWeb::ClearCompletedDownloads()
 
 	if (!pFnClearCompletedDownloads)
 	{
-		pFnClearCompletedDownloads = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_CLEARCOMPLETEDDOWNLOADS));
+		pFnClearCompletedDownloads = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.ClearCompletedDownloads");
+
 	}
 
 	UOnlineImageDownloaderWeb_execClearCompletedDownloads_Parms ClearCompletedDownloads_Parms;
@@ -9680,7 +10082,8 @@ void UOnlineImageDownloaderWeb::HandleImageDecoded(struct FString RequestedURL, 
 
 	if (!pFnHandleImageDecoded)
 	{
-		pFnHandleImageDecoded = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_HANDLEIMAGEDECODED));
+		pFnHandleImageDecoded = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.HandleImageDecoded");
+
 	}
 
 	UOnlineImageDownloaderWeb_execHandleImageDecoded_Parms HandleImageDecoded_Parms;
@@ -9705,7 +10108,8 @@ void UOnlineImageDownloaderWeb::RequeueFailedURL(struct FString URL)
 
 	if (!pFnRequeueFailedURL)
 	{
-		pFnRequeueFailedURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_REQUEUEFAILEDURL));
+		pFnRequeueFailedURL = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.RequeueFailedURL");
+
 	}
 
 	UOnlineImageDownloaderWeb_execRequeueFailedURL_Parms RequeueFailedURL_Parms;
@@ -9728,7 +10132,8 @@ void UOnlineImageDownloaderWeb::DownloadNextQueuedURL()
 
 	if (!pFnDownloadNextQueuedURL)
 	{
-		pFnDownloadNextQueuedURL = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_DOWNLOADNEXTQUEUEDURL));
+		pFnDownloadNextQueuedURL = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.DownloadNextQueuedURL");
+
 	}
 
 	UOnlineImageDownloaderWeb_execDownloadNextQueuedURL_Parms DownloadNextQueuedURL_Parms;
@@ -9753,7 +10158,8 @@ void UOnlineImageDownloaderWeb::UpdateActiveDownloadFromResponse(struct FString 
 
 	if (!pFnUpdateActiveDownloadFromResponse)
 	{
-		pFnUpdateActiveDownloadFromResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_UPDATEACTIVEDOWNLOADFROMRESPONSE));
+		pFnUpdateActiveDownloadFromResponse = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.UpdateActiveDownloadFromResponse");
+
 	}
 
 	UOnlineImageDownloaderWeb_execUpdateActiveDownloadFromResponse_Parms UpdateActiveDownloadFromResponse_Parms;
@@ -9779,7 +10185,8 @@ void UOnlineImageDownloaderWeb::MarkActiveDownloadFailed(struct FString URL)
 
 	if (!pFnMarkActiveDownloadFailed)
 	{
-		pFnMarkActiveDownloadFailed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_MARKACTIVEDOWNLOADFAILED));
+		pFnMarkActiveDownloadFailed = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.MarkActiveDownloadFailed");
+
 	}
 
 	UOnlineImageDownloaderWeb_execMarkActiveDownloadFailed_Parms MarkActiveDownloadFailed_Parms;
@@ -9806,7 +10213,8 @@ void UOnlineImageDownloaderWeb::QueueURLForDownloadInternal(struct FString NewUR
 
 	if (!pFnQueueURLForDownloadInternal)
 	{
-		pFnQueueURLForDownloadInternal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_QUEUEURLFORDOWNLOADINTERNAL));
+		pFnQueueURLForDownloadInternal = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.QueueURLForDownloadInternal");
+
 	}
 
 	UOnlineImageDownloaderWeb_execQueueURLForDownloadInternal_Parms QueueURLForDownloadInternal_Parms;
@@ -9834,7 +10242,8 @@ void UOnlineImageDownloaderWeb::AddCallbackToDownload(struct FString URL, struct
 
 	if (!pFnAddCallbackToDownload)
 	{
-		pFnAddCallbackToDownload = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ADDCALLBACKTODOWNLOAD));
+		pFnAddCallbackToDownload = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.AddCallbackToDownload");
+
 	}
 
 	UOnlineImageDownloaderWeb_execAddCallbackToDownload_Parms AddCallbackToDownload_Parms;
@@ -9860,7 +10269,8 @@ struct FOnlineImageDownload UOnlineImageDownloaderWeb::GetDownload(struct FStrin
 
 	if (!pFnGetDownload)
 	{
-		pFnGetDownload = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_GETDOWNLOAD));
+		pFnGetDownload = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.GetDownload");
+
 	}
 
 	UOnlineImageDownloaderWeb_execGetDownload_Parms GetDownload_Parms;
@@ -9887,7 +10297,8 @@ bool UOnlineImageDownloaderWeb::IsURLQueued(struct FString URL)
 
 	if (!pFnIsURLQueued)
 	{
-		pFnIsURLQueued = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ISURLQUEUED));
+		pFnIsURLQueued = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.IsURLQueued");
+
 	}
 
 	UOnlineImageDownloaderWeb_execIsURLQueued_Parms IsURLQueued_Parms;
@@ -9914,7 +10325,8 @@ bool UOnlineImageDownloaderWeb::IsURLActive(struct FString URL)
 
 	if (!pFnIsURLActive)
 	{
-		pFnIsURLActive = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ISURLACTIVE));
+		pFnIsURLActive = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.IsURLActive");
+
 	}
 
 	UOnlineImageDownloaderWeb_execIsURLActive_Parms IsURLActive_Parms;
@@ -9941,7 +10353,8 @@ bool UOnlineImageDownloaderWeb::DidURLFail(struct FString URL)
 
 	if (!pFnDidURLFail)
 	{
-		pFnDidURLFail = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_DIDURLFAIL));
+		pFnDidURLFail = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.DidURLFail");
+
 	}
 
 	UOnlineImageDownloaderWeb_execDidURLFail_Parms DidURLFail_Parms;
@@ -9968,7 +10381,8 @@ bool UOnlineImageDownloaderWeb::DidURLSucceed(struct FString URL)
 
 	if (!pFnDidURLSucceed)
 	{
-		pFnDidURLSucceed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_DIDURLSUCCEED));
+		pFnDidURLSucceed = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.DidURLSucceed");
+
 	}
 
 	UOnlineImageDownloaderWeb_execDidURLSucceed_Parms DidURLSucceed_Parms;
@@ -9995,7 +10409,8 @@ bool UOnlineImageDownloaderWeb::IsURLTracked(struct FString URL)
 
 	if (!pFnIsURLTracked)
 	{
-		pFnIsURLTracked = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ISURLTRACKED));
+		pFnIsURLTracked = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.IsURLTracked");
+
 	}
 
 	UOnlineImageDownloaderWeb_execIsURLTracked_Parms IsURLTracked_Parms;
@@ -10023,7 +10438,8 @@ void UOnlineImageDownloaderWeb::AllValues(int StartIndex, int MaxValues, struct 
 
 	if (!pFnAllValues)
 	{
-		pFnAllValues = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ALLVALUES));
+		pFnAllValues = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.AllValues");
+
 	}
 
 	UOnlineImageDownloaderWeb_execAllValues_Parms AllValues_Parms;
@@ -10048,7 +10464,8 @@ void UOnlineImageDownloaderWeb::ClearPendingDownloads()
 
 	if (!pFnClearPendingDownloads)
 	{
-		pFnClearPendingDownloads = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_CLEARPENDINGDOWNLOADS));
+		pFnClearPendingDownloads = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.ClearPendingDownloads");
+
 	}
 
 	UOnlineImageDownloaderWeb_execClearPendingDownloads_Parms ClearPendingDownloads_Parms;
@@ -10070,7 +10487,8 @@ void UOnlineImageDownloaderWeb::ClearAllDownloads()
 
 	if (!pFnClearAllDownloads)
 	{
-		pFnClearAllDownloads = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_CLEARALLDOWNLOADS));
+		pFnClearAllDownloads = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.ClearAllDownloads");
+
 	}
 
 	UOnlineImageDownloaderWeb_execClearAllDownloads_Parms ClearAllDownloads_Parms;
@@ -10094,7 +10512,8 @@ void UOnlineImageDownloaderWeb::EventImageDecoded(struct FString RequestURL, str
 
 	if (!pFnEventImageDecoded)
 	{
-		pFnEventImageDecoded = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_EVENTIMAGEDECODED));
+		pFnEventImageDecoded = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.EventImageDecoded");
+
 	}
 
 	UOnlineImageDownloaderWeb_execEventImageDecoded_Parms EventImageDecoded_Parms;
@@ -10115,7 +10534,8 @@ void UOnlineImageDownloaderWeb::OnOnlineImageFinished(struct FOnlineImageDownloa
 
 	if (!pFnOnOnlineImageFinished)
 	{
-		pFnOnOnlineImageFinished = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_ONONLINEIMAGEFINISHED));
+		pFnOnOnlineImageFinished = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.OnOnlineImageFinished");
+
 	}
 
 	UOnlineImageDownloaderWeb_execOnOnlineImageFinished_Parms OnOnlineImageFinished_Parms;
@@ -10134,7 +10554,8 @@ void UOnlineImageDownloaderWeb::eventConstruct()
 
 	if (!pFnConstruct)
 	{
-		pFnConstruct = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEIMAGEDOWNLOADERWEB_CONSTRUCT));
+		pFnConstruct = UFunction::FindFunction("Function IpDrv.OnlineImageDownloaderWeb.Construct");
+
 	}
 
 	UOnlineImageDownloaderWeb_eventConstruct_Parms Construct_Parms;
@@ -10153,7 +10574,8 @@ void UOnlineLobbyInterfaceImpl::ClearHostStartPlayTogetherDelegate(struct FScrip
 
 	if (!pFnClearHostStartPlayTogetherDelegate)
 	{
-		pFnClearHostStartPlayTogetherDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARHOSTSTARTPLAYTOGETHERDELEGATE));
+		pFnClearHostStartPlayTogetherDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearHostStartPlayTogetherDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearHostStartPlayTogetherDelegate_Parms ClearHostStartPlayTogetherDelegate_Parms;
@@ -10173,7 +10595,8 @@ void UOnlineLobbyInterfaceImpl::AddHostStartPlayTogetherDelegate(struct FScriptD
 
 	if (!pFnAddHostStartPlayTogetherDelegate)
 	{
-		pFnAddHostStartPlayTogetherDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDHOSTSTARTPLAYTOGETHERDELEGATE));
+		pFnAddHostStartPlayTogetherDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddHostStartPlayTogetherDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddHostStartPlayTogetherDelegate_Parms AddHostStartPlayTogetherDelegate_Parms;
@@ -10193,7 +10616,8 @@ void UOnlineLobbyInterfaceImpl::OnHostStartPlayTogether(unsigned char LocalUserN
 
 	if (!pFnOnHostStartPlayTogether)
 	{
-		pFnOnHostStartPlayTogether = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONHOSTSTARTPLAYTOGETHER));
+		pFnOnHostStartPlayTogether = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnHostStartPlayTogether");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnHostStartPlayTogether_Parms OnHostStartPlayTogether_Parms;
@@ -10213,7 +10637,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyErrorDelegate(struct FScriptDelegate L
 
 	if (!pFnClearLobbyErrorDelegate)
 	{
-		pFnClearLobbyErrorDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYERRORDELEGATE));
+		pFnClearLobbyErrorDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyErrorDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyErrorDelegate_Parms ClearLobbyErrorDelegate_Parms;
@@ -10233,7 +10658,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyErrorDelegate(struct FScriptDelegate Lob
 
 	if (!pFnAddLobbyErrorDelegate)
 	{
-		pFnAddLobbyErrorDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYERRORDELEGATE));
+		pFnAddLobbyErrorDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyErrorDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyErrorDelegate_Parms AddLobbyErrorDelegate_Parms;
@@ -10253,7 +10679,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyError(struct FString Error)
 
 	if (!pFnOnLobbyError)
 	{
-		pFnOnLobbyError = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYERROR));
+		pFnOnLobbyError = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyError");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyError_Parms OnLobbyError_Parms;
@@ -10275,7 +10702,8 @@ bool UOnlineLobbyInterfaceImpl::eventGetLobbyMembers(struct FUniqueLobbyId& Lobb
 
 	if (!pFnGetLobbyMembers)
 	{
-		pFnGetLobbyMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_GETLOBBYMEMBERS));
+		pFnGetLobbyMembers = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.GetLobbyMembers");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventGetLobbyMembers_Parms GetLobbyMembers_Parms;
@@ -10298,7 +10726,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbySessionCretedeDelegate(struct FScriptD
 
 	if (!pFnClearLobbySessionCretedeDelegate)
 	{
-		pFnClearLobbySessionCretedeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYSESSIONCRETEDEDELEGATE));
+		pFnClearLobbySessionCretedeDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbySessionCretedeDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbySessionCretedeDelegate_Parms ClearLobbySessionCretedeDelegate_Parms;
@@ -10318,7 +10747,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbySessionCreatedDelegate(struct FScriptD
 
 	if (!pFnClearLobbySessionCreatedDelegate)
 	{
-		pFnClearLobbySessionCreatedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYSESSIONCREATEDDELEGATE));
+		pFnClearLobbySessionCreatedDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbySessionCreatedDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbySessionCreatedDelegate_Parms ClearLobbySessionCreatedDelegate_Parms;
@@ -10338,7 +10768,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbySessionCreatedDelegate(struct FScriptDel
 
 	if (!pFnAddLobbySessionCreatedDelegate)
 	{
-		pFnAddLobbySessionCreatedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYSESSIONCREATEDDELEGATE));
+		pFnAddLobbySessionCreatedDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbySessionCreatedDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbySessionCreatedDelegate_Parms AddLobbySessionCreatedDelegate_Parms;
@@ -10357,7 +10788,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbySessionCreatedDelegates()
 
 	if (!pFnTriggerLobbySessionCreatedDelegates)
 	{
-		pFnTriggerLobbySessionCreatedDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYSESSIONCREATEDDELEGATES));
+		pFnTriggerLobbySessionCreatedDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbySessionCreatedDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbySessionCreatedDelegates_Parms TriggerLobbySessionCreatedDelegates_Parms;
@@ -10375,7 +10807,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbySessionCreated()
 
 	if (!pFnOnLobbySessionCreated)
 	{
-		pFnOnLobbySessionCreated = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYSESSIONCREATED));
+		pFnOnLobbySessionCreated = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbySessionCreated");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbySessionCreated_Parms OnLobbySessionCreated_Parms;
@@ -10395,7 +10828,8 @@ int UOnlineLobbyInterfaceImpl::eventGetLobbyIndex(struct FUniqueLobbyId& LobbyId
 
 	if (!pFnGetLobbyIndex)
 	{
-		pFnGetLobbyIndex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_GETLOBBYINDEX));
+		pFnGetLobbyIndex = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.GetLobbyIndex");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventGetLobbyIndex_Parms GetLobbyIndex_Parms;
@@ -10417,7 +10851,8 @@ void UOnlineLobbyInterfaceImpl::RemoveLocalPlayerFromSession(struct FUniqueNetId
 
 	if (!pFnRemoveLocalPlayerFromSession)
 	{
-		pFnRemoveLocalPlayerFromSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_REMOVELOCALPLAYERFROMSESSION));
+		pFnRemoveLocalPlayerFromSession = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.RemoveLocalPlayerFromSession");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execRemoveLocalPlayerFromSession_Parms RemoveLocalPlayerFromSession_Parms;
@@ -10427,7 +10862,7 @@ void UOnlineLobbyInterfaceImpl::RemoveLocalPlayerFromSession(struct FUniqueNetId
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLocalPartyMemberToSession
-// [0x00420000] (FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FUniqueNetId            NewPartyMember                 (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -10437,7 +10872,8 @@ void UOnlineLobbyInterfaceImpl::AddLocalPartyMemberToSession(struct FUniqueNetId
 
 	if (!pFnAddLocalPartyMemberToSession)
 	{
-		pFnAddLocalPartyMemberToSession = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOCALPARTYMEMBERTOSESSION));
+		pFnAddLocalPartyMemberToSession = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLocalPartyMemberToSession");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLocalPartyMemberToSession_Parms AddLocalPartyMemberToSession_Parms;
@@ -10460,7 +10896,8 @@ bool UOnlineLobbyInterfaceImpl::KickPlayer(unsigned char Reason, struct FUniqueL
 
 	if (!pFnKickPlayer)
 	{
-		pFnKickPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_KICKPLAYER));
+		pFnKickPlayer = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.KickPlayer");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execKickPlayer_Parms KickPlayer_Parms;
@@ -10486,7 +10923,8 @@ bool UOnlineLobbyInterfaceImpl::ShowInviteUI(unsigned char LocalUserNum, struct 
 
 	if (!pFnShowInviteUI)
 	{
-		pFnShowInviteUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SHOWINVITEUI));
+		pFnShowInviteUI = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ShowInviteUI");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execShowInviteUI_Parms ShowInviteUI_Parms;
@@ -10510,7 +10948,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbyDestroyedDelegates(int LobbyInd
 
 	if (!pFnTriggerLobbyDestroyedDelegates)
 	{
-		pFnTriggerLobbyDestroyedDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYDESTROYEDDELEGATES));
+		pFnTriggerLobbyDestroyedDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbyDestroyedDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbyDestroyedDelegates_Parms TriggerLobbyDestroyedDelegates_Parms;
@@ -10531,7 +10970,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyDestroyedDelegate(struct FScriptDelega
 
 	if (!pFnClearLobbyDestroyedDelegate)
 	{
-		pFnClearLobbyDestroyedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYDESTROYEDDELEGATE));
+		pFnClearLobbyDestroyedDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyDestroyedDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyDestroyedDelegate_Parms ClearLobbyDestroyedDelegate_Parms;
@@ -10551,7 +10991,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyDestroyedDelegate(struct FScriptDelegate
 
 	if (!pFnAddLobbyDestroyedDelegate)
 	{
-		pFnAddLobbyDestroyedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYDESTROYEDDELEGATE));
+		pFnAddLobbyDestroyedDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyDestroyedDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyDestroyedDelegate_Parms AddLobbyDestroyedDelegate_Parms;
@@ -10572,7 +11013,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyDestroyed(unsigned char Reason, struct FU
 
 	if (!pFnOnLobbyDestroyed)
 	{
-		pFnOnLobbyDestroyed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYDESTROYED));
+		pFnOnLobbyDestroyed = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyDestroyed");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyDestroyed_Parms OnLobbyDestroyed_Parms;
@@ -10593,7 +11035,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyInviteDelegate(struct FScriptDelegate 
 
 	if (!pFnClearLobbyInviteDelegate)
 	{
-		pFnClearLobbyInviteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYINVITEDELEGATE));
+		pFnClearLobbyInviteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyInviteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyInviteDelegate_Parms ClearLobbyInviteDelegate_Parms;
@@ -10603,7 +11046,7 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyInviteDelegate(struct FScriptDelegate 
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyInviteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LobbyInviteDelegate            (CPF_Parm | CPF_NeedCtorLink)
 
@@ -10613,7 +11056,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyInviteDelegate(struct FScriptDelegate Lo
 
 	if (!pFnAddLobbyInviteDelegate)
 	{
-		pFnAddLobbyInviteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYINVITEDELEGATE));
+		pFnAddLobbyInviteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyInviteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyInviteDelegate_Parms AddLobbyInviteDelegate_Parms;
@@ -10635,7 +11079,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyInvite(unsigned long bAccepted, struct FU
 
 	if (!pFnOnLobbyInvite)
 	{
-		pFnOnLobbyInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYINVITE));
+		pFnOnLobbyInvite = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyInvite");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyInvite_Parms OnLobbyInvite_Parms;
@@ -10659,7 +11104,8 @@ bool UOnlineLobbyInterfaceImpl::InviteToLobby(struct FUniqueLobbyId& LobbyId, st
 
 	if (!pFnInviteToLobby)
 	{
-		pFnInviteToLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_INVITETOLOBBY));
+		pFnInviteToLobby = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.InviteToLobby");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execInviteToLobby_Parms InviteToLobby_Parms;
@@ -10684,7 +11130,8 @@ bool UOnlineLobbyInterfaceImpl::CanInviteToLobby(struct FUniqueLobbyId& LobbyId,
 
 	if (!pFnCanInviteToLobby)
 	{
-		pFnCanInviteToLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CANINVITETOLOBBY));
+		pFnCanInviteToLobby = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.CanInviteToLobby");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execCanInviteToLobby_Parms CanInviteToLobby_Parms;
@@ -10709,7 +11156,8 @@ bool UOnlineLobbyInterfaceImpl::SetLobbyOwner(struct FUniqueLobbyId& LobbyId, st
 
 	if (!pFnSetLobbyOwner)
 	{
-		pFnSetLobbyOwner = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SETLOBBYOWNER));
+		pFnSetLobbyOwner = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.SetLobbyOwner");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execSetLobbyOwner_Parms SetLobbyOwner_Parms;
@@ -10734,7 +11182,8 @@ bool UOnlineLobbyInterfaceImpl::SetLobbyLock(unsigned long bLocked, struct FUniq
 
 	if (!pFnSetLobbyLock)
 	{
-		pFnSetLobbyLock = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SETLOBBYLOCK));
+		pFnSetLobbyLock = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.SetLobbyLock");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execSetLobbyLock_Parms SetLobbyLock_Parms;
@@ -10760,7 +11209,8 @@ bool UOnlineLobbyInterfaceImpl::SetLobbyServer(struct FString ServerIP, struct F
 
 	if (!pFnSetLobbyServer)
 	{
-		pFnSetLobbyServer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SETLOBBYSERVER));
+		pFnSetLobbyServer = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.SetLobbyServer");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execSetLobbyServer_Parms SetLobbyServer_Parms;
@@ -10786,7 +11236,8 @@ bool UOnlineLobbyInterfaceImpl::RemoveLobbySetting(struct FString Key, struct FU
 
 	if (!pFnRemoveLobbySetting)
 	{
-		pFnRemoveLobbySetting = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_REMOVELOBBYSETTING));
+		pFnRemoveLobbySetting = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.RemoveLobbySetting");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execRemoveLobbySetting_Parms RemoveLobbySetting_Parms;
@@ -10812,7 +11263,8 @@ bool UOnlineLobbyInterfaceImpl::SetLobbySetting(struct FString Key, struct FStri
 
 	if (!pFnSetLobbySetting)
 	{
-		pFnSetLobbySetting = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SETLOBBYSETTING));
+		pFnSetLobbySetting = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.SetLobbySetting");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execSetLobbySetting_Parms SetLobbySetting_Parms;
@@ -10838,7 +11290,8 @@ bool UOnlineLobbyInterfaceImpl::GetLobbyAdmin(struct FUniqueLobbyId& LobbyId, st
 
 	if (!pFnGetLobbyAdmin)
 	{
-		pFnGetLobbyAdmin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_GETLOBBYADMIN));
+		pFnGetLobbyAdmin = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.GetLobbyAdmin");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execGetLobbyAdmin_Parms GetLobbyAdmin_Parms;
@@ -10861,7 +11314,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyJoinGameDelegate(struct FScriptDelegat
 
 	if (!pFnClearLobbyJoinGameDelegate)
 	{
-		pFnClearLobbyJoinGameDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYJOINGAMEDELEGATE));
+		pFnClearLobbyJoinGameDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyJoinGameDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyJoinGameDelegate_Parms ClearLobbyJoinGameDelegate_Parms;
@@ -10881,7 +11335,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyJoinGameDelegate(struct FScriptDelegate 
 
 	if (!pFnAddLobbyJoinGameDelegate)
 	{
-		pFnAddLobbyJoinGameDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYJOINGAMEDELEGATE));
+		pFnAddLobbyJoinGameDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyJoinGameDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyJoinGameDelegate_Parms AddLobbyJoinGameDelegate_Parms;
@@ -10903,7 +11358,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbyJoinGameDelegates(int LobbyInde
 
 	if (!pFnTriggerLobbyJoinGameDelegates)
 	{
-		pFnTriggerLobbyJoinGameDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYJOINGAMEDELEGATES));
+		pFnTriggerLobbyJoinGameDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbyJoinGameDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbyJoinGameDelegates_Parms TriggerLobbyJoinGameDelegates_Parms;
@@ -10927,7 +11383,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyJoinGame(struct FString ServerIP, struct 
 
 	if (!pFnOnLobbyJoinGame)
 	{
-		pFnOnLobbyJoinGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYJOINGAME));
+		pFnOnLobbyJoinGame = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyJoinGame");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyJoinGame_Parms OnLobbyJoinGame_Parms;
@@ -10949,7 +11406,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyReceiveBinaryDataDelegate(struct FScri
 
 	if (!pFnClearLobbyReceiveBinaryDataDelegate)
 	{
-		pFnClearLobbyReceiveBinaryDataDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYRECEIVEBINARYDATADELEGATE));
+		pFnClearLobbyReceiveBinaryDataDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyReceiveBinaryDataDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyReceiveBinaryDataDelegate_Parms ClearLobbyReceiveBinaryDataDelegate_Parms;
@@ -10959,7 +11417,7 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyReceiveBinaryDataDelegate(struct FScri
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyReceiveBinaryDataDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LobbyReceiveBinaryDataDelegate (CPF_Parm | CPF_NeedCtorLink)
 
@@ -10969,7 +11427,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyReceiveBinaryDataDelegate(struct FScript
 
 	if (!pFnAddLobbyReceiveBinaryDataDelegate)
 	{
-		pFnAddLobbyReceiveBinaryDataDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYRECEIVEBINARYDATADELEGATE));
+		pFnAddLobbyReceiveBinaryDataDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyReceiveBinaryDataDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyReceiveBinaryDataDelegate_Parms AddLobbyReceiveBinaryDataDelegate_Parms;
@@ -10990,7 +11449,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbyReceiveBinaryDataDelegates(int 
 
 	if (!pFnTriggerLobbyReceiveBinaryDataDelegates)
 	{
-		pFnTriggerLobbyReceiveBinaryDataDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYRECEIVEBINARYDATADELEGATES));
+		pFnTriggerLobbyReceiveBinaryDataDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbyReceiveBinaryDataDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbyReceiveBinaryDataDelegates_Parms TriggerLobbyReceiveBinaryDataDelegates_Parms;
@@ -11013,7 +11473,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyReceiveBinaryData(int MemberIndex, struct
 
 	if (!pFnOnLobbyReceiveBinaryData)
 	{
-		pFnOnLobbyReceiveBinaryData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYRECEIVEBINARYDATA));
+		pFnOnLobbyReceiveBinaryData = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyReceiveBinaryData");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyReceiveBinaryData_Parms OnLobbyReceiveBinaryData_Parms;
@@ -11037,7 +11498,8 @@ bool UOnlineLobbyInterfaceImpl::SendLobbyBinaryData(struct FUniqueLobbyId& Lobby
 
 	if (!pFnSendLobbyBinaryData)
 	{
-		pFnSendLobbyBinaryData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SENDLOBBYBINARYDATA));
+		pFnSendLobbyBinaryData = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.SendLobbyBinaryData");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execSendLobbyBinaryData_Parms SendLobbyBinaryData_Parms;
@@ -11060,7 +11522,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyReceiveMessageDelegate(struct FScriptD
 
 	if (!pFnClearLobbyReceiveMessageDelegate)
 	{
-		pFnClearLobbyReceiveMessageDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYRECEIVEMESSAGEDELEGATE));
+		pFnClearLobbyReceiveMessageDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyReceiveMessageDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyReceiveMessageDelegate_Parms ClearLobbyReceiveMessageDelegate_Parms;
@@ -11080,7 +11543,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyReceiveMessageDelegate(struct FScriptDel
 
 	if (!pFnAddLobbyReceiveMessageDelegate)
 	{
-		pFnAddLobbyReceiveMessageDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYRECEIVEMESSAGEDELEGATE));
+		pFnAddLobbyReceiveMessageDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyReceiveMessageDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyReceiveMessageDelegate_Parms AddLobbyReceiveMessageDelegate_Parms;
@@ -11103,7 +11567,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbyReceiveMessageDelegates(int Lob
 
 	if (!pFnTriggerLobbyReceiveMessageDelegates)
 	{
-		pFnTriggerLobbyReceiveMessageDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYRECEIVEMESSAGEDELEGATES));
+		pFnTriggerLobbyReceiveMessageDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbyReceiveMessageDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbyReceiveMessageDelegates_Parms TriggerLobbyReceiveMessageDelegates_Parms;
@@ -11129,7 +11594,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyReceiveMessage(int MemberIndex, struct FS
 
 	if (!pFnOnLobbyReceiveMessage)
 	{
-		pFnOnLobbyReceiveMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYRECEIVEMESSAGE));
+		pFnOnLobbyReceiveMessage = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyReceiveMessage");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyReceiveMessage_Parms OnLobbyReceiveMessage_Parms;
@@ -11154,7 +11620,8 @@ bool UOnlineLobbyInterfaceImpl::SendLobbyMessage(struct FString Message, struct 
 
 	if (!pFnSendLobbyMessage)
 	{
-		pFnSendLobbyMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SENDLOBBYMESSAGE));
+		pFnSendLobbyMessage = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.SendLobbyMessage");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execSendLobbyMessage_Parms SendLobbyMessage_Parms;
@@ -11177,7 +11644,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyMemberStatusUpdateDelegate(struct FScr
 
 	if (!pFnClearLobbyMemberStatusUpdateDelegate)
 	{
-		pFnClearLobbyMemberStatusUpdateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYMEMBERSTATUSUPDATEDELEGATE));
+		pFnClearLobbyMemberStatusUpdateDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyMemberStatusUpdateDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyMemberStatusUpdateDelegate_Parms ClearLobbyMemberStatusUpdateDelegate_Parms;
@@ -11197,7 +11665,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyMemberStatusUpdateDelegate(struct FScrip
 
 	if (!pFnAddLobbyMemberStatusUpdateDelegate)
 	{
-		pFnAddLobbyMemberStatusUpdateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYMEMBERSTATUSUPDATEDELEGATE));
+		pFnAddLobbyMemberStatusUpdateDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyMemberStatusUpdateDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyMemberStatusUpdateDelegate_Parms AddLobbyMemberStatusUpdateDelegate_Parms;
@@ -11220,7 +11689,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbyMemberStatusUpdateDelegates(int
 
 	if (!pFnTriggerLobbyMemberStatusUpdateDelegates)
 	{
-		pFnTriggerLobbyMemberStatusUpdateDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYMEMBERSTATUSUPDATEDELEGATES));
+		pFnTriggerLobbyMemberStatusUpdateDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbyMemberStatusUpdateDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbyMemberStatusUpdateDelegates_Parms TriggerLobbyMemberStatusUpdateDelegates_Parms;
@@ -11246,7 +11716,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyMemberStatusUpdate(int MemberIndex, int I
 
 	if (!pFnOnLobbyMemberStatusUpdate)
 	{
-		pFnOnLobbyMemberStatusUpdate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYMEMBERSTATUSUPDATE));
+		pFnOnLobbyMemberStatusUpdate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyMemberStatusUpdate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyMemberStatusUpdate_Parms OnLobbyMemberStatusUpdate_Parms;
@@ -11269,7 +11740,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyMemberSettingsUpdateDelegate(struct FS
 
 	if (!pFnClearLobbyMemberSettingsUpdateDelegate)
 	{
-		pFnClearLobbyMemberSettingsUpdateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYMEMBERSETTINGSUPDATEDELEGATE));
+		pFnClearLobbyMemberSettingsUpdateDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbyMemberSettingsUpdateDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbyMemberSettingsUpdateDelegate_Parms ClearLobbyMemberSettingsUpdateDelegate_Parms;
@@ -11289,7 +11761,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbyMemberSettingsUpdateDelegate(struct FScr
 
 	if (!pFnAddLobbyMemberSettingsUpdateDelegate)
 	{
-		pFnAddLobbyMemberSettingsUpdateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYMEMBERSETTINGSUPDATEDELEGATE));
+		pFnAddLobbyMemberSettingsUpdateDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyMemberSettingsUpdateDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbyMemberSettingsUpdateDelegate_Parms AddLobbyMemberSettingsUpdateDelegate_Parms;
@@ -11310,7 +11783,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbyMemberSettingsUpdateDelegates(i
 
 	if (!pFnTriggerLobbyMemberSettingsUpdateDelegates)
 	{
-		pFnTriggerLobbyMemberSettingsUpdateDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYMEMBERSETTINGSUPDATEDELEGATES));
+		pFnTriggerLobbyMemberSettingsUpdateDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbyMemberSettingsUpdateDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbyMemberSettingsUpdateDelegates_Parms TriggerLobbyMemberSettingsUpdateDelegates_Parms;
@@ -11332,7 +11806,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbyMemberSettingsUpdate(int MemberIndex, str
 
 	if (!pFnOnLobbyMemberSettingsUpdate)
 	{
-		pFnOnLobbyMemberSettingsUpdate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYMEMBERSETTINGSUPDATE));
+		pFnOnLobbyMemberSettingsUpdate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbyMemberSettingsUpdate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbyMemberSettingsUpdate_Parms OnLobbyMemberSettingsUpdate_Parms;
@@ -11353,7 +11828,8 @@ void UOnlineLobbyInterfaceImpl::ClearLobbySettingsUpdateDelegate(struct FScriptD
 
 	if (!pFnClearLobbySettingsUpdateDelegate)
 	{
-		pFnClearLobbySettingsUpdateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARLOBBYSETTINGSUPDATEDELEGATE));
+		pFnClearLobbySettingsUpdateDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearLobbySettingsUpdateDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearLobbySettingsUpdateDelegate_Parms ClearLobbySettingsUpdateDelegate_Parms;
@@ -11373,7 +11849,8 @@ void UOnlineLobbyInterfaceImpl::AddLobbySettingsUpdateDelegate(struct FScriptDel
 
 	if (!pFnAddLobbySettingsUpdateDelegate)
 	{
-		pFnAddLobbySettingsUpdateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDLOBBYSETTINGSUPDATEDELEGATE));
+		pFnAddLobbySettingsUpdateDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbySettingsUpdateDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddLobbySettingsUpdateDelegate_Parms AddLobbySettingsUpdateDelegate_Parms;
@@ -11393,7 +11870,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerLobbySettingsUpdateDelegates(int Lob
 
 	if (!pFnTriggerLobbySettingsUpdateDelegates)
 	{
-		pFnTriggerLobbySettingsUpdateDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERLOBBYSETTINGSUPDATEDELEGATES));
+		pFnTriggerLobbySettingsUpdateDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerLobbySettingsUpdateDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerLobbySettingsUpdateDelegates_Parms TriggerLobbySettingsUpdateDelegates_Parms;
@@ -11413,7 +11891,8 @@ void UOnlineLobbyInterfaceImpl::OnLobbySettingsUpdate(struct FActiveLobbyInfo& L
 
 	if (!pFnOnLobbySettingsUpdate)
 	{
-		pFnOnLobbySettingsUpdate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONLOBBYSETTINGSUPDATE));
+		pFnOnLobbySettingsUpdate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnLobbySettingsUpdate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnLobbySettingsUpdate_Parms OnLobbySettingsUpdate_Parms;
@@ -11436,7 +11915,8 @@ bool UOnlineLobbyInterfaceImpl::SetLobbyUserSetting(struct FString Key, struct F
 
 	if (!pFnSetLobbyUserSetting)
 	{
-		pFnSetLobbyUserSetting = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_SETLOBBYUSERSETTING));
+		pFnSetLobbyUserSetting = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.SetLobbyUserSetting");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execSetLobbyUserSetting_Parms SetLobbyUserSetting_Parms;
@@ -11461,7 +11941,8 @@ bool UOnlineLobbyInterfaceImpl::LeaveLobby(struct FUniqueLobbyId& LobbyId)
 
 	if (!pFnLeaveLobby)
 	{
-		pFnLeaveLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_LEAVELOBBY));
+		pFnLeaveLobby = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.LeaveLobby");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execLeaveLobby_Parms LeaveLobby_Parms;
@@ -11483,7 +11964,8 @@ void UOnlineLobbyInterfaceImpl::ClearJoinLobbyCompleteDelegate(struct FScriptDel
 
 	if (!pFnClearJoinLobbyCompleteDelegate)
 	{
-		pFnClearJoinLobbyCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARJOINLOBBYCOMPLETEDELEGATE));
+		pFnClearJoinLobbyCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearJoinLobbyCompleteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearJoinLobbyCompleteDelegate_Parms ClearJoinLobbyCompleteDelegate_Parms;
@@ -11503,7 +11985,8 @@ void UOnlineLobbyInterfaceImpl::AddJoinLobbyCompleteDelegate(struct FScriptDeleg
 
 	if (!pFnAddJoinLobbyCompleteDelegate)
 	{
-		pFnAddJoinLobbyCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDJOINLOBBYCOMPLETEDELEGATE));
+		pFnAddJoinLobbyCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddJoinLobbyCompleteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddJoinLobbyCompleteDelegate_Parms AddJoinLobbyCompleteDelegate_Parms;
@@ -11526,7 +12009,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerJoinLobbyCompleteDelegates(unsigned 
 
 	if (!pFnTriggerJoinLobbyCompleteDelegates)
 	{
-		pFnTriggerJoinLobbyCompleteDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERJOINLOBBYCOMPLETEDELEGATES));
+		pFnTriggerJoinLobbyCompleteDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerJoinLobbyCompleteDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerJoinLobbyCompleteDelegates_Parms TriggerJoinLobbyCompleteDelegates_Parms;
@@ -11552,7 +12036,8 @@ void UOnlineLobbyInterfaceImpl::OnJoinLobbyComplete(unsigned long bWasSuccessful
 
 	if (!pFnOnJoinLobbyComplete)
 	{
-		pFnOnJoinLobbyComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONJOINLOBBYCOMPLETE));
+		pFnOnJoinLobbyComplete = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnJoinLobbyComplete");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnJoinLobbyComplete_Parms OnJoinLobbyComplete_Parms;
@@ -11577,7 +12062,8 @@ bool UOnlineLobbyInterfaceImpl::JoinLobby(int LocalPlayerNum, struct FUniqueLobb
 
 	if (!pFnJoinLobby)
 	{
-		pFnJoinLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_JOINLOBBY));
+		pFnJoinLobby = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.JoinLobby");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execJoinLobby_Parms JoinLobby_Parms;
@@ -11600,7 +12086,8 @@ void UOnlineLobbyInterfaceImpl::ClearFindLobbiesCompleteDelegate(struct FScriptD
 
 	if (!pFnClearFindLobbiesCompleteDelegate)
 	{
-		pFnClearFindLobbiesCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARFINDLOBBIESCOMPLETEDELEGATE));
+		pFnClearFindLobbiesCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearFindLobbiesCompleteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearFindLobbiesCompleteDelegate_Parms ClearFindLobbiesCompleteDelegate_Parms;
@@ -11620,7 +12107,8 @@ void UOnlineLobbyInterfaceImpl::AddFindLobbiesCompleteDelegate(struct FScriptDel
 
 	if (!pFnAddFindLobbiesCompleteDelegate)
 	{
-		pFnAddFindLobbiesCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDFINDLOBBIESCOMPLETEDELEGATE));
+		pFnAddFindLobbiesCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddFindLobbiesCompleteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddFindLobbiesCompleteDelegate_Parms AddFindLobbiesCompleteDelegate_Parms;
@@ -11640,7 +12128,8 @@ void UOnlineLobbyInterfaceImpl::eventTriggerFindLobbiesCompleteDelegates(unsigne
 
 	if (!pFnTriggerFindLobbiesCompleteDelegates)
 	{
-		pFnTriggerFindLobbiesCompleteDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_TRIGGERFINDLOBBIESCOMPLETEDELEGATES));
+		pFnTriggerFindLobbiesCompleteDelegates = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.TriggerFindLobbiesCompleteDelegates");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_eventTriggerFindLobbiesCompleteDelegates_Parms TriggerFindLobbiesCompleteDelegates_Parms;
@@ -11661,7 +12150,8 @@ void UOnlineLobbyInterfaceImpl::OnFindLobbiesComplete(unsigned long bWasSuccessf
 
 	if (!pFnOnFindLobbiesComplete)
 	{
-		pFnOnFindLobbiesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONFINDLOBBIESCOMPLETE));
+		pFnOnFindLobbiesComplete = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnFindLobbiesComplete");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnFindLobbiesComplete_Parms OnFindLobbiesComplete_Parms;
@@ -11683,7 +12173,8 @@ bool UOnlineLobbyInterfaceImpl::UpdateFoundLobbies(struct FUniqueLobbyId LobbyId
 
 	if (!pFnUpdateFoundLobbies)
 	{
-		pFnUpdateFoundLobbies = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_UPDATEFOUNDLOBBIES));
+		pFnUpdateFoundLobbies = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.UpdateFoundLobbies");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execUpdateFoundLobbies_Parms UpdateFoundLobbies_Parms;
@@ -11710,7 +12201,8 @@ bool UOnlineLobbyInterfaceImpl::FindLobbies(int MaxResults, TArray<struct FLobby
 
 	if (!pFnFindLobbies)
 	{
-		pFnFindLobbies = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_FINDLOBBIES));
+		pFnFindLobbies = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.FindLobbies");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execFindLobbies_Parms FindLobbies_Parms;
@@ -11736,7 +12228,8 @@ void UOnlineLobbyInterfaceImpl::ClearCreateLobbyCompleteDelegate(struct FScriptD
 
 	if (!pFnClearCreateLobbyCompleteDelegate)
 	{
-		pFnClearCreateLobbyCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CLEARCREATELOBBYCOMPLETEDELEGATE));
+		pFnClearCreateLobbyCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.ClearCreateLobbyCompleteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execClearCreateLobbyCompleteDelegate_Parms ClearCreateLobbyCompleteDelegate_Parms;
@@ -11756,7 +12249,8 @@ void UOnlineLobbyInterfaceImpl::AddCreateLobbyCompleteDelegate(struct FScriptDel
 
 	if (!pFnAddCreateLobbyCompleteDelegate)
 	{
-		pFnAddCreateLobbyCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ADDCREATELOBBYCOMPLETEDELEGATE));
+		pFnAddCreateLobbyCompleteDelegate = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.AddCreateLobbyCompleteDelegate");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execAddCreateLobbyCompleteDelegate_Parms AddCreateLobbyCompleteDelegate_Parms;
@@ -11778,7 +12272,8 @@ void UOnlineLobbyInterfaceImpl::OnCreateLobbyComplete(unsigned long bWasSuccessf
 
 	if (!pFnOnCreateLobbyComplete)
 	{
-		pFnOnCreateLobbyComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_ONCREATELOBBYCOMPLETE));
+		pFnOnCreateLobbyComplete = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.OnCreateLobbyComplete");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execOnCreateLobbyComplete_Parms OnCreateLobbyComplete_Parms;
@@ -11804,7 +12299,8 @@ bool UOnlineLobbyInterfaceImpl::CreateLobby(int LocalPlayerNum, int MaxPlayers, 
 
 	if (!pFnCreateLobby)
 	{
-		pFnCreateLobby = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINELOBBYINTERFACEIMPL_CREATELOBBY));
+		pFnCreateLobby = UFunction::FindFunction("Function IpDrv.OnlineLobbyInterfaceImpl.CreateLobby");
+
 	}
 
 	UOnlineLobbyInterfaceImpl_execCreateLobby_Parms CreateLobby_Parms;
@@ -11831,7 +12327,8 @@ bool UOnlinePersistentAuthInterfaceImpl::AuthWithNintendoAccountToken(unsigned c
 
 	if (!pFnAuthWithNintendoAccountToken)
 	{
-		pFnAuthWithNintendoAccountToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_AUTHWITHNINTENDOACCOUNTTOKEN));
+		pFnAuthWithNintendoAccountToken = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.AuthWithNintendoAccountToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execAuthWithNintendoAccountToken_Parms AuthWithNintendoAccountToken_Parms;
@@ -11855,7 +12352,8 @@ class UDateTime* UOnlinePersistentAuthInterfaceImpl::GetAuthExpirationTimestamp(
 
 	if (!pFnGetAuthExpirationTimestamp)
 	{
-		pFnGetAuthExpirationTimestamp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_GETAUTHEXPIRATIONTIMESTAMP));
+		pFnGetAuthExpirationTimestamp = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.GetAuthExpirationTimestamp");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execGetAuthExpirationTimestamp_Parms GetAuthExpirationTimestamp_Parms;
@@ -11878,7 +12376,8 @@ bool UOnlinePersistentAuthInterfaceImpl::LaunchAccountPortal(unsigned char Local
 
 	if (!pFnLaunchAccountPortal)
 	{
-		pFnLaunchAccountPortal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_LAUNCHACCOUNTPORTAL));
+		pFnLaunchAccountPortal = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.LaunchAccountPortal");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execLaunchAccountPortal_Parms LaunchAccountPortal_Parms;
@@ -11900,7 +12399,8 @@ struct FString UOnlinePersistentAuthInterfaceImpl::GetClientCredentials()
 
 	if (!pFnGetClientCredentials)
 	{
-		pFnGetClientCredentials = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_GETCLIENTCREDENTIALS));
+		pFnGetClientCredentials = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.GetClientCredentials");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execGetClientCredentials_Parms GetClientCredentials_Parms;
@@ -11922,7 +12422,8 @@ struct FString UOnlinePersistentAuthInterfaceImpl::GetContinuanceToken(unsigned 
 
 	if (!pFnGetContinuanceToken)
 	{
-		pFnGetContinuanceToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_GETCONTINUANCETOKEN));
+		pFnGetContinuanceToken = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.GetContinuanceToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execGetContinuanceToken_Parms GetContinuanceToken_Parms;
@@ -11946,7 +12447,8 @@ bool UOnlinePersistentAuthInterfaceImpl::UseRefreshToken(unsigned char LocalUser
 
 	if (!pFnUseRefreshToken)
 	{
-		pFnUseRefreshToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_USEREFRESHTOKEN));
+		pFnUseRefreshToken = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.UseRefreshToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execUseRefreshToken_Parms UseRefreshToken_Parms;
@@ -11970,7 +12472,8 @@ struct FString UOnlinePersistentAuthInterfaceImpl::GetRefreshToken(unsigned char
 
 	if (!pFnGetRefreshToken)
 	{
-		pFnGetRefreshToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_GETREFRESHTOKEN));
+		pFnGetRefreshToken = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.GetRefreshToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execGetRefreshToken_Parms GetRefreshToken_Parms;
@@ -11993,7 +12496,8 @@ bool UOnlinePersistentAuthInterfaceImpl::RequestPinGrantCode(unsigned char Local
 
 	if (!pFnRequestPinGrantCode)
 	{
-		pFnRequestPinGrantCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_REQUESTPINGRANTCODE));
+		pFnRequestPinGrantCode = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.RequestPinGrantCode");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execRequestPinGrantCode_Parms RequestPinGrantCode_Parms;
@@ -12015,7 +12519,8 @@ void UOnlinePersistentAuthInterfaceImpl::ClearUnderageUserDetectedDelegate(struc
 
 	if (!pFnClearUnderageUserDetectedDelegate)
 	{
-		pFnClearUnderageUserDetectedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_CLEARUNDERAGEUSERDETECTEDDELEGATE));
+		pFnClearUnderageUserDetectedDelegate = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.ClearUnderageUserDetectedDelegate");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execClearUnderageUserDetectedDelegate_Parms ClearUnderageUserDetectedDelegate_Parms;
@@ -12025,7 +12530,7 @@ void UOnlinePersistentAuthInterfaceImpl::ClearUnderageUserDetectedDelegate(struc
 };
 
 // Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddUnderageUserDetectedDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -12035,7 +12540,8 @@ void UOnlinePersistentAuthInterfaceImpl::AddUnderageUserDetectedDelegate(struct 
 
 	if (!pFnAddUnderageUserDetectedDelegate)
 	{
-		pFnAddUnderageUserDetectedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_ADDUNDERAGEUSERDETECTEDDELEGATE));
+		pFnAddUnderageUserDetectedDelegate = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddUnderageUserDetectedDelegate");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execAddUnderageUserDetectedDelegate_Parms AddUnderageUserDetectedDelegate_Parms;
@@ -12056,7 +12562,8 @@ void UOnlinePersistentAuthInterfaceImpl::OnUnderageUserDetected(unsigned char Lo
 
 	if (!pFnOnUnderageUserDetected)
 	{
-		pFnOnUnderageUserDetected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_ONUNDERAGEUSERDETECTED));
+		pFnOnUnderageUserDetected = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.OnUnderageUserDetected");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execOnUnderageUserDetected_Parms OnUnderageUserDetected_Parms;
@@ -12078,7 +12585,8 @@ void UOnlinePersistentAuthInterfaceImpl::ClearRequestPinGrantCodeDelegate(unsign
 
 	if (!pFnClearRequestPinGrantCodeDelegate)
 	{
-		pFnClearRequestPinGrantCodeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_CLEARREQUESTPINGRANTCODEDELEGATE));
+		pFnClearRequestPinGrantCodeDelegate = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.ClearRequestPinGrantCodeDelegate");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execClearRequestPinGrantCodeDelegate_Parms ClearRequestPinGrantCodeDelegate_Parms;
@@ -12089,7 +12597,7 @@ void UOnlinePersistentAuthInterfaceImpl::ClearRequestPinGrantCodeDelegate(unsign
 };
 
 // Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddRequestPinGrantCodeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -12100,7 +12608,8 @@ void UOnlinePersistentAuthInterfaceImpl::AddRequestPinGrantCodeDelegate(unsigned
 
 	if (!pFnAddRequestPinGrantCodeDelegate)
 	{
-		pFnAddRequestPinGrantCodeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_ADDREQUESTPINGRANTCODEDELEGATE));
+		pFnAddRequestPinGrantCodeDelegate = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddRequestPinGrantCodeDelegate");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execAddRequestPinGrantCodeDelegate_Parms AddRequestPinGrantCodeDelegate_Parms;
@@ -12125,7 +12634,8 @@ void UOnlinePersistentAuthInterfaceImpl::OnReceievedPinGrantCode(unsigned char R
 
 	if (!pFnOnReceievedPinGrantCode)
 	{
-		pFnOnReceievedPinGrantCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPERSISTENTAUTHINTERFACEIMPL_ONRECEIEVEDPINGRANTCODE));
+		pFnOnReceievedPinGrantCode = UFunction::FindFunction("Function IpDrv.OnlinePersistentAuthInterfaceImpl.OnReceievedPinGrantCode");
+
 	}
 
 	UOnlinePersistentAuthInterfaceImpl_execOnReceievedPinGrantCode_Parms OnReceievedPinGrantCode_Parms;
@@ -12149,7 +12659,8 @@ void UOnlinePlaylistManager::ParseDataCenterId(TArray<unsigned char>& Data)
 
 	if (!pFnParseDataCenterId)
 	{
-		pFnParseDataCenterId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_PARSEDATACENTERID));
+		pFnParseDataCenterId = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.ParseDataCenterId");
+
 	}
 
 	UOnlinePlaylistManager_execParseDataCenterId_Parms ParseDataCenterId_Parms;
@@ -12174,7 +12685,8 @@ void UOnlinePlaylistManager::OnReadDataCenterIdComplete(unsigned long bWasSucces
 
 	if (!pFnOnReadDataCenterIdComplete)
 	{
-		pFnOnReadDataCenterIdComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_ONREADDATACENTERIDCOMPLETE));
+		pFnOnReadDataCenterIdComplete = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.OnReadDataCenterIdComplete");
+
 	}
 
 	UOnlinePlaylistManager_execOnReadDataCenterIdComplete_Parms OnReadDataCenterIdComplete_Parms;
@@ -12194,7 +12706,8 @@ void UOnlinePlaylistManager::ReadDataCenterId()
 
 	if (!pFnReadDataCenterId)
 	{
-		pFnReadDataCenterId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_READDATACENTERID));
+		pFnReadDataCenterId = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.ReadDataCenterId");
+
 	}
 
 	UOnlinePlaylistManager_execReadDataCenterId_Parms ReadDataCenterId_Parms;
@@ -12213,7 +12726,8 @@ void UOnlinePlaylistManager::eventSendPlaylistPopulationUpdate(int NumPlayers)
 
 	if (!pFnSendPlaylistPopulationUpdate)
 	{
-		pFnSendPlaylistPopulationUpdate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_SENDPLAYLISTPOPULATIONUPDATE));
+		pFnSendPlaylistPopulationUpdate = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.SendPlaylistPopulationUpdate");
+
 	}
 
 	UOnlinePlaylistManager_eventSendPlaylistPopulationUpdate_Parms SendPlaylistPopulationUpdate_Parms;
@@ -12235,7 +12749,8 @@ void UOnlinePlaylistManager::GetPopulationInfoFromPlaylist(int PlaylistId, int& 
 
 	if (!pFnGetPopulationInfoFromPlaylist)
 	{
-		pFnGetPopulationInfoFromPlaylist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETPOPULATIONINFOFROMPLAYLIST));
+		pFnGetPopulationInfoFromPlaylist = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetPopulationInfoFromPlaylist");
+
 	}
 
 	UOnlinePlaylistManager_execGetPopulationInfoFromPlaylist_Parms GetPopulationInfoFromPlaylist_Parms;
@@ -12257,7 +12772,8 @@ void UOnlinePlaylistManager::ParsePlaylistPopulationData(TArray<unsigned char>& 
 
 	if (!pFnParsePlaylistPopulationData)
 	{
-		pFnParsePlaylistPopulationData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_PARSEPLAYLISTPOPULATIONDATA));
+		pFnParsePlaylistPopulationData = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.ParsePlaylistPopulationData");
+
 	}
 
 	UOnlinePlaylistManager_execParsePlaylistPopulationData_Parms ParsePlaylistPopulationData_Parms;
@@ -12280,7 +12796,8 @@ void UOnlinePlaylistManager::OnPlaylistPopulationDataUpdated()
 
 	if (!pFnOnPlaylistPopulationDataUpdated)
 	{
-		pFnOnPlaylistPopulationDataUpdated = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_ONPLAYLISTPOPULATIONDATAUPDATED));
+		pFnOnPlaylistPopulationDataUpdated = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.OnPlaylistPopulationDataUpdated");
+
 	}
 
 	UOnlinePlaylistManager_execOnPlaylistPopulationDataUpdated_Parms OnPlaylistPopulationDataUpdated_Parms;
@@ -12300,7 +12817,8 @@ void UOnlinePlaylistManager::OnReadPlaylistPopulationComplete(unsigned long bWas
 
 	if (!pFnOnReadPlaylistPopulationComplete)
 	{
-		pFnOnReadPlaylistPopulationComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_ONREADPLAYLISTPOPULATIONCOMPLETE));
+		pFnOnReadPlaylistPopulationComplete = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.OnReadPlaylistPopulationComplete");
+
 	}
 
 	UOnlinePlaylistManager_execOnReadPlaylistPopulationComplete_Parms OnReadPlaylistPopulationComplete_Parms;
@@ -12320,7 +12838,8 @@ void UOnlinePlaylistManager::ReadPlaylistPopulation()
 
 	if (!pFnReadPlaylistPopulation)
 	{
-		pFnReadPlaylistPopulation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_READPLAYLISTPOPULATION));
+		pFnReadPlaylistPopulation = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.ReadPlaylistPopulation");
+
 	}
 
 	UOnlinePlaylistManager_execReadPlaylistPopulation_Parms ReadPlaylistPopulation_Parms;
@@ -12338,7 +12857,8 @@ void UOnlinePlaylistManager::Reset()
 
 	if (!pFnReset)
 	{
-		pFnReset = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_RESET));
+		pFnReset = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.Reset");
+
 	}
 
 	UOnlinePlaylistManager_execReset_Parms Reset_Parms;
@@ -12358,7 +12878,8 @@ void UOnlinePlaylistManager::GetContentIdsFromPlaylist(int PlaylistId, TArray<in
 
 	if (!pFnGetContentIdsFromPlaylist)
 	{
-		pFnGetContentIdsFromPlaylist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETCONTENTIDSFROMPLAYLIST));
+		pFnGetContentIdsFromPlaylist = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetContentIdsFromPlaylist");
+
 	}
 
 	UOnlinePlaylistManager_execGetContentIdsFromPlaylist_Parms GetContentIdsFromPlaylist_Parms;
@@ -12380,7 +12901,8 @@ void UOnlinePlaylistManager::GetMapCycleFromPlaylist(int PlaylistId, TArray<stru
 
 	if (!pFnGetMapCycleFromPlaylist)
 	{
-		pFnGetMapCycleFromPlaylist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETMAPCYCLEFROMPLAYLIST));
+		pFnGetMapCycleFromPlaylist = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetMapCycleFromPlaylist");
+
 	}
 
 	UOnlinePlaylistManager_execGetMapCycleFromPlaylist_Parms GetMapCycleFromPlaylist_Parms;
@@ -12402,7 +12924,8 @@ struct FString UOnlinePlaylistManager::GetUrlFromPlaylist(int PlaylistId)
 
 	if (!pFnGetUrlFromPlaylist)
 	{
-		pFnGetUrlFromPlaylist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETURLFROMPLAYLIST));
+		pFnGetUrlFromPlaylist = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetUrlFromPlaylist");
+
 	}
 
 	UOnlinePlaylistManager_execGetUrlFromPlaylist_Parms GetUrlFromPlaylist_Parms;
@@ -12425,7 +12948,8 @@ int UOnlinePlaylistManager::GetMatchType(int PlaylistId)
 
 	if (!pFnGetMatchType)
 	{
-		pFnGetMatchType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETMATCHTYPE));
+		pFnGetMatchType = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetMatchType");
+
 	}
 
 	UOnlinePlaylistManager_execGetMatchType_Parms GetMatchType_Parms;
@@ -12448,7 +12972,8 @@ bool UOnlinePlaylistManager::IsPlaylistArbitrated(int PlaylistId)
 
 	if (!pFnIsPlaylistArbitrated)
 	{
-		pFnIsPlaylistArbitrated = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_ISPLAYLISTARBITRATED));
+		pFnIsPlaylistArbitrated = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.IsPlaylistArbitrated");
+
 	}
 
 	UOnlinePlaylistManager_execIsPlaylistArbitrated_Parms IsPlaylistArbitrated_Parms;
@@ -12471,7 +12996,8 @@ void UOnlinePlaylistManager::GetLoadBalanceIdFromPlaylist(int PlaylistId, int& L
 
 	if (!pFnGetLoadBalanceIdFromPlaylist)
 	{
-		pFnGetLoadBalanceIdFromPlaylist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETLOADBALANCEIDFROMPLAYLIST));
+		pFnGetLoadBalanceIdFromPlaylist = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetLoadBalanceIdFromPlaylist");
+
 	}
 
 	UOnlinePlaylistManager_execGetLoadBalanceIdFromPlaylist_Parms GetLoadBalanceIdFromPlaylist_Parms;
@@ -12495,7 +13021,8 @@ void UOnlinePlaylistManager::GetTeamInfoFromPlaylist(int PlaylistId, int& TeamSi
 
 	if (!pFnGetTeamInfoFromPlaylist)
 	{
-		pFnGetTeamInfoFromPlaylist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETTEAMINFOFROMPLAYLIST));
+		pFnGetTeamInfoFromPlaylist = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetTeamInfoFromPlaylist");
+
 	}
 
 	UOnlinePlaylistManager_execGetTeamInfoFromPlaylist_Parms GetTeamInfoFromPlaylist_Parms;
@@ -12519,7 +13046,8 @@ bool UOnlinePlaylistManager::PlaylistSupportsDedicatedServers(int PlaylistId)
 
 	if (!pFnPlaylistSupportsDedicatedServers)
 	{
-		pFnPlaylistSupportsDedicatedServers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_PLAYLISTSUPPORTSDEDICATEDSERVERS));
+		pFnPlaylistSupportsDedicatedServers = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.PlaylistSupportsDedicatedServers");
+
 	}
 
 	UOnlinePlaylistManager_execPlaylistSupportsDedicatedServers_Parms PlaylistSupportsDedicatedServers_Parms;
@@ -12542,7 +13070,8 @@ bool UOnlinePlaylistManager::HasAnyGameSettings(int PlaylistId)
 
 	if (!pFnHasAnyGameSettings)
 	{
-		pFnHasAnyGameSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_HASANYGAMESETTINGS));
+		pFnHasAnyGameSettings = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.HasAnyGameSettings");
+
 	}
 
 	UOnlinePlaylistManager_execHasAnyGameSettings_Parms HasAnyGameSettings_Parms;
@@ -12566,7 +13095,8 @@ class UOnlineGameSettings* UOnlinePlaylistManager::GetGameSettings(int PlaylistI
 
 	if (!pFnGetGameSettings)
 	{
-		pFnGetGameSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_GETGAMESETTINGS));
+		pFnGetGameSettings = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.GetGameSettings");
+
 	}
 
 	UOnlinePlaylistManager_execGetGameSettings_Parms GetGameSettings_Parms;
@@ -12588,7 +13118,8 @@ void UOnlinePlaylistManager::FinalizePlaylistObjects()
 
 	if (!pFnFinalizePlaylistObjects)
 	{
-		pFnFinalizePlaylistObjects = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_FINALIZEPLAYLISTOBJECTS));
+		pFnFinalizePlaylistObjects = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.FinalizePlaylistObjects");
+
 	}
 
 	UOnlinePlaylistManager_execFinalizePlaylistObjects_Parms FinalizePlaylistObjects_Parms;
@@ -12612,7 +13143,8 @@ void UOnlinePlaylistManager::OnReadTitleFileComplete(unsigned long bWasSuccessfu
 
 	if (!pFnOnReadTitleFileComplete)
 	{
-		pFnOnReadTitleFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_ONREADTITLEFILECOMPLETE));
+		pFnOnReadTitleFileComplete = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.OnReadTitleFileComplete");
+
 	}
 
 	UOnlinePlaylistManager_execOnReadTitleFileComplete_Parms OnReadTitleFileComplete_Parms;
@@ -12633,7 +13165,8 @@ bool UOnlinePlaylistManager::ShouldRefreshPlaylists()
 
 	if (!pFnShouldRefreshPlaylists)
 	{
-		pFnShouldRefreshPlaylists = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_SHOULDREFRESHPLAYLISTS));
+		pFnShouldRefreshPlaylists = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.ShouldRefreshPlaylists");
+
 	}
 
 	UOnlinePlaylistManager_execShouldRefreshPlaylists_Parms ShouldRefreshPlaylists_Parms;
@@ -12657,7 +13190,8 @@ void UOnlinePlaylistManager::DetermineFilesToDownload()
 
 	if (!pFnDetermineFilesToDownload)
 	{
-		pFnDetermineFilesToDownload = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_DETERMINEFILESTODOWNLOAD));
+		pFnDetermineFilesToDownload = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.DetermineFilesToDownload");
+
 	}
 
 	UOnlinePlaylistManager_execDetermineFilesToDownload_Parms DetermineFilesToDownload_Parms;
@@ -12679,7 +13213,8 @@ void UOnlinePlaylistManager::DownloadPlaylist()
 
 	if (!pFnDownloadPlaylist)
 	{
-		pFnDownloadPlaylist = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_DOWNLOADPLAYLIST));
+		pFnDownloadPlaylist = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.DownloadPlaylist");
+
 	}
 
 	UOnlinePlaylistManager_execDownloadPlaylist_Parms DownloadPlaylist_Parms;
@@ -12698,7 +13233,8 @@ void UOnlinePlaylistManager::OnReadPlaylistComplete(unsigned long bWasSuccessful
 
 	if (!pFnOnReadPlaylistComplete)
 	{
-		pFnOnReadPlaylistComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPLAYLISTMANAGER_ONREADPLAYLISTCOMPLETE));
+		pFnOnReadPlaylistComplete = UFunction::FindFunction("Function IpDrv.OnlinePlaylistManager.OnReadPlaylistComplete");
+
 	}
 
 	UOnlinePlaylistManager_execOnReadPlaylistComplete_Parms OnReadPlaylistComplete_Parms;
@@ -12718,7 +13254,8 @@ void UOnlinePurchaseInterfaceImpl::ClearMicroTxnResponseDelegate(struct FScriptD
 
 	if (!pFnClearMicroTxnResponseDelegate)
 	{
-		pFnClearMicroTxnResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPURCHASEINTERFACEIMPL_CLEARMICROTXNRESPONSEDELEGATE));
+		pFnClearMicroTxnResponseDelegate = UFunction::FindFunction("Function IpDrv.OnlinePurchaseInterfaceImpl.ClearMicroTxnResponseDelegate");
+
 	}
 
 	UOnlinePurchaseInterfaceImpl_execClearMicroTxnResponseDelegate_Parms ClearMicroTxnResponseDelegate_Parms;
@@ -12738,7 +13275,8 @@ void UOnlinePurchaseInterfaceImpl::AddMicroTxnResponseDelegate(struct FScriptDel
 
 	if (!pFnAddMicroTxnResponseDelegate)
 	{
-		pFnAddMicroTxnResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPURCHASEINTERFACEIMPL_ADDMICROTXNRESPONSEDELEGATE));
+		pFnAddMicroTxnResponseDelegate = UFunction::FindFunction("Function IpDrv.OnlinePurchaseInterfaceImpl.AddMicroTxnResponseDelegate");
+
 	}
 
 	UOnlinePurchaseInterfaceImpl_execAddMicroTxnResponseDelegate_Parms AddMicroTxnResponseDelegate_Parms;
@@ -12759,7 +13297,8 @@ void UOnlinePurchaseInterfaceImpl::OnMicroTxnResponse(unsigned long bAuthorized,
 
 	if (!pFnOnMicroTxnResponse)
 	{
-		pFnOnMicroTxnResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPURCHASEINTERFACEIMPL_ONMICROTXNRESPONSE));
+		pFnOnMicroTxnResponse = UFunction::FindFunction("Function IpDrv.OnlinePurchaseInterfaceImpl.OnMicroTxnResponse");
+
 	}
 
 	UOnlinePurchaseInterfaceImpl_execOnMicroTxnResponse_Parms OnMicroTxnResponse_Parms;
@@ -12782,7 +13321,8 @@ struct FString UOnlinePurchaseInterfaceImpl::FormatCurrency(struct FString Curre
 
 	if (!pFnFormatCurrency)
 	{
-		pFnFormatCurrency = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPURCHASEINTERFACEIMPL_FORMATCURRENCY));
+		pFnFormatCurrency = UFunction::FindFunction("Function IpDrv.OnlinePurchaseInterfaceImpl.FormatCurrency");
+
 	}
 
 	UOnlinePurchaseInterfaceImpl_execFormatCurrency_Parms FormatCurrency_Parms;
@@ -12808,7 +13348,8 @@ bool UOnlinePurchaseInterfaceImpl::GetAppPriceInfo(struct FScriptDelegate Callba
 
 	if (!pFnGetAppPriceInfo)
 	{
-		pFnGetAppPriceInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPURCHASEINTERFACEIMPL_GETAPPPRICEINFO));
+		pFnGetAppPriceInfo = UFunction::FindFunction("Function IpDrv.OnlinePurchaseInterfaceImpl.GetAppPriceInfo");
+
 	}
 
 	UOnlinePurchaseInterfaceImpl_execGetAppPriceInfo_Parms GetAppPriceInfo_Parms;
@@ -12835,7 +13376,8 @@ void UOnlinePurchaseInterfaceImpl::EventGetAppPriceInfoComplete(struct FName App
 
 	if (!pFnEventGetAppPriceInfoComplete)
 	{
-		pFnEventGetAppPriceInfoComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_ONLINEPURCHASEINTERFACEIMPL_EVENTGETAPPPRICEINFOCOMPLETE));
+		pFnEventGetAppPriceInfoComplete = UFunction::FindFunction("Function IpDrv.OnlinePurchaseInterfaceImpl.EventGetAppPriceInfoComplete");
+
 	}
 
 	UOnlinePurchaseInterfaceImpl_execEventGetAppPriceInfoComplete_Parms EventGetAppPriceInfoComplete_Parms;
@@ -12857,7 +13399,8 @@ void UPartyBeacon::OnDestroyComplete()
 
 	if (!pFnOnDestroyComplete)
 	{
-		pFnOnDestroyComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACON_ONDESTROYCOMPLETE));
+		pFnOnDestroyComplete = UFunction::FindFunction("Function IpDrv.PartyBeacon.OnDestroyComplete");
+
 	}
 
 	UPartyBeacon_execOnDestroyComplete_Parms OnDestroyComplete_Parms;
@@ -12875,7 +13418,8 @@ void UPartyBeacon::eventDestroyBeacon()
 
 	if (!pFnDestroyBeacon)
 	{
-		pFnDestroyBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACON_DESTROYBEACON));
+		pFnDestroyBeacon = UFunction::FindFunction("Function IpDrv.PartyBeacon.DestroyBeacon");
+
 	}
 
 	UPartyBeacon_eventDestroyBeacon_Parms DestroyBeacon_Parms;
@@ -12897,7 +13441,8 @@ void UPartyBeaconClient::eventDestroyBeacon()
 
 	if (!pFnDestroyBeacon)
 	{
-		pFnDestroyBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_DESTROYBEACON));
+		pFnDestroyBeacon = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.DestroyBeacon");
+
 	}
 
 	UPartyBeaconClient_eventDestroyBeacon_Parms DestroyBeacon_Parms;
@@ -12926,7 +13471,8 @@ bool UPartyBeaconClient::CancelReservation(struct FUniqueNetId CancellingPartyLe
 
 	if (!pFnCancelReservation)
 	{
-		pFnCancelReservation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_CANCELRESERVATION));
+		pFnCancelReservation = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.CancelReservation");
+
 	}
 
 	UPartyBeaconClient_execCancelReservation_Parms CancelReservation_Parms;
@@ -12955,7 +13501,8 @@ bool UPartyBeaconClient::RequestReservationUpdate(struct FUniqueNetId Requesting
 
 	if (!pFnRequestReservationUpdate)
 	{
-		pFnRequestReservationUpdate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_REQUESTRESERVATIONUPDATE));
+		pFnRequestReservationUpdate = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.RequestReservationUpdate");
+
 	}
 
 	UPartyBeaconClient_execRequestReservationUpdate_Parms RequestReservationUpdate_Parms;
@@ -12986,7 +13533,8 @@ bool UPartyBeaconClient::RequestReservation(struct FUniqueNetId RequestingPartyL
 
 	if (!pFnRequestReservation)
 	{
-		pFnRequestReservation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_REQUESTRESERVATION));
+		pFnRequestReservation = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.RequestReservation");
+
 	}
 
 	UPartyBeaconClient_execRequestReservation_Parms RequestReservation_Parms;
@@ -13013,7 +13561,8 @@ void UPartyBeaconClient::OnHostHasCancelled()
 
 	if (!pFnOnHostHasCancelled)
 	{
-		pFnOnHostHasCancelled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_ONHOSTHASCANCELLED));
+		pFnOnHostHasCancelled = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.OnHostHasCancelled");
+
 	}
 
 	UPartyBeaconClient_execOnHostHasCancelled_Parms OnHostHasCancelled_Parms;
@@ -13031,7 +13580,8 @@ void UPartyBeaconClient::OnHostIsReady()
 
 	if (!pFnOnHostIsReady)
 	{
-		pFnOnHostIsReady = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_ONHOSTISREADY));
+		pFnOnHostIsReady = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.OnHostIsReady");
+
 	}
 
 	UPartyBeaconClient_execOnHostIsReady_Parms OnHostIsReady_Parms;
@@ -13052,7 +13602,8 @@ void UPartyBeaconClient::OnTravelRequestReceived(struct FName SessionName, class
 
 	if (!pFnOnTravelRequestReceived)
 	{
-		pFnOnTravelRequestReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_ONTRAVELREQUESTRECEIVED));
+		pFnOnTravelRequestReceived = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.OnTravelRequestReceived");
+
 	}
 
 	UPartyBeaconClient_execOnTravelRequestReceived_Parms OnTravelRequestReceived_Parms;
@@ -13074,7 +13625,8 @@ void UPartyBeaconClient::OnReservationCountUpdated(int ReservationRemaining)
 
 	if (!pFnOnReservationCountUpdated)
 	{
-		pFnOnReservationCountUpdated = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_ONRESERVATIONCOUNTUPDATED));
+		pFnOnReservationCountUpdated = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.OnReservationCountUpdated");
+
 	}
 
 	UPartyBeaconClient_execOnReservationCountUpdated_Parms OnReservationCountUpdated_Parms;
@@ -13094,7 +13646,8 @@ void UPartyBeaconClient::OnReservationRequestComplete(unsigned char ReservationR
 
 	if (!pFnOnReservationRequestComplete)
 	{
-		pFnOnReservationRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONCLIENT_ONRESERVATIONREQUESTCOMPLETE));
+		pFnOnReservationRequestComplete = UFunction::FindFunction("Function IpDrv.PartyBeaconClient.OnReservationRequestComplete");
+
 	}
 
 	UPartyBeaconClient_execOnReservationRequestComplete_Parms OnReservationRequestComplete_Parms;
@@ -13114,7 +13667,8 @@ int UPartyBeaconHost::GetMaxAvailableTeamSize()
 
 	if (!pFnGetMaxAvailableTeamSize)
 	{
-		pFnGetMaxAvailableTeamSize = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_GETMAXAVAILABLETEAMSIZE));
+		pFnGetMaxAvailableTeamSize = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.GetMaxAvailableTeamSize");
+
 	}
 
 	UPartyBeaconHost_execGetMaxAvailableTeamSize_Parms GetMaxAvailableTeamSize_Parms;
@@ -13139,7 +13693,8 @@ void UPartyBeaconHost::GetPartyLeaders(TArray<struct FUniqueNetId>& PartyLeaders
 
 	if (!pFnGetPartyLeaders)
 	{
-		pFnGetPartyLeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_GETPARTYLEADERS));
+		pFnGetPartyLeaders = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.GetPartyLeaders");
+
 	}
 
 	UPartyBeaconHost_execGetPartyLeaders_Parms GetPartyLeaders_Parms;
@@ -13159,7 +13714,8 @@ void UPartyBeaconHost::GetPlayers(TArray<struct FUniqueNetId>& Players)
 
 	if (!pFnGetPlayers)
 	{
-		pFnGetPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_GETPLAYERS));
+		pFnGetPlayers = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.GetPlayers");
+
 	}
 
 	UPartyBeaconHost_execGetPlayers_Parms GetPlayers_Parms;
@@ -13179,7 +13735,8 @@ void UPartyBeaconHost::AppendReservationSkillsToSearch(class UOnlineGameSearch* 
 
 	if (!pFnAppendReservationSkillsToSearch)
 	{
-		pFnAppendReservationSkillsToSearch = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_APPENDRESERVATIONSKILLSTOSEARCH));
+		pFnAppendReservationSkillsToSearch = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.AppendReservationSkillsToSearch");
+
 	}
 
 	UPartyBeaconHost_execAppendReservationSkillsToSearch_Parms AppendReservationSkillsToSearch_Parms;
@@ -13203,7 +13760,8 @@ void UPartyBeaconHost::eventUnregisterParty(struct FUniqueNetId PartyLeader)
 
 	if (!pFnUnregisterParty)
 	{
-		pFnUnregisterParty = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_UNREGISTERPARTY));
+		pFnUnregisterParty = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.UnregisterParty");
+
 	}
 
 	UPartyBeaconHost_eventUnregisterParty_Parms UnregisterParty_Parms;
@@ -13222,7 +13780,8 @@ void UPartyBeaconHost::eventUnregisterPartyMembers()
 
 	if (!pFnUnregisterPartyMembers)
 	{
-		pFnUnregisterPartyMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_UNREGISTERPARTYMEMBERS));
+		pFnUnregisterPartyMembers = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.UnregisterPartyMembers");
+
 	}
 
 	UPartyBeaconHost_eventUnregisterPartyMembers_Parms UnregisterPartyMembers_Parms;
@@ -13240,7 +13799,8 @@ void UPartyBeaconHost::eventRegisterPartyMembers()
 
 	if (!pFnRegisterPartyMembers)
 	{
-		pFnRegisterPartyMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_REGISTERPARTYMEMBERS));
+		pFnRegisterPartyMembers = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.RegisterPartyMembers");
+
 	}
 
 	UPartyBeaconHost_eventRegisterPartyMembers_Parms RegisterPartyMembers_Parms;
@@ -13259,7 +13819,8 @@ bool UPartyBeaconHost::AreReservationsFull()
 
 	if (!pFnAreReservationsFull)
 	{
-		pFnAreReservationsFull = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_ARERESERVATIONSFULL));
+		pFnAreReservationsFull = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.AreReservationsFull");
+
 	}
 
 	UPartyBeaconHost_execAreReservationsFull_Parms AreReservationsFull_Parms;
@@ -13279,7 +13840,8 @@ void UPartyBeaconHost::TellClientsHostHasCancelled()
 
 	if (!pFnTellClientsHostHasCancelled)
 	{
-		pFnTellClientsHostHasCancelled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_TELLCLIENTSHOSTHASCANCELLED));
+		pFnTellClientsHostHasCancelled = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.TellClientsHostHasCancelled");
+
 	}
 
 	UPartyBeaconHost_execTellClientsHostHasCancelled_Parms TellClientsHostHasCancelled_Parms;
@@ -13301,7 +13863,8 @@ void UPartyBeaconHost::TellClientsHostIsReady()
 
 	if (!pFnTellClientsHostIsReady)
 	{
-		pFnTellClientsHostIsReady = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_TELLCLIENTSHOSTISREADY));
+		pFnTellClientsHostIsReady = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.TellClientsHostIsReady");
+
 	}
 
 	UPartyBeaconHost_execTellClientsHostIsReady_Parms TellClientsHostIsReady_Parms;
@@ -13326,7 +13889,8 @@ void UPartyBeaconHost::TellClientsToTravel(struct FName SessionName, class UClas
 
 	if (!pFnTellClientsToTravel)
 	{
-		pFnTellClientsToTravel = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_TELLCLIENTSTOTRAVEL));
+		pFnTellClientsToTravel = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.TellClientsToTravel");
+
 	}
 
 	UPartyBeaconHost_execTellClientsToTravel_Parms TellClientsToTravel_Parms;
@@ -13351,7 +13915,8 @@ void UPartyBeaconHost::eventDestroyBeacon()
 
 	if (!pFnDestroyBeacon)
 	{
-		pFnDestroyBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_DESTROYBEACON));
+		pFnDestroyBeacon = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.DestroyBeacon");
+
 	}
 
 	UPartyBeaconHost_eventDestroyBeacon_Parms DestroyBeacon_Parms;
@@ -13379,7 +13944,8 @@ void UPartyBeaconHost::OnClientCancellationReceived(struct FUniqueNetId PartyLea
 
 	if (!pFnOnClientCancellationReceived)
 	{
-		pFnOnClientCancellationReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_ONCLIENTCANCELLATIONRECEIVED));
+		pFnOnClientCancellationReceived = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.OnClientCancellationReceived");
+
 	}
 
 	UPartyBeaconHost_execOnClientCancellationReceived_Parms OnClientCancellationReceived_Parms;
@@ -13398,7 +13964,8 @@ void UPartyBeaconHost::OnReservationsFull()
 
 	if (!pFnOnReservationsFull)
 	{
-		pFnOnReservationsFull = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_ONRESERVATIONSFULL));
+		pFnOnReservationsFull = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.OnReservationsFull");
+
 	}
 
 	UPartyBeaconHost_execOnReservationsFull_Parms OnReservationsFull_Parms;
@@ -13416,7 +13983,8 @@ void UPartyBeaconHost::OnReservationChange()
 
 	if (!pFnOnReservationChange)
 	{
-		pFnOnReservationChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_ONRESERVATIONCHANGE));
+		pFnOnReservationChange = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.OnReservationChange");
+
 	}
 
 	UPartyBeaconHost_execOnReservationChange_Parms OnReservationChange_Parms;
@@ -13436,7 +14004,8 @@ void UPartyBeaconHost::HandlePlayerLogout(struct FUniqueNetId PlayerID, unsigned
 
 	if (!pFnHandlePlayerLogout)
 	{
-		pFnHandlePlayerLogout = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_HANDLEPLAYERLOGOUT));
+		pFnHandlePlayerLogout = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.HandlePlayerLogout");
+
 	}
 
 	UPartyBeaconHost_execHandlePlayerLogout_Parms HandlePlayerLogout_Parms;
@@ -13462,7 +14031,8 @@ int UPartyBeaconHost::GetExistingReservation(struct FUniqueNetId& PartyLeader)
 
 	if (!pFnGetExistingReservation)
 	{
-		pFnGetExistingReservation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_GETEXISTINGRESERVATION));
+		pFnGetExistingReservation = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.GetExistingReservation");
+
 	}
 
 	UPartyBeaconHost_execGetExistingReservation_Parms GetExistingReservation_Parms;
@@ -13490,7 +14060,8 @@ unsigned char UPartyBeaconHost::UpdatePartyReservationEntry(struct FUniqueNetId 
 
 	if (!pFnUpdatePartyReservationEntry)
 	{
-		pFnUpdatePartyReservationEntry = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_UPDATEPARTYRESERVATIONENTRY));
+		pFnUpdatePartyReservationEntry = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.UpdatePartyReservationEntry");
+
 	}
 
 	UPartyBeaconHost_execUpdatePartyReservationEntry_Parms UpdatePartyReservationEntry_Parms;
@@ -13521,7 +14092,8 @@ unsigned char UPartyBeaconHost::AddPartyReservationEntry(struct FUniqueNetId Par
 
 	if (!pFnAddPartyReservationEntry)
 	{
-		pFnAddPartyReservationEntry = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_ADDPARTYRESERVATIONENTRY));
+		pFnAddPartyReservationEntry = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.AddPartyReservationEntry");
+
 	}
 
 	UPartyBeaconHost_execAddPartyReservationEntry_Parms AddPartyReservationEntry_Parms;
@@ -13555,7 +14127,8 @@ bool UPartyBeaconHost::InitHostBeacon(int InNumTeams, int InNumPlayersPerTeam, i
 
 	if (!pFnInitHostBeacon)
 	{
-		pFnInitHostBeacon = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_INITHOSTBEACON));
+		pFnInitHostBeacon = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.InitHostBeacon");
+
 	}
 
 	UPartyBeaconHost_execInitHostBeacon_Parms InitHostBeacon_Parms;
@@ -13585,7 +14158,8 @@ void UPartyBeaconHost::PauseReservationRequests(unsigned long bPause)
 
 	if (!pFnPauseReservationRequests)
 	{
-		pFnPauseReservationRequests = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_PARTYBEACONHOST_PAUSERESERVATIONREQUESTS));
+		pFnPauseReservationRequests = UFunction::FindFunction("Function IpDrv.PartyBeaconHost.PauseReservationRequests");
+
 	}
 
 	UPartyBeaconHost_execPauseReservationRequests_Parms PauseReservationRequests_Parms;
@@ -13610,7 +14184,8 @@ int UWebRequest::GetHexDigit(struct FString D)
 
 	if (!pFnGetHexDigit)
 	{
-		pFnGetHexDigit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_GETHEXDIGIT));
+		pFnGetHexDigit = UFunction::FindFunction("Function IpDrv.WebRequest.GetHexDigit");
+
 	}
 
 	UWebRequest_execGetHexDigit_Parms GetHexDigit_Parms;
@@ -13632,7 +14207,8 @@ void UWebRequest::DecodeFormData(struct FString Data)
 
 	if (!pFnDecodeFormData)
 	{
-		pFnDecodeFormData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_DECODEFORMDATA));
+		pFnDecodeFormData = UFunction::FindFunction("Function IpDrv.WebRequest.DecodeFormData");
+
 	}
 
 	UWebRequest_execDecodeFormData_Parms DecodeFormData_Parms;
@@ -13652,7 +14228,8 @@ void UWebRequest::ProcessHeaderString(struct FString S)
 
 	if (!pFnProcessHeaderString)
 	{
-		pFnProcessHeaderString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_PROCESSHEADERSTRING));
+		pFnProcessHeaderString = UFunction::FindFunction("Function IpDrv.WebRequest.ProcessHeaderString");
+
 	}
 
 	UWebRequest_execProcessHeaderString_Parms ProcessHeaderString_Parms;
@@ -13671,7 +14248,8 @@ void UWebRequest::Dump()
 
 	if (!pFnDump)
 	{
-		pFnDump = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_DUMP));
+		pFnDump = UFunction::FindFunction("Function IpDrv.WebRequest.Dump");
+
 	}
 
 	UWebRequest_execDump_Parms Dump_Parms;
@@ -13694,7 +14272,8 @@ void UWebRequest::GetVariables(TArray<struct FString>& varNames)
 
 	if (!pFnGetVariables)
 	{
-		pFnGetVariables = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_GETVARIABLES));
+		pFnGetVariables = UFunction::FindFunction("Function IpDrv.WebRequest.GetVariables");
+
 	}
 
 	UWebRequest_execGetVariables_Parms GetVariables_Parms;
@@ -13721,7 +14300,8 @@ struct FString UWebRequest::GetVariableNumber(struct FString VariableName, int N
 
 	if (!pFnGetVariableNumber)
 	{
-		pFnGetVariableNumber = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_GETVARIABLENUMBER));
+		pFnGetVariableNumber = UFunction::FindFunction("Function IpDrv.WebRequest.GetVariableNumber");
+
 	}
 
 	UWebRequest_execGetVariableNumber_Parms GetVariableNumber_Parms;
@@ -13750,7 +14330,8 @@ int UWebRequest::GetVariableCount(struct FString VariableName)
 
 	if (!pFnGetVariableCount)
 	{
-		pFnGetVariableCount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_GETVARIABLECOUNT));
+		pFnGetVariableCount = UFunction::FindFunction("Function IpDrv.WebRequest.GetVariableCount");
+
 	}
 
 	UWebRequest_execGetVariableCount_Parms GetVariableCount_Parms;
@@ -13778,7 +14359,8 @@ struct FString UWebRequest::GetVariable(struct FString VariableName, struct FStr
 
 	if (!pFnGetVariable)
 	{
-		pFnGetVariable = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_GETVARIABLE));
+		pFnGetVariable = UFunction::FindFunction("Function IpDrv.WebRequest.GetVariable");
+
 	}
 
 	UWebRequest_execGetVariable_Parms GetVariable_Parms;
@@ -13806,7 +14388,8 @@ void UWebRequest::AddVariable(struct FString VariableName, struct FString Value)
 
 	if (!pFnAddVariable)
 	{
-		pFnAddVariable = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_ADDVARIABLE));
+		pFnAddVariable = UFunction::FindFunction("Function IpDrv.WebRequest.AddVariable");
+
 	}
 
 	UWebRequest_execAddVariable_Parms AddVariable_Parms;
@@ -13831,7 +14414,8 @@ void UWebRequest::GetHeaders(TArray<struct FString>& Headers)
 
 	if (!pFnGetHeaders)
 	{
-		pFnGetHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_GETHEADERS));
+		pFnGetHeaders = UFunction::FindFunction("Function IpDrv.WebRequest.GetHeaders");
+
 	}
 
 	UWebRequest_execGetHeaders_Parms GetHeaders_Parms;
@@ -13857,7 +14441,8 @@ struct FString UWebRequest::GetHeader(struct FString HeaderName, struct FString 
 
 	if (!pFnGetHeader)
 	{
-		pFnGetHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_GETHEADER));
+		pFnGetHeader = UFunction::FindFunction("Function IpDrv.WebRequest.GetHeader");
+
 	}
 
 	UWebRequest_execGetHeader_Parms GetHeader_Parms;
@@ -13885,7 +14470,8 @@ void UWebRequest::AddHeader(struct FString HeaderName, struct FString Value)
 
 	if (!pFnAddHeader)
 	{
-		pFnAddHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_ADDHEADER));
+		pFnAddHeader = UFunction::FindFunction("Function IpDrv.WebRequest.AddHeader");
+
 	}
 
 	UWebRequest_execAddHeader_Parms AddHeader_Parms;
@@ -13900,7 +14486,7 @@ void UWebRequest::AddHeader(struct FString HeaderName, struct FString Value)
 };
 
 // Function IpDrv.WebRequest.EncodeBase64
-// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
+// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 Decoded                        (CPF_Parm | CPF_NeedCtorLink)
@@ -13911,7 +14497,8 @@ struct FString UWebRequest::EncodeBase64(struct FString Decoded)
 
 	if (!pFnEncodeBase64)
 	{
-		pFnEncodeBase64 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_ENCODEBASE64));
+		pFnEncodeBase64 = UFunction::FindFunction("Function IpDrv.WebRequest.EncodeBase64");
+
 	}
 
 	UWebRequest_execEncodeBase64_Parms EncodeBase64_Parms;
@@ -13938,7 +14525,8 @@ struct FString UWebRequest::DecodeBase64(struct FString Encoded)
 
 	if (!pFnDecodeBase64)
 	{
-		pFnDecodeBase64 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBREQUEST_DECODEBASE64));
+		pFnDecodeBase64 = UFunction::FindFunction("Function IpDrv.WebRequest.DecodeBase64");
+
 	}
 
 	UWebRequest_execDecodeBase64_Parms DecodeBase64_Parms;
@@ -13964,7 +14552,8 @@ bool UWebResponse::SentResponse()
 
 	if (!pFnSentResponse)
 	{
-		pFnSentResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SENTRESPONSE));
+		pFnSentResponse = UFunction::FindFunction("Function IpDrv.WebResponse.SentResponse");
+
 	}
 
 	UWebResponse_execSentResponse_Parms SentResponse_Parms;
@@ -13985,7 +14574,8 @@ bool UWebResponse::SentText()
 
 	if (!pFnSentText)
 	{
-		pFnSentText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SENTTEXT));
+		pFnSentText = UFunction::FindFunction("Function IpDrv.WebResponse.SentText");
+
 	}
 
 	UWebResponse_execSentText_Parms SentText_Parms;
@@ -14006,7 +14596,8 @@ void UWebResponse::Redirect(struct FString URL)
 
 	if (!pFnRedirect)
 	{
-		pFnRedirect = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_REDIRECT));
+		pFnRedirect = UFunction::FindFunction("Function IpDrv.WebResponse.Redirect");
+
 	}
 
 	UWebResponse_execRedirect_Parms Redirect_Parms;
@@ -14027,7 +14618,8 @@ void UWebResponse::SendStandardHeaders(struct FString ContentType, unsigned long
 
 	if (!pFnSendStandardHeaders)
 	{
-		pFnSendStandardHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SENDSTANDARDHEADERS));
+		pFnSendStandardHeaders = UFunction::FindFunction("Function IpDrv.WebResponse.SendStandardHeaders");
+
 	}
 
 	UWebResponse_execSendStandardHeaders_Parms SendStandardHeaders_Parms;
@@ -14049,7 +14641,8 @@ void UWebResponse::HTTPError(int ErrorNum, struct FString Data)
 
 	if (!pFnHTTPError)
 	{
-		pFnHTTPError = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_HTTPERROR));
+		pFnHTTPError = UFunction::FindFunction("Function IpDrv.WebResponse.HTTPError");
+
 	}
 
 	UWebResponse_execHTTPError_Parms HTTPError_Parms;
@@ -14069,7 +14662,8 @@ void UWebResponse::SendHeaders()
 
 	if (!pFnSendHeaders)
 	{
-		pFnSendHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SENDHEADERS));
+		pFnSendHeaders = UFunction::FindFunction("Function IpDrv.WebResponse.SendHeaders");
+
 	}
 
 	UWebResponse_execSendHeaders_Parms SendHeaders_Parms;
@@ -14089,7 +14683,8 @@ void UWebResponse::AddHeader(struct FString Header, unsigned long bReplace)
 
 	if (!pFnAddHeader)
 	{
-		pFnAddHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_ADDHEADER));
+		pFnAddHeader = UFunction::FindFunction("Function IpDrv.WebResponse.AddHeader");
+
 	}
 
 	UWebResponse_execAddHeader_Parms AddHeader_Parms;
@@ -14110,7 +14705,8 @@ void UWebResponse::HTTPHeader(struct FString Header)
 
 	if (!pFnHTTPHeader)
 	{
-		pFnHTTPHeader = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_HTTPHEADER));
+		pFnHTTPHeader = UFunction::FindFunction("Function IpDrv.WebResponse.HTTPHeader");
+
 	}
 
 	UWebResponse_execHTTPHeader_Parms HTTPHeader_Parms;
@@ -14130,7 +14726,8 @@ void UWebResponse::HttpResponse(struct FString Header)
 
 	if (!pFnHttpResponse)
 	{
-		pFnHttpResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_HTTPRESPONSE));
+		pFnHttpResponse = UFunction::FindFunction("Function IpDrv.WebResponse.HttpResponse");
+
 	}
 
 	UWebResponse_execHttpResponse_Parms HttpResponse_Parms;
@@ -14150,7 +14747,8 @@ void UWebResponse::FailAuthentication(struct FString Realm)
 
 	if (!pFnFailAuthentication)
 	{
-		pFnFailAuthentication = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_FAILAUTHENTICATION));
+		pFnFailAuthentication = UFunction::FindFunction("Function IpDrv.WebResponse.FailAuthentication");
+
 	}
 
 	UWebResponse_execFailAuthentication_Parms FailAuthentication_Parms;
@@ -14172,7 +14770,8 @@ bool UWebResponse::SendCachedFile(struct FString Filename, struct FString Conten
 
 	if (!pFnSendCachedFile)
 	{
-		pFnSendCachedFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SENDCACHEDFILE));
+		pFnSendCachedFile = UFunction::FindFunction("Function IpDrv.WebResponse.SendCachedFile");
+
 	}
 
 	UWebResponse_execSendCachedFile_Parms SendCachedFile_Parms;
@@ -14196,7 +14795,8 @@ void UWebResponse::eventSendBinary(int Count, unsigned char B)
 
 	if (!pFnSendBinary)
 	{
-		pFnSendBinary = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SENDBINARY));
+		pFnSendBinary = UFunction::FindFunction("Function IpDrv.WebResponse.SendBinary");
+
 	}
 
 	UWebResponse_eventSendBinary_Parms SendBinary_Parms;
@@ -14218,7 +14818,8 @@ void UWebResponse::eventSendText(struct FString Text, unsigned long bNoCRLF)
 
 	if (!pFnSendText)
 	{
-		pFnSendText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SENDTEXT));
+		pFnSendText = UFunction::FindFunction("Function IpDrv.WebResponse.SendText");
+
 	}
 
 	UWebResponse_eventSendText_Parms SendText_Parms;
@@ -14238,7 +14839,8 @@ void UWebResponse::Dump()
 
 	if (!pFnDump)
 	{
-		pFnDump = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_DUMP));
+		pFnDump = UFunction::FindFunction("Function IpDrv.WebResponse.Dump");
+
 	}
 
 	UWebResponse_execDump_Parms Dump_Parms;
@@ -14262,7 +14864,8 @@ struct FString UWebResponse::GetHTTPExpiration(int OffsetSeconds)
 
 	if (!pFnGetHTTPExpiration)
 	{
-		pFnGetHTTPExpiration = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_GETHTTPEXPIRATION));
+		pFnGetHTTPExpiration = UFunction::FindFunction("Function IpDrv.WebResponse.GetHTTPExpiration");
+
 	}
 
 	UWebResponse_execGetHTTPExpiration_Parms GetHTTPExpiration_Parms;
@@ -14289,7 +14892,8 @@ struct FString UWebResponse::LoadParsedUHTM(struct FString Filename)
 
 	if (!pFnLoadParsedUHTM)
 	{
-		pFnLoadParsedUHTM = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_LOADPARSEDUHTM));
+		pFnLoadParsedUHTM = UFunction::FindFunction("Function IpDrv.WebResponse.LoadParsedUHTM");
+
 	}
 
 	UWebResponse_execLoadParsedUHTM_Parms LoadParsedUHTM_Parms;
@@ -14316,7 +14920,8 @@ bool UWebResponse::IncludeBinaryFile(struct FString Filename)
 
 	if (!pFnIncludeBinaryFile)
 	{
-		pFnIncludeBinaryFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_INCLUDEBINARYFILE));
+		pFnIncludeBinaryFile = UFunction::FindFunction("Function IpDrv.WebResponse.IncludeBinaryFile");
+
 	}
 
 	UWebResponse_execIncludeBinaryFile_Parms IncludeBinaryFile_Parms;
@@ -14343,7 +14948,8 @@ bool UWebResponse::IncludeUHTM(struct FString Filename)
 
 	if (!pFnIncludeUHTM)
 	{
-		pFnIncludeUHTM = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_INCLUDEUHTM));
+		pFnIncludeUHTM = UFunction::FindFunction("Function IpDrv.WebResponse.IncludeUHTM");
+
 	}
 
 	UWebResponse_execIncludeUHTM_Parms IncludeUHTM_Parms;
@@ -14368,7 +14974,8 @@ void UWebResponse::ClearSubst()
 
 	if (!pFnClearSubst)
 	{
-		pFnClearSubst = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_CLEARSUBST));
+		pFnClearSubst = UFunction::FindFunction("Function IpDrv.WebResponse.ClearSubst");
+
 	}
 
 	UWebResponse_execClearSubst_Parms ClearSubst_Parms;
@@ -14393,7 +15000,8 @@ void UWebResponse::Subst(struct FString Variable, struct FString Value, unsigned
 
 	if (!pFnSubst)
 	{
-		pFnSubst = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_SUBST));
+		pFnSubst = UFunction::FindFunction("Function IpDrv.WebResponse.Subst");
+
 	}
 
 	UWebResponse_execSubst_Parms Subst_Parms;
@@ -14420,7 +15028,8 @@ bool UWebResponse::FileExists(struct FString Filename)
 
 	if (!pFnFileExists)
 	{
-		pFnFileExists = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBRESPONSE_FILEEXISTS));
+		pFnFileExists = UFunction::FindFunction("Function IpDrv.WebResponse.FileExists");
+
 	}
 
 	UWebResponse_execFileExists_Parms FileExists_Parms;
@@ -14447,7 +15056,8 @@ int UUIDataStore_OnlinePlaylists::eventGetMatchTypeForPlaylistId(int PlaylistId)
 
 	if (!pFnGetMatchTypeForPlaylistId)
 	{
-		pFnGetMatchTypeForPlaylistId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_UIDATASTORE_ONLINEPLAYLISTS_GETMATCHTYPEFORPLAYLISTID));
+		pFnGetMatchTypeForPlaylistId = UFunction::FindFunction("Function IpDrv.UIDataStore_OnlinePlaylists.GetMatchTypeForPlaylistId");
+
 	}
 
 	UUIDataStore_OnlinePlaylists_eventGetMatchTypeForPlaylistId_Parms GetMatchTypeForPlaylistId_Parms;
@@ -14472,7 +15082,8 @@ class UOnlinePlaylistProvider* UUIDataStore_OnlinePlaylists::GetOnlinePlaylistPr
 
 	if (!pFnGetOnlinePlaylistProvider)
 	{
-		pFnGetOnlinePlaylistProvider = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_UIDATASTORE_ONLINEPLAYLISTS_GETONLINEPLAYLISTPROVIDER));
+		pFnGetOnlinePlaylistProvider = UFunction::FindFunction("Function IpDrv.UIDataStore_OnlinePlaylists.GetOnlinePlaylistProvider");
+
 	}
 
 	UUIDataStore_OnlinePlaylists_execGetOnlinePlaylistProvider_Parms GetOnlinePlaylistProvider_Parms;
@@ -14499,7 +15110,8 @@ bool UUIDataStore_OnlinePlaylists::GetPlaylistProvider(struct FName ProviderTag,
 
 	if (!pFnGetPlaylistProvider)
 	{
-		pFnGetPlaylistProvider = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_UIDATASTORE_ONLINEPLAYLISTS_GETPLAYLISTPROVIDER));
+		pFnGetPlaylistProvider = UFunction::FindFunction("Function IpDrv.UIDataStore_OnlinePlaylists.GetPlaylistProvider");
+
 	}
 
 	UUIDataStore_OnlinePlaylists_execGetPlaylistProvider_Parms GetPlaylistProvider_Parms;
@@ -14529,7 +15141,8 @@ bool UUIDataStore_OnlinePlaylists::GetResourceProviders(struct FName ProviderTag
 
 	if (!pFnGetResourceProviders)
 	{
-		pFnGetResourceProviders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_UIDATASTORE_ONLINEPLAYLISTS_GETRESOURCEPROVIDERS));
+		pFnGetResourceProviders = UFunction::FindFunction("Function IpDrv.UIDataStore_OnlinePlaylists.GetResourceProviders");
+
 	}
 
 	UUIDataStore_OnlinePlaylists_execGetResourceProviders_Parms GetResourceProviders_Parms;
@@ -14555,7 +15168,8 @@ void UUIDataStore_OnlinePlaylists::eventInit()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_UIDATASTORE_ONLINEPLAYLISTS_INIT));
+		pFnInit = UFunction::FindFunction("Function IpDrv.UIDataStore_OnlinePlaylists.Init");
+
 	}
 
 	UUIDataStore_OnlinePlaylists_eventInit_Parms Init_Parms;
@@ -14575,7 +15189,8 @@ void UWebApplication::PostQuery(class UWebRequest* Request, class UWebResponse* 
 
 	if (!pFnPostQuery)
 	{
-		pFnPostQuery = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBAPPLICATION_POSTQUERY));
+		pFnPostQuery = UFunction::FindFunction("Function IpDrv.WebApplication.PostQuery");
+
 	}
 
 	UWebApplication_execPostQuery_Parms PostQuery_Parms;
@@ -14597,7 +15212,8 @@ void UWebApplication::Query(class UWebRequest* Request, class UWebResponse* Resp
 
 	if (!pFnQuery)
 	{
-		pFnQuery = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBAPPLICATION_QUERY));
+		pFnQuery = UFunction::FindFunction("Function IpDrv.WebApplication.Query");
+
 	}
 
 	UWebApplication_execQuery_Parms Query_Parms;
@@ -14620,7 +15236,8 @@ bool UWebApplication::PreQuery(class UWebRequest* Request, class UWebResponse* R
 
 	if (!pFnPreQuery)
 	{
-		pFnPreQuery = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBAPPLICATION_PREQUERY));
+		pFnPreQuery = UFunction::FindFunction("Function IpDrv.WebApplication.PreQuery");
+
 	}
 
 	UWebApplication_execPreQuery_Parms PreQuery_Parms;
@@ -14642,7 +15259,8 @@ void UWebApplication::CleanupApp()
 
 	if (!pFnCleanupApp)
 	{
-		pFnCleanupApp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBAPPLICATION_CLEANUPAPP));
+		pFnCleanupApp = UFunction::FindFunction("Function IpDrv.WebApplication.CleanupApp");
+
 	}
 
 	UWebApplication_execCleanupApp_Parms CleanupApp_Parms;
@@ -14660,7 +15278,8 @@ void UWebApplication::Cleanup()
 
 	if (!pFnCleanup)
 	{
-		pFnCleanup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBAPPLICATION_CLEANUP));
+		pFnCleanup = UFunction::FindFunction("Function IpDrv.WebApplication.Cleanup");
+
 	}
 
 	UWebApplication_execCleanup_Parms Cleanup_Parms;
@@ -14678,7 +15297,8 @@ void UWebApplication::Init()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBAPPLICATION_INIT));
+		pFnInit = UFunction::FindFunction("Function IpDrv.WebApplication.Init");
+
 	}
 
 	UWebApplication_execInit_Parms Init_Parms;
@@ -14699,7 +15319,8 @@ class UWebApplication* AWebServer::GetApplication(struct FString URI, struct FSt
 
 	if (!pFnGetApplication)
 	{
-		pFnGetApplication = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBSERVER_GETAPPLICATION));
+		pFnGetApplication = UFunction::FindFunction("Function IpDrv.WebServer.GetApplication");
+
 	}
 
 	AWebServer_execGetApplication_Parms GetApplication_Parms;
@@ -14722,7 +15343,8 @@ void AWebServer::eventLostChild(class AActor* C)
 
 	if (!pFnLostChild)
 	{
-		pFnLostChild = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBSERVER_LOSTCHILD));
+		pFnLostChild = UFunction::FindFunction("Function IpDrv.WebServer.LostChild");
+
 	}
 
 	AWebServer_eventLostChild_Parms LostChild_Parms;
@@ -14742,7 +15364,8 @@ void AWebServer::eventGainedChild(class AActor* C)
 
 	if (!pFnGainedChild)
 	{
-		pFnGainedChild = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBSERVER_GAINEDCHILD));
+		pFnGainedChild = UFunction::FindFunction("Function IpDrv.WebServer.GainedChild");
+
 	}
 
 	AWebServer_eventGainedChild_Parms GainedChild_Parms;
@@ -14761,7 +15384,8 @@ void AWebServer::eventDestroyed()
 
 	if (!pFnDestroyed)
 	{
-		pFnDestroyed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBSERVER_DESTROYED));
+		pFnDestroyed = UFunction::FindFunction("Function IpDrv.WebServer.Destroyed");
+
 	}
 
 	AWebServer_eventDestroyed_Parms Destroyed_Parms;
@@ -14779,7 +15403,8 @@ void AWebServer::PostBeginPlay()
 
 	if (!pFnPostBeginPlay)
 	{
-		pFnPostBeginPlay = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBSERVER_POSTBEGINPLAY));
+		pFnPostBeginPlay = UFunction::FindFunction("Function IpDrv.WebServer.PostBeginPlay");
+
 	}
 
 	AWebServer_execPostBeginPlay_Parms PostBeginPlay_Parms;
@@ -14799,7 +15424,8 @@ void UHelloWeb::eventQuery(class UWebRequest* Request, class UWebResponse* Respo
 
 	if (!pFnQuery)
 	{
-		pFnQuery = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HELLOWEB_QUERY));
+		pFnQuery = UFunction::FindFunction("Function IpDrv.HelloWeb.Query");
+
 	}
 
 	UHelloWeb_eventQuery_Parms Query_Parms;
@@ -14819,7 +15445,8 @@ void UHelloWeb::Init()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_HELLOWEB_INIT));
+		pFnInit = UFunction::FindFunction("Function IpDrv.HelloWeb.Init");
+
 	}
 
 	UHelloWeb_execInit_Parms Init_Parms;
@@ -14839,7 +15466,8 @@ void UImageServer::eventQuery(class UWebRequest* Request, class UWebResponse* Re
 
 	if (!pFnQuery)
 	{
-		pFnQuery = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_IMAGESERVER_QUERY));
+		pFnQuery = UFunction::FindFunction("Function IpDrv.ImageServer.Query");
+
 	}
 
 	UImageServer_eventQuery_Parms Query_Parms;
@@ -14861,7 +15489,8 @@ struct FString UMcpServiceConfig::GetUserAuthTicket(struct FString McpId)
 
 	if (!pFnGetUserAuthTicket)
 	{
-		pFnGetUserAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVICECONFIG_GETUSERAUTHTICKET));
+		pFnGetUserAuthTicket = UFunction::FindFunction("Function IpDrv.McpServiceConfig.GetUserAuthTicket");
+
 	}
 
 	UMcpServiceConfig_execGetUserAuthTicket_Parms GetUserAuthTicket_Parms;
@@ -14885,7 +15514,8 @@ void UMcpClashMobBase::UpdateChallengeUserReward(struct FString UniqueChallengeI
 
 	if (!pFnUpdateChallengeUserReward)
 	{
-		pFnUpdateChallengeUserReward = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_UPDATECHALLENGEUSERREWARD));
+		pFnUpdateChallengeUserReward = UFunction::FindFunction("Function IpDrv.McpClashMobBase.UpdateChallengeUserReward");
+
 	}
 
 	UMcpClashMobBase_execUpdateChallengeUserReward_Parms UpdateChallengeUserReward_Parms;
@@ -14910,7 +15540,8 @@ void UMcpClashMobBase::OnUpdateChallengeUserRewardComplete(unsigned long bWasSuc
 
 	if (!pFnOnUpdateChallengeUserRewardComplete)
 	{
-		pFnOnUpdateChallengeUserRewardComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_ONUPDATECHALLENGEUSERREWARDCOMPLETE));
+		pFnOnUpdateChallengeUserRewardComplete = UFunction::FindFunction("Function IpDrv.McpClashMobBase.OnUpdateChallengeUserRewardComplete");
+
 	}
 
 	UMcpClashMobBase_execOnUpdateChallengeUserRewardComplete_Parms OnUpdateChallengeUserRewardComplete_Parms;
@@ -14936,7 +15567,8 @@ void UMcpClashMobBase::UpdateChallengeUserProgress(struct FString UniqueChalleng
 
 	if (!pFnUpdateChallengeUserProgress)
 	{
-		pFnUpdateChallengeUserProgress = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_UPDATECHALLENGEUSERPROGRESS));
+		pFnUpdateChallengeUserProgress = UFunction::FindFunction("Function IpDrv.McpClashMobBase.UpdateChallengeUserProgress");
+
 	}
 
 	UMcpClashMobBase_execUpdateChallengeUserProgress_Parms UpdateChallengeUserProgress_Parms;
@@ -14962,7 +15594,8 @@ void UMcpClashMobBase::OnUpdateChallengeUserProgressComplete(unsigned long bWasS
 
 	if (!pFnOnUpdateChallengeUserProgressComplete)
 	{
-		pFnOnUpdateChallengeUserProgressComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_ONUPDATECHALLENGEUSERPROGRESSCOMPLETE));
+		pFnOnUpdateChallengeUserProgressComplete = UFunction::FindFunction("Function IpDrv.McpClashMobBase.OnUpdateChallengeUserProgressComplete");
+
 	}
 
 	UMcpClashMobBase_execOnUpdateChallengeUserProgressComplete_Parms OnUpdateChallengeUserProgressComplete_Parms;
@@ -14987,7 +15620,8 @@ void UMcpClashMobBase::GetChallengeUserStatus(struct FString UniqueChallengeId, 
 
 	if (!pFnGetChallengeUserStatus)
 	{
-		pFnGetChallengeUserStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_GETCHALLENGEUSERSTATUS));
+		pFnGetChallengeUserStatus = UFunction::FindFunction("Function IpDrv.McpClashMobBase.GetChallengeUserStatus");
+
 	}
 
 	UMcpClashMobBase_execGetChallengeUserStatus_Parms GetChallengeUserStatus_Parms;
@@ -15011,7 +15645,8 @@ void UMcpClashMobBase::QueryChallengeMultiUserStatus(struct FString UniqueChalle
 
 	if (!pFnQueryChallengeMultiUserStatus)
 	{
-		pFnQueryChallengeMultiUserStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_QUERYCHALLENGEMULTIUSERSTATUS));
+		pFnQueryChallengeMultiUserStatus = UFunction::FindFunction("Function IpDrv.McpClashMobBase.QueryChallengeMultiUserStatus");
+
 	}
 
 	UMcpClashMobBase_execQueryChallengeMultiUserStatus_Parms QueryChallengeMultiUserStatus_Parms;
@@ -15034,7 +15669,8 @@ void UMcpClashMobBase::QueryChallengeUserStatus(struct FString UniqueChallengeId
 
 	if (!pFnQueryChallengeUserStatus)
 	{
-		pFnQueryChallengeUserStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_QUERYCHALLENGEUSERSTATUS));
+		pFnQueryChallengeUserStatus = UFunction::FindFunction("Function IpDrv.McpClashMobBase.QueryChallengeUserStatus");
+
 	}
 
 	UMcpClashMobBase_execQueryChallengeUserStatus_Parms QueryChallengeUserStatus_Parms;
@@ -15058,7 +15694,8 @@ void UMcpClashMobBase::OnQueryChallengeUserStatusComplete(unsigned long bWasSucc
 
 	if (!pFnOnQueryChallengeUserStatusComplete)
 	{
-		pFnOnQueryChallengeUserStatusComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_ONQUERYCHALLENGEUSERSTATUSCOMPLETE));
+		pFnOnQueryChallengeUserStatusComplete = UFunction::FindFunction("Function IpDrv.McpClashMobBase.OnQueryChallengeUserStatusComplete");
+
 	}
 
 	UMcpClashMobBase_execOnQueryChallengeUserStatusComplete_Parms OnQueryChallengeUserStatusComplete_Parms;
@@ -15082,7 +15719,8 @@ void UMcpClashMobBase::AcceptChallenge(struct FString UniqueChallengeId, struct 
 
 	if (!pFnAcceptChallenge)
 	{
-		pFnAcceptChallenge = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_ACCEPTCHALLENGE));
+		pFnAcceptChallenge = UFunction::FindFunction("Function IpDrv.McpClashMobBase.AcceptChallenge");
+
 	}
 
 	UMcpClashMobBase_execAcceptChallenge_Parms AcceptChallenge_Parms;
@@ -15106,7 +15744,8 @@ void UMcpClashMobBase::OnAcceptChallengeComplete(unsigned long bWasSuccessful, s
 
 	if (!pFnOnAcceptChallengeComplete)
 	{
-		pFnOnAcceptChallengeComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_ONACCEPTCHALLENGECOMPLETE));
+		pFnOnAcceptChallengeComplete = UFunction::FindFunction("Function IpDrv.McpClashMobBase.OnAcceptChallengeComplete");
+
 	}
 
 	UMcpClashMobBase_execOnAcceptChallengeComplete_Parms OnAcceptChallengeComplete_Parms;
@@ -15130,7 +15769,8 @@ void UMcpClashMobBase::DeleteCachedChallengeFile(struct FString UniqueChallengeI
 
 	if (!pFnDeleteCachedChallengeFile)
 	{
-		pFnDeleteCachedChallengeFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_DELETECACHEDCHALLENGEFILE));
+		pFnDeleteCachedChallengeFile = UFunction::FindFunction("Function IpDrv.McpClashMobBase.DeleteCachedChallengeFile");
+
 	}
 
 	UMcpClashMobBase_execDeleteCachedChallengeFile_Parms DeleteCachedChallengeFile_Parms;
@@ -15152,7 +15792,8 @@ void UMcpClashMobBase::ClearCachedChallengeFile(struct FString UniqueChallengeId
 
 	if (!pFnClearCachedChallengeFile)
 	{
-		pFnClearCachedChallengeFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_CLEARCACHEDCHALLENGEFILE));
+		pFnClearCachedChallengeFile = UFunction::FindFunction("Function IpDrv.McpClashMobBase.ClearCachedChallengeFile");
+
 	}
 
 	UMcpClashMobBase_execClearCachedChallengeFile_Parms ClearCachedChallengeFile_Parms;
@@ -15175,7 +15816,8 @@ void UMcpClashMobBase::GetChallengeFileContents(struct FString UniqueChallengeId
 
 	if (!pFnGetChallengeFileContents)
 	{
-		pFnGetChallengeFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_GETCHALLENGEFILECONTENTS));
+		pFnGetChallengeFileContents = UFunction::FindFunction("Function IpDrv.McpClashMobBase.GetChallengeFileContents");
+
 	}
 
 	UMcpClashMobBase_execGetChallengeFileContents_Parms GetChallengeFileContents_Parms;
@@ -15198,7 +15840,8 @@ void UMcpClashMobBase::DownloadChallengeFile(struct FString UniqueChallengeId, s
 
 	if (!pFnDownloadChallengeFile)
 	{
-		pFnDownloadChallengeFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_DOWNLOADCHALLENGEFILE));
+		pFnDownloadChallengeFile = UFunction::FindFunction("Function IpDrv.McpClashMobBase.DownloadChallengeFile");
+
 	}
 
 	UMcpClashMobBase_execDownloadChallengeFile_Parms DownloadChallengeFile_Parms;
@@ -15220,7 +15863,8 @@ void UMcpClashMobBase::GetChallengeFileList(struct FString UniqueChallengeId, TA
 
 	if (!pFnGetChallengeFileList)
 	{
-		pFnGetChallengeFileList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_GETCHALLENGEFILELIST));
+		pFnGetChallengeFileList = UFunction::FindFunction("Function IpDrv.McpClashMobBase.GetChallengeFileList");
+
 	}
 
 	UMcpClashMobBase_execGetChallengeFileList_Parms GetChallengeFileList_Parms;
@@ -15245,7 +15889,8 @@ void UMcpClashMobBase::OnDownloadChallengeFileComplete(unsigned long bWasSuccess
 
 	if (!pFnOnDownloadChallengeFileComplete)
 	{
-		pFnOnDownloadChallengeFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_ONDOWNLOADCHALLENGEFILECOMPLETE));
+		pFnOnDownloadChallengeFileComplete = UFunction::FindFunction("Function IpDrv.McpClashMobBase.OnDownloadChallengeFileComplete");
+
 	}
 
 	UMcpClashMobBase_execOnDownloadChallengeFileComplete_Parms OnDownloadChallengeFileComplete_Parms;
@@ -15269,7 +15914,8 @@ void UMcpClashMobBase::GetChallengeList(TArray<struct FMcpClashMobChallengeEvent
 
 	if (!pFnGetChallengeList)
 	{
-		pFnGetChallengeList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_GETCHALLENGELIST));
+		pFnGetChallengeList = UFunction::FindFunction("Function IpDrv.McpClashMobBase.GetChallengeList");
+
 	}
 
 	UMcpClashMobBase_execGetChallengeList_Parms GetChallengeList_Parms;
@@ -15288,7 +15934,8 @@ void UMcpClashMobBase::QueryChallengeList()
 
 	if (!pFnQueryChallengeList)
 	{
-		pFnQueryChallengeList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_QUERYCHALLENGELIST));
+		pFnQueryChallengeList = UFunction::FindFunction("Function IpDrv.McpClashMobBase.QueryChallengeList");
+
 	}
 
 	UMcpClashMobBase_execQueryChallengeList_Parms QueryChallengeList_Parms;
@@ -15308,7 +15955,8 @@ void UMcpClashMobBase::OnQueryChallengeListComplete(unsigned long bWasSuccessful
 
 	if (!pFnOnQueryChallengeListComplete)
 	{
-		pFnOnQueryChallengeListComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_ONQUERYCHALLENGELISTCOMPLETE));
+		pFnOnQueryChallengeListComplete = UFunction::FindFunction("Function IpDrv.McpClashMobBase.OnQueryChallengeListComplete");
+
 	}
 
 	UMcpClashMobBase_execOnQueryChallengeListComplete_Parms OnQueryChallengeListComplete_Parms;
@@ -15329,7 +15977,8 @@ class UMcpClashMobBase* UMcpClashMobBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpClashMobBase.CreateInstance");
+
 	}
 
 	UMcpClashMobBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -15351,7 +16000,8 @@ struct FString UMcpClashMobFileDownload::GetUrlForFile(struct FString Filename)
 
 	if (!pFnGetUrlForFile)
 	{
-		pFnGetUrlForFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBFILEDOWNLOAD_GETURLFORFILE));
+		pFnGetUrlForFile = UFunction::FindFunction("Function IpDrv.McpClashMobFileDownload.GetUrlForFile");
+
 	}
 
 	UMcpClashMobFileDownload_execGetUrlForFile_Parms GetUrlForFile_Parms;
@@ -15375,7 +16025,8 @@ void UMcpClashMobManager::OnUpdateChallengeUserRewardHTTPRequestComplete(class U
 
 	if (!pFnOnUpdateChallengeUserRewardHTTPRequestComplete)
 	{
-		pFnOnUpdateChallengeUserRewardHTTPRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONUPDATECHALLENGEUSERREWARDHTTPREQUESTCOMPLETE));
+		pFnOnUpdateChallengeUserRewardHTTPRequestComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnUpdateChallengeUserRewardHTTPRequestComplete");
+
 	}
 
 	UMcpClashMobManager_execOnUpdateChallengeUserRewardHTTPRequestComplete_Parms OnUpdateChallengeUserRewardHTTPRequestComplete_Parms;
@@ -15399,7 +16050,8 @@ void UMcpClashMobManager::UpdateChallengeUserReward(struct FString UniqueChallen
 
 	if (!pFnUpdateChallengeUserReward)
 	{
-		pFnUpdateChallengeUserReward = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_UPDATECHALLENGEUSERREWARD));
+		pFnUpdateChallengeUserReward = UFunction::FindFunction("Function IpDrv.McpClashMobManager.UpdateChallengeUserReward");
+
 	}
 
 	UMcpClashMobManager_execUpdateChallengeUserReward_Parms UpdateChallengeUserReward_Parms;
@@ -15423,7 +16075,8 @@ void UMcpClashMobManager::OnUpdateChallengeUserProgressHTTPRequestComplete(class
 
 	if (!pFnOnUpdateChallengeUserProgressHTTPRequestComplete)
 	{
-		pFnOnUpdateChallengeUserProgressHTTPRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONUPDATECHALLENGEUSERPROGRESSHTTPREQUESTCOMPLETE));
+		pFnOnUpdateChallengeUserProgressHTTPRequestComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnUpdateChallengeUserProgressHTTPRequestComplete");
+
 	}
 
 	UMcpClashMobManager_execOnUpdateChallengeUserProgressHTTPRequestComplete_Parms OnUpdateChallengeUserProgressHTTPRequestComplete_Parms;
@@ -15448,7 +16101,8 @@ void UMcpClashMobManager::UpdateChallengeUserProgress(struct FString UniqueChall
 
 	if (!pFnUpdateChallengeUserProgress)
 	{
-		pFnUpdateChallengeUserProgress = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_UPDATECHALLENGEUSERPROGRESS));
+		pFnUpdateChallengeUserProgress = UFunction::FindFunction("Function IpDrv.McpClashMobManager.UpdateChallengeUserProgress");
+
 	}
 
 	UMcpClashMobManager_execUpdateChallengeUserProgress_Parms UpdateChallengeUserProgress_Parms;
@@ -15473,7 +16127,8 @@ void UMcpClashMobManager::GetChallengeUserStatus(struct FString UniqueChallengeI
 
 	if (!pFnGetChallengeUserStatus)
 	{
-		pFnGetChallengeUserStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_GETCHALLENGEUSERSTATUS));
+		pFnGetChallengeUserStatus = UFunction::FindFunction("Function IpDrv.McpClashMobManager.GetChallengeUserStatus");
+
 	}
 
 	UMcpClashMobManager_execGetChallengeUserStatus_Parms GetChallengeUserStatus_Parms;
@@ -15497,7 +16152,8 @@ void UMcpClashMobManager::OnQueryChallengeMultiStatusHTTPRequestComplete(class U
 
 	if (!pFnOnQueryChallengeMultiStatusHTTPRequestComplete)
 	{
-		pFnOnQueryChallengeMultiStatusHTTPRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONQUERYCHALLENGEMULTISTATUSHTTPREQUESTCOMPLETE));
+		pFnOnQueryChallengeMultiStatusHTTPRequestComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnQueryChallengeMultiStatusHTTPRequestComplete");
+
 	}
 
 	UMcpClashMobManager_execOnQueryChallengeMultiStatusHTTPRequestComplete_Parms OnQueryChallengeMultiStatusHTTPRequestComplete_Parms;
@@ -15521,7 +16177,8 @@ void UMcpClashMobManager::QueryChallengeMultiUserStatus(struct FString UniqueCha
 
 	if (!pFnQueryChallengeMultiUserStatus)
 	{
-		pFnQueryChallengeMultiUserStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_QUERYCHALLENGEMULTIUSERSTATUS));
+		pFnQueryChallengeMultiUserStatus = UFunction::FindFunction("Function IpDrv.McpClashMobManager.QueryChallengeMultiUserStatus");
+
 	}
 
 	UMcpClashMobManager_execQueryChallengeMultiUserStatus_Parms QueryChallengeMultiUserStatus_Parms;
@@ -15545,7 +16202,8 @@ void UMcpClashMobManager::OnQueryChallengeStatusHTTPRequestComplete(class UHttpR
 
 	if (!pFnOnQueryChallengeStatusHTTPRequestComplete)
 	{
-		pFnOnQueryChallengeStatusHTTPRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONQUERYCHALLENGESTATUSHTTPREQUESTCOMPLETE));
+		pFnOnQueryChallengeStatusHTTPRequestComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnQueryChallengeStatusHTTPRequestComplete");
+
 	}
 
 	UMcpClashMobManager_execOnQueryChallengeStatusHTTPRequestComplete_Parms OnQueryChallengeStatusHTTPRequestComplete_Parms;
@@ -15568,7 +16226,8 @@ void UMcpClashMobManager::QueryChallengeUserStatus(struct FString UniqueChalleng
 
 	if (!pFnQueryChallengeUserStatus)
 	{
-		pFnQueryChallengeUserStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_QUERYCHALLENGEUSERSTATUS));
+		pFnQueryChallengeUserStatus = UFunction::FindFunction("Function IpDrv.McpClashMobManager.QueryChallengeUserStatus");
+
 	}
 
 	UMcpClashMobManager_execQueryChallengeUserStatus_Parms QueryChallengeUserStatus_Parms;
@@ -15591,7 +16250,8 @@ void UMcpClashMobManager::OnAcceptChallengeHTTPRequestComplete(class UHttpReques
 
 	if (!pFnOnAcceptChallengeHTTPRequestComplete)
 	{
-		pFnOnAcceptChallengeHTTPRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONACCEPTCHALLENGEHTTPREQUESTCOMPLETE));
+		pFnOnAcceptChallengeHTTPRequestComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnAcceptChallengeHTTPRequestComplete");
+
 	}
 
 	UMcpClashMobManager_execOnAcceptChallengeHTTPRequestComplete_Parms OnAcceptChallengeHTTPRequestComplete_Parms;
@@ -15614,7 +16274,8 @@ void UMcpClashMobManager::AcceptChallenge(struct FString UniqueChallengeId, stru
 
 	if (!pFnAcceptChallenge)
 	{
-		pFnAcceptChallenge = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ACCEPTCHALLENGE));
+		pFnAcceptChallenge = UFunction::FindFunction("Function IpDrv.McpClashMobManager.AcceptChallenge");
+
 	}
 
 	UMcpClashMobManager_execAcceptChallenge_Parms AcceptChallenge_Parms;
@@ -15636,7 +16297,8 @@ void UMcpClashMobManager::DeleteCachedChallengeFile(struct FString UniqueChallen
 
 	if (!pFnDeleteCachedChallengeFile)
 	{
-		pFnDeleteCachedChallengeFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_DELETECACHEDCHALLENGEFILE));
+		pFnDeleteCachedChallengeFile = UFunction::FindFunction("Function IpDrv.McpClashMobManager.DeleteCachedChallengeFile");
+
 	}
 
 	UMcpClashMobManager_execDeleteCachedChallengeFile_Parms DeleteCachedChallengeFile_Parms;
@@ -15658,7 +16320,8 @@ void UMcpClashMobManager::ClearCachedChallengeFile(struct FString UniqueChalleng
 
 	if (!pFnClearCachedChallengeFile)
 	{
-		pFnClearCachedChallengeFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_CLEARCACHEDCHALLENGEFILE));
+		pFnClearCachedChallengeFile = UFunction::FindFunction("Function IpDrv.McpClashMobManager.ClearCachedChallengeFile");
+
 	}
 
 	UMcpClashMobManager_execClearCachedChallengeFile_Parms ClearCachedChallengeFile_Parms;
@@ -15681,7 +16344,8 @@ void UMcpClashMobManager::GetChallengeFileContents(struct FString UniqueChalleng
 
 	if (!pFnGetChallengeFileContents)
 	{
-		pFnGetChallengeFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_GETCHALLENGEFILECONTENTS));
+		pFnGetChallengeFileContents = UFunction::FindFunction("Function IpDrv.McpClashMobManager.GetChallengeFileContents");
+
 	}
 
 	UMcpClashMobManager_execGetChallengeFileContents_Parms GetChallengeFileContents_Parms;
@@ -15704,7 +16368,8 @@ void UMcpClashMobManager::OnDownloadMcpFileComplete(unsigned long bWasSuccessful
 
 	if (!pFnOnDownloadMcpFileComplete)
 	{
-		pFnOnDownloadMcpFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONDOWNLOADMCPFILECOMPLETE));
+		pFnOnDownloadMcpFileComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnDownloadMcpFileComplete");
+
 	}
 
 	UMcpClashMobManager_execOnDownloadMcpFileComplete_Parms OnDownloadMcpFileComplete_Parms;
@@ -15726,7 +16391,8 @@ void UMcpClashMobManager::OnLoadCachedFileComplete(unsigned long bWasSuccessful,
 
 	if (!pFnOnLoadCachedFileComplete)
 	{
-		pFnOnLoadCachedFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONLOADCACHEDFILECOMPLETE));
+		pFnOnLoadCachedFileComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnLoadCachedFileComplete");
+
 	}
 
 	UMcpClashMobManager_execOnLoadCachedFileComplete_Parms OnLoadCachedFileComplete_Parms;
@@ -15748,7 +16414,8 @@ void UMcpClashMobManager::DownloadChallengeFile(struct FString UniqueChallengeId
 
 	if (!pFnDownloadChallengeFile)
 	{
-		pFnDownloadChallengeFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_DOWNLOADCHALLENGEFILE));
+		pFnDownloadChallengeFile = UFunction::FindFunction("Function IpDrv.McpClashMobManager.DownloadChallengeFile");
+
 	}
 
 	UMcpClashMobManager_execDownloadChallengeFile_Parms DownloadChallengeFile_Parms;
@@ -15770,7 +16437,8 @@ void UMcpClashMobManager::GetChallengeFileList(struct FString UniqueChallengeId,
 
 	if (!pFnGetChallengeFileList)
 	{
-		pFnGetChallengeFileList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_GETCHALLENGEFILELIST));
+		pFnGetChallengeFileList = UFunction::FindFunction("Function IpDrv.McpClashMobManager.GetChallengeFileList");
+
 	}
 
 	UMcpClashMobManager_execGetChallengeFileList_Parms GetChallengeFileList_Parms;
@@ -15791,7 +16459,8 @@ void UMcpClashMobManager::GetChallengeList(TArray<struct FMcpClashMobChallengeEv
 
 	if (!pFnGetChallengeList)
 	{
-		pFnGetChallengeList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_GETCHALLENGELIST));
+		pFnGetChallengeList = UFunction::FindFunction("Function IpDrv.McpClashMobManager.GetChallengeList");
+
 	}
 
 	UMcpClashMobManager_execGetChallengeList_Parms GetChallengeList_Parms;
@@ -15813,7 +16482,8 @@ void UMcpClashMobManager::OnQueryChallengeListHTTPRequestComplete(class UHttpReq
 
 	if (!pFnOnQueryChallengeListHTTPRequestComplete)
 	{
-		pFnOnQueryChallengeListHTTPRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_ONQUERYCHALLENGELISTHTTPREQUESTCOMPLETE));
+		pFnOnQueryChallengeListHTTPRequestComplete = UFunction::FindFunction("Function IpDrv.McpClashMobManager.OnQueryChallengeListHTTPRequestComplete");
+
 	}
 
 	UMcpClashMobManager_execOnQueryChallengeListHTTPRequestComplete_Parms OnQueryChallengeListHTTPRequestComplete_Parms;
@@ -15834,7 +16504,8 @@ void UMcpClashMobManager::QueryChallengeList()
 
 	if (!pFnQueryChallengeList)
 	{
-		pFnQueryChallengeList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_QUERYCHALLENGELIST));
+		pFnQueryChallengeList = UFunction::FindFunction("Function IpDrv.McpClashMobManager.QueryChallengeList");
+
 	}
 
 	UMcpClashMobManager_execQueryChallengeList_Parms QueryChallengeList_Parms;
@@ -15852,7 +16523,8 @@ void UMcpClashMobManager::Init()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPCLASHMOBMANAGER_INIT));
+		pFnInit = UFunction::FindFunction("Function IpDrv.McpClashMobManager.Init");
+
 	}
 
 	UMcpClashMobManager_execInit_Parms Init_Parms;
@@ -15873,7 +16545,8 @@ void UMcpGroupsBase::OnAcceptGroupInviteComplete(struct FString GroupId, unsigne
 
 	if (!pFnOnAcceptGroupInviteComplete)
 	{
-		pFnOnAcceptGroupInviteComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONACCEPTGROUPINVITECOMPLETE));
+		pFnOnAcceptGroupInviteComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnAcceptGroupInviteComplete");
+
 	}
 
 	UMcpGroupsBase_execOnAcceptGroupInviteComplete_Parms OnAcceptGroupInviteComplete_Parms;
@@ -15897,7 +16570,8 @@ void UMcpGroupsBase::AcceptGroupInvite(struct FString UniqueUserId, struct FStri
 
 	if (!pFnAcceptGroupInvite)
 	{
-		pFnAcceptGroupInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ACCEPTGROUPINVITE));
+		pFnAcceptGroupInvite = UFunction::FindFunction("Function IpDrv.McpGroupsBase.AcceptGroupInvite");
+
 	}
 
 	UMcpGroupsBase_execAcceptGroupInvite_Parms AcceptGroupInvite_Parms;
@@ -15920,7 +16594,8 @@ void UMcpGroupsBase::GetGroupInviteList(struct FString UserId, struct FMcpGroupL
 
 	if (!pFnGetGroupInviteList)
 	{
-		pFnGetGroupInviteList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_GETGROUPINVITELIST));
+		pFnGetGroupInviteList = UFunction::FindFunction("Function IpDrv.McpGroupsBase.GetGroupInviteList");
+
 	}
 
 	UMcpGroupsBase_execGetGroupInviteList_Parms GetGroupInviteList_Parms;
@@ -15942,7 +16617,8 @@ void UMcpGroupsBase::OnQueryGroupInvitesComplete(unsigned long bWasSuccessful, s
 
 	if (!pFnOnQueryGroupInvitesComplete)
 	{
-		pFnOnQueryGroupInvitesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONQUERYGROUPINVITESCOMPLETE));
+		pFnOnQueryGroupInvitesComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnQueryGroupInvitesComplete");
+
 	}
 
 	UMcpGroupsBase_execOnQueryGroupInvitesComplete_Parms OnQueryGroupInvitesComplete_Parms;
@@ -15963,7 +16639,8 @@ void UMcpGroupsBase::QueryGroupInvites(struct FString UniqueUserId)
 
 	if (!pFnQueryGroupInvites)
 	{
-		pFnQueryGroupInvites = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_QUERYGROUPINVITES));
+		pFnQueryGroupInvites = UFunction::FindFunction("Function IpDrv.McpGroupsBase.QueryGroupInvites");
+
 	}
 
 	UMcpGroupsBase_execQueryGroupInvites_Parms QueryGroupInvites_Parms;
@@ -15985,7 +16662,8 @@ void UMcpGroupsBase::OnDeleteAllGroupsComplete(struct FString RequesterId, unsig
 
 	if (!pFnOnDeleteAllGroupsComplete)
 	{
-		pFnOnDeleteAllGroupsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONDELETEALLGROUPSCOMPLETE));
+		pFnOnDeleteAllGroupsComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnDeleteAllGroupsComplete");
+
 	}
 
 	UMcpGroupsBase_execOnDeleteAllGroupsComplete_Parms OnDeleteAllGroupsComplete_Parms;
@@ -16007,7 +16685,8 @@ void UMcpGroupsBase::DeleteAllGroups(struct FString OwnerId)
 
 	if (!pFnDeleteAllGroups)
 	{
-		pFnDeleteAllGroups = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_DELETEALLGROUPS));
+		pFnDeleteAllGroups = UFunction::FindFunction("Function IpDrv.McpGroupsBase.DeleteAllGroups");
+
 	}
 
 	UMcpGroupsBase_execDeleteAllGroups_Parms DeleteAllGroups_Parms;
@@ -16029,7 +16708,8 @@ void UMcpGroupsBase::OnRemoveGroupMembersComplete(struct FString GroupId, unsign
 
 	if (!pFnOnRemoveGroupMembersComplete)
 	{
-		pFnOnRemoveGroupMembersComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONREMOVEGROUPMEMBERSCOMPLETE));
+		pFnOnRemoveGroupMembersComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnRemoveGroupMembersComplete");
+
 	}
 
 	UMcpGroupsBase_execOnRemoveGroupMembersComplete_Parms OnRemoveGroupMembersComplete_Parms;
@@ -16053,7 +16733,8 @@ void UMcpGroupsBase::RemoveGroupMembers(struct FString OwnerId, struct FString G
 
 	if (!pFnRemoveGroupMembers)
 	{
-		pFnRemoveGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_REMOVEGROUPMEMBERS));
+		pFnRemoveGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsBase.RemoveGroupMembers");
+
 	}
 
 	UMcpGroupsBase_execRemoveGroupMembers_Parms RemoveGroupMembers_Parms;
@@ -16077,7 +16758,8 @@ void UMcpGroupsBase::OnAddGroupMembersComplete(struct FString GroupId, unsigned 
 
 	if (!pFnOnAddGroupMembersComplete)
 	{
-		pFnOnAddGroupMembersComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONADDGROUPMEMBERSCOMPLETE));
+		pFnOnAddGroupMembersComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnAddGroupMembersComplete");
+
 	}
 
 	UMcpGroupsBase_execOnAddGroupMembersComplete_Parms OnAddGroupMembersComplete_Parms;
@@ -16102,7 +16784,8 @@ void UMcpGroupsBase::AddGroupMembers(struct FString OwnerId, struct FString Grou
 
 	if (!pFnAddGroupMembers)
 	{
-		pFnAddGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ADDGROUPMEMBERS));
+		pFnAddGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsBase.AddGroupMembers");
+
 	}
 
 	UMcpGroupsBase_execAddGroupMembers_Parms AddGroupMembers_Parms;
@@ -16126,7 +16809,8 @@ void UMcpGroupsBase::GetGroupMembers(struct FString GroupId, TArray<struct FMcpG
 
 	if (!pFnGetGroupMembers)
 	{
-		pFnGetGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_GETGROUPMEMBERS));
+		pFnGetGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsBase.GetGroupMembers");
+
 	}
 
 	UMcpGroupsBase_execGetGroupMembers_Parms GetGroupMembers_Parms;
@@ -16149,7 +16833,8 @@ void UMcpGroupsBase::OnQueryGroupMembersComplete(struct FString GroupId, unsigne
 
 	if (!pFnOnQueryGroupMembersComplete)
 	{
-		pFnOnQueryGroupMembersComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONQUERYGROUPMEMBERSCOMPLETE));
+		pFnOnQueryGroupMembersComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnQueryGroupMembersComplete");
+
 	}
 
 	UMcpGroupsBase_execOnQueryGroupMembersComplete_Parms OnQueryGroupMembersComplete_Parms;
@@ -16172,7 +16857,8 @@ void UMcpGroupsBase::QueryGroupMembers(struct FString UniqueUserId, struct FStri
 
 	if (!pFnQueryGroupMembers)
 	{
-		pFnQueryGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_QUERYGROUPMEMBERS));
+		pFnQueryGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsBase.QueryGroupMembers");
+
 	}
 
 	UMcpGroupsBase_execQueryGroupMembers_Parms QueryGroupMembers_Parms;
@@ -16194,7 +16880,8 @@ void UMcpGroupsBase::GetGroupList(struct FString UserId, struct FMcpGroupList& G
 
 	if (!pFnGetGroupList)
 	{
-		pFnGetGroupList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_GETGROUPLIST));
+		pFnGetGroupList = UFunction::FindFunction("Function IpDrv.McpGroupsBase.GetGroupList");
+
 	}
 
 	UMcpGroupsBase_execGetGroupList_Parms GetGroupList_Parms;
@@ -16217,7 +16904,8 @@ void UMcpGroupsBase::OnQueryGroupsComplete(struct FString UserId, unsigned long 
 
 	if (!pFnOnQueryGroupsComplete)
 	{
-		pFnOnQueryGroupsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONQUERYGROUPSCOMPLETE));
+		pFnOnQueryGroupsComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnQueryGroupsComplete");
+
 	}
 
 	UMcpGroupsBase_execOnQueryGroupsComplete_Parms OnQueryGroupsComplete_Parms;
@@ -16239,7 +16927,8 @@ void UMcpGroupsBase::QueryGroups(struct FString RequesterId)
 
 	if (!pFnQueryGroups)
 	{
-		pFnQueryGroups = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_QUERYGROUPS));
+		pFnQueryGroups = UFunction::FindFunction("Function IpDrv.McpGroupsBase.QueryGroups");
+
 	}
 
 	UMcpGroupsBase_execQueryGroups_Parms QueryGroups_Parms;
@@ -16261,7 +16950,8 @@ void UMcpGroupsBase::OnDeleteGroupComplete(struct FString GroupId, unsigned long
 
 	if (!pFnOnDeleteGroupComplete)
 	{
-		pFnOnDeleteGroupComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONDELETEGROUPCOMPLETE));
+		pFnOnDeleteGroupComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnDeleteGroupComplete");
+
 	}
 
 	UMcpGroupsBase_execOnDeleteGroupComplete_Parms OnDeleteGroupComplete_Parms;
@@ -16284,7 +16974,8 @@ void UMcpGroupsBase::DeleteGroup(struct FString UniqueUserId, struct FString Gro
 
 	if (!pFnDeleteGroup)
 	{
-		pFnDeleteGroup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_DELETEGROUP));
+		pFnDeleteGroup = UFunction::FindFunction("Function IpDrv.McpGroupsBase.DeleteGroup");
+
 	}
 
 	UMcpGroupsBase_execDeleteGroup_Parms DeleteGroup_Parms;
@@ -16307,7 +16998,8 @@ void UMcpGroupsBase::OnCreateGroupComplete(struct FMcpGroup Group, unsigned long
 
 	if (!pFnOnCreateGroupComplete)
 	{
-		pFnOnCreateGroupComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_ONCREATEGROUPCOMPLETE));
+		pFnOnCreateGroupComplete = UFunction::FindFunction("Function IpDrv.McpGroupsBase.OnCreateGroupComplete");
+
 	}
 
 	UMcpGroupsBase_execOnCreateGroupComplete_Parms OnCreateGroupComplete_Parms;
@@ -16330,7 +17022,8 @@ void UMcpGroupsBase::CreateGroup(struct FString OwnerId, struct FString GroupNam
 
 	if (!pFnCreateGroup)
 	{
-		pFnCreateGroup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_CREATEGROUP));
+		pFnCreateGroup = UFunction::FindFunction("Function IpDrv.McpGroupsBase.CreateGroup");
+
 	}
 
 	UMcpGroupsBase_execCreateGroup_Parms CreateGroup_Parms;
@@ -16351,7 +17044,8 @@ class UMcpGroupsBase* UMcpGroupsBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpGroupsBase.CreateInstance");
+
 	}
 
 	UMcpGroupsBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -16374,7 +17068,8 @@ void UMcpGroupsManager::CacheGroupMember(struct FString MemberId, struct FString
 
 	if (!pFnCacheGroupMember)
 	{
-		pFnCacheGroupMember = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_CACHEGROUPMEMBER));
+		pFnCacheGroupMember = UFunction::FindFunction("Function IpDrv.McpGroupsManager.CacheGroupMember");
+
 	}
 
 	UMcpGroupsManager_execCacheGroupMember_Parms CacheGroupMember_Parms;
@@ -16397,7 +17092,8 @@ void UMcpGroupsManager::CacheGroup(struct FString RequesterId, struct FMcpGroup 
 
 	if (!pFnCacheGroup)
 	{
-		pFnCacheGroup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_CACHEGROUP));
+		pFnCacheGroup = UFunction::FindFunction("Function IpDrv.McpGroupsManager.CacheGroup");
+
 	}
 
 	UMcpGroupsManager_execCacheGroup_Parms CacheGroup_Parms;
@@ -16420,7 +17116,8 @@ void UMcpGroupsManager::OnAcceptGroupInviteRequestComplete(class UHttpRequestInt
 
 	if (!pFnOnAcceptGroupInviteRequestComplete)
 	{
-		pFnOnAcceptGroupInviteRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONACCEPTGROUPINVITEREQUESTCOMPLETE));
+		pFnOnAcceptGroupInviteRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnAcceptGroupInviteRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnAcceptGroupInviteRequestComplete_Parms OnAcceptGroupInviteRequestComplete_Parms;
@@ -16444,7 +17141,8 @@ void UMcpGroupsManager::AcceptGroupInvite(struct FString UniqueUserId, struct FS
 
 	if (!pFnAcceptGroupInvite)
 	{
-		pFnAcceptGroupInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ACCEPTGROUPINVITE));
+		pFnAcceptGroupInvite = UFunction::FindFunction("Function IpDrv.McpGroupsManager.AcceptGroupInvite");
+
 	}
 
 	UMcpGroupsManager_execAcceptGroupInvite_Parms AcceptGroupInvite_Parms;
@@ -16468,7 +17166,8 @@ void UMcpGroupsManager::OnDeleteAllGroupsRequestComplete(class UHttpRequestInter
 
 	if (!pFnOnDeleteAllGroupsRequestComplete)
 	{
-		pFnOnDeleteAllGroupsRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONDELETEALLGROUPSREQUESTCOMPLETE));
+		pFnOnDeleteAllGroupsRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnDeleteAllGroupsRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnDeleteAllGroupsRequestComplete_Parms OnDeleteAllGroupsRequestComplete_Parms;
@@ -16490,7 +17189,8 @@ void UMcpGroupsManager::DeleteAllGroups(struct FString UniqueUserId)
 
 	if (!pFnDeleteAllGroups)
 	{
-		pFnDeleteAllGroups = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_DELETEALLGROUPS));
+		pFnDeleteAllGroups = UFunction::FindFunction("Function IpDrv.McpGroupsManager.DeleteAllGroups");
+
 	}
 
 	UMcpGroupsManager_execDeleteAllGroups_Parms DeleteAllGroups_Parms;
@@ -16512,7 +17212,8 @@ void UMcpGroupsManager::OnRemoveGroupMembersRequestComplete(class UHttpRequestIn
 
 	if (!pFnOnRemoveGroupMembersRequestComplete)
 	{
-		pFnOnRemoveGroupMembersRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONREMOVEGROUPMEMBERSREQUESTCOMPLETE));
+		pFnOnRemoveGroupMembersRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnRemoveGroupMembersRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnRemoveGroupMembersRequestComplete_Parms OnRemoveGroupMembersRequestComplete_Parms;
@@ -16536,7 +17237,8 @@ void UMcpGroupsManager::RemoveGroupMembers(struct FString UniqueUserId, struct F
 
 	if (!pFnRemoveGroupMembers)
 	{
-		pFnRemoveGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_REMOVEGROUPMEMBERS));
+		pFnRemoveGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsManager.RemoveGroupMembers");
+
 	}
 
 	UMcpGroupsManager_execRemoveGroupMembers_Parms RemoveGroupMembers_Parms;
@@ -16560,7 +17262,8 @@ void UMcpGroupsManager::OnAddGroupMembersRequestComplete(class UHttpRequestInter
 
 	if (!pFnOnAddGroupMembersRequestComplete)
 	{
-		pFnOnAddGroupMembersRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONADDGROUPMEMBERSREQUESTCOMPLETE));
+		pFnOnAddGroupMembersRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnAddGroupMembersRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnAddGroupMembersRequestComplete_Parms OnAddGroupMembersRequestComplete_Parms;
@@ -16585,7 +17288,8 @@ void UMcpGroupsManager::AddGroupMembers(struct FString UniqueUserId, struct FStr
 
 	if (!pFnAddGroupMembers)
 	{
-		pFnAddGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ADDGROUPMEMBERS));
+		pFnAddGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsManager.AddGroupMembers");
+
 	}
 
 	UMcpGroupsManager_execAddGroupMembers_Parms AddGroupMembers_Parms;
@@ -16609,7 +17313,8 @@ void UMcpGroupsManager::GetGroupMembers(struct FString GroupId, TArray<struct FM
 
 	if (!pFnGetGroupMembers)
 	{
-		pFnGetGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_GETGROUPMEMBERS));
+		pFnGetGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsManager.GetGroupMembers");
+
 	}
 
 	UMcpGroupsManager_execGetGroupMembers_Parms GetGroupMembers_Parms;
@@ -16632,7 +17337,8 @@ void UMcpGroupsManager::OnQueryGroupMembersRequestComplete(class UHttpRequestInt
 
 	if (!pFnOnQueryGroupMembersRequestComplete)
 	{
-		pFnOnQueryGroupMembersRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONQUERYGROUPMEMBERSREQUESTCOMPLETE));
+		pFnOnQueryGroupMembersRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnQueryGroupMembersRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnQueryGroupMembersRequestComplete_Parms OnQueryGroupMembersRequestComplete_Parms;
@@ -16655,7 +17361,8 @@ void UMcpGroupsManager::QueryGroupMembers(struct FString UniqueUserId, struct FS
 
 	if (!pFnQueryGroupMembers)
 	{
-		pFnQueryGroupMembers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_QUERYGROUPMEMBERS));
+		pFnQueryGroupMembers = UFunction::FindFunction("Function IpDrv.McpGroupsManager.QueryGroupMembers");
+
 	}
 
 	UMcpGroupsManager_execQueryGroupMembers_Parms QueryGroupMembers_Parms;
@@ -16677,7 +17384,8 @@ void UMcpGroupsManager::GetGroupList(struct FString UserId, struct FMcpGroupList
 
 	if (!pFnGetGroupList)
 	{
-		pFnGetGroupList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_GETGROUPLIST));
+		pFnGetGroupList = UFunction::FindFunction("Function IpDrv.McpGroupsManager.GetGroupList");
+
 	}
 
 	UMcpGroupsManager_execGetGroupList_Parms GetGroupList_Parms;
@@ -16700,7 +17408,8 @@ void UMcpGroupsManager::OnQueryGroupsRequestComplete(class UHttpRequestInterface
 
 	if (!pFnOnQueryGroupsRequestComplete)
 	{
-		pFnOnQueryGroupsRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONQUERYGROUPSREQUESTCOMPLETE));
+		pFnOnQueryGroupsRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnQueryGroupsRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnQueryGroupsRequestComplete_Parms OnQueryGroupsRequestComplete_Parms;
@@ -16722,7 +17431,8 @@ void UMcpGroupsManager::QueryGroups(struct FString RequesterId)
 
 	if (!pFnQueryGroups)
 	{
-		pFnQueryGroups = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_QUERYGROUPS));
+		pFnQueryGroups = UFunction::FindFunction("Function IpDrv.McpGroupsManager.QueryGroups");
+
 	}
 
 	UMcpGroupsManager_execQueryGroups_Parms QueryGroups_Parms;
@@ -16744,7 +17454,8 @@ void UMcpGroupsManager::OnDeleteGroupRequestComplete(class UHttpRequestInterface
 
 	if (!pFnOnDeleteGroupRequestComplete)
 	{
-		pFnOnDeleteGroupRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONDELETEGROUPREQUESTCOMPLETE));
+		pFnOnDeleteGroupRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnDeleteGroupRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnDeleteGroupRequestComplete_Parms OnDeleteGroupRequestComplete_Parms;
@@ -16767,7 +17478,8 @@ void UMcpGroupsManager::DeleteGroup(struct FString UniqueUserId, struct FString 
 
 	if (!pFnDeleteGroup)
 	{
-		pFnDeleteGroup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_DELETEGROUP));
+		pFnDeleteGroup = UFunction::FindFunction("Function IpDrv.McpGroupsManager.DeleteGroup");
+
 	}
 
 	UMcpGroupsManager_execDeleteGroup_Parms DeleteGroup_Parms;
@@ -16790,7 +17502,8 @@ void UMcpGroupsManager::OnCreateGroupRequestComplete(class UHttpRequestInterface
 
 	if (!pFnOnCreateGroupRequestComplete)
 	{
-		pFnOnCreateGroupRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_ONCREATEGROUPREQUESTCOMPLETE));
+		pFnOnCreateGroupRequestComplete = UFunction::FindFunction("Function IpDrv.McpGroupsManager.OnCreateGroupRequestComplete");
+
 	}
 
 	UMcpGroupsManager_execOnCreateGroupRequestComplete_Parms OnCreateGroupRequestComplete_Parms;
@@ -16813,7 +17526,8 @@ void UMcpGroupsManager::CreateGroup(struct FString UniqueUserId, struct FString 
 
 	if (!pFnCreateGroup)
 	{
-		pFnCreateGroup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPGROUPSMANAGER_CREATEGROUP));
+		pFnCreateGroup = UFunction::FindFunction("Function IpDrv.McpGroupsManager.CreateGroup");
+
 	}
 
 	UMcpGroupsManager_execCreateGroup_Parms CreateGroup_Parms;
@@ -16835,7 +17549,8 @@ void UMcpIdMappingBase::GetIdMappings(struct FString ExternalType, TArray<struct
 
 	if (!pFnGetIdMappings)
 	{
-		pFnGetIdMappings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGBASE_GETIDMAPPINGS));
+		pFnGetIdMappings = UFunction::FindFunction("Function IpDrv.McpIdMappingBase.GetIdMappings");
+
 	}
 
 	UMcpIdMappingBase_execGetIdMappings_Parms GetIdMappings_Parms;
@@ -16858,7 +17573,8 @@ void UMcpIdMappingBase::OnQueryMappingsComplete(struct FString ExternalType, uns
 
 	if (!pFnOnQueryMappingsComplete)
 	{
-		pFnOnQueryMappingsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGBASE_ONQUERYMAPPINGSCOMPLETE));
+		pFnOnQueryMappingsComplete = UFunction::FindFunction("Function IpDrv.McpIdMappingBase.OnQueryMappingsComplete");
+
 	}
 
 	UMcpIdMappingBase_execOnQueryMappingsComplete_Parms OnQueryMappingsComplete_Parms;
@@ -16881,7 +17597,8 @@ void UMcpIdMappingBase::QueryMappings(struct FString ExternalType, TArray<struct
 
 	if (!pFnQueryMappings)
 	{
-		pFnQueryMappings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGBASE_QUERYMAPPINGS));
+		pFnQueryMappings = UFunction::FindFunction("Function IpDrv.McpIdMappingBase.QueryMappings");
+
 	}
 
 	UMcpIdMappingBase_execQueryMappings_Parms QueryMappings_Parms;
@@ -16906,7 +17623,8 @@ void UMcpIdMappingBase::OnAddMappingComplete(struct FString McpId, struct FStrin
 
 	if (!pFnOnAddMappingComplete)
 	{
-		pFnOnAddMappingComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGBASE_ONADDMAPPINGCOMPLETE));
+		pFnOnAddMappingComplete = UFunction::FindFunction("Function IpDrv.McpIdMappingBase.OnAddMappingComplete");
+
 	}
 
 	UMcpIdMappingBase_execOnAddMappingComplete_Parms OnAddMappingComplete_Parms;
@@ -16932,7 +17650,8 @@ void UMcpIdMappingBase::AddMapping(struct FString McpId, struct FString External
 
 	if (!pFnAddMapping)
 	{
-		pFnAddMapping = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGBASE_ADDMAPPING));
+		pFnAddMapping = UFunction::FindFunction("Function IpDrv.McpIdMappingBase.AddMapping");
+
 	}
 
 	UMcpIdMappingBase_execAddMapping_Parms AddMapping_Parms;
@@ -16954,7 +17673,8 @@ class UMcpIdMappingBase* UMcpIdMappingBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpIdMappingBase.CreateInstance");
+
 	}
 
 	UMcpIdMappingBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -16976,7 +17696,8 @@ void UMcpIdMappingManager::GetIdMappings(struct FString ExternalType, TArray<str
 
 	if (!pFnGetIdMappings)
 	{
-		pFnGetIdMappings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGMANAGER_GETIDMAPPINGS));
+		pFnGetIdMappings = UFunction::FindFunction("Function IpDrv.McpIdMappingManager.GetIdMappings");
+
 	}
 
 	UMcpIdMappingManager_execGetIdMappings_Parms GetIdMappings_Parms;
@@ -16999,7 +17720,8 @@ void UMcpIdMappingManager::OnQueryMappingsRequestComplete(class UHttpRequestInte
 
 	if (!pFnOnQueryMappingsRequestComplete)
 	{
-		pFnOnQueryMappingsRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGMANAGER_ONQUERYMAPPINGSREQUESTCOMPLETE));
+		pFnOnQueryMappingsRequestComplete = UFunction::FindFunction("Function IpDrv.McpIdMappingManager.OnQueryMappingsRequestComplete");
+
 	}
 
 	UMcpIdMappingManager_execOnQueryMappingsRequestComplete_Parms OnQueryMappingsRequestComplete_Parms;
@@ -17022,7 +17744,8 @@ void UMcpIdMappingManager::QueryMappings(struct FString ExternalType, TArray<str
 
 	if (!pFnQueryMappings)
 	{
-		pFnQueryMappings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGMANAGER_QUERYMAPPINGS));
+		pFnQueryMappings = UFunction::FindFunction("Function IpDrv.McpIdMappingManager.QueryMappings");
+
 	}
 
 	UMcpIdMappingManager_execQueryMappings_Parms QueryMappings_Parms;
@@ -17045,7 +17768,8 @@ void UMcpIdMappingManager::OnAddMappingRequestComplete(class UHttpRequestInterfa
 
 	if (!pFnOnAddMappingRequestComplete)
 	{
-		pFnOnAddMappingRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGMANAGER_ONADDMAPPINGREQUESTCOMPLETE));
+		pFnOnAddMappingRequestComplete = UFunction::FindFunction("Function IpDrv.McpIdMappingManager.OnAddMappingRequestComplete");
+
 	}
 
 	UMcpIdMappingManager_execOnAddMappingRequestComplete_Parms OnAddMappingRequestComplete_Parms;
@@ -17069,7 +17793,8 @@ void UMcpIdMappingManager::AddMapping(struct FString McpId, struct FString Exter
 
 	if (!pFnAddMapping)
 	{
-		pFnAddMapping = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPIDMAPPINGMANAGER_ADDMAPPING));
+		pFnAddMapping = UFunction::FindFunction("Function IpDrv.McpIdMappingManager.AddMapping");
+
 	}
 
 	UMcpIdMappingManager_execAddMapping_Parms AddMapping_Parms;
@@ -17095,7 +17820,8 @@ void UMcpManagedValueManagerBase::OnDeleteValueComplete(struct FString McpId, st
 
 	if (!pFnOnDeleteValueComplete)
 	{
-		pFnOnDeleteValueComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_ONDELETEVALUECOMPLETE));
+		pFnOnDeleteValueComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.OnDeleteValueComplete");
+
 	}
 
 	UMcpManagedValueManagerBase_execOnDeleteValueComplete_Parms OnDeleteValueComplete_Parms;
@@ -17121,7 +17847,8 @@ void UMcpManagedValueManagerBase::DeleteValue(struct FString McpId, struct FStri
 
 	if (!pFnDeleteValue)
 	{
-		pFnDeleteValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_DELETEVALUE));
+		pFnDeleteValue = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.DeleteValue");
+
 	}
 
 	UMcpManagedValueManagerBase_execDeleteValue_Parms DeleteValue_Parms;
@@ -17148,7 +17875,8 @@ void UMcpManagedValueManagerBase::OnUpdateValueComplete(struct FString McpId, st
 
 	if (!pFnOnUpdateValueComplete)
 	{
-		pFnOnUpdateValueComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_ONUPDATEVALUECOMPLETE));
+		pFnOnUpdateValueComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.OnUpdateValueComplete");
+
 	}
 
 	UMcpManagedValueManagerBase_execOnUpdateValueComplete_Parms OnUpdateValueComplete_Parms;
@@ -17176,7 +17904,8 @@ void UMcpManagedValueManagerBase::UpdateValue(struct FString McpId, struct FStri
 
 	if (!pFnUpdateValue)
 	{
-		pFnUpdateValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_UPDATEVALUE));
+		pFnUpdateValue = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.UpdateValue");
+
 	}
 
 	UMcpManagedValueManagerBase_execUpdateValue_Parms UpdateValue_Parms;
@@ -17202,7 +17931,8 @@ int UMcpManagedValueManagerBase::GetValue(struct FString McpId, struct FString S
 
 	if (!pFnGetValue)
 	{
-		pFnGetValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_GETVALUE));
+		pFnGetValue = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.GetValue");
+
 	}
 
 	UMcpManagedValueManagerBase_execGetValue_Parms GetValue_Parms;
@@ -17228,7 +17958,8 @@ TArray<struct FManagedValue> UMcpManagedValueManagerBase::GetValues(struct FStri
 
 	if (!pFnGetValues)
 	{
-		pFnGetValues = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_GETVALUES));
+		pFnGetValues = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.GetValues");
+
 	}
 
 	UMcpManagedValueManagerBase_execGetValues_Parms GetValues_Parms;
@@ -17254,7 +17985,8 @@ void UMcpManagedValueManagerBase::OnReadSaveSlotComplete(struct FString McpId, s
 
 	if (!pFnOnReadSaveSlotComplete)
 	{
-		pFnOnReadSaveSlotComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_ONREADSAVESLOTCOMPLETE));
+		pFnOnReadSaveSlotComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.OnReadSaveSlotComplete");
+
 	}
 
 	UMcpManagedValueManagerBase_execOnReadSaveSlotComplete_Parms OnReadSaveSlotComplete_Parms;
@@ -17278,7 +18010,8 @@ void UMcpManagedValueManagerBase::ReadSaveSlot(struct FString McpId, struct FStr
 
 	if (!pFnReadSaveSlot)
 	{
-		pFnReadSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_READSAVESLOT));
+		pFnReadSaveSlot = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.ReadSaveSlot");
+
 	}
 
 	UMcpManagedValueManagerBase_execReadSaveSlot_Parms ReadSaveSlot_Parms;
@@ -17302,7 +18035,8 @@ void UMcpManagedValueManagerBase::OnCreateSaveSlotComplete(struct FString McpId,
 
 	if (!pFnOnCreateSaveSlotComplete)
 	{
-		pFnOnCreateSaveSlotComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_ONCREATESAVESLOTCOMPLETE));
+		pFnOnCreateSaveSlotComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.OnCreateSaveSlotComplete");
+
 	}
 
 	UMcpManagedValueManagerBase_execOnCreateSaveSlotComplete_Parms OnCreateSaveSlotComplete_Parms;
@@ -17326,7 +18060,8 @@ void UMcpManagedValueManagerBase::CreateSaveSlot(struct FString McpId, struct FS
 
 	if (!pFnCreateSaveSlot)
 	{
-		pFnCreateSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_CREATESAVESLOT));
+		pFnCreateSaveSlot = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.CreateSaveSlot");
+
 	}
 
 	UMcpManagedValueManagerBase_execCreateSaveSlot_Parms CreateSaveSlot_Parms;
@@ -17347,7 +18082,8 @@ class UMcpManagedValueManagerBase* UMcpManagedValueManagerBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGERBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpManagedValueManagerBase.CreateInstance");
+
 	}
 
 	UMcpManagedValueManagerBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -17370,7 +18106,8 @@ void UMcpManagedValueManager::OnDeleteValueRequestComplete(class UHttpRequestInt
 
 	if (!pFnOnDeleteValueRequestComplete)
 	{
-		pFnOnDeleteValueRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_ONDELETEVALUEREQUESTCOMPLETE));
+		pFnOnDeleteValueRequestComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.OnDeleteValueRequestComplete");
+
 	}
 
 	UMcpManagedValueManager_execOnDeleteValueRequestComplete_Parms OnDeleteValueRequestComplete_Parms;
@@ -17394,7 +18131,8 @@ void UMcpManagedValueManager::DeleteValue(struct FString McpId, struct FString S
 
 	if (!pFnDeleteValue)
 	{
-		pFnDeleteValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_DELETEVALUE));
+		pFnDeleteValue = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.DeleteValue");
+
 	}
 
 	UMcpManagedValueManager_execDeleteValue_Parms DeleteValue_Parms;
@@ -17418,7 +18156,8 @@ void UMcpManagedValueManager::OnUpdateValueRequestComplete(class UHttpRequestInt
 
 	if (!pFnOnUpdateValueRequestComplete)
 	{
-		pFnOnUpdateValueRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_ONUPDATEVALUEREQUESTCOMPLETE));
+		pFnOnUpdateValueRequestComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.OnUpdateValueRequestComplete");
+
 	}
 
 	UMcpManagedValueManager_execOnUpdateValueRequestComplete_Parms OnUpdateValueRequestComplete_Parms;
@@ -17443,7 +18182,8 @@ void UMcpManagedValueManager::UpdateValue(struct FString McpId, struct FString S
 
 	if (!pFnUpdateValue)
 	{
-		pFnUpdateValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_UPDATEVALUE));
+		pFnUpdateValue = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.UpdateValue");
+
 	}
 
 	UMcpManagedValueManager_execUpdateValue_Parms UpdateValue_Parms;
@@ -17469,7 +18209,8 @@ int UMcpManagedValueManager::GetValue(struct FString McpId, struct FString SaveS
 
 	if (!pFnGetValue)
 	{
-		pFnGetValue = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_GETVALUE));
+		pFnGetValue = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.GetValue");
+
 	}
 
 	UMcpManagedValueManager_execGetValue_Parms GetValue_Parms;
@@ -17495,7 +18236,8 @@ TArray<struct FManagedValue> UMcpManagedValueManager::GetValues(struct FString M
 
 	if (!pFnGetValues)
 	{
-		pFnGetValues = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_GETVALUES));
+		pFnGetValues = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.GetValues");
+
 	}
 
 	UMcpManagedValueManager_execGetValues_Parms GetValues_Parms;
@@ -17520,7 +18262,8 @@ void UMcpManagedValueManager::OnReadSaveSlotRequestComplete(class UHttpRequestIn
 
 	if (!pFnOnReadSaveSlotRequestComplete)
 	{
-		pFnOnReadSaveSlotRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_ONREADSAVESLOTREQUESTCOMPLETE));
+		pFnOnReadSaveSlotRequestComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.OnReadSaveSlotRequestComplete");
+
 	}
 
 	UMcpManagedValueManager_execOnReadSaveSlotRequestComplete_Parms OnReadSaveSlotRequestComplete_Parms;
@@ -17543,7 +18286,8 @@ void UMcpManagedValueManager::ReadSaveSlot(struct FString McpId, struct FString 
 
 	if (!pFnReadSaveSlot)
 	{
-		pFnReadSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_READSAVESLOT));
+		pFnReadSaveSlot = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.ReadSaveSlot");
+
 	}
 
 	UMcpManagedValueManager_execReadSaveSlot_Parms ReadSaveSlot_Parms;
@@ -17566,7 +18310,8 @@ void UMcpManagedValueManager::ParseValuesForSaveSlot(struct FString McpId, struc
 
 	if (!pFnParseValuesForSaveSlot)
 	{
-		pFnParseValuesForSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_PARSEVALUESFORSAVESLOT));
+		pFnParseValuesForSaveSlot = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.ParseValuesForSaveSlot");
+
 	}
 
 	UMcpManagedValueManager_execParseValuesForSaveSlot_Parms ParseValuesForSaveSlot_Parms;
@@ -17590,7 +18335,8 @@ int UMcpManagedValueManager::FindSaveSlotIndex(struct FString McpId, struct FStr
 
 	if (!pFnFindSaveSlotIndex)
 	{
-		pFnFindSaveSlotIndex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_FINDSAVESLOTINDEX));
+		pFnFindSaveSlotIndex = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.FindSaveSlotIndex");
+
 	}
 
 	UMcpManagedValueManager_execFindSaveSlotIndex_Parms FindSaveSlotIndex_Parms;
@@ -17615,7 +18361,8 @@ void UMcpManagedValueManager::OnCreateSaveSlotRequestComplete(class UHttpRequest
 
 	if (!pFnOnCreateSaveSlotRequestComplete)
 	{
-		pFnOnCreateSaveSlotRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_ONCREATESAVESLOTREQUESTCOMPLETE));
+		pFnOnCreateSaveSlotRequestComplete = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.OnCreateSaveSlotRequestComplete");
+
 	}
 
 	UMcpManagedValueManager_execOnCreateSaveSlotRequestComplete_Parms OnCreateSaveSlotRequestComplete_Parms;
@@ -17638,7 +18385,8 @@ void UMcpManagedValueManager::CreateSaveSlot(struct FString McpId, struct FStrin
 
 	if (!pFnCreateSaveSlot)
 	{
-		pFnCreateSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPMANAGEDVALUEMANAGER_CREATESAVESLOT));
+		pFnCreateSaveSlot = UFunction::FindFunction("Function IpDrv.McpManagedValueManager.CreateSaveSlot");
+
 	}
 
 	UMcpManagedValueManager_execCreateSaveSlot_Parms CreateSaveSlot_Parms;
@@ -17659,7 +18407,8 @@ struct FString UMcpServerTimeBase::GetLastServerTime()
 
 	if (!pFnGetLastServerTime)
 	{
-		pFnGetLastServerTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVERTIMEBASE_GETLASTSERVERTIME));
+		pFnGetLastServerTime = UFunction::FindFunction("Function IpDrv.McpServerTimeBase.GetLastServerTime");
+
 	}
 
 	UMcpServerTimeBase_execGetLastServerTime_Parms GetLastServerTime_Parms;
@@ -17682,7 +18431,8 @@ void UMcpServerTimeBase::OnQueryServerTimeComplete(unsigned long bWasSuccessful,
 
 	if (!pFnOnQueryServerTimeComplete)
 	{
-		pFnOnQueryServerTimeComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVERTIMEBASE_ONQUERYSERVERTIMECOMPLETE));
+		pFnOnQueryServerTimeComplete = UFunction::FindFunction("Function IpDrv.McpServerTimeBase.OnQueryServerTimeComplete");
+
 	}
 
 	UMcpServerTimeBase_execOnQueryServerTimeComplete_Parms OnQueryServerTimeComplete_Parms;
@@ -17703,7 +18453,8 @@ void UMcpServerTimeBase::QueryServerTime()
 
 	if (!pFnQueryServerTime)
 	{
-		pFnQueryServerTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVERTIMEBASE_QUERYSERVERTIME));
+		pFnQueryServerTime = UFunction::FindFunction("Function IpDrv.McpServerTimeBase.QueryServerTime");
+
 	}
 
 	UMcpServerTimeBase_execQueryServerTime_Parms QueryServerTime_Parms;
@@ -17722,7 +18473,8 @@ class UMcpServerTimeBase* UMcpServerTimeBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVERTIMEBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpServerTimeBase.CreateInstance");
+
 	}
 
 	UMcpServerTimeBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -17743,7 +18495,8 @@ struct FString UMcpServerTimeManager::GetLastServerTime()
 
 	if (!pFnGetLastServerTime)
 	{
-		pFnGetLastServerTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVERTIMEMANAGER_GETLASTSERVERTIME));
+		pFnGetLastServerTime = UFunction::FindFunction("Function IpDrv.McpServerTimeManager.GetLastServerTime");
+
 	}
 
 	UMcpServerTimeManager_execGetLastServerTime_Parms GetLastServerTime_Parms;
@@ -17766,7 +18519,8 @@ void UMcpServerTimeManager::OnQueryServerTimeHTTPRequestComplete(class UHttpRequ
 
 	if (!pFnOnQueryServerTimeHTTPRequestComplete)
 	{
-		pFnOnQueryServerTimeHTTPRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVERTIMEMANAGER_ONQUERYSERVERTIMEHTTPREQUESTCOMPLETE));
+		pFnOnQueryServerTimeHTTPRequestComplete = UFunction::FindFunction("Function IpDrv.McpServerTimeManager.OnQueryServerTimeHTTPRequestComplete");
+
 	}
 
 	UMcpServerTimeManager_execOnQueryServerTimeHTTPRequestComplete_Parms OnQueryServerTimeHTTPRequestComplete_Parms;
@@ -17787,7 +18541,8 @@ void UMcpServerTimeManager::QueryServerTime()
 
 	if (!pFnQueryServerTime)
 	{
-		pFnQueryServerTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPSERVERTIMEMANAGER_QUERYSERVERTIME));
+		pFnQueryServerTime = UFunction::FindFunction("Function IpDrv.McpServerTimeManager.QueryServerTime");
+
 	}
 
 	UMcpServerTimeManager_execQueryServerTime_Parms QueryServerTime_Parms;
@@ -17810,7 +18565,8 @@ void UMcpUserInventoryBase::OnRecordIapComplete(struct FString McpId, struct FSt
 
 	if (!pFnOnRecordIapComplete)
 	{
-		pFnOnRecordIapComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONRECORDIAPCOMPLETE));
+		pFnOnRecordIapComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnRecordIapComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnRecordIapComplete_Parms OnRecordIapComplete_Parms;
@@ -17836,7 +18592,8 @@ void UMcpUserInventoryBase::RecordIap(struct FString McpId, struct FString SaveS
 
 	if (!pFnRecordIap)
 	{
-		pFnRecordIap = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_RECORDIAP));
+		pFnRecordIap = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.RecordIap");
+
 	}
 
 	UMcpUserInventoryBase_execRecordIap_Parms RecordIap_Parms;
@@ -17862,7 +18619,8 @@ void UMcpUserInventoryBase::OnDeleteItemComplete(struct FString McpId, struct FS
 
 	if (!pFnOnDeleteItemComplete)
 	{
-		pFnOnDeleteItemComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONDELETEITEMCOMPLETE));
+		pFnOnDeleteItemComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnDeleteItemComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnDeleteItemComplete_Parms OnDeleteItemComplete_Parms;
@@ -17889,7 +18647,8 @@ void UMcpUserInventoryBase::DeleteItem(struct FString McpId, struct FString Save
 
 	if (!pFnDeleteItem)
 	{
-		pFnDeleteItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_DELETEITEM));
+		pFnDeleteItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.DeleteItem");
+
 	}
 
 	UMcpUserInventoryBase_execDeleteItem_Parms DeleteItem_Parms;
@@ -17917,7 +18676,8 @@ void UMcpUserInventoryBase::OnConsumeItemComplete(struct FString McpId, struct F
 
 	if (!pFnOnConsumeItemComplete)
 	{
-		pFnOnConsumeItemComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONCONSUMEITEMCOMPLETE));
+		pFnOnConsumeItemComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnConsumeItemComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnConsumeItemComplete_Parms OnConsumeItemComplete_Parms;
@@ -17946,7 +18706,8 @@ void UMcpUserInventoryBase::ConsumeItem(struct FString McpId, struct FString Sav
 
 	if (!pFnConsumeItem)
 	{
-		pFnConsumeItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_CONSUMEITEM));
+		pFnConsumeItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.ConsumeItem");
+
 	}
 
 	UMcpUserInventoryBase_execConsumeItem_Parms ConsumeItem_Parms;
@@ -17975,7 +18736,8 @@ void UMcpUserInventoryBase::OnEarnItemComplete(struct FString McpId, struct FStr
 
 	if (!pFnOnEarnItemComplete)
 	{
-		pFnOnEarnItemComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONEARNITEMCOMPLETE));
+		pFnOnEarnItemComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnEarnItemComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnEarnItemComplete_Parms OnEarnItemComplete_Parms;
@@ -18004,7 +18766,8 @@ void UMcpUserInventoryBase::EarnItem(struct FString McpId, struct FString SaveSl
 
 	if (!pFnEarnItem)
 	{
-		pFnEarnItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_EARNITEM));
+		pFnEarnItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.EarnItem");
+
 	}
 
 	UMcpUserInventoryBase_execEarnItem_Parms EarnItem_Parms;
@@ -18033,7 +18796,8 @@ void UMcpUserInventoryBase::OnSellItemComplete(struct FString McpId, struct FStr
 
 	if (!pFnOnSellItemComplete)
 	{
-		pFnOnSellItemComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONSELLITEMCOMPLETE));
+		pFnOnSellItemComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnSellItemComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnSellItemComplete_Parms OnSellItemComplete_Parms;
@@ -18063,7 +18827,8 @@ void UMcpUserInventoryBase::SellItem(struct FString McpId, struct FString SaveSl
 
 	if (!pFnSellItem)
 	{
-		pFnSellItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_SELLITEM));
+		pFnSellItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.SellItem");
+
 	}
 
 	UMcpUserInventoryBase_execSellItem_Parms SellItem_Parms;
@@ -18093,7 +18858,8 @@ void UMcpUserInventoryBase::OnPurchaseItemComplete(struct FString McpId, struct 
 
 	if (!pFnOnPurchaseItemComplete)
 	{
-		pFnOnPurchaseItemComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONPURCHASEITEMCOMPLETE));
+		pFnOnPurchaseItemComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnPurchaseItemComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnPurchaseItemComplete_Parms OnPurchaseItemComplete_Parms;
@@ -18124,7 +18890,8 @@ void UMcpUserInventoryBase::PurchaseItem(struct FString McpId, struct FString Sa
 
 	if (!pFnPurchaseItem)
 	{
-		pFnPurchaseItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_PURCHASEITEM));
+		pFnPurchaseItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.PurchaseItem");
+
 	}
 
 	UMcpUserInventoryBase_execPurchaseItem_Parms PurchaseItem_Parms;
@@ -18154,7 +18921,8 @@ bool UMcpUserInventoryBase::GetInventoryItem(struct FString McpId, struct FStrin
 
 	if (!pFnGetInventoryItem)
 	{
-		pFnGetInventoryItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_GETINVENTORYITEM));
+		pFnGetInventoryItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.GetInventoryItem");
+
 	}
 
 	UMcpUserInventoryBase_execGetInventoryItem_Parms GetInventoryItem_Parms;
@@ -18181,7 +18949,8 @@ void UMcpUserInventoryBase::GetInventoryItems(struct FString McpId, struct FStri
 
 	if (!pFnGetInventoryItems)
 	{
-		pFnGetInventoryItems = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_GETINVENTORYITEMS));
+		pFnGetInventoryItems = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.GetInventoryItems");
+
 	}
 
 	UMcpUserInventoryBase_execGetInventoryItems_Parms GetInventoryItems_Parms;
@@ -18206,7 +18975,8 @@ void UMcpUserInventoryBase::OnQueryInventoryItemsComplete(struct FString McpId, 
 
 	if (!pFnOnQueryInventoryItemsComplete)
 	{
-		pFnOnQueryInventoryItemsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONQUERYINVENTORYITEMSCOMPLETE));
+		pFnOnQueryInventoryItemsComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnQueryInventoryItemsComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnQueryInventoryItemsComplete_Parms OnQueryInventoryItemsComplete_Parms;
@@ -18230,7 +19000,8 @@ void UMcpUserInventoryBase::QueryInventoryItems(struct FString McpId, struct FSt
 
 	if (!pFnQueryInventoryItems)
 	{
-		pFnQueryInventoryItems = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_QUERYINVENTORYITEMS));
+		pFnQueryInventoryItems = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.QueryInventoryItems");
+
 	}
 
 	UMcpUserInventoryBase_execQueryInventoryItems_Parms QueryInventoryItems_Parms;
@@ -18253,7 +19024,8 @@ void UMcpUserInventoryBase::OnQuerySaveSlotListComplete(struct FString McpId, un
 
 	if (!pFnOnQuerySaveSlotListComplete)
 	{
-		pFnOnQuerySaveSlotListComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONQUERYSAVESLOTLISTCOMPLETE));
+		pFnOnQuerySaveSlotListComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnQuerySaveSlotListComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnQuerySaveSlotListComplete_Parms OnQuerySaveSlotListComplete_Parms;
@@ -18276,7 +19048,8 @@ TArray<struct FString> UMcpUserInventoryBase::GetSaveSlotList(struct FString Mcp
 
 	if (!pFnGetSaveSlotList)
 	{
-		pFnGetSaveSlotList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_GETSAVESLOTLIST));
+		pFnGetSaveSlotList = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.GetSaveSlotList");
+
 	}
 
 	UMcpUserInventoryBase_execGetSaveSlotList_Parms GetSaveSlotList_Parms;
@@ -18298,7 +19071,8 @@ void UMcpUserInventoryBase::QuerySaveSlotList(struct FString McpId)
 
 	if (!pFnQuerySaveSlotList)
 	{
-		pFnQuerySaveSlotList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_QUERYSAVESLOTLIST));
+		pFnQuerySaveSlotList = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.QuerySaveSlotList");
+
 	}
 
 	UMcpUserInventoryBase_execQuerySaveSlotList_Parms QuerySaveSlotList_Parms;
@@ -18321,7 +19095,8 @@ void UMcpUserInventoryBase::OnDeleteSaveSlotComplete(struct FString McpId, struc
 
 	if (!pFnOnDeleteSaveSlotComplete)
 	{
-		pFnOnDeleteSaveSlotComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONDELETESAVESLOTCOMPLETE));
+		pFnOnDeleteSaveSlotComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnDeleteSaveSlotComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnDeleteSaveSlotComplete_Parms OnDeleteSaveSlotComplete_Parms;
@@ -18345,7 +19120,8 @@ void UMcpUserInventoryBase::DeleteSaveSlot(struct FString McpId, struct FString 
 
 	if (!pFnDeleteSaveSlot)
 	{
-		pFnDeleteSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_DELETESAVESLOT));
+		pFnDeleteSaveSlot = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.DeleteSaveSlot");
+
 	}
 
 	UMcpUserInventoryBase_execDeleteSaveSlot_Parms DeleteSaveSlot_Parms;
@@ -18369,7 +19145,8 @@ void UMcpUserInventoryBase::OnCreateSaveSlotComplete(struct FString McpId, struc
 
 	if (!pFnOnCreateSaveSlotComplete)
 	{
-		pFnOnCreateSaveSlotComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_ONCREATESAVESLOTCOMPLETE));
+		pFnOnCreateSaveSlotComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.OnCreateSaveSlotComplete");
+
 	}
 
 	UMcpUserInventoryBase_execOnCreateSaveSlotComplete_Parms OnCreateSaveSlotComplete_Parms;
@@ -18394,7 +19171,8 @@ void UMcpUserInventoryBase::CreateSaveSlot(struct FString McpId, struct FString 
 
 	if (!pFnCreateSaveSlot)
 	{
-		pFnCreateSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_CREATESAVESLOT));
+		pFnCreateSaveSlot = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.CreateSaveSlot");
+
 	}
 
 	UMcpUserInventoryBase_execCreateSaveSlot_Parms CreateSaveSlot_Parms;
@@ -18416,7 +19194,8 @@ class UMcpUserInventoryBase* UMcpUserInventoryBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpUserInventoryBase.CreateInstance");
+
 	}
 
 	UMcpUserInventoryBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -18439,7 +19218,8 @@ void UMcpUserInventoryManager::OnRecordIapRequestComplete(class UHttpRequestInte
 
 	if (!pFnOnRecordIapRequestComplete)
 	{
-		pFnOnRecordIapRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONRECORDIAPREQUESTCOMPLETE));
+		pFnOnRecordIapRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnRecordIapRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnRecordIapRequestComplete_Parms OnRecordIapRequestComplete_Parms;
@@ -18463,7 +19243,8 @@ void UMcpUserInventoryManager::RecordIap(struct FString McpId, struct FString Sa
 
 	if (!pFnRecordIap)
 	{
-		pFnRecordIap = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_RECORDIAP));
+		pFnRecordIap = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.RecordIap");
+
 	}
 
 	UMcpUserInventoryManager_execRecordIap_Parms RecordIap_Parms;
@@ -18487,7 +19268,8 @@ void UMcpUserInventoryManager::OnDeleteItemRequestComplete(class UHttpRequestInt
 
 	if (!pFnOnDeleteItemRequestComplete)
 	{
-		pFnOnDeleteItemRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONDELETEITEMREQUESTCOMPLETE));
+		pFnOnDeleteItemRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnDeleteItemRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnDeleteItemRequestComplete_Parms OnDeleteItemRequestComplete_Parms;
@@ -18512,7 +19294,8 @@ void UMcpUserInventoryManager::DeleteItem(struct FString McpId, struct FString S
 
 	if (!pFnDeleteItem)
 	{
-		pFnDeleteItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_DELETEITEM));
+		pFnDeleteItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.DeleteItem");
+
 	}
 
 	UMcpUserInventoryManager_execDeleteItem_Parms DeleteItem_Parms;
@@ -18537,7 +19320,8 @@ void UMcpUserInventoryManager::OnConsumeItemRequestComplete(class UHttpRequestIn
 
 	if (!pFnOnConsumeItemRequestComplete)
 	{
-		pFnOnConsumeItemRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONCONSUMEITEMREQUESTCOMPLETE));
+		pFnOnConsumeItemRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnConsumeItemRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnConsumeItemRequestComplete_Parms OnConsumeItemRequestComplete_Parms;
@@ -18563,7 +19347,8 @@ void UMcpUserInventoryManager::ConsumeItem(struct FString McpId, struct FString 
 
 	if (!pFnConsumeItem)
 	{
-		pFnConsumeItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_CONSUMEITEM));
+		pFnConsumeItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.ConsumeItem");
+
 	}
 
 	UMcpUserInventoryManager_execConsumeItem_Parms ConsumeItem_Parms;
@@ -18589,7 +19374,8 @@ void UMcpUserInventoryManager::OnEarnItemRequestComplete(class UHttpRequestInter
 
 	if (!pFnOnEarnItemRequestComplete)
 	{
-		pFnOnEarnItemRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONEARNITEMREQUESTCOMPLETE));
+		pFnOnEarnItemRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnEarnItemRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnEarnItemRequestComplete_Parms OnEarnItemRequestComplete_Parms;
@@ -18615,7 +19401,8 @@ void UMcpUserInventoryManager::EarnItem(struct FString McpId, struct FString Sav
 
 	if (!pFnEarnItem)
 	{
-		pFnEarnItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_EARNITEM));
+		pFnEarnItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.EarnItem");
+
 	}
 
 	UMcpUserInventoryManager_execEarnItem_Parms EarnItem_Parms;
@@ -18641,7 +19428,8 @@ void UMcpUserInventoryManager::OnSellItemRequestComplete(class UHttpRequestInter
 
 	if (!pFnOnSellItemRequestComplete)
 	{
-		pFnOnSellItemRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONSELLITEMREQUESTCOMPLETE));
+		pFnOnSellItemRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnSellItemRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnSellItemRequestComplete_Parms OnSellItemRequestComplete_Parms;
@@ -18668,7 +19456,8 @@ void UMcpUserInventoryManager::SellItem(struct FString McpId, struct FString Sav
 
 	if (!pFnSellItem)
 	{
-		pFnSellItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_SELLITEM));
+		pFnSellItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.SellItem");
+
 	}
 
 	UMcpUserInventoryManager_execSellItem_Parms SellItem_Parms;
@@ -18695,7 +19484,8 @@ void UMcpUserInventoryManager::OnPurchaseItemRequestComplete(class UHttpRequestI
 
 	if (!pFnOnPurchaseItemRequestComplete)
 	{
-		pFnOnPurchaseItemRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONPURCHASEITEMREQUESTCOMPLETE));
+		pFnOnPurchaseItemRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnPurchaseItemRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnPurchaseItemRequestComplete_Parms OnPurchaseItemRequestComplete_Parms;
@@ -18723,7 +19513,8 @@ void UMcpUserInventoryManager::PurchaseItem(struct FString McpId, struct FString
 
 	if (!pFnPurchaseItem)
 	{
-		pFnPurchaseItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_PURCHASEITEM));
+		pFnPurchaseItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.PurchaseItem");
+
 	}
 
 	UMcpUserInventoryManager_execPurchaseItem_Parms PurchaseItem_Parms;
@@ -18753,7 +19544,8 @@ int UMcpUserInventoryManager::FindItemRequest(struct FString McpId, struct FStri
 
 	if (!pFnFindItemRequest)
 	{
-		pFnFindItemRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_FINDITEMREQUEST));
+		pFnFindItemRequest = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.FindItemRequest");
+
 	}
 
 	UMcpUserInventoryManager_execFindItemRequest_Parms FindItemRequest_Parms;
@@ -18781,7 +19573,8 @@ int UMcpUserInventoryManager::FindSaveSlotRequest(struct FString McpId, struct F
 
 	if (!pFnFindSaveSlotRequest)
 	{
-		pFnFindSaveSlotRequest = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_FINDSAVESLOTREQUEST));
+		pFnFindSaveSlotRequest = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.FindSaveSlotRequest");
+
 	}
 
 	UMcpUserInventoryManager_execFindSaveSlotRequest_Parms FindSaveSlotRequest_Parms;
@@ -18807,7 +19600,8 @@ int UMcpUserInventoryManager::FindSaveSlotIndex(struct FString McpId, struct FSt
 
 	if (!pFnFindSaveSlotIndex)
 	{
-		pFnFindSaveSlotIndex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_FINDSAVESLOTINDEX));
+		pFnFindSaveSlotIndex = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.FindSaveSlotIndex");
+
 	}
 
 	UMcpUserInventoryManager_execFindSaveSlotIndex_Parms FindSaveSlotIndex_Parms;
@@ -18831,7 +19625,8 @@ void UMcpUserInventoryManager::ParseSaveSlotList(struct FString McpId, struct FS
 
 	if (!pFnParseSaveSlotList)
 	{
-		pFnParseSaveSlotList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_PARSESAVESLOTLIST));
+		pFnParseSaveSlotList = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.ParseSaveSlotList");
+
 	}
 
 	UMcpUserInventoryManager_execParseSaveSlotList_Parms ParseSaveSlotList_Parms;
@@ -18855,7 +19650,8 @@ TArray<struct FString> UMcpUserInventoryManager::ParseInventoryForSaveSlot(struc
 
 	if (!pFnParseInventoryForSaveSlot)
 	{
-		pFnParseInventoryForSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_PARSEINVENTORYFORSAVESLOT));
+		pFnParseInventoryForSaveSlot = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.ParseInventoryForSaveSlot");
+
 	}
 
 	UMcpUserInventoryManager_execParseInventoryForSaveSlot_Parms ParseInventoryForSaveSlot_Parms;
@@ -18883,7 +19679,8 @@ bool UMcpUserInventoryManager::GetInventoryItem(struct FString McpId, struct FSt
 
 	if (!pFnGetInventoryItem)
 	{
-		pFnGetInventoryItem = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_GETINVENTORYITEM));
+		pFnGetInventoryItem = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.GetInventoryItem");
+
 	}
 
 	UMcpUserInventoryManager_execGetInventoryItem_Parms GetInventoryItem_Parms;
@@ -18910,7 +19707,8 @@ void UMcpUserInventoryManager::GetInventoryItems(struct FString McpId, struct FS
 
 	if (!pFnGetInventoryItems)
 	{
-		pFnGetInventoryItems = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_GETINVENTORYITEMS));
+		pFnGetInventoryItems = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.GetInventoryItems");
+
 	}
 
 	UMcpUserInventoryManager_execGetInventoryItems_Parms GetInventoryItems_Parms;
@@ -18934,7 +19732,8 @@ void UMcpUserInventoryManager::OnQueryInventoryItemsRequestComplete(class UHttpR
 
 	if (!pFnOnQueryInventoryItemsRequestComplete)
 	{
-		pFnOnQueryInventoryItemsRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONQUERYINVENTORYITEMSREQUESTCOMPLETE));
+		pFnOnQueryInventoryItemsRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnQueryInventoryItemsRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnQueryInventoryItemsRequestComplete_Parms OnQueryInventoryItemsRequestComplete_Parms;
@@ -18957,7 +19756,8 @@ void UMcpUserInventoryManager::QueryInventoryItems(struct FString McpId, struct 
 
 	if (!pFnQueryInventoryItems)
 	{
-		pFnQueryInventoryItems = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_QUERYINVENTORYITEMS));
+		pFnQueryInventoryItems = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.QueryInventoryItems");
+
 	}
 
 	UMcpUserInventoryManager_execQueryInventoryItems_Parms QueryInventoryItems_Parms;
@@ -18979,7 +19779,8 @@ TArray<struct FString> UMcpUserInventoryManager::GetSaveSlotList(struct FString 
 
 	if (!pFnGetSaveSlotList)
 	{
-		pFnGetSaveSlotList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_GETSAVESLOTLIST));
+		pFnGetSaveSlotList = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.GetSaveSlotList");
+
 	}
 
 	UMcpUserInventoryManager_execGetSaveSlotList_Parms GetSaveSlotList_Parms;
@@ -19003,7 +19804,8 @@ void UMcpUserInventoryManager::OnQuerySaveSlotListRequestComplete(class UHttpReq
 
 	if (!pFnOnQuerySaveSlotListRequestComplete)
 	{
-		pFnOnQuerySaveSlotListRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONQUERYSAVESLOTLISTREQUESTCOMPLETE));
+		pFnOnQuerySaveSlotListRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnQuerySaveSlotListRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnQuerySaveSlotListRequestComplete_Parms OnQuerySaveSlotListRequestComplete_Parms;
@@ -19025,7 +19827,8 @@ void UMcpUserInventoryManager::QuerySaveSlotList(struct FString McpId)
 
 	if (!pFnQuerySaveSlotList)
 	{
-		pFnQuerySaveSlotList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_QUERYSAVESLOTLIST));
+		pFnQuerySaveSlotList = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.QuerySaveSlotList");
+
 	}
 
 	UMcpUserInventoryManager_execQuerySaveSlotList_Parms QuerySaveSlotList_Parms;
@@ -19047,7 +19850,8 @@ void UMcpUserInventoryManager::OnDeleteSaveSlotRequestComplete(class UHttpReques
 
 	if (!pFnOnDeleteSaveSlotRequestComplete)
 	{
-		pFnOnDeleteSaveSlotRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONDELETESAVESLOTREQUESTCOMPLETE));
+		pFnOnDeleteSaveSlotRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnDeleteSaveSlotRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnDeleteSaveSlotRequestComplete_Parms OnDeleteSaveSlotRequestComplete_Parms;
@@ -19070,7 +19874,8 @@ void UMcpUserInventoryManager::DeleteSaveSlot(struct FString McpId, struct FStri
 
 	if (!pFnDeleteSaveSlot)
 	{
-		pFnDeleteSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_DELETESAVESLOT));
+		pFnDeleteSaveSlot = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.DeleteSaveSlot");
+
 	}
 
 	UMcpUserInventoryManager_execDeleteSaveSlot_Parms DeleteSaveSlot_Parms;
@@ -19093,7 +19898,8 @@ void UMcpUserInventoryManager::OnCreateSaveSlotRequestComplete(class UHttpReques
 
 	if (!pFnOnCreateSaveSlotRequestComplete)
 	{
-		pFnOnCreateSaveSlotRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_ONCREATESAVESLOTREQUESTCOMPLETE));
+		pFnOnCreateSaveSlotRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.OnCreateSaveSlotRequestComplete");
+
 	}
 
 	UMcpUserInventoryManager_execOnCreateSaveSlotRequestComplete_Parms OnCreateSaveSlotRequestComplete_Parms;
@@ -19117,7 +19923,8 @@ void UMcpUserInventoryManager::CreateSaveSlot(struct FString McpId, struct FStri
 
 	if (!pFnCreateSaveSlot)
 	{
-		pFnCreateSaveSlot = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERINVENTORYMANAGER_CREATESAVESLOT));
+		pFnCreateSaveSlot = UFunction::FindFunction("Function IpDrv.McpUserInventoryManager.CreateSaveSlot");
+
 	}
 
 	UMcpUserInventoryManager_execCreateSaveSlot_Parms CreateSaveSlot_Parms;
@@ -19140,7 +19947,8 @@ void UMcpUserManagerBase::OnDeleteUserComplete(unsigned long bWasSuccessful, str
 
 	if (!pFnOnDeleteUserComplete)
 	{
-		pFnOnDeleteUserComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_ONDELETEUSERCOMPLETE));
+		pFnOnDeleteUserComplete = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.OnDeleteUserComplete");
+
 	}
 
 	UMcpUserManagerBase_execOnDeleteUserComplete_Parms OnDeleteUserComplete_Parms;
@@ -19161,7 +19969,8 @@ void UMcpUserManagerBase::DeleteUser(struct FString McpId)
 
 	if (!pFnDeleteUser)
 	{
-		pFnDeleteUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_DELETEUSER));
+		pFnDeleteUser = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.DeleteUser");
+
 	}
 
 	UMcpUserManagerBase_execDeleteUser_Parms DeleteUser_Parms;
@@ -19183,7 +19992,8 @@ bool UMcpUserManagerBase::GetUser(struct FString McpId, struct FMcpUserStatus& U
 
 	if (!pFnGetUser)
 	{
-		pFnGetUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_GETUSER));
+		pFnGetUser = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.GetUser");
+
 	}
 
 	UMcpUserManagerBase_execGetUser_Parms GetUser_Parms;
@@ -19206,7 +20016,8 @@ void UMcpUserManagerBase::GetUsers(TArray<struct FMcpUserStatus>& Users)
 
 	if (!pFnGetUsers)
 	{
-		pFnGetUsers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_GETUSERS));
+		pFnGetUsers = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.GetUsers");
+
 	}
 
 	UMcpUserManagerBase_execGetUsers_Parms GetUsers_Parms;
@@ -19227,7 +20038,8 @@ void UMcpUserManagerBase::OnQueryUsersComplete(unsigned long bWasSuccessful, str
 
 	if (!pFnOnQueryUsersComplete)
 	{
-		pFnOnQueryUsersComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_ONQUERYUSERSCOMPLETE));
+		pFnOnQueryUsersComplete = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.OnQueryUsersComplete");
+
 	}
 
 	UMcpUserManagerBase_execOnQueryUsersComplete_Parms OnQueryUsersComplete_Parms;
@@ -19248,7 +20060,8 @@ void UMcpUserManagerBase::QueryUsers(TArray<struct FString>& McpIds)
 
 	if (!pFnQueryUsers)
 	{
-		pFnQueryUsers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_QUERYUSERS));
+		pFnQueryUsers = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.QueryUsers");
+
 	}
 
 	UMcpUserManagerBase_execQueryUsers_Parms QueryUsers_Parms;
@@ -19269,7 +20082,8 @@ void UMcpUserManagerBase::QueryUser(struct FString McpId, unsigned long bShouldU
 
 	if (!pFnQueryUser)
 	{
-		pFnQueryUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_QUERYUSER));
+		pFnQueryUser = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.QueryUser");
+
 	}
 
 	UMcpUserManagerBase_execQueryUser_Parms QueryUser_Parms;
@@ -19293,7 +20107,8 @@ void UMcpUserManagerBase::OnAuthenticateUserComplete(struct FString McpId, struc
 
 	if (!pFnOnAuthenticateUserComplete)
 	{
-		pFnOnAuthenticateUserComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_ONAUTHENTICATEUSERCOMPLETE));
+		pFnOnAuthenticateUserComplete = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.OnAuthenticateUserComplete");
+
 	}
 
 	UMcpUserManagerBase_execOnAuthenticateUserComplete_Parms OnAuthenticateUserComplete_Parms;
@@ -19318,7 +20133,8 @@ void UMcpUserManagerBase::AuthenticateUserMcp(struct FString McpId, struct FStri
 
 	if (!pFnAuthenticateUserMcp)
 	{
-		pFnAuthenticateUserMcp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_AUTHENTICATEUSERMCP));
+		pFnAuthenticateUserMcp = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.AuthenticateUserMcp");
+
 	}
 
 	UMcpUserManagerBase_execAuthenticateUserMcp_Parms AuthenticateUserMcp_Parms;
@@ -19342,7 +20158,8 @@ void UMcpUserManagerBase::AuthenticateUserFacebook(struct FString FacebookId, st
 
 	if (!pFnAuthenticateUserFacebook)
 	{
-		pFnAuthenticateUserFacebook = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_AUTHENTICATEUSERFACEBOOK));
+		pFnAuthenticateUserFacebook = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.AuthenticateUserFacebook");
+
 	}
 
 	UMcpUserManagerBase_execAuthenticateUserFacebook_Parms AuthenticateUserFacebook_Parms;
@@ -19366,7 +20183,8 @@ void UMcpUserManagerBase::OnRegisterUserComplete(struct FString McpId, unsigned 
 
 	if (!pFnOnRegisterUserComplete)
 	{
-		pFnOnRegisterUserComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_ONREGISTERUSERCOMPLETE));
+		pFnOnRegisterUserComplete = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.OnRegisterUserComplete");
+
 	}
 
 	UMcpUserManagerBase_execOnRegisterUserComplete_Parms OnRegisterUserComplete_Parms;
@@ -19389,7 +20207,8 @@ void UMcpUserManagerBase::RegisterUserFacebook(struct FString FacebookId, struct
 
 	if (!pFnRegisterUserFacebook)
 	{
-		pFnRegisterUserFacebook = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_REGISTERUSERFACEBOOK));
+		pFnRegisterUserFacebook = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.RegisterUserFacebook");
+
 	}
 
 	UMcpUserManagerBase_execRegisterUserFacebook_Parms RegisterUserFacebook_Parms;
@@ -19409,7 +20228,8 @@ void UMcpUserManagerBase::RegisterUserGenerated()
 
 	if (!pFnRegisterUserGenerated)
 	{
-		pFnRegisterUserGenerated = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_REGISTERUSERGENERATED));
+		pFnRegisterUserGenerated = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.RegisterUserGenerated");
+
 	}
 
 	UMcpUserManagerBase_execRegisterUserGenerated_Parms RegisterUserGenerated_Parms;
@@ -19428,7 +20248,8 @@ class UMcpUserManagerBase* UMcpUserManagerBase::CreateInstance()
 
 	if (!pFnCreateInstance)
 	{
-		pFnCreateInstance = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGERBASE_CREATEINSTANCE));
+		pFnCreateInstance = UFunction::FindFunction("Function IpDrv.McpUserManagerBase.CreateInstance");
+
 	}
 
 	UMcpUserManagerBase_execCreateInstance_Parms CreateInstance_Parms;
@@ -19451,7 +20272,8 @@ void UMcpUserManager::OnDeleteUserRequestComplete(class UHttpRequestInterface* R
 
 	if (!pFnOnDeleteUserRequestComplete)
 	{
-		pFnOnDeleteUserRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_ONDELETEUSERREQUESTCOMPLETE));
+		pFnOnDeleteUserRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserManager.OnDeleteUserRequestComplete");
+
 	}
 
 	UMcpUserManager_execOnDeleteUserRequestComplete_Parms OnDeleteUserRequestComplete_Parms;
@@ -19473,7 +20295,8 @@ void UMcpUserManager::DeleteUser(struct FString McpId)
 
 	if (!pFnDeleteUser)
 	{
-		pFnDeleteUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_DELETEUSER));
+		pFnDeleteUser = UFunction::FindFunction("Function IpDrv.McpUserManager.DeleteUser");
+
 	}
 
 	UMcpUserManager_execDeleteUser_Parms DeleteUser_Parms;
@@ -19495,7 +20318,8 @@ bool UMcpUserManager::GetUser(struct FString McpId, struct FMcpUserStatus& User)
 
 	if (!pFnGetUser)
 	{
-		pFnGetUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_GETUSER));
+		pFnGetUser = UFunction::FindFunction("Function IpDrv.McpUserManager.GetUser");
+
 	}
 
 	UMcpUserManager_execGetUser_Parms GetUser_Parms;
@@ -19518,7 +20342,8 @@ void UMcpUserManager::GetUsers(TArray<struct FMcpUserStatus>& Users)
 
 	if (!pFnGetUsers)
 	{
-		pFnGetUsers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_GETUSERS));
+		pFnGetUsers = UFunction::FindFunction("Function IpDrv.McpUserManager.GetUsers");
+
 	}
 
 	UMcpUserManager_execGetUsers_Parms GetUsers_Parms;
@@ -19540,7 +20365,8 @@ void UMcpUserManager::OnQueryUsersRequestComplete(class UHttpRequestInterface* R
 
 	if (!pFnOnQueryUsersRequestComplete)
 	{
-		pFnOnQueryUsersRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_ONQUERYUSERSREQUESTCOMPLETE));
+		pFnOnQueryUsersRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserManager.OnQueryUsersRequestComplete");
+
 	}
 
 	UMcpUserManager_execOnQueryUsersRequestComplete_Parms OnQueryUsersRequestComplete_Parms;
@@ -19562,7 +20388,8 @@ void UMcpUserManager::ParseUsers(struct FString JsonPayload)
 
 	if (!pFnParseUsers)
 	{
-		pFnParseUsers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_PARSEUSERS));
+		pFnParseUsers = UFunction::FindFunction("Function IpDrv.McpUserManager.ParseUsers");
+
 	}
 
 	UMcpUserManager_execParseUsers_Parms ParseUsers_Parms;
@@ -19582,7 +20409,8 @@ void UMcpUserManager::QueryUsers(TArray<struct FString>& McpIds)
 
 	if (!pFnQueryUsers)
 	{
-		pFnQueryUsers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_QUERYUSERS));
+		pFnQueryUsers = UFunction::FindFunction("Function IpDrv.McpUserManager.QueryUsers");
+
 	}
 
 	UMcpUserManager_execQueryUsers_Parms QueryUsers_Parms;
@@ -19604,7 +20432,8 @@ void UMcpUserManager::OnQueryUserRequestComplete(class UHttpRequestInterface* Re
 
 	if (!pFnOnQueryUserRequestComplete)
 	{
-		pFnOnQueryUserRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_ONQUERYUSERREQUESTCOMPLETE));
+		pFnOnQueryUserRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserManager.OnQueryUserRequestComplete");
+
 	}
 
 	UMcpUserManager_execOnQueryUserRequestComplete_Parms OnQueryUserRequestComplete_Parms;
@@ -19627,7 +20456,8 @@ void UMcpUserManager::QueryUser(struct FString McpId, unsigned long bShouldUpdat
 
 	if (!pFnQueryUser)
 	{
-		pFnQueryUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_QUERYUSER));
+		pFnQueryUser = UFunction::FindFunction("Function IpDrv.McpUserManager.QueryUser");
+
 	}
 
 	UMcpUserManager_execQueryUser_Parms QueryUser_Parms;
@@ -19650,7 +20480,8 @@ void UMcpUserManager::OnAuthenticateUserRequestComplete(class UHttpRequestInterf
 
 	if (!pFnOnAuthenticateUserRequestComplete)
 	{
-		pFnOnAuthenticateUserRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_ONAUTHENTICATEUSERREQUESTCOMPLETE));
+		pFnOnAuthenticateUserRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserManager.OnAuthenticateUserRequestComplete");
+
 	}
 
 	UMcpUserManager_execOnAuthenticateUserRequestComplete_Parms OnAuthenticateUserRequestComplete_Parms;
@@ -19674,7 +20505,8 @@ void UMcpUserManager::AuthenticateUserMcp(struct FString McpId, struct FString C
 
 	if (!pFnAuthenticateUserMcp)
 	{
-		pFnAuthenticateUserMcp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_AUTHENTICATEUSERMCP));
+		pFnAuthenticateUserMcp = UFunction::FindFunction("Function IpDrv.McpUserManager.AuthenticateUserMcp");
+
 	}
 
 	UMcpUserManager_execAuthenticateUserMcp_Parms AuthenticateUserMcp_Parms;
@@ -19698,7 +20530,8 @@ void UMcpUserManager::AuthenticateUserFacebook(struct FString FacebookId, struct
 
 	if (!pFnAuthenticateUserFacebook)
 	{
-		pFnAuthenticateUserFacebook = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_AUTHENTICATEUSERFACEBOOK));
+		pFnAuthenticateUserFacebook = UFunction::FindFunction("Function IpDrv.McpUserManager.AuthenticateUserFacebook");
+
 	}
 
 	UMcpUserManager_execAuthenticateUserFacebook_Parms AuthenticateUserFacebook_Parms;
@@ -19722,7 +20555,8 @@ void UMcpUserManager::OnRegisterUserRequestComplete(class UHttpRequestInterface*
 
 	if (!pFnOnRegisterUserRequestComplete)
 	{
-		pFnOnRegisterUserRequestComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_ONREGISTERUSERREQUESTCOMPLETE));
+		pFnOnRegisterUserRequestComplete = UFunction::FindFunction("Function IpDrv.McpUserManager.OnRegisterUserRequestComplete");
+
 	}
 
 	UMcpUserManager_execOnRegisterUserRequestComplete_Parms OnRegisterUserRequestComplete_Parms;
@@ -19745,7 +20579,8 @@ int UMcpUserManager::ParseUser(struct FString JsonPayload)
 
 	if (!pFnParseUser)
 	{
-		pFnParseUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_PARSEUSER));
+		pFnParseUser = UFunction::FindFunction("Function IpDrv.McpUserManager.ParseUser");
+
 	}
 
 	UMcpUserManager_execParseUser_Parms ParseUser_Parms;
@@ -19768,7 +20603,8 @@ void UMcpUserManager::RegisterUserFacebook(struct FString FacebookId, struct FSt
 
 	if (!pFnRegisterUserFacebook)
 	{
-		pFnRegisterUserFacebook = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_REGISTERUSERFACEBOOK));
+		pFnRegisterUserFacebook = UFunction::FindFunction("Function IpDrv.McpUserManager.RegisterUserFacebook");
+
 	}
 
 	UMcpUserManager_execRegisterUserFacebook_Parms RegisterUserFacebook_Parms;
@@ -19788,7 +20624,8 @@ void UMcpUserManager::RegisterUserGenerated()
 
 	if (!pFnRegisterUserGenerated)
 	{
-		pFnRegisterUserGenerated = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_MCPUSERMANAGER_REGISTERUSERGENERATED));
+		pFnRegisterUserGenerated = UFunction::FindFunction("Function IpDrv.McpUserManager.RegisterUserGenerated");
+
 	}
 
 	UMcpUserManager_execRegisterUserGenerated_Parms RegisterUserGenerated_Parms;
@@ -19807,7 +20644,8 @@ bool AWebConnection::IsHanging()
 
 	if (!pFnIsHanging)
 	{
-		pFnIsHanging = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_ISHANGING));
+		pFnIsHanging = UFunction::FindFunction("Function IpDrv.WebConnection.IsHanging");
+
 	}
 
 	AWebConnection_execIsHanging_Parms IsHanging_Parms;
@@ -19827,7 +20665,8 @@ void AWebConnection::Cleanup()
 
 	if (!pFnCleanup)
 	{
-		pFnCleanup = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_CLEANUP));
+		pFnCleanup = UFunction::FindFunction("Function IpDrv.WebConnection.Cleanup");
+
 	}
 
 	AWebConnection_execCleanup_Parms Cleanup_Parms;
@@ -19845,7 +20684,8 @@ void AWebConnection::CheckRawBytes()
 
 	if (!pFnCheckRawBytes)
 	{
-		pFnCheckRawBytes = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_CHECKRAWBYTES));
+		pFnCheckRawBytes = UFunction::FindFunction("Function IpDrv.WebConnection.CheckRawBytes");
+
 	}
 
 	AWebConnection_execCheckRawBytes_Parms CheckRawBytes_Parms;
@@ -19863,7 +20703,8 @@ void AWebConnection::EndOfHeaders()
 
 	if (!pFnEndOfHeaders)
 	{
-		pFnEndOfHeaders = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_ENDOFHEADERS));
+		pFnEndOfHeaders = UFunction::FindFunction("Function IpDrv.WebConnection.EndOfHeaders");
+
 	}
 
 	AWebConnection_execEndOfHeaders_Parms EndOfHeaders_Parms;
@@ -19881,7 +20722,8 @@ void AWebConnection::CreateResponseObject()
 
 	if (!pFnCreateResponseObject)
 	{
-		pFnCreateResponseObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_CREATERESPONSEOBJECT));
+		pFnCreateResponseObject = UFunction::FindFunction("Function IpDrv.WebConnection.CreateResponseObject");
+
 	}
 
 	AWebConnection_execCreateResponseObject_Parms CreateResponseObject_Parms;
@@ -19900,7 +20742,8 @@ void AWebConnection::ProcessPost(struct FString S)
 
 	if (!pFnProcessPost)
 	{
-		pFnProcessPost = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_PROCESSPOST));
+		pFnProcessPost = UFunction::FindFunction("Function IpDrv.WebConnection.ProcessPost");
+
 	}
 
 	AWebConnection_execProcessPost_Parms ProcessPost_Parms;
@@ -19920,7 +20763,8 @@ void AWebConnection::ProcessGet(struct FString S)
 
 	if (!pFnProcessGet)
 	{
-		pFnProcessGet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_PROCESSGET));
+		pFnProcessGet = UFunction::FindFunction("Function IpDrv.WebConnection.ProcessGet");
+
 	}
 
 	AWebConnection_execProcessGet_Parms ProcessGet_Parms;
@@ -19940,7 +20784,8 @@ void AWebConnection::ProcessHead(struct FString S)
 
 	if (!pFnProcessHead)
 	{
-		pFnProcessHead = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_PROCESSHEAD));
+		pFnProcessHead = UFunction::FindFunction("Function IpDrv.WebConnection.ProcessHead");
+
 	}
 
 	AWebConnection_execProcessHead_Parms ProcessHead_Parms;
@@ -19960,7 +20805,8 @@ void AWebConnection::ReceivedLine(struct FString S)
 
 	if (!pFnReceivedLine)
 	{
-		pFnReceivedLine = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_RECEIVEDLINE));
+		pFnReceivedLine = UFunction::FindFunction("Function IpDrv.WebConnection.ReceivedLine");
+
 	}
 
 	AWebConnection_execReceivedLine_Parms ReceivedLine_Parms;
@@ -19980,7 +20826,8 @@ void AWebConnection::eventReceivedText(struct FString Text)
 
 	if (!pFnReceivedText)
 	{
-		pFnReceivedText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_RECEIVEDTEXT));
+		pFnReceivedText = UFunction::FindFunction("Function IpDrv.WebConnection.ReceivedText");
+
 	}
 
 	AWebConnection_eventReceivedText_Parms ReceivedText_Parms;
@@ -19999,7 +20846,8 @@ void AWebConnection::eventTimer()
 
 	if (!pFnTimer)
 	{
-		pFnTimer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_TIMER));
+		pFnTimer = UFunction::FindFunction("Function IpDrv.WebConnection.Timer");
+
 	}
 
 	AWebConnection_eventTimer_Parms Timer_Parms;
@@ -20017,7 +20865,8 @@ void AWebConnection::eventClosed()
 
 	if (!pFnClosed)
 	{
-		pFnClosed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_CLOSED));
+		pFnClosed = UFunction::FindFunction("Function IpDrv.WebConnection.Closed");
+
 	}
 
 	AWebConnection_eventClosed_Parms Closed_Parms;
@@ -20035,7 +20884,8 @@ void AWebConnection::eventAccepted()
 
 	if (!pFnAccepted)
 	{
-		pFnAccepted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_IPDRV_WEBCONNECTION_ACCEPTED));
+		pFnAccepted = UFunction::FindFunction("Function IpDrv.WebConnection.Accepted");
+
 	}
 
 	AWebConnection_eventAccepted_Parms Accepted_Parms;

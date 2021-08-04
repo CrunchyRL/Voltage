@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: IpDrv_parameters.h
@@ -10,7 +10,6 @@
 #############################################################################################
 */
 #pragma once
-#include "../SdkConstants.hpp"
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -348,7 +347,7 @@ struct UAvatarDownloadMap_execAllValues_Parms
 };
 
 // Function IpDrv.HttpRequestCurl.ProcessRequest
-// [0x00020400]  iNative [0x0004]
+// [0x00030400]  iNative [0x0004]
 struct UHttpRequestCurl_execProcessRequest_Parms
 {
 	bool                                               ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
@@ -380,7 +379,7 @@ struct UHttpRequestCurl_execSetContent_Parms
 };
 
 // Function IpDrv.HttpRequestCurl.SetURL
-// [0x00020400]  iNative [0x0004]
+// [0x00030400]  iNative [0x0004]
 struct UHttpRequestCurl_execSetURL_Parms
 {
 	struct FString                                     URL;                                              		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -388,7 +387,7 @@ struct UHttpRequestCurl_execSetURL_Parms
 };
 
 // Function IpDrv.HttpRequestCurl.SetVerb
-// [0x00020400]  iNative [0x0004]
+// [0x00030400]  iNative [0x0004]
 struct UHttpRequestCurl_execSetVerb_Parms
 {
 	struct FString                                     Verb;                                             		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -461,7 +460,7 @@ struct UHttpResponseCurl_execGetResponseCode_Parms
 };
 
 // Function IpDrv.HttpResponseCurl.GetContentAsString
-// [0x00020400]  iNative [0x0004]
+// [0x00030400]  iNative [0x0004]
 struct UHttpResponseCurl_execGetContentAsString_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x0010) [0x0000000000400580] (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
@@ -519,7 +518,7 @@ struct UHttpResponseCurl_execGetHeader_Parms
 };
 
 // Function IpDrv.ImageDecoder.RequestDecodeImage
-// [0x00420401] 
+// [0x00430401] 
 struct UImageDecoder_execRequestDecodeImage_Parms
 {
 	struct FString                                     RequestURL;                                       		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -2054,7 +2053,7 @@ struct UOnlineAuthInterfaceImpl_execOnAccountAuthorization_Parms
 };
 
 // Function IpDrv.OnlineAuthInterfaceImpl.OnLoginChanged
-// [0x00020000] 
+// [0x00030000] 
 struct UOnlineAuthInterfaceImpl_execOnLoginChanged_Parms
 {
 	bool                                               bLoggedIn : 1;                                    		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] (CPF_Parm)
@@ -2086,7 +2085,7 @@ struct UOnlineAuthInterfaceImpl_execRequiresAuthTicket_Parms
 };
 
 // Function IpDrv.OnlineAuthInterfaceImpl.OnReceivedAuthCode
-// [0x00120001] 
+// [0x00130001] 
 struct UOnlineAuthInterfaceImpl_execOnReceivedAuthCode_Parms
 {
 	bool                                               bSuccess : 1;                                     		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] (CPF_Parm)
@@ -2841,7 +2840,7 @@ struct UOnlineGameInterfaceImpl_execClearGameInviteAcceptedDelegate_Parms
 };
 
 // Function IpDrv.OnlineGameInterfaceImpl.AddGameInviteAcceptedDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlineGameInterfaceImpl_execAddGameInviteAcceptedDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -3262,7 +3261,7 @@ struct UOnlineGameInterfaceImpl_execOnFindOnlineGamesComplete_Parms
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.GetImageType
-// [0x00022401] 
+// [0x00032401] 
 struct UOnlineImageDownloaderWeb_execGetImageType_Parms
 {
 	struct FString                                     ContentType;                                      		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -3301,13 +3300,13 @@ struct UOnlineImageDownloaderWeb_execOnDownloadComplete_Parms
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.DownloadNextImage
-// [0x00040003] 
+// [0x00050003] 
 struct UOnlineImageDownloaderWeb_execDownloadNextImage_Parms
 {
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.RequestOnlineImages
-// [0x00424003] 
+// [0x00434003] 
 struct UOnlineImageDownloaderWeb_execRequestOnlineImages_Parms
 {
 	TArray<struct FString>                             URLs;                                             		// 0x0000 (0x0010) [0x0000000000400182] (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
@@ -3607,7 +3606,7 @@ struct UOnlineLobbyInterfaceImpl_execRemoveLocalPlayerFromSession_Parms
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLocalPartyMemberToSession
-// [0x00420000] 
+// [0x00430000] 
 struct UOnlineLobbyInterfaceImpl_execAddLocalPartyMemberToSession_Parms
 {
 	struct FUniqueNetId                                NewPartyMember;                                   		// 0x0000 (0x0048) [0x0000000000400182] (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
@@ -3674,7 +3673,7 @@ struct UOnlineLobbyInterfaceImpl_execClearLobbyInviteDelegate_Parms
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyInviteDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlineLobbyInterfaceImpl_execAddLobbyInviteDelegate_Parms
 {
 	struct FScriptDelegate                             LobbyInviteDelegate;                              		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -3807,7 +3806,7 @@ struct UOnlineLobbyInterfaceImpl_execClearLobbyReceiveBinaryDataDelegate_Parms
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyReceiveBinaryDataDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlineLobbyInterfaceImpl_execAddLobbyReceiveBinaryDataDelegate_Parms
 {
 	struct FScriptDelegate                             LobbyReceiveBinaryDataDelegate;                   		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -4212,7 +4211,7 @@ struct UOnlinePersistentAuthInterfaceImpl_execClearUnderageUserDetectedDelegate_
 };
 
 // Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddUnderageUserDetectedDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePersistentAuthInterfaceImpl_execAddUnderageUserDetectedDelegate_Parms
 {
 	struct FScriptDelegate                             Callback;                                         		// 0x0000 (0x0018) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)
@@ -4235,7 +4234,7 @@ struct UOnlinePersistentAuthInterfaceImpl_execClearRequestPinGrantCodeDelegate_P
 };
 
 // Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddRequestPinGrantCodeDelegate
-// [0x00020003] 
+// [0x00030003] 
 struct UOnlinePersistentAuthInterfaceImpl_execAddRequestPinGrantCodeDelegate_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080] (CPF_Parm)    
@@ -4878,7 +4877,7 @@ struct UWebRequest_execAddHeader_Parms
 };
 
 // Function IpDrv.WebRequest.EncodeBase64
-// [0x00022401] 
+// [0x00032401] 
 struct UWebRequest_execEncodeBase64_Parms
 {
 	struct FString                                     Decoded;                                          		// 0x0000 (0x0010) [0x0000000000400080] (CPF_Parm | CPF_NeedCtorLink)

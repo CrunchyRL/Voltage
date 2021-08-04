@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: OnlineSubsystemEOS_classes.cpp
@@ -32,7 +32,8 @@ bool UOnlineSubsystemEOS::ManuallyTickEOSPlatform()
 
 	if (!pFnManuallyTickEOSPlatform)
 	{
-		pFnManuallyTickEOSPlatform = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_MANUALLYTICKEOSPLATFORM));
+		pFnManuallyTickEOSPlatform = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ManuallyTickEOSPlatform");
+
 	}
 
 	UOnlineSubsystemEOS_execManuallyTickEOSPlatform_Parms ManuallyTickEOSPlatform_Parms;
@@ -59,7 +60,8 @@ struct FString UOnlineSubsystemEOS::eventFormatCurrency(struct FString Currency,
 
 	if (!pFnFormatCurrency)
 	{
-		pFnFormatCurrency = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_FORMATCURRENCY));
+		pFnFormatCurrency = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.FormatCurrency");
+
 	}
 
 	UOnlineSubsystemEOS_eventFormatCurrency_Parms FormatCurrency_Parms;
@@ -82,7 +84,8 @@ void UOnlineSubsystemEOS::ClearMicroTxnResponseDelegate(struct FScriptDelegate R
 
 	if (!pFnClearMicroTxnResponseDelegate)
 	{
-		pFnClearMicroTxnResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARMICROTXNRESPONSEDELEGATE));
+		pFnClearMicroTxnResponseDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearMicroTxnResponseDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearMicroTxnResponseDelegate_Parms ClearMicroTxnResponseDelegate_Parms;
@@ -102,7 +105,8 @@ void UOnlineSubsystemEOS::AddMicroTxnResponseDelegate(struct FScriptDelegate Res
 
 	if (!pFnAddMicroTxnResponseDelegate)
 	{
-		pFnAddMicroTxnResponseDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDMICROTXNRESPONSEDELEGATE));
+		pFnAddMicroTxnResponseDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddMicroTxnResponseDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddMicroTxnResponseDelegate_Parms AddMicroTxnResponseDelegate_Parms;
@@ -125,7 +129,8 @@ bool UOnlineSubsystemEOS::GetAppPriceInfo(struct FScriptDelegate Callback, struc
 
 	if (!pFnGetAppPriceInfo)
 	{
-		pFnGetAppPriceInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETAPPPRICEINFO));
+		pFnGetAppPriceInfo = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetAppPriceInfo");
+
 	}
 
 	UOnlineSubsystemEOS_execGetAppPriceInfo_Parms GetAppPriceInfo_Parms;
@@ -153,7 +158,8 @@ bool UOnlineSubsystemEOS::HandleBootMessage()
 
 	if (!pFnHandleBootMessage)
 	{
-		pFnHandleBootMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_HANDLEBOOTMESSAGE));
+		pFnHandleBootMessage = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.HandleBootMessage");
+
 	}
 
 	UOnlineSubsystemEOS_execHandleBootMessage_Parms HandleBootMessage_Parms;
@@ -178,7 +184,8 @@ bool UOnlineSubsystemEOS::GetOverlayEnabled()
 
 	if (!pFnGetOverlayEnabled)
 	{
-		pFnGetOverlayEnabled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETOVERLAYENABLED));
+		pFnGetOverlayEnabled = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetOverlayEnabled");
+
 	}
 
 	UOnlineSubsystemEOS_execGetOverlayEnabled_Parms GetOverlayEnabled_Parms;
@@ -199,7 +206,8 @@ bool UOnlineSubsystemEOS::RefreshNetworkErrorToggle()
 
 	if (!pFnRefreshNetworkErrorToggle)
 	{
-		pFnRefreshNetworkErrorToggle = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_REFRESHNETWORKERRORTOGGLE));
+		pFnRefreshNetworkErrorToggle = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.RefreshNetworkErrorToggle");
+
 	}
 
 	UOnlineSubsystemEOS_execRefreshNetworkErrorToggle_Parms RefreshNetworkErrorToggle_Parms;
@@ -220,7 +228,8 @@ void UOnlineSubsystemEOS::ClearUserRestoredDelegate(struct FScriptDelegate UserR
 
 	if (!pFnClearUserRestoredDelegate)
 	{
-		pFnClearUserRestoredDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARUSERRESTOREDDELEGATE));
+		pFnClearUserRestoredDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearUserRestoredDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearUserRestoredDelegate_Parms ClearUserRestoredDelegate_Parms;
@@ -240,7 +249,8 @@ void UOnlineSubsystemEOS::AddUserRestoredDelegate(struct FScriptDelegate UserRes
 
 	if (!pFnAddUserRestoredDelegate)
 	{
-		pFnAddUserRestoredDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDUSERRESTOREDDELEGATE));
+		pFnAddUserRestoredDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddUserRestoredDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddUserRestoredDelegate_Parms AddUserRestoredDelegate_Parms;
@@ -260,7 +270,8 @@ void UOnlineSubsystemEOS::OnUserRestored(unsigned char ControllerId)
 
 	if (!pFnOnUserRestored)
 	{
-		pFnOnUserRestored = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONUSERRESTORED));
+		pFnOnUserRestored = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnUserRestored");
+
 	}
 
 	UOnlineSubsystemEOS_execOnUserRestored_Parms OnUserRestored_Parms;
@@ -280,7 +291,8 @@ void UOnlineSubsystemEOS::ClearUserOrphanedDelegate(struct FScriptDelegate UserO
 
 	if (!pFnClearUserOrphanedDelegate)
 	{
-		pFnClearUserOrphanedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARUSERORPHANEDDELEGATE));
+		pFnClearUserOrphanedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearUserOrphanedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearUserOrphanedDelegate_Parms ClearUserOrphanedDelegate_Parms;
@@ -300,7 +312,8 @@ void UOnlineSubsystemEOS::AddUserOrphanedDelegate(struct FScriptDelegate UserOrp
 
 	if (!pFnAddUserOrphanedDelegate)
 	{
-		pFnAddUserOrphanedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDUSERORPHANEDDELEGATE));
+		pFnAddUserOrphanedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddUserOrphanedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddUserOrphanedDelegate_Parms AddUserOrphanedDelegate_Parms;
@@ -320,7 +333,8 @@ void UOnlineSubsystemEOS::OnUserOrphaned(unsigned char ControllerId)
 
 	if (!pFnOnUserOrphaned)
 	{
-		pFnOnUserOrphaned = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONUSERORPHANED));
+		pFnOnUserOrphaned = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnUserOrphaned");
+
 	}
 
 	UOnlineSubsystemEOS_execOnUserOrphaned_Parms OnUserOrphaned_Parms;
@@ -342,7 +356,8 @@ void UOnlineSubsystemEOS::OpenStoreForItemsAsync(unsigned char LocalUserNum, TAr
 
 	if (!pFnOpenStoreForItemsAsync)
 	{
-		pFnOpenStoreForItemsAsync = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_OPENSTOREFORITEMSASYNC));
+		pFnOpenStoreForItemsAsync = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OpenStoreForItemsAsync");
+
 	}
 
 	UOnlineSubsystemEOS_execOpenStoreForItemsAsync_Parms OpenStoreForItemsAsync_Parms;
@@ -363,7 +378,8 @@ void UOnlineSubsystemEOS::OnStorePurchaseCompleteDelegate()
 
 	if (!pFnOnStorePurchaseCompleteDelegate)
 	{
-		pFnOnStorePurchaseCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONSTOREPURCHASECOMPLETEDELEGATE));
+		pFnOnStorePurchaseCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnStorePurchaseCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execOnStorePurchaseCompleteDelegate_Parms OnStorePurchaseCompleteDelegate_Parms;
@@ -383,7 +399,8 @@ void UOnlineSubsystemEOS::OpenStoreForItems(unsigned char LocalUserNum, TArray<s
 
 	if (!pFnOpenStoreForItems)
 	{
-		pFnOpenStoreForItems = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_OPENSTOREFORITEMS));
+		pFnOpenStoreForItems = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OpenStoreForItems");
+
 	}
 
 	UOnlineSubsystemEOS_execOpenStoreForItems_Parms OpenStoreForItems_Parms;
@@ -409,7 +426,8 @@ void UOnlineSubsystemEOS::OpenStoreForDLC(unsigned char LocalUserNum, struct FNa
 
 	if (!pFnOpenStoreForDLC)
 	{
-		pFnOpenStoreForDLC = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_OPENSTOREFORDLC));
+		pFnOpenStoreForDLC = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OpenStoreForDLC");
+
 	}
 
 	UOnlineSubsystemEOS_execOpenStoreForDLC_Parms OpenStoreForDLC_Parms;
@@ -431,7 +449,8 @@ void UOnlineSubsystemEOS::OpenErrorDialog(unsigned char LocalUserNum, unsigned c
 
 	if (!pFnOpenErrorDialog)
 	{
-		pFnOpenErrorDialog = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_OPENERRORDIALOG));
+		pFnOpenErrorDialog = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OpenErrorDialog");
+
 	}
 
 	UOnlineSubsystemEOS_execOpenErrorDialog_Parms OpenErrorDialog_Parms;
@@ -455,7 +474,8 @@ void UOnlineSubsystemEOS::OpenPS4DisplayMode(unsigned char LocalUserNum, unsigne
 
 	if (!pFnOpenPS4DisplayMode)
 	{
-		pFnOpenPS4DisplayMode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_OPENPS4DISPLAYMODE));
+		pFnOpenPS4DisplayMode = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OpenPS4DisplayMode");
+
 	}
 
 	UOnlineSubsystemEOS_execOpenPS4DisplayMode_Parms OpenPS4DisplayMode_Parms;
@@ -478,7 +498,8 @@ void UOnlineSubsystemEOS::ResetControllerColor(int ControllerId)
 
 	if (!pFnResetControllerColor)
 	{
-		pFnResetControllerColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_RESETCONTROLLERCOLOR));
+		pFnResetControllerColor = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ResetControllerColor");
+
 	}
 
 	UOnlineSubsystemEOS_execResetControllerColor_Parms ResetControllerColor_Parms;
@@ -499,7 +520,8 @@ void UOnlineSubsystemEOS::SetControllerColor(int ControllerId, struct FColor New
 
 	if (!pFnSetControllerColor)
 	{
-		pFnSetControllerColor = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_SETCONTROLLERCOLOR));
+		pFnSetControllerColor = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.SetControllerColor");
+
 	}
 
 	UOnlineSubsystemEOS_execSetControllerColor_Parms SetControllerColor_Parms;
@@ -519,7 +541,8 @@ void UOnlineSubsystemEOS::InitializeTrophyAPI()
 
 	if (!pFnInitializeTrophyAPI)
 	{
-		pFnInitializeTrophyAPI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_INITIALIZETROPHYAPI));
+		pFnInitializeTrophyAPI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.InitializeTrophyAPI");
+
 	}
 
 	UOnlineSubsystemEOS_execInitializeTrophyAPI_Parms InitializeTrophyAPI_Parms;
@@ -538,7 +561,8 @@ bool UOnlineSubsystemEOS::AnyPlayerChatRestricted()
 
 	if (!pFnAnyPlayerChatRestricted)
 	{
-		pFnAnyPlayerChatRestricted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ANYPLAYERCHATRESTRICTED));
+		pFnAnyPlayerChatRestricted = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AnyPlayerChatRestricted");
+
 	}
 
 	UOnlineSubsystemEOS_execAnyPlayerChatRestricted_Parms AnyPlayerChatRestricted_Parms;
@@ -559,7 +583,8 @@ void UOnlineSubsystemEOS::ClearUnlockedDLCChangeDelegate(struct FScriptDelegate 
 
 	if (!pFnClearUnlockedDLCChangeDelegate)
 	{
-		pFnClearUnlockedDLCChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARUNLOCKEDDLCCHANGEDELEGATE));
+		pFnClearUnlockedDLCChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearUnlockedDLCChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearUnlockedDLCChangeDelegate_Parms ClearUnlockedDLCChangeDelegate_Parms;
@@ -579,7 +604,8 @@ void UOnlineSubsystemEOS::AddUnlockedDLCChangeDelegate(struct FScriptDelegate In
 
 	if (!pFnAddUnlockedDLCChangeDelegate)
 	{
-		pFnAddUnlockedDLCChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDUNLOCKEDDLCCHANGEDELEGATE));
+		pFnAddUnlockedDLCChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddUnlockedDLCChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddUnlockedDLCChangeDelegate_Parms AddUnlockedDLCChangeDelegate_Parms;
@@ -599,7 +625,8 @@ TArray<struct FName> UOnlineSubsystemEOS::GetUnlockedDLC()
 
 	if (!pFnGetUnlockedDLC)
 	{
-		pFnGetUnlockedDLC = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETUNLOCKEDDLC));
+		pFnGetUnlockedDLC = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetUnlockedDLC");
+
 	}
 
 	UOnlineSubsystemEOS_execGetUnlockedDLC_Parms GetUnlockedDLC_Parms;
@@ -610,7 +637,7 @@ TArray<struct FName> UOnlineSubsystemEOS::GetUnlockedDLC()
 };
 
 // Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnUnlockedDLCChange
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemEOS::OnUnlockedDLCChange()
@@ -619,7 +646,8 @@ void UOnlineSubsystemEOS::OnUnlockedDLCChange()
 
 	if (!pFnOnUnlockedDLCChange)
 	{
-		pFnOnUnlockedDLCChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONUNLOCKEDDLCCHANGE));
+		pFnOnUnlockedDLCChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnUnlockedDLCChange");
+
 	}
 
 	UOnlineSubsystemEOS_execOnUnlockedDLCChange_Parms OnUnlockedDLCChange_Parms;
@@ -639,7 +667,8 @@ void UOnlineSubsystemEOS::UpdateSessionStatusFromPlayers(int CurrentPlayerCount,
 
 	if (!pFnUpdateSessionStatusFromPlayers)
 	{
-		pFnUpdateSessionStatusFromPlayers = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_UPDATESESSIONSTATUSFROMPLAYERS));
+		pFnUpdateSessionStatusFromPlayers = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.UpdateSessionStatusFromPlayers");
+
 	}
 
 	UOnlineSubsystemEOS_execUpdateSessionStatusFromPlayers_Parms UpdateSessionStatusFromPlayers_Parms;
@@ -660,7 +689,8 @@ void UOnlineSubsystemEOS::ClearErrorDialogClosedDelegate(struct FScriptDelegate 
 
 	if (!pFnClearErrorDialogClosedDelegate)
 	{
-		pFnClearErrorDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARERRORDIALOGCLOSEDDELEGATE));
+		pFnClearErrorDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearErrorDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearErrorDialogClosedDelegate_Parms ClearErrorDialogClosedDelegate_Parms;
@@ -680,7 +710,8 @@ void UOnlineSubsystemEOS::AddErrorDialogClosedDelegate(struct FScriptDelegate In
 
 	if (!pFnAddErrorDialogClosedDelegate)
 	{
-		pFnAddErrorDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDERRORDIALOGCLOSEDDELEGATE));
+		pFnAddErrorDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddErrorDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddErrorDialogClosedDelegate_Parms AddErrorDialogClosedDelegate_Parms;
@@ -700,7 +731,8 @@ void UOnlineSubsystemEOS::OnErrorDialogClosed(int LocalUserNum)
 
 	if (!pFnOnErrorDialogClosed)
 	{
-		pFnOnErrorDialogClosed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONERRORDIALOGCLOSED));
+		pFnOnErrorDialogClosed = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnErrorDialogClosed");
+
 	}
 
 	UOnlineSubsystemEOS_execOnErrorDialogClosed_Parms OnErrorDialogClosed_Parms;
@@ -720,7 +752,8 @@ void UOnlineSubsystemEOS::ClearCommerceDialogClosedDelegate(struct FScriptDelega
 
 	if (!pFnClearCommerceDialogClosedDelegate)
 	{
-		pFnClearCommerceDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARCOMMERCEDIALOGCLOSEDDELEGATE));
+		pFnClearCommerceDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearCommerceDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearCommerceDialogClosedDelegate_Parms ClearCommerceDialogClosedDelegate_Parms;
@@ -740,7 +773,8 @@ void UOnlineSubsystemEOS::AddCommerceDialogClosedDelegate(struct FScriptDelegate
 
 	if (!pFnAddCommerceDialogClosedDelegate)
 	{
-		pFnAddCommerceDialogClosedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDCOMMERCEDIALOGCLOSEDDELEGATE));
+		pFnAddCommerceDialogClosedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddCommerceDialogClosedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddCommerceDialogClosedDelegate_Parms AddCommerceDialogClosedDelegate_Parms;
@@ -759,7 +793,8 @@ void UOnlineSubsystemEOS::OnCommerceDialogClosed()
 
 	if (!pFnOnCommerceDialogClosed)
 	{
-		pFnOnCommerceDialogClosed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONCOMMERCEDIALOGCLOSED));
+		pFnOnCommerceDialogClosed = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnCommerceDialogClosed");
+
 	}
 
 	UOnlineSubsystemEOS_execOnCommerceDialogClosed_Parms OnCommerceDialogClosed_Parms;
@@ -778,7 +813,8 @@ unsigned char UOnlineSubsystemEOS::GetCurrentConnectionStatus()
 
 	if (!pFnGetCurrentConnectionStatus)
 	{
-		pFnGetCurrentConnectionStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETCURRENTCONNECTIONSTATUS));
+		pFnGetCurrentConnectionStatus = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetCurrentConnectionStatus");
+
 	}
 
 	UOnlineSubsystemEOS_execGetCurrentConnectionStatus_Parms GetCurrentConnectionStatus_Parms;
@@ -799,7 +835,8 @@ void UOnlineSubsystemEOS::ClearCloseKickPlayerDialogDelegate(struct FScriptDeleg
 
 	if (!pFnClearCloseKickPlayerDialogDelegate)
 	{
-		pFnClearCloseKickPlayerDialogDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARCLOSEKICKPLAYERDIALOGDELEGATE));
+		pFnClearCloseKickPlayerDialogDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearCloseKickPlayerDialogDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearCloseKickPlayerDialogDelegate_Parms ClearCloseKickPlayerDialogDelegate_Parms;
@@ -819,7 +856,8 @@ void UOnlineSubsystemEOS::AddCloseKickPlayerDialogDelegate(struct FScriptDelegat
 
 	if (!pFnAddCloseKickPlayerDialogDelegate)
 	{
-		pFnAddCloseKickPlayerDialogDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDCLOSEKICKPLAYERDIALOGDELEGATE));
+		pFnAddCloseKickPlayerDialogDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddCloseKickPlayerDialogDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddCloseKickPlayerDialogDelegate_Parms AddCloseKickPlayerDialogDelegate_Parms;
@@ -838,7 +876,8 @@ void UOnlineSubsystemEOS::OnCloseKickPlayerDialog()
 
 	if (!pFnOnCloseKickPlayerDialog)
 	{
-		pFnOnCloseKickPlayerDialog = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONCLOSEKICKPLAYERDIALOG));
+		pFnOnCloseKickPlayerDialog = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnCloseKickPlayerDialog");
+
 	}
 
 	UOnlineSubsystemEOS_execOnCloseKickPlayerDialog_Parms OnCloseKickPlayerDialog_Parms;
@@ -858,7 +897,8 @@ void UOnlineSubsystemEOS::OnPlayerTalkingStateChange(struct FUniqueNetId Player,
 
 	if (!pFnOnPlayerTalkingStateChange)
 	{
-		pFnOnPlayerTalkingStateChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONPLAYERTALKINGSTATECHANGE));
+		pFnOnPlayerTalkingStateChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnPlayerTalkingStateChange");
+
 	}
 
 	UOnlineSubsystemEOS_execOnPlayerTalkingStateChange_Parms OnPlayerTalkingStateChange_Parms;
@@ -880,7 +920,8 @@ bool UOnlineSubsystemEOS::SetVoiceReceiveVolume(float VoiceVolume)
 
 	if (!pFnSetVoiceReceiveVolume)
 	{
-		pFnSetVoiceReceiveVolume = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_SETVOICERECEIVEVOLUME));
+		pFnSetVoiceReceiveVolume = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.SetVoiceReceiveVolume");
+
 	}
 
 	UOnlineSubsystemEOS_execSetVoiceReceiveVolume_Parms SetVoiceReceiveVolume_Parms;
@@ -903,7 +944,8 @@ int UOnlineSubsystemEOS::GetDLCPurchaseTime(struct FName AppName)
 
 	if (!pFnGetDLCPurchaseTime)
 	{
-		pFnGetDLCPurchaseTime = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETDLCPURCHASETIME));
+		pFnGetDLCPurchaseTime = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetDLCPurchaseTime");
+
 	}
 
 	UOnlineSubsystemEOS_execGetDLCPurchaseTime_Parms GetDLCPurchaseTime_Parms;
@@ -926,7 +968,8 @@ bool UOnlineSubsystemEOS::SaveKey(struct FString ProductKey)
 
 	if (!pFnSaveKey)
 	{
-		pFnSaveKey = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_SAVEKEY));
+		pFnSaveKey = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.SaveKey");
+
 	}
 
 	UOnlineSubsystemEOS_execSaveKey_Parms SaveKey_Parms;
@@ -949,7 +992,8 @@ bool UOnlineSubsystemEOS::GetLocalAccountNames(TArray<struct FString>& Accounts)
 
 	if (!pFnGetLocalAccountNames)
 	{
-		pFnGetLocalAccountNames = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETLOCALACCOUNTNAMES));
+		pFnGetLocalAccountNames = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetLocalAccountNames");
+
 	}
 
 	UOnlineSubsystemEOS_execGetLocalAccountNames_Parms GetLocalAccountNames_Parms;
@@ -973,7 +1017,8 @@ bool UOnlineSubsystemEOS::DeleteLocalAccount(struct FString Username, struct FSt
 
 	if (!pFnDeleteLocalAccount)
 	{
-		pFnDeleteLocalAccount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_DELETELOCALACCOUNT));
+		pFnDeleteLocalAccount = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.DeleteLocalAccount");
+
 	}
 
 	UOnlineSubsystemEOS_execDeleteLocalAccount_Parms DeleteLocalAccount_Parms;
@@ -999,7 +1044,8 @@ bool UOnlineSubsystemEOS::RenameLocalAccount(struct FString NewUserName, struct 
 
 	if (!pFnRenameLocalAccount)
 	{
-		pFnRenameLocalAccount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_RENAMELOCALACCOUNT));
+		pFnRenameLocalAccount = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.RenameLocalAccount");
+
 	}
 
 	UOnlineSubsystemEOS_execRenameLocalAccount_Parms RenameLocalAccount_Parms;
@@ -1025,7 +1071,8 @@ bool UOnlineSubsystemEOS::CreateLocalAccount(struct FString Username, struct FSt
 
 	if (!pFnCreateLocalAccount)
 	{
-		pFnCreateLocalAccount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CREATELOCALACCOUNT));
+		pFnCreateLocalAccount = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.CreateLocalAccount");
+
 	}
 
 	UOnlineSubsystemEOS_execCreateLocalAccount_Parms CreateLocalAccount_Parms;
@@ -1048,7 +1095,8 @@ void UOnlineSubsystemEOS::ClearCreateOnlineAccountCompletedDelegate(struct FScri
 
 	if (!pFnClearCreateOnlineAccountCompletedDelegate)
 	{
-		pFnClearCreateOnlineAccountCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARCREATEONLINEACCOUNTCOMPLETEDDELEGATE));
+		pFnClearCreateOnlineAccountCompletedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearCreateOnlineAccountCompletedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearCreateOnlineAccountCompletedDelegate_Parms ClearCreateOnlineAccountCompletedDelegate_Parms;
@@ -1068,7 +1116,8 @@ void UOnlineSubsystemEOS::AddCreateOnlineAccountCompletedDelegate(struct FScript
 
 	if (!pFnAddCreateOnlineAccountCompletedDelegate)
 	{
-		pFnAddCreateOnlineAccountCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDCREATEONLINEACCOUNTCOMPLETEDDELEGATE));
+		pFnAddCreateOnlineAccountCompletedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddCreateOnlineAccountCompletedDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddCreateOnlineAccountCompletedDelegate_Parms AddCreateOnlineAccountCompletedDelegate_Parms;
@@ -1088,7 +1137,8 @@ void UOnlineSubsystemEOS::OnCreateOnlineAccountCompleted(unsigned char ErrorStat
 
 	if (!pFnOnCreateOnlineAccountCompleted)
 	{
-		pFnOnCreateOnlineAccountCompleted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONCREATEONLINEACCOUNTCOMPLETED));
+		pFnOnCreateOnlineAccountCompleted = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnCreateOnlineAccountCompleted");
+
 	}
 
 	UOnlineSubsystemEOS_execOnCreateOnlineAccountCompleted_Parms OnCreateOnlineAccountCompleted_Parms;
@@ -1112,7 +1162,8 @@ bool UOnlineSubsystemEOS::CreateOnlineAccount(struct FString Username, struct FS
 
 	if (!pFnCreateOnlineAccount)
 	{
-		pFnCreateOnlineAccount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CREATEONLINEACCOUNT));
+		pFnCreateOnlineAccount = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.CreateOnlineAccount");
+
 	}
 
 	UOnlineSubsystemEOS_execCreateOnlineAccount_Parms CreateOnlineAccount_Parms;
@@ -1137,7 +1188,8 @@ bool UOnlineSubsystemEOS::IsKeyValid()
 
 	if (!pFnIsKeyValid)
 	{
-		pFnIsKeyValid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ISKEYVALID));
+		pFnIsKeyValid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.IsKeyValid");
+
 	}
 
 	UOnlineSubsystemEOS_execIsKeyValid_Parms IsKeyValid_Parms;
@@ -1158,7 +1210,8 @@ void UOnlineSubsystemEOS::ClearStorageDeviceChangeDelegate(struct FScriptDelegat
 
 	if (!pFnClearStorageDeviceChangeDelegate)
 	{
-		pFnClearStorageDeviceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARSTORAGEDEVICECHANGEDELEGATE));
+		pFnClearStorageDeviceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearStorageDeviceChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearStorageDeviceChangeDelegate_Parms ClearStorageDeviceChangeDelegate_Parms;
@@ -1178,7 +1231,8 @@ void UOnlineSubsystemEOS::AddStorageDeviceChangeDelegate(struct FScriptDelegate 
 
 	if (!pFnAddStorageDeviceChangeDelegate)
 	{
-		pFnAddStorageDeviceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDSTORAGEDEVICECHANGEDELEGATE));
+		pFnAddStorageDeviceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddStorageDeviceChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddStorageDeviceChangeDelegate_Parms AddStorageDeviceChangeDelegate_Parms;
@@ -1197,7 +1251,8 @@ void UOnlineSubsystemEOS::OnStorageDeviceChange()
 
 	if (!pFnOnStorageDeviceChange)
 	{
-		pFnOnStorageDeviceChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONSTORAGEDEVICECHANGE));
+		pFnOnStorageDeviceChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnStorageDeviceChange");
+
 	}
 
 	UOnlineSubsystemEOS_execOnStorageDeviceChange_Parms OnStorageDeviceChange_Parms;
@@ -1216,7 +1271,8 @@ unsigned char UOnlineSubsystemEOS::GetNATType()
 
 	if (!pFnGetNATType)
 	{
-		pFnGetNATType = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETNATTYPE));
+		pFnGetNATType = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetNATType");
+
 	}
 
 	UOnlineSubsystemEOS_execGetNATType_Parms GetNATType_Parms;
@@ -1237,7 +1293,8 @@ void UOnlineSubsystemEOS::ClearConnectionStatusChangeDelegate(struct FScriptDele
 
 	if (!pFnClearConnectionStatusChangeDelegate)
 	{
-		pFnClearConnectionStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARCONNECTIONSTATUSCHANGEDELEGATE));
+		pFnClearConnectionStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearConnectionStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearConnectionStatusChangeDelegate_Parms ClearConnectionStatusChangeDelegate_Parms;
@@ -1257,7 +1314,8 @@ void UOnlineSubsystemEOS::AddConnectionStatusChangeDelegate(struct FScriptDelega
 
 	if (!pFnAddConnectionStatusChangeDelegate)
 	{
-		pFnAddConnectionStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDCONNECTIONSTATUSCHANGEDELEGATE));
+		pFnAddConnectionStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddConnectionStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddConnectionStatusChangeDelegate_Parms AddConnectionStatusChangeDelegate_Parms;
@@ -1277,7 +1335,8 @@ void UOnlineSubsystemEOS::OnConnectionStatusChange(unsigned char ConnectionStatu
 
 	if (!pFnOnConnectionStatusChange)
 	{
-		pFnOnConnectionStatusChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONCONNECTIONSTATUSCHANGE));
+		pFnOnConnectionStatusChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnConnectionStatusChange");
+
 	}
 
 	UOnlineSubsystemEOS_execOnConnectionStatusChange_Parms OnConnectionStatusChange_Parms;
@@ -1298,7 +1357,8 @@ bool UOnlineSubsystemEOS::IsControllerConnected(int ControllerId)
 
 	if (!pFnIsControllerConnected)
 	{
-		pFnIsControllerConnected = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ISCONTROLLERCONNECTED));
+		pFnIsControllerConnected = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.IsControllerConnected");
+
 	}
 
 	UOnlineSubsystemEOS_execIsControllerConnected_Parms IsControllerConnected_Parms;
@@ -1320,7 +1380,8 @@ void UOnlineSubsystemEOS::ClearControllerChangeDelegate(struct FScriptDelegate C
 
 	if (!pFnClearControllerChangeDelegate)
 	{
-		pFnClearControllerChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARCONTROLLERCHANGEDELEGATE));
+		pFnClearControllerChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearControllerChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearControllerChangeDelegate_Parms ClearControllerChangeDelegate_Parms;
@@ -1340,7 +1401,8 @@ void UOnlineSubsystemEOS::AddControllerChangeDelegate(struct FScriptDelegate Con
 
 	if (!pFnAddControllerChangeDelegate)
 	{
-		pFnAddControllerChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDCONTROLLERCHANGEDELEGATE));
+		pFnAddControllerChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddControllerChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddControllerChangeDelegate_Parms AddControllerChangeDelegate_Parms;
@@ -1361,7 +1423,8 @@ void UOnlineSubsystemEOS::OnControllerChange(int ControllerId, unsigned long bIs
 
 	if (!pFnOnControllerChange)
 	{
-		pFnOnControllerChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONCONTROLLERCHANGE));
+		pFnOnControllerChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnControllerChange");
+
 	}
 
 	UOnlineSubsystemEOS_execOnControllerChange_Parms OnControllerChange_Parms;
@@ -1382,7 +1445,8 @@ void UOnlineSubsystemEOS::SetNetworkNotificationPosition(unsigned char NewPos)
 
 	if (!pFnSetNetworkNotificationPosition)
 	{
-		pFnSetNetworkNotificationPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_SETNETWORKNOTIFICATIONPOSITION));
+		pFnSetNetworkNotificationPosition = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.SetNetworkNotificationPosition");
+
 	}
 
 	UOnlineSubsystemEOS_execSetNetworkNotificationPosition_Parms SetNetworkNotificationPosition_Parms;
@@ -1402,7 +1466,8 @@ unsigned char UOnlineSubsystemEOS::GetNetworkNotificationPosition()
 
 	if (!pFnGetNetworkNotificationPosition)
 	{
-		pFnGetNetworkNotificationPosition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETNETWORKNOTIFICATIONPOSITION));
+		pFnGetNetworkNotificationPosition = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetNetworkNotificationPosition");
+
 	}
 
 	UOnlineSubsystemEOS_execGetNetworkNotificationPosition_Parms GetNetworkNotificationPosition_Parms;
@@ -1423,7 +1488,8 @@ void UOnlineSubsystemEOS::NotifyExternalUIChanged(unsigned long bIsOpening)
 
 	if (!pFnNotifyExternalUIChanged)
 	{
-		pFnNotifyExternalUIChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_NOTIFYEXTERNALUICHANGED));
+		pFnNotifyExternalUIChanged = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.NotifyExternalUIChanged");
+
 	}
 
 	UOnlineSubsystemEOS_execNotifyExternalUIChanged_Parms NotifyExternalUIChanged_Parms;
@@ -1447,7 +1513,8 @@ void UOnlineSubsystemEOS::ClearExternalUIChangeDelegate(struct FScriptDelegate I
 
 	if (!pFnClearExternalUIChangeDelegate)
 	{
-		pFnClearExternalUIChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEAREXTERNALUICHANGEDELEGATE));
+		pFnClearExternalUIChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearExternalUIChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearExternalUIChangeDelegate_Parms ClearExternalUIChangeDelegate_Parms;
@@ -1457,7 +1524,7 @@ void UOnlineSubsystemEOS::ClearExternalUIChangeDelegate(struct FScriptDelegate I
 };
 
 // Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddExternalUIChangeDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         InDelegate                     (CPF_Parm | CPF_NeedCtorLink)
 
@@ -1467,7 +1534,8 @@ void UOnlineSubsystemEOS::AddExternalUIChangeDelegate(struct FScriptDelegate InD
 
 	if (!pFnAddExternalUIChangeDelegate)
 	{
-		pFnAddExternalUIChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDEXTERNALUICHANGEDELEGATE));
+		pFnAddExternalUIChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddExternalUIChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddExternalUIChangeDelegate_Parms AddExternalUIChangeDelegate_Parms;
@@ -1487,7 +1555,8 @@ void UOnlineSubsystemEOS::OnExternalUIChange(unsigned long bIsOpening)
 
 	if (!pFnOnExternalUIChange)
 	{
-		pFnOnExternalUIChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONEXTERNALUICHANGE));
+		pFnOnExternalUIChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnExternalUIChange");
+
 	}
 
 	UOnlineSubsystemEOS_execOnExternalUIChange_Parms OnExternalUIChange_Parms;
@@ -1507,7 +1576,8 @@ void UOnlineSubsystemEOS::ClearLinkStatusChangeDelegate(struct FScriptDelegate L
 
 	if (!pFnClearLinkStatusChangeDelegate)
 	{
-		pFnClearLinkStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARLINKSTATUSCHANGEDELEGATE));
+		pFnClearLinkStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearLinkStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearLinkStatusChangeDelegate_Parms ClearLinkStatusChangeDelegate_Parms;
@@ -1527,7 +1597,8 @@ void UOnlineSubsystemEOS::AddLinkStatusChangeDelegate(struct FScriptDelegate Lin
 
 	if (!pFnAddLinkStatusChangeDelegate)
 	{
-		pFnAddLinkStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDLINKSTATUSCHANGEDELEGATE));
+		pFnAddLinkStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddLinkStatusChangeDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddLinkStatusChangeDelegate_Parms AddLinkStatusChangeDelegate_Parms;
@@ -1547,7 +1618,8 @@ void UOnlineSubsystemEOS::OnLinkStatusChange(unsigned long bIsConnected)
 
 	if (!pFnOnLinkStatusChange)
 	{
-		pFnOnLinkStatusChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONLINKSTATUSCHANGE));
+		pFnOnLinkStatusChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnLinkStatusChange");
+
 	}
 
 	UOnlineSubsystemEOS_execOnLinkStatusChange_Parms OnLinkStatusChange_Parms;
@@ -1567,7 +1639,8 @@ bool UOnlineSubsystemEOS::HasLinkConnection()
 
 	if (!pFnHasLinkConnection)
 	{
-		pFnHasLinkConnection = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_HASLINKCONNECTION));
+		pFnHasLinkConnection = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.HasLinkConnection");
+
 	}
 
 	UOnlineSubsystemEOS_execHasLinkConnection_Parms HasLinkConnection_Parms;
@@ -1590,7 +1663,8 @@ bool UOnlineSubsystemEOS::RegisterStatGuid(struct FUniqueNetId PlayerID, struct 
 
 	if (!pFnRegisterStatGuid)
 	{
-		pFnRegisterStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_REGISTERSTATGUID));
+		pFnRegisterStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.RegisterStatGuid");
+
 	}
 
 	UOnlineSubsystemEOS_execRegisterStatGuid_Parms RegisterStatGuid_Parms;
@@ -1613,7 +1687,8 @@ struct FString UOnlineSubsystemEOS::GetClientStatGuid()
 
 	if (!pFnGetClientStatGuid)
 	{
-		pFnGetClientStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETCLIENTSTATGUID));
+		pFnGetClientStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetClientStatGuid");
+
 	}
 
 	UOnlineSubsystemEOS_execGetClientStatGuid_Parms GetClientStatGuid_Parms;
@@ -1634,7 +1709,8 @@ void UOnlineSubsystemEOS::ClearRegisterHostStatGuidCompleteDelegateDelegate(stru
 
 	if (!pFnClearRegisterHostStatGuidCompleteDelegateDelegate)
 	{
-		pFnClearRegisterHostStatGuidCompleteDelegateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARREGISTERHOSTSTATGUIDCOMPLETEDELEGATEDELEGATE));
+		pFnClearRegisterHostStatGuidCompleteDelegateDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearRegisterHostStatGuidCompleteDelegateDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearRegisterHostStatGuidCompleteDelegateDelegate_Parms ClearRegisterHostStatGuidCompleteDelegateDelegate_Parms;
@@ -1654,7 +1730,8 @@ void UOnlineSubsystemEOS::AddRegisterHostStatGuidCompleteDelegate(struct FScript
 
 	if (!pFnAddRegisterHostStatGuidCompleteDelegate)
 	{
-		pFnAddRegisterHostStatGuidCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDREGISTERHOSTSTATGUIDCOMPLETEDELEGATE));
+		pFnAddRegisterHostStatGuidCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddRegisterHostStatGuidCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddRegisterHostStatGuidCompleteDelegate_Parms AddRegisterHostStatGuidCompleteDelegate_Parms;
@@ -1675,7 +1752,8 @@ void UOnlineSubsystemEOS::OnFlushOnlineStatsComplete(struct FName SessionName, u
 
 	if (!pFnOnFlushOnlineStatsComplete)
 	{
-		pFnOnFlushOnlineStatsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONFLUSHONLINESTATSCOMPLETE));
+		pFnOnFlushOnlineStatsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnFlushOnlineStatsComplete");
+
 	}
 
 	UOnlineSubsystemEOS_execOnFlushOnlineStatsComplete_Parms OnFlushOnlineStatsComplete_Parms;
@@ -1696,7 +1774,8 @@ void UOnlineSubsystemEOS::OnRegisterHostStatGuidComplete(unsigned long bWasSucce
 
 	if (!pFnOnRegisterHostStatGuidComplete)
 	{
-		pFnOnRegisterHostStatGuidComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONREGISTERHOSTSTATGUIDCOMPLETE));
+		pFnOnRegisterHostStatGuidComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnRegisterHostStatGuidComplete");
+
 	}
 
 	UOnlineSubsystemEOS_execOnRegisterHostStatGuidComplete_Parms OnRegisterHostStatGuidComplete_Parms;
@@ -1717,7 +1796,8 @@ bool UOnlineSubsystemEOS::RegisterHostStatGuid(struct FString& HostStatGuid)
 
 	if (!pFnRegisterHostStatGuid)
 	{
-		pFnRegisterHostStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_REGISTERHOSTSTATGUID));
+		pFnRegisterHostStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.RegisterHostStatGuid");
+
 	}
 
 	UOnlineSubsystemEOS_execRegisterHostStatGuid_Parms RegisterHostStatGuid_Parms;
@@ -1739,7 +1819,8 @@ struct FString UOnlineSubsystemEOS::GetHostStatGuid()
 
 	if (!pFnGetHostStatGuid)
 	{
-		pFnGetHostStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETHOSTSTATGUID));
+		pFnGetHostStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetHostStatGuid");
+
 	}
 
 	UOnlineSubsystemEOS_execGetHostStatGuid_Parms GetHostStatGuid_Parms;
@@ -1761,7 +1842,8 @@ bool UOnlineSubsystemEOS::WriteOnlinePlayerScores(TArray<struct FOnlinePlayerSco
 
 	if (!pFnWriteOnlinePlayerScores)
 	{
-		pFnWriteOnlinePlayerScores = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_WRITEONLINEPLAYERSCORES));
+		pFnWriteOnlinePlayerScores = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.WriteOnlinePlayerScores");
+
 	}
 
 	UOnlineSubsystemEOS_execWriteOnlinePlayerScores_Parms WriteOnlinePlayerScores_Parms;
@@ -1783,7 +1865,8 @@ void UOnlineSubsystemEOS::FreeStats(class UOnlineStatsRead* StatsRead)
 
 	if (!pFnFreeStats)
 	{
-		pFnFreeStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_FREESTATS));
+		pFnFreeStats = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.FreeStats");
+
 	}
 
 	UOnlineSubsystemEOS_execFreeStats_Parms FreeStats_Parms;
@@ -1803,7 +1886,8 @@ void UOnlineSubsystemEOS::ClearReadOnlineStatsCompleteDelegate(struct FScriptDel
 
 	if (!pFnClearReadOnlineStatsCompleteDelegate)
 	{
-		pFnClearReadOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARREADONLINESTATSCOMPLETEDELEGATE));
+		pFnClearReadOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearReadOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearReadOnlineStatsCompleteDelegate_Parms ClearReadOnlineStatsCompleteDelegate_Parms;
@@ -1823,7 +1907,8 @@ void UOnlineSubsystemEOS::AddReadOnlineStatsCompleteDelegate(struct FScriptDeleg
 
 	if (!pFnAddReadOnlineStatsCompleteDelegate)
 	{
-		pFnAddReadOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDREADONLINESTATSCOMPLETEDELEGATE));
+		pFnAddReadOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddReadOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddReadOnlineStatsCompleteDelegate_Parms AddReadOnlineStatsCompleteDelegate_Parms;
@@ -1843,7 +1928,8 @@ void UOnlineSubsystemEOS::OnReadOnlineStatsComplete(unsigned long bWasSuccessful
 
 	if (!pFnOnReadOnlineStatsComplete)
 	{
-		pFnOnReadOnlineStatsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONREADONLINESTATSCOMPLETE));
+		pFnOnReadOnlineStatsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnReadOnlineStatsComplete");
+
 	}
 
 	UOnlineSubsystemEOS_execOnReadOnlineStatsComplete_Parms OnReadOnlineStatsComplete_Parms;
@@ -1866,7 +1952,8 @@ bool UOnlineSubsystemEOS::ReadOnlineStatsByRankAroundPlayer(unsigned char LocalU
 
 	if (!pFnReadOnlineStatsByRankAroundPlayer)
 	{
-		pFnReadOnlineStatsByRankAroundPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_READONLINESTATSBYRANKAROUNDPLAYER));
+		pFnReadOnlineStatsByRankAroundPlayer = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ReadOnlineStatsByRankAroundPlayer");
+
 	}
 
 	UOnlineSubsystemEOS_execReadOnlineStatsByRankAroundPlayer_Parms ReadOnlineStatsByRankAroundPlayer_Parms;
@@ -1893,7 +1980,8 @@ bool UOnlineSubsystemEOS::ReadOnlineStatsByRank(class UOnlineStatsRead* StatsRea
 
 	if (!pFnReadOnlineStatsByRank)
 	{
-		pFnReadOnlineStatsByRank = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_READONLINESTATSBYRANK));
+		pFnReadOnlineStatsByRank = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ReadOnlineStatsByRank");
+
 	}
 
 	UOnlineSubsystemEOS_execReadOnlineStatsByRank_Parms ReadOnlineStatsByRank_Parms;
@@ -1919,7 +2007,8 @@ bool UOnlineSubsystemEOS::ReadOnlineStatsForFriends(unsigned char LocalUserNum, 
 
 	if (!pFnReadOnlineStatsForFriends)
 	{
-		pFnReadOnlineStatsForFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_READONLINESTATSFORFRIENDS));
+		pFnReadOnlineStatsForFriends = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ReadOnlineStatsForFriends");
+
 	}
 
 	UOnlineSubsystemEOS_execReadOnlineStatsForFriends_Parms ReadOnlineStatsForFriends_Parms;
@@ -1944,7 +2033,8 @@ bool UOnlineSubsystemEOS::ReadOnlineStats(class UOnlineStatsRead* StatsRead, TAr
 
 	if (!pFnReadOnlineStats)
 	{
-		pFnReadOnlineStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_READONLINESTATS));
+		pFnReadOnlineStats = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ReadOnlineStats");
+
 	}
 
 	UOnlineSubsystemEOS_execReadOnlineStats_Parms ReadOnlineStats_Parms;
@@ -1968,7 +2058,8 @@ bool UOnlineSubsystemEOS::UnmuteAll(unsigned char LocalUserNum)
 
 	if (!pFnUnmuteAll)
 	{
-		pFnUnmuteAll = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_UNMUTEALL));
+		pFnUnmuteAll = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.UnmuteAll");
+
 	}
 
 	UOnlineSubsystemEOS_execUnmuteAll_Parms UnmuteAll_Parms;
@@ -1992,7 +2083,8 @@ bool UOnlineSubsystemEOS::MuteAll(unsigned char LocalUserNum, unsigned long bAll
 
 	if (!pFnMuteAll)
 	{
-		pFnMuteAll = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_MUTEALL));
+		pFnMuteAll = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.MuteAll");
+
 	}
 
 	UOnlineSubsystemEOS_execMuteAll_Parms MuteAll_Parms;
@@ -2017,7 +2109,8 @@ bool UOnlineSubsystemEOS::SetSpeechRecognitionObject(unsigned char LocalUserNum,
 
 	if (!pFnSetSpeechRecognitionObject)
 	{
-		pFnSetSpeechRecognitionObject = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_SETSPEECHRECOGNITIONOBJECT));
+		pFnSetSpeechRecognitionObject = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.SetSpeechRecognitionObject");
+
 	}
 
 	UOnlineSubsystemEOS_execSetSpeechRecognitionObject_Parms SetSpeechRecognitionObject_Parms;
@@ -2042,7 +2135,8 @@ bool UOnlineSubsystemEOS::SelectVocabulary(unsigned char LocalUserNum, int Vocab
 
 	if (!pFnSelectVocabulary)
 	{
-		pFnSelectVocabulary = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_SELECTVOCABULARY));
+		pFnSelectVocabulary = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.SelectVocabulary");
+
 	}
 
 	UOnlineSubsystemEOS_execSelectVocabulary_Parms SelectVocabulary_Parms;
@@ -2066,7 +2160,8 @@ void UOnlineSubsystemEOS::ClearRecognitionCompleteDelegate(unsigned char LocalUs
 
 	if (!pFnClearRecognitionCompleteDelegate)
 	{
-		pFnClearRecognitionCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARRECOGNITIONCOMPLETEDELEGATE));
+		pFnClearRecognitionCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearRecognitionCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearRecognitionCompleteDelegate_Parms ClearRecognitionCompleteDelegate_Parms;
@@ -2088,7 +2183,8 @@ void UOnlineSubsystemEOS::AddRecognitionCompleteDelegate(unsigned char LocalUser
 
 	if (!pFnAddRecognitionCompleteDelegate)
 	{
-		pFnAddRecognitionCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDRECOGNITIONCOMPLETEDELEGATE));
+		pFnAddRecognitionCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddRecognitionCompleteDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddRecognitionCompleteDelegate_Parms AddRecognitionCompleteDelegate_Parms;
@@ -2108,7 +2204,8 @@ void UOnlineSubsystemEOS::OnRecognitionComplete()
 
 	if (!pFnOnRecognitionComplete)
 	{
-		pFnOnRecognitionComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONRECOGNITIONCOMPLETE));
+		pFnOnRecognitionComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnRecognitionComplete");
+
 	}
 
 	UOnlineSubsystemEOS_execOnRecognitionComplete_Parms OnRecognitionComplete_Parms;
@@ -2129,7 +2226,8 @@ bool UOnlineSubsystemEOS::GetRecognitionResults(unsigned char LocalUserNum, TArr
 
 	if (!pFnGetRecognitionResults)
 	{
-		pFnGetRecognitionResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETRECOGNITIONRESULTS));
+		pFnGetRecognitionResults = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetRecognitionResults");
+
 	}
 
 	UOnlineSubsystemEOS_execGetRecognitionResults_Parms GetRecognitionResults_Parms;
@@ -2153,7 +2251,8 @@ bool UOnlineSubsystemEOS::StopSpeechRecognition(unsigned char LocalUserNum)
 
 	if (!pFnStopSpeechRecognition)
 	{
-		pFnStopSpeechRecognition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_STOPSPEECHRECOGNITION));
+		pFnStopSpeechRecognition = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.StopSpeechRecognition");
+
 	}
 
 	UOnlineSubsystemEOS_execStopSpeechRecognition_Parms StopSpeechRecognition_Parms;
@@ -2176,7 +2275,8 @@ bool UOnlineSubsystemEOS::StartSpeechRecognition(unsigned char LocalUserNum)
 
 	if (!pFnStartSpeechRecognition)
 	{
-		pFnStartSpeechRecognition = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_STARTSPEECHRECOGNITION));
+		pFnStartSpeechRecognition = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.StartSpeechRecognition");
+
 	}
 
 	UOnlineSubsystemEOS_execStartSpeechRecognition_Parms StartSpeechRecognition_Parms;
@@ -2198,7 +2298,8 @@ void UOnlineSubsystemEOS::StopNetworkedVoice(unsigned char LocalUserNum)
 
 	if (!pFnStopNetworkedVoice)
 	{
-		pFnStopNetworkedVoice = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_STOPNETWORKEDVOICE));
+		pFnStopNetworkedVoice = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.StopNetworkedVoice");
+
 	}
 
 	UOnlineSubsystemEOS_execStopNetworkedVoice_Parms StopNetworkedVoice_Parms;
@@ -2218,7 +2319,8 @@ void UOnlineSubsystemEOS::StartNetworkedVoice(unsigned char LocalUserNum)
 
 	if (!pFnStartNetworkedVoice)
 	{
-		pFnStartNetworkedVoice = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_STARTNETWORKEDVOICE));
+		pFnStartNetworkedVoice = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.StartNetworkedVoice");
+
 	}
 
 	UOnlineSubsystemEOS_execStartNetworkedVoice_Parms StartNetworkedVoice_Parms;
@@ -2238,7 +2340,8 @@ void UOnlineSubsystemEOS::ClearPlayerTalkingDelegate(struct FScriptDelegate Talk
 
 	if (!pFnClearPlayerTalkingDelegate)
 	{
-		pFnClearPlayerTalkingDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_CLEARPLAYERTALKINGDELEGATE));
+		pFnClearPlayerTalkingDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.ClearPlayerTalkingDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execClearPlayerTalkingDelegate_Parms ClearPlayerTalkingDelegate_Parms;
@@ -2258,7 +2361,8 @@ void UOnlineSubsystemEOS::AddPlayerTalkingDelegate(struct FScriptDelegate Talker
 
 	if (!pFnAddPlayerTalkingDelegate)
 	{
-		pFnAddPlayerTalkingDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ADDPLAYERTALKINGDELEGATE));
+		pFnAddPlayerTalkingDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.AddPlayerTalkingDelegate");
+
 	}
 
 	UOnlineSubsystemEOS_execAddPlayerTalkingDelegate_Parms AddPlayerTalkingDelegate_Parms;
@@ -2278,7 +2382,8 @@ void UOnlineSubsystemEOS::OnPlayerTalking(struct FUniqueNetId Player)
 
 	if (!pFnOnPlayerTalking)
 	{
-		pFnOnPlayerTalking = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONPLAYERTALKING));
+		pFnOnPlayerTalking = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnPlayerTalking");
+
 	}
 
 	UOnlineSubsystemEOS_execOnPlayerTalking_Parms OnPlayerTalking_Parms;
@@ -2300,7 +2405,8 @@ bool UOnlineSubsystemEOS::UnmuteRemoteTalker(unsigned char LocalUserNum, struct 
 
 	if (!pFnUnmuteRemoteTalker)
 	{
-		pFnUnmuteRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_UNMUTEREMOTETALKER));
+		pFnUnmuteRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.UnmuteRemoteTalker");
+
 	}
 
 	UOnlineSubsystemEOS_execUnmuteRemoteTalker_Parms UnmuteRemoteTalker_Parms;
@@ -2325,7 +2431,8 @@ bool UOnlineSubsystemEOS::MuteRemoteTalker(unsigned char LocalUserNum, struct FU
 
 	if (!pFnMuteRemoteTalker)
 	{
-		pFnMuteRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_MUTEREMOTETALKER));
+		pFnMuteRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.MuteRemoteTalker");
+
 	}
 
 	UOnlineSubsystemEOS_execMuteRemoteTalker_Parms MuteRemoteTalker_Parms;
@@ -2351,7 +2458,8 @@ bool UOnlineSubsystemEOS::SetRemoteTalkerPriority(unsigned char LocalUserNum, st
 
 	if (!pFnSetRemoteTalkerPriority)
 	{
-		pFnSetRemoteTalkerPriority = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_SETREMOTETALKERPRIORITY));
+		pFnSetRemoteTalkerPriority = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.SetRemoteTalkerPriority");
+
 	}
 
 	UOnlineSubsystemEOS_execSetRemoteTalkerPriority_Parms SetRemoteTalkerPriority_Parms;
@@ -2376,7 +2484,8 @@ bool UOnlineSubsystemEOS::IsHeadsetPresent(unsigned char LocalUserNum)
 
 	if (!pFnIsHeadsetPresent)
 	{
-		pFnIsHeadsetPresent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ISHEADSETPRESENT));
+		pFnIsHeadsetPresent = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.IsHeadsetPresent");
+
 	}
 
 	UOnlineSubsystemEOS_execIsHeadsetPresent_Parms IsHeadsetPresent_Parms;
@@ -2399,7 +2508,8 @@ bool UOnlineSubsystemEOS::IsRemotePlayerTalking(struct FUniqueNetId PlayerID)
 
 	if (!pFnIsRemotePlayerTalking)
 	{
-		pFnIsRemotePlayerTalking = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ISREMOTEPLAYERTALKING));
+		pFnIsRemotePlayerTalking = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.IsRemotePlayerTalking");
+
 	}
 
 	UOnlineSubsystemEOS_execIsRemotePlayerTalking_Parms IsRemotePlayerTalking_Parms;
@@ -2422,7 +2532,8 @@ bool UOnlineSubsystemEOS::IsLocalPlayerTalking(unsigned char LocalUserNum)
 
 	if (!pFnIsLocalPlayerTalking)
 	{
-		pFnIsLocalPlayerTalking = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ISLOCALPLAYERTALKING));
+		pFnIsLocalPlayerTalking = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.IsLocalPlayerTalking");
+
 	}
 
 	UOnlineSubsystemEOS_execIsLocalPlayerTalking_Parms IsLocalPlayerTalking_Parms;
@@ -2445,7 +2556,8 @@ bool UOnlineSubsystemEOS::UnregisterRemoteTalker(struct FUniqueNetId PlayerID)
 
 	if (!pFnUnregisterRemoteTalker)
 	{
-		pFnUnregisterRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_UNREGISTERREMOTETALKER));
+		pFnUnregisterRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.UnregisterRemoteTalker");
+
 	}
 
 	UOnlineSubsystemEOS_execUnregisterRemoteTalker_Parms UnregisterRemoteTalker_Parms;
@@ -2468,7 +2580,8 @@ bool UOnlineSubsystemEOS::RegisterRemoteTalker(struct FUniqueNetId PlayerID)
 
 	if (!pFnRegisterRemoteTalker)
 	{
-		pFnRegisterRemoteTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_REGISTERREMOTETALKER));
+		pFnRegisterRemoteTalker = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.RegisterRemoteTalker");
+
 	}
 
 	UOnlineSubsystemEOS_execRegisterRemoteTalker_Parms RegisterRemoteTalker_Parms;
@@ -2491,7 +2604,8 @@ bool UOnlineSubsystemEOS::UnregisterLocalTalker(unsigned char LocalUserNum)
 
 	if (!pFnUnregisterLocalTalker)
 	{
-		pFnUnregisterLocalTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_UNREGISTERLOCALTALKER));
+		pFnUnregisterLocalTalker = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.UnregisterLocalTalker");
+
 	}
 
 	UOnlineSubsystemEOS_execUnregisterLocalTalker_Parms UnregisterLocalTalker_Parms;
@@ -2514,7 +2628,8 @@ bool UOnlineSubsystemEOS::RegisterLocalTalker(unsigned char LocalUserNum)
 
 	if (!pFnRegisterLocalTalker)
 	{
-		pFnRegisterLocalTalker = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_REGISTERLOCALTALKER));
+		pFnRegisterLocalTalker = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.RegisterLocalTalker");
+
 	}
 
 	UOnlineSubsystemEOS_execRegisterLocalTalker_Parms RegisterLocalTalker_Parms;
@@ -2537,7 +2652,8 @@ struct FUniqueNetId UOnlineSubsystemEOS::eventGetPlayerUniqueNetIdFromIndex(int 
 
 	if (!pFnGetPlayerUniqueNetIdFromIndex)
 	{
-		pFnGetPlayerUniqueNetIdFromIndex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETPLAYERUNIQUENETIDFROMINDEX));
+		pFnGetPlayerUniqueNetIdFromIndex = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetPlayerUniqueNetIdFromIndex");
+
 	}
 
 	UOnlineSubsystemEOS_eventGetPlayerUniqueNetIdFromIndex_Parms GetPlayerUniqueNetIdFromIndex_Parms;
@@ -2560,7 +2676,8 @@ struct FString UOnlineSubsystemEOS::eventGetPlayerNicknameFromIndex(int UserInde
 
 	if (!pFnGetPlayerNicknameFromIndex)
 	{
-		pFnGetPlayerNicknameFromIndex = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_GETPLAYERNICKNAMEFROMINDEX));
+		pFnGetPlayerNicknameFromIndex = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.GetPlayerNicknameFromIndex");
+
 	}
 
 	UOnlineSubsystemEOS_eventGetPlayerNicknameFromIndex_Parms GetPlayerNicknameFromIndex_Parms;
@@ -2582,7 +2699,8 @@ bool UOnlineSubsystemEOS::eventInit()
 
 	if (!pFnInit)
 	{
-		pFnInit = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_INIT));
+		pFnInit = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.Init");
+
 	}
 
 	UOnlineSubsystemEOS_eventInit_Parms Init_Parms;
@@ -2614,7 +2732,8 @@ bool UOnlineSubsystemEOS::InitEOS(struct FString& SandboxId, struct FString& Dep
 
 	if (!pFnInitEOS)
 	{
-		pFnInitEOS = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_INITEOS));
+		pFnInitEOS = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.InitEOS");
+
 	}
 
 	UOnlineSubsystemEOS_execInitEOS_Parms InitEOS_Parms;
@@ -2644,7 +2763,8 @@ void UOnlineSubsystemEOS::EventGetAppPriceInfoComplete(struct FName AppName, str
 
 	if (!pFnEventGetAppPriceInfoComplete)
 	{
-		pFnEventGetAppPriceInfoComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_EVENTGETAPPPRICEINFOCOMPLETE));
+		pFnEventGetAppPriceInfoComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.EventGetAppPriceInfoComplete");
+
 	}
 
 	UOnlineSubsystemEOS_execEventGetAppPriceInfoComplete_Parms EventGetAppPriceInfoComplete_Parms;
@@ -2668,7 +2788,8 @@ void UOnlineSubsystemEOS::OnMicroTxnResponse(unsigned long bAuthorized, unsigned
 
 	if (!pFnOnMicroTxnResponse)
 	{
-		pFnOnMicroTxnResponse = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESUBSYSTEMEOS_ONMICROTXNRESPONSE));
+		pFnOnMicroTxnResponse = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineSubsystemEOS.OnMicroTxnResponse");
+
 	}
 
 	UOnlineSubsystemEOS_execOnMicroTxnResponse_Parms OnMicroTxnResponse_Parms;
@@ -2689,7 +2810,8 @@ bool UOnlineAuthInterfaceEOS::RequiresAuthTicket()
 
 	if (!pFnRequiresAuthTicket)
 	{
-		pFnRequiresAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEAUTHINTERFACEEOS_REQUIRESAUTHTICKET));
+		pFnRequiresAuthTicket = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineAuthInterfaceEOS.RequiresAuthTicket");
+
 	}
 
 	UOnlineAuthInterfaceEOS_execRequiresAuthTicket_Parms RequiresAuthTicket_Parms;
@@ -2700,7 +2822,7 @@ bool UOnlineAuthInterfaceEOS::RequiresAuthTicket()
 };
 
 // Function OnlineSubsystemEOS.OnlineAuthInterfaceEOS.RequestAuthTicket
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FUniqueNetId            PlayerID                       (CPF_Parm | CPF_NeedCtorLink)
@@ -2712,7 +2834,8 @@ bool UOnlineAuthInterfaceEOS::RequestAuthTicket(struct FUniqueNetId PlayerID, st
 
 	if (!pFnRequestAuthTicket)
 	{
-		pFnRequestAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEAUTHINTERFACEEOS_REQUESTAUTHTICKET));
+		pFnRequestAuthTicket = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineAuthInterfaceEOS.RequestAuthTicket");
+
 	}
 
 	UOnlineAuthInterfaceEOS_execRequestAuthTicket_Parms RequestAuthTicket_Parms;
@@ -2746,7 +2869,8 @@ bool UOnlineAuthInterfaceEOS::RequestMtxCode(struct FUniqueNetId PlayerID, struc
 
 	if (!pFnRequestMtxCode)
 	{
-		pFnRequestMtxCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEAUTHINTERFACEEOS_REQUESTMTXCODE));
+		pFnRequestMtxCode = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineAuthInterfaceEOS.RequestMtxCode");
+
 	}
 
 	UOnlineAuthInterfaceEOS_execRequestMtxCode_Parms RequestMtxCode_Parms;
@@ -2781,7 +2905,8 @@ bool UOnlineFriendsInterfaceEOS::GetActivePlatformId(unsigned char LocalUserNum,
 
 	if (!pFnGetActivePlatformId)
 	{
-		pFnGetActivePlatformId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEFRIENDSINTERFACEEOS_GETACTIVEPLATFORMID));
+		pFnGetActivePlatformId = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineFriendsInterfaceEOS.GetActivePlatformId");
+
 	}
 
 	UOnlineFriendsInterfaceEOS_execGetActivePlatformId_Parms GetActivePlatformId_Parms;
@@ -2804,7 +2929,7 @@ bool UOnlineFriendsInterfaceEOS::GetActivePlatformId(unsigned char LocalUserNum,
 };
 
 // Function OnlineSubsystemEOS.OnlineFriendsInterfaceEOS.RequestLinkedAccounts
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -2817,7 +2942,8 @@ bool UOnlineFriendsInterfaceEOS::RequestLinkedAccounts(unsigned char LocalUserNu
 
 	if (!pFnRequestLinkedAccounts)
 	{
-		pFnRequestLinkedAccounts = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEFRIENDSINTERFACEEOS_REQUESTLINKEDACCOUNTS));
+		pFnRequestLinkedAccounts = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineFriendsInterfaceEOS.RequestLinkedAccounts");
+
 	}
 
 	UOnlineFriendsInterfaceEOS_execRequestLinkedAccounts_Parms RequestLinkedAccounts_Parms;
@@ -2852,7 +2978,8 @@ bool UOnlineGameInterfaceEOS::AcceptGameInvite(unsigned char LocalUserNum, struc
 
 	if (!pFnAcceptGameInvite)
 	{
-		pFnAcceptGameInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEGAMEINTERFACEEOS_ACCEPTGAMEINVITE));
+		pFnAcceptGameInvite = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineGameInterfaceEOS.AcceptGameInvite");
+
 	}
 
 	UOnlineGameInterfaceEOS_execAcceptGameInvite_Parms AcceptGameInvite_Parms;
@@ -2885,7 +3012,8 @@ bool UOnlineGameInterfaceEOS::FreeSearchResults(class UOnlineGameSearch* Search)
 
 	if (!pFnFreeSearchResults)
 	{
-		pFnFreeSearchResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEGAMEINTERFACEEOS_FREESEARCHRESULTS));
+		pFnFreeSearchResults = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineGameInterfaceEOS.FreeSearchResults");
+
 	}
 
 	UOnlineGameInterfaceEOS_execFreeSearchResults_Parms FreeSearchResults_Parms;
@@ -2919,7 +3047,8 @@ bool UOnlineGameInterfaceEOS::UpdateOnlineGame(struct FName SessionName, class U
 
 	if (!pFnUpdateOnlineGame)
 	{
-		pFnUpdateOnlineGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEGAMEINTERFACEEOS_UPDATEONLINEGAME));
+		pFnUpdateOnlineGame = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineGameInterfaceEOS.UpdateOnlineGame");
+
 	}
 
 	UOnlineGameInterfaceEOS_execUpdateOnlineGame_Parms UpdateOnlineGame_Parms;
@@ -2954,7 +3083,8 @@ bool UOnlinePersistentAuthInterfaceEOS::AuthWithNintendoAccountToken(unsigned ch
 
 	if (!pFnAuthWithNintendoAccountToken)
 	{
-		pFnAuthWithNintendoAccountToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_AUTHWITHNINTENDOACCOUNTTOKEN));
+		pFnAuthWithNintendoAccountToken = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.AuthWithNintendoAccountToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execAuthWithNintendoAccountToken_Parms AuthWithNintendoAccountToken_Parms;
@@ -2976,7 +3106,7 @@ bool UOnlinePersistentAuthInterfaceEOS::AuthWithNintendoAccountToken(unsigned ch
 };
 
 // Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.GetAuthExpirationTimestamp
-// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // class UDateTime*               ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -2987,7 +3117,8 @@ class UDateTime* UOnlinePersistentAuthInterfaceEOS::GetAuthExpirationTimestamp(u
 
 	if (!pFnGetAuthExpirationTimestamp)
 	{
-		pFnGetAuthExpirationTimestamp = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_GETAUTHEXPIRATIONTIMESTAMP));
+		pFnGetAuthExpirationTimestamp = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.GetAuthExpirationTimestamp");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execGetAuthExpirationTimestamp_Parms GetAuthExpirationTimestamp_Parms;
@@ -3019,7 +3150,8 @@ bool UOnlinePersistentAuthInterfaceEOS::LaunchAccountPortal(unsigned char LocalU
 
 	if (!pFnLaunchAccountPortal)
 	{
-		pFnLaunchAccountPortal = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_LAUNCHACCOUNTPORTAL));
+		pFnLaunchAccountPortal = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.LaunchAccountPortal");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execLaunchAccountPortal_Parms LaunchAccountPortal_Parms;
@@ -3050,7 +3182,8 @@ struct FString UOnlinePersistentAuthInterfaceEOS::GetClientCredentials()
 
 	if (!pFnGetClientCredentials)
 	{
-		pFnGetClientCredentials = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_GETCLIENTCREDENTIALS));
+		pFnGetClientCredentials = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.GetClientCredentials");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execGetClientCredentials_Parms GetClientCredentials_Parms;
@@ -3081,7 +3214,8 @@ struct FString UOnlinePersistentAuthInterfaceEOS::GetContinuanceToken(unsigned c
 
 	if (!pFnGetContinuanceToken)
 	{
-		pFnGetContinuanceToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_GETCONTINUANCETOKEN));
+		pFnGetContinuanceToken = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.GetContinuanceToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execGetContinuanceToken_Parms GetContinuanceToken_Parms;
@@ -3114,7 +3248,8 @@ bool UOnlinePersistentAuthInterfaceEOS::UseRefreshToken(unsigned char LocalUserN
 
 	if (!pFnUseRefreshToken)
 	{
-		pFnUseRefreshToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_USEREFRESHTOKEN));
+		pFnUseRefreshToken = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.UseRefreshToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execUseRefreshToken_Parms UseRefreshToken_Parms;
@@ -3147,7 +3282,8 @@ struct FString UOnlinePersistentAuthInterfaceEOS::GetRefreshToken(unsigned char 
 
 	if (!pFnGetRefreshToken)
 	{
-		pFnGetRefreshToken = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_GETREFRESHTOKEN));
+		pFnGetRefreshToken = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.GetRefreshToken");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execGetRefreshToken_Parms GetRefreshToken_Parms;
@@ -3179,7 +3315,8 @@ bool UOnlinePersistentAuthInterfaceEOS::RequestPinGrantCode(unsigned char LocalU
 
 	if (!pFnRequestPinGrantCode)
 	{
-		pFnRequestPinGrantCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPERSISTENTAUTHINTERFACEEOS_REQUESTPINGRANTCODE));
+		pFnRequestPinGrantCode = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePersistentAuthInterfaceEOS.RequestPinGrantCode");
+
 	}
 
 	UOnlinePersistentAuthInterfaceEOS_execRequestPinGrantCode_Parms RequestPinGrantCode_Parms;
@@ -3212,7 +3349,8 @@ bool UOnlinePlayerInterfaceEOS::ShowInviteUI(unsigned char LocalUserNum, struct 
 
 	if (!pFnShowInviteUI)
 	{
-		pFnShowInviteUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWINVITEUI));
+		pFnShowInviteUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowInviteUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowInviteUI_Parms ShowInviteUI_Parms;
@@ -3237,7 +3375,8 @@ bool UOnlinePlayerInterfaceEOS::ShowGamerCardUI(unsigned char LocalUserNum, stru
 
 	if (!pFnShowGamerCardUI)
 	{
-		pFnShowGamerCardUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWGAMERCARDUI));
+		pFnShowGamerCardUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowGamerCardUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowGamerCardUI_Parms ShowGamerCardUI_Parms;
@@ -3250,7 +3389,7 @@ bool UOnlinePlayerInterfaceEOS::ShowGamerCardUI(unsigned char LocalUserNum, stru
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetRichPresence
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FString                 PresenceString                 (CPF_Parm | CPF_NeedCtorLink)
@@ -3262,7 +3401,8 @@ void UOnlinePlayerInterfaceEOS::SetRichPresence(unsigned char LocalUserNum, stru
 
 	if (!pFnSetRichPresence)
 	{
-		pFnSetRichPresence = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETRICHPRESENCE));
+		pFnSetRichPresence = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetRichPresence");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetRichPresence_Parms SetRichPresence_Parms;
@@ -3278,7 +3418,7 @@ void UOnlinePlayerInterfaceEOS::SetRichPresence(unsigned char LocalUserNum, stru
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetFriendPresence
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FOnlineFriend           FriendData                     (CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -3288,7 +3428,8 @@ void UOnlinePlayerInterfaceEOS::GetFriendPresence(struct FOnlineFriend& FriendDa
 
 	if (!pFnGetFriendPresence)
 	{
-		pFnGetFriendPresence = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETFRIENDPRESENCE));
+		pFnGetFriendPresence = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetFriendPresence");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetFriendPresence_Parms GetFriendPresence_Parms;
@@ -3315,7 +3456,8 @@ bool UOnlinePlayerInterfaceEOS::RecordPlayersRecentlyMet(unsigned char LocalUser
 
 	if (!pFnRecordPlayersRecentlyMet)
 	{
-		pFnRecordPlayersRecentlyMet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_RECORDPLAYERSRECENTLYMET));
+		pFnRecordPlayersRecentlyMet = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RecordPlayersRecentlyMet");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRecordPlayersRecentlyMet_Parms RecordPlayersRecentlyMet_Parms;
@@ -3342,7 +3484,8 @@ bool UOnlinePlayerInterfaceEOS::WordFilterSanitizeString(struct FString Comment,
 
 	if (!pFnWordFilterSanitizeString)
 	{
-		pFnWordFilterSanitizeString = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_WORDFILTERSANITIZESTRING));
+		pFnWordFilterSanitizeString = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.WordFilterSanitizeString");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execWordFilterSanitizeString_Parms WordFilterSanitizeString_Parms;
@@ -3366,7 +3509,8 @@ void UOnlinePlayerInterfaceEOS::OnSanitizeStringComplete(struct FWordFilterResul
 
 	if (!pFnOnSanitizeStringComplete)
 	{
-		pFnOnSanitizeStringComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONSANITIZESTRINGCOMPLETE));
+		pFnOnSanitizeStringComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnSanitizeStringComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnSanitizeStringComplete_Parms OnSanitizeStringComplete_Parms;
@@ -3387,7 +3531,8 @@ bool UOnlinePlayerInterfaceEOS::HideKeyboardUI(unsigned char LocalUserNum)
 
 	if (!pFnHideKeyboardUI)
 	{
-		pFnHideKeyboardUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_HIDEKEYBOARDUI));
+		pFnHideKeyboardUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.HideKeyboardUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execHideKeyboardUI_Parms HideKeyboardUI_Parms;
@@ -3410,7 +3555,8 @@ void UOnlinePlayerInterfaceEOS::ClearReadPlayerCountryDelegate(unsigned char Loc
 
 	if (!pFnClearReadPlayerCountryDelegate)
 	{
-		pFnClearReadPlayerCountryDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREADPLAYERCOUNTRYDELEGATE));
+		pFnClearReadPlayerCountryDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReadPlayerCountryDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReadPlayerCountryDelegate_Parms ClearReadPlayerCountryDelegate_Parms;
@@ -3432,7 +3578,8 @@ void UOnlinePlayerInterfaceEOS::AddReadPlayerCountryDelegate(unsigned char Local
 
 	if (!pFnAddReadPlayerCountryDelegate)
 	{
-		pFnAddReadPlayerCountryDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREADPLAYERCOUNTRYDELEGATE));
+		pFnAddReadPlayerCountryDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadPlayerCountryDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReadPlayerCountryDelegate_Parms AddReadPlayerCountryDelegate_Parms;
@@ -3454,7 +3601,8 @@ void UOnlinePlayerInterfaceEOS::OnPlayerCountryRetrieved(struct FUniqueNetId Pla
 
 	if (!pFnOnPlayerCountryRetrieved)
 	{
-		pFnOnPlayerCountryRetrieved = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONPLAYERCOUNTRYRETRIEVED));
+		pFnOnPlayerCountryRetrieved = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnPlayerCountryRetrieved");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnPlayerCountryRetrieved_Parms OnPlayerCountryRetrieved_Parms;
@@ -3475,7 +3623,8 @@ void UOnlinePlayerInterfaceEOS::GetPlayerCountry(unsigned char LocalUserNum)
 
 	if (!pFnGetPlayerCountry)
 	{
-		pFnGetPlayerCountry = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETPLAYERCOUNTRY));
+		pFnGetPlayerCountry = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetPlayerCountry");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetPlayerCountry_Parms GetPlayerCountry_Parms;
@@ -3496,7 +3645,8 @@ void UOnlinePlayerInterfaceEOS::ClearAvatarChangeDelegate(unsigned char LocalUse
 
 	if (!pFnClearAvatarChangeDelegate)
 	{
-		pFnClearAvatarChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARAVATARCHANGEDELEGATE));
+		pFnClearAvatarChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearAvatarChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearAvatarChangeDelegate_Parms ClearAvatarChangeDelegate_Parms;
@@ -3518,7 +3668,8 @@ void UOnlinePlayerInterfaceEOS::AddAvatarChangeDelegate(unsigned char LocalUserN
 
 	if (!pFnAddAvatarChangeDelegate)
 	{
-		pFnAddAvatarChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDAVATARCHANGEDELEGATE));
+		pFnAddAvatarChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAvatarChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddAvatarChangeDelegate_Parms AddAvatarChangeDelegate_Parms;
@@ -3540,7 +3691,8 @@ void UOnlinePlayerInterfaceEOS::ClearFriendPresenceChangeDelegate(unsigned char 
 
 	if (!pFnClearFriendPresenceChangeDelegate)
 	{
-		pFnClearFriendPresenceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARFRIENDPRESENCECHANGEDELEGATE));
+		pFnClearFriendPresenceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearFriendPresenceChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearFriendPresenceChangeDelegate_Parms ClearFriendPresenceChangeDelegate_Parms;
@@ -3551,7 +3703,7 @@ void UOnlinePlayerInterfaceEOS::ClearFriendPresenceChangeDelegate(unsigned char 
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendPresenceChangeDelegate
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         PresenceDelegate               (CPF_Parm | CPF_NeedCtorLink)
@@ -3562,7 +3714,8 @@ void UOnlinePlayerInterfaceEOS::eventAddFriendPresenceChangeDelegate(unsigned ch
 
 	if (!pFnAddFriendPresenceChangeDelegate)
 	{
-		pFnAddFriendPresenceChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDFRIENDPRESENCECHANGEDELEGATE));
+		pFnAddFriendPresenceChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendPresenceChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_eventAddFriendPresenceChangeDelegate_Parms AddFriendPresenceChangeDelegate_Parms;
@@ -3573,7 +3726,7 @@ void UOnlinePlayerInterfaceEOS::eventAddFriendPresenceChangeDelegate(unsigned ch
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.FriendPresenceChange
-// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 // struct FUniqueNetId            PlayerID                       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -3583,7 +3736,8 @@ void UOnlinePlayerInterfaceEOS::FriendPresenceChange(struct FUniqueNetId PlayerI
 
 	if (!pFnFriendPresenceChange)
 	{
-		pFnFriendPresenceChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_FRIENDPRESENCECHANGE));
+		pFnFriendPresenceChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.FriendPresenceChange");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execFriendPresenceChange_Parms FriendPresenceChange_Parms;
@@ -3603,7 +3757,8 @@ void UOnlinePlayerInterfaceEOS::OnAvatarChange(struct FUniqueNetId PlayerID)
 
 	if (!pFnOnAvatarChange)
 	{
-		pFnOnAvatarChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONAVATARCHANGE));
+		pFnOnAvatarChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnAvatarChange");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnAvatarChange_Parms OnAvatarChange_Parms;
@@ -3626,7 +3781,8 @@ bool UOnlinePlayerInterfaceEOS::UnlockAchievement(unsigned char LocalUserNum, in
 
 	if (!pFnUnlockAchievement)
 	{
-		pFnUnlockAchievement = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_UNLOCKACHIEVEMENT));
+		pFnUnlockAchievement = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.UnlockAchievement");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execUnlockAchievement_Parms UnlockAchievement_Parms;
@@ -3658,7 +3814,8 @@ bool UOnlinePlayerInterfaceEOS::ReadAchievements(unsigned char LocalUserNum, int
 
 	if (!pFnReadAchievements)
 	{
-		pFnReadAchievements = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_READACHIEVEMENTS));
+		pFnReadAchievements = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadAchievements");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execReadAchievements_Parms ReadAchievements_Parms;
@@ -3690,7 +3847,8 @@ unsigned char UOnlinePlayerInterfaceEOS::GetAchievements(unsigned char LocalUser
 
 	if (!pFnGetAchievements)
 	{
-		pFnGetAchievements = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETACHIEVEMENTS));
+		pFnGetAchievements = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetAchievements");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetAchievements_Parms GetAchievements_Parms;
@@ -3719,7 +3877,8 @@ void UOnlinePlayerInterfaceEOS::ClearReadAchievementsCompleteDelegate(unsigned c
 
 	if (!pFnClearReadAchievementsCompleteDelegate)
 	{
-		pFnClearReadAchievementsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREADACHIEVEMENTSCOMPLETEDELEGATE));
+		pFnClearReadAchievementsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReadAchievementsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReadAchievementsCompleteDelegate_Parms ClearReadAchievementsCompleteDelegate_Parms;
@@ -3741,7 +3900,8 @@ void UOnlinePlayerInterfaceEOS::ClearUnlockAchievementCompleteDelegate(unsigned 
 
 	if (!pFnClearUnlockAchievementCompleteDelegate)
 	{
-		pFnClearUnlockAchievementCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARUNLOCKACHIEVEMENTCOMPLETEDELEGATE));
+		pFnClearUnlockAchievementCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearUnlockAchievementCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearUnlockAchievementCompleteDelegate_Parms ClearUnlockAchievementCompleteDelegate_Parms;
@@ -3763,7 +3923,8 @@ void UOnlinePlayerInterfaceEOS::AddReadAchievementsCompleteDelegate(unsigned cha
 
 	if (!pFnAddReadAchievementsCompleteDelegate)
 	{
-		pFnAddReadAchievementsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREADACHIEVEMENTSCOMPLETEDELEGATE));
+		pFnAddReadAchievementsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadAchievementsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReadAchievementsCompleteDelegate_Parms AddReadAchievementsCompleteDelegate_Parms;
@@ -3785,7 +3946,8 @@ void UOnlinePlayerInterfaceEOS::AddUnlockAchievementCompleteDelegate(unsigned ch
 
 	if (!pFnAddUnlockAchievementCompleteDelegate)
 	{
-		pFnAddUnlockAchievementCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDUNLOCKACHIEVEMENTCOMPLETEDELEGATE));
+		pFnAddUnlockAchievementCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddUnlockAchievementCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddUnlockAchievementCompleteDelegate_Parms AddUnlockAchievementCompleteDelegate_Parms;
@@ -3806,7 +3968,8 @@ void UOnlinePlayerInterfaceEOS::OnReadAchievementsComplete(int TitleId)
 
 	if (!pFnOnReadAchievementsComplete)
 	{
-		pFnOnReadAchievementsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREADACHIEVEMENTSCOMPLETE));
+		pFnOnReadAchievementsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReadAchievementsComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReadAchievementsComplete_Parms OnReadAchievementsComplete_Parms;
@@ -3826,7 +3989,8 @@ void UOnlinePlayerInterfaceEOS::OnUnlockAchievementComplete(unsigned long bWasSu
 
 	if (!pFnOnUnlockAchievementComplete)
 	{
-		pFnOnUnlockAchievementComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONUNLOCKACHIEVEMENTCOMPLETE));
+		pFnOnUnlockAchievementComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnUnlockAchievementComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnUnlockAchievementComplete_Parms OnUnlockAchievementComplete_Parms;
@@ -3846,7 +4010,8 @@ bool UOnlinePlayerInterfaceEOS::ShowControllerUI()
 
 	if (!pFnShowControllerUI)
 	{
-		pFnShowControllerUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWCONTROLLERUI));
+		pFnShowControllerUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowControllerUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowControllerUI_Parms ShowControllerUI_Parms;
@@ -3868,7 +4033,8 @@ struct FString UOnlinePlayerInterfaceEOS::GetPlayerLanguage(unsigned char LocalU
 
 	if (!pFnGetPlayerLanguage)
 	{
-		pFnGetPlayerLanguage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETPLAYERLANGUAGE));
+		pFnGetPlayerLanguage = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetPlayerLanguage");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetPlayerLanguage_Parms GetPlayerLanguage_Parms;
@@ -3891,7 +4057,8 @@ bool UOnlinePlayerInterfaceEOS::ShowPlayersUI(unsigned char LocalUserNum)
 
 	if (!pFnShowPlayersUI)
 	{
-		pFnShowPlayersUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWPLAYERSUI));
+		pFnShowPlayersUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowPlayersUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowPlayersUI_Parms ShowPlayersUI_Parms;
@@ -3914,7 +4081,8 @@ void UOnlinePlayerInterfaceEOS::ClearProfileDataChangedDelegate(unsigned char Lo
 
 	if (!pFnClearProfileDataChangedDelegate)
 	{
-		pFnClearProfileDataChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARPROFILEDATACHANGEDDELEGATE));
+		pFnClearProfileDataChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearProfileDataChangedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearProfileDataChangedDelegate_Parms ClearProfileDataChangedDelegate_Parms;
@@ -3936,7 +4104,8 @@ void UOnlinePlayerInterfaceEOS::AddProfileDataChangedDelegate(unsigned char Loca
 
 	if (!pFnAddProfileDataChangedDelegate)
 	{
-		pFnAddProfileDataChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDPROFILEDATACHANGEDDELEGATE));
+		pFnAddProfileDataChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddProfileDataChangedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddProfileDataChangedDelegate_Parms AddProfileDataChangedDelegate_Parms;
@@ -3956,7 +4125,8 @@ void UOnlinePlayerInterfaceEOS::OnProfileDataChanged()
 
 	if (!pFnOnProfileDataChanged)
 	{
-		pFnOnProfileDataChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONPROFILEDATACHANGED));
+		pFnOnProfileDataChanged = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnProfileDataChanged");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnProfileDataChanged_Parms OnProfileDataChanged_Parms;
@@ -3977,7 +4147,8 @@ bool UOnlinePlayerInterfaceEOS::UnlockGamerPicture(unsigned char LocalUserNum, i
 
 	if (!pFnUnlockGamerPicture)
 	{
-		pFnUnlockGamerPicture = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_UNLOCKGAMERPICTURE));
+		pFnUnlockGamerPicture = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.UnlockGamerPicture");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execUnlockGamerPicture_Parms UnlockGamerPicture_Parms;
@@ -4001,7 +4172,8 @@ bool UOnlinePlayerInterfaceEOS::IsDeviceValid(int DeviceID)
 
 	if (!pFnIsDeviceValid)
 	{
-		pFnIsDeviceValid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ISDEVICEVALID));
+		pFnIsDeviceValid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.IsDeviceValid");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execIsDeviceValid_Parms IsDeviceValid_Parms;
@@ -4025,7 +4197,8 @@ int UOnlinePlayerInterfaceEOS::GetDeviceSelectionResults(unsigned char LocalUser
 
 	if (!pFnGetDeviceSelectionResults)
 	{
-		pFnGetDeviceSelectionResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETDEVICESELECTIONRESULTS));
+		pFnGetDeviceSelectionResults = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetDeviceSelectionResults");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetDeviceSelectionResults_Parms GetDeviceSelectionResults_Parms;
@@ -4049,7 +4222,8 @@ void UOnlinePlayerInterfaceEOS::ClearDeviceSelectionDoneDelegate(unsigned char L
 
 	if (!pFnClearDeviceSelectionDoneDelegate)
 	{
-		pFnClearDeviceSelectionDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARDEVICESELECTIONDONEDELEGATE));
+		pFnClearDeviceSelectionDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearDeviceSelectionDoneDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearDeviceSelectionDoneDelegate_Parms ClearDeviceSelectionDoneDelegate_Parms;
@@ -4071,7 +4245,8 @@ void UOnlinePlayerInterfaceEOS::AddDeviceSelectionDoneDelegate(unsigned char Loc
 
 	if (!pFnAddDeviceSelectionDoneDelegate)
 	{
-		pFnAddDeviceSelectionDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDDEVICESELECTIONDONEDELEGATE));
+		pFnAddDeviceSelectionDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddDeviceSelectionDoneDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddDeviceSelectionDoneDelegate_Parms AddDeviceSelectionDoneDelegate_Parms;
@@ -4092,7 +4267,8 @@ void UOnlinePlayerInterfaceEOS::OnDeviceSelectionComplete(unsigned long bWasSucc
 
 	if (!pFnOnDeviceSelectionComplete)
 	{
-		pFnOnDeviceSelectionComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONDEVICESELECTIONCOMPLETE));
+		pFnOnDeviceSelectionComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnDeviceSelectionComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnDeviceSelectionComplete_Parms OnDeviceSelectionComplete_Parms;
@@ -4115,7 +4291,8 @@ bool UOnlinePlayerInterfaceEOS::ShowDeviceSelectionUI(unsigned char LocalUserNum
 
 	if (!pFnShowDeviceSelectionUI)
 	{
-		pFnShowDeviceSelectionUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWDEVICESELECTIONUI));
+		pFnShowDeviceSelectionUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowDeviceSelectionUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowDeviceSelectionUI_Parms ShowDeviceSelectionUI_Parms;
@@ -4143,7 +4320,8 @@ bool UOnlinePlayerInterfaceEOS::ShowCustomPlayersUI(unsigned char LocalUserNum, 
 
 	if (!pFnShowCustomPlayersUI)
 	{
-		pFnShowCustomPlayersUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWCUSTOMPLAYERSUI));
+		pFnShowCustomPlayersUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowCustomPlayersUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowCustomPlayersUI_Parms ShowCustomPlayersUI_Parms;
@@ -4168,7 +4346,8 @@ bool UOnlinePlayerInterfaceEOS::IsUserSwitchActive()
 
 	if (!pFnIsUserSwitchActive)
 	{
-		pFnIsUserSwitchActive = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ISUSERSWITCHACTIVE));
+		pFnIsUserSwitchActive = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.IsUserSwitchActive");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execIsUserSwitchActive_Parms IsUserSwitchActive_Parms;
@@ -4189,7 +4368,8 @@ void UOnlinePlayerInterfaceEOS::SetKickPlayerDialogActive(unsigned long Active)
 
 	if (!pFnSetKickPlayerDialogActive)
 	{
-		pFnSetKickPlayerDialogActive = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETKICKPLAYERDIALOGACTIVE));
+		pFnSetKickPlayerDialogActive = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetKickPlayerDialogActive");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetKickPlayerDialogActive_Parms SetKickPlayerDialogActive_Parms;
@@ -4209,7 +4389,8 @@ void UOnlinePlayerInterfaceEOS::SetKickPreviousUser(unsigned char LocalUserNum)
 
 	if (!pFnSetKickPreviousUser)
 	{
-		pFnSetKickPreviousUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETKICKPREVIOUSUSER));
+		pFnSetKickPreviousUser = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetKickPreviousUser");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetKickPreviousUser_Parms SetKickPreviousUser_Parms;
@@ -4230,7 +4411,8 @@ bool UOnlinePlayerInterfaceEOS::ShowLoginUIForOrphanedUser(unsigned char LocalUs
 
 	if (!pFnShowLoginUIForOrphanedUser)
 	{
-		pFnShowLoginUIForOrphanedUser = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWLOGINUIFORORPHANEDUSER));
+		pFnShowLoginUIForOrphanedUser = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowLoginUIForOrphanedUser");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowLoginUIForOrphanedUser_Parms ShowLoginUIForOrphanedUser_Parms;
@@ -4253,7 +4435,8 @@ TArray<bool> UOnlinePlayerInterfaceEOS::GetSyncedAchievements(unsigned char Loca
 
 	if (!pFnGetSyncedAchievements)
 	{
-		pFnGetSyncedAchievements = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETSYNCEDACHIEVEMENTS));
+		pFnGetSyncedAchievements = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetSyncedAchievements");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetSyncedAchievements_Parms GetSyncedAchievements_Parms;
@@ -4276,7 +4459,8 @@ bool UOnlinePlayerInterfaceEOS::IsGuestLogin(unsigned char LocalUserNum)
 
 	if (!pFnIsGuestLogin)
 	{
-		pFnIsGuestLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ISGUESTLOGIN));
+		pFnIsGuestLogin = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.IsGuestLogin");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execIsGuestLogin_Parms IsGuestLogin_Parms;
@@ -4299,7 +4483,8 @@ void UOnlinePlayerInterfaceEOS::RequestRestrictedFeatureMessaging(unsigned char 
 
 	if (!pFnRequestRestrictedFeatureMessaging)
 	{
-		pFnRequestRestrictedFeatureMessaging = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_REQUESTRESTRICTEDFEATUREMESSAGING));
+		pFnRequestRestrictedFeatureMessaging = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RequestRestrictedFeatureMessaging");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRequestRestrictedFeatureMessaging_Parms RequestRestrictedFeatureMessaging_Parms;
@@ -4324,7 +4509,8 @@ bool UOnlinePlayerInterfaceEOS::CanCommunicateVoice(unsigned char LocalUserNum, 
 
 	if (!pFnCanCommunicateVoice)
 	{
-		pFnCanCommunicateVoice = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANCOMMUNICATEVOICE));
+		pFnCanCommunicateVoice = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanCommunicateVoice");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanCommunicateVoice_Parms CanCommunicateVoice_Parms;
@@ -4353,7 +4539,8 @@ bool UOnlinePlayerInterfaceEOS::CanCommunicateVideo(unsigned char LocalUserNum, 
 
 	if (!pFnCanCommunicateVideo)
 	{
-		pFnCanCommunicateVideo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANCOMMUNICATEVIDEO));
+		pFnCanCommunicateVideo = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanCommunicateVideo");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanCommunicateVideo_Parms CanCommunicateVideo_Parms;
@@ -4382,7 +4569,8 @@ bool UOnlinePlayerInterfaceEOS::CanCommunicateText(unsigned char LocalUserNum, u
 
 	if (!pFnCanCommunicateText)
 	{
-		pFnCanCommunicateText = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANCOMMUNICATETEXT));
+		pFnCanCommunicateText = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanCommunicateText");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanCommunicateText_Parms CanCommunicateText_Parms;
@@ -4411,7 +4599,8 @@ bool UOnlinePlayerInterfaceEOS::CanShareUserCreatedContent(unsigned char LocalUs
 
 	if (!pFnCanShareUserCreatedContent)
 	{
-		pFnCanShareUserCreatedContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANSHAREUSERCREATEDCONTENT));
+		pFnCanShareUserCreatedContent = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanShareUserCreatedContent");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanShareUserCreatedContent_Parms CanShareUserCreatedContent_Parms;
@@ -4440,7 +4629,8 @@ bool UOnlinePlayerInterfaceEOS::CanAccessPremiumVideoContent(unsigned char Local
 
 	if (!pFnCanAccessPremiumVideoContent)
 	{
-		pFnCanAccessPremiumVideoContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANACCESSPREMIUMVIDEOCONTENT));
+		pFnCanAccessPremiumVideoContent = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanAccessPremiumVideoContent");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanAccessPremiumVideoContent_Parms CanAccessPremiumVideoContent_Parms;
@@ -4469,7 +4659,8 @@ bool UOnlinePlayerInterfaceEOS::CanAccessPremiumContent(unsigned char LocalUserN
 
 	if (!pFnCanAccessPremiumContent)
 	{
-		pFnCanAccessPremiumContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANACCESSPREMIUMCONTENT));
+		pFnCanAccessPremiumContent = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanAccessPremiumContent");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanAccessPremiumContent_Parms CanAccessPremiumContent_Parms;
@@ -4498,7 +4689,8 @@ bool UOnlinePlayerInterfaceEOS::CanUseCloudStorage(unsigned char LocalUserNum, u
 
 	if (!pFnCanUseCloudStorage)
 	{
-		pFnCanUseCloudStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANUSECLOUDSTORAGE));
+		pFnCanUseCloudStorage = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanUseCloudStorage");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanUseCloudStorage_Parms CanUseCloudStorage_Parms;
@@ -4527,7 +4719,8 @@ bool UOnlinePlayerInterfaceEOS::CanRecordDVRClips(unsigned char LocalUserNum, un
 
 	if (!pFnCanRecordDVRClips)
 	{
-		pFnCanRecordDVRClips = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANRECORDDVRCLIPS));
+		pFnCanRecordDVRClips = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanRecordDVRClips");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanRecordDVRClips_Parms CanRecordDVRClips_Parms;
@@ -4556,7 +4749,8 @@ bool UOnlinePlayerInterfaceEOS::CanBrowseInternet(unsigned char LocalUserNum, un
 
 	if (!pFnCanBrowseInternet)
 	{
-		pFnCanBrowseInternet = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANBROWSEINTERNET));
+		pFnCanBrowseInternet = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanBrowseInternet");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanBrowseInternet_Parms CanBrowseInternet_Parms;
@@ -4585,7 +4779,8 @@ bool UOnlinePlayerInterfaceEOS::CanShareWithSocialNetwork(unsigned char LocalUse
 
 	if (!pFnCanShareWithSocialNetwork)
 	{
-		pFnCanShareWithSocialNetwork = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANSHAREWITHSOCIALNETWORK));
+		pFnCanShareWithSocialNetwork = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanShareWithSocialNetwork");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanShareWithSocialNetwork_Parms CanShareWithSocialNetwork_Parms;
@@ -4614,7 +4809,8 @@ bool UOnlinePlayerInterfaceEOS::CanShareKinectContent(unsigned char LocalUserNum
 
 	if (!pFnCanShareKinectContent)
 	{
-		pFnCanShareKinectContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANSHAREKINECTCONTENT));
+		pFnCanShareKinectContent = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanShareKinectContent");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanShareKinectContent_Parms CanShareKinectContent_Parms;
@@ -4643,7 +4839,8 @@ bool UOnlinePlayerInterfaceEOS::CanUploadFitnessData(unsigned char LocalUserNum,
 
 	if (!pFnCanUploadFitnessData)
 	{
-		pFnCanUploadFitnessData = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANUPLOADFITNESSDATA));
+		pFnCanUploadFitnessData = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanUploadFitnessData");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanUploadFitnessData_Parms CanUploadFitnessData_Parms;
@@ -4667,7 +4864,8 @@ void UOnlinePlayerInterfaceEOS::SetPrimaryPlayerGamepadToLastInput()
 
 	if (!pFnSetPrimaryPlayerGamepadToLastInput)
 	{
-		pFnSetPrimaryPlayerGamepadToLastInput = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETPRIMARYPLAYERGAMEPADTOLASTINPUT));
+		pFnSetPrimaryPlayerGamepadToLastInput = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetPrimaryPlayerGamepadToLastInput");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetPrimaryPlayerGamepadToLastInput_Parms SetPrimaryPlayerGamepadToLastInput_Parms;
@@ -4686,7 +4884,8 @@ void UOnlinePlayerInterfaceEOS::ClearUserSwitchCompleteDelegate(struct FScriptDe
 
 	if (!pFnClearUserSwitchCompleteDelegate)
 	{
-		pFnClearUserSwitchCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARUSERSWITCHCOMPLETEDELEGATE));
+		pFnClearUserSwitchCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearUserSwitchCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearUserSwitchCompleteDelegate_Parms ClearUserSwitchCompleteDelegate_Parms;
@@ -4706,7 +4905,8 @@ void UOnlinePlayerInterfaceEOS::AddUserSwitchCompleteDelegate(struct FScriptDele
 
 	if (!pFnAddUserSwitchCompleteDelegate)
 	{
-		pFnAddUserSwitchCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDUSERSWITCHCOMPLETEDELEGATE));
+		pFnAddUserSwitchCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddUserSwitchCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddUserSwitchCompleteDelegate_Parms AddUserSwitchCompleteDelegate_Parms;
@@ -4726,7 +4926,8 @@ void UOnlinePlayerInterfaceEOS::OnUserSwitchComplete(unsigned char LocalUserNum)
 
 	if (!pFnOnUserSwitchComplete)
 	{
-		pFnOnUserSwitchComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONUSERSWITCHCOMPLETE));
+		pFnOnUserSwitchComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnUserSwitchComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnUserSwitchComplete_Parms OnUserSwitchComplete_Parms;
@@ -4747,7 +4948,8 @@ void UOnlinePlayerInterfaceEOS::ClearLoginStatusChangeDelegate(struct FScriptDel
 
 	if (!pFnClearLoginStatusChangeDelegate)
 	{
-		pFnClearLoginStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARLOGINSTATUSCHANGEDELEGATE));
+		pFnClearLoginStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearLoginStatusChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearLoginStatusChangeDelegate_Parms ClearLoginStatusChangeDelegate_Parms;
@@ -4769,7 +4971,8 @@ void UOnlinePlayerInterfaceEOS::AddLoginStatusChangeDelegate(struct FScriptDeleg
 
 	if (!pFnAddLoginStatusChangeDelegate)
 	{
-		pFnAddLoginStatusChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDLOGINSTATUSCHANGEDELEGATE));
+		pFnAddLoginStatusChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginStatusChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddLoginStatusChangeDelegate_Parms AddLoginStatusChangeDelegate_Parms;
@@ -4791,7 +4994,8 @@ void UOnlinePlayerInterfaceEOS::OnLoginStatusChange(unsigned char NewStatus, str
 
 	if (!pFnOnLoginStatusChange)
 	{
-		pFnOnLoginStatusChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONLOGINSTATUSCHANGE));
+		pFnOnLoginStatusChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnLoginStatusChange");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnLoginStatusChange_Parms OnLoginStatusChange_Parms;
@@ -4813,7 +5017,8 @@ bool UOnlinePlayerInterfaceEOS::GetPlayHistoryRegistrationKey(TArray<unsigned ch
 
 	if (!pFnGetPlayHistoryRegistrationKey)
 	{
-		pFnGetPlayHistoryRegistrationKey = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETPLAYHISTORYREGISTRATIONKEY));
+		pFnGetPlayHistoryRegistrationKey = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetPlayHistoryRegistrationKey");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetPlayHistoryRegistrationKey_Parms GetPlayHistoryRegistrationKey_Parms;
@@ -4836,7 +5041,8 @@ bool UOnlinePlayerInterfaceEOS::CheckParentalControlInfo(unsigned long bShowUi)
 
 	if (!pFnCheckParentalControlInfo)
 	{
-		pFnCheckParentalControlInfo = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CHECKPARENTALCONTROLINFO));
+		pFnCheckParentalControlInfo = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CheckParentalControlInfo");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCheckParentalControlInfo_Parms CheckParentalControlInfo_Parms;
@@ -4858,7 +5064,8 @@ TArray<struct FName> UOnlinePlayerInterfaceEOS::GetActiveDiscDLC()
 
 	if (!pFnGetActiveDiscDLC)
 	{
-		pFnGetActiveDiscDLC = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETACTIVEDISCDLC));
+		pFnGetActiveDiscDLC = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetActiveDiscDLC");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetActiveDiscDLC_Parms GetActiveDiscDLC_Parms;
@@ -4879,7 +5086,8 @@ void UOnlinePlayerInterfaceEOS::SetOnlineSubscriptionRequirement(unsigned long b
 
 	if (!pFnSetOnlineSubscriptionRequirement)
 	{
-		pFnSetOnlineSubscriptionRequirement = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETONLINESUBSCRIPTIONREQUIREMENT));
+		pFnSetOnlineSubscriptionRequirement = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetOnlineSubscriptionRequirement");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetOnlineSubscriptionRequirement_Parms SetOnlineSubscriptionRequirement_Parms;
@@ -4900,7 +5108,8 @@ int UOnlinePlayerInterfaceEOS::GetControllerID(int LocalPlayerNum)
 
 	if (!pFnGetControllerID)
 	{
-		pFnGetControllerID = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETCONTROLLERID));
+		pFnGetControllerID = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetControllerID");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetControllerID_Parms GetControllerID_Parms;
@@ -4922,7 +5131,8 @@ TArray<struct FName> UOnlinePlayerInterfaceEOS::GetConnectedControllerNames()
 
 	if (!pFnGetConnectedControllerNames)
 	{
-		pFnGetConnectedControllerNames = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETCONNECTEDCONTROLLERNAMES));
+		pFnGetConnectedControllerNames = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetConnectedControllerNames");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetConnectedControllerNames_Parms GetConnectedControllerNames_Parms;
@@ -4943,7 +5153,8 @@ void UOnlinePlayerInterfaceEOS::OnLocalPlayerRemoved(int LocalPlayerNum)
 
 	if (!pFnOnLocalPlayerRemoved)
 	{
-		pFnOnLocalPlayerRemoved = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONLOCALPLAYERREMOVED));
+		pFnOnLocalPlayerRemoved = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnLocalPlayerRemoved");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnLocalPlayerRemoved_Parms OnLocalPlayerRemoved_Parms;
@@ -4963,7 +5174,8 @@ void UOnlinePlayerInterfaceEOS::UnregisterController(int LocalPlayerNum)
 
 	if (!pFnUnregisterController)
 	{
-		pFnUnregisterController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_UNREGISTERCONTROLLER));
+		pFnUnregisterController = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.UnregisterController");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execUnregisterController_Parms UnregisterController_Parms;
@@ -4984,7 +5196,8 @@ void UOnlinePlayerInterfaceEOS::RegisterController(int LocalPlayerNum, int Contr
 
 	if (!pFnRegisterController)
 	{
-		pFnRegisterController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_REGISTERCONTROLLER));
+		pFnRegisterController = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RegisterController");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRegisterController_Parms RegisterController_Parms;
@@ -5006,7 +5219,8 @@ bool UOnlinePlayerInterfaceEOS::CanRegisterController(int LocalPlayerNum)
 
 	if (!pFnCanRegisterController)
 	{
-		pFnCanRegisterController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANREGISTERCONTROLLER));
+		pFnCanRegisterController = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanRegisterController");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanRegisterController_Parms CanRegisterController_Parms;
@@ -5029,7 +5243,8 @@ bool UOnlinePlayerInterfaceEOS::ShowBindings(int ControllerId)
 
 	if (!pFnShowBindings)
 	{
-		pFnShowBindings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWBINDINGS));
+		pFnShowBindings = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowBindings");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowBindings_Parms ShowBindings_Parms;
@@ -5052,7 +5267,8 @@ void UOnlinePlayerInterfaceEOS::SetControllerLayout(int ControllerId, struct FNa
 
 	if (!pFnSetControllerLayout)
 	{
-		pFnSetControllerLayout = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETCONTROLLERLAYOUT));
+		pFnSetControllerLayout = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetControllerLayout");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetControllerLayout_Parms SetControllerLayout_Parms;
@@ -5073,7 +5289,8 @@ void UOnlinePlayerInterfaceEOS::SetInputAPI(unsigned char TargetAPI)
 
 	if (!pFnSetInputAPI)
 	{
-		pFnSetInputAPI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETINPUTAPI));
+		pFnSetInputAPI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetInputAPI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetInputAPI_Parms SetInputAPI_Parms;
@@ -5093,7 +5310,8 @@ void UOnlinePlayerInterfaceEOS::ClearInputAPIChangedDelegate(struct FScriptDeleg
 
 	if (!pFnClearInputAPIChangedDelegate)
 	{
-		pFnClearInputAPIChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARINPUTAPICHANGEDDELEGATE));
+		pFnClearInputAPIChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearInputAPIChangedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearInputAPIChangedDelegate_Parms ClearInputAPIChangedDelegate_Parms;
@@ -5113,7 +5331,8 @@ void UOnlinePlayerInterfaceEOS::AddInputAPIChangedDelegate(struct FScriptDelegat
 
 	if (!pFnAddInputAPIChangedDelegate)
 	{
-		pFnAddInputAPIChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDINPUTAPICHANGEDDELEGATE));
+		pFnAddInputAPIChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddInputAPIChangedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddInputAPIChangedDelegate_Parms AddInputAPIChangedDelegate_Parms;
@@ -5133,7 +5352,8 @@ void UOnlinePlayerInterfaceEOS::OnInputAPIChanged(unsigned char TargetAPI)
 
 	if (!pFnOnInputAPIChanged)
 	{
-		pFnOnInputAPIChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONINPUTAPICHANGED));
+		pFnOnInputAPIChanged = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnInputAPIChanged");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnInputAPIChanged_Parms OnInputAPIChanged_Parms;
@@ -5153,7 +5373,8 @@ void UOnlinePlayerInterfaceEOS::ClearUnregisteredControllerDelegate(struct FScri
 
 	if (!pFnClearUnregisteredControllerDelegate)
 	{
-		pFnClearUnregisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARUNREGISTEREDCONTROLLERDELEGATE));
+		pFnClearUnregisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearUnregisteredControllerDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearUnregisteredControllerDelegate_Parms ClearUnregisteredControllerDelegate_Parms;
@@ -5173,7 +5394,8 @@ void UOnlinePlayerInterfaceEOS::ClearRegisteredControllerDelegate(struct FScript
 
 	if (!pFnClearRegisteredControllerDelegate)
 	{
-		pFnClearRegisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREGISTEREDCONTROLLERDELEGATE));
+		pFnClearRegisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearRegisteredControllerDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearRegisteredControllerDelegate_Parms ClearRegisteredControllerDelegate_Parms;
@@ -5193,7 +5415,8 @@ void UOnlinePlayerInterfaceEOS::AddUnregisteredControllerDelegate(struct FScript
 
 	if (!pFnAddUnregisteredControllerDelegate)
 	{
-		pFnAddUnregisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDUNREGISTEREDCONTROLLERDELEGATE));
+		pFnAddUnregisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddUnregisteredControllerDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddUnregisteredControllerDelegate_Parms AddUnregisteredControllerDelegate_Parms;
@@ -5213,7 +5436,8 @@ void UOnlinePlayerInterfaceEOS::AddRegisteredControllerDelegate(struct FScriptDe
 
 	if (!pFnAddRegisteredControllerDelegate)
 	{
-		pFnAddRegisteredControllerDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREGISTEREDCONTROLLERDELEGATE));
+		pFnAddRegisteredControllerDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddRegisteredControllerDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddRegisteredControllerDelegate_Parms AddRegisteredControllerDelegate_Parms;
@@ -5233,7 +5457,8 @@ void UOnlinePlayerInterfaceEOS::OnUnregisteredController(int LocalPlayerNum)
 
 	if (!pFnOnUnregisteredController)
 	{
-		pFnOnUnregisteredController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONUNREGISTEREDCONTROLLER));
+		pFnOnUnregisteredController = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnUnregisteredController");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnUnregisteredController_Parms OnUnregisteredController_Parms;
@@ -5254,7 +5479,8 @@ void UOnlinePlayerInterfaceEOS::OnRegisteredController(int LocalPlayerNum, int C
 
 	if (!pFnOnRegisteredController)
 	{
-		pFnOnRegisteredController = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREGISTEREDCONTROLLER));
+		pFnOnRegisteredController = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnRegisteredController");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnRegisteredController_Parms OnRegisteredController_Parms;
@@ -5278,7 +5504,8 @@ bool UOnlinePlayerInterfaceEOS::AddInGamePost(struct FString InPostID, unsigned 
 
 	if (!pFnAddInGamePost)
 	{
-		pFnAddInGamePost = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDINGAMEPOST));
+		pFnAddInGamePost = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddInGamePost");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddInGamePost_Parms AddInGamePost_Parms;
@@ -5305,7 +5532,8 @@ bool UOnlinePlayerInterfaceEOS::UpdateStat(unsigned char LocalUserNum, struct FN
 
 	if (!pFnUpdateStat)
 	{
-		pFnUpdateStat = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_UPDATESTAT));
+		pFnUpdateStat = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.UpdateStat");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execUpdateStat_Parms UpdateStat_Parms;
@@ -5329,7 +5557,8 @@ void UOnlinePlayerInterfaceEOS::ClearSaveDataNoSpaceDialogCompleteDelegate(struc
 
 	if (!pFnClearSaveDataNoSpaceDialogCompleteDelegate)
 	{
-		pFnClearSaveDataNoSpaceDialogCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARSAVEDATANOSPACEDIALOGCOMPLETEDELEGATE));
+		pFnClearSaveDataNoSpaceDialogCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearSaveDataNoSpaceDialogCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearSaveDataNoSpaceDialogCompleteDelegate_Parms ClearSaveDataNoSpaceDialogCompleteDelegate_Parms;
@@ -5349,7 +5578,8 @@ void UOnlinePlayerInterfaceEOS::AddSaveDataNoSpaceDialogCompleteDelegate(struct 
 
 	if (!pFnAddSaveDataNoSpaceDialogCompleteDelegate)
 	{
-		pFnAddSaveDataNoSpaceDialogCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDSAVEDATANOSPACEDIALOGCOMPLETEDELEGATE));
+		pFnAddSaveDataNoSpaceDialogCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddSaveDataNoSpaceDialogCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddSaveDataNoSpaceDialogCompleteDelegate_Parms AddSaveDataNoSpaceDialogCompleteDelegate_Parms;
@@ -5369,7 +5599,8 @@ void UOnlinePlayerInterfaceEOS::OnSaveDataNoSpaceDialogComplete(unsigned long bC
 
 	if (!pFnOnSaveDataNoSpaceDialogComplete)
 	{
-		pFnOnSaveDataNoSpaceDialogComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONSAVEDATANOSPACEDIALOGCOMPLETE));
+		pFnOnSaveDataNoSpaceDialogComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnSaveDataNoSpaceDialogComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnSaveDataNoSpaceDialogComplete_Parms OnSaveDataNoSpaceDialogComplete_Parms;
@@ -5391,7 +5622,8 @@ bool UOnlinePlayerInterfaceEOS::RecordPlayersRecentlyMetKeys(unsigned char Local
 
 	if (!pFnRecordPlayersRecentlyMetKeys)
 	{
-		pFnRecordPlayersRecentlyMetKeys = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_RECORDPLAYERSRECENTLYMETKEYS));
+		pFnRecordPlayersRecentlyMetKeys = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RecordPlayersRecentlyMetKeys");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRecordPlayersRecentlyMetKeys_Parms RecordPlayersRecentlyMetKeys_Parms;
@@ -5415,7 +5647,8 @@ bool UOnlinePlayerInterfaceEOS::IsAchievementUnlocked(int AchievementId)
 
 	if (!pFnIsAchievementUnlocked)
 	{
-		pFnIsAchievementUnlocked = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ISACHIEVEMENTUNLOCKED));
+		pFnIsAchievementUnlocked = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.IsAchievementUnlocked");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execIsAchievementUnlocked_Parms IsAchievementUnlocked_Parms;
@@ -5438,7 +5671,8 @@ bool UOnlinePlayerInterfaceEOS::ShowContentMarketplaceUI(unsigned char LocalUser
 
 	if (!pFnShowContentMarketplaceUI)
 	{
-		pFnShowContentMarketplaceUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWCONTENTMARKETPLACEUI));
+		pFnShowContentMarketplaceUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowContentMarketplaceUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowContentMarketplaceUI_Parms ShowContentMarketplaceUI_Parms;
@@ -5462,7 +5696,8 @@ bool UOnlinePlayerInterfaceEOS::ShowFriendsInviteUI(unsigned char LocalUserNum, 
 
 	if (!pFnShowFriendsInviteUI)
 	{
-		pFnShowFriendsInviteUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWFRIENDSINVITEUI));
+		pFnShowFriendsInviteUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowFriendsInviteUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowFriendsInviteUI_Parms ShowFriendsInviteUI_Parms;
@@ -5486,7 +5721,8 @@ bool UOnlinePlayerInterfaceEOS::ShowAchievementsUI(unsigned char LocalUserNum)
 
 	if (!pFnShowAchievementsUI)
 	{
-		pFnShowAchievementsUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWACHIEVEMENTSUI));
+		pFnShowAchievementsUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowAchievementsUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowAchievementsUI_Parms ShowAchievementsUI_Parms;
@@ -5509,7 +5745,8 @@ bool UOnlinePlayerInterfaceEOS::ShowMessagesUI(unsigned char LocalUserNum)
 
 	if (!pFnShowMessagesUI)
 	{
-		pFnShowMessagesUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWMESSAGESUI));
+		pFnShowMessagesUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowMessagesUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowMessagesUI_Parms ShowMessagesUI_Parms;
@@ -5533,7 +5770,8 @@ bool UOnlinePlayerInterfaceEOS::ShowFeedbackUI(unsigned char LocalUserNum, struc
 
 	if (!pFnShowFeedbackUI)
 	{
-		pFnShowFeedbackUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWFEEDBACKUI));
+		pFnShowFeedbackUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowFeedbackUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowFeedbackUI_Parms ShowFeedbackUI_Parms;
@@ -5556,7 +5794,8 @@ void UOnlinePlayerInterfaceEOS::RemoveCanPlayOnlineChangedDelegate(struct FScrip
 
 	if (!pFnRemoveCanPlayOnlineChangedDelegate)
 	{
-		pFnRemoveCanPlayOnlineChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_REMOVECANPLAYONLINECHANGEDDELEGATE));
+		pFnRemoveCanPlayOnlineChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RemoveCanPlayOnlineChangedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRemoveCanPlayOnlineChangedDelegate_Parms RemoveCanPlayOnlineChangedDelegate_Parms;
@@ -5576,7 +5815,8 @@ void UOnlinePlayerInterfaceEOS::AddCanPlayOnlineChangedDelegate(struct FScriptDe
 
 	if (!pFnAddCanPlayOnlineChangedDelegate)
 	{
-		pFnAddCanPlayOnlineChangedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDCANPLAYONLINECHANGEDDELEGATE));
+		pFnAddCanPlayOnlineChangedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddCanPlayOnlineChangedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddCanPlayOnlineChangedDelegate_Parms AddCanPlayOnlineChangedDelegate_Parms;
@@ -5596,7 +5836,8 @@ void UOnlinePlayerInterfaceEOS::CanPlayOnlineChanged(unsigned char LocalUserNum)
 
 	if (!pFnCanPlayOnlineChanged)
 	{
-		pFnCanPlayOnlineChanged = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANPLAYONLINECHANGED));
+		pFnCanPlayOnlineChanged = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanPlayOnlineChanged");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanPlayOnlineChanged_Parms CanPlayOnlineChanged_Parms;
@@ -5616,7 +5857,8 @@ void UOnlinePlayerInterfaceEOS::ClearUserSignInCompleteDelegate(struct FScriptDe
 
 	if (!pFnClearUserSignInCompleteDelegate)
 	{
-		pFnClearUserSignInCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARUSERSIGNINCOMPLETEDELEGATE));
+		pFnClearUserSignInCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearUserSignInCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearUserSignInCompleteDelegate_Parms ClearUserSignInCompleteDelegate_Parms;
@@ -5636,7 +5878,8 @@ void UOnlinePlayerInterfaceEOS::AddUserSignInCompleteDelegate(struct FScriptDele
 
 	if (!pFnAddUserSignInCompleteDelegate)
 	{
-		pFnAddUserSignInCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDUSERSIGNINCOMPLETEDELEGATE));
+		pFnAddUserSignInCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddUserSignInCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddUserSignInCompleteDelegate_Parms AddUserSignInCompleteDelegate_Parms;
@@ -5656,7 +5899,8 @@ void UOnlinePlayerInterfaceEOS::OnUserSignInComplete(unsigned char LocalUserNum)
 
 	if (!pFnOnUserSignInComplete)
 	{
-		pFnOnUserSignInComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONUSERSIGNINCOMPLETE));
+		pFnOnUserSignInComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnUserSignInComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnUserSignInComplete_Parms OnUserSignInComplete_Parms;
@@ -5681,7 +5925,8 @@ bool UOnlinePlayerInterfaceEOS::ShowCustomMessageUI(unsigned char LocalUserNum, 
 
 	if (!pFnShowCustomMessageUI)
 	{
-		pFnShowCustomMessageUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWCUSTOMMESSAGEUI));
+		pFnShowCustomMessageUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowCustomMessageUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowCustomMessageUI_Parms ShowCustomMessageUI_Parms;
@@ -5708,7 +5953,8 @@ void UOnlinePlayerInterfaceEOS::ClearCrossTitleProfileSettings(unsigned char Loc
 
 	if (!pFnClearCrossTitleProfileSettings)
 	{
-		pFnClearCrossTitleProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARCROSSTITLEPROFILESETTINGS));
+		pFnClearCrossTitleProfileSettings = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearCrossTitleProfileSettings");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearCrossTitleProfileSettings_Parms ClearCrossTitleProfileSettings_Parms;
@@ -5731,7 +5977,8 @@ class UOnlineProfileSettings* UOnlinePlayerInterfaceEOS::GetCrossTitleProfileSet
 
 	if (!pFnGetCrossTitleProfileSettings)
 	{
-		pFnGetCrossTitleProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETCROSSTITLEPROFILESETTINGS));
+		pFnGetCrossTitleProfileSettings = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetCrossTitleProfileSettings");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetCrossTitleProfileSettings_Parms GetCrossTitleProfileSettings_Parms;
@@ -5755,7 +6002,8 @@ void UOnlinePlayerInterfaceEOS::ClearReadCrossTitleProfileSettingsCompleteDelega
 
 	if (!pFnClearReadCrossTitleProfileSettingsCompleteDelegate)
 	{
-		pFnClearReadCrossTitleProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREADCROSSTITLEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnClearReadCrossTitleProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReadCrossTitleProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReadCrossTitleProfileSettingsCompleteDelegate_Parms ClearReadCrossTitleProfileSettingsCompleteDelegate_Parms;
@@ -5777,7 +6025,8 @@ void UOnlinePlayerInterfaceEOS::AddReadCrossTitleProfileSettingsCompleteDelegate
 
 	if (!pFnAddReadCrossTitleProfileSettingsCompleteDelegate)
 	{
-		pFnAddReadCrossTitleProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREADCROSSTITLEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnAddReadCrossTitleProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadCrossTitleProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReadCrossTitleProfileSettingsCompleteDelegate_Parms AddReadCrossTitleProfileSettingsCompleteDelegate_Parms;
@@ -5800,7 +6049,8 @@ void UOnlinePlayerInterfaceEOS::OnReadCrossTitleProfileSettingsComplete(unsigned
 
 	if (!pFnOnReadCrossTitleProfileSettingsComplete)
 	{
-		pFnOnReadCrossTitleProfileSettingsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREADCROSSTITLEPROFILESETTINGSCOMPLETE));
+		pFnOnReadCrossTitleProfileSettingsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReadCrossTitleProfileSettingsComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReadCrossTitleProfileSettingsComplete_Parms OnReadCrossTitleProfileSettingsComplete_Parms;
@@ -5825,7 +6075,8 @@ bool UOnlinePlayerInterfaceEOS::ReadCrossTitleProfileSettings(unsigned char Loca
 
 	if (!pFnReadCrossTitleProfileSettings)
 	{
-		pFnReadCrossTitleProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_READCROSSTITLEPROFILESETTINGS));
+		pFnReadCrossTitleProfileSettings = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadCrossTitleProfileSettings");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execReadCrossTitleProfileSettings_Parms ReadCrossTitleProfileSettings_Parms;
@@ -5850,7 +6101,8 @@ void UOnlinePlayerInterfaceEOS::ClearWritePlayerStorageCompleteDelegate(unsigned
 
 	if (!pFnClearWritePlayerStorageCompleteDelegate)
 	{
-		pFnClearWritePlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARWRITEPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnClearWritePlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearWritePlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearWritePlayerStorageCompleteDelegate_Parms ClearWritePlayerStorageCompleteDelegate_Parms;
@@ -5872,7 +6124,8 @@ void UOnlinePlayerInterfaceEOS::AddWritePlayerStorageCompleteDelegate(unsigned c
 
 	if (!pFnAddWritePlayerStorageCompleteDelegate)
 	{
-		pFnAddWritePlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDWRITEPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnAddWritePlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddWritePlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddWritePlayerStorageCompleteDelegate_Parms AddWritePlayerStorageCompleteDelegate_Parms;
@@ -5894,7 +6147,8 @@ void UOnlinePlayerInterfaceEOS::OnWritePlayerStorageComplete(unsigned char Local
 
 	if (!pFnOnWritePlayerStorageComplete)
 	{
-		pFnOnWritePlayerStorageComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONWRITEPLAYERSTORAGECOMPLETE));
+		pFnOnWritePlayerStorageComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnWritePlayerStorageComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnWritePlayerStorageComplete_Parms OnWritePlayerStorageComplete_Parms;
@@ -5918,7 +6172,8 @@ bool UOnlinePlayerInterfaceEOS::WritePlayerStorage(unsigned char LocalUserNum, c
 
 	if (!pFnWritePlayerStorage)
 	{
-		pFnWritePlayerStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_WRITEPLAYERSTORAGE));
+		pFnWritePlayerStorage = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.WritePlayerStorage");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execWritePlayerStorage_Parms WritePlayerStorage_Parms;
@@ -5943,7 +6198,8 @@ void UOnlinePlayerInterfaceEOS::ClearReadPlayerStorageForNetIdCompleteDelegate(s
 
 	if (!pFnClearReadPlayerStorageForNetIdCompleteDelegate)
 	{
-		pFnClearReadPlayerStorageForNetIdCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREADPLAYERSTORAGEFORNETIDCOMPLETEDELEGATE));
+		pFnClearReadPlayerStorageForNetIdCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReadPlayerStorageForNetIdCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReadPlayerStorageForNetIdCompleteDelegate_Parms ClearReadPlayerStorageForNetIdCompleteDelegate_Parms;
@@ -5965,7 +6221,8 @@ void UOnlinePlayerInterfaceEOS::AddReadPlayerStorageForNetIdCompleteDelegate(str
 
 	if (!pFnAddReadPlayerStorageForNetIdCompleteDelegate)
 	{
-		pFnAddReadPlayerStorageForNetIdCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREADPLAYERSTORAGEFORNETIDCOMPLETEDELEGATE));
+		pFnAddReadPlayerStorageForNetIdCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadPlayerStorageForNetIdCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReadPlayerStorageForNetIdCompleteDelegate_Parms AddReadPlayerStorageForNetIdCompleteDelegate_Parms;
@@ -5987,7 +6244,8 @@ void UOnlinePlayerInterfaceEOS::OnReadPlayerStorageForNetIdComplete(struct FUniq
 
 	if (!pFnOnReadPlayerStorageForNetIdComplete)
 	{
-		pFnOnReadPlayerStorageForNetIdComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREADPLAYERSTORAGEFORNETIDCOMPLETE));
+		pFnOnReadPlayerStorageForNetIdComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReadPlayerStorageForNetIdComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReadPlayerStorageForNetIdComplete_Parms OnReadPlayerStorageForNetIdComplete_Parms;
@@ -6011,7 +6269,8 @@ bool UOnlinePlayerInterfaceEOS::ReadPlayerStorageForNetId(unsigned char LocalUse
 
 	if (!pFnReadPlayerStorageForNetId)
 	{
-		pFnReadPlayerStorageForNetId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_READPLAYERSTORAGEFORNETID));
+		pFnReadPlayerStorageForNetId = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadPlayerStorageForNetId");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execReadPlayerStorageForNetId_Parms ReadPlayerStorageForNetId_Parms;
@@ -6036,7 +6295,8 @@ void UOnlinePlayerInterfaceEOS::ClearReadPlayerStorageCompleteDelegate(unsigned 
 
 	if (!pFnClearReadPlayerStorageCompleteDelegate)
 	{
-		pFnClearReadPlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREADPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnClearReadPlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReadPlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReadPlayerStorageCompleteDelegate_Parms ClearReadPlayerStorageCompleteDelegate_Parms;
@@ -6058,7 +6318,8 @@ void UOnlinePlayerInterfaceEOS::AddReadPlayerStorageCompleteDelegate(unsigned ch
 
 	if (!pFnAddReadPlayerStorageCompleteDelegate)
 	{
-		pFnAddReadPlayerStorageCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREADPLAYERSTORAGECOMPLETEDELEGATE));
+		pFnAddReadPlayerStorageCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadPlayerStorageCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReadPlayerStorageCompleteDelegate_Parms AddReadPlayerStorageCompleteDelegate_Parms;
@@ -6080,7 +6341,8 @@ void UOnlinePlayerInterfaceEOS::OnReadPlayerStorageComplete(unsigned char LocalU
 
 	if (!pFnOnReadPlayerStorageComplete)
 	{
-		pFnOnReadPlayerStorageComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREADPLAYERSTORAGECOMPLETE));
+		pFnOnReadPlayerStorageComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReadPlayerStorageComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReadPlayerStorageComplete_Parms OnReadPlayerStorageComplete_Parms;
@@ -6104,7 +6366,8 @@ bool UOnlinePlayerInterfaceEOS::ReadPlayerStorage(unsigned char LocalUserNum, cl
 
 	if (!pFnReadPlayerStorage)
 	{
-		pFnReadPlayerStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_READPLAYERSTORAGE));
+		pFnReadPlayerStorage = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadPlayerStorage");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execReadPlayerStorage_Parms ReadPlayerStorage_Parms;
@@ -6129,7 +6392,8 @@ class UOnlinePlayerStorage* UOnlinePlayerInterfaceEOS::GetPlayerStorage(unsigned
 
 	if (!pFnGetPlayerStorage)
 	{
-		pFnGetPlayerStorage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETPLAYERSTORAGE));
+		pFnGetPlayerStorage = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetPlayerStorage");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetPlayerStorage_Parms GetPlayerStorage_Parms;
@@ -6152,7 +6416,8 @@ void UOnlinePlayerInterfaceEOS::RequestNativePlatformAuthTicket(int LocalUserNum
 
 	if (!pFnRequestNativePlatformAuthTicket)
 	{
-		pFnRequestNativePlatformAuthTicket = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_REQUESTNATIVEPLATFORMAUTHTICKET));
+		pFnRequestNativePlatformAuthTicket = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RequestNativePlatformAuthTicket");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRequestNativePlatformAuthTicket_Parms RequestNativePlatformAuthTicket_Parms;
@@ -6174,7 +6439,8 @@ void UOnlinePlayerInterfaceEOS::OnRequestNativePlatformAuthTicketComplete(int Lo
 
 	if (!pFnOnRequestNativePlatformAuthTicketComplete)
 	{
-		pFnOnRequestNativePlatformAuthTicketComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREQUESTNATIVEPLATFORMAUTHTICKETCOMPLETE));
+		pFnOnRequestNativePlatformAuthTicketComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnRequestNativePlatformAuthTicketComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnRequestNativePlatformAuthTicketComplete_Parms OnRequestNativePlatformAuthTicketComplete_Parms;
@@ -6195,7 +6461,8 @@ void UOnlinePlayerInterfaceEOS::eventLinkedAccount(int LocalUserNum)
 
 	if (!pFnLinkedAccount)
 	{
-		pFnLinkedAccount = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_LINKEDACCOUNT));
+		pFnLinkedAccount = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.LinkedAccount");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_eventLinkedAccount_Parms LinkedAccount_Parms;
@@ -6215,7 +6482,8 @@ void UOnlinePlayerInterfaceEOS::RefreshConnectLogin(int LocalUserNum)
 
 	if (!pFnRefreshConnectLogin)
 	{
-		pFnRefreshConnectLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_REFRESHCONNECTLOGIN));
+		pFnRefreshConnectLogin = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RefreshConnectLogin");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRefreshConnectLogin_Parms RefreshConnectLogin_Parms;
@@ -6239,7 +6507,8 @@ void UOnlinePlayerInterfaceEOS::ConnectLogin(int LocalUserNum)
 
 	if (!pFnConnectLogin)
 	{
-		pFnConnectLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CONNECTLOGIN));
+		pFnConnectLogin = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ConnectLogin");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execConnectLogin_Parms ConnectLogin_Parms;
@@ -6265,7 +6534,8 @@ bool UOnlinePlayerInterfaceEOS::HasIncomingFriendInvite(unsigned char LocalUserN
 
 	if (!pFnHasIncomingFriendInvite)
 	{
-		pFnHasIncomingFriendInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_HASINCOMINGFRIENDINVITE));
+		pFnHasIncomingFriendInvite = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.HasIncomingFriendInvite");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execHasIncomingFriendInvite_Parms HasIncomingFriendInvite_Parms;
@@ -6292,7 +6562,8 @@ bool UOnlinePlayerInterfaceEOS::SupportInGameLogin()
 
 	if (!pFnSupportInGameLogin)
 	{
-		pFnSupportInGameLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SUPPORTINGAMELOGIN));
+		pFnSupportInGameLogin = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SupportInGameLogin");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSupportInGameLogin_Parms SupportInGameLogin_Parms;
@@ -6313,7 +6584,8 @@ bool UOnlinePlayerInterfaceEOS::HasFriendsFunctionality()
 
 	if (!pFnHasFriendsFunctionality)
 	{
-		pFnHasFriendsFunctionality = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_HASFRIENDSFUNCTIONALITY));
+		pFnHasFriendsFunctionality = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.HasFriendsFunctionality");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execHasFriendsFunctionality_Parms HasFriendsFunctionality_Parms;
@@ -6336,7 +6608,8 @@ bool UOnlinePlayerInterfaceEOS::DeleteMessage(unsigned char LocalUserNum, int Me
 
 	if (!pFnDeleteMessage)
 	{
-		pFnDeleteMessage = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_DELETEMESSAGE));
+		pFnDeleteMessage = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.DeleteMessage");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execDeleteMessage_Parms DeleteMessage_Parms;
@@ -6360,7 +6633,8 @@ void UOnlinePlayerInterfaceEOS::ClearFriendMessageReceivedDelegate(unsigned char
 
 	if (!pFnClearFriendMessageReceivedDelegate)
 	{
-		pFnClearFriendMessageReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARFRIENDMESSAGERECEIVEDDELEGATE));
+		pFnClearFriendMessageReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearFriendMessageReceivedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearFriendMessageReceivedDelegate_Parms ClearFriendMessageReceivedDelegate_Parms;
@@ -6382,7 +6656,8 @@ void UOnlinePlayerInterfaceEOS::AddFriendMessageReceivedDelegate(unsigned char L
 
 	if (!pFnAddFriendMessageReceivedDelegate)
 	{
-		pFnAddFriendMessageReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDFRIENDMESSAGERECEIVEDDELEGATE));
+		pFnAddFriendMessageReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendMessageReceivedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddFriendMessageReceivedDelegate_Parms AddFriendMessageReceivedDelegate_Parms;
@@ -6406,7 +6681,8 @@ void UOnlinePlayerInterfaceEOS::OnFriendMessageReceived(unsigned char LocalUserN
 
 	if (!pFnOnFriendMessageReceived)
 	{
-		pFnOnFriendMessageReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONFRIENDMESSAGERECEIVED));
+		pFnOnFriendMessageReceived = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnFriendMessageReceived");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnFriendMessageReceived_Parms OnFriendMessageReceived_Parms;
@@ -6430,7 +6706,8 @@ void UOnlinePlayerInterfaceEOS::GetFriendMessages(unsigned char LocalUserNum, TA
 
 	if (!pFnGetFriendMessages)
 	{
-		pFnGetFriendMessages = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETFRIENDMESSAGES));
+		pFnGetFriendMessages = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetFriendMessages");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetFriendMessages_Parms GetFriendMessages_Parms;
@@ -6451,7 +6728,8 @@ void UOnlinePlayerInterfaceEOS::ClearJoinFriendGameCompleteDelegate(struct FScri
 
 	if (!pFnClearJoinFriendGameCompleteDelegate)
 	{
-		pFnClearJoinFriendGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARJOINFRIENDGAMECOMPLETEDELEGATE));
+		pFnClearJoinFriendGameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearJoinFriendGameCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearJoinFriendGameCompleteDelegate_Parms ClearJoinFriendGameCompleteDelegate_Parms;
@@ -6471,7 +6749,8 @@ void UOnlinePlayerInterfaceEOS::AddJoinFriendGameCompleteDelegate(struct FScript
 
 	if (!pFnAddJoinFriendGameCompleteDelegate)
 	{
-		pFnAddJoinFriendGameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDJOINFRIENDGAMECOMPLETEDELEGATE));
+		pFnAddJoinFriendGameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddJoinFriendGameCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddJoinFriendGameCompleteDelegate_Parms AddJoinFriendGameCompleteDelegate_Parms;
@@ -6491,7 +6770,8 @@ void UOnlinePlayerInterfaceEOS::OnJoinFriendGameComplete(unsigned long bWasSucce
 
 	if (!pFnOnJoinFriendGameComplete)
 	{
-		pFnOnJoinFriendGameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONJOINFRIENDGAMECOMPLETE));
+		pFnOnJoinFriendGameComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnJoinFriendGameComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnJoinFriendGameComplete_Parms OnJoinFriendGameComplete_Parms;
@@ -6513,7 +6793,8 @@ bool UOnlinePlayerInterfaceEOS::JoinFriendGame(unsigned char LocalUserNum, struc
 
 	if (!pFnJoinFriendGame)
 	{
-		pFnJoinFriendGame = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_JOINFRIENDGAME));
+		pFnJoinFriendGame = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.JoinFriendGame");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execJoinFriendGame_Parms JoinFriendGame_Parms;
@@ -6537,7 +6818,8 @@ void UOnlinePlayerInterfaceEOS::ClearReceivedGameInviteDelegate(unsigned char Lo
 
 	if (!pFnClearReceivedGameInviteDelegate)
 	{
-		pFnClearReceivedGameInviteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARRECEIVEDGAMEINVITEDELEGATE));
+		pFnClearReceivedGameInviteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReceivedGameInviteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReceivedGameInviteDelegate_Parms ClearReceivedGameInviteDelegate_Parms;
@@ -6559,7 +6841,8 @@ void UOnlinePlayerInterfaceEOS::AddReceivedGameInviteDelegate(unsigned char Loca
 
 	if (!pFnAddReceivedGameInviteDelegate)
 	{
-		pFnAddReceivedGameInviteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDRECEIVEDGAMEINVITEDELEGATE));
+		pFnAddReceivedGameInviteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReceivedGameInviteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReceivedGameInviteDelegate_Parms AddReceivedGameInviteDelegate_Parms;
@@ -6581,7 +6864,8 @@ void UOnlinePlayerInterfaceEOS::OnReceivedGameInvite(unsigned char LocalUserNum,
 
 	if (!pFnOnReceivedGameInvite)
 	{
-		pFnOnReceivedGameInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONRECEIVEDGAMEINVITE));
+		pFnOnReceivedGameInvite = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReceivedGameInvite");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReceivedGameInvite_Parms OnReceivedGameInvite_Parms;
@@ -6605,7 +6889,8 @@ bool UOnlinePlayerInterfaceEOS::SendGameInviteToFriends(unsigned char LocalUserN
 
 	if (!pFnSendGameInviteToFriends)
 	{
-		pFnSendGameInviteToFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SENDGAMEINVITETOFRIENDS));
+		pFnSendGameInviteToFriends = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SendGameInviteToFriends");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSendGameInviteToFriends_Parms SendGameInviteToFriends_Parms;
@@ -6632,7 +6917,8 @@ bool UOnlinePlayerInterfaceEOS::SendGameInviteToFriend(unsigned char LocalUserNu
 
 	if (!pFnSendGameInviteToFriend)
 	{
-		pFnSendGameInviteToFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SENDGAMEINVITETOFRIEND));
+		pFnSendGameInviteToFriend = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SendGameInviteToFriend");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSendGameInviteToFriend_Parms SendGameInviteToFriend_Parms;
@@ -6659,7 +6945,8 @@ bool UOnlinePlayerInterfaceEOS::SendMessageToFriend(unsigned char LocalUserNum, 
 
 	if (!pFnSendMessageToFriend)
 	{
-		pFnSendMessageToFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SENDMESSAGETOFRIEND));
+		pFnSendMessageToFriend = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SendMessageToFriend");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSendMessageToFriend_Parms SendMessageToFriend_Parms;
@@ -6684,7 +6971,8 @@ void UOnlinePlayerInterfaceEOS::ClearFriendInviteCanceledDelegate(unsigned char 
 
 	if (!pFnClearFriendInviteCanceledDelegate)
 	{
-		pFnClearFriendInviteCanceledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARFRIENDINVITECANCELEDDELEGATE));
+		pFnClearFriendInviteCanceledDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearFriendInviteCanceledDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearFriendInviteCanceledDelegate_Parms ClearFriendInviteCanceledDelegate_Parms;
@@ -6695,7 +6983,7 @@ void UOnlinePlayerInterfaceEOS::ClearFriendInviteCanceledDelegate(unsigned char 
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendInviteCanceledDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         InviteDelegate                 (CPF_Parm | CPF_NeedCtorLink)
@@ -6706,7 +6994,8 @@ void UOnlinePlayerInterfaceEOS::AddFriendInviteCanceledDelegate(unsigned char Lo
 
 	if (!pFnAddFriendInviteCanceledDelegate)
 	{
-		pFnAddFriendInviteCanceledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDFRIENDINVITECANCELEDDELEGATE));
+		pFnAddFriendInviteCanceledDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendInviteCanceledDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddFriendInviteCanceledDelegate_Parms AddFriendInviteCanceledDelegate_Parms;
@@ -6728,7 +7017,8 @@ void UOnlinePlayerInterfaceEOS::OnFriendInviteCanceled(unsigned char LocalUserNu
 
 	if (!pFnOnFriendInviteCanceled)
 	{
-		pFnOnFriendInviteCanceled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONFRIENDINVITECANCELED));
+		pFnOnFriendInviteCanceled = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnFriendInviteCanceled");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnFriendInviteCanceled_Parms OnFriendInviteCanceled_Parms;
@@ -6750,7 +7040,8 @@ void UOnlinePlayerInterfaceEOS::ClearFriendInviteReceivedDelegate(unsigned char 
 
 	if (!pFnClearFriendInviteReceivedDelegate)
 	{
-		pFnClearFriendInviteReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARFRIENDINVITERECEIVEDDELEGATE));
+		pFnClearFriendInviteReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearFriendInviteReceivedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearFriendInviteReceivedDelegate_Parms ClearFriendInviteReceivedDelegate_Parms;
@@ -6761,7 +7052,7 @@ void UOnlinePlayerInterfaceEOS::ClearFriendInviteReceivedDelegate(unsigned char 
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendInviteReceivedDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         InviteDelegate                 (CPF_Parm | CPF_NeedCtorLink)
@@ -6772,7 +7063,8 @@ void UOnlinePlayerInterfaceEOS::AddFriendInviteReceivedDelegate(unsigned char Lo
 
 	if (!pFnAddFriendInviteReceivedDelegate)
 	{
-		pFnAddFriendInviteReceivedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDFRIENDINVITERECEIVEDDELEGATE));
+		pFnAddFriendInviteReceivedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendInviteReceivedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddFriendInviteReceivedDelegate_Parms AddFriendInviteReceivedDelegate_Parms;
@@ -6796,7 +7088,8 @@ void UOnlinePlayerInterfaceEOS::OnFriendInviteReceived(unsigned char LocalUserNu
 
 	if (!pFnOnFriendInviteReceived)
 	{
-		pFnOnFriendInviteReceived = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONFRIENDINVITERECEIVED));
+		pFnOnFriendInviteReceived = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnFriendInviteReceived");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnFriendInviteReceived_Parms OnFriendInviteReceived_Parms;
@@ -6821,7 +7114,8 @@ bool UOnlinePlayerInterfaceEOS::RemoveFriend(unsigned char LocalUserNum, struct 
 
 	if (!pFnRemoveFriend)
 	{
-		pFnRemoveFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_REMOVEFRIEND));
+		pFnRemoveFriend = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.RemoveFriend");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execRemoveFriend_Parms RemoveFriend_Parms;
@@ -6845,7 +7139,8 @@ void UOnlinePlayerInterfaceEOS::ClearRemoveFriendCompleteDelegate(unsigned char 
 
 	if (!pFnClearRemoveFriendCompleteDelegate)
 	{
-		pFnClearRemoveFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREMOVEFRIENDCOMPLETEDELEGATE));
+		pFnClearRemoveFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearRemoveFriendCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearRemoveFriendCompleteDelegate_Parms ClearRemoveFriendCompleteDelegate_Parms;
@@ -6856,7 +7151,7 @@ void UOnlinePlayerInterfaceEOS::ClearRemoveFriendCompleteDelegate(unsigned char 
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddRemoveFriendCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         RemoveFriendDelegate           (CPF_Parm | CPF_NeedCtorLink)
@@ -6867,7 +7162,8 @@ void UOnlinePlayerInterfaceEOS::AddRemoveFriendCompleteDelegate(unsigned char Lo
 
 	if (!pFnAddRemoveFriendCompleteDelegate)
 	{
-		pFnAddRemoveFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREMOVEFRIENDCOMPLETEDELEGATE));
+		pFnAddRemoveFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddRemoveFriendCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddRemoveFriendCompleteDelegate_Parms AddRemoveFriendCompleteDelegate_Parms;
@@ -6889,7 +7185,8 @@ void UOnlinePlayerInterfaceEOS::OnRemoveFriendComplete(unsigned long bWasSuccess
 
 	if (!pFnOnRemoveFriendComplete)
 	{
-		pFnOnRemoveFriendComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREMOVEFRIENDCOMPLETE));
+		pFnOnRemoveFriendComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnRemoveFriendComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnRemoveFriendComplete_Parms OnRemoveFriendComplete_Parms;
@@ -6912,7 +7209,8 @@ bool UOnlinePlayerInterfaceEOS::DenyFriendInvite(unsigned char LocalUserNum, str
 
 	if (!pFnDenyFriendInvite)
 	{
-		pFnDenyFriendInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_DENYFRIENDINVITE));
+		pFnDenyFriendInvite = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.DenyFriendInvite");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execDenyFriendInvite_Parms DenyFriendInvite_Parms;
@@ -6936,7 +7234,8 @@ void UOnlinePlayerInterfaceEOS::ClearDenyFriendInviteCompleteDelegate(unsigned c
 
 	if (!pFnClearDenyFriendInviteCompleteDelegate)
 	{
-		pFnClearDenyFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARDENYFRIENDINVITECOMPLETEDELEGATE));
+		pFnClearDenyFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearDenyFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearDenyFriendInviteCompleteDelegate_Parms ClearDenyFriendInviteCompleteDelegate_Parms;
@@ -6947,7 +7246,7 @@ void UOnlinePlayerInterfaceEOS::ClearDenyFriendInviteCompleteDelegate(unsigned c
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddDenyFriendInviteCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         FriendDelegate                 (CPF_Parm | CPF_NeedCtorLink)
@@ -6958,7 +7257,8 @@ void UOnlinePlayerInterfaceEOS::AddDenyFriendInviteCompleteDelegate(unsigned cha
 
 	if (!pFnAddDenyFriendInviteCompleteDelegate)
 	{
-		pFnAddDenyFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDDENYFRIENDINVITECOMPLETEDELEGATE));
+		pFnAddDenyFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddDenyFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddDenyFriendInviteCompleteDelegate_Parms AddDenyFriendInviteCompleteDelegate_Parms;
@@ -6980,7 +7280,8 @@ void UOnlinePlayerInterfaceEOS::OnDenyFriendInviteComplete(struct FUniqueNetId F
 
 	if (!pFnOnDenyFriendInviteComplete)
 	{
-		pFnOnDenyFriendInviteComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONDENYFRIENDINVITECOMPLETE));
+		pFnOnDenyFriendInviteComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnDenyFriendInviteComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnDenyFriendInviteComplete_Parms OnDenyFriendInviteComplete_Parms;
@@ -7003,7 +7304,8 @@ bool UOnlinePlayerInterfaceEOS::AcceptFriendInvite(unsigned char LocalUserNum, s
 
 	if (!pFnAcceptFriendInvite)
 	{
-		pFnAcceptFriendInvite = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ACCEPTFRIENDINVITE));
+		pFnAcceptFriendInvite = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AcceptFriendInvite");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAcceptFriendInvite_Parms AcceptFriendInvite_Parms;
@@ -7027,7 +7329,8 @@ void UOnlinePlayerInterfaceEOS::ClearAcceptFriendInviteCompleteDelegate(unsigned
 
 	if (!pFnClearAcceptFriendInviteCompleteDelegate)
 	{
-		pFnClearAcceptFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARACCEPTFRIENDINVITECOMPLETEDELEGATE));
+		pFnClearAcceptFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearAcceptFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearAcceptFriendInviteCompleteDelegate_Parms ClearAcceptFriendInviteCompleteDelegate_Parms;
@@ -7038,7 +7341,7 @@ void UOnlinePlayerInterfaceEOS::ClearAcceptFriendInviteCompleteDelegate(unsigned
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAcceptFriendInviteCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         FriendDelegate                 (CPF_Parm | CPF_NeedCtorLink)
@@ -7049,7 +7352,8 @@ void UOnlinePlayerInterfaceEOS::AddAcceptFriendInviteCompleteDelegate(unsigned c
 
 	if (!pFnAddAcceptFriendInviteCompleteDelegate)
 	{
-		pFnAddAcceptFriendInviteCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDACCEPTFRIENDINVITECOMPLETEDELEGATE));
+		pFnAddAcceptFriendInviteCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAcceptFriendInviteCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddAcceptFriendInviteCompleteDelegate_Parms AddAcceptFriendInviteCompleteDelegate_Parms;
@@ -7071,7 +7375,8 @@ void UOnlinePlayerInterfaceEOS::OnAcceptFriendInviteComplete(struct FUniqueNetId
 
 	if (!pFnOnAcceptFriendInviteComplete)
 	{
-		pFnOnAcceptFriendInviteComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONACCEPTFRIENDINVITECOMPLETE));
+		pFnOnAcceptFriendInviteComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnAcceptFriendInviteComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnAcceptFriendInviteComplete_Parms OnAcceptFriendInviteComplete_Parms;
@@ -7093,7 +7398,8 @@ void UOnlinePlayerInterfaceEOS::ClearAddFriendByNameCompleteDelegate(unsigned ch
 
 	if (!pFnClearAddFriendByNameCompleteDelegate)
 	{
-		pFnClearAddFriendByNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARADDFRIENDBYNAMECOMPLETEDELEGATE));
+		pFnClearAddFriendByNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearAddFriendByNameCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearAddFriendByNameCompleteDelegate_Parms ClearAddFriendByNameCompleteDelegate_Parms;
@@ -7115,7 +7421,8 @@ void UOnlinePlayerInterfaceEOS::AddAddFriendByNameCompleteDelegate(unsigned char
 
 	if (!pFnAddAddFriendByNameCompleteDelegate)
 	{
-		pFnAddAddFriendByNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDADDFRIENDBYNAMECOMPLETEDELEGATE));
+		pFnAddAddFriendByNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAddFriendByNameCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddAddFriendByNameCompleteDelegate_Parms AddAddFriendByNameCompleteDelegate_Parms;
@@ -7136,7 +7443,8 @@ void UOnlinePlayerInterfaceEOS::OnAddFriendByNameComplete(unsigned long bWasSucc
 
 	if (!pFnOnAddFriendByNameComplete)
 	{
-		pFnOnAddFriendByNameComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONADDFRIENDBYNAMECOMPLETE));
+		pFnOnAddFriendByNameComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnAddFriendByNameComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnAddFriendByNameComplete_Parms OnAddFriendByNameComplete_Parms;
@@ -7159,7 +7467,8 @@ bool UOnlinePlayerInterfaceEOS::AddFriendByName(unsigned char LocalUserNum, stru
 
 	if (!pFnAddFriendByName)
 	{
-		pFnAddFriendByName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDFRIENDBYNAME));
+		pFnAddFriendByName = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendByName");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddFriendByName_Parms AddFriendByName_Parms;
@@ -7185,7 +7494,8 @@ bool UOnlinePlayerInterfaceEOS::QueryUserByDisplayName(unsigned char LocalUserNu
 
 	if (!pFnQueryUserByDisplayName)
 	{
-		pFnQueryUserByDisplayName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_QUERYUSERBYDISPLAYNAME));
+		pFnQueryUserByDisplayName = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.QueryUserByDisplayName");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execQueryUserByDisplayName_Parms QueryUserByDisplayName_Parms;
@@ -7213,7 +7523,8 @@ void UOnlinePlayerInterfaceEOS::ClearQueryUserByDisplayNameCompleteDelegate(unsi
 
 	if (!pFnClearQueryUserByDisplayNameCompleteDelegate)
 	{
-		pFnClearQueryUserByDisplayNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARQUERYUSERBYDISPLAYNAMECOMPLETEDELEGATE));
+		pFnClearQueryUserByDisplayNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearQueryUserByDisplayNameCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearQueryUserByDisplayNameCompleteDelegate_Parms ClearQueryUserByDisplayNameCompleteDelegate_Parms;
@@ -7224,7 +7535,7 @@ void UOnlinePlayerInterfaceEOS::ClearQueryUserByDisplayNameCompleteDelegate(unsi
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddQueryUserByDisplayNameCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         QueryDelegate                  (CPF_Parm | CPF_NeedCtorLink)
@@ -7235,7 +7546,8 @@ void UOnlinePlayerInterfaceEOS::AddQueryUserByDisplayNameCompleteDelegate(unsign
 
 	if (!pFnAddQueryUserByDisplayNameCompleteDelegate)
 	{
-		pFnAddQueryUserByDisplayNameCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDQUERYUSERBYDISPLAYNAMECOMPLETEDELEGATE));
+		pFnAddQueryUserByDisplayNameCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddQueryUserByDisplayNameCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddQueryUserByDisplayNameCompleteDelegate_Parms AddQueryUserByDisplayNameCompleteDelegate_Parms;
@@ -7258,7 +7570,8 @@ void UOnlinePlayerInterfaceEOS::OnQueryUserByDisplayName(unsigned long bWasSucce
 
 	if (!pFnOnQueryUserByDisplayName)
 	{
-		pFnOnQueryUserByDisplayName = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONQUERYUSERBYDISPLAYNAME));
+		pFnOnQueryUserByDisplayName = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnQueryUserByDisplayName");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnQueryUserByDisplayName_Parms OnQueryUserByDisplayName_Parms;
@@ -7283,7 +7596,8 @@ bool UOnlinePlayerInterfaceEOS::AddFriend(unsigned char LocalUserNum, struct FUn
 
 	if (!pFnAddFriend)
 	{
-		pFnAddFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDFRIEND));
+		pFnAddFriend = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriend");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddFriend_Parms AddFriend_Parms;
@@ -7308,7 +7622,8 @@ void UOnlinePlayerInterfaceEOS::ClearAddFriendCompleteDelegate(unsigned char Loc
 
 	if (!pFnClearAddFriendCompleteDelegate)
 	{
-		pFnClearAddFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARADDFRIENDCOMPLETEDELEGATE));
+		pFnClearAddFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearAddFriendCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearAddFriendCompleteDelegate_Parms ClearAddFriendCompleteDelegate_Parms;
@@ -7319,7 +7634,7 @@ void UOnlinePlayerInterfaceEOS::ClearAddFriendCompleteDelegate(unsigned char Loc
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAddFriendCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         FriendDelegate                 (CPF_Parm | CPF_NeedCtorLink)
@@ -7330,7 +7645,8 @@ void UOnlinePlayerInterfaceEOS::AddAddFriendCompleteDelegate(unsigned char Local
 
 	if (!pFnAddAddFriendCompleteDelegate)
 	{
-		pFnAddAddFriendCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDADDFRIENDCOMPLETEDELEGATE));
+		pFnAddAddFriendCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddAddFriendCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddAddFriendCompleteDelegate_Parms AddAddFriendCompleteDelegate_Parms;
@@ -7352,7 +7668,8 @@ void UOnlinePlayerInterfaceEOS::OnAddFriendComplete(struct FUniqueNetId NewFrien
 
 	if (!pFnOnAddFriendComplete)
 	{
-		pFnOnAddFriendComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONADDFRIENDCOMPLETE));
+		pFnOnAddFriendComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnAddFriendComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnAddFriendComplete_Parms OnAddFriendComplete_Parms;
@@ -7374,7 +7691,8 @@ struct FString UOnlinePlayerInterfaceEOS::GetKeyboardInputResults(unsigned char&
 
 	if (!pFnGetKeyboardInputResults)
 	{
-		pFnGetKeyboardInputResults = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETKEYBOARDINPUTRESULTS));
+		pFnGetKeyboardInputResults = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetKeyboardInputResults");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetKeyboardInputResults_Parms GetKeyboardInputResults_Parms;
@@ -7396,7 +7714,8 @@ void UOnlinePlayerInterfaceEOS::ClearKeyboardInputDoneDelegate(struct FScriptDel
 
 	if (!pFnClearKeyboardInputDoneDelegate)
 	{
-		pFnClearKeyboardInputDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARKEYBOARDINPUTDONEDELEGATE));
+		pFnClearKeyboardInputDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearKeyboardInputDoneDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearKeyboardInputDoneDelegate_Parms ClearKeyboardInputDoneDelegate_Parms;
@@ -7416,7 +7735,8 @@ void UOnlinePlayerInterfaceEOS::AddKeyboardInputDoneDelegate(struct FScriptDeleg
 
 	if (!pFnAddKeyboardInputDoneDelegate)
 	{
-		pFnAddKeyboardInputDoneDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDKEYBOARDINPUTDONEDELEGATE));
+		pFnAddKeyboardInputDoneDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddKeyboardInputDoneDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddKeyboardInputDoneDelegate_Parms AddKeyboardInputDoneDelegate_Parms;
@@ -7436,7 +7756,8 @@ void UOnlinePlayerInterfaceEOS::OnKeyboardInputComplete(unsigned long bWasSucces
 
 	if (!pFnOnKeyboardInputComplete)
 	{
-		pFnOnKeyboardInputComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONKEYBOARDINPUTCOMPLETE));
+		pFnOnKeyboardInputComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnKeyboardInputComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnKeyboardInputComplete_Parms OnKeyboardInputComplete_Parms;
@@ -7463,7 +7784,8 @@ bool UOnlinePlayerInterfaceEOS::ShowKeyboardUI(unsigned char LocalUserNum, struc
 
 	if (!pFnShowKeyboardUI)
 	{
-		pFnShowKeyboardUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWKEYBOARDUI));
+		pFnShowKeyboardUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowKeyboardUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowKeyboardUI_Parms ShowKeyboardUI_Parms;
@@ -7494,7 +7816,8 @@ void UOnlinePlayerInterfaceEOS::SetOnlineStatus(unsigned char LocalUserNum, int 
 
 	if (!pFnSetOnlineStatus)
 	{
-		pFnSetOnlineStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SETONLINESTATUS));
+		pFnSetOnlineStatus = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.SetOnlineStatus");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execSetOnlineStatus_Parms SetOnlineStatus_Parms;
@@ -7511,7 +7834,7 @@ void UOnlinePlayerInterfaceEOS::SetOnlineStatus(unsigned char LocalUserNum, int 
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetFriendsList
-// [0x00424401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00434401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -7525,7 +7848,8 @@ unsigned char UOnlinePlayerInterfaceEOS::GetFriendsList(unsigned char LocalUserN
 
 	if (!pFnGetFriendsList)
 	{
-		pFnGetFriendsList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETFRIENDSLIST));
+		pFnGetFriendsList = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetFriendsList");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetFriendsList_Parms GetFriendsList_Parms;
@@ -7555,7 +7879,8 @@ void UOnlinePlayerInterfaceEOS::ClearReadFriendsCompleteDelegate(unsigned char L
 
 	if (!pFnClearReadFriendsCompleteDelegate)
 	{
-		pFnClearReadFriendsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREADFRIENDSCOMPLETEDELEGATE));
+		pFnClearReadFriendsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReadFriendsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReadFriendsCompleteDelegate_Parms ClearReadFriendsCompleteDelegate_Parms;
@@ -7566,7 +7891,7 @@ void UOnlinePlayerInterfaceEOS::ClearReadFriendsCompleteDelegate(unsigned char L
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadFriendsCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         ReadFriendsCompleteDelegate    (CPF_Parm | CPF_NeedCtorLink)
@@ -7577,7 +7902,8 @@ void UOnlinePlayerInterfaceEOS::AddReadFriendsCompleteDelegate(unsigned char Loc
 
 	if (!pFnAddReadFriendsCompleteDelegate)
 	{
-		pFnAddReadFriendsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREADFRIENDSCOMPLETEDELEGATE));
+		pFnAddReadFriendsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadFriendsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReadFriendsCompleteDelegate_Parms AddReadFriendsCompleteDelegate_Parms;
@@ -7598,7 +7924,8 @@ void UOnlinePlayerInterfaceEOS::OnReadFriendsComplete(unsigned long bWasSuccessf
 
 	if (!pFnOnReadFriendsComplete)
 	{
-		pFnOnReadFriendsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREADFRIENDSCOMPLETE));
+		pFnOnReadFriendsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReadFriendsComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReadFriendsComplete_Parms OnReadFriendsComplete_Parms;
@@ -7608,7 +7935,7 @@ void UOnlinePlayerInterfaceEOS::OnReadFriendsComplete(unsigned long bWasSuccessf
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadFriendsList
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -7621,7 +7948,8 @@ bool UOnlinePlayerInterfaceEOS::ReadFriendsList(unsigned char LocalUserNum, int 
 
 	if (!pFnReadFriendsList)
 	{
-		pFnReadFriendsList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_READFRIENDSLIST));
+		pFnReadFriendsList = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadFriendsList");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execReadFriendsList_Parms ReadFriendsList_Parms;
@@ -7650,7 +7978,8 @@ void UOnlinePlayerInterfaceEOS::ClearWriteProfileSettingsCompleteDelegate(unsign
 
 	if (!pFnClearWriteProfileSettingsCompleteDelegate)
 	{
-		pFnClearWriteProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARWRITEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnClearWriteProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearWriteProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearWriteProfileSettingsCompleteDelegate_Parms ClearWriteProfileSettingsCompleteDelegate_Parms;
@@ -7672,7 +8001,8 @@ void UOnlinePlayerInterfaceEOS::AddWriteProfileSettingsCompleteDelegate(unsigned
 
 	if (!pFnAddWriteProfileSettingsCompleteDelegate)
 	{
-		pFnAddWriteProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDWRITEPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnAddWriteProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddWriteProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddWriteProfileSettingsCompleteDelegate_Parms AddWriteProfileSettingsCompleteDelegate_Parms;
@@ -7694,7 +8024,8 @@ void UOnlinePlayerInterfaceEOS::OnWriteProfileSettingsComplete(unsigned char Loc
 
 	if (!pFnOnWriteProfileSettingsComplete)
 	{
-		pFnOnWriteProfileSettingsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONWRITEPROFILESETTINGSCOMPLETE));
+		pFnOnWriteProfileSettingsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnWriteProfileSettingsComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnWriteProfileSettingsComplete_Parms OnWriteProfileSettingsComplete_Parms;
@@ -7717,7 +8048,8 @@ bool UOnlinePlayerInterfaceEOS::WriteProfileSettings(unsigned char LocalUserNum,
 
 	if (!pFnWriteProfileSettings)
 	{
-		pFnWriteProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_WRITEPROFILESETTINGS));
+		pFnWriteProfileSettings = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.WriteProfileSettings");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execWriteProfileSettings_Parms WriteProfileSettings_Parms;
@@ -7745,7 +8077,8 @@ class UOnlineProfileSettings* UOnlinePlayerInterfaceEOS::GetProfileSettings(unsi
 
 	if (!pFnGetProfileSettings)
 	{
-		pFnGetProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETPROFILESETTINGS));
+		pFnGetProfileSettings = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetProfileSettings");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetProfileSettings_Parms GetProfileSettings_Parms;
@@ -7768,7 +8101,8 @@ void UOnlinePlayerInterfaceEOS::ClearReadProfileSettingsCompleteDelegate(unsigne
 
 	if (!pFnClearReadProfileSettingsCompleteDelegate)
 	{
-		pFnClearReadProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARREADPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnClearReadProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearReadProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearReadProfileSettingsCompleteDelegate_Parms ClearReadProfileSettingsCompleteDelegate_Parms;
@@ -7790,7 +8124,8 @@ void UOnlinePlayerInterfaceEOS::AddReadProfileSettingsCompleteDelegate(unsigned 
 
 	if (!pFnAddReadProfileSettingsCompleteDelegate)
 	{
-		pFnAddReadProfileSettingsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDREADPROFILESETTINGSCOMPLETEDELEGATE));
+		pFnAddReadProfileSettingsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddReadProfileSettingsCompleteDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddReadProfileSettingsCompleteDelegate_Parms AddReadProfileSettingsCompleteDelegate_Parms;
@@ -7812,7 +8147,8 @@ void UOnlinePlayerInterfaceEOS::OnReadProfileSettingsComplete(unsigned char Loca
 
 	if (!pFnOnReadProfileSettingsComplete)
 	{
-		pFnOnReadProfileSettingsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONREADPROFILESETTINGSCOMPLETE));
+		pFnOnReadProfileSettingsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReadProfileSettingsComplete");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReadProfileSettingsComplete_Parms OnReadProfileSettingsComplete_Parms;
@@ -7835,7 +8171,8 @@ bool UOnlinePlayerInterfaceEOS::ReadProfileSettings(unsigned char LocalUserNum, 
 
 	if (!pFnReadProfileSettings)
 	{
-		pFnReadProfileSettings = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_READPROFILESETTINGS));
+		pFnReadProfileSettings = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ReadProfileSettings");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execReadProfileSettings_Parms ReadProfileSettings_Parms;
@@ -7863,7 +8200,8 @@ void UOnlinePlayerInterfaceEOS::ClearFriendsChangeDelegate(unsigned char LocalUs
 
 	if (!pFnClearFriendsChangeDelegate)
 	{
-		pFnClearFriendsChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARFRIENDSCHANGEDELEGATE));
+		pFnClearFriendsChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearFriendsChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearFriendsChangeDelegate_Parms ClearFriendsChangeDelegate_Parms;
@@ -7874,7 +8212,7 @@ void UOnlinePlayerInterfaceEOS::ClearFriendsChangeDelegate(unsigned char LocalUs
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendsChangeDelegate
-// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
+// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         FriendsDelegate                (CPF_Parm | CPF_NeedCtorLink)
@@ -7885,7 +8223,8 @@ void UOnlinePlayerInterfaceEOS::eventAddFriendsChangeDelegate(unsigned char Loca
 
 	if (!pFnAddFriendsChangeDelegate)
 	{
-		pFnAddFriendsChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDFRIENDSCHANGEDELEGATE));
+		pFnAddFriendsChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddFriendsChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_eventAddFriendsChangeDelegate_Parms AddFriendsChangeDelegate_Parms;
@@ -7906,7 +8245,8 @@ void UOnlinePlayerInterfaceEOS::ClearMutingChangeDelegate(struct FScriptDelegate
 
 	if (!pFnClearMutingChangeDelegate)
 	{
-		pFnClearMutingChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARMUTINGCHANGEDELEGATE));
+		pFnClearMutingChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearMutingChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearMutingChangeDelegate_Parms ClearMutingChangeDelegate_Parms;
@@ -7926,7 +8266,8 @@ void UOnlinePlayerInterfaceEOS::AddMutingChangeDelegate(struct FScriptDelegate M
 
 	if (!pFnAddMutingChangeDelegate)
 	{
-		pFnAddMutingChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDMUTINGCHANGEDELEGATE));
+		pFnAddMutingChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddMutingChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddMutingChangeDelegate_Parms AddMutingChangeDelegate_Parms;
@@ -7946,7 +8287,8 @@ void UOnlinePlayerInterfaceEOS::ClearLoginCancelledDelegate(struct FScriptDelega
 
 	if (!pFnClearLoginCancelledDelegate)
 	{
-		pFnClearLoginCancelledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARLOGINCANCELLEDDELEGATE));
+		pFnClearLoginCancelledDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearLoginCancelledDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearLoginCancelledDelegate_Parms ClearLoginCancelledDelegate_Parms;
@@ -7966,7 +8308,8 @@ void UOnlinePlayerInterfaceEOS::AddLoginCancelledDelegate(struct FScriptDelegate
 
 	if (!pFnAddLoginCancelledDelegate)
 	{
-		pFnAddLoginCancelledDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDLOGINCANCELLEDDELEGATE));
+		pFnAddLoginCancelledDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginCancelledDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddLoginCancelledDelegate_Parms AddLoginCancelledDelegate_Parms;
@@ -7986,7 +8329,8 @@ void UOnlinePlayerInterfaceEOS::ClearLoginChangeDelegate(struct FScriptDelegate 
 
 	if (!pFnClearLoginChangeDelegate)
 	{
-		pFnClearLoginChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARLOGINCHANGEDELEGATE));
+		pFnClearLoginChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearLoginChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearLoginChangeDelegate_Parms ClearLoginChangeDelegate_Parms;
@@ -8000,7 +8344,7 @@ void UOnlinePlayerInterfaceEOS::ClearLoginChangeDelegate(struct FScriptDelegate 
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginChangeDelegate
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LoginDelegate                  (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8010,7 +8354,8 @@ void UOnlinePlayerInterfaceEOS::AddLoginChangeDelegate(struct FScriptDelegate Lo
 
 	if (!pFnAddLoginChangeDelegate)
 	{
-		pFnAddLoginChangeDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDLOGINCHANGEDELEGATE));
+		pFnAddLoginChangeDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginChangeDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddLoginChangeDelegate_Parms AddLoginChangeDelegate_Parms;
@@ -8035,7 +8380,8 @@ bool UOnlinePlayerInterfaceEOS::ShowFriendsUI(unsigned char LocalUserNum)
 
 	if (!pFnShowFriendsUI)
 	{
-		pFnShowFriendsUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWFRIENDSUI));
+		pFnShowFriendsUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowFriendsUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowFriendsUI_Parms ShowFriendsUI_Parms;
@@ -8059,7 +8405,8 @@ bool UOnlinePlayerInterfaceEOS::IsMuted(unsigned char LocalUserNum, struct FUniq
 
 	if (!pFnIsMuted)
 	{
-		pFnIsMuted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ISMUTED));
+		pFnIsMuted = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.IsMuted");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execIsMuted_Parms IsMuted_Parms;
@@ -8084,7 +8431,8 @@ bool UOnlinePlayerInterfaceEOS::AreAnyFriends(unsigned char LocalUserNum, TArray
 
 	if (!pFnAreAnyFriends)
 	{
-		pFnAreAnyFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_AREANYFRIENDS));
+		pFnAreAnyFriends = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AreAnyFriends");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAreAnyFriends_Parms AreAnyFriends_Parms;
@@ -8113,7 +8461,8 @@ bool UOnlinePlayerInterfaceEOS::IsFriend(unsigned char LocalUserNum, struct FUni
 
 	if (!pFnIsFriend)
 	{
-		pFnIsFriend = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ISFRIEND));
+		pFnIsFriend = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.IsFriend");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execIsFriend_Parms IsFriend_Parms;
@@ -8144,7 +8493,8 @@ bool UOnlinePlayerInterfaceEOS::CanShowPresenceInformation(unsigned char LocalUs
 
 	if (!pFnCanShowPresenceInformation)
 	{
-		pFnCanShowPresenceInformation = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANSHOWPRESENCEINFORMATION));
+		pFnCanShowPresenceInformation = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanShowPresenceInformation");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanShowPresenceInformation_Parms CanShowPresenceInformation_Parms;
@@ -8173,7 +8523,8 @@ bool UOnlinePlayerInterfaceEOS::CanViewPlayerProfiles(unsigned char LocalUserNum
 
 	if (!pFnCanViewPlayerProfiles)
 	{
-		pFnCanViewPlayerProfiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANVIEWPLAYERPROFILES));
+		pFnCanViewPlayerProfiles = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanViewPlayerProfiles");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanViewPlayerProfiles_Parms CanViewPlayerProfiles_Parms;
@@ -8202,7 +8553,8 @@ bool UOnlinePlayerInterfaceEOS::CanPurchaseContent(unsigned char LocalUserNum, u
 
 	if (!pFnCanPurchaseContent)
 	{
-		pFnCanPurchaseContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANPURCHASECONTENT));
+		pFnCanPurchaseContent = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanPurchaseContent");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanPurchaseContent_Parms CanPurchaseContent_Parms;
@@ -8231,7 +8583,8 @@ bool UOnlinePlayerInterfaceEOS::CanDownloadUserContent(unsigned char LocalUserNu
 
 	if (!pFnCanDownloadUserContent)
 	{
-		pFnCanDownloadUserContent = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANDOWNLOADUSERCONTENT));
+		pFnCanDownloadUserContent = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanDownloadUserContent");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanDownloadUserContent_Parms CanDownloadUserContent_Parms;
@@ -8259,7 +8612,8 @@ unsigned char UOnlinePlayerInterfaceEOS::CanCommunicate(unsigned char LocalUserN
 
 	if (!pFnCanCommunicate)
 	{
-		pFnCanCommunicate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANCOMMUNICATE));
+		pFnCanCommunicate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanCommunicate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanCommunicate_Parms CanCommunicate_Parms;
@@ -8287,7 +8641,8 @@ bool UOnlinePlayerInterfaceEOS::CanPlayOnline(unsigned char LocalUserNum, unsign
 
 	if (!pFnCanPlayOnline)
 	{
-		pFnCanPlayOnline = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CANPLAYONLINE));
+		pFnCanPlayOnline = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.CanPlayOnline");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execCanPlayOnline_Parms CanPlayOnline_Parms;
@@ -8302,7 +8657,7 @@ bool UOnlinePlayerInterfaceEOS::CanPlayOnline(unsigned char LocalUserNum, unsign
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetPlayerNickname
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -8313,7 +8668,8 @@ struct FString UOnlinePlayerInterfaceEOS::GetPlayerNickname(unsigned char LocalU
 
 	if (!pFnGetPlayerNickname)
 	{
-		pFnGetPlayerNickname = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETPLAYERNICKNAME));
+		pFnGetPlayerNickname = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetPlayerNickname");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetPlayerNickname_Parms GetPlayerNickname_Parms;
@@ -8329,7 +8685,7 @@ struct FString UOnlinePlayerInterfaceEOS::GetPlayerNickname(unsigned char LocalU
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetUniquePlayerId
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -8341,7 +8697,8 @@ bool UOnlinePlayerInterfaceEOS::GetUniquePlayerId(unsigned char LocalUserNum, st
 
 	if (!pFnGetUniquePlayerId)
 	{
-		pFnGetUniquePlayerId = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETUNIQUEPLAYERID));
+		pFnGetUniquePlayerId = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetUniquePlayerId");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetUniquePlayerId_Parms GetUniquePlayerId_Parms;
@@ -8358,7 +8715,7 @@ bool UOnlinePlayerInterfaceEOS::GetUniquePlayerId(unsigned char LocalUserNum, st
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetLoginStatus
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -8369,7 +8726,8 @@ unsigned char UOnlinePlayerInterfaceEOS::GetLoginStatus(unsigned char LocalUserN
 
 	if (!pFnGetLoginStatus)
 	{
-		pFnGetLoginStatus = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_GETLOGINSTATUS));
+		pFnGetLoginStatus = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.GetLoginStatus");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execGetLoginStatus_Parms GetLoginStatus_Parms;
@@ -8396,7 +8754,8 @@ void UOnlinePlayerInterfaceEOS::ClearLogoutCompletedDelegate(unsigned char Local
 
 	if (!pFnClearLogoutCompletedDelegate)
 	{
-		pFnClearLogoutCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARLOGOUTCOMPLETEDDELEGATE));
+		pFnClearLogoutCompletedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearLogoutCompletedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearLogoutCompletedDelegate_Parms ClearLogoutCompletedDelegate_Parms;
@@ -8418,7 +8777,8 @@ void UOnlinePlayerInterfaceEOS::AddLogoutCompletedDelegate(unsigned char LocalUs
 
 	if (!pFnAddLogoutCompletedDelegate)
 	{
-		pFnAddLogoutCompletedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDLOGOUTCOMPLETEDDELEGATE));
+		pFnAddLogoutCompletedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLogoutCompletedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddLogoutCompletedDelegate_Parms AddLogoutCompletedDelegate_Parms;
@@ -8439,7 +8799,8 @@ void UOnlinePlayerInterfaceEOS::OnLogoutCompleted(unsigned long bWasSuccessful)
 
 	if (!pFnOnLogoutCompleted)
 	{
-		pFnOnLogoutCompleted = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONLOGOUTCOMPLETED));
+		pFnOnLogoutCompleted = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnLogoutCompleted");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnLogoutCompleted_Parms OnLogoutCompleted_Parms;
@@ -8460,7 +8821,8 @@ bool UOnlinePlayerInterfaceEOS::Logout(unsigned char LocalUserNum)
 
 	if (!pFnLogout)
 	{
-		pFnLogout = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_LOGOUT));
+		pFnLogout = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.Logout");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execLogout_Parms Logout_Parms;
@@ -8487,7 +8849,8 @@ void UOnlinePlayerInterfaceEOS::ClearLoginFailedDelegate(unsigned char LocalUser
 
 	if (!pFnClearLoginFailedDelegate)
 	{
-		pFnClearLoginFailedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_CLEARLOGINFAILEDDELEGATE));
+		pFnClearLoginFailedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ClearLoginFailedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execClearLoginFailedDelegate_Parms ClearLoginFailedDelegate_Parms;
@@ -8502,7 +8865,7 @@ void UOnlinePlayerInterfaceEOS::ClearLoginFailedDelegate(unsigned char LocalUser
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginFailedDelegate
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         LoginFailedDelegate            (CPF_Parm | CPF_NeedCtorLink)
@@ -8513,7 +8876,8 @@ void UOnlinePlayerInterfaceEOS::AddLoginFailedDelegate(unsigned char LocalUserNu
 
 	if (!pFnAddLoginFailedDelegate)
 	{
-		pFnAddLoginFailedDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ADDLOGINFAILEDDELEGATE));
+		pFnAddLoginFailedDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AddLoginFailedDelegate");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAddLoginFailedDelegate_Parms AddLoginFailedDelegate_Parms;
@@ -8542,7 +8906,8 @@ void UOnlinePlayerInterfaceEOS::OnReceievedPinGrantCode(unsigned char Result, un
 
 	if (!pFnOnReceievedPinGrantCode)
 	{
-		pFnOnReceievedPinGrantCode = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONRECEIEVEDPINGRANTCODE));
+		pFnOnReceievedPinGrantCode = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnReceievedPinGrantCode");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnReceievedPinGrantCode_Parms OnReceievedPinGrantCode_Parms;
@@ -8567,7 +8932,8 @@ void UOnlinePlayerInterfaceEOS::OnLoginFailed(unsigned char LocalUserNum, unsign
 
 	if (!pFnOnLoginFailed)
 	{
-		pFnOnLoginFailed = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONLOGINFAILED));
+		pFnOnLoginFailed = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnLoginFailed");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnLoginFailed_Parms OnLoginFailed_Parms;
@@ -8588,7 +8954,8 @@ bool UOnlinePlayerInterfaceEOS::AutoLogin()
 
 	if (!pFnAutoLogin)
 	{
-		pFnAutoLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_AUTOLOGIN));
+		pFnAutoLogin = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.AutoLogin");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execAutoLogin_Parms AutoLogin_Parms;
@@ -8599,7 +8966,7 @@ bool UOnlinePlayerInterfaceEOS::AutoLogin()
 };
 
 // Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.Login
-// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
+// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -8613,7 +8980,8 @@ bool UOnlinePlayerInterfaceEOS::Login(unsigned char LocalUserNum, struct FString
 
 	if (!pFnLogin)
 	{
-		pFnLogin = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_LOGIN));
+		pFnLogin = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.Login");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execLogin_Parms Login_Parms;
@@ -8644,7 +9012,8 @@ bool UOnlinePlayerInterfaceEOS::ShowLoginUI(unsigned char LocalUserNum, unsigned
 
 	if (!pFnShowLoginUI)
 	{
-		pFnShowLoginUI = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_SHOWLOGINUI));
+		pFnShowLoginUI = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.ShowLoginUI");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execShowLoginUI_Parms ShowLoginUI_Parms;
@@ -8666,7 +9035,8 @@ void UOnlinePlayerInterfaceEOS::OnFriendsChange()
 
 	if (!pFnOnFriendsChange)
 	{
-		pFnOnFriendsChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONFRIENDSCHANGE));
+		pFnOnFriendsChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnFriendsChange");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnFriendsChange_Parms OnFriendsChange_Parms;
@@ -8684,7 +9054,8 @@ void UOnlinePlayerInterfaceEOS::OnMutingChange()
 
 	if (!pFnOnMutingChange)
 	{
-		pFnOnMutingChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONMUTINGCHANGE));
+		pFnOnMutingChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnMutingChange");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnMutingChange_Parms OnMutingChange_Parms;
@@ -8702,7 +9073,8 @@ void UOnlinePlayerInterfaceEOS::OnLoginCancelled()
 
 	if (!pFnOnLoginCancelled)
 	{
-		pFnOnLoginCancelled = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONLOGINCANCELLED));
+		pFnOnLoginCancelled = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnLoginCancelled");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnLoginCancelled_Parms OnLoginCancelled_Parms;
@@ -8721,7 +9093,8 @@ void UOnlinePlayerInterfaceEOS::OnLoginChange(unsigned char LocalUserNum)
 
 	if (!pFnOnLoginChange)
 	{
-		pFnOnLoginChange = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEPLAYERINTERFACEEOS_ONLOGINCHANGE));
+		pFnOnLoginChange = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlinePlayerInterfaceEOS.OnLoginChange");
+
 	}
 
 	UOnlinePlayerInterfaceEOS_execOnLoginChange_Parms OnLoginChange_Parms;
@@ -8743,7 +9116,8 @@ bool UOnlineStatsInterfaceEOS::RegisterStatGuid(struct FUniqueNetId PlayerID, st
 
 	if (!pFnRegisterStatGuid)
 	{
-		pFnRegisterStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_REGISTERSTATGUID));
+		pFnRegisterStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.RegisterStatGuid");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execRegisterStatGuid_Parms RegisterStatGuid_Parms;
@@ -8766,7 +9140,8 @@ struct FString UOnlineStatsInterfaceEOS::GetClientStatGuid()
 
 	if (!pFnGetClientStatGuid)
 	{
-		pFnGetClientStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_GETCLIENTSTATGUID));
+		pFnGetClientStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.GetClientStatGuid");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execGetClientStatGuid_Parms GetClientStatGuid_Parms;
@@ -8787,7 +9162,8 @@ void UOnlineStatsInterfaceEOS::ClearRegisterHostStatGuidCompleteDelegateDelegate
 
 	if (!pFnClearRegisterHostStatGuidCompleteDelegateDelegate)
 	{
-		pFnClearRegisterHostStatGuidCompleteDelegateDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_CLEARREGISTERHOSTSTATGUIDCOMPLETEDELEGATEDELEGATE));
+		pFnClearRegisterHostStatGuidCompleteDelegateDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.ClearRegisterHostStatGuidCompleteDelegateDelegate");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execClearRegisterHostStatGuidCompleteDelegateDelegate_Parms ClearRegisterHostStatGuidCompleteDelegateDelegate_Parms;
@@ -8807,7 +9183,8 @@ void UOnlineStatsInterfaceEOS::AddRegisterHostStatGuidCompleteDelegate(struct FS
 
 	if (!pFnAddRegisterHostStatGuidCompleteDelegate)
 	{
-		pFnAddRegisterHostStatGuidCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_ADDREGISTERHOSTSTATGUIDCOMPLETEDELEGATE));
+		pFnAddRegisterHostStatGuidCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.AddRegisterHostStatGuidCompleteDelegate");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execAddRegisterHostStatGuidCompleteDelegate_Parms AddRegisterHostStatGuidCompleteDelegate_Parms;
@@ -8827,7 +9204,8 @@ void UOnlineStatsInterfaceEOS::OnRegisterHostStatGuidComplete(unsigned long bWas
 
 	if (!pFnOnRegisterHostStatGuidComplete)
 	{
-		pFnOnRegisterHostStatGuidComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_ONREGISTERHOSTSTATGUIDCOMPLETE));
+		pFnOnRegisterHostStatGuidComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.OnRegisterHostStatGuidComplete");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execOnRegisterHostStatGuidComplete_Parms OnRegisterHostStatGuidComplete_Parms;
@@ -8848,7 +9226,8 @@ bool UOnlineStatsInterfaceEOS::RegisterHostStatGuid(struct FString& HostStatGuid
 
 	if (!pFnRegisterHostStatGuid)
 	{
-		pFnRegisterHostStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_REGISTERHOSTSTATGUID));
+		pFnRegisterHostStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.RegisterHostStatGuid");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execRegisterHostStatGuid_Parms RegisterHostStatGuid_Parms;
@@ -8870,7 +9249,8 @@ struct FString UOnlineStatsInterfaceEOS::GetHostStatGuid()
 
 	if (!pFnGetHostStatGuid)
 	{
-		pFnGetHostStatGuid = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_GETHOSTSTATGUID));
+		pFnGetHostStatGuid = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.GetHostStatGuid");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execGetHostStatGuid_Parms GetHostStatGuid_Parms;
@@ -8894,7 +9274,8 @@ bool UOnlineStatsInterfaceEOS::WriteOnlinePlayerScores(struct FName SessionName,
 
 	if (!pFnWriteOnlinePlayerScores)
 	{
-		pFnWriteOnlinePlayerScores = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_WRITEONLINEPLAYERSCORES));
+		pFnWriteOnlinePlayerScores = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.WriteOnlinePlayerScores");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execWriteOnlinePlayerScores_Parms WriteOnlinePlayerScores_Parms;
@@ -8918,7 +9299,8 @@ void UOnlineStatsInterfaceEOS::ClearFlushOnlineStatsCompleteDelegate(struct FScr
 
 	if (!pFnClearFlushOnlineStatsCompleteDelegate)
 	{
-		pFnClearFlushOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_CLEARFLUSHONLINESTATSCOMPLETEDELEGATE));
+		pFnClearFlushOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.ClearFlushOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execClearFlushOnlineStatsCompleteDelegate_Parms ClearFlushOnlineStatsCompleteDelegate_Parms;
@@ -8938,7 +9320,8 @@ void UOnlineStatsInterfaceEOS::AddFlushOnlineStatsCompleteDelegate(struct FScrip
 
 	if (!pFnAddFlushOnlineStatsCompleteDelegate)
 	{
-		pFnAddFlushOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_ADDFLUSHONLINESTATSCOMPLETEDELEGATE));
+		pFnAddFlushOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.AddFlushOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execAddFlushOnlineStatsCompleteDelegate_Parms AddFlushOnlineStatsCompleteDelegate_Parms;
@@ -8959,7 +9342,8 @@ void UOnlineStatsInterfaceEOS::OnFlushOnlineStatsComplete(struct FName SessionNa
 
 	if (!pFnOnFlushOnlineStatsComplete)
 	{
-		pFnOnFlushOnlineStatsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_ONFLUSHONLINESTATSCOMPLETE));
+		pFnOnFlushOnlineStatsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.OnFlushOnlineStatsComplete");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execOnFlushOnlineStatsComplete_Parms OnFlushOnlineStatsComplete_Parms;
@@ -8981,7 +9365,8 @@ bool UOnlineStatsInterfaceEOS::FlushOnlineStats(struct FName SessionName)
 
 	if (!pFnFlushOnlineStats)
 	{
-		pFnFlushOnlineStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_FLUSHONLINESTATS));
+		pFnFlushOnlineStats = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.FlushOnlineStats");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execFlushOnlineStats_Parms FlushOnlineStats_Parms;
@@ -9006,7 +9391,8 @@ bool UOnlineStatsInterfaceEOS::WriteOnlineStats(struct FName SessionName, struct
 
 	if (!pFnWriteOnlineStats)
 	{
-		pFnWriteOnlineStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_WRITEONLINESTATS));
+		pFnWriteOnlineStats = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.WriteOnlineStats");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execWriteOnlineStats_Parms WriteOnlineStats_Parms;
@@ -9030,7 +9416,8 @@ void UOnlineStatsInterfaceEOS::FreeStats(class UOnlineStatsRead* StatsRead)
 
 	if (!pFnFreeStats)
 	{
-		pFnFreeStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_FREESTATS));
+		pFnFreeStats = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.FreeStats");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execFreeStats_Parms FreeStats_Parms;
@@ -9050,7 +9437,8 @@ void UOnlineStatsInterfaceEOS::ClearReadOnlineStatsCompleteDelegate(struct FScri
 
 	if (!pFnClearReadOnlineStatsCompleteDelegate)
 	{
-		pFnClearReadOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_CLEARREADONLINESTATSCOMPLETEDELEGATE));
+		pFnClearReadOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.ClearReadOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execClearReadOnlineStatsCompleteDelegate_Parms ClearReadOnlineStatsCompleteDelegate_Parms;
@@ -9070,7 +9458,8 @@ void UOnlineStatsInterfaceEOS::AddReadOnlineStatsCompleteDelegate(struct FScript
 
 	if (!pFnAddReadOnlineStatsCompleteDelegate)
 	{
-		pFnAddReadOnlineStatsCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_ADDREADONLINESTATSCOMPLETEDELEGATE));
+		pFnAddReadOnlineStatsCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.AddReadOnlineStatsCompleteDelegate");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execAddReadOnlineStatsCompleteDelegate_Parms AddReadOnlineStatsCompleteDelegate_Parms;
@@ -9090,7 +9479,8 @@ void UOnlineStatsInterfaceEOS::OnReadOnlineStatsComplete(unsigned long bWasSucce
 
 	if (!pFnOnReadOnlineStatsComplete)
 	{
-		pFnOnReadOnlineStatsComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_ONREADONLINESTATSCOMPLETE));
+		pFnOnReadOnlineStatsComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.OnReadOnlineStatsComplete");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execOnReadOnlineStatsComplete_Parms OnReadOnlineStatsComplete_Parms;
@@ -9113,7 +9503,8 @@ bool UOnlineStatsInterfaceEOS::ReadOnlineStatsByRankAroundPlayer(unsigned char L
 
 	if (!pFnReadOnlineStatsByRankAroundPlayer)
 	{
-		pFnReadOnlineStatsByRankAroundPlayer = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_READONLINESTATSBYRANKAROUNDPLAYER));
+		pFnReadOnlineStatsByRankAroundPlayer = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.ReadOnlineStatsByRankAroundPlayer");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execReadOnlineStatsByRankAroundPlayer_Parms ReadOnlineStatsByRankAroundPlayer_Parms;
@@ -9145,7 +9536,8 @@ bool UOnlineStatsInterfaceEOS::ReadOnlineStatsByRank(unsigned char LocalUserNum,
 
 	if (!pFnReadOnlineStatsByRank)
 	{
-		pFnReadOnlineStatsByRank = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_READONLINESTATSBYRANK));
+		pFnReadOnlineStatsByRank = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.ReadOnlineStatsByRank");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execReadOnlineStatsByRank_Parms ReadOnlineStatsByRank_Parms;
@@ -9176,7 +9568,8 @@ bool UOnlineStatsInterfaceEOS::ReadOnlineStatsForFriends(unsigned char LocalUser
 
 	if (!pFnReadOnlineStatsForFriends)
 	{
-		pFnReadOnlineStatsForFriends = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_READONLINESTATSFORFRIENDS));
+		pFnReadOnlineStatsForFriends = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.ReadOnlineStatsForFriends");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execReadOnlineStatsForFriends_Parms ReadOnlineStatsForFriends_Parms;
@@ -9206,7 +9599,8 @@ bool UOnlineStatsInterfaceEOS::ReadOnlineStats(unsigned char LocalUserNum, class
 
 	if (!pFnReadOnlineStats)
 	{
-		pFnReadOnlineStats = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINESTATSINTERFACEEOS_READONLINESTATS));
+		pFnReadOnlineStats = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineStatsInterfaceEOS.ReadOnlineStats");
+
 	}
 
 	UOnlineStatsInterfaceEOS_execReadOnlineStats_Parms ReadOnlineStats_Parms;
@@ -9233,7 +9627,8 @@ void UOnlineUserCloudFileInterfaceEOS::ClearAllDelegates()
 
 	if (!pFnClearAllDelegates)
 	{
-		pFnClearAllDelegates = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_CLEARALLDELEGATES));
+		pFnClearAllDelegates = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ClearAllDelegates");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execClearAllDelegates_Parms ClearAllDelegates_Parms;
@@ -9252,7 +9647,8 @@ void UOnlineUserCloudFileInterfaceEOS::ClearDeleteUserFileCompleteDelegate(struc
 
 	if (!pFnClearDeleteUserFileCompleteDelegate)
 	{
-		pFnClearDeleteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_CLEARDELETEUSERFILECOMPLETEDELEGATE));
+		pFnClearDeleteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ClearDeleteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execClearDeleteUserFileCompleteDelegate_Parms ClearDeleteUserFileCompleteDelegate_Parms;
@@ -9272,7 +9668,8 @@ void UOnlineUserCloudFileInterfaceEOS::AddDeleteUserFileCompleteDelegate(struct 
 
 	if (!pFnAddDeleteUserFileCompleteDelegate)
 	{
-		pFnAddDeleteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ADDDELETEUSERFILECOMPLETEDELEGATE));
+		pFnAddDeleteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddDeleteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execAddDeleteUserFileCompleteDelegate_Parms AddDeleteUserFileCompleteDelegate_Parms;
@@ -9296,7 +9693,8 @@ bool UOnlineUserCloudFileInterfaceEOS::DeleteUserFile(struct FString UserId, str
 
 	if (!pFnDeleteUserFile)
 	{
-		pFnDeleteUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_DELETEUSERFILE));
+		pFnDeleteUserFile = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.DeleteUserFile");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execDeleteUserFile_Parms DeleteUserFile_Parms;
@@ -9327,7 +9725,8 @@ void UOnlineUserCloudFileInterfaceEOS::OnDeleteUserFileComplete(unsigned long bW
 
 	if (!pFnOnDeleteUserFileComplete)
 	{
-		pFnOnDeleteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ONDELETEUSERFILECOMPLETE));
+		pFnOnDeleteUserFileComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.OnDeleteUserFileComplete");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execOnDeleteUserFileComplete_Parms OnDeleteUserFileComplete_Parms;
@@ -9349,7 +9748,8 @@ void UOnlineUserCloudFileInterfaceEOS::ClearWriteUserFileCompleteDelegate(struct
 
 	if (!pFnClearWriteUserFileCompleteDelegate)
 	{
-		pFnClearWriteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_CLEARWRITEUSERFILECOMPLETEDELEGATE));
+		pFnClearWriteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ClearWriteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execClearWriteUserFileCompleteDelegate_Parms ClearWriteUserFileCompleteDelegate_Parms;
@@ -9359,7 +9759,7 @@ void UOnlineUserCloudFileInterfaceEOS::ClearWriteUserFileCompleteDelegate(struct
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddWriteUserFileCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         WriteUserFileCompleteDelegate  (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9369,7 +9769,8 @@ void UOnlineUserCloudFileInterfaceEOS::AddWriteUserFileCompleteDelegate(struct F
 
 	if (!pFnAddWriteUserFileCompleteDelegate)
 	{
-		pFnAddWriteUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ADDWRITEUSERFILECOMPLETEDELEGATE));
+		pFnAddWriteUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddWriteUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execAddWriteUserFileCompleteDelegate_Parms AddWriteUserFileCompleteDelegate_Parms;
@@ -9379,7 +9780,7 @@ void UOnlineUserCloudFileInterfaceEOS::AddWriteUserFileCompleteDelegate(struct F
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.WriteUserFile
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 UserId                         (CPF_Parm | CPF_NeedCtorLink)
@@ -9392,7 +9793,8 @@ bool UOnlineUserCloudFileInterfaceEOS::WriteUserFile(struct FString UserId, stru
 
 	if (!pFnWriteUserFile)
 	{
-		pFnWriteUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_WRITEUSERFILE));
+		pFnWriteUserFile = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.WriteUserFile");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execWriteUserFile_Parms WriteUserFile_Parms;
@@ -9422,7 +9824,8 @@ void UOnlineUserCloudFileInterfaceEOS::OnWriteUserFileComplete(unsigned long bWa
 
 	if (!pFnOnWriteUserFileComplete)
 	{
-		pFnOnWriteUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ONWRITEUSERFILECOMPLETE));
+		pFnOnWriteUserFileComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.OnWriteUserFileComplete");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execOnWriteUserFileComplete_Parms OnWriteUserFileComplete_Parms;
@@ -9444,7 +9847,8 @@ void UOnlineUserCloudFileInterfaceEOS::ClearReadUserFileCompleteDelegate(struct 
 
 	if (!pFnClearReadUserFileCompleteDelegate)
 	{
-		pFnClearReadUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_CLEARREADUSERFILECOMPLETEDELEGATE));
+		pFnClearReadUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ClearReadUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execClearReadUserFileCompleteDelegate_Parms ClearReadUserFileCompleteDelegate_Parms;
@@ -9454,7 +9858,7 @@ void UOnlineUserCloudFileInterfaceEOS::ClearReadUserFileCompleteDelegate(struct 
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddReadUserFileCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         ReadUserFileCompleteDelegate   (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9464,7 +9868,8 @@ void UOnlineUserCloudFileInterfaceEOS::AddReadUserFileCompleteDelegate(struct FS
 
 	if (!pFnAddReadUserFileCompleteDelegate)
 	{
-		pFnAddReadUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ADDREADUSERFILECOMPLETEDELEGATE));
+		pFnAddReadUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddReadUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execAddReadUserFileCompleteDelegate_Parms AddReadUserFileCompleteDelegate_Parms;
@@ -9474,7 +9879,7 @@ void UOnlineUserCloudFileInterfaceEOS::AddReadUserFileCompleteDelegate(struct FS
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ReadUserFile
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 UserId                         (CPF_Parm | CPF_NeedCtorLink)
@@ -9486,7 +9891,8 @@ bool UOnlineUserCloudFileInterfaceEOS::ReadUserFile(struct FString UserId, struc
 
 	if (!pFnReadUserFile)
 	{
-		pFnReadUserFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_READUSERFILE));
+		pFnReadUserFile = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ReadUserFile");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execReadUserFile_Parms ReadUserFile_Parms;
@@ -9515,7 +9921,8 @@ void UOnlineUserCloudFileInterfaceEOS::OnReadUserFileComplete(unsigned long bWas
 
 	if (!pFnOnReadUserFileComplete)
 	{
-		pFnOnReadUserFileComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ONREADUSERFILECOMPLETE));
+		pFnOnReadUserFileComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.OnReadUserFileComplete");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execOnReadUserFileComplete_Parms OnReadUserFileComplete_Parms;
@@ -9527,7 +9934,7 @@ void UOnlineUserCloudFileInterfaceEOS::OnReadUserFileComplete(unsigned long bWas
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.GetUserFileList
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 UserId                         (CPF_Parm | CPF_NeedCtorLink)
 // TArray<struct FEmsFile>        UserFiles                      (CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
@@ -9538,7 +9945,8 @@ void UOnlineUserCloudFileInterfaceEOS::GetUserFileList(struct FString UserId, TA
 
 	if (!pFnGetUserFileList)
 	{
-		pFnGetUserFileList = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_GETUSERFILELIST));
+		pFnGetUserFileList = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.GetUserFileList");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execGetUserFileList_Parms GetUserFileList_Parms;
@@ -9563,7 +9971,8 @@ void UOnlineUserCloudFileInterfaceEOS::ClearEnumerateUserFileCompleteDelegate(st
 
 	if (!pFnClearEnumerateUserFileCompleteDelegate)
 	{
-		pFnClearEnumerateUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_CLEARENUMERATEUSERFILECOMPLETEDELEGATE));
+		pFnClearEnumerateUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ClearEnumerateUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execClearEnumerateUserFileCompleteDelegate_Parms ClearEnumerateUserFileCompleteDelegate_Parms;
@@ -9573,7 +9982,7 @@ void UOnlineUserCloudFileInterfaceEOS::ClearEnumerateUserFileCompleteDelegate(st
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddEnumerateUserFileCompleteDelegate
-// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
+// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         EnumerateUserFileCompleteDelegate (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9583,7 +9992,8 @@ void UOnlineUserCloudFileInterfaceEOS::AddEnumerateUserFileCompleteDelegate(stru
 
 	if (!pFnAddEnumerateUserFileCompleteDelegate)
 	{
-		pFnAddEnumerateUserFileCompleteDelegate = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ADDENUMERATEUSERFILECOMPLETEDELEGATE));
+		pFnAddEnumerateUserFileCompleteDelegate = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.AddEnumerateUserFileCompleteDelegate");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execAddEnumerateUserFileCompleteDelegate_Parms AddEnumerateUserFileCompleteDelegate_Parms;
@@ -9593,7 +10003,7 @@ void UOnlineUserCloudFileInterfaceEOS::AddEnumerateUserFileCompleteDelegate(stru
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.EnumerateUserFiles
-// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
+// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 UserId                         (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9603,7 +10013,8 @@ void UOnlineUserCloudFileInterfaceEOS::EnumerateUserFiles(struct FString UserId)
 
 	if (!pFnEnumerateUserFiles)
 	{
-		pFnEnumerateUserFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ENUMERATEUSERFILES));
+		pFnEnumerateUserFiles = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.EnumerateUserFiles");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execEnumerateUserFiles_Parms EnumerateUserFiles_Parms;
@@ -9628,7 +10039,8 @@ void UOnlineUserCloudFileInterfaceEOS::OnEnumerateUserFilesComplete(unsigned lon
 
 	if (!pFnOnEnumerateUserFilesComplete)
 	{
-		pFnOnEnumerateUserFilesComplete = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_ONENUMERATEUSERFILESCOMPLETE));
+		pFnOnEnumerateUserFilesComplete = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.OnEnumerateUserFilesComplete");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execOnEnumerateUserFilesComplete_Parms OnEnumerateUserFilesComplete_Parms;
@@ -9651,7 +10063,8 @@ bool UOnlineUserCloudFileInterfaceEOS::ClearFile(struct FString UserId, struct F
 
 	if (!pFnClearFile)
 	{
-		pFnClearFile = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_CLEARFILE));
+		pFnClearFile = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ClearFile");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execClearFile_Parms ClearFile_Parms;
@@ -9679,7 +10092,8 @@ bool UOnlineUserCloudFileInterfaceEOS::ClearFiles(struct FString UserId)
 
 	if (!pFnClearFiles)
 	{
-		pFnClearFiles = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_CLEARFILES));
+		pFnClearFiles = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.ClearFiles");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execClearFiles_Parms ClearFiles_Parms;
@@ -9695,7 +10109,7 @@ bool UOnlineUserCloudFileInterfaceEOS::ClearFiles(struct FString UserId)
 };
 
 // Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.GetFileContents
-// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 UserId                         (CPF_Parm | CPF_NeedCtorLink)
@@ -9708,7 +10122,8 @@ bool UOnlineUserCloudFileInterfaceEOS::GetFileContents(struct FString UserId, st
 
 	if (!pFnGetFileContents)
 	{
-		pFnGetFileContents = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS_ONLINEUSERCLOUDFILEINTERFACEEOS_GETFILECONTENTS));
+		pFnGetFileContents = UFunction::FindFunction("Function OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS.GetFileContents");
+
 	}
 
 	UOnlineUserCloudFileInterfaceEOS_execGetFileContents_Parms GetFileContents_Parms;
@@ -9737,7 +10152,8 @@ void U__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE
 
 	if (!pFn__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE)
 	{
-		pFn__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS___ONLINEPLAYERINTERFACEEOS__LINKEDACCOUNT_35478360455FC0803A7CA081E5B560AE___ONLINEPLAYERINTERFACEEOS__LINKEDACCOUNT_35478360455FC0803A7CA081E5B560AE));
+		pFn__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE = UFunction::FindFunction("Function OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE.__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE");
+
 	}
 
 	U__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE_exec__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE_Parms __OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE_Parms;
@@ -9759,7 +10175,8 @@ void U__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E6
 
 	if (!pFn__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05)
 	{
-		pFn__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05 = reinterpret_cast<UFunction*>(UObject::GObjObjects()->At(IDX_FUNCTION_ONLINESUBSYSTEMEOS___ONLINEPLAYERINTERFACEEOS__REQUESTNATIVEPLATFORMAUTHTICKET_220AAF194826E64582E7DEA5AA114C05___ONLINEPLAYERINTERFACEEOS__REQUESTNATIVEPLATFORMAUTHTICKET_220AAF194826E64582E7DEA5AA114C05));
+		pFn__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05 = UFunction::FindFunction("Function OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05.__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05");
+
 	}
 
 	U__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05_exec__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05_Parms __OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05_Parms;

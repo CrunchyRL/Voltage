@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: TAGame_classes.hpp
@@ -1932,7 +1932,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME__AITYPES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame._AITypes_TA");
 		}
 
 		return uClassPointer;
@@ -1952,7 +1952,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME__SHOPTYPES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame._ShopTypes_TA");
 		}
 
 		return uClassPointer;
@@ -1975,7 +1975,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME__TYPES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame._Types_TA");
 		}
 
 		return uClassPointer;
@@ -2062,7 +2062,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AICONTROLLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AIController_TA");
 		}
 
 		return uClassPointer;
@@ -2141,7 +2141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AICONTROLLER_SOCCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AIController_Soccar_TA");
 		}
 
 		return uClassPointer;
@@ -2183,7 +2183,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AIMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AIManager_TA");
 		}
 
 		return uClassPointer;
@@ -2211,7 +2211,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ANIMNODEBLEND_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AnimNodeBlend_TA");
 		}
 
 		return uClassPointer;
@@ -2232,7 +2232,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ANIMNODEBLENDBOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AnimNodeBlendBoost_TA");
 		}
 
 		return uClassPointer;
@@ -2254,7 +2254,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ANIMNODEBLENDSPEED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AnimNodeBlendSpeed_TA");
 		}
 
 		return uClassPointer;
@@ -2283,7 +2283,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ARENAREFLECTIONSMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ArenaReflectionsManager_TA");
 		}
 
 		return uClassPointer;
@@ -2334,7 +2334,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ARENASOUNDSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ArenaSoundSettings_TA");
 		}
 
 		return uClassPointer;
@@ -2357,7 +2357,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ATTACHMENTBEHAVIOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AttachmentBehavior_TA");
 		}
 
 		return uClassPointer;
@@ -2388,7 +2388,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ATTACHMENTBEHAVIOR_STEERING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AttachmentBehavior_Steering_TA");
 		}
 
 		return uClassPointer;
@@ -2423,7 +2423,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RIMSPINNER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RimSpinner_TA");
 		}
 
 		return uClassPointer;
@@ -2456,7 +2456,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELSHIMMY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelShimmy_TA");
 		}
 
 		return uClassPointer;
@@ -2500,7 +2500,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERCONTROLLERBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerControllerBase_TA");
 		}
 
 		return uClassPointer;
@@ -2670,7 +2670,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERCONTROLLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerController_TA");
 		}
 
 		return uClassPointer;
@@ -2904,7 +2904,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUDIOPRIORITYCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AudioPriorityComponent_TA");
 		}
 
 		return uClassPointer;
@@ -2931,7 +2931,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLLOCATIONCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallLocationComponent_TA");
 		}
 
 		return uClassPointer;
@@ -2954,7 +2954,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLRADIUSVOLUME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallRadiusVolume_TA");
 		}
 
 		return uClassPointer;
@@ -3013,7 +3013,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RBACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RBActor_TA");
 		}
 
 		return uClassPointer;
@@ -3129,7 +3129,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Ball_TA");
 		}
 
 		return uClassPointer;
@@ -3219,7 +3219,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLTRAJECTORYCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallTrajectoryComponent_TA");
 		}
 
 		return uClassPointer;
@@ -3258,7 +3258,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLTRAJECTORYCOMPONENT_LINE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallTrajectoryComponent_Line_TA");
 		}
 
 		return uClassPointer;
@@ -3284,7 +3284,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLTRAJECTORYCOMPONENT_BEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallTrajectoryComponent_Beam_TA");
 		}
 
 		return uClassPointer;
@@ -3313,7 +3313,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLTRAJECTORYCOMPONENT_SPLINE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallTrajectoryComponent_Spline_TA");
 		}
 
 		return uClassPointer;
@@ -3349,7 +3349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLTRAJECTORYCOMPONENT_MESH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallTrajectoryComponent_Mesh_TA");
 		}
 
 		return uClassPointer;
@@ -3381,7 +3381,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BOOSTMESH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BoostMesh_TA");
 		}
 
 		return uClassPointer;
@@ -3428,7 +3428,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BREAKOUTACTOR_PLATFORM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BreakOutActor_Platform_TA");
 		}
 
 		return uClassPointer;
@@ -3481,7 +3481,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTCOMPONENT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTComponent");
 		}
 
 		return uClassPointer;
@@ -3513,7 +3513,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTLOCKCOLLECTION));
+			uClassPointer = UObject::FindClass("Class TAGame.BTLockCollection");
 		}
 
 		return uClassPointer;
@@ -3544,7 +3544,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTNODE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTNode");
 		}
 
 		return uClassPointer;
@@ -3568,7 +3568,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTCONDITIONALNODE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTConditionalNode");
 		}
 
 		return uClassPointer;
@@ -3591,7 +3591,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction");
 		}
 
 		return uClassPointer;
@@ -3620,7 +3620,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_TARGET));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_Target");
 		}
 
 		return uClassPointer;
@@ -3662,7 +3662,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_MOVETO));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_MoveTo");
 		}
 
 		return uClassPointer;
@@ -3701,7 +3701,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTMOVEMODIFIER));
+			uClassPointer = UObject::FindClass("Class TAGame.BTMoveModifier");
 		}
 
 		return uClassPointer;
@@ -3727,7 +3727,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTCONDITION));
+			uClassPointer = UObject::FindClass("Class TAGame.BTCondition");
 		}
 
 		return uClassPointer;
@@ -3753,7 +3753,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_ANY));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Any");
 		}
 
 		return uClassPointer;
@@ -3774,7 +3774,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_NOTANY));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_NotAny");
 		}
 
 		return uClassPointer;
@@ -3797,7 +3797,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_PROXYBASE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_ProxyBase");
 		}
 
 		return uClassPointer;
@@ -3823,7 +3823,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_TARGETBASE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_TargetBase");
 		}
 
 		return uClassPointer;
@@ -3861,7 +3861,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_TARGET));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Target");
 		}
 
 		return uClassPointer;
@@ -3883,7 +3883,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_SELECTACTOR));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_SelectActor");
 		}
 
 		return uClassPointer;
@@ -3904,7 +3904,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_INPUT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_Input");
 		}
 
 		return uClassPointer;
@@ -3926,7 +3926,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_STOP));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_Stop");
 		}
 
 		return uClassPointer;
@@ -3952,7 +3952,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_HITBALL));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_HitBall");
 		}
 
 		return uClassPointer;
@@ -3979,7 +3979,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_CATCHBALL));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_CatchBall");
 		}
 
 		return uClassPointer;
@@ -4001,7 +4001,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_WIGGLETIRES));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_WiggleTires");
 		}
 
 		return uClassPointer;
@@ -4024,7 +4024,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTNODEPARENT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTNodeParent");
 		}
 
 		return uClassPointer;
@@ -4044,7 +4044,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTEXECUTOR));
+			uClassPointer = UObject::FindClass("Class TAGame.BTExecutor");
 		}
 
 		return uClassPointer;
@@ -4066,7 +4066,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTRANDOMSELECTOR));
+			uClassPointer = UObject::FindClass("Class TAGame.BTRandomSelector");
 		}
 
 		return uClassPointer;
@@ -4086,7 +4086,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTSELECTOR));
+			uClassPointer = UObject::FindClass("Class TAGame.BTSelector");
 		}
 
 		return uClassPointer;
@@ -4106,7 +4106,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTEVALUATOR));
+			uClassPointer = UObject::FindClass("Class TAGame.BTEvaluator");
 		}
 
 		return uClassPointer;
@@ -4126,7 +4126,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTSEQUENCE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTSequence");
 		}
 
 		return uClassPointer;
@@ -4147,7 +4147,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTDECORATOR));
+			uClassPointer = UObject::FindClass("Class TAGame.BTDecorator");
 		}
 
 		return uClassPointer;
@@ -4171,7 +4171,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTDECO_RANDOMSTEER));
+			uClassPointer = UObject::FindClass("Class TAGame.BTDeco_RandomSteer");
 		}
 
 		return uClassPointer;
@@ -4192,7 +4192,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTDECO_SUCCESS));
+			uClassPointer = UObject::FindClass("Class TAGame.BTDeco_Success");
 		}
 
 		return uClassPointer;
@@ -4215,7 +4215,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTDYNAMICLINK));
+			uClassPointer = UObject::FindClass("Class TAGame.BTDynamicLink");
 		}
 
 		return uClassPointer;
@@ -4244,7 +4244,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTLOCK));
+			uClassPointer = UObject::FindClass("Class TAGame.BTLock");
 		}
 
 		return uClassPointer;
@@ -4265,7 +4265,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTWEIGHT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTWeight");
 		}
 
 		return uClassPointer;
@@ -4286,7 +4286,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTPROXYTYPE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTProxyType");
 		}
 
 		return uClassPointer;
@@ -4310,7 +4310,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTTARGET));
+			uClassPointer = UObject::FindClass("Class TAGame.BTTarget");
 		}
 
 		return uClassPointer;
@@ -4331,7 +4331,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BUGREPORT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BugReport_TA");
 		}
 
 		return uClassPointer;
@@ -4354,7 +4354,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CACHEDUNLOCKEDPRODUCTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CachedUnlockedProducts_TA");
 		}
 
 		return uClassPointer;
@@ -4390,7 +4390,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOLORSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarColorSet_TA");
 		}
 
 		return uClassPointer;
@@ -4431,7 +4431,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_TA");
 		}
 
 		return uClassPointer;
@@ -4484,7 +4484,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_AIRCONTROL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_AirControl_TA");
 		}
 
 		return uClassPointer;
@@ -4510,7 +4510,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_AIRCONTROL_ROBIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_AirControl_Robin_TA");
 		}
 
 		return uClassPointer;
@@ -4551,7 +4551,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_BOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_Boost_TA");
 		}
 
 		return uClassPointer;
@@ -4627,7 +4627,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_DODGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_Dodge_TA");
 		}
 
 		return uClassPointer;
@@ -4658,7 +4658,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_DOUBLEJUMP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_DoubleJump_TA");
 		}
 
 		return uClassPointer;
@@ -4684,7 +4684,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_DOUBLEJUMP_ROBIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_DoubleJump_Robin_TA");
 		}
 
 		return uClassPointer;
@@ -4709,7 +4709,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_FLIPCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_FlipCar_TA");
 		}
 
 		return uClassPointer;
@@ -4744,7 +4744,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_JUMP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_Jump_TA");
 		}
 
 		return uClassPointer;
@@ -4771,7 +4771,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARCOMPONENT_JUMP_ROBIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarComponent_Jump_Robin_TA");
 		}
 
 		return uClassPointer;
@@ -4808,7 +4808,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_TA");
 		}
 
 		return uClassPointer;
@@ -4870,7 +4870,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BALLGRAVITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_BallGravity_TA");
 		}
 
 		return uClassPointer;
@@ -4911,7 +4911,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_HAUNTEDBALLBEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_HauntedBallBeam_TA");
 		}
 
 		return uClassPointer;
@@ -4950,7 +4950,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_TARGETED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Targeted_TA");
 		}
 
 		return uClassPointer;
@@ -4999,7 +4999,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BALLFREEZE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_BallFreeze_TA");
 		}
 
 		return uClassPointer;
@@ -5066,7 +5066,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_GRAPPLINGHOOK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_GrapplingHook_TA");
 		}
 
 		return uClassPointer;
@@ -5149,7 +5149,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_SPRING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Spring_TA");
 		}
 
 		return uClassPointer;
@@ -5184,7 +5184,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BALLLASSO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_BallLasso_TA");
 		}
 
 		return uClassPointer;
@@ -5241,7 +5241,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_TORNADO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Tornado_TA");
 		}
 
 		return uClassPointer;
@@ -5270,7 +5270,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CERTIFIEDSTAT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CertifiedStat_TA");
 		}
 
 		return uClassPointer;
@@ -5297,7 +5297,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CERTIFIEDSTATDATABASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CertifiedStatDatabase_TA");
 		}
 
 		return uClassPointer;
@@ -5326,7 +5326,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLIENTINPUTDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClientInputData_TA");
 		}
 
 		return uClassPointer;
@@ -5352,7 +5352,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLIENTJITTERBUFFER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClientJitterBuffer_TA");
 		}
 
 		return uClassPointer;
@@ -5385,7 +5385,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_COLLISIONTESTCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CollisionTestComponent_TA");
 		}
 
 		return uClassPointer;
@@ -5405,7 +5405,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONTENTCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ContentConfig_TA");
 		}
 
 		return uClassPointer;
@@ -5455,7 +5455,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDACTORSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdActorSettings_TA");
 		}
 
 		return uClassPointer;
@@ -5480,7 +5480,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDNOISEMODIFIER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdNoiseModifier_TA");
 		}
 
 		return uClassPointer;
@@ -5502,7 +5502,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DATAASSET_ESPORTSTEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DataAsset_ESportsTeam_TA");
 		}
 
 		return uClassPointer;
@@ -5526,7 +5526,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DATAASSETDATABASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DataAssetDatabase_TA");
 		}
 
 		return uClassPointer;
@@ -5550,7 +5550,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DATAASSETDATABASE_ESPORTSTEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DataAssetDatabase_ESportsTeam_TA");
 		}
 
 		return uClassPointer;
@@ -5572,7 +5572,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DECALCOMPONENT_CONSTRAINED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DecalComponent_Constrained_TA");
 		}
 
 		return uClassPointer;
@@ -5594,7 +5594,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DISTRIBUTIONFLOATSPEED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DistributionFloatSpeed_TA");
 		}
 
 		return uClassPointer;
@@ -5614,7 +5614,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DISTRIBUTIONFLOATSTEER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DistributionFloatSteer_TA");
 		}
 
 		return uClassPointer;
@@ -5643,7 +5643,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DLCPACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DLCPack_TA");
 		}
 
 		return uClassPointer;
@@ -5674,7 +5674,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOBASECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioBaseComponent_TA");
 		}
 
 		return uClassPointer;
@@ -5706,7 +5706,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioComponent_TA");
 		}
 
 		return uClassPointer;
@@ -5743,7 +5743,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioREVComponent_TA");
 		}
 
 		return uClassPointer;
@@ -5771,7 +5771,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOBLOWOFFCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioBlowoffComponent_TA");
 		}
 
 		return uClassPointer;
@@ -5799,7 +5799,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOPREVIEWBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioPreviewBase_TA");
 		}
 
 		return uClassPointer;
@@ -5835,7 +5835,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOPREVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioPreview_TA");
 		}
 
 		return uClassPointer;
@@ -5863,7 +5863,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOPROFILEBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioProfileBase_TA");
 		}
 
 		return uClassPointer;
@@ -5900,7 +5900,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOPROFILE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioProfile_TA");
 		}
 
 		return uClassPointer;
@@ -5923,7 +5923,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOPROFILEREV_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioProfileREV_TA");
 		}
 
 		return uClassPointer;
@@ -5947,7 +5947,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVSIMBOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioRevSimBoost_TA");
 		}
 
 		return uClassPointer;
@@ -5975,7 +5975,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVSIMBOOSTLEVEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioRevSimBoostLevel_TA");
 		}
 
 		return uClassPointer;
@@ -6001,7 +6001,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVSIMGEARMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioRevSimGearManager_TA");
 		}
 
 		return uClassPointer;
@@ -6028,7 +6028,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVSIMLIMITER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioRevSimLimiter_TA");
 		}
 
 		return uClassPointer;
@@ -6055,7 +6055,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVSIMRESISTANCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioRevSimResistance_TA");
 		}
 
 		return uClassPointer;
@@ -6077,7 +6077,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVSIMREVERSE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioRevSimReverse_TA");
 		}
 
 		return uClassPointer;
@@ -6104,7 +6104,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOREVSIMVELOCITYSYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioRevSimVelocitySync_TA");
 		}
 
 		return uClassPointer;
@@ -6156,7 +6156,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINESHARE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineShare_TA");
 		}
 
 		return uClassPointer;
@@ -6224,7 +6224,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Errors_TA");
 		}
 
 		return uClassPointer;
@@ -6247,7 +6247,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EXPLOSIONHITHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ExplosionHitHandler_TA");
 		}
 
 		return uClassPointer;
@@ -6272,7 +6272,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DEFAULTHITHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DefaultHitHandler_TA");
 		}
 
 		return uClassPointer;
@@ -6315,7 +6315,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ORBITHITHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OrbitHitHandler_TA");
 		}
 
 		return uClassPointer;
@@ -6344,7 +6344,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GREENSCREENEFFECTHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GreenScreenEffectHandler_TA");
 		}
 
 		return uClassPointer;
@@ -6371,7 +6371,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_JIGGLEHITHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.JiggleHitHandler_TA");
 		}
 
 		return uClassPointer;
@@ -6394,7 +6394,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FEATUREFILTERTEST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FeatureFilterTest_TA");
 		}
 
 		return uClassPointer;
@@ -6434,7 +6434,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FLOCKACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FlockActor_TA");
 		}
 
 		return uClassPointer;
@@ -6461,7 +6461,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FORCEVOLUME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ForceVolume_TA");
 		}
 
 		return uClassPointer;
@@ -6488,7 +6488,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FPSBUCKETRECORDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FpsBucketRecorder_TA");
 		}
 
 		return uClassPointer;
@@ -6513,7 +6513,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FRIENDSLISTBUILDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FriendsListBuilder_TA");
 		}
 
 		return uClassPointer;
@@ -6534,7 +6534,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FRIENDSLISTUTILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FriendsListUtils_TA");
 		}
 
 		return uClassPointer;
@@ -6560,7 +6560,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_GAMEEDITORACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_GameEditorActor_TA");
 		}
 
 		return uClassPointer;
@@ -6589,7 +6589,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_TA");
 		}
 
 		return uClassPointer;
@@ -6638,7 +6638,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_BALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_Ball_TA");
 		}
 
 		return uClassPointer;
@@ -6687,7 +6687,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_BALLBREAKOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_BallBreakout_TA");
 		}
 
 		return uClassPointer;
@@ -6735,7 +6735,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_BALLHAUNTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_BallHaunted_TA");
 		}
 
 		return uClassPointer;
@@ -6792,7 +6792,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_BOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_Boost_TA");
 		}
 
 		return uClassPointer;
@@ -6851,7 +6851,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_BREAKOUTPLATFORM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_BreakoutPlatform_TA");
 		}
 
 		return uClassPointer;
@@ -6918,7 +6918,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_CAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_Car_TA");
 		}
 
 		return uClassPointer;
@@ -6966,7 +6966,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXTRAIT_BOOSTPARTICLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXTrait_BoostParticle_TA");
 		}
 
 		return uClassPointer;
@@ -7038,7 +7038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameData_TA");
 		}
 
 		return uClassPointer;
@@ -7069,7 +7069,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEENGINE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEngine_TA");
 		}
 
 		return uClassPointer;
@@ -7184,7 +7184,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_TA");
 		}
 
 		return uClassPointer;
@@ -7405,7 +7405,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Team_TA");
 		}
 
 		return uClassPointer;
@@ -7480,7 +7480,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEMODE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameMode_TA");
 		}
 
 		return uClassPointer;
@@ -7502,7 +7502,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEMODELIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameModeList_TA");
 		}
 
 		return uClassPointer;
@@ -7570,7 +7570,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEOBSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameObserver_TA");
 		}
 
 		return uClassPointer;
@@ -7633,7 +7633,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMESHARE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameShare_TA");
 		}
 
 		return uClassPointer;
@@ -7682,7 +7682,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEVIEWPORTCLIENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameViewportClient_TA");
 		}
 
 		return uClassPointer;
@@ -7750,7 +7750,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PERSONAS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Personas_TA");
 		}
 
 		return uClassPointer;
@@ -7783,7 +7783,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXENGINE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxEngine_TA");
 		}
 
 		return uClassPointer;
@@ -7828,7 +7828,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GLOBALLOOKUPTEXTURE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GlobalLookupTexture_TA");
 		}
 
 		return uClassPointer;
@@ -7882,7 +7882,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GOAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Goal_TA");
 		}
 
 		return uClassPointer;
@@ -7910,7 +7910,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GROUNDSTATICMESHACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GroundStaticMeshActor_TA");
 		}
 
 		return uClassPointer;
@@ -7934,7 +7934,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_HANDLINGPRESET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.HandlingPreset_TA");
 		}
 
 		return uClassPointer;
@@ -7956,7 +7956,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_HIDELEVELASSETSBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.HideLevelAssetsBase_TA");
 		}
 
 		return uClassPointer;
@@ -7979,7 +7979,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GREENSCREEN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GreenScreen_TA");
 		}
 
 		return uClassPointer;
@@ -8002,7 +8002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOGGLEACTORVISIBILITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ToggleActorVisibility_TA");
 		}
 
 		return uClassPointer;
@@ -8023,7 +8023,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ICANEQUIP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ICanEquip_TA");
 		}
 
 		return uClassPointer;
@@ -8045,7 +8045,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDENTICALPRODUCTCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdenticalProductCache_TA");
 		}
 
 		return uClassPointer;
@@ -8106,7 +8106,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IMPACTEFFECTSCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ImpactEffectsComponent_TA");
 		}
 
 		return uClassPointer;
@@ -8137,7 +8137,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INPUTRECORDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.InputRecorder_TA");
 		}
 
 		return uClassPointer;
@@ -8166,7 +8166,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INTERPTRACKANIMCONTROLWITHSENSIBLEDEFAULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.InterpTrackAnimControlWithSensibleDefault_TA");
 		}
 
 		return uClassPointer;
@@ -8192,7 +8192,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INTERPTRACKBOOSTTOGGLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.InterpTrackBoostToggle_TA");
 		}
 
 		return uClassPointer;
@@ -8214,7 +8214,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INTERPTRACKSKELCONTROLROTATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.InterpTrackSkelControlRotation_TA");
 		}
 
 		return uClassPointer;
@@ -8240,7 +8240,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ITEMDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ItemDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -8263,7 +8263,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ITICKNOTIFY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ITickNotify_TA");
 		}
 
 		return uClassPointer;
@@ -8284,7 +8284,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LIGHTCURVETYPE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LightCurveType_TA");
 		}
 
 		return uClassPointer;
@@ -8315,7 +8315,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOCALPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LocalPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -8379,7 +8379,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapData_TA");
 		}
 
 		return uClassPointer;
@@ -8412,7 +8412,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPDATALOADER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapDataLoader_TA");
 		}
 
 		return uClassPointer;
@@ -8448,7 +8448,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapList_TA");
 		}
 
 		return uClassPointer;
@@ -8476,7 +8476,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapSet_TA");
 		}
 
 		return uClassPointer;
@@ -8502,7 +8502,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHBROADCAST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchBroadcast_TA");
 		}
 
 		return uClassPointer;
@@ -8567,7 +8567,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHBROADCASTLOG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchBroadcastLog_TA");
 		}
 
 		return uClassPointer;
@@ -8592,7 +8592,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATERIALPARAMSSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaterialParamsSet_TA");
 		}
 
 		return uClassPointer;
@@ -8619,7 +8619,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAXACTORSGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaxActorsGroup_TA");
 		}
 
 		return uClassPointer;
@@ -8654,7 +8654,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MESSAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Message_TA");
 		}
 
 		return uClassPointer;
@@ -8687,7 +8687,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATORGAMESETTING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MutatorGameSetting_TA");
 		}
 
 		return uClassPointer;
@@ -8710,7 +8710,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NAVIGATIONHANDLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NavigationHandle_TA");
 		}
 
 		return uClassPointer;
@@ -8738,7 +8738,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETWORKCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetworkConfig_TA");
 		}
 
 		return uClassPointer;
@@ -8773,7 +8773,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETWORKINPUTBUFFER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetworkInputBuffer_TA");
 		}
 
 		return uClassPointer;
@@ -8822,7 +8822,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETWORKINPUTBUFFER_CSTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetworkInputBuffer_CSTS_TA");
 		}
 
 		return uClassPointer;
@@ -8852,7 +8852,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETWORKINPUTBUFFER_SERVERCONSUME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetworkInputBuffer_ServerConsume_TA");
 		}
 
 		return uClassPointer;
@@ -8885,7 +8885,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETWORKINPUTBUFFER_STS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetworkInputBuffer_STS_TA");
 		}
 
 		return uClassPointer;
@@ -8922,7 +8922,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETWORKJITTERSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetworkJitterSettings_TA");
 		}
 
 		return uClassPointer;
@@ -8944,7 +8944,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NOTE_LINKED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Note_Linked_TA");
 		}
 
 		return uClassPointer;
@@ -8980,7 +8980,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Notification_TA");
 		}
 
 		return uClassPointer;
@@ -9023,7 +9023,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GENERICNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GenericNotification_TA");
 		}
 
 		return uClassPointer;
@@ -9049,7 +9049,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NOTIFICATIONMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NotificationManager_TA");
 		}
 
 		return uClassPointer;
@@ -9096,7 +9096,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NXFORCEFIELDCAPSULE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NxForceFieldCapsule_TA");
 		}
 
 		return uClassPointer;
@@ -9127,7 +9127,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineProduct_TA");
 		}
 
 		return uClassPointer;
@@ -9188,7 +9188,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPRODUCTSTORE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineProductStore_TA");
 		}
 
 		return uClassPointer;
@@ -9222,7 +9222,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINESAVERECORD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineSaveRecord_TA");
 		}
 
 		return uClassPointer;
@@ -9247,7 +9247,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PAINTDATABASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PaintDatabase_TA");
 		}
 
 		return uClassPointer;
@@ -9274,7 +9274,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTICLESYSTEMCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ParticleSystemComponent_TA");
 		}
 
 		return uClassPointer;
@@ -9324,7 +9324,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PERSONA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Persona_TA");
 		}
 
 		return uClassPointer;
@@ -9377,7 +9377,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PERSONAS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Personas_TA");
 		}
 
 		return uClassPointer;
@@ -9417,7 +9417,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PHYSICALMATERIALPROPERTY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PhysicalMaterialProperty_TA");
 		}
 
 		return uClassPointer;
@@ -9453,7 +9453,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PHYSICSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PhysicsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -9481,7 +9481,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PITCHTEKDRAWINGCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PitchTekDrawingComponent_TA");
 		}
 
 		return uClassPointer;
@@ -9527,7 +9527,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERVANITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerVanity_TA");
 		}
 
 		return uClassPointer;
@@ -9573,7 +9573,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERAVATAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerAvatar_TA");
 		}
 
 		return uClassPointer;
@@ -9596,7 +9596,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERAVATARBORDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerAvatarBorder_TA");
 		}
 
 		return uClassPointer;
@@ -9619,7 +9619,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERBANNER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerBanner_TA");
 		}
 
 		return uClassPointer;
@@ -9652,7 +9652,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PREMIUMSKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PremiumSkin_TA");
 		}
 
 		return uClassPointer;
@@ -9674,7 +9674,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PREMIUMSKINSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PremiumSkinSet_TA");
 		}
 
 		return uClassPointer;
@@ -9713,7 +9713,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_TA");
 		}
 
 		return uClassPointer;
@@ -9748,7 +9748,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_ATTACHMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Attachment_TA");
 		}
 
 		return uClassPointer;
@@ -9824,7 +9824,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_BODY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Body_TA");
 		}
 
 		return uClassPointer;
@@ -9855,7 +9855,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_BOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Boost_TA");
 		}
 
 		return uClassPointer;
@@ -9883,7 +9883,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_BOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Bot_TA");
 		}
 
 		return uClassPointer;
@@ -9904,7 +9904,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_CONTAINER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Container_TA");
 		}
 
 		return uClassPointer;
@@ -9932,7 +9932,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_ENGINEAUDIO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_EngineAudio_TA");
 		}
 
 		return uClassPointer;
@@ -9957,7 +9957,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_GOALEXPLOSION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_GoalExplosion_TA");
 		}
 
 		return uClassPointer;
@@ -9982,7 +9982,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_PACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Pack_TA");
 		}
 
 		return uClassPointer;
@@ -10015,7 +10015,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_PAINTFINISH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_PaintFinish_TA");
 		}
 
 		return uClassPointer;
@@ -10042,7 +10042,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_PLAYERVANITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_PlayerVanity_TA");
 		}
 
 		return uClassPointer;
@@ -10062,7 +10062,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_PLAYERAVATAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_PlayerAvatar_TA");
 		}
 
 		return uClassPointer;
@@ -10082,7 +10082,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_PLAYERAVATARBORDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_PlayerAvatarBorder_TA");
 		}
 
 		return uClassPointer;
@@ -10102,7 +10102,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_PLAYERBANNER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_PlayerBanner_TA");
 		}
 
 		return uClassPointer;
@@ -10133,7 +10133,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_SKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Skin_TA");
 		}
 
 		return uClassPointer;
@@ -10168,7 +10168,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_SUPERSONICTRAIL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_SupersonicTrail_TA");
 		}
 
 		return uClassPointer;
@@ -10206,7 +10206,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_WHEEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Wheel_TA");
 		}
 
 		return uClassPointer;
@@ -10229,7 +10229,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETATTRIBUTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetAttribute_TA");
 		}
 
 		return uClassPointer;
@@ -10252,7 +10252,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ASSETATTRIBUTE_TEAMEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AssetAttribute_TeamEdition_TA");
 		}
 
 		return uClassPointer;
@@ -10289,7 +10289,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_PAINTSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_PaintSettings_TA");
 		}
 
 		return uClassPointer;
@@ -10315,7 +10315,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETLOADER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetLoader_TA");
 		}
 
 		return uClassPointer;
@@ -10348,7 +10348,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETREFERENCEBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetReferenceBase_TA");
 		}
 
 		return uClassPointer;
@@ -10369,7 +10369,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETREFERENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetReference_TA");
 		}
 
 		return uClassPointer;
@@ -10390,7 +10390,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETREFERENCEBODY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetReferenceBody_TA");
 		}
 
 		return uClassPointer;
@@ -10411,7 +10411,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETREFERENCEPAINTFINISH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetReferencePaintFinish_TA");
 		}
 
 		return uClassPointer;
@@ -10432,7 +10432,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETREFERENCEWHEEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetReferenceWheel_TA");
 		}
 
 		return uClassPointer;
@@ -10456,7 +10456,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_TA");
 		}
 
 		return uClassPointer;
@@ -10495,7 +10495,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_ANIMATEDSKINLABEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_AnimatedSkinLabel_TA");
 		}
 
 		return uClassPointer;
@@ -10517,7 +10517,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_BLUEPRINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Blueprint_TA");
 		}
 
 		return uClassPointer;
@@ -10545,7 +10545,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_BODYCOMPATIBILITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_BodyCompatibility_TA");
 		}
 
 		return uClassPointer;
@@ -10570,7 +10570,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_CERTIFIED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Certified_TA");
 		}
 
 		return uClassPointer;
@@ -10604,7 +10604,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_COMPATIBLEPRODUCTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_CompatibleProducts_TA");
 		}
 
 		return uClassPointer;
@@ -10628,7 +10628,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_CONTAINER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Container_TA");
 		}
 
 		return uClassPointer;
@@ -10649,7 +10649,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_CURRENCY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Currency_TA");
 		}
 
 		return uClassPointer;
@@ -10675,7 +10675,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_KEY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Key_TA");
 		}
 
 		return uClassPointer;
@@ -10696,7 +10696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_LICENSED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Licensed_TA");
 		}
 
 		return uClassPointer;
@@ -10718,7 +10718,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_LICENSEGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_LicenseGroup_TA");
 		}
 
 		return uClassPointer;
@@ -10739,7 +10739,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_PAINTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Painted_TA");
 		}
 
 		return uClassPointer;
@@ -10779,7 +10779,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_PAINTSETTINGSUPLOAD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_PaintSettingsUpload_TA");
 		}
 
 		return uClassPointer;
@@ -10801,7 +10801,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_PLATFORMEXCLUSIVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_PlatformExclusive_TA");
 		}
 
 		return uClassPointer;
@@ -10821,7 +10821,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_PREVIEWONLY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_PreviewOnly_TA");
 		}
 
 		return uClassPointer;
@@ -10842,7 +10842,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_QUALITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Quality_TA");
 		}
 
 		return uClassPointer;
@@ -10868,7 +10868,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_QUALITYPRODUCTDBOVERRIDE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_QualityProductDBOverride_TA");
 		}
 
 		return uClassPointer;
@@ -10889,7 +10889,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_REQUIRESOWNEDPRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_RequiresOwnedProduct_TA");
 		}
 
 		return uClassPointer;
@@ -10909,7 +10909,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_SCHEMATIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Schematic_TA");
 		}
 
 		return uClassPointer;
@@ -10934,7 +10934,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_SORTINGLABEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_SortingLabel_TA");
 		}
 
 		return uClassPointer;
@@ -10957,7 +10957,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_SPECIALEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_SpecialEdition_TA");
 		}
 
 		return uClassPointer;
@@ -10987,7 +10987,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_SPECIALEDITIONSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_SpecialEditionSettings_TA");
 		}
 
 		return uClassPointer;
@@ -11008,7 +11008,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TEAMEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_TeamEdition_TA");
 		}
 
 		return uClassPointer;
@@ -11040,7 +11040,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TEAMEDITIONUPLOAD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_TeamEditionUpload_TA");
 		}
 
 		return uClassPointer;
@@ -11061,7 +11061,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TEAMFORCEDPRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_TeamForcedProduct_TA");
 		}
 
 		return uClassPointer;
@@ -11087,7 +11087,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TEAMOVERRIDE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_TeamOverride_TA");
 		}
 
 		return uClassPointer;
@@ -11110,7 +11110,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TIERED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Tiered_TA");
 		}
 
 		return uClassPointer;
@@ -11131,7 +11131,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TITLEID_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_TitleID_TA");
 		}
 
 		return uClassPointer;
@@ -11155,7 +11155,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_UNLOCKMETHOD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_UnlockMethod_TA");
 		}
 
 		return uClassPointer;
@@ -11176,7 +11176,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_USERCOLOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_UserColor_TA");
 		}
 
 		return uClassPointer;
@@ -11201,7 +11201,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTDATABASE_BUILDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductDatabase_Builder_TA");
 		}
 
 		return uClassPointer;
@@ -11234,7 +11234,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTDATABASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductDatabase_TA");
 		}
 
 		return uClassPointer;
@@ -11297,7 +11297,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEQUIPPROFILE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductEquipProfile_TA");
 		}
 
 		return uClassPointer;
@@ -11325,7 +11325,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEQUIPPROFILESLOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductEquipProfileSlot_TA");
 		}
 
 		return uClassPointer;
@@ -11350,7 +11350,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEQUIPPROFILESLOT_CUSTOM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductEquipProfileSlot_Custom_TA");
 		}
 
 		return uClassPointer;
@@ -11372,7 +11372,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEQUIPPROFILESLOT_DISABLED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductEquipProfileSlot_Disabled_TA");
 		}
 
 		return uClassPointer;
@@ -11393,7 +11393,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEQUIPPROFILESLOT_ENABLED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductEquipProfileSlot_Enabled_TA");
 		}
 
 		return uClassPointer;
@@ -11415,7 +11415,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEQUIPPROFILESLOT_FORCEDPRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductEquipProfileSlot_ForcedProduct_TA");
 		}
 
 		return uClassPointer;
@@ -11438,7 +11438,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTFILTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductFilter_TA");
 		}
 
 		return uClassPointer;
@@ -11467,7 +11467,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTLOADER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductLoader_TA");
 		}
 
 		return uClassPointer;
@@ -11513,7 +11513,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_TA");
 		}
 
 		return uClassPointer;
@@ -11541,7 +11541,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_MATERIALPARAMETER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_MaterialParameter_TA");
 		}
 
 		return uClassPointer;
@@ -11567,7 +11567,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTPAINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductPaint_TA");
 		}
 
 		return uClassPointer;
@@ -11605,7 +11605,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSLOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductSlot_TA");
 		}
 
 		return uClassPointer;
@@ -11627,7 +11627,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSPECIALEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductSpecialEdition_TA");
 		}
 
 		return uClassPointer;
@@ -11670,7 +11670,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTTEMPLATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductTemplate_TA");
 		}
 
 		return uClassPointer;
@@ -11700,7 +11700,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Product_TA");
 		}
 
 		return uClassPointer;
@@ -11753,7 +11753,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTTHUMBNAIL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductThumbnail_TA");
 		}
 
 		return uClassPointer;
@@ -11777,7 +11777,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTTHUMBNAILASSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductThumbnailAsset_TA");
 		}
 
 		return uClassPointer;
@@ -11798,7 +11798,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTTHUMBNAILASSET_BLUEPRINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductThumbnailAsset_Blueprint_TA");
 		}
 
 		return uClassPointer;
@@ -11827,7 +11827,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTTHUMBNAILQUEUE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductThumbnailQueue_TA");
 		}
 
 		return uClassPointer;
@@ -11851,7 +11851,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTUTIL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductUtil_TA");
 		}
 
 		return uClassPointer;
@@ -11895,7 +11895,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSC_CONSTRAINED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PSC_Constrained_TA");
 		}
 
 		return uClassPointer;
@@ -11922,7 +11922,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PYLON_SOCCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Pylon_Soccar_TA");
 		}
 
 		return uClassPointer;
@@ -11945,7 +11945,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_QUICKCHATTRACKER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.QuickChatTracker_TA");
 		}
 
 		return uClassPointer;
@@ -11991,7 +11991,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALL_BREAKOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Ball_Breakout_TA");
 		}
 
 		return uClassPointer;
@@ -12050,7 +12050,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALL_GOD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Ball_God_TA");
 		}
 
 		return uClassPointer;
@@ -12124,7 +12124,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALL_HAUNTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Ball_Haunted_TA");
 		}
 
 		return uClassPointer;
@@ -12189,7 +12189,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALL_TRAJECTORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Ball_Trajectory_TA");
 		}
 
 		return uClassPointer;
@@ -12245,7 +12245,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VEHICLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Vehicle_TA");
 		}
 
 		return uClassPointer;
@@ -12298,7 +12298,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RBHISTORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RBHistory_TA");
 		}
 
 		return uClassPointer;
@@ -12322,7 +12322,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RBVEHICLEHISTORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RBVehicleHistory_TA");
 		}
 
 		return uClassPointer;
@@ -12345,7 +12345,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RBVEHICLEPART_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RBVehiclePart_TA");
 		}
 
 		return uClassPointer;
@@ -12425,7 +12425,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Replay_TA");
 		}
 
 		return uClassPointer;
@@ -12477,7 +12477,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REPLAYCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ReplayComponent_TA");
 		}
 
 		return uClassPointer;
@@ -12509,7 +12509,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REPLAYMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ReplayManager_TA");
 		}
 
 		return uClassPointer;
@@ -12552,7 +12552,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RLBOT_SESSIONRECORDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RLBot_SessionRecorder_TA");
 		}
 
 		return uClassPointer;
@@ -12579,7 +12579,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RLBOT_UTIL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RLBot_Util_TA");
 		}
 
 		return uClassPointer;
@@ -12637,7 +12637,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAMPLEHISTORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SampleHistory_TA");
 		}
 
 		return uClassPointer;
@@ -12667,7 +12667,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAMPLERECORDSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SampleRecordSettings_TA");
 		}
 
 		return uClassPointer;
@@ -12705,7 +12705,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEGAMEMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveGameManager_TA");
 		}
 
 		return uClassPointer;
@@ -12766,7 +12766,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEOBJECTMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveObjectManager_TA");
 		}
 
 		return uClassPointer;
@@ -12815,7 +12815,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEOBJECTSERIALIZER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveObjectSerializer_TA");
 		}
 
 		return uClassPointer;
@@ -12844,7 +12844,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ANALYZEMUSICFROMCSV_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_AnalyzeMusicFromCsv_TA");
 		}
 
 		return uClassPointer;
@@ -12868,7 +12868,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_CARMATINEE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_CarMatinee_TA");
 		}
 
 		return uClassPointer;
@@ -12891,7 +12891,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_DUMPMOVIE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_DumpMovie_TA");
 		}
 
 		return uClassPointer;
@@ -12931,7 +12931,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETLOADOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetLoadout_TA");
 		}
 
 		return uClassPointer;
@@ -12973,7 +12973,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETREPLAYFX_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetReplayFX_TA");
 		}
 
 		return uClassPointer;
@@ -13004,7 +13004,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETTIMEDILATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetTimeDilation_TA");
 		}
 
 		return uClassPointer;
@@ -13035,7 +13035,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SPAWNFXACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SpawnFXActor_TA");
 		}
 
 		return uClassPointer;
@@ -13058,7 +13058,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_REPLAYTIME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_ReplayTime_TA");
 		}
 
 		return uClassPointer;
@@ -13079,7 +13079,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_UISTATECHANGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_UIStateChange_TA");
 		}
 
 		return uClassPointer;
@@ -13105,7 +13105,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SIMPLESPRINGCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SimpleSpringComponent_TA");
 		}
 
 		return uClassPointer;
@@ -13145,7 +13145,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ANTENNACOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AntennaComponent_TA");
 		}
 
 		return uClassPointer;
@@ -13178,7 +13178,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELCONTROLROTATIONSPRING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkelControlRotationSpring_TA");
 		}
 
 		return uClassPointer;
@@ -13209,7 +13209,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELCONTROLSINGLEBONECOPY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkelControlSingleBoneCopy_TA");
 		}
 
 		return uClassPointer;
@@ -13235,7 +13235,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELCONTROLSINGLEBONEPARAMETERIZED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkelControlSingleBoneParameterized_TA");
 		}
 
 		return uClassPointer;
@@ -13258,7 +13258,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELCONTROLTETHER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkelControlTether_TA");
 		}
 
 		return uClassPointer;
@@ -13278,7 +13278,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELETALMESHACTOR_NOSLOMO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkeletalMeshActor_NoSlomo_TA");
 		}
 
 		return uClassPointer;
@@ -13326,7 +13326,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELETALMESHACTORMAT_PRODUCTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkeletalMeshActorMAT_Products_TA");
 		}
 
 		return uClassPointer;
@@ -13358,7 +13358,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELETALMESHCOMPONENT_NOSLOMO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkeletalMeshComponent_NoSlomo_TA");
 		}
 
 		return uClassPointer;
@@ -13380,7 +13380,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELETALMESHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkeletalMeshComponent_TA");
 		}
 
 		return uClassPointer;
@@ -13435,7 +13435,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARMESHCOMPONENTBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarMeshComponentBase_TA");
 		}
 
 		return uClassPointer;
@@ -13533,7 +13533,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARMESHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarMeshComponent_TA");
 		}
 
 		return uClassPointer;
@@ -13573,7 +13573,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARPREVIEWMESHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarPreviewMeshComponent_TA");
 		}
 
 		return uClassPointer;
@@ -13605,7 +13605,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKYLIGHTVOLUMECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkyLightVolumeComponent_TA");
 		}
 
 		return uClassPointer;
@@ -13629,7 +13629,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALEDITIONDATABASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialEditionDatabase_TA");
 		}
 
 		return uClassPointer;
@@ -13670,7 +13670,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatEvent_TA");
 		}
 
 		return uClassPointer;
@@ -13694,7 +13694,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATFACTORYBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatFactoryBase_TA");
 		}
 
 		return uClassPointer;
@@ -13717,7 +13717,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATGRAPH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatGraph_TA");
 		}
 
 		return uClassPointer;
@@ -13747,7 +13747,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INPUTBUFFERGRAPH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.InputBufferGraph_TA");
 		}
 
 		return uClassPointer;
@@ -13780,7 +13780,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETSTATGRAPH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetStatGraph_TA");
 		}
 
 		return uClassPointer;
@@ -13813,7 +13813,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PERFSTATGRAPH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PerfStatGraph_TA");
 		}
 
 		return uClassPointer;
@@ -13859,7 +13859,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATGRAPHDRAWER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatGraphDrawer_TA");
 		}
 
 		return uClassPointer;
@@ -13887,7 +13887,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATGRAPHSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatGraphSystem_TA");
 		}
 
 		return uClassPointer;
@@ -13915,7 +13915,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatGroup_TA");
 		}
 
 		return uClassPointer;
@@ -13936,7 +13936,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATICMESHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StaticMeshComponent_TA");
 		}
 
 		return uClassPointer;
@@ -13965,7 +13965,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLINDICATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallIndicator_TA");
 		}
 
 		return uClassPointer;
@@ -13992,7 +13992,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NAMEPLATEMESHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NameplateMeshComponent_TA");
 		}
 
 		return uClassPointer;
@@ -14052,7 +14052,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Team_TA");
 		}
 
 		return uClassPointer;
@@ -14141,7 +14141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TEAMCOLORSCRIPTEDTEXTURE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TeamColorScriptedTexture_TA");
 		}
 
 		return uClassPointer;
@@ -14168,7 +14168,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_THROTTLESHAKECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ThrottleShakeComponent_TA");
 		}
 
 		return uClassPointer;
@@ -14208,7 +14208,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_THUMBNAILRENDERER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ThumbnailRenderer_TA");
 		}
 
 		return uClassPointer;
@@ -14237,7 +14237,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_THUMBNAILSCENE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ThumbnailScene_TA");
 		}
 
 		return uClassPointer;
@@ -14261,7 +14261,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TICKNOTIFYDELEGATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TickNotifyDelegate_TA");
 		}
 
 		return uClassPointer;
@@ -14291,7 +14291,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VANITYQUERY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VanityQuery_TA");
 		}
 
 		return uClassPointer;
@@ -14325,7 +14325,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VANITYSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VanitySet_TA");
 		}
 
 		return uClassPointer;
@@ -14349,7 +14349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VANITYSETMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VanitySetManager_TA");
 		}
 
 		return uClassPointer;
@@ -14402,7 +14402,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VEHICLEPARTSTATICMESHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VehiclePartStaticMeshComponent_TA");
 		}
 
 		return uClassPointer;
@@ -14434,7 +14434,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VEHICLEPICKUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VehiclePickup_TA");
 		}
 
 		return uClassPointer;
@@ -14499,7 +14499,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VEHICLESIM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VehicleSim_TA");
 		}
 
 		return uClassPointer;
@@ -14542,7 +14542,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VOTEACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VoteActor_TA");
 		}
 
 		return uClassPointer;
@@ -14589,7 +14589,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WEBBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WebBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -14646,7 +14646,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Wheel_TA");
 		}
 
 		return uClassPointer;
@@ -14673,7 +14673,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELASSETGENERATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelAssetGenerator_TA");
 		}
 
 		return uClassPointer;
@@ -14698,7 +14698,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELASSETGENERATOR_1WHEEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelAssetGenerator_1Wheel_TA");
 		}
 
 		return uClassPointer;
@@ -14724,7 +14724,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELASSETGENERATOR_4WHEELS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelAssetGenerator_4Wheels_TA");
 		}
 
 		return uClassPointer;
@@ -14748,7 +14748,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELASSETGENERATOR_FRONTWHEELS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelAssetGenerator_FrontWheels_TA");
 		}
 
 		return uClassPointer;
@@ -14774,7 +14774,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELASSETGENERATOR_RIGHTWHEELS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelAssetGenerator_RightWheels_TA");
 		}
 
 		return uClassPointer;
@@ -14803,7 +14803,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELASSETSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelAssetSettings_TA");
 		}
 
 		return uClassPointer;
@@ -14823,7 +14823,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELSKELMESHMAT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelSkelMeshMAT_TA");
 		}
 
 		return uClassPointer;
@@ -14852,7 +14852,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELSPEEDCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelSpeedComponent_TA");
 		}
 
 		return uClassPointer;
@@ -14874,7 +14874,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WHEELSTATICMESHMAT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.WheelStaticMeshMAT_TA");
 		}
 
 		return uClassPointer;
@@ -14898,7 +14898,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BUILDINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BuildInfo_TA");
 		}
 
 		return uClassPointer;
@@ -14918,7 +14918,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RLBOT_PRETICKACTOR));
+			uClassPointer = UObject::FindClass("Class TAGame.RLBot_PreTickActor");
 		}
 
 		return uClassPointer;
@@ -14938,7 +14938,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RLBOT_POSTTICKACTOR));
+			uClassPointer = UObject::FindClass("Class TAGame.RLBot_PostTickActor");
 		}
 
 		return uClassPointer;
@@ -14958,7 +14958,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DEPRECATEDPROPERTY));
+			uClassPointer = UObject::FindClass("Class TAGame.DeprecatedProperty");
 		}
 
 		return uClassPointer;
@@ -14979,7 +14979,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKIPPABLEPROPERTY));
+			uClassPointer = UObject::FindClass("Class TAGame.SkippableProperty");
 		}
 
 		return uClassPointer;
@@ -15004,7 +15004,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REPLAYPACKAGEMAP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ReplayPackageMap_TA");
 		}
 
 		return uClassPointer;
@@ -15141,7 +15141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRI_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PRI_TA");
 		}
 
 		return uClassPointer;
@@ -15378,7 +15378,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_LOGO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Logo_TA");
 		}
 
 		return uClassPointer;
@@ -15402,7 +15402,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_INHERITCARSETTING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_InheritCarSetting_TA");
 		}
 
 		return uClassPointer;
@@ -15475,7 +15475,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Car_TA");
 		}
 
 		return uClassPointer;
@@ -15693,7 +15693,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementManager_TA");
 		}
 
 		return uClassPointer;
@@ -15879,7 +15879,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFOBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfoBase_TA");
 		}
 
 		return uClassPointer;
@@ -15908,7 +15908,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Replay_TA");
 		}
 
 		return uClassPointer;
@@ -15947,7 +15947,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEOBJECT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveObject_TA");
 		}
 
 		return uClassPointer;
@@ -16029,7 +16029,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementSave_TA");
 		}
 
 		return uClassPointer;
@@ -16057,7 +16057,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTUNLOCKEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementUnlockedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -16198,7 +16198,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_SOCCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Soccar_TA");
 		}
 
 		return uClassPointer;
@@ -16418,7 +16418,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_SEASON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Season_TA");
 		}
 
 		return uClassPointer;
@@ -16465,7 +16465,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_TA");
 		}
 
 		return uClassPointer;
@@ -16511,7 +16511,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_SOCCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Soccar_TA");
 		}
 
 		return uClassPointer;
@@ -16551,7 +16551,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_BASKETBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Basketball_TA");
 		}
 
 		return uClassPointer;
@@ -16572,7 +16572,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEASONSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeasonSave_TA");
 		}
 
 		return uClassPointer;
@@ -16611,7 +16611,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEASON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Season_TA");
 		}
 
 		return uClassPointer;
@@ -16654,7 +16654,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_BREAKOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Breakout_TA");
 		}
 
 		return uClassPointer;
@@ -16718,7 +16718,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Tutorial_TA");
 		}
 
 		return uClassPointer;
@@ -16838,7 +16838,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TRAINING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Training_TA");
 		}
 
 		return uClassPointer;
@@ -16927,7 +16927,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveData_TA");
 		}
 
 		return uClassPointer;
@@ -17077,7 +17077,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILELOADOUTSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileLoadoutSave_TA");
 		}
 
 		return uClassPointer;
@@ -17126,7 +17126,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADOUTSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LoadoutSet_TA");
 		}
 
 		return uClassPointer;
@@ -17175,7 +17175,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Loadout_TA");
 		}
 
 		return uClassPointer;
@@ -17221,7 +17221,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILESTATSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileStatsSave_TA");
 		}
 
 		return uClassPointer;
@@ -17277,7 +17277,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInput_TA");
 		}
 
 		return uClassPointer;
@@ -17329,7 +17329,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPSMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopsManager_TA");
 		}
 
 		return uClassPointer;
@@ -17364,7 +17364,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ACHIEVEMENTMANAGER_TA__HANDLETRADEINCOMPLETE_6FC1A80541F89677DA222CB305708C36));
+			uClassPointer = UObject::FindClass("Class TAGame.__AchievementManager_TA__HandleTradeInComplete_6FC1A80541F89677DA222CB305708C36");
 		}
 
 		return uClassPointer;
@@ -17393,7 +17393,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTTRADEIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductTradeIn_TA");
 		}
 
 		return uClassPointer;
@@ -17436,7 +17436,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSTRADEPLAYERSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsTradePlayerStatus_TA");
 		}
 
 		return uClassPointer;
@@ -17484,7 +17484,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEPARTY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameParty_TA");
 		}
 
 		return uClassPointer;
@@ -17592,7 +17592,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ACHIEVEMENTMANAGER_TA__ISPLAYINGWITHCLUBMATES_653C248847B770B1EA87F98771D8A80D));
+			uClassPointer = UObject::FindClass("Class TAGame.__AchievementManager_TA__IsPlayingWithClubmates_653C248847B770B1EA87F98771D8A80D");
 		}
 
 		return uClassPointer;
@@ -17623,7 +17623,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_TA");
 		}
 
 		return uClassPointer;
@@ -17683,7 +17683,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_PUBLIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Public_TA");
 		}
 
 		return uClassPointer;
@@ -17721,7 +17721,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_PUBLICRANKED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_PublicRanked_TA");
 		}
 
 		return uClassPointer;
@@ -17748,7 +17748,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_TOURNAMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Tournament_TA");
 		}
 
 		return uClassPointer;
@@ -17794,7 +17794,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_AUTOTOURNAMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_AutoTournament_TA");
 		}
 
 		return uClassPointer;
@@ -17819,7 +17819,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ACHIEVEMENTMANAGER_TA__HASITEMQUALITYEQUIPPED_0AE09FBE414C9B75ED6DDCB4C07A62E1));
+			uClassPointer = UObject::FindClass("Class TAGame.__AchievementManager_TA__HasItemQualityEquipped_0AE09FBE414C9B75ED6DDCB4C07A62E1");
 		}
 
 		return uClassPointer;
@@ -17843,7 +17843,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPPREFSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapPrefsSave_TA");
 		}
 
 		return uClassPointer;
@@ -17872,7 +17872,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_BREAKOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Breakout_TA");
 		}
 
 		return uClassPointer;
@@ -17923,7 +17923,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlinePlayer_TA");
 		}
 
 		return uClassPointer;
@@ -17963,7 +17963,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FIRSTTIMEEXPERIENCEMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FirstTimeExperienceManager_TA");
 		}
 
 		return uClassPointer;
@@ -18027,7 +18027,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARDISTANCETRACKER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarDistanceTracker_TA");
 		}
 
 		return uClassPointer;
@@ -18052,7 +18052,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RANDOMITEMSDROPPEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RandomItemsDroppedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -18074,7 +18074,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VERSIONHELPER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VersionHelper_TA");
 		}
 
 		return uClassPointer;
@@ -18097,7 +18097,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RECONCILEUTIL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ReconcileUtil_TA");
 		}
 
 		return uClassPointer;
@@ -18122,7 +18122,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACTIVITYFEEDMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ActivityFeedManager_TA");
 		}
 
 		return uClassPointer;
@@ -18163,7 +18163,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ADMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AdManager_TA");
 		}
 
 		return uClassPointer;
@@ -18197,7 +18197,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_ADSGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_AdsGet_TA");
 		}
 
 		return uClassPointer;
@@ -18228,7 +18228,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RUMBLEPICKUPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RumblePickups_TA");
 		}
 
 		return uClassPointer;
@@ -18276,7 +18276,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AIPROXY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AIProxy_TA");
 		}
 
 		return uClassPointer;
@@ -18300,7 +18300,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ATTACHMENTANIM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AttachmentAnim_TA");
 		}
 
 		return uClassPointer;
@@ -18324,7 +18324,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLCAMTARGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallCamTarget_TA");
 		}
 
 		return uClassPointer;
@@ -18349,7 +18349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_MAPPRODUCTASSETOVERRIDE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_MapProductAssetOverride_TA");
 		}
 
 		return uClassPointer;
@@ -18370,7 +18370,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GOALEXPLOSIONORIENTATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GoalExplosionOrientation_TA");
 		}
 
 		return uClassPointer;
@@ -18390,7 +18390,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALL_TUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Ball_Tutorial_TA");
 		}
 
 		return uClassPointer;
@@ -18411,7 +18411,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_BALLINRANGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_BallInRange_TA");
 		}
 
 		return uClassPointer;
@@ -18432,7 +18432,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_BLOCKGOAL));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_BlockGoal");
 		}
 
 		return uClassPointer;
@@ -18454,7 +18454,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_DIVERTBALL));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_DivertBall");
 		}
 
 		return uClassPointer;
@@ -18478,7 +18478,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_JUMP));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_Jump");
 		}
 
 		return uClassPointer;
@@ -18506,7 +18506,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_DODGEHIT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_DodgeHit");
 		}
 
 		return uClassPointer;
@@ -18536,7 +18536,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_FACE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_Face");
 		}
 
 		return uClassPointer;
@@ -18564,7 +18564,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_POWERSLIDE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_PowerSlide");
 		}
 
 		return uClassPointer;
@@ -18588,7 +18588,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_TEST));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_Test");
 		}
 
 		return uClassPointer;
@@ -18612,7 +18612,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTACTION_WALLBOUNCE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTAction_WallBounce");
 		}
 
 		return uClassPointer;
@@ -18635,7 +18635,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_AREACLEAR));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_AreaClear");
 		}
 
 		return uClassPointer;
@@ -18661,7 +18661,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_BETWEEN));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Between");
 		}
 
 		return uClassPointer;
@@ -18686,7 +18686,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_BOOST));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Boost");
 		}
 
 		return uClassPointer;
@@ -18709,7 +18709,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_BOUNCEHEIGHT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_BounceHeight");
 		}
 
 		return uClassPointer;
@@ -18730,7 +18730,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_CANJUMPTO));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_CanJumpTo");
 		}
 
 		return uClassPointer;
@@ -18753,7 +18753,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_CLOSESTTIME));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_ClosestTime");
 		}
 
 		return uClassPointer;
@@ -18776,7 +18776,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_CLOSESTTO));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_ClosestTo");
 		}
 
 		return uClassPointer;
@@ -18799,7 +18799,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_JUMPHIT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_JumpHit");
 		}
 
 		return uClassPointer;
@@ -18823,7 +18823,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_DODGEHIT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_DodgeHit");
 		}
 
 		return uClassPointer;
@@ -18844,7 +18844,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_FACING));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Facing");
 		}
 
 		return uClassPointer;
@@ -18876,7 +18876,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_FIELDDISTANCE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_FieldDistance");
 		}
 
 		return uClassPointer;
@@ -18900,7 +18900,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_GAMESTATE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_GameState");
 		}
 
 		return uClassPointer;
@@ -18923,7 +18923,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_HITLANDING));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_HitLanding");
 		}
 
 		return uClassPointer;
@@ -18947,7 +18947,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_IMPACT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Impact");
 		}
 
 		return uClassPointer;
@@ -18972,7 +18972,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_INCONE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_InCone");
 		}
 
 		return uClassPointer;
@@ -18995,7 +18995,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_LANDING));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Landing");
 		}
 
 		return uClassPointer;
@@ -19018,7 +19018,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_LOCK));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Lock");
 		}
 
 		return uClassPointer;
@@ -19051,7 +19051,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_SEGMENTDISTANCE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_SegmentDistance");
 		}
 
 		return uClassPointer;
@@ -19074,7 +19074,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_SKILL));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Skill");
 		}
 
 		return uClassPointer;
@@ -19099,7 +19099,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_SOCCARSTATE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_SoccarState");
 		}
 
 		return uClassPointer;
@@ -19122,7 +19122,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_STUCK));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Stuck");
 		}
 
 		return uClassPointer;
@@ -19146,7 +19146,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_TEAMSIZE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_TeamSize");
 		}
 
 		return uClassPointer;
@@ -19174,7 +19174,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_TIMESINCEBALLHIT));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_TimeSinceBallHit");
 		}
 
 		return uClassPointer;
@@ -19198,7 +19198,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_TRAITS));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Traits");
 		}
 
 		return uClassPointer;
@@ -19226,7 +19226,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_VEHICLE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_Vehicle");
 		}
 
 		return uClassPointer;
@@ -19252,7 +19252,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTMOVEMODIFIER_BOOST));
+			uClassPointer = UObject::FindClass("Class TAGame.BTMoveModifier_Boost");
 		}
 
 		return uClassPointer;
@@ -19279,7 +19279,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VEHICLEPICKUP_BOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VehiclePickup_Boost_TA");
 		}
 
 		return uClassPointer;
@@ -19348,7 +19348,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REPLAYDIRECTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ReplayDirector_TA");
 		}
 
 		return uClassPointer;
@@ -19403,7 +19403,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERA_MAINMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Camera_MainMenu_TA");
 		}
 
 		return uClassPointer;
@@ -19439,7 +19439,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_CARPREVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_CarPreview_TA");
 		}
 
 		return uClassPointer;
@@ -19489,7 +19489,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Camera_TA");
 		}
 
 		return uClassPointer;
@@ -19546,7 +19546,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASETTINGSACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraSettingsActor_TA");
 		}
 
 		return uClassPointer;
@@ -19595,7 +19595,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_TA");
 		}
 
 		return uClassPointer;
@@ -19617,7 +19617,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ATTACHFX_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_AttachFX_TA");
 		}
 
 		return uClassPointer;
@@ -19655,7 +19655,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERA_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Camera_Replay_TA");
 		}
 
 		return uClassPointer;
@@ -19698,7 +19698,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Replay_TA");
 		}
 
 		return uClassPointer;
@@ -19736,7 +19736,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Director_TA");
 		}
 
 		return uClassPointer;
@@ -19767,7 +19767,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_CARREF_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_CarRef_TA");
 		}
 
 		return uClassPointer;
@@ -19827,7 +19827,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_CAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Car_TA");
 		}
 
 		return uClassPointer;
@@ -19872,7 +19872,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERACONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraConfig_TA");
 		}
 
 		return uClassPointer;
@@ -19904,7 +19904,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_BALLCAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_BallCam_TA");
 		}
 
 		return uClassPointer;
@@ -19981,7 +19981,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARPREVIEWACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarPreviewActor_TA");
 		}
 
 		return uClassPointer;
@@ -20075,7 +20075,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_PREMIUMGARAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_PremiumGarage_TA");
 		}
 
 		return uClassPointer;
@@ -20113,7 +20113,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_GFXMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_GFxMenu_TA");
 		}
 
 		return uClassPointer;
@@ -20158,7 +20158,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARPREVIEWSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarPreviewSet_TA");
 		}
 
 		return uClassPointer;
@@ -20208,7 +20208,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DEMOLISHED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Demolished_TA");
 		}
 
 		return uClassPointer;
@@ -20237,7 +20237,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_FREECAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Freecam_TA");
 		}
 
 		return uClassPointer;
@@ -20282,7 +20282,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_LIVEREPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_LiveReplay_TA");
 		}
 
 		return uClassPointer;
@@ -20389,7 +20389,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_REPLAYAUTOCAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_ReplayAutoCam_TA");
 		}
 
 		return uClassPointer;
@@ -20503,7 +20503,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILECAMERASAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileCameraSave_TA");
 		}
 
 		return uClassPointer;
@@ -20546,7 +20546,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapInfo_TA");
 		}
 
 		return uClassPointer;
@@ -20566,7 +20566,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_REPLAYFLY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_ReplayFly_TA");
 		}
 
 		return uClassPointer;
@@ -20591,7 +20591,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_REPLAYFOLLOW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_ReplayFollow_TA");
 		}
 
 		return uClassPointer;
@@ -20617,7 +20617,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_REPLAYSOFTATTACH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_ReplaySoftAttach_TA");
 		}
 
 		return uClassPointer;
@@ -20640,7 +20640,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_REPLAYHARDATTACH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_ReplayHardAttach_TA");
 		}
 
 		return uClassPointer;
@@ -20666,7 +20666,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_REPLAYPLAYERVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_ReplayPlayerView_TA");
 		}
 
 		return uClassPointer;
@@ -20696,7 +20696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_SEASONINTRO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_SeasonIntro_TA");
 		}
 
 		return uClassPointer;
@@ -20721,7 +20721,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_WAITING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Waiting_TA");
 		}
 
 		return uClassPointer;
@@ -20755,7 +20755,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CANNON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Cannon_TA");
 		}
 
 		return uClassPointer;
@@ -20784,7 +20784,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOCALPLAYERAUDIOPARAMSCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LocalPlayerAudioParamsComponent_TA");
 		}
 
 		return uClassPointer;
@@ -20817,7 +20817,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TEAMCOLORPREFERENCES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TeamColorPreferences_TA");
 		}
 
 		return uClassPointer;
@@ -20843,7 +20843,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARMESHCOMPONENTBASE_TA__APPLYPAINTTOOBJECT_0D50F5B7428DB1705E91CBB0ADE68F3A));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarMeshComponentBase_TA__ApplyPaintToObject_0D50F5B7428DB1705E91CBB0ADE68F3A");
 		}
 
 		return uClassPointer;
@@ -20865,7 +20865,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARMESHCOMPONENTBASE_TA__ATTACHORNAMENT_5B3E80A746EB7E22FF10B980A0201F41));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarMeshComponentBase_TA__AttachOrnament_5B3E80A746EB7E22FF10B980A0201F41");
 		}
 
 		return uClassPointer;
@@ -20888,7 +20888,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ASSETATTRIBUTE_CHANGEPRODUCTDRAWSCALE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AssetAttribute_ChangeProductDrawScale_TA");
 		}
 
 		return uClassPointer;
@@ -20910,7 +20910,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARMESHCOMPONENTBASE_TA__APPLYPAINTSETTINGS_B07F558F4A0057AFE79A3DB5D0CE3100));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarMeshComponentBase_TA__ApplyPaintSettings_B07F558F4A0057AFE79A3DB5D0CE3100");
 		}
 
 		return uClassPointer;
@@ -20933,7 +20933,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ASSETATTRIBUTE_FORCEWHEELAXLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AssetAttribute_ForceWheelAxle_TA");
 		}
 
 		return uClassPointer;
@@ -20954,7 +20954,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARMESHCOMPONENTBASE_TA__REMOVEPRODUCTATTRIBUTEFROMPRODUCT_D5DC88B54B91CBC01B593EA6761138E8));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarMeshComponentBase_TA__RemoveProductAttributeFromProduct_D5DC88B54B91CBC01B593EA6761138E8");
 		}
 
 		return uClassPointer;
@@ -20977,7 +20977,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARMESHCOMPONENTBASE_TA__CREATEWHEELATTACHMENT_E24B6A464302296DEE513FB64BC9CEAD));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarMeshComponentBase_TA__CreateWheelAttachment_E24B6A464302296DEE513FB64BC9CEAD");
 		}
 
 		return uClassPointer;
@@ -21000,7 +21000,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARMESHCOMPONENTBASE_TA__CREATEWHEELMESH_8B45ADF049A273898B76579BE7917637));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarMeshComponentBase_TA__CreateWheelMesh_8B45ADF049A273898B76579BE7917637");
 		}
 
 		return uClassPointer;
@@ -21022,7 +21022,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARMESHCOMPONENTBASE_TA__ADDVISUALASSET_C385DFD1441846B0816564BBCD555F20));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarMeshComponentBase_TA__AddVisualAsset_C385DFD1441846B0816564BBCD555F20");
 		}
 
 		return uClassPointer;
@@ -21050,7 +21050,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_THROTTLESTATECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ThrottleStateComponent_TA");
 		}
 
 		return uClassPointer;
@@ -21075,7 +21075,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTLOADER_TA__GETASSETBYID_7FA798C547301BDD2802E386AB41A136));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductLoader_TA__GetAssetByID_7FA798C547301BDD2802E386AB41A136");
 		}
 
 		return uClassPointer;
@@ -21097,7 +21097,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTLOADER_TA__GETASSETBYSLOT_B231431B42C3A28A80D3A487EE56480B));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductLoader_TA__GetAssetBySlot_B231431B42C3A28A80D3A487EE56480B");
 		}
 
 		return uClassPointer;
@@ -21125,7 +21125,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DEMOLISHEXPLOSION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DemolishExplosion_TA");
 		}
 
 		return uClassPointer;
@@ -21150,7 +21150,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DEMOLISHEDCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DemolishedCar_TA");
 		}
 
 		return uClassPointer;
@@ -21172,7 +21172,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CAR_TA__QUEUEDEMOLISH_F628EB9A45E6887DA028CB8A878F4BF8));
+			uClassPointer = UObject::FindClass("Class TAGame.__Car_TA__QueueDemolish_F628EB9A45E6887DA028CB8A878F4BF8");
 		}
 
 		return uClassPointer;
@@ -21202,7 +21202,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARTRAJECTORYCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarTrajectoryComponent_TA");
 		}
 
 		return uClassPointer;
@@ -21233,7 +21233,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NAMEPLATECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NameplateComponent_TA");
 		}
 
 		return uClassPointer;
@@ -21264,7 +21264,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NAMEPLATECOMPONENTCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NameplateComponentCar_TA");
 		}
 
 		return uClassPointer;
@@ -21291,7 +21291,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAR_SEASON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Car_Season_TA");
 		}
 
 		return uClassPointer;
@@ -21323,7 +21323,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILECONTROLSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileControlsSave_TA");
 		}
 
 		return uClassPointer;
@@ -21349,7 +21349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARCOMPONENT_BOOST_TA__SETUNLIMITEDBOOSTDELAYED_C40C16A9434B4CC947F5A6AB05042B3B));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarComponent_Boost_TA__SetUnlimitedBoostDelayed_C40C16A9434B4CC947F5A6AB05042B3B");
 		}
 
 		return uClassPointer;
@@ -21383,7 +21383,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARPREVIEWANIM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarPreviewAnim_TA");
 		}
 
 		return uClassPointer;
@@ -21414,7 +21414,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICSTINGERSPREVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicStingersPreview_TA");
 		}
 
 		return uClassPointer;
@@ -21439,7 +21439,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CARPREVIEWACTOR_TA__UPDATETRANSLATIONS_28A0B3E5498A9F785063BBBC48E943B9));
+			uClassPointer = UObject::FindClass("Class TAGame.__CarPreviewActor_TA__UpdateTranslations_28A0B3E5498A9F785063BBBC48E943B9");
 		}
 
 		return uClassPointer;
@@ -21538,7 +21538,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Profile_TA");
 		}
 
 		return uClassPointer;
@@ -21615,7 +21615,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TURNTABLEACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TurnTableActor_TA");
 		}
 
 		return uClassPointer;
@@ -21677,7 +21677,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ROTATECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RotateComponent_TA");
 		}
 
 		return uClassPointer;
@@ -21723,7 +21723,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_MUSICSTINGERS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_MusicStingers_TA");
 		}
 
 		return uClassPointer;
@@ -21746,7 +21746,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOPREVIEWREV_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioPreviewRev_TA");
 		}
 
 		return uClassPointer;
@@ -21772,7 +21772,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERCONTROLLER_MENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerController_Menu_TA");
 		}
 
 		return uClassPointer;
@@ -21809,7 +21809,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPRODUCTSTORESET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineProductStoreSet_TA");
 		}
 
 		return uClassPointer;
@@ -21834,7 +21834,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARTHUMBNAILACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarThumbnailActor_TA");
 		}
 
 		return uClassPointer;
@@ -21856,7 +21856,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHEATMANAGERBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CheatManagerBase_TA");
 		}
 
 		return uClassPointer;
@@ -21882,7 +21882,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHEATMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CheatManager_TA");
 		}
 
 		return uClassPointer;
@@ -21902,7 +21902,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONSTRAINT2D_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Constraint2D_TA");
 		}
 
 		return uClassPointer;
@@ -21939,7 +21939,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdActor_TA");
 		}
 
 		return uClassPointer;
@@ -22015,7 +22015,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATFACTORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatFactory_TA");
 		}
 
 		return uClassPointer;
@@ -22103,7 +22103,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDSOUNDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdSounds_TA");
 		}
 
 		return uClassPointer;
@@ -22130,7 +22130,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdManager_TA");
 		}
 
 		return uClassPointer;
@@ -22166,7 +22166,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_CUSTOM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Custom_TA");
 		}
 
 		return uClassPointer;
@@ -22204,7 +22204,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_OFFLINE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Offline_TA");
 		}
 
 		return uClassPointer;
@@ -22227,7 +22227,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_TUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Tutorial_TA");
 		}
 
 		return uClassPointer;
@@ -22261,7 +22261,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DEBUGHELPMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DebugHelpMenu_TA");
 		}
 
 		return uClassPointer;
@@ -22290,7 +22290,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DEBUGINPUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DebugInput_TA");
 		}
 
 		return uClassPointer;
@@ -22310,7 +22310,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DECALBLOCKINGACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DecalBlockingActor_TA");
 		}
 
 		return uClassPointer;
@@ -22331,7 +22331,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DYNAMICMESHACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DynamicMeshActor_TA");
 		}
 
 		return uClassPointer;
@@ -22355,7 +22355,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DYNAMICSPAWNPOINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DynamicSpawnPoint_TA");
 		}
 
 		return uClassPointer;
@@ -22376,7 +22376,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SYSTEMSETTINGSMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SystemSettingsManager_TA");
 		}
 
 		return uClassPointer;
@@ -22404,7 +22404,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SOUNDSETTINGSMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SoundSettingsManager_TA");
 		}
 
 		return uClassPointer;
@@ -22459,7 +22459,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_APPMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AppMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -22481,7 +22481,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEPRODUCTSTORE_TA__FINDPRODUCTSFROMHASH_9935E56C443B650F1ACC2AA9C82B9EC4));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineProductStore_TA__FindProductsFromHash_9935E56C443B650F1ACC2AA9C82B9EC4");
 		}
 
 		return uClassPointer;
@@ -22505,7 +22505,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FLOPPYBITS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FloppyBits_TA");
 		}
 
 		return uClassPointer;
@@ -22534,7 +22534,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BEAMTRACECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BeamTraceComponent_TA");
 		}
 
 		return uClassPointer;
@@ -22559,7 +22559,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___FXACTOR_TA__APPLYPAINTTOATTACHMENT_707E693144735D8C03567FB33AAF2A53));
+			uClassPointer = UObject::FindClass("Class TAGame.__FXActor_TA__ApplyPaintToAttachment_707E693144735D8C03567FB33AAF2A53");
 		}
 
 		return uClassPointer;
@@ -22582,7 +22582,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___FXACTOR_TA__APPLYPAINT_E97E363D41ECEB703BCD9997BE823237));
+			uClassPointer = UObject::FindClass("Class TAGame.__FXActor_TA__ApplyPaint_E97E363D41ECEB703BCD9997BE823237");
 		}
 
 		return uClassPointer;
@@ -22605,7 +22605,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___FXACTOR_BOOST_TA__DUPLICATEATTACHMENT_0F61BD6A44DFEDBF9303879666D20E21));
+			uClassPointer = UObject::FindClass("Class TAGame.__FXActor_Boost_TA__DuplicateAttachment_0F61BD6A44DFEDBF9303879666D20E21");
 		}
 
 		return uClassPointer;
@@ -22627,7 +22627,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ASSETATTRIBUTE_SOUNDOVERRIDES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AssetAttribute_SoundOverrides_TA");
 		}
 
 		return uClassPointer;
@@ -22647,7 +22647,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FUNCTIONTEMPLATES));
+			uClassPointer = UObject::FindClass("Class TAGame.FunctionTemplates");
 		}
 
 		return uClassPointer;
@@ -22688,7 +22688,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_XPMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.XPManager_TA");
 		}
 
 		return uClassPointer;
@@ -22718,7 +22718,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TEAMNAMECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TeamNameComponent_TA");
 		}
 
 		return uClassPointer;
@@ -22747,7 +22747,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -22792,7 +22792,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMESETTINGPLAYLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameSettingPlaylist_TA");
 		}
 
 		return uClassPointer;
@@ -22831,7 +22831,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_UICONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UIConfig_TA");
 		}
 
 		return uClassPointer;
@@ -22861,7 +22861,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_STADIUMTEAMCOLORSCHANGED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_StadiumTeamColorsChanged_TA");
 		}
 
 		return uClassPointer;
@@ -22884,7 +22884,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TEAM_TA__GETPARTYFOLLOWERIDS_ABF0A43C4E3F7907CFF206BD853616A3));
+			uClassPointer = UObject::FindClass("Class TAGame.__Team_TA__GetPartyFollowerIds_ABF0A43C4E3F7907CFF206BD853616A3");
 		}
 
 		return uClassPointer;
@@ -22906,7 +22906,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TEAM_TA__UPDATECUSTOMCOLORS_84F8847E4951DC0DA98449B0408D6ECC));
+			uClassPointer = UObject::FindClass("Class TAGame.__Team_TA__UpdateCustomColors_84F8847E4951DC0DA98449B0408D6ECC");
 		}
 
 		return uClassPointer;
@@ -22931,7 +22931,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TEAM_SOCCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Team_Soccar_TA");
 		}
 
 		return uClassPointer;
@@ -22963,7 +22963,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHSERIES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchSeries_TA");
 		}
 
 		return uClassPointer;
@@ -22997,7 +22997,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKINOVERRIDETABLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkinOverrideTable_TA");
 		}
 
 		return uClassPointer;
@@ -23018,7 +23018,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_PRODUCTLINK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_ProductLink_TA");
 		}
 
 		return uClassPointer;
@@ -23039,7 +23039,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_MASTERPIECE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Masterpiece_TA");
 		}
 
 		return uClassPointer;
@@ -23060,7 +23060,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_LEVEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Level_TA");
 		}
 
 		return uClassPointer;
@@ -23082,7 +23082,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_EQUIPPABLESLOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_EquippableSlot_TA");
 		}
 
 		return uClassPointer;
@@ -23106,7 +23106,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_EXPIRATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Expiration_TA");
 		}
 
 		return uClassPointer;
@@ -23130,7 +23130,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_RENTAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Rental_TA");
 		}
 
 		return uClassPointer;
@@ -23152,7 +23152,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_INDESTRUCTIBLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Indestructible_TA");
 		}
 
 		return uClassPointer;
@@ -23174,7 +23174,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_BLUEPRINTCOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_BlueprintCost_TA");
 		}
 
 		return uClassPointer;
@@ -23196,7 +23196,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_NONOTIFY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_NoNotify_TA");
 		}
 
 		return uClassPointer;
@@ -23221,7 +23221,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EOSONLINESTORAGEUPLOADER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EOSOnlineStorageUploader_TA");
 		}
 
 		return uClassPointer;
@@ -23250,7 +23250,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_TA");
 		}
 
 		return uClassPointer;
@@ -23274,7 +23274,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHRECORDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchRecorder_TA");
 		}
 
 		return uClassPointer;
@@ -23309,7 +23309,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BANSYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BanSync_TA");
 		}
 
 		return uClassPointer;
@@ -23353,7 +23353,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEDEDICATEDSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameDedicatedServer_TA");
 		}
 
 		return uClassPointer;
@@ -23411,7 +23411,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHADMINCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchAdminComponent_TA");
 		}
 
 		return uClassPointer;
@@ -23451,7 +23451,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BOTCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BotConfig_TA");
 		}
 
 		return uClassPointer;
@@ -23477,7 +23477,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERREMOVEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerRemovedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -23497,7 +23497,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENTFINISHEDSTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEventFinishedState_TA");
 		}
 
 		return uClassPointer;
@@ -23522,7 +23522,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LISTENSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ListenServer_TA");
 		}
 
 		return uClassPointer;
@@ -23576,7 +23576,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_HUDBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.HUDBase_TA");
 		}
 
 		return uClassPointer;
@@ -23625,7 +23625,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_FTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_FTE_TA");
 		}
 
 		return uClassPointer;
@@ -23647,7 +23647,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_LAN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Lan_TA");
 		}
 
 		return uClassPointer;
@@ -23668,7 +23668,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_PRIVATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Private_TA");
 		}
 
 		return uClassPointer;
@@ -23692,7 +23692,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_TA__SETBOTSKILLBYTEAM_20CB81F74DB2555D78DEEBA6B872BB2A));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_TA__SetBotSkillByTeam_20CB81F74DB2555D78DEEBA6B872BB2A");
 		}
 
 		return uClassPointer;
@@ -23714,7 +23714,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADOUTRANDOMIZER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LoadoutRandomizer_TA");
 		}
 
 		return uClassPointer;
@@ -23742,7 +23742,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_TA__GETGENERATEDBOTNAME_C215A1354D426F1D2160AEA884AB58DC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_TA__GetGeneratedBotName_C215A1354D426F1D2160AEA884AB58DC");
 		}
 
 		return uClassPointer;
@@ -23764,7 +23764,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_TA__HASPLAYERNAMED_BC3F3F0F4AB10DC9CED532AE423303C2));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_TA__HasPlayerNamed_BC3F3F0F4AB10DC9CED532AE423303C2");
 		}
 
 		return uClassPointer;
@@ -23786,7 +23786,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMESTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameState_TA");
 		}
 
 		return uClassPointer;
@@ -23807,7 +23807,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_TA__HASMUTATORTYPE_1A684102455728301B9932B44B94C654));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_TA__HasMutatorType_1A684102455728301B9932B44B94C654");
 		}
 
 		return uClassPointer;
@@ -23829,7 +23829,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_TA__HASMUTATORNAMED_F3DDBF94406CE5DA81CA90B5EFEAE67D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_TA__HasMutatorNamed_F3DDBF94406CE5DA81CA90B5EFEAE67D");
 		}
 
 		return uClassPointer;
@@ -23852,7 +23852,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHATLOG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ChatLog_TA");
 		}
 
 		return uClassPointer;
@@ -23877,7 +23877,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_FACEIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_FaceIt_TA");
 		}
 
 		return uClassPointer;
@@ -23905,7 +23905,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_GAMEEVENTSTATECHANGED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_GameEventStateChanged_TA");
 		}
 
 		return uClassPointer;
@@ -23926,7 +23926,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERREPLICATEDEVENTINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerReplicatedEventInfo_TA");
 		}
 
 		return uClassPointer;
@@ -23949,7 +23949,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_LOBBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Lobby_TA");
 		}
 
 		return uClassPointer;
@@ -23977,7 +23977,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_POSTGAMELOBBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_PostGameLobby_TA");
 		}
 
 		return uClassPointer;
@@ -23999,7 +23999,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_SOCCAR_SUBRULES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Soccar_SubRules_TA");
 		}
 
 		return uClassPointer;
@@ -24045,7 +24045,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GOALINDICATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GoalIndicator_TA");
 		}
 
 		return uClassPointer;
@@ -24071,7 +24071,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHBROADCASTCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchBroadcastComponent_TA");
 		}
 
 		return uClassPointer;
@@ -24100,7 +24100,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHWINNER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchWinner_TA");
 		}
 
 		return uClassPointer;
@@ -24122,7 +24122,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_COUNTDOWNOBJECT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CountdownObject_TA");
 		}
 
 		return uClassPointer;
@@ -24151,7 +24151,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_OVERTIMECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OvertimeComponent_TA");
 		}
 
 		return uClassPointer;
@@ -24177,7 +24177,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_GOALSCORED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_GoalScored_TA");
 		}
 
 		return uClassPointer;
@@ -24199,7 +24199,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_SCORECHANGED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_ScoreChanged_TA");
 		}
 
 		return uClassPointer;
@@ -24219,7 +24219,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_COUNTDOWNSTART_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_CountDownStart_TA");
 		}
 
 		return uClassPointer;
@@ -24245,7 +24245,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERPERFORMANCETRACKER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerPerformanceTracker_TA");
 		}
 
 		return uClassPointer;
@@ -24269,7 +24269,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENTMATCHACTIVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEventMatchActive_TA");
 		}
 
 		return uClassPointer;
@@ -24289,7 +24289,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_COUNTDOWNCOMPLETED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_CountDownCompleted_TA");
 		}
 
 		return uClassPointer;
@@ -24309,7 +24309,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_ROUNDSTART_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_RoundStart_TA");
 		}
 
 		return uClassPointer;
@@ -24329,7 +24329,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_LIVEREPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_LiveReplay_TA");
 		}
 
 		return uClassPointer;
@@ -24361,7 +24361,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_MATCHCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_MatchComplete_TA");
 		}
 
 		return uClassPointer;
@@ -24392,7 +24392,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATCATEGORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatCategory_TA");
 		}
 
 		return uClassPointer;
@@ -24422,7 +24422,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATTITLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatTitle_TA");
 		}
 
 		return uClassPointer;
@@ -24445,7 +24445,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPAWNPOINTCLUSTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpawnPointCluster_TA");
 		}
 
 		return uClassPointer;
@@ -24474,7 +24474,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_SOCCAR_TA__GETGOALBYTEAMINDEX_E45043924170D3F9B8FCB78AE3AE21C5));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_Soccar_TA__GetGoalByTeamIndex_E45043924170D3F9B8FCB78AE3AE21C5");
 		}
 
 		return uClassPointer;
@@ -24504,7 +24504,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REPLAY_SOCCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Replay_Soccar_TA");
 		}
 
 		return uClassPointer;
@@ -24561,7 +24561,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXHUD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxHUD_TA");
 		}
 
 		return uClassPointer;
@@ -24664,7 +24664,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_PODIUMSTART_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_PodiumStart_TA");
 		}
 
 		return uClassPointer;
@@ -24685,7 +24685,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_SOCCAR_TA__SHOULDAUTOREADYUP_DDEA50D848F1348DB5EFD0902FA733AB));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_Soccar_TA__ShouldAutoReadyUp_DDEA50D848F1348DB5EFD0902FA733AB");
 		}
 
 		return uClassPointer;
@@ -24708,7 +24708,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_GAMETIMECHANGED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_GameTimeChanged_TA");
 		}
 
 		return uClassPointer;
@@ -24734,7 +24734,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BOTDETECTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BotDetection_TA");
 		}
 
 		return uClassPointer;
@@ -24767,7 +24767,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_RECORDMATCHSTATS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RecordMatchStats_TA");
 		}
 
 		return uClassPointer;
@@ -24790,7 +24790,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_SOCCAR_TA__COMMITPLAYERMATCHDATA_418B8B8C46181DD9199360976C66A296));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_Soccar_TA__CommitPlayerMatchData_418B8B8C46181DD9199360976C66A296");
 		}
 
 		return uClassPointer;
@@ -24812,7 +24812,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONSECUTIVEMATCHTRACKER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ConsecutiveMatchTracker_TA");
 		}
 
 		return uClassPointer;
@@ -24838,7 +24838,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_SOCCAR_TA__REPORTFPS_B251098F478FE44ED4E3B48F2F0632FC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_Soccar_TA__ReportFps_B251098F478FE44ED4E3B48F2F0632FC");
 		}
 
 		return uClassPointer;
@@ -24859,7 +24859,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PERFMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PerfMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -24883,7 +24883,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_SOCCAR_TA__INITCLUBMATCH_7D49487C473A4CA2C421598CBC8727DC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_Soccar_TA__InitClubMatch_7D49487C473A4CA2C421598CBC8727DC");
 		}
 
 		return uClassPointer;
@@ -24905,7 +24905,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLUBUTIL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClubUtil_TA");
 		}
 
 		return uClassPointer;
@@ -24952,7 +24952,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLIENTCONNECTIONTRACKER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClientConnectionTracker_TA");
 		}
 
 		return uClassPointer;
@@ -24993,7 +24993,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENDROUNDCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EndRoundComponent_TA");
 		}
 
 		return uClassPointer;
@@ -25057,7 +25057,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDSOUNDMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdSoundManager_TA");
 		}
 
 		return uClassPointer;
@@ -25160,7 +25160,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SIMILARSEASONLOGOS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SimilarSeasonLogos_TA");
 		}
 
 		return uClassPointer;
@@ -25182,7 +25182,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_SOCCAR_SUBRULES_BASKETBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Soccar_SubRules_Basketball_TA");
 		}
 
 		return uClassPointer;
@@ -25272,7 +25272,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Tutorial_TA");
 		}
 
 		return uClassPointer;
@@ -25357,7 +25357,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TRAINING_GOALIE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Training_Goalie_TA");
 		}
 
 		return uClassPointer;
@@ -25389,7 +25389,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TUTORIALSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TutorialSave_TA");
 		}
 
 		return uClassPointer;
@@ -25447,7 +25447,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXSHELL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxShell_TA");
 		}
 
 		return uClassPointer;
@@ -25578,7 +25578,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_UISAVEDVALUES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UISavedValues_TA");
 		}
 
 		return uClassPointer;
@@ -25626,7 +25626,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_UISTRINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UIStrings_TA");
 		}
 
 		return uClassPointer;
@@ -25648,7 +25648,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_TUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Tutorial_TA");
 		}
 
 		return uClassPointer;
@@ -25676,7 +25676,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TRAINING_AERIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Training_Aerial_TA");
 		}
 
 		return uClassPointer;
@@ -25698,7 +25698,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TRAINING_STRIKER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Training_Striker_TA");
 		}
 
 		return uClassPointer;
@@ -25724,7 +25724,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TUTORIAL_BASIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Tutorial_Basic_TA");
 		}
 
 		return uClassPointer;
@@ -25757,7 +25757,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TUTORIAL_ADVANCED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Tutorial_Advanced_TA");
 		}
 
 		return uClassPointer;
@@ -25777,7 +25777,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TUTORIAL_FREEPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Tutorial_FreePlay_TA");
 		}
 
 		return uClassPointer;
@@ -25805,7 +25805,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENT_TUTORIAL_FREEPLAY_TA__HANDLEHITGOAL_EC9C121647B4989C91EAF59AD4F8E1B3));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEvent_Tutorial_FreePlay_TA__HandleHitGoal_EC9C121647B4989C91EAF59AD4F8E1B3");
 		}
 
 		return uClassPointer;
@@ -25826,7 +25826,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_CINEMATIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Cinematic_TA");
 		}
 
 		return uClassPointer;
@@ -25851,7 +25851,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERCONTROLLER_CINEMATIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerController_Cinematic_TA");
 		}
 
 		return uClassPointer;
@@ -25873,7 +25873,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEINFO_GFXMENU_TA__DESTROYED_F51969E24E80CBAE1045D984651E48F9));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameInfo_GFxMenu_TA__Destroyed_F51969E24E80CBAE1045D984651E48F9");
 		}
 
 		return uClassPointer;
@@ -25900,7 +25900,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EXPLOSIONPREVIEWER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ExplosionPreviewer_TA");
 		}
 
 		return uClassPointer;
@@ -25931,7 +25931,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MENUSEQUENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MenuSequence_TA");
 		}
 
 		return uClassPointer;
@@ -25970,7 +25970,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_System_TA");
 		}
 
 		return uClassPointer;
@@ -26053,7 +26053,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LOCALPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LocalPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -26137,7 +26137,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PREMIUMGARAGEPREVIEWSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PremiumGaragePreviewSet_TA");
 		}
 
 		return uClassPointer;
@@ -26190,7 +26190,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MENUSEQUENCER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MenuSequencer_TA");
 		}
 
 		return uClassPointer;
@@ -26240,7 +26240,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CINEMATICINTROSEQUENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CinematicIntroSequence_TA");
 		}
 
 		return uClassPointer;
@@ -26278,7 +26278,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_PERFTEST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_PerfTest_TA");
 		}
 
 		return uClassPointer;
@@ -26310,7 +26310,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_POSTPROCESSMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PostProcessManager_TA");
 		}
 
 		return uClassPointer;
@@ -26338,7 +26338,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERSTART_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerStart_TA");
 		}
 
 		return uClassPointer;
@@ -26358,7 +26358,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DYNAMICPLAYERSTART_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DynamicPlayerStart_TA");
 		}
 
 		return uClassPointer;
@@ -26379,7 +26379,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_SEASON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Season_TA");
 		}
 
 		return uClassPointer;
@@ -26415,7 +26415,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPSELECTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapSelector_TA");
 		}
 
 		return uClassPointer;
@@ -26452,7 +26452,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEINFO_SOCCAR_TA__QUEUESHUTDOWN_E6318913441C6CF65BF51A929F277A4D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameInfo_Soccar_TA__QueueShutdown_E6318913441C6CF65BF51A929F277A4D");
 		}
 
 		return uClassPointer;
@@ -26473,7 +26473,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_TUTORIALHELPER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_TutorialHelper_TA");
 		}
 
 		return uClassPointer;
@@ -26498,7 +26498,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYLISTSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlaylistSettings_TA");
 		}
 
 		return uClassPointer;
@@ -26524,7 +26524,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSERVERINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourServerInfo_TA");
 		}
 
 		return uClassPointer;
@@ -26548,7 +26548,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMESHARE_TA__NOTIFYCARPREVIEWACTORADDED_357C64CC4A0319882C86DE9EB18BF049));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameShare_TA__NotifyCarPreviewActorAdded_357C64CC4A0319882C86DE9EB18BF049");
 		}
 
 		return uClassPointer;
@@ -26584,7 +26584,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEPLAYSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameplaySettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -26610,7 +26610,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_OVERLAYINTERACTIONEGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OverlayInteractionEGS_TA");
 		}
 
 		return uClassPointer;
@@ -26634,7 +26634,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEVIEWPORTCLIENT_TA__ALLOWTOURNAMENTSPLITSCREEN_75F374F44D2E386CCD2543A215C06E49));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameViewportClient_TA__AllowTournamentSplitscreen_75F374F44D2E386CCD2543A215C06E49");
 		}
 
 		return uClassPointer;
@@ -26675,7 +26675,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMETOURNAMENTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameTournaments_TA");
 		}
 
 		return uClassPointer;
@@ -26713,7 +26713,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME__TOURTYPES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame._TourTypes_TA");
 		}
 
 		return uClassPointer;
@@ -26747,7 +26747,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOUREVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourEvent_TA");
 		}
 
 		return uClassPointer;
@@ -26832,7 +26832,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourErrors_TA");
 		}
 
 		return uClassPointer;
@@ -26854,7 +26854,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURCHECKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourCheckIn_TA");
 		}
 
 		return uClassPointer;
@@ -26895,7 +26895,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHAT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Chat_TA");
 		}
 
 		return uClassPointer;
@@ -26971,7 +26971,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACCOUNTSETTINGSCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AccountSettingsComponent_TA");
 		}
 
 		return uClassPointer;
@@ -27005,7 +27005,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CHAT_TA__ADDCHATMESSAGE_9BFCF574472F59B2E1CDC7AFEBCF87EA));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Chat_TA__AddChatMessage_9BFCF574472F59B2E1CDC7AFEBCF87EA");
 		}
 
 		return uClassPointer;
@@ -27029,7 +27029,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHATHISTORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChatHistory_TA");
 		}
 
 		return uClassPointer;
@@ -27067,7 +27067,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STOREDCHATDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StoredChatData_TA");
 		}
 
 		return uClassPointer;
@@ -27090,7 +27090,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILEQUICKCHATSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileQuickChatSave_TA");
 		}
 
 		return uClassPointer;
@@ -27118,7 +27118,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_COMMUNITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Community_TA");
 		}
 
 		return uClassPointer;
@@ -27148,7 +27148,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BLOGTILECACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BlogTileCache_TA");
 		}
 
 		return uClassPointer;
@@ -27176,7 +27176,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_BLOGTILE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_BlogTile_TA");
 		}
 
 		return uClassPointer;
@@ -27215,7 +27215,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CONTROLS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Controls_TA");
 		}
 
 		return uClassPointer;
@@ -27270,7 +27270,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CONTROLS_TA__CLEARBINDING_AC4EACC847A3598018C2098A172B9944));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Controls_TA__ClearBinding_AC4EACC847A3598018C2098A172B9944");
 		}
 
 		return uClassPointer;
@@ -27295,7 +27295,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CONTROLS_TA__SETCURRENTBINDING_83CFCF534A06021C2BA4A5B20DD4F355));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Controls_TA__SetCurrentBinding_83CFCF534A06021C2BA4A5B20DD4F355");
 		}
 
 		return uClassPointer;
@@ -27321,7 +27321,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILEGAMEPADSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileGamepadSave_TA");
 		}
 
 		return uClassPointer;
@@ -27355,7 +27355,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILEPCSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfilePCSave_TA");
 		}
 
 		return uClassPointer;
@@ -27384,7 +27384,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CREDITS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Credits_TA");
 		}
 
 		return uClassPointer;
@@ -27449,7 +27449,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_GAMEEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_GameEvent_TA");
 		}
 
 		return uClassPointer;
@@ -27512,7 +27512,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_GARAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Garage_TA");
 		}
 
 		return uClassPointer;
@@ -27586,7 +27586,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEDLCPRODUCTCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineDLCProductCache_TA");
 		}
 
 		return uClassPointer;
@@ -27617,7 +27617,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTHASH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductHash_TA");
 		}
 
 		return uClassPointer;
@@ -27660,7 +27660,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTSLOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductSlot_TA");
 		}
 
 		return uClassPointer;
@@ -27681,7 +27681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_GARAGEPRODUCTSLOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_GarageProductSlot_TA");
 		}
 
 		return uClassPointer;
@@ -27704,7 +27704,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_GARAGE_TA__SETPREVIEWPRODUCT_633697BA4DB458C20629229F3799F251));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Garage_TA__SetPreviewProduct_633697BA4DB458C20629229F3799F251");
 		}
 
 		return uClassPointer;
@@ -27772,7 +27772,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Products_TA");
 		}
 
 		return uClassPointer;
@@ -27882,7 +27882,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductsSave_TA");
 		}
 
 		return uClassPointer;
@@ -27916,7 +27916,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ICUSTOMIZABLESLOT));
+			uClassPointer = UObject::FindClass("Class TAGame.ICustomizableSlot");
 		}
 
 		return uClassPointer;
@@ -27945,7 +27945,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LEADERBOARDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Leaderboards_TA");
 		}
 
 		return uClassPointer;
@@ -27994,7 +27994,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LOCALCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LocalCar_TA");
 		}
 
 		return uClassPointer;
@@ -28029,7 +28029,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLIENTXPSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClientXPSave_TA");
 		}
 
 		return uClassPointer;
@@ -28064,7 +28064,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERVANITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerVanity_TA");
 		}
 
 		return uClassPointer;
@@ -28107,7 +28107,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_FIRSTTIMEEXPERIENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_FirstTimeExperience_TA");
 		}
 
 		return uClassPointer;
@@ -28140,7 +28140,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LEGALTEXT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LegalText_TA");
 		}
 
 		return uClassPointer;
@@ -28174,7 +28174,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILEGAMEPLAYSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileGameplaySave_TA");
 		}
 
 		return uClassPointer;
@@ -28198,7 +28198,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PERSONASAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PersonaSave_TA");
 		}
 
 		return uClassPointer;
@@ -28221,7 +28221,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_LOCALPLAYER_TA__HANDLEXPLOADED_B046A9D24F6396B36A40748DBE7C66F8));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_LocalPlayer_TA__HandleXPLoaded_B046A9D24F6396B36A40748DBE7C66F8");
 		}
 
 		return uClassPointer;
@@ -28247,7 +28247,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINESTORAGESYNCMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineStorageSyncManager_TA");
 		}
 
 		return uClassPointer;
@@ -28290,7 +28290,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MAINMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MainMenu_TA");
 		}
 
 		return uClassPointer;
@@ -28334,7 +28334,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TEAMINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TeamInfo_TA");
 		}
 
 		return uClassPointer;
@@ -28365,7 +28365,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CONTAINERDROPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ContainerDrops_TA");
 		}
 
 		return uClassPointer;
@@ -28403,7 +28403,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MENUSTACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MenuStack_TA");
 		}
 
 		return uClassPointer;
@@ -28432,7 +28432,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKILLDECAYEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkillDecayedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -28452,7 +28452,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENTEREDMAINMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EnteredMainMenu_TA");
 		}
 
 		return uClassPointer;
@@ -28472,7 +28472,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOWROOMMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShowroomMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -28504,7 +28504,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_DLC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_DLC_TA");
 		}
 
 		return uClassPointer;
@@ -28546,7 +28546,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MAP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Map_TA");
 		}
 
 		return uClassPointer;
@@ -28590,7 +28590,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ONLINEMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_OnlineMatch_TA");
 		}
 
 		return uClassPointer;
@@ -28636,7 +28636,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ONLINEMATCHSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_OnlineMatchStatus_TA");
 		}
 
 		return uClassPointer;
@@ -28685,7 +28685,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REGIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Regions_TA");
 		}
 
 		return uClassPointer;
@@ -28714,7 +28714,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGame_TA");
 		}
 
 		return uClassPointer;
@@ -28736,7 +28736,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_ERROR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_Error_TA");
 		}
 
 		return uClassPointer;
@@ -28775,7 +28775,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MATCHMAKING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Matchmaking_TA");
 		}
 
 		return uClassPointer;
@@ -28828,7 +28828,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHMAKINGSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchmakingSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -28879,7 +28879,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Playlist_TA");
 		}
 
 		return uClassPointer;
@@ -28911,7 +28911,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VIEWINGMATCHMAKING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ViewingMatchmaking_TA");
 		}
 
 		return uClassPointer;
@@ -28932,7 +28932,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MATCHMAKING_TA__GETACCESSIBLEPLAYLISTS_E3C7AC144705D153BA3C79BCF9BE1F52));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Matchmaking_TA__GetAccessiblePlaylists_E3C7AC144705D153BA3C79BCF9BE1F52");
 		}
 
 		return uClassPointer;
@@ -28956,7 +28956,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEPLAYLISTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGamePlaylists_TA");
 		}
 
 		return uClassPointer;
@@ -28980,7 +28980,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MICROEVENTCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MicroEventConfig_TA");
 		}
 
 		return uClassPointer;
@@ -29006,7 +29006,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MICROEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MicroEvent_TA");
 		}
 
 		return uClassPointer;
@@ -29053,7 +29053,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MUSICPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MusicPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -29116,7 +29116,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTHEMECONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicThemeConfig_TA");
 		}
 
 		return uClassPointer;
@@ -29143,7 +29143,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTHEME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTheme_TA");
 		}
 
 		return uClassPointer;
@@ -29179,7 +29179,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEPLAYMUSICPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameplayMusicPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -29223,7 +29223,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTRACKLISTBUILDSTEP_REMOVETRACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTracklistBuildStep_RemoveTrack_TA");
 		}
 
 		return uClassPointer;
@@ -29244,7 +29244,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IMUSICTRACKLISTBUILDER));
+			uClassPointer = UObject::FindClass("Class TAGame.IMusicTracklistBuilder");
 		}
 
 		return uClassPointer;
@@ -29267,7 +29267,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTRACKLISTBUILDSTEP_SHUFFLETRACKS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTracklistBuildStep_ShuffleTracks_TA");
 		}
 
 		return uClassPointer;
@@ -29288,7 +29288,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTRACKLISTBUILDSTEP_CREATEDEFAULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTracklistBuildStep_CreateDefault_TA");
 		}
 
 		return uClassPointer;
@@ -29313,7 +29313,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTRACKLISTFACTORY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTracklistFactory_TA");
 		}
 
 		return uClassPointer;
@@ -29335,7 +29335,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICURLCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicUrlConfig_TA");
 		}
 
 		return uClassPointer;
@@ -29359,7 +29359,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICPLAYLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicPlaylist_TA");
 		}
 
 		return uClassPointer;
@@ -29396,7 +29396,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ARENASOUNDMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ArenaSoundManager_TA");
 		}
 
 		return uClassPointer;
@@ -29468,7 +29468,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -29499,7 +29499,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTRACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTrack_TA");
 		}
 
 		return uClassPointer;
@@ -29528,7 +29528,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICPLAYERSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicPlayerSave_TA");
 		}
 
 		return uClassPointer;
@@ -29557,7 +29557,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IMUSICTRACKLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IMusicTracklist_TA");
 		}
 
 		return uClassPointer;
@@ -29580,7 +29580,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MUSICPLAYER_TA__MERGEPLAYLISTS_1973987044C495FB045DB5B977B217DB));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MusicPlayer_TA__MergePlaylists_1973987044C495FB045DB5B977B217DB");
 		}
 
 		return uClassPointer;
@@ -29603,7 +29603,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MUSICPLAYER_TA__HANDLETHEMECHANGE_B00AB8D5494D3CFE6CDDFDA53581E959));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MusicPlayer_TA__HandleThemeChange_B00AB8D5494D3CFE6CDDFDA53581E959");
 		}
 
 		return uClassPointer;
@@ -29635,7 +29635,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_NAMEPLATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Nameplate_TA");
 		}
 
 		return uClassPointer;
@@ -29681,7 +29681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PARTY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Party_TA");
 		}
 
 		return uClassPointer;
@@ -29773,7 +29773,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STAYASPARTYSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StayAsPartySystem_TA");
 		}
 
 		return uClassPointer;
@@ -29838,7 +29838,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTY_TA__ONPLAYERINVITED_84D25D4646E5E3A4D362BFBDAD235B5E));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Party_TA__OnPlayerInvited_84D25D4646E5E3A4D362BFBDAD235B5E");
 		}
 
 		return uClassPointer;
@@ -29862,7 +29862,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETPERSONAINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetPersonaInfo_TA");
 		}
 
 		return uClassPointer;
@@ -29885,7 +29885,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTY_TA__HANDLEPARTYERROR_3247405148B899877606BEB04FFEF784));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Party_TA__HandlePartyError_3247405148B899877606BEB04FFEF784");
 		}
 
 		return uClassPointer;
@@ -29909,7 +29909,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ERRORMODALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ErrorModals_TA");
 		}
 
 		return uClassPointer;
@@ -29941,7 +29941,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PERSONA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Persona_TA");
 		}
 
 		return uClassPointer;
@@ -29967,7 +29967,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTY_TA__PROCESSINVITATIONRESPONSE_57DF35954D3FD520B01A8BBAE8AB343B));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Party_TA__ProcessInvitationResponse_57DF35954D3FD520B01A8BBAE8AB343B");
 		}
 
 		return uClassPointer;
@@ -29989,7 +29989,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTY_TA__HANDLEACCEPTINVITETOTRADE_EF8984404A008A6D56FEB0A274732911));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Party_TA__HandleAcceptInviteToTrade_EF8984404A008A6D56FEB0A274732911");
 		}
 
 		return uClassPointer;
@@ -30014,7 +30014,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPLAYERAUTHENTICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlinePlayerAuthentication_TA");
 		}
 
 		return uClassPointer;
@@ -30043,7 +30043,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TWOFACTORAUTHENTICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TwoFactorAuthentication_TA");
 		}
 
 		return uClassPointer;
@@ -30071,7 +30071,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTY_TA__SENDALLOWTRADERPC_1189E8D246D5A02BD94DAC9B9F9B065E));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Party_TA__SendAllowTradeRPC_1189E8D246D5A02BD94DAC9B9F9B065E");
 		}
 
 		return uClassPointer;
@@ -30095,7 +30095,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSTRADEALLOWED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsTradeAllowed_TA");
 		}
 
 		return uClassPointer;
@@ -30118,7 +30118,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTY_TA__INVITEPLAYERTOTRADE_926B0E134999FE3C8DF1AEB1AB980719));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Party_TA__InvitePlayerToTrade_926B0E134999FE3C8DF1AEB1AB980719");
 		}
 
 		return uClassPointer;
@@ -30141,7 +30141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTY_TA__ACTIVATEPARTYUP_647048234967113974A88790B30F6CD1));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Party_TA__ActivatePartyUp_647048234967113974A88790B30F6CD1");
 		}
 
 		return uClassPointer;
@@ -30167,7 +30167,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STAYASPARTYVOTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StayAsPartyVoter_TA");
 		}
 
 		return uClassPointer;
@@ -30211,7 +30211,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERRECORD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerRecord_TA");
 		}
 
 		return uClassPointer;
@@ -30288,7 +30288,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRI_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PRI_TA");
 		}
 
 		return uClassPointer;
@@ -30349,7 +30349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERAVATARBORDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerAvatarBorder_TA");
 		}
 
 		return uClassPointer;
@@ -30375,7 +30375,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERBANNER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerBanner_TA");
 		}
 
 		return uClassPointer;
@@ -30404,7 +30404,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERAVATAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerAvatar_TA");
 		}
 
 		return uClassPointer;
@@ -30431,7 +30431,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRI_TA__HANDLEOWNERCHANGED_0882323147E4A82664B06C863D50859A));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PRI_TA__HandleOwnerChanged_0882323147E4A82664B06C863D50859A");
 		}
 
 		return uClassPointer;
@@ -30464,7 +30464,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRIVATEMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PrivateMatch_TA");
 		}
 
 		return uClassPointer;
@@ -30507,7 +30507,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CUSTOMMATCHSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CustomMatchSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -30530,7 +30530,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRIVATEMATCHSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PrivateMatchSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -30552,7 +30552,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRIVILEGES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Privileges_TA");
 		}
 
 		return uClassPointer;
@@ -30586,7 +30586,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__LOADPRODUCT_B27B0F2948E4B33A2753708569C82C6F));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__LoadProduct_B27B0F2948E4B33A2753708569C82C6F");
 		}
 
 		return uClassPointer;
@@ -30615,7 +30615,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_WALLET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Wallet_TA");
 		}
 
 		return uClassPointer;
@@ -30664,7 +30664,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSHASHSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductsHashSave_TA");
 		}
 
 		return uClassPointer;
@@ -30696,7 +30696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSARCHIVESAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductsArchiveSave_TA");
 		}
 
 		return uClassPointer;
@@ -30722,7 +30722,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSFAVORITESAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductsFavoriteSave_TA");
 		}
 
 		return uClassPointer;
@@ -30749,7 +30749,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_TA");
 		}
 
 		return uClassPointer;
@@ -30773,7 +30773,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXPRODUCTATTRIBUTEMAP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxProductAttributeMap_TA");
 		}
 
 		return uClassPointer;
@@ -30806,7 +30806,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADINGPRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LoadingProduct_TA");
 		}
 
 		return uClassPointer;
@@ -30827,7 +30827,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__SLOTCONTAINSNEWPRODUCTS_CAB69DE8424F90826A8D4CAC4E5A63CC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__SlotContainsNewProducts_CAB69DE8424F90826A8D4CAC4E5A63CC");
 		}
 
 		return uClassPointer;
@@ -30850,7 +30850,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__INSTANCEATTRIBUTES_5C2C1D6446778511DC6BED8077E3709D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__InstanceAttributes_5C2C1D6446778511DC6BED8077E3709D");
 		}
 
 		return uClassPointer;
@@ -30871,7 +30871,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IPRODUCTATTRIBUTEPROVIDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IProductAttributeProvider_TA");
 		}
 
 		return uClassPointer;
@@ -30895,7 +30895,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__UPDATEPRODUCTDATA_E240786D4751FB691876AFA292486A58));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__UpdateProductData_E240786D4751FB691876AFA292486A58");
 		}
 
 		return uClassPointer;
@@ -30919,7 +30919,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_LEVELSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_LevelSettings_TA");
 		}
 
 		return uClassPointer;
@@ -30948,7 +30948,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_TA");
 		}
 
 		return uClassPointer;
@@ -30984,7 +30984,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_ANTHEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Anthem_TA");
 		}
 
 		return uClassPointer;
@@ -31010,7 +31010,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_BLUEPRINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Blueprint_TA");
 		}
 
 		return uClassPointer;
@@ -31033,7 +31033,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BLUEPRINTTHUMBNAILLOADRESULT));
+			uClassPointer = UObject::FindClass("Class TAGame.BlueprintThumbnailLoadResult");
 		}
 
 		return uClassPointer;
@@ -31057,7 +31057,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_BLUEPRINTGARAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_BlueprintGarage_TA");
 		}
 
 		return uClassPointer;
@@ -31116,7 +31116,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MTXCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MtxConfig_TA");
 		}
 
 		return uClassPointer;
@@ -31144,7 +31144,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -31173,7 +31173,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__HANDLEPRODUCTTHUMBNAILRENDERED_3A0CC4E64EBDF3D73631BBBF8440B56F));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__HandleProductThumbnailRendered_3A0CC4E64EBDF3D73631BBBF8440B56F");
 		}
 
 		return uClassPointer;
@@ -31195,7 +31195,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__RENDERPRODUCTTHUMBNAIL_8F9365D94F152BEAAB4AF6B46DEE06C3));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__RenderProductThumbnail_8F9365D94F152BEAAB4AF6B46DEE06C3");
 		}
 
 		return uClassPointer;
@@ -31217,7 +31217,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__LOADADDITIONALPRODUCTREFERENCES_EC07C23E4C5F03A60F1D1C87A90265E6));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__LoadAdditionalProductReferences_EC07C23E4C5F03A60F1D1C87A90265E6");
 		}
 
 		return uClassPointer;
@@ -31242,7 +31242,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__STARTLOADINGPRODUCT_686B26EA492E06FC00D7B89B2C1DD669));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__StartLoadingProduct_686B26EA492E06FC00D7B89B2C1DD669");
 		}
 
 		return uClassPointer;
@@ -31267,7 +31267,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTS_TA__ISTHUMBNAILREFERENCED_A96D509945519CF2DF5F50812B0AC01D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Products_TA__IsThumbnailReferenced_A96D509945519CF2DF5F50812B0AC01D");
 		}
 
 		return uClassPointer;
@@ -31289,7 +31289,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXPRODUCTATTRIBUTEMAP_TA__MAPATTRIBUTE_626A98FE455010DDFCD4AD8605BC96EA));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxProductAttributeMap_TA__MapAttribute_626A98FE455010DDFCD4AD8605BC96EA");
 		}
 
 		return uClassPointer;
@@ -31311,7 +31311,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Replay_TA");
 		}
 
 		return uClassPointer;
@@ -31337,7 +31337,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REPLAYMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ReplayManager_TA");
 		}
 
 		return uClassPointer;
@@ -31375,7 +31375,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_PROCESSING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_Processing_TA");
 		}
 
 		return uClassPointer;
@@ -31416,7 +31416,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REPLAYVIEWER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ReplayViewer_TA");
 		}
 
 		return uClassPointer;
@@ -31469,7 +31469,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERATRACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraTrack_TA");
 		}
 
 		return uClassPointer;
@@ -31501,7 +31501,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SAVEDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SaveData_TA");
 		}
 
 		return uClassPointer;
@@ -31531,7 +31531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SEASON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Season_TA");
 		}
 
 		return uClassPointer;
@@ -31562,7 +31562,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_CANNOTBEARCHIVED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_CannotBeArchived_TA");
 		}
 
 		return uClassPointer;
@@ -31583,7 +31583,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_DISPLAYLABELSLOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_DisplayLabelSlot_TA");
 		}
 
 		return uClassPointer;
@@ -31604,7 +31604,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_TRADEMARK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Trademark_TA");
 		}
 
 		return uClassPointer;
@@ -31634,7 +31634,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SEASONMODE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SeasonMode_TA");
 		}
 
 		return uClassPointer;
@@ -31676,7 +31676,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SERVERBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ServerBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -31715,7 +31715,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERBROWSERSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerBrowserSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -31755,7 +31755,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_USERSETTING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_UserSetting_TA");
 		}
 
 		return uClassPointer;
@@ -31841,7 +31841,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Settings_TA");
 		}
 
 		return uClassPointer;
@@ -32202,7 +32202,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUTOTOUR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AutoTour_TA");
 		}
 
 		return uClassPointer;
@@ -32253,7 +32253,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_USERSETTINGOBSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UserSettingObserver_TA");
 		}
 
 		return uClassPointer;
@@ -32304,7 +32304,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SOUNDSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SoundSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -32339,7 +32339,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SOUNDSETTINGSCONTROLLERSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SoundSettingsControllerSave_TA");
 		}
 
 		return uClassPointer;
@@ -32369,7 +32369,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NETWORKSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NetworkSave_TA");
 		}
 
 		return uClassPointer;
@@ -32402,7 +32402,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONNECTIONQUALITYSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ConnectionQualitySave_TA");
 		}
 
 		return uClassPointer;
@@ -32432,7 +32432,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VIDEOSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VideoSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -32455,7 +32455,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NOTIFICATIONSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NotificationSave_TA");
 		}
 
 		return uClassPointer;
@@ -32482,7 +32482,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EPICACCOUNTSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EpicAccountSave_TA");
 		}
 
 		return uClassPointer;
@@ -32513,7 +32513,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VIDEOSETTINGSSAVEPC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VideoSettingsSavePC_TA");
 		}
 
 		return uClassPointer;
@@ -32534,7 +32534,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VIDEOSETTINGSSAVECONSOLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VideoSettingsSaveConsole_TA");
 		}
 
 		return uClassPointer;
@@ -32554,7 +32554,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_WEATHERTOGGLED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_WeatherToggled_TA");
 		}
 
 		return uClassPointer;
@@ -32575,7 +32575,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SETTINGS_TA__SETDEFAULTS_8591CB2649D75EA9BC91B4837312DAE4));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Settings_TA__SetDefaults_8591CB2649D75EA9BC91B4837312DAE4");
 		}
 
 		return uClassPointer;
@@ -32597,7 +32597,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_USERSETTINGCHANGED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_UserSettingChanged_TA");
 		}
 
 		return uClassPointer;
@@ -32626,7 +32626,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILEAIMASSISTSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileAimAssistSave_TA");
 		}
 
 		return uClassPointer;
@@ -32655,7 +32655,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SETTINGS_TA__CROSSPLAYPARTYVALIDATION_919B65E845588B6D1ECBE29B307B1EC4));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Settings_TA__CrossplayPartyValidation_919B65E845588B6D1ECBE29B307B1EC4");
 		}
 
 		return uClassPointer;
@@ -32681,7 +32681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SETTINGS_TA__SETTOURSCHEDULEREGION_A020472C46B1F992ECEBE9B457002DAC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Settings_TA__SetTourScheduleRegion_A020472C46B1F992ECEBE9B457002DAC");
 		}
 
 		return uClassPointer;
@@ -32708,7 +32708,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_FREEPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Freeplay_TA");
 		}
 
 		return uClassPointer;
@@ -32750,7 +32750,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TASYNCRESULT__PRIVILEGECHECK_X));
+			uClassPointer = UObject::FindClass("Class TAGame.TAsyncResult__PrivilegeCheck_X");
 		}
 
 		return uClassPointer;
@@ -32781,7 +32781,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_USERSETTINGMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UserSettingMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -32805,7 +32805,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_USERSETTINGOBSERVEREVENTCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UserSettingObserverEventCache_TA");
 		}
 
 		return uClassPointer;
@@ -32831,7 +32831,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___USERSETTINGOBSERVEREVENTCACHE_TA__RECORDSETTING_32C136C44342A217C0F5479281BFFC11));
+			uClassPointer = UObject::FindClass("Class TAGame.__UserSettingObserverEventCache_TA__RecordSetting_32C136C44342A217C0F5479281BFFC11");
 		}
 
 		return uClassPointer;
@@ -32852,7 +32852,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SPLITSCREENMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SplitscreenMatch_TA");
 		}
 
 		return uClassPointer;
@@ -32878,7 +32878,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_STARTMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_StartMenu_TA");
 		}
 
 		return uClassPointer;
@@ -32922,7 +32922,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_STARTMENU_TA__HANDLESYNCONLINEPLAYERSTORAGESTARTED_A16C14BB49F552CC89F903B33A003F35));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_StartMenu_TA__HandleSyncOnlinePlayerStorageStarted_A16C14BB49F552CC89F903B33A003F35");
 		}
 
 		return uClassPointer;
@@ -32945,7 +32945,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_STATS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Stats_TA");
 		}
 
 		return uClassPointer;
@@ -32972,7 +32972,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_STATS_TA__SETUPSTATDATA_9AD32017475E74CC45E1FFAC02B7D8DF));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Stats_TA__SetupStatData_9AD32017475E74CC45E1FFAC02B7D8DF");
 		}
 
 		return uClassPointer;
@@ -32994,7 +32994,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SYSTEM_TA__ONSHELLSET_E89E86EB48EC71DBE714A88C233E6498));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_System_TA__OnShellSet_E89E86EB48EC71DBE714A88C233E6498");
 		}
 
 		return uClassPointer;
@@ -33016,7 +33016,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EXCLUSIVEINTERACTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ExclusiveInteraction_TA");
 		}
 
 		return uClassPointer;
@@ -33052,7 +33052,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TRAINING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Training_TA");
 		}
 
 		return uClassPointer;
@@ -33106,7 +33106,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -33219,7 +33219,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_TRAININGEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_TrainingEditor_TA");
 		}
 
 		return uClassPointer;
@@ -33319,7 +33319,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_VOTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Vote_TA");
 		}
 
 		return uClassPointer;
@@ -33349,7 +33349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXENGINE_TA__INITONLINESUB_883C490D4F2237229AEC2E8D9AF527C5));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxEngine_TA__InitOnlineSub_883C490D4F2237229AEC2E8D9AF527C5");
 		}
 
 		return uClassPointer;
@@ -33377,7 +33377,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADINGSCREEN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LoadingScreen_TA");
 		}
 
 		return uClassPointer;
@@ -33418,7 +33418,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MULTIITEMDROPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MultiItemDrops_TA");
 		}
 
 		return uClassPointer;
@@ -33490,7 +33490,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GRI_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GRI_TA");
 		}
 
 		return uClassPointer;
@@ -33525,7 +33525,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXHUD_SPECTATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxHUD_Spectator_TA");
 		}
 
 		return uClassPointer;
@@ -33596,7 +33596,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXNAMEPLATESMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxNameplatesManager_TA");
 		}
 
 		return uClassPointer;
@@ -33664,7 +33664,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourSettings_TA");
 		}
 
 		return uClassPointer;
@@ -33705,7 +33705,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FACEIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FaceIt_TA");
 		}
 
 		return uClassPointer;
@@ -33754,7 +33754,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATORGAMESETTINGPRESET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MutatorGameSettingPreset_TA");
 		}
 
 		return uClassPointer;
@@ -33775,7 +33775,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXHUD_TA__HANDLEVOTEFINISHED_CC4756D94A04D0225696ABB7F18BF7DA));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxHUD_TA__HandleVoteFinished_CC4756D94A04D0225696ABB7F18BF7DA");
 		}
 
 		return uClassPointer;
@@ -33797,7 +33797,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXHUD_TA__GETVOTEBYSUBJECT_69369B784297111DEE5986B61A7B79E2));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxHUD_TA__GetVoteBySubject_69369B784297111DEE5986B61A7B79E2");
 		}
 
 		return uClassPointer;
@@ -33820,7 +33820,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PICKUPTIMER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PickupTimer_TA");
 		}
 
 		return uClassPointer;
@@ -33847,7 +33847,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXHUD_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxHUD_Replay_TA");
 		}
 
 		return uClassPointer;
@@ -33889,7 +33889,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXHUD_SOCCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxHUD_Soccar_TA");
 		}
 
 		return uClassPointer;
@@ -33931,7 +33931,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SERVERPERFORMANCESTATS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ServerPerformanceStats_TA");
 		}
 
 		return uClassPointer;
@@ -33957,7 +33957,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PREMATCHLOBBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PreMatchLobby_TA");
 		}
 
 		return uClassPointer;
@@ -33993,7 +33993,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXHUD_SEASON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxHUD_Season_TA");
 		}
 
 		return uClassPointer;
@@ -34014,7 +34014,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXHUD_TRAINING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxHUD_Training_TA");
 		}
 
 		return uClassPointer;
@@ -34038,7 +34038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_FRIENDJOIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_FriendJoin_TA");
 		}
 
 		return uClassPointer;
@@ -34064,7 +34064,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXMODAL_PROCESSING_TA__CREATEANDBIND_050167B04EABD0E9B1F373A19044DBB3));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxModal_Processing_TA__CreateAndBind_050167B04EABD0E9B1F373A19044DBB3");
 		}
 
 		return uClassPointer;
@@ -34086,7 +34086,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXMODAL_PROCESSING_TA__CREATEANDBINDNOCANCEL_70C1946847D828706219208DD94C0716));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxModal_Processing_TA__CreateAndBindNoCancel_70C1946847D828706219208DD94C0716");
 		}
 
 		return uClassPointer;
@@ -34110,7 +34110,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_RANKEDRECONNECT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_RankedReconnect_TA");
 		}
 
 		return uClassPointer;
@@ -34138,7 +34138,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_TEXTINPUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_TextInput_TA");
 		}
 
 		return uClassPointer;
@@ -34161,7 +34161,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_TUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_Tutorial_TA");
 		}
 
 		return uClassPointer;
@@ -34182,7 +34182,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_FEATURES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Features_TA");
 		}
 
 		return uClassPointer;
@@ -34206,7 +34206,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_WEBBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_WebBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -34240,7 +34240,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SEASONREWARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SeasonReward_TA");
 		}
 
 		return uClassPointer;
@@ -34263,7 +34263,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductsSave_TA");
 		}
 
 		return uClassPointer;
@@ -34286,7 +34286,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ESPORTCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ESportConfig_TA");
 		}
 
 		return uClassPointer;
@@ -34310,7 +34310,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHAMPIONSHIPTROPHY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChampionshipTrophy_TA");
 		}
 
 		return uClassPointer;
@@ -34333,7 +34333,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RANKEDRECONNECTSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RankedReconnectSave_TA");
 		}
 
 		return uClassPointer;
@@ -34357,7 +34357,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_CINEMATIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_Cinematic_TA");
 		}
 
 		return uClassPointer;
@@ -34381,7 +34381,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_EPICLOGIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_EpicLogin_TA");
 		}
 
 		return uClassPointer;
@@ -34428,7 +34428,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXSHELL_TA__SETINPUTACTIONENABLED_7B093ADE43E57F749C1A8C87A283BC07));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxShell_TA__SetInputActionEnabled_7B093ADE43E57F749C1A8C87A283BC07");
 		}
 
 		return uClassPointer;
@@ -34451,7 +34451,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXSHELL_TA__SHOWRANKEDRECONNECTMODAL_159B4B79419AAFF3239CF2B7A5C03350));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxShell_TA__ShowRankedReconnectModal_159B4B79419AAFF3239CF2B7A5C03350");
 		}
 
 		return uClassPointer;
@@ -34472,7 +34472,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_BAN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_Ban_TA");
 		}
 
 		return uClassPointer;
@@ -34494,7 +34494,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GOALVOLUME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GoalVolume_TA");
 		}
 
 		return uClassPointer;
@@ -34522,7 +34522,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LIGHTBARCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LightBarComponent_TA");
 		}
 
 		return uClassPointer;
@@ -34550,7 +34550,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LIGHTENVIRONMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LightEnvironment_TA");
 		}
 
 		return uClassPointer;
@@ -34572,7 +34572,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___LOADOUT_TA__VALIDATEFORCEDPRODUCTS_1F32411540E4CED90D2E22B0D19C4BF9));
+			uClassPointer = UObject::FindClass("Class TAGame.__Loadout_TA__ValidateForcedProducts_1F32411540E4CED90D2E22B0D19C4BF9");
 		}
 
 		return uClassPointer;
@@ -34593,7 +34593,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IFORCEDPRODUCT));
+			uClassPointer = UObject::FindClass("Class TAGame.IForcedProduct");
 		}
 
 		return uClassPointer;
@@ -34615,7 +34615,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___LOADOUT_TA__APPLYCOMPATIBLEATTRIBUTEPRODUCTS_02981A0F45003293601D47BC154CCF36));
+			uClassPointer = UObject::FindClass("Class TAGame.__Loadout_TA__ApplyCompatibleAttributeProducts_02981A0F45003293601D47BC154CCF36");
 		}
 
 		return uClassPointer;
@@ -34640,7 +34640,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADOUTRENDERER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LoadoutRenderer_TA");
 		}
 
 		return uClassPointer;
@@ -34681,7 +34681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_BALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Ball_TA");
 		}
 
 		return uClassPointer;
@@ -34712,7 +34712,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALLSLOMOCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BallSlomoComponent_TA");
 		}
 
 		return uClassPointer;
@@ -34742,7 +34742,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_BOOSTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Booster_TA");
 		}
 
 		return uClassPointer;
@@ -34765,7 +34765,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_CAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Car_TA");
 		}
 
 		return uClassPointer;
@@ -34788,7 +34788,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_DEMOLISH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Demolish_TA");
 		}
 
 		return uClassPointer;
@@ -34810,7 +34810,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_GAMESPEED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_GameSpeed_TA");
 		}
 
 		return uClassPointer;
@@ -34833,7 +34833,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_GRAVITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Gravity_TA");
 		}
 
 		return uClassPointer;
@@ -34855,7 +34855,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_HANDICAP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Handicap_TA");
 		}
 
 		return uClassPointer;
@@ -34884,7 +34884,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_MATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Match_TA");
 		}
 
 		return uClassPointer;
@@ -34907,7 +34907,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_OVERTIMESETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OvertimeSettings_TA");
 		}
 
 		return uClassPointer;
@@ -34929,7 +34929,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAXTIMECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaxTimeComponent_TA");
 		}
 
 		return uClassPointer;
@@ -34952,7 +34952,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_RESPAWNTIME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_RespawnTime_TA");
 		}
 
 		return uClassPointer;
@@ -34976,7 +34976,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERSPAWNFEATURE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerSpawnFeature_TA");
 		}
 
 		return uClassPointer;
@@ -34997,7 +34997,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NAMEPLATERENDERTARGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NameplateRenderTarget_TA");
 		}
 
 		return uClassPointer;
@@ -35028,7 +35028,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMETOURMATCHMAKING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameTourMatchmaking_TA");
 		}
 
 		return uClassPointer;
@@ -35073,7 +35073,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOCALPLAYERSKILLSYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LocalPlayerSkillSync_TA");
 		}
 
 		return uClassPointer;
@@ -35100,7 +35100,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LEGALTEXT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LegalText_TA");
 		}
 
 		return uClassPointer;
@@ -35126,7 +35126,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EULA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Eula_TA");
 		}
 
 		return uClassPointer;
@@ -35151,7 +35151,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRIVACYPOLICY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PrivacyPolicy_TA");
 		}
 
 		return uClassPointer;
@@ -35180,7 +35180,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYCLUBSYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyClubSync_TA");
 		}
 
 		return uClassPointer;
@@ -35211,7 +35211,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLUBNOTIFICATIONSSYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClubNotificationsSync_TA");
 		}
 
 		return uClassPointer;
@@ -35239,7 +35239,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEDEFAULTMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeDefaultManager_TA");
 		}
 
 		return uClassPointer;
@@ -35305,7 +35305,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ROCKETPASS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RocketPass_TA");
 		}
 
 		return uClassPointer;
@@ -35369,7 +35369,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENVIRONMENTZONE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EnvironmentZone_TA");
 		}
 
 		return uClassPointer;
@@ -35394,7 +35394,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLUBPERSONAS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClubPersonas_TA");
 		}
 
 		return uClassPointer;
@@ -35427,7 +35427,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMETOURSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameTourServer_TA");
 		}
 
 		return uClassPointer;
@@ -35501,7 +35501,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BINARYUPLOADER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BinaryUploader_TA");
 		}
 
 		return uClassPointer;
@@ -35525,7 +35525,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEDEDICATEDSERVER_TA__INITFLATBUFFERUPLOAD_7CF5BFFB42FB88D76B8B05BD01621300));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameDedicatedServer_TA__InitFlatbufferUpload_7CF5BFFB42FB88D76B8B05BD01621300");
 		}
 
 		return uClassPointer;
@@ -35554,7 +35554,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETUPLOADURLS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetUploadUrls_TA");
 		}
 
 		return uClassPointer;
@@ -35580,7 +35580,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEDEDICATEDSERVER_TA__INITREPLAYUPLOAD_9C3CD77247BD276F33BCC98D31D512CE));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameDedicatedServer_TA__InitReplayUpload_9C3CD77247BD276F33BCC98D31D512CE");
 		}
 
 		return uClassPointer;
@@ -35603,7 +35603,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEDEDICATEDSERVER_TA__INITMATCHLOGUPLOAD_C7B587DC453F899E3F2FE982893765D1));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameDedicatedServer_TA__InitMatchLogUpload_C7B587DC453F899E3F2FE982893765D1");
 		}
 
 		return uClassPointer;
@@ -35625,7 +35625,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -35653,7 +35653,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSETCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAssetCache_TA");
 		}
 
 		return uClassPointer;
@@ -35679,7 +35679,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEJOINGAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameJoinGame_TA");
 		}
 
 		return uClassPointer;
@@ -35705,7 +35705,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMELANSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameLanServer_TA");
 		}
 
 		return uClassPointer;
@@ -35734,7 +35734,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_LOADOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_Loadout_TA");
 		}
 
 		return uClassPointer;
@@ -35755,7 +35755,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_REJOINED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_Rejoined_TA");
 		}
 
 		return uClassPointer;
@@ -35776,7 +35776,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_CHAT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_Chat_TA");
 		}
 
 		return uClassPointer;
@@ -35799,7 +35799,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEPARTY_TA__HANDLEPROFILESET_0D1D45E04486B4B80A469F87E91C0053));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameParty_TA__HandleProfileSet_0D1D45E04486B4B80A469F87E91C0053");
 		}
 
 		return uClassPointer;
@@ -35827,7 +35827,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSTRADEPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsTradePlayer_TA");
 		}
 
 		return uClassPointer;
@@ -35857,7 +35857,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEPARTY_TA__RESTOREARCHIVEDANDFAVORITEDPENDINGPRODUCTOFFERS_A8B8EE6B46C81F37F88D5D8B51B700D2));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameParty_TA__RestoreArchivedAndFavoritedPendingProductOffers_A8B8EE6B46C81F37F88D5D8B51B700D2");
 		}
 
 		return uClassPointer;
@@ -35880,7 +35880,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEPARTY_TA__SENDTRADETOBACKEND_8920096A4CF1F4C0517D6296EF39C96C));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameParty_TA__SendTradeToBackEnd_8920096A4CF1F4C0517D6296EF39C96C");
 		}
 
 		return uClassPointer;
@@ -35906,7 +35906,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSLOADOUTGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsLoadoutGet_TA");
 		}
 
 		return uClassPointer;
@@ -35933,7 +35933,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_TRADECURRENCYUPDATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_TradeCurrencyUpdate_TA");
 		}
 
 		return uClassPointer;
@@ -35956,7 +35956,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEPARTY_TA__ISPRODUCTVALIDAFTERVERIFY_A8F9BD564FC93F78A8291482A4A1FF04));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameParty_TA__IsProductValidAfterVerify_A8F9BD564FC93F78A8291482A4A1FF04");
 		}
 
 		return uClassPointer;
@@ -35980,7 +35980,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_TRADEPRODUCTUPDATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_TradeProductUpdate_TA");
 		}
 
 		return uClassPointer;
@@ -36017,7 +36017,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TRADELOBBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TradeLobby_TA");
 		}
 
 		return uClassPointer;
@@ -36091,7 +36091,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEPARTY_TA__HANDLECROSSPLAYENABLEDCHANGED_DB51EE5341CA85486A7F139409B0CD2A));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameParty_TA__HandleCrossplayEnabledChanged_DB51EE5341CA85486A7F139409B0CD2A");
 		}
 
 		return uClassPointer;
@@ -36113,7 +36113,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEPARTY_TA__ADDPLAYERPARTYSERVICELOBBYMESSAGE_6EEC2CD24D7C882F2D0B11986A31F54A));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameParty_TA__AddPlayerPartyServiceLobbyMessage_6EEC2CD24D7C882F2D0B11986A31F54A");
 		}
 
 		return uClassPointer;
@@ -36135,7 +36135,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEPLAYLISTS_TA__ISDEBUGMICROEVENTPLAYLIST_16C61D8648696587C790DCBFDE32288A));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGamePlaylists_TA__IsDebugMicroEventPlaylist_16C61D8648696587C790DCBFDE32288A");
 		}
 
 		return uClassPointer;
@@ -36187,7 +36187,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALEVENTCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialEventConfig_TA");
 		}
 
 		return uClassPointer;
@@ -36220,7 +36220,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEREGIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameRegions_TA");
 		}
 
 		return uClassPointer;
@@ -36243,7 +36243,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REGIONPINGCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RegionPingCache_TA");
 		}
 
 		return uClassPointer;
@@ -36268,7 +36268,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMERESERVATIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameReservations_TA");
 		}
 
 		return uClassPointer;
@@ -36308,7 +36308,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURMATCHINFOMESSAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourMatchInfoMessage_TA");
 		}
 
 		return uClassPointer;
@@ -36329,7 +36329,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMESKILL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameSkill_TA");
 		}
 
 		return uClassPointer;
@@ -36369,7 +36369,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeManager_TA");
 		}
 
 		return uClassPointer;
@@ -36431,7 +36431,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGERMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTriggerManager_TA");
 		}
 
 		return uClassPointer;
@@ -36461,7 +36461,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ANTIADDICTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AntiAddiction_TA");
 		}
 
 		return uClassPointer;
@@ -36490,7 +36490,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CRUMBTRAILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrumbTrails_TA");
 		}
 
 		return uClassPointer;
@@ -36534,7 +36534,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPLAYERMTX_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlinePlayerMTX_TA");
 		}
 
 		return uClassPointer;
@@ -36564,7 +36564,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERPROGRESSIONMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerProgressionManager_TA");
 		}
 
 		return uClassPointer;
@@ -36586,7 +36586,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPLAYERFRIENDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlinePlayerFriends_TA");
 		}
 
 		return uClassPointer;
@@ -36612,7 +36612,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEPLAYERFRIENDS_TA__DOWNLOADRECENTPLAYERDETAILS_4245468C420312D9F071F8A53953CC1B));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlinePlayerFriends_TA__DownloadRecentPlayerDetails_4245468C420312D9F071F8A53953CC1B");
 		}
 
 		return uClassPointer;
@@ -36634,7 +36634,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEPRODUCT_TA__SORTONLINEPRODUCTSBYQUALITY_4E85375E4FDC501953A29B8F9B66865F));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineProduct_TA__SortOnlineProductsByQuality_4E85375E4FDC501953A29B8F9B66865F");
 		}
 
 		return uClassPointer;
@@ -36656,7 +36656,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEPRODUCT_TA__REMOVEATTRIBUTES_98DEB6D64C3E33CFFCE8898722144F73));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineProduct_TA__RemoveAttributes_98DEB6D64C3E33CFFCE8898722144F73");
 		}
 
 		return uClassPointer;
@@ -36678,7 +36678,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PLAYERCONTROLLERBASE_TA__INITFROMPROFILE_2BC0D3164C7129DD5C396597D30E635E));
+			uClassPointer = UObject::FindClass("Class TAGame.__PlayerControllerBase_TA__InitFromProfile_2BC0D3164C7129DD5C396597D30E635E");
 		}
 
 		return uClassPointer;
@@ -36699,7 +36699,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECTATORVOLUME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpectatorVolume_TA");
 		}
 
 		return uClassPointer;
@@ -36737,7 +36737,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUDIOSPECTATORMIXCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AudioSpectatorMixComponent_TA");
 		}
 
 		return uClassPointer;
@@ -36778,7 +36778,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUDIOFIELDSIDECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AudioFieldSideComponent_TA");
 		}
 
 		return uClassPointer;
@@ -36817,7 +36817,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUTSEQUENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInputSequence_TA");
 		}
 
 		return uClassPointer;
@@ -36847,7 +36847,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EOSEVENT_PRESENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EOSEvent_Presence_TA");
 		}
 
 		return uClassPointer;
@@ -36869,7 +36869,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUT_MENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInput_Menu_TA");
 		}
 
 		return uClassPointer;
@@ -36893,7 +36893,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERCONTROLLER_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerController_Replay_TA");
 		}
 
 		return uClassPointer;
@@ -36917,7 +36917,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUDIOPARAMSSUPERSONICREPLAYCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AudioParamsSuperSonicReplayComponent_TA");
 		}
 
 		return uClassPointer;
@@ -36943,7 +36943,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUDIOPARAMSSUPERSONICCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AudioParamsSuperSonicComponent_TA");
 		}
 
 		return uClassPointer;
@@ -36985,7 +36985,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORPROXY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorProxy_TA");
 		}
 
 		return uClassPointer;
@@ -37048,7 +37048,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORPLAYERVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorPlayerView_TA");
 		}
 
 		return uClassPointer;
@@ -37087,7 +37087,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUDIOSLOMOREPLAYCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AudioSlomoReplayComponent_TA");
 		}
 
 		return uClassPointer;
@@ -37112,7 +37112,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLATFORMMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlatformMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -37136,7 +37136,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEMUSICCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameMusicComponent_TA");
 		}
 
 		return uClassPointer;
@@ -37159,7 +37159,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -37189,7 +37189,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PLAYERCONTROLLER_TA__CLIENTNOTIFYSERVERSHUTDOWN_A317AD854A843F221FC7C4A44603C13F));
+			uClassPointer = UObject::FindClass("Class TAGame.__PlayerController_TA__ClientNotifyServerShutdown_A317AD854A843F221FC7C4A44603C13F");
 		}
 
 		return uClassPointer;
@@ -37212,7 +37212,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERREPORTCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerReportComponent_TA");
 		}
 
 		return uClassPointer;
@@ -37236,7 +37236,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INTERFACE_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Interface_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -37291,7 +37291,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BALL_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Ball_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -37362,7 +37362,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEDITOR_ACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEditor_Actor_TA");
 		}
 
 		return uClassPointer;
@@ -37408,7 +37408,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEDITOR_TRIGGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEditor_Trigger_TA");
 		}
 
 		return uClassPointer;
@@ -37435,7 +37435,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEDITOR_RING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEditor_Ring_TA");
 		}
 
 		return uClassPointer;
@@ -37468,7 +37468,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLIENTSTAYASPARTYVOTEBEGINEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClientStayAsPartyVoteBeginEvent_TA");
 		}
 
 		return uClassPointer;
@@ -37506,7 +37506,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOUREVENTMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourEventMatch_TA");
 		}
 
 		return uClassPointer;
@@ -37553,7 +37553,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHCOMPLETEMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchCompleteMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -37578,7 +37578,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PLAYERCONTROLLER_TA__HANDLEPROFILEGAMEPADSAVE_47E2A1584AD10D595EB873993D7EF266));
+			uClassPointer = UObject::FindClass("Class TAGame.__PlayerController_TA__HandleProfileGamepadSave_47E2A1584AD10D595EB873993D7EF266");
 		}
 
 		return uClassPointer;
@@ -37600,7 +37600,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PLAYERCONTROLLER_TA__INITNETWORKSAVE_E18382D54E44CDE547E6A0A51B09E9E0));
+			uClassPointer = UObject::FindClass("Class TAGame.__PlayerController_TA__InitNetworkSave_E18382D54E44CDE547E6A0A51B09E9E0");
 		}
 
 		return uClassPointer;
@@ -37646,7 +37646,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUDIOMIXSTATECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AudioMixStateComponent_TA");
 		}
 
 		return uClassPointer;
@@ -37696,7 +37696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONTROLLEREVENTINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ControllerEventInfo_TA");
 		}
 
 		return uClassPointer;
@@ -37720,7 +37720,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUT_GAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInput_Game_TA");
 		}
 
 		return uClassPointer;
@@ -37741,7 +37741,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERBINDINGUTILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerBindingUtils_TA");
 		}
 
 		return uClassPointer;
@@ -37773,7 +37773,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUT_REPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInput_Replay_TA");
 		}
 
 		return uClassPointer;
@@ -37794,7 +37794,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUT_SPECTATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInput_Spectator_TA");
 		}
 
 		return uClassPointer;
@@ -37816,7 +37816,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_INPUTSEQUENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_InputSequence_TA");
 		}
 
 		return uClassPointer;
@@ -37838,7 +37838,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_POINTINSPACE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PointInSpace_TA");
 		}
 
 		return uClassPointer;
@@ -37858,7 +37858,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASETTINGSACTORCOPY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraSettingsActorCopy_TA");
 		}
 
 		return uClassPointer;
@@ -37884,7 +37884,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEPLAYERTITLES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGamePlayerTitles_TA");
 		}
 
 		return uClassPointer;
@@ -37925,7 +37925,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PARTYINVITE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PartyInvite_TA");
 		}
 
 		return uClassPointer;
@@ -37972,7 +37972,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MERGEPARTYEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MergePartyEvent_TA");
 		}
 
 		return uClassPointer;
@@ -38002,7 +38002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERINVITEECONFIRMEDMERGEEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerInviteeConfirmedMergeEvent_TA");
 		}
 
 		return uClassPointer;
@@ -38023,7 +38023,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STAYASPARTYLEADER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StayAsPartyLeader_TA");
 		}
 
 		return uClassPointer;
@@ -38044,7 +38044,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BOTREPLACEMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BotReplacement_TA");
 		}
 
 		return uClassPointer;
@@ -38065,7 +38065,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STAYASPARTYVOTEYES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StayAsPartyVoteYes_TA");
 		}
 
 		return uClassPointer;
@@ -38088,7 +38088,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_ANTENNAPACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_AntennaPack_TA");
 		}
 
 		return uClassPointer;
@@ -38109,7 +38109,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTASSET_ATTACHMENT_TA__MODIFYTHUMBNAILSCENE_D96C45924E2C2CADC8EDEE97871C994D));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductAsset_Attachment_TA__ModifyThumbnailScene_D96C45924E2C2CADC8EDEE97871C994D");
 		}
 
 		return uClassPointer;
@@ -38130,7 +38130,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDEFAULTPRODUCT));
+			uClassPointer = UObject::FindClass("Class TAGame.IDefaultProduct");
 		}
 
 		return uClassPointer;
@@ -38151,7 +38151,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PAINTEDFXSELECTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PaintedFXSelector_TA");
 		}
 
 		return uClassPointer;
@@ -38175,7 +38175,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_COUNTRYFLAGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_CountryFlags_TA");
 		}
 
 		return uClassPointer;
@@ -38196,7 +38196,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTASSET_SKIN_TA__GETSKINBODYSETTINGS_45A7487845A67CFDCEBDBEA0E9016692));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductAsset_Skin_TA__GetSkinBodySettings_45A7487845A67CFDCEBDBEA0E9016692");
 		}
 
 		return uClassPointer;
@@ -38218,7 +38218,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTASSET_SKIN_TA__GETSKINPARAMETERS_12239F6248CE3ADB3F239490DD0DD6DA));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductAsset_Skin_TA__GetSkinParameters_12239F6248CE3ADB3F239490DD0DD6DA");
 		}
 
 		return uClassPointer;
@@ -38239,7 +38239,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_UNDERGLOW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_UnderGlow_TA");
 		}
 
 		return uClassPointer;
@@ -38262,7 +38262,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_BOOSTTIME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_BoostTime_TA");
 		}
 
 		return uClassPointer;
@@ -38287,7 +38287,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_SOCCAREVENTBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_SoccarEventBase_TA");
 		}
 
 		return uClassPointer;
@@ -38311,7 +38311,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_DEMOLISHES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Demolishes_TA");
 		}
 
 		return uClassPointer;
@@ -38333,7 +38333,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_DISTANCEDRIVEN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_DistanceDriven_TA");
 		}
 
 		return uClassPointer;
@@ -38356,7 +38356,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_GAMESPLAYED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_GamesPlayed_TA");
 		}
 
 		return uClassPointer;
@@ -38377,7 +38377,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_GOALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Goals_TA");
 		}
 
 		return uClassPointer;
@@ -38398,7 +38398,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_SAVES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Saves_TA");
 		}
 
 		return uClassPointer;
@@ -38419,7 +38419,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_TIMEPLAYED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_TimePlayed_TA");
 		}
 
 		return uClassPointer;
@@ -38442,7 +38442,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_WINS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Wins_TA");
 		}
 
 		return uClassPointer;
@@ -38467,7 +38467,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERVANITYSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerVanitySave_TA");
 		}
 
 		return uClassPointer;
@@ -38495,7 +38495,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERBANNERSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerBannerSave_TA");
 		}
 
 		return uClassPointer;
@@ -38521,7 +38521,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURNAMENTSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TournamentSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -38544,7 +38544,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EXHIBITIONMATCHSETTINGSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ExhibitionMatchSettingsSave_TA");
 		}
 
 		return uClassPointer;
@@ -38564,7 +38564,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERAVATARBORDERSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerAvatarBorderSave_TA");
 		}
 
 		return uClassPointer;
@@ -38592,7 +38592,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FIRSTTIMEEXPERIENCESAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FirstTimeExperienceSave_TA");
 		}
 
 		return uClassPointer;
@@ -38626,7 +38626,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CRUMBTRAILSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrumbTrailSave_TA");
 		}
 
 		return uClassPointer;
@@ -38654,7 +38654,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMETAGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameTags_TA");
 		}
 
 		return uClassPointer;
@@ -38683,7 +38683,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PROFILE_TA__VALIDATELOADOUTSWITHPRODUCT_3BB70AF74D1B8AD1F2600C933FD5A78B));
+			uClassPointer = UObject::FindClass("Class TAGame.__Profile_TA__ValidateLoadoutsWithProduct_3BB70AF74D1B8AD1F2600C933FD5A78B");
 		}
 
 		return uClassPointer;
@@ -38704,7 +38704,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PROFILEVERSIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProfileVersions_TA");
 		}
 
 		return uClassPointer;
@@ -38755,7 +38755,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VEHICLEPARTSKELETALMESHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VehiclePartSkeletalMeshComponent_TA");
 		}
 
 		return uClassPointer;
@@ -38777,7 +38777,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___REPLAYMANAGER_TA__PLAYREPLAYFILE_D5F83FAF41FB575C7CA51BBEAAD86AE0));
+			uClassPointer = UObject::FindClass("Class TAGame.__ReplayManager_TA__PlayReplayFile_D5F83FAF41FB575C7CA51BBEAAD86AE0");
 		}
 
 		return uClassPointer;
@@ -38799,7 +38799,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSPLAYERCLEAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsPlayerClear_TA");
 		}
 
 		return uClassPointer;
@@ -38825,7 +38825,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSPLAYERGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsPlayerGet_TA");
 		}
 
 		return uClassPointer;
@@ -38849,7 +38849,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_REPORTPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ReportPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -38875,7 +38875,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEPRODUCTEXPIRATIONHELPER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineProductExpirationHelper_TA");
 		}
 
 		return uClassPointer;
@@ -38907,7 +38907,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTTRANSACTIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductTransactions_TA");
 		}
 
 		return uClassPointer;
@@ -38945,7 +38945,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEDATAVERSIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveDataVersions_TA");
 		}
 
 		return uClassPointer;
@@ -39002,7 +39002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_REWARDDROPRECEIVED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_RewardDropReceived_TA");
 		}
 
 		return uClassPointer;
@@ -39023,7 +39023,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SAVEDATA_TA__HANDLEONLINEPRODUCTSRECEIVED_1CC18745470B6CF42721A09101A88C88));
+			uClassPointer = UObject::FindClass("Class TAGame.__SaveData_TA__HandleOnlineProductsReceived_1CC18745470B6CF42721A09101A88C88");
 		}
 
 		return uClassPointer;
@@ -39046,7 +39046,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SAVEDATA_TA__GETONLINEPRODUCTQUANTITY_6E15B82343D707B486AA3EBFCC2E6C75));
+			uClassPointer = UObject::FindClass("Class TAGame.__SaveData_TA__GetOnlineProductQuantity_6E15B82343D707B486AA3EBFCC2E6C75");
 		}
 
 		return uClassPointer;
@@ -39069,7 +39069,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REWARDDROP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RewardDrop_TA");
 		}
 
 		return uClassPointer;
@@ -39103,7 +39103,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REWARDDROP_XP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RewardDrop_XP_TA");
 		}
 
 		return uClassPointer;
@@ -39129,7 +39129,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SAVEDATA_TA__FILTEREQUIPPEDONLINEPRODUCTS_9B5972A248F5B57EFC05CAAC147EE0D0));
+			uClassPointer = UObject::FindClass("Class TAGame.__SaveData_TA__FilterEquippedOnlineProducts_9B5972A248F5B57EFC05CAAC147EE0D0");
 		}
 
 		return uClassPointer;
@@ -39151,7 +39151,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYLISTSKILLDATASAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlaylistSkillDataSave_TA");
 		}
 
 		return uClassPointer;
@@ -39175,7 +39175,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONTENTSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ContentSave_TA");
 		}
 
 		return uClassPointer;
@@ -39201,7 +39201,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERLEGACYSTATUSSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerLegacyStatusSave_TA");
 		}
 
 		return uClassPointer;
@@ -39223,7 +39223,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EULASAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EulaSave_TA");
 		}
 
 		return uClassPointer;
@@ -39246,7 +39246,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRIVACYPOLICYSAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PrivacyPolicySave_TA");
 		}
 
 		return uClassPointer;
@@ -39271,7 +39271,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CLAIMPRODUCTENTITLEMENTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ClaimProductEntitlements_TA");
 		}
 
 		return uClassPointer;
@@ -39294,7 +39294,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SAVEDATA_TA__CLAIMMISSINGENTITLEMENTS_DF54432E43E8761A1FD8D3864835738A));
+			uClassPointer = UObject::FindClass("Class TAGame.__SaveData_TA__ClaimMissingEntitlements_DF54432E43E8761A1FD8D3864835738A");
 		}
 
 		return uClassPointer;
@@ -39317,7 +39317,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_SCHEMATICRESOURCESGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_SchematicResourcesGet_TA");
 		}
 
 		return uClassPointer;
@@ -39339,7 +39339,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REWARDDROP_XPMULTIPLIER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RewardDrop_XPMultiplier_TA");
 		}
 
 		return uClassPointer;
@@ -39362,7 +39362,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_XPREQUEST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_XPRequest_TA");
 		}
 
 		return uClassPointer;
@@ -39384,7 +39384,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SAVEDATA_TA__VALIDATELOADOUTSWITHPRODUCT_F64CC56E48A52F486D39CD9CB65D0F20));
+			uClassPointer = UObject::FindClass("Class TAGame.__SaveData_TA__ValidateLoadoutsWithProduct_F64CC56E48A52F486D39CD9CB65D0F20");
 		}
 
 		return uClassPointer;
@@ -39408,7 +39408,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINESTORAGECONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineStorageConfig_TA");
 		}
 
 		return uClassPointer;
@@ -39429,7 +39429,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENGINEAUDIOUNLOCKER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EngineAudioUnlocker_TA");
 		}
 
 		return uClassPointer;
@@ -39458,7 +39458,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTTRANSACTIONS_TA__GETUNEQUIPPEDPRODUCTS_320AE80344BF96E89FAAC3AA91ADCD6D));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductTransactions_TA__GetUnequippedProducts_320AE80344BF96E89FAAC3AA91ADCD6D");
 		}
 
 		return uClassPointer;
@@ -39480,7 +39480,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTTRANSACTIONS_TA__GETEQUIPPEDPRODUCTS_344C860B4B7638843D0B6A9AFE557055));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductTransactions_TA__GetEquippedProducts_344C860B4B7638843D0B6A9AFE557055");
 		}
 
 		return uClassPointer;
@@ -39501,7 +39501,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SCOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Scout_TA");
 		}
 
 		return uClassPointer;
@@ -39535,7 +39535,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SCREENDISPLAYACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ScreenDisplayActor_TA");
 		}
 
 		return uClassPointer;
@@ -39566,7 +39566,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SCRIPTEDTEXTURECOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ScriptedTextureComponent_TA");
 		}
 
 		return uClassPointer;
@@ -39596,7 +39596,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ADDGAMEBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_AddGameBall_TA");
 		}
 
 		return uClassPointer;
@@ -39623,7 +39623,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_APPLYCARPRODUCTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ApplyCarProducts_TA");
 		}
 
 		return uClassPointer;
@@ -39645,7 +39645,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_CONTROLCARMOVEMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ControlCarMovement_TA");
 		}
 
 		return uClassPointer;
@@ -39673,7 +39673,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_DISPLAYMESSAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_DisplayMessage_TA");
 		}
 
 		return uClassPointer;
@@ -39702,7 +39702,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_DRIVESPLINE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_DriveSpline_TA");
 		}
 
 		return uClassPointer;
@@ -39727,7 +39727,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ENDTUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_EndTutorial_TA");
 		}
 
 		return uClassPointer;
@@ -39748,7 +39748,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_EXPLODEGAMEBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ExplodeGameBall_TA");
 		}
 
 		return uClassPointer;
@@ -39769,7 +39769,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETDETAILMODE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetDetailMode_TA");
 		}
 
 		return uClassPointer;
@@ -39791,7 +39791,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETSAVEDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetSaveData_TA");
 		}
 
 		return uClassPointer;
@@ -39812,7 +39812,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETTUTORIALTYPE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetTutorialType_TA");
 		}
 
 		return uClassPointer;
@@ -39834,7 +39834,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETWEATHERENABLED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetWeatherEnabled_TA");
 		}
 
 		return uClassPointer;
@@ -39857,7 +39857,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GIVEBOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GiveBoost_TA");
 		}
 
 		return uClassPointer;
@@ -39880,7 +39880,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ISACTIONPRESSED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_IsActionPressed_TA");
 		}
 
 		return uClassPointer;
@@ -39903,7 +39903,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ISHUMANPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_IsHumanPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -39926,7 +39926,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_NOTIFYEVENTONTUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_NotifyEventOnTutorial_TA");
 		}
 
 		return uClassPointer;
@@ -39951,7 +39951,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SCREENFADE));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ScreenFade");
 		}
 
 		return uClassPointer;
@@ -39976,7 +39976,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SCREENFADE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ScreenFade_TA");
 		}
 
 		return uClassPointer;
@@ -40000,7 +40000,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETBALLCAMTARGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetBallCamTarget_TA");
 		}
 
 		return uClassPointer;
@@ -40025,7 +40025,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETBALLMATERIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetBallMaterial_TA");
 		}
 
 		return uClassPointer;
@@ -40048,7 +40048,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETCARTRANSFORM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetCarTransform_TA");
 		}
 
 		return uClassPointer;
@@ -40073,7 +40073,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SEQACT_SETLOADOUT_TA__APPLYNEWCHANGESTOPRODUCTASSETS_1BDF4A5E4401ED6C951FE2A85EF63C68));
+			uClassPointer = UObject::FindClass("Class TAGame.__SeqAct_SetLoadout_TA__ApplyNewChangesToProductAssets_1BDF4A5E4401ED6C951FE2A85EF63C68");
 		}
 
 		return uClassPointer;
@@ -40101,7 +40101,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETMATINSTPARAM_VECTOR));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetMatInstParam_Vector");
 		}
 
 		return uClassPointer;
@@ -40124,7 +40124,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETSTADIUMTEAMCOLORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetStadiumTeamColors_TA");
 		}
 
 		return uClassPointer;
@@ -40146,7 +40146,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETTUTORIALGAMEEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetTutorialGameEvent_TA");
 		}
 
 		return uClassPointer;
@@ -40168,7 +40168,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETVEHICLEINPUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetVehicleInput_TA");
 		}
 
 		return uClassPointer;
@@ -40196,7 +40196,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SPAWNBOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SpawnBot_TA");
 		}
 
 		return uClassPointer;
@@ -40230,7 +40230,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SPAWNCARCOLORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SpawnCarColors_TA");
 		}
 
 		return uClassPointer;
@@ -40258,7 +40258,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_STARTTUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_StartTutorial_TA");
 		}
 
 		return uClassPointer;
@@ -40280,7 +40280,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_UPDATEAD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_UpdateAd_TA");
 		}
 
 		return uClassPointer;
@@ -40304,7 +40304,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKYLIGHTVOLUME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkyLightVolume_TA");
 		}
 
 		return uClassPointer;
@@ -40329,7 +40329,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_TUTORIALSTARTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_TutorialStarted_TA");
 		}
 
 		return uClassPointer;
@@ -40349,7 +40349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TUTORIAL_BOOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Tutorial_Boost_TA");
 		}
 
 		return uClassPointer;
@@ -40375,7 +40375,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TUTORIAL_DODGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Tutorial_Dodge_TA");
 		}
 
 		return uClassPointer;
@@ -40407,7 +40407,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TUTORIAL_HANDBRAKE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Tutorial_HandBrake_TA");
 		}
 
 		return uClassPointer;
@@ -40433,7 +40433,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MAPSET_TA__GETMAP_B532939C42F9904E82972997A7E48666));
+			uClassPointer = UObject::FindClass("Class TAGame.__MapSet_TA__GetMap_B532939C42F9904E82972997A7E48666");
 		}
 
 		return uClassPointer;
@@ -40454,7 +40454,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPLINELOFTACTORSPAWNABLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SplineLoftActorSpawnable_TA");
 		}
 
 		return uClassPointer;
@@ -40475,7 +40475,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEOBSERVER_TA__GETCARDATAFORPRI_1CA7C83745BA746D7B508EAD102DEE55));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameObserver_TA__GetCarDataForPRI_1CA7C83745BA746D7B508EAD102DEE55");
 		}
 
 		return uClassPointer;
@@ -40496,7 +40496,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ITEMDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ItemDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -40518,7 +40518,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INPUTBUFFERUTIL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.InputBufferUtil_TA");
 		}
 
 		return uClassPointer;
@@ -40540,7 +40540,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLIENTJITTERBUFFER_STS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClientJitterBuffer_STS_TA");
 		}
 
 		return uClassPointer;
@@ -40561,7 +40561,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_NOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Notification_TA");
 		}
 
 		return uClassPointer;
@@ -40589,7 +40589,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_GENERICNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_GenericNotification_TA");
 		}
 
 		return uClassPointer;
@@ -40617,7 +40617,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLUBMEMBER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ClubMember_TA");
 		}
 
 		return uClassPointer;
@@ -40645,7 +40645,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLUBINVITE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ClubInvite_TA");
 		}
 
 		return uClassPointer;
@@ -40671,7 +40671,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeNotification_TA");
 		}
 
 		return uClassPointer;
@@ -40696,7 +40696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LISTENOBJECT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ListenObject_TA");
 		}
 
 		return uClassPointer;
@@ -40750,7 +40750,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEDEFAULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeDefault_TA");
 		}
 
 		return uClassPointer;
@@ -40780,7 +40780,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_USERCOLORABLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_UserColorable_TA");
 		}
 
 		return uClassPointer;
@@ -40801,7 +40801,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PLAYERVANITY_TA__EQUIPPRODUCT_56C92F8A4EBCD9305A66AEBB7D13D634));
+			uClassPointer = UObject::FindClass("Class TAGame.__PlayerVanity_TA__EquipProduct_56C92F8A4EBCD9305A66AEBB7D13D634");
 		}
 
 		return uClassPointer;
@@ -40823,7 +40823,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_SKELETALMESH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_SkeletalMesh_TA");
 		}
 
 		return uClassPointer;
@@ -40845,7 +40845,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_STATICMESH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_StaticMesh_TA");
 		}
 
 		return uClassPointer;
@@ -40867,7 +40867,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_MATERIALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_Materials_TA");
 		}
 
 		return uClassPointer;
@@ -40892,7 +40892,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTATTRIBUTE_PAINTED_TA__APPLYTOSETPARAMETER_0C50CB4546B74883E3F6A19C1E1FCC45));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductAttribute_Painted_TA__ApplyToSetParameter_0C50CB4546B74883E3F6A19C1E1FCC45");
 		}
 
 		return uClassPointer;
@@ -40915,7 +40915,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTATTRIBUTE_PAINTED_TA__APPLYPAINTOVERRIDESTOOBJECT_AEF81DC04999A22B206EA8AE850F6C0E));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductAttribute_Painted_TA__ApplyPaintOverridesToObject_AEF81DC04999A22B206EA8AE850F6C0E");
 		}
 
 		return uClassPointer;
@@ -40939,7 +40939,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_ESPORTSTEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_ESportsTeam_TA");
 		}
 
 		return uClassPointer;
@@ -40960,7 +40960,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTOVERRIDE_TA__APPLYOVERRIDES_BA600A9843623B53E01B23A3CA2DD063));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductOverride_TA__ApplyOverrides_BA600A9843623B53E01B23A3CA2DD063");
 		}
 
 		return uClassPointer;
@@ -40982,7 +40982,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTOVERRIDE_MATERIALPARAMETER_TA__APPLYOVERRIDETOMESH_072C0AE043E55CCDC9461B95B825F6D1));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductOverride_MaterialParameter_TA__ApplyOverrideToMesh_072C0AE043E55CCDC9461B95B825F6D1");
 		}
 
 		return uClassPointer;
@@ -41006,7 +41006,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CINEMATICSCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CinematicsCar_TA");
 		}
 
 		return uClassPointer;
@@ -41029,7 +41029,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PERFSTATGRAPH_TA__UPDATEGRAPHRANGES_6082923C4069469B7F853ABCEB43D6C8));
+			uClassPointer = UObject::FindClass("Class TAGame.__PerfStatGraph_TA__UpdateGraphRanges_6082923C4069469B7F853ABCEB43D6C8");
 		}
 
 		return uClassPointer;
@@ -41051,7 +41051,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___VANITYQUERY_TA__COMPLETEREQUESTS_26F0ED814F5BBC4E2A86929986F987AB));
+			uClassPointer = UObject::FindClass("Class TAGame.__VanityQuery_TA__CompleteRequests_26F0ED814F5BBC4E2A86929986F987AB");
 		}
 
 		return uClassPointer;
@@ -41076,7 +41076,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PSYNETGETVANITIES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_PsyNetGetVanities_TA");
 		}
 
 		return uClassPointer;
@@ -41101,7 +41101,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___VANITYSETMANAGER_TA__REQUESTSBORDERS_17D58C7641CDCB0FBBE24DAFFB31F94E));
+			uClassPointer = UObject::FindClass("Class TAGame.__VanitySetManager_TA__RequestsBorders_17D58C7641CDCB0FBBE24DAFFB31F94E");
 		}
 
 		return uClassPointer;
@@ -41123,7 +41123,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___VANITYSETMANAGER_TA__REQUESTBANNERS_D9088B7A489EE37DB9B6CDA9A3515D94));
+			uClassPointer = UObject::FindClass("Class TAGame.__VanitySetManager_TA__RequestBanners_D9088B7A489EE37DB9B6CDA9A3515D94");
 		}
 
 		return uClassPointer;
@@ -41145,7 +41145,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___VANITYSETMANAGER_TA__REQUESTAVATARS_BAED6962418C5E03FA514085D3D54FEB));
+			uClassPointer = UObject::FindClass("Class TAGame.__VanitySetManager_TA__RequestAvatars_BAED6962418C5E03FA514085D3D54FEB");
 		}
 
 		return uClassPointer;
@@ -41167,7 +41167,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSETTINGSCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourSettingsCache_TA");
 		}
 
 		return uClassPointer;
@@ -41210,7 +41210,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSUBSCRIPTIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourSubscriptions_TA");
 		}
 
 		return uClassPointer;
@@ -41264,7 +41264,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEDLC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameDLC_TA");
 		}
 
 		return uClassPointer;
@@ -41295,7 +41295,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_____SAVEDATA_TA__GETONLINEPRODUCTQUANTITY_6E15B82343D707B486AA3EBFCC2E6C75____SAVEDATA_TA__GETONLINEPRODUCTQUANTITY_0B5621334A9364769A51A893CA3DCDE6_AE6921A14BA7DEDBB2A55DADED8C432C));
+			uClassPointer = UObject::FindClass("Class TAGame.____SaveData_TA__GetOnlineProductQuantity_6E15B82343D707B486AA3EBFCC2E6C75____SaveData_TA__GetOnlineProductQuantity_0B5621334A9364769A51A893CA3DCDE6_AE6921A14BA7DEDBB2A55DADED8C432C");
 		}
 
 		return uClassPointer;
@@ -41321,7 +41321,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERATRACKPOINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraTrackPoint_TA");
 		}
 
 		return uClassPointer;
@@ -41348,7 +41348,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Challenge_TA");
 		}
 
 		return uClassPointer;
@@ -41386,7 +41386,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CHALLENGEMANAGER_TA__FINDCHALLENGEINDEX_BDBE17114F6DAD90083AB0BE589C38A0));
+			uClassPointer = UObject::FindClass("Class TAGame.__ChallengeManager_TA__FindChallengeIndex_BDBE17114F6DAD90083AB0BE589C38A0");
 		}
 
 		return uClassPointer;
@@ -41412,7 +41412,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_TRAININGCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_TrainingComplete_TA");
 		}
 
 		return uClassPointer;
@@ -41436,7 +41436,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_TUTORIALCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_TutorialComplete_TA");
 		}
 
 		return uClassPointer;
@@ -41458,7 +41458,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGECOMPLETENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeCompleteNotification_TA");
 		}
 
 		return uClassPointer;
@@ -41482,7 +41482,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_COMPLETERECEIVED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_CompleteReceived_TA");
 		}
 
 		return uClassPointer;
@@ -41506,7 +41506,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_AVAILABLERECEIVED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_AvailableReceived_TA");
 		}
 
 		return uClassPointer;
@@ -41528,7 +41528,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEAVAILABLENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeAvailableNotification_TA");
 		}
 
 		return uClassPointer;
@@ -41552,7 +41552,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_CLEARNEWINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_ClearNewInfo_TA");
 		}
 
 		return uClassPointer;
@@ -41575,7 +41575,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CHALLENGEPROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_ChallengeProgress_TA");
 		}
 
 		return uClassPointer;
@@ -41598,7 +41598,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETCHALLENGEPROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetChallengeProgress_TA");
 		}
 
 		return uClassPointer;
@@ -41621,7 +41621,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ENGINEAUDIOUNLOCKER_TA__FIXUPUNLOCKEDENGINEAUDIO_2EDA35B84B6158A101F12DA265CB2E89));
+			uClassPointer = UObject::FindClass("Class TAGame.__EngineAudioUnlocker_TA__FixupUnlockedEngineAudio_2EDA35B84B6158A101F12DA265CB2E89");
 		}
 
 		return uClassPointer;
@@ -41643,7 +41643,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___EPICACCOUNTSAVE_TA__RECONCILE_6FCAEDD14101ED54887E9CB3DC483D9C));
+			uClassPointer = UObject::FindClass("Class TAGame.__EpicAccountSave_TA__Reconcile_6FCAEDD14101ED54887E9CB3DC483D9C");
 		}
 
 		return uClassPointer;
@@ -41666,7 +41666,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___EPICACCOUNTSAVE_TA__SETLASTCONVERTPLATFORMFRIENDSPROMPTTIME_1693A1E6457CBAF3BC573986ACDEF60B));
+			uClassPointer = UObject::FindClass("Class TAGame.__EpicAccountSave_TA__SetLastConvertPlatformFriendsPromptTime_1693A1E6457CBAF3BC573986ACDEF60B");
 		}
 
 		return uClassPointer;
@@ -41689,7 +41689,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___EPICACCOUNTSAVE_TA__SETCONVERTPLATFORMFRIENDS_9CE53283466F74441EFF76B2E58E3E50));
+			uClassPointer = UObject::FindClass("Class TAGame.__EpicAccountSave_TA__SetConvertPlatformFriends_9CE53283466F74441EFF76B2E58E3E50");
 		}
 
 		return uClassPointer;
@@ -41712,7 +41712,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___EPICACCOUNTSAVE_TA__GETLASTCONVERTPLATFORMFRIENDSPROMPTTIME_B2F668A04FD5CE83189851B9AF94BA6D));
+			uClassPointer = UObject::FindClass("Class TAGame.__EpicAccountSave_TA__GetLastConvertPlatformFriendsPromptTime_B2F668A04FD5CE83189851B9AF94BA6D");
 		}
 
 		return uClassPointer;
@@ -41734,7 +41734,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___EPICACCOUNTSAVE_TA__GETCONVERTPLATFORMFRIENDS_691B4A7549B3499BE470AB95ECAA7BE3));
+			uClassPointer = UObject::FindClass("Class TAGame.__EpicAccountSave_TA__GetConvertPlatformFriends_691B4A7549B3499BE470AB95ECAA7BE3");
 		}
 
 		return uClassPointer;
@@ -41756,7 +41756,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TRIGGERCLUMP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TriggerClump_TA");
 		}
 
 		return uClassPointer;
@@ -41777,7 +41777,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FIRSTTIMEEXPERIENCEMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FirstTimeExperienceMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -41801,7 +41801,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___FIRSTTIMEEXPERIENCEMANAGER_TA__DEBUGSETCHECKPOINT_39A7DF1449E843FEE8156A90483EA71F));
+			uClassPointer = UObject::FindClass("Class TAGame.__FirstTimeExperienceManager_TA__DebugSetCheckpoint_39A7DF1449E843FEE8156A90483EA71F");
 		}
 
 		return uClassPointer;
@@ -41823,7 +41823,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_FTEGROUPCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_FTEGroupComplete_TA");
 		}
 
 		return uClassPointer;
@@ -41847,7 +41847,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_FTEGROUPCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_FTEGroupComplete_TA");
 		}
 
 		return uClassPointer;
@@ -41872,7 +41872,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_FTECHECKPOINTCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_FTECheckpointComplete_TA");
 		}
 
 		return uClassPointer;
@@ -41897,7 +41897,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___FIRSTTIMEEXPERIENCEMANAGER_TA__SETUPTRIGGER_B61280374917B23535397DB5F18A50DD));
+			uClassPointer = UObject::FindClass("Class TAGame.__FirstTimeExperienceManager_TA__SetupTrigger_B61280374917B23535397DB5F18A50DD");
 		}
 
 		return uClassPointer;
@@ -41923,7 +41923,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TRIGGERCONDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TriggerCondition_TA");
 		}
 
 		return uClassPointer;
@@ -41955,7 +41955,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FIRSTTIMEEXPERIENCEREDEFINITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FirstTimeExperienceRedefinition_TA");
 		}
 
 		return uClassPointer;
@@ -41980,7 +41980,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___BANSYNC_TA__GETBANMESSAGE_62CE48E64B7986FA803421874E8A0FDA));
+			uClassPointer = UObject::FindClass("Class TAGame.__BanSync_TA__GetBanMessage_62CE48E64B7986FA803421874E8A0FDA");
 		}
 
 		return uClassPointer;
@@ -42002,7 +42002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___BANSYNC_TA__GETPLAYERBANMESSAGES_1C467C8648B8B718FEC1499A5ECF6D22));
+			uClassPointer = UObject::FindClass("Class TAGame.__BanSync_TA__GetPlayerBanMessages_1C467C8648B8B718FEC1499A5ECF6D22");
 		}
 
 		return uClassPointer;
@@ -42024,7 +42024,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___BANSYNC_TA__GETBANMESSAGETYPES_849612EF4D8E576751D128B9FAF83927));
+			uClassPointer = UObject::FindClass("Class TAGame.__BanSync_TA__GetBanMessageTypes_849612EF4D8E576751D128B9FAF83927");
 		}
 
 		return uClassPointer;
@@ -42047,7 +42047,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETBANSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetBanStatus_TA");
 		}
 
 		return uClassPointer;
@@ -42088,7 +42088,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONNECTIONQUALITYCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ConnectionQualityConfig_TA");
 		}
 
 		return uClassPointer;
@@ -42109,7 +42109,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_FACEITMATCHCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_FaceItMatchComplete_TA");
 		}
 
 		return uClassPointer;
@@ -42133,7 +42133,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_FACEITFINDMATCHFORPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_FaceItFindMatchForPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -42160,7 +42160,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_FACEITPLAYERFAILEDJOIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_FaceItPlayerFailedJoin_TA");
 		}
 
 		return uClassPointer;
@@ -42192,7 +42192,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FACEITERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FaceItErrors_TA");
 		}
 
 		return uClassPointer;
@@ -42216,7 +42216,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FACEITCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FaceItConfig_TA");
 		}
 
 		return uClassPointer;
@@ -42238,7 +42238,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_FACEITFINDMATCHFORPLAYER2_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_FaceItFindMatchForPlayer2_TA");
 		}
 
 		return uClassPointer;
@@ -42263,7 +42263,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FACEITFINDSERVERTASK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FaceItFindServerTask_TA");
 		}
 
 		return uClassPointer;
@@ -42293,7 +42293,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FACEITMATCHNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FaceItMatchNotification_TA");
 		}
 
 		return uClassPointer;
@@ -42317,7 +42317,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_FACEITMATCHCANCELLED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_FaceItMatchCancelled_TA");
 		}
 
 		return uClassPointer;
@@ -42337,7 +42337,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_PLAYERTITLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_PlayerTitle_TA");
 		}
 
 		return uClassPointer;
@@ -42362,7 +42362,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Save_TA");
 		}
 
 		return uClassPointer;
@@ -42392,7 +42392,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEDATA_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveData_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -42412,7 +42412,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEDITOR_SWITCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEditor_Switch_TA");
 		}
 
 		return uClassPointer;
@@ -42432,7 +42432,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DYNAMICSPAWNPOINTMESH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DynamicSpawnPointMesh_TA");
 		}
 
 		return uClassPointer;
@@ -42452,7 +42452,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEDITOR_PAWN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEditor_Pawn_TA");
 		}
 
 		return uClassPointer;
@@ -42473,7 +42473,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_ERRORMODALS_TA__ALERTERROR_CD4A62234538B7E87ED58CB73E6BB375));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ErrorModals_TA__AlertError_CD4A62234538B7E87ED58CB73E6BB375");
 		}
 
 		return uClassPointer;
@@ -42494,7 +42494,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPPREFSMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapPrefsMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -42518,7 +42518,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAPGROUPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MapGroups_TA");
 		}
 
 		return uClassPointer;
@@ -42542,7 +42542,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEDLCPRODUCTCACHE_TA__GETOLDGENERATEDONLINEPRODUCT_8F85229046FD49DD545BCAA8121F1DDD));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineDLCProductCache_TA__GetOldGeneratedOnlineProduct_8F85229046FD49DD545BCAA8121F1DDD");
 		}
 
 		return uClassPointer;
@@ -42588,7 +42588,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourConfig_TA");
 		}
 
 		return uClassPointer;
@@ -42616,7 +42616,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURCHECKINWINDOWWATCHER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourCheckInWindowWatcher_TA");
 		}
 
 		return uClassPointer;
@@ -42656,7 +42656,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURBRACKETCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourBracketCache_TA");
 		}
 
 		return uClassPointer;
@@ -42696,7 +42696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSERVICE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourService_TA");
 		}
 
 		return uClassPointer;
@@ -42735,7 +42735,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURREGISTRATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourRegistration_TA");
 		}
 
 		return uClassPointer;
@@ -42764,7 +42764,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURPARTYCHECKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourPartyCheckIn_TA");
 		}
 
 		return uClassPointer;
@@ -42795,7 +42795,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURPARTYLEADERLEAVE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourPartyLeaderLeave_TA");
 		}
 
 		return uClassPointer;
@@ -42823,7 +42823,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourStatus_TA");
 		}
 
 		return uClassPointer;
@@ -42868,7 +42868,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURCHECKINERROR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourCheckInError_TA");
 		}
 
 		return uClassPointer;
@@ -42902,7 +42902,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURREWARDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourRewards_TA");
 		}
 
 		return uClassPointer;
@@ -42926,7 +42926,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURCREDENTIALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourCredentials_TA");
 		}
 
 		return uClassPointer;
@@ -42950,7 +42950,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURMATCHSERVERBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourMatchServerBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -42975,7 +42975,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSCLEAREXPIRED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsClearExpired_TA");
 		}
 
 		return uClassPointer;
@@ -43000,7 +43000,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEXPIRATIONNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductExpirationNotification_TA");
 		}
 
 		return uClassPointer;
@@ -43022,7 +43022,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEPRODUCTEXPIRATIONHELPER_TA__HANDLENOTIFICATIONSAVEADDED_B4AD8E664409C9D9BE8B2EB828E3C2C7));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineProductExpirationHelper_TA__HandleNotificationSaveAdded_B4AD8E664409C9D9BE8B2EB828E3C2C7");
 		}
 
 		return uClassPointer;
@@ -43045,7 +43045,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EOSONLINESTORAGESYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EOSOnlineStorageSync_TA");
 		}
 
 		return uClassPointer;
@@ -43073,7 +43073,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINESTORAGESYNCMANAGER_TA__SYNCCLOUDDATA_0AD86F304B497CAFEF77C9ACBEA91EAC));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineStorageSyncManager_TA__SyncCloudData_0AD86F304B497CAFEF77C9ACBEA91EAC");
 		}
 
 		return uClassPointer;
@@ -43095,7 +43095,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PLAYLISTSKILLDATASAVE_TA__RECONCILE_6C36FDBE43FF93237B71AB9998C78F81));
+			uClassPointer = UObject::FindClass("Class TAGame.__PlaylistSkillDataSave_TA__Reconcile_6C36FDBE43FF93237B71AB9998C78F81");
 		}
 
 		return uClassPointer;
@@ -43117,7 +43117,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTSHASHSAVE_TA__UPDATEINSTANCEIDS_75B84C5B46E8F3B6D605B79851B5EEBF));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductsHashSave_TA__UpdateInstanceIDs_75B84C5B46E8F3B6D605B79851B5EEBF");
 		}
 
 		return uClassPointer;
@@ -43138,7 +43138,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_ROCKETPASSPREMIUM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_RocketPassPremium_TA");
 		}
 
 		return uClassPointer;
@@ -43164,7 +43164,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_ROCKETPASSPURCHASETIERS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RocketPassPurchaseTiers_TA");
 		}
 
 		return uClassPointer;
@@ -43194,7 +43194,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_ROCKETPASSPURCHASEPREMIUM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RocketPassPurchasePremium_TA");
 		}
 
 		return uClassPointer;
@@ -43220,7 +43220,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_ROCKETPASSGETPLAYERPRESTIGEREWARDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RocketPassGetPlayerPrestigeRewards_TA");
 		}
 
 		return uClassPointer;
@@ -43250,7 +43250,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ROCKETPASSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RocketPassConfig_TA");
 		}
 
 		return uClassPointer;
@@ -43280,7 +43280,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_ROCKETPASSGETREWARDCONTENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RocketPassGetRewardContent_TA");
 		}
 
 		return uClassPointer;
@@ -43306,7 +43306,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ROCKETPASSBUNDLECONTAINER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RocketPassBundleContainer_TA");
 		}
 
 		return uClassPointer;
@@ -43336,7 +43336,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_ROCKETPASSGETPLAYERINFO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RocketPassGetPlayerInfo_TA");
 		}
 
 		return uClassPointer;
@@ -43359,7 +43359,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SAVEDATAVERSIONS_TA__UPDATEFAVORITEHASHIDS_0F861A32416C24E35479B08ABC9741CB));
+			uClassPointer = UObject::FindClass("Class TAGame.__SaveDataVersions_TA__UpdateFavoriteHashIDs_0F861A32416C24E35479B08ABC9741CB");
 		}
 
 		return uClassPointer;
@@ -43385,7 +43385,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURCHECKIN_TA__CHECKIN_66817A5747140D9072CB76A9F4047A21));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourCheckIn_TA__CheckIn_66817A5747140D9072CB76A9F4047A21");
 		}
 
 		return uClassPointer;
@@ -43409,7 +43409,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOUREVENTMATCHCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourEventMatchComplete_TA");
 		}
 
 		return uClassPointer;
@@ -43439,7 +43439,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_TOURRECEIVEDBYE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_TourReceivedBye_TA");
 		}
 
 		return uClassPointer;
@@ -43460,7 +43460,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_TOURMATCHFOUND_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_TourMatchFound_TA");
 		}
 
 		return uClassPointer;
@@ -43480,7 +43480,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_TOURCONCLUDED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_TourConcluded_TA");
 		}
 
 		return uClassPointer;
@@ -43503,7 +43503,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourList_TA");
 		}
 
 		return uClassPointer;
@@ -43533,7 +43533,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURUNSUBSCRIBE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourUnsubscribe_TA");
 		}
 
 		return uClassPointer;
@@ -43558,7 +43558,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSUBSCRIPTIONS_TA__GETTOURNAMENT_9904DAFE4299E96BBB6FAB8AE9C25760));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourSubscriptions_TA__GetTournament_9904DAFE4299E96BBB6FAB8AE9C25760");
 		}
 
 		return uClassPointer;
@@ -43586,7 +43586,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETSUBSCRIPTIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetSubscriptions_TA");
 		}
 
 		return uClassPointer;
@@ -43610,7 +43610,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXTOURLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxTourList_TA");
 		}
 
 		return uClassPointer;
@@ -43634,7 +43634,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURSUBSCRIPTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourSubscription_TA");
 		}
 
 		return uClassPointer;
@@ -43657,7 +43657,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURLIST_TA__ADDUNIQUE_7172FDC048EDF4D6C60D7BBD061F4373));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourList_TA__AddUnique_7172FDC048EDF4D6C60D7BBD061F4373");
 		}
 
 		return uClassPointer;
@@ -43680,7 +43680,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CURRENCYADDED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_CurrencyAdded_TA");
 		}
 
 		return uClassPointer;
@@ -43701,7 +43701,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___WALLET_TA__GETCURRENCY_08A2F5D44E0FD473430123AECBCD0AE5));
+			uClassPointer = UObject::FindClass("Class TAGame.__Wallet_TA__GetCurrency_08A2F5D44E0FD473430123AECBCD0AE5");
 		}
 
 		return uClassPointer;
@@ -43724,7 +43724,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETWALLET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetWallet_TA");
 		}
 
 		return uClassPointer;
@@ -43745,7 +43745,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURNAMENTMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TournamentMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -43768,7 +43768,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSTATUS_TA__GETSTATUS_49B872904D6CA9C4DFD8AFBA78BAC327));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourStatus_TA__GetStatus_49B872904D6CA9C4DFD8AFBA78BAC327");
 		}
 
 		return uClassPointer;
@@ -43789,7 +43789,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NOTIFICATION_ANTIADDICTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Notification_AntiAddiction_TA");
 		}
 
 		return uClassPointer;
@@ -43811,7 +43811,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURSETSCHEDULEREGION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourSetScheduleRegion_TA");
 		}
 
 		return uClassPointer;
@@ -43836,7 +43836,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_AUTOTOUR_GETSCHEDULE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_AutoTour_GetSchedule_TA");
 		}
 
 		return uClassPointer;
@@ -43859,7 +43859,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___AUTOTOUR_TA__ONRECEIVEDBRACKET_26BC9F9F497DCCEDB3BD6D977FF9AECF));
+			uClassPointer = UObject::FindClass("Class TAGame.__AutoTour_TA__OnReceivedBracket_26BC9F9F497DCCEDB3BD6D977FF9AECF");
 		}
 
 		return uClassPointer;
@@ -43882,7 +43882,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURUTILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourUtils_TA");
 		}
 
 		return uClassPointer;
@@ -43928,7 +43928,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AUTOTOURCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AutoTourConfig_TA");
 		}
 
 		return uClassPointer;
@@ -43950,7 +43950,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___AUTOTOUR_TA__UPDATEINELIGIBLETOURNAMENT_5D0C277C4664146975E0E5A49079D5F8));
+			uClassPointer = UObject::FindClass("Class TAGame.__AutoTour_TA__UpdateIneligibleTournament_5D0C277C4664146975E0E5A49079D5F8");
 		}
 
 		return uClassPointer;
@@ -43974,7 +43974,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURNAMENTCOMPLETEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TournamentCompletedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -43996,7 +43996,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_AUTOTOURFOUND_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_AutoTourFound_TA");
 		}
 
 		return uClassPointer;
@@ -44024,7 +44024,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_AUTOTOUR_GETCYCLEDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_AutoTour_GetCycleData_TA");
 		}
 
 		return uClassPointer;
@@ -44047,7 +44047,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETSCHEDULEREGION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetScheduleRegion_TA");
 		}
 
 		return uClassPointer;
@@ -44069,7 +44069,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___BOTCONFIG_TA__REFRESHIDS_1D11478743DB5502E98EB2B07E6DC7FF));
+			uClassPointer = UObject::FindClass("Class TAGame.__BotConfig_TA__RefreshIDs_1D11478743DB5502E98EB2B07E6DC7FF");
 		}
 
 		return uClassPointer;
@@ -44092,7 +44092,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BOTDETECTIONCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BotDetectionConfig_TA");
 		}
 
 		return uClassPointer;
@@ -44114,7 +44114,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATESELECTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraStateSelector_TA");
 		}
 
 		return uClassPointer;
@@ -44141,7 +44141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEREQUIREMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeRequirement_TA");
 		}
 
 		return uClassPointer;
@@ -44165,7 +44165,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CHALLENGEDEFAULT_TA__REQUESTIMAGE_E4DF423A4AEAD462B1CC58B39D528EBE));
+			uClassPointer = UObject::FindClass("Class TAGame.__ChallengeDefault_TA__RequestImage_E4DF423A4AEAD462B1CC58B39D528EBE");
 		}
 
 		return uClassPointer;
@@ -44191,7 +44191,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEREWARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeReward_TA");
 		}
 
 		return uClassPointer;
@@ -44213,7 +44213,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEAVALIABLENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeAvaliableNotification_TA");
 		}
 
 		return uClassPointer;
@@ -44233,7 +44233,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGECOMPLETENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeCompleteNotification_TA");
 		}
 
 		return uClassPointer;
@@ -44264,7 +44264,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEFOLDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeFolder_TA");
 		}
 
 		return uClassPointer;
@@ -44291,7 +44291,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CHALLENGEDEFAULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_ChallengeDefault_TA");
 		}
 
 		return uClassPointer;
@@ -44313,7 +44313,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETCHALLENGEDEFAULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetChallengeDefault_TA");
 		}
 
 		return uClassPointer;
@@ -44337,7 +44337,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FACEITCLIENTRESERVATIONMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class TAGame.FaceItClientReservationMessage_X");
 		}
 
 		return uClassPointer;
@@ -44360,7 +44360,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_FACEITMATCHNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_FaceItMatchNotification_TA");
 		}
 
 		return uClassPointer;
@@ -44381,7 +44381,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___FIRSTTIMEEXPERIENCESAVE_TA__GETGROUPINDEX_D02642AA4ED05285B8C6D0ADF914FC7B));
+			uClassPointer = UObject::FindClass("Class TAGame.__FirstTimeExperienceSave_TA__GetGroupIndex_D02642AA4ED05285B8C6D0ADF914FC7B");
 		}
 
 		return uClassPointer;
@@ -44403,7 +44403,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMETAGS_TA__CONVERTTOGAMETAGS_1C663B514949F7F278579AB0E58AC914));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameTags_TA__ConvertToGameTags_1C663B514949F7F278579AB0E58AC914");
 		}
 
 		return uClassPointer;
@@ -44425,7 +44425,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMEDLC_TA__GETDLCIDFROMNAME_8C559F5A403CE5667656B897BFAA194F));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameDLC_TA__GetDlcIdFromName_8C559F5A403CE5667656B897BFAA194F");
 		}
 
 		return uClassPointer;
@@ -44447,7 +44447,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETDLC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetDLC_TA");
 		}
 
 		return uClassPointer;
@@ -44468,7 +44468,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TRIGGERCONDITION_TA__ADDTRIGGERS_2DE1DD69470CEE06E8F39A9E21100511));
+			uClassPointer = UObject::FindClass("Class TAGame.__TriggerCondition_TA__AddTriggers_2DE1DD69470CEE06E8F39A9E21100511");
 		}
 
 		return uClassPointer;
@@ -44489,7 +44489,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_MVPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_MVPs_TA");
 		}
 
 		return uClassPointer;
@@ -44511,7 +44511,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_SHOPITEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_ShopItem_TA");
 		}
 
 		return uClassPointer;
@@ -44536,7 +44536,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_SHOPITEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_ShopItem_TA");
 		}
 
 		return uClassPointer;
@@ -44556,7 +44556,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_BASKETS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Baskets_TA");
 		}
 
 		return uClassPointer;
@@ -44577,7 +44577,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_EPICSAVES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_EpicSaves_TA");
 		}
 
 		return uClassPointer;
@@ -44599,7 +44599,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_MICROTRANSACTIONS_GETCONTAINERDROPTABLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_MicroTransactions_GetContainerDropTable_TA");
 		}
 
 		return uClassPointer;
@@ -44621,7 +44621,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CONTAINERDROPS_TA__GETMATCHINGPRODUCTSERIES_E5F1B5F94E3EE1A31D419F8573244423));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ContainerDrops_TA__GetMatchingProductSeries_E5F1B5F94E3EE1A31D419F8573244423");
 		}
 
 		return uClassPointer;
@@ -44645,7 +44645,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTYINVITE_TA__INVITETOPARTYSILENT_B688626849D5353A799D02921070ACD3));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PartyInvite_TA__InviteToPartySilent_B688626849D5353A799D02921070ACD3");
 		}
 
 		return uClassPointer;
@@ -44668,7 +44668,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYINVITENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyInviteNotification_TA");
 		}
 
 		return uClassPointer;
@@ -44693,7 +44693,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTYINVITE_TA__HANDLEPLAYERINVITEPENDING_8F22643A41FFF02FB954028360C4263C));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PartyInvite_TA__HandlePlayerInvitePending_8F22643A41FFF02FB954028360C4263C");
 		}
 
 		return uClassPointer;
@@ -44716,7 +44716,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PARTYINVITE_TA__INVITETOPARTYINTERNAL_793240DC4EFA6C6132C63C82A298C391));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PartyInvite_TA__InviteToPartyInternal_793240DC4EFA6C6132C63C82A298C391");
 		}
 
 		return uClassPointer;
@@ -44815,7 +44815,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDSOUNDSETTINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdSoundSettings_TA");
 		}
 
 		return uClassPointer;
@@ -44835,7 +44835,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME__CROWDTYPES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame._CrowdTypes_TA");
 		}
 
 		return uClassPointer;
@@ -44857,7 +44857,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CROWDACTORMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrowdActorManager_TA");
 		}
 
 		return uClassPointer;
@@ -44889,7 +44889,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CRUMBTRAILS_TA__HANDLETRAILCOMPLETE_524F8D6D4990A8D5ABCB1BB912D59714));
+			uClassPointer = UObject::FindClass("Class TAGame.__CrumbTrails_TA__HandleTrailComplete_524F8D6D4990A8D5ABCB1BB912D59714");
 		}
 
 		return uClassPointer;
@@ -44910,7 +44910,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CRUMBTRAILMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrumbTrailMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -44935,7 +44935,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CRUMBTRAILS_TA__GETACTIVECRUMBS_7E8A7F40450AA4D55AB5BFBD85EE3996));
+			uClassPointer = UObject::FindClass("Class TAGame.__CrumbTrails_TA__GetActiveCrumbs_7E8A7F40450AA4D55AB5BFBD85EE3996");
 		}
 
 		return uClassPointer;
@@ -44957,7 +44957,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CRUMBTRAILS_TA__SETUPCOMPLETIONCONDITION_E82A1EF041A7C31C1087D0BE8687BADA));
+			uClassPointer = UObject::FindClass("Class TAGame.__CrumbTrails_TA__SetupCompletionCondition_E82A1EF041A7C31C1087D0BE8687BADA");
 		}
 
 		return uClassPointer;
@@ -44979,7 +44979,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CRUMBTRAILS_TA__SETUPACTIVATIONCONDITION_09D8AA744B8C03C7790C2490472FA689));
+			uClassPointer = UObject::FindClass("Class TAGame.__CrumbTrails_TA__SetupActivationCondition_09D8AA744B8C03C7790C2490472FA689");
 		}
 
 		return uClassPointer;
@@ -45002,7 +45002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_NAMED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_Named_TA");
 		}
 
 		return uClassPointer;
@@ -45024,7 +45024,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_MENUBUTTON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_MenuButton_TA");
 		}
 
 		return uClassPointer;
@@ -45045,7 +45045,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CRUMBTRAILREDEFINITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CrumbTrailRedefinition_TA");
 		}
 
 		return uClassPointer;
@@ -45068,7 +45068,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___EULA_TA__REQUIRESACCEPTANCE_6262F29648C052AF6906669F5525419F));
+			uClassPointer = UObject::FindClass("Class TAGame.__Eula_TA__RequiresAcceptance_6262F29648C052AF6906669F5525419F");
 		}
 
 		return uClassPointer;
@@ -45091,7 +45091,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EULACONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EulaConfig_TA");
 		}
 
 		return uClassPointer;
@@ -45112,7 +45112,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CONSECUTIVEMATCHTRACKER_TA__HANDLEGAMEENDED_27038F924875CD97C312BA8F0C754ABE));
+			uClassPointer = UObject::FindClass("Class TAGame.__ConsecutiveMatchTracker_TA__HandleGameEnded_27038F924875CD97C312BA8F0C754ABE");
 		}
 
 		return uClassPointer;
@@ -45133,7 +45133,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_BACKWARDSGOALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_BackwardsGoals_TA");
 		}
 
 		return uClassPointer;
@@ -45154,7 +45154,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_AERIALGOALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_AerialGoals_TA");
 		}
 
 		return uClassPointer;
@@ -45175,7 +45175,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_ASSISTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Assists_TA");
 		}
 
 		return uClassPointer;
@@ -45196,7 +45196,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_BICYCLEGOALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_BicycleGoals_TA");
 		}
 
 		return uClassPointer;
@@ -45217,7 +45217,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_CENTERS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Centers_TA");
 		}
 
 		return uClassPointer;
@@ -45238,7 +45238,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_CLEARS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Clears_TA");
 		}
 
 		return uClassPointer;
@@ -45259,7 +45259,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_JUGGLES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_Juggles_TA");
 		}
 
 		return uClassPointer;
@@ -45280,7 +45280,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_LONGGOALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_LongGoals_TA");
 		}
 
 		return uClassPointer;
@@ -45301,7 +45301,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_SHOTSONGOAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_ShotsOnGoal_TA");
 		}
 
 		return uClassPointer;
@@ -45322,7 +45322,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTSTAT_TURTLEGOALS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductStat_TurtleGoals_TA");
 		}
 
 		return uClassPointer;
@@ -45344,7 +45344,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ESPORTCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ESportConfig_TA");
 		}
 
 		return uClassPointer;
@@ -45371,7 +45371,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FIRSTTIMEEXPERIENCE_TA__LOADFTELEVEL_4278B0F34DD3740CEDB2C597537981A6));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_FirstTimeExperience_TA__LoadFTELevel_4278B0F34DD3740CEDB2C597537981A6");
 		}
 
 		return uClassPointer;
@@ -45393,7 +45393,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__ISSLOTINGROUP_FAB6096D47CD76F8A691E8B2300F52FB));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__IsSlotInGroup_FAB6096D47CD76F8A691E8B2300F52FB");
 		}
 
 		return uClassPointer;
@@ -45416,7 +45416,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GARAGESLOTDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GarageSlotDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -45437,7 +45437,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__ISPRODUCTINGROUP_B1AD7B9E4730D4F76BB016B9B15F467B));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__IsProductInGroup_B1AD7B9E4730D4F76BB016B9B15F467B");
 		}
 
 		return uClassPointer;
@@ -45462,7 +45462,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__HANDLEGROUPSEEN_2B561793467BDACE0DD5A8915E2878A7));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__HandleGroupSeen_2B561793467BDACE0DD5A8915E2878A7");
 		}
 
 		return uClassPointer;
@@ -45484,7 +45484,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__GETDROPSBYTYPE_2B501D87448359FDB93ED8913CEB5D43));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__GetDropsByType_2B501D87448359FDB93ED8913CEB5D43");
 		}
 
 		return uClassPointer;
@@ -45506,7 +45506,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__HANDLECHALLENGEREWARDCOLLECTED_8814187541D387C329723BA688978CBD));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__HandleChallengeRewardCollected_8814187541D387C329723BA688978CBD");
 		}
 
 		return uClassPointer;
@@ -45530,7 +45530,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_COMPLETETASKDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CompleteTaskDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -45551,7 +45551,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -45573,7 +45573,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__DROPREWARDGROUP_51B8DB2441D7A3E256B556AEB3857706));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__DropRewardGroup_51B8DB2441D7A3E256B556AEB3857706");
 		}
 
 		return uClassPointer;
@@ -45598,7 +45598,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERTITLES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerTitles_TA");
 		}
 
 		return uClassPointer;
@@ -45638,7 +45638,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__HANDLENEWONLINEITEM_FBFCAFD8417367350CB67E89F8CAD07F));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__HandleNewOnlineItem_FBFCAFD8417367350CB67E89F8CAD07F");
 		}
 
 		return uClassPointer;
@@ -45661,7 +45661,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REWARDDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RewardDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -45689,7 +45689,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__DROPITEMGROUP_AE1B62EE428E7368C6B3B7974C9AAB70));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__DropItemGroup_AE1B62EE428E7368C6B3B7974C9AAB70");
 		}
 
 		return uClassPointer;
@@ -45714,7 +45714,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSTRADEIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsTradeIn_TA");
 		}
 
 		return uClassPointer;
@@ -45738,7 +45738,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTTRADEIN_TA__UPDATETRADEINQUANTITY_2415D8704F2B522959A39495092F6D25));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductTradeIn_TA__UpdateTradeInQuantity_2415D8704F2B522959A39495092F6D25");
 		}
 
 		return uClassPointer;
@@ -45765,7 +45765,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TRADEINFILTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TradeInFilter_TA");
 		}
 
 		return uClassPointer;
@@ -45792,7 +45792,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TRADELOBBY_TA__GETHASHIDFROMCURRENCYID_1D52881E48C4CF623932028E2FACDA38));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TradeLobby_TA__GetHashIDFromCurrencyID_1D52881E48C4CF623932028E2FACDA38");
 		}
 
 		return uClassPointer;
@@ -45815,7 +45815,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CURRENCYPRODUCTSET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CurrencyProductSet_TA");
 		}
 
 		return uClassPointer;
@@ -45855,7 +45855,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TRADEERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TradeErrors_TA");
 		}
 
 		return uClassPointer;
@@ -45901,7 +45901,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTFILTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductFilter_TA");
 		}
 
 		return uClassPointer;
@@ -45995,7 +45995,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LANSERVERMETADATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LanServerMetaData_TA");
 		}
 
 		return uClassPointer;
@@ -46016,7 +46016,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MAPSCONFIG_TA__GETMAPFREQUENCYFORSET_CCE9ABDD48F3AA282CA404BD8FCD9F0B));
+			uClassPointer = UObject::FindClass("Class TAGame.__MapsConfig_TA__GetMapFrequencyForSet_CCE9ABDD48F3AA282CA404BD8FCD9F0B");
 		}
 
 		return uClassPointer;
@@ -46038,7 +46038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MAPSCONFIG_TA__GETMAPSETBYNAME_D456DE9A4AB2D2A63219768E82432894));
+			uClassPointer = UObject::FindClass("Class TAGame.__MapsConfig_TA__GetMapSetByName_D456DE9A4AB2D2A63219768E82432894");
 		}
 
 		return uClassPointer;
@@ -46060,7 +46060,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MATCHSERIES_TA__GETSERIESWINNERFROMDATA_01B2A1F04923E391E2E4839D1D2158A8));
+			uClassPointer = UObject::FindClass("Class TAGame.__MatchSeries_TA__GetSeriesWinnerFromData_01B2A1F04923E391E2E4839D1D2158A8");
 		}
 
 		return uClassPointer;
@@ -46082,7 +46082,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MATCHTYPE_PUBLIC_TA__CANSKIPPREMATCHLOBBY_62502BFA46844521C598308781CDB784));
+			uClassPointer = UObject::FindClass("Class TAGame.__MatchType_Public_TA__CanSkipPreMatchLobby_62502BFA46844521C598308781CDB784");
 		}
 
 		return uClassPointer;
@@ -46105,7 +46105,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEFEATURE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleFeature_TA");
 		}
 
 		return uClassPointer;
@@ -46125,7 +46125,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEKICKFEATURE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleKickFeature_TA");
 		}
 
 		return uClassPointer;
@@ -46146,7 +46146,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MATCHTYPE_TOURNAMENT_TA__CANSKIPPREMATCHLOBBY_48DBAEB742DB7E199713B5B5249BCB99));
+			uClassPointer = UObject::FindClass("Class TAGame.__MatchType_Tournament_TA__CanSkipPreMatchLobby_48DBAEB742DB7E199713B5B5249BCB99");
 		}
 
 		return uClassPointer;
@@ -46168,7 +46168,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSERVERCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourServerConfig_TA");
 		}
 
 		return uClassPointer;
@@ -46188,7 +46188,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEBANFEATURE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleBanFeature_TA");
 		}
 
 		return uClassPointer;
@@ -46210,7 +46210,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURMATCHMAKING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourMatchmaking_TA");
 		}
 
 		return uClassPointer;
@@ -46237,7 +46237,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_MICROTRANSACTIONS_CLAIMENTITLEMENTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_MicroTransactions_ClaimEntitlements_TA");
 		}
 
 		return uClassPointer;
@@ -46259,7 +46259,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTEXPIRATIONNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductExpirationNotification_TA");
 		}
 
 		return uClassPointer;
@@ -46280,7 +46280,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTSCONFIG_TA__ISTRADEINALLOWED_8EAFDEFA4249A0C3C82E57985F838921));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductsConfig_TA__IsTradeInAllowed_8EAFDEFA4249A0C3C82E57985F838921");
 		}
 
 		return uClassPointer;
@@ -46301,7 +46301,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADOUTUTILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LoadoutUtils_TA");
 		}
 
 		return uClassPointer;
@@ -46327,7 +46327,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PROFILEVERSIONS_TA__CARCOLORS2_3ADEB04F48B0B12CEC573E9130E4AB98));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProfileVersions_TA__CarColors2_3ADEB04F48B0B12CEC573E9130E4AB98");
 		}
 
 		return uClassPointer;
@@ -46353,7 +46353,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERPERFORMANCECONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerPerformanceConfig_TA");
 		}
 
 		return uClassPointer;
@@ -46374,7 +46374,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSMANAGER_TA__PURCHASE_A586E2EA47F03FB18E04BB9084596544));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsManager_TA__Purchase_A586E2EA47F03FB18E04BB9084596544");
 		}
 
 		return uClassPointer;
@@ -46395,7 +46395,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPSSERVICE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopsService_TA");
 		}
 
 		return uClassPointer;
@@ -46424,7 +46424,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPAWNPOINTGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpawnPointGroup_TA");
 		}
 
 		return uClassPointer;
@@ -46452,7 +46452,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SPECIALEVENTCONFIG_TA__SYNCIMAGEFORINDEX_B4B8FA5C485691BA9CD2829497A324E1));
+			uClassPointer = UObject::FindClass("Class TAGame.__SpecialEventConfig_TA__SyncImageForIndex_B4B8FA5C485691BA9CD2829497A324E1");
 		}
 
 		return uClassPointer;
@@ -46474,7 +46474,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STATUSTRIGGERMANAGER_TA__REMOVETRIGGERS_B6AE5B8C4E5DC407139AD9A100E5EF38));
+			uClassPointer = UObject::FindClass("Class TAGame.__StatusTriggerManager_TA__RemoveTriggers_B6AE5B8C4E5DC407139AD9A100E5EF38");
 		}
 
 		return uClassPointer;
@@ -46497,7 +46497,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STATUSTRIGGERMANAGER_TA__REGISTERTRIGGERS_A3E8519E48F0E3B8032877954A6F41D0));
+			uClassPointer = UObject::FindClass("Class TAGame.__StatusTriggerManager_TA__RegisterTriggers_A3E8519E48F0E3B8032877954A6F41D0");
 		}
 
 		return uClassPointer;
@@ -46520,7 +46520,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STATUSTRIGGERMANAGER_TA__ADDTRIGGERCONDITION_6F32F3624550EBC39A9E5EBD851FF7D0));
+			uClassPointer = UObject::FindClass("Class TAGame.__StatusTriggerManager_TA__AddTriggerCondition_6F32F3624550EBC39A9E5EBD851FF7D0");
 		}
 
 		return uClassPointer;
@@ -46543,7 +46543,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STATUSTRIGGERMANAGER_TA__INIT_34AC8F154757FA6D407B9E905AACD8E5));
+			uClassPointer = UObject::FindClass("Class TAGame.__StatusTriggerManager_TA__Init_34AC8F154757FA6D407B9E905AACD8E5");
 		}
 
 		return uClassPointer;
@@ -46567,7 +46567,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSOBSERVER_XPLEVEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusObserver_XPLevel_TA");
 		}
 
 		return uClassPointer;
@@ -46599,7 +46599,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSOBSERVER_MENUSTACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusObserver_MenuStack_TA");
 		}
 
 		return uClassPointer;
@@ -46637,7 +46637,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSOBSERVER_PRODUCTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusObserver_Products_TA");
 		}
 
 		return uClassPointer;
@@ -46684,7 +46684,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSOBSERVER_FTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusObserver_FTE_TA");
 		}
 
 		return uClassPointer;
@@ -46712,7 +46712,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__FINDHUMANTEAMMATESOFID_EFC25EE941FDCA4B248302BF27FBFF64));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__FindHumanTeammatesOfID_EFC25EE941FDCA4B248302BF27FBFF64");
 		}
 
 		return uClassPointer;
@@ -46735,7 +46735,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERSTARTVOTEEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerStartVoteEvent_TA");
 		}
 
 		return uClassPointer;
@@ -46756,7 +46756,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__ISONEPARTY_B141EE5A4BB0B6D452C6928E90F78A0C));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__IsOneParty_B141EE5A4BB0B6D452C6928E90F78A0C");
 		}
 
 		return uClassPointer;
@@ -46781,7 +46781,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYLEADERCHANGEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyLeaderChangedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -46802,7 +46802,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__GFXPLAYERJOINEDPARTY_AE3DFBEF404AAF6F48CFB4A45FC3A8FC));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__GFxPlayerJoinedParty_AE3DFBEF404AAF6F48CFB4A45FC3A8FC");
 		}
 
 		return uClassPointer;
@@ -46825,7 +46825,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__GFXLEADERACTIVE_ED6FD3F947D4533BDF232BABB361EEF8));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__GFxLeaderActive_ED6FD3F947D4533BDF232BABB361EEF8");
 		}
 
 		return uClassPointer;
@@ -46847,7 +46847,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXSTAYASPARTYDISPLAYBUTTON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxStayAsPartyDisplayButton_TA");
 		}
 
 		return uClassPointer;
@@ -46868,7 +46868,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERFORMPARTYEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerFormPartyEvent_TA");
 		}
 
 		return uClassPointer;
@@ -46889,7 +46889,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__MERGEEVENTCONFIRMFOLLOWER_9433BA2F4B58D3CFFE68D6B8951B4ADA));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__MergeEventConfirmFollower_9433BA2F4B58D3CFFE68D6B8951B4ADA");
 		}
 
 		return uClassPointer;
@@ -46915,7 +46915,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STAYASPARTYVOTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StayAsPartyVote_TA");
 		}
 
 		return uClassPointer;
@@ -46945,7 +46945,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__PROCESSVOTE_DC7CA2EC4422BFF8E3D51B87C771CC6D));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__ProcessVote_DC7CA2EC4422BFF8E3D51B87C771CC6D");
 		}
 
 		return uClassPointer;
@@ -46966,7 +46966,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STAYASPARTYMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StayAsPartyMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -46994,7 +46994,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__HANDLEPARTYCHANGED_5BD237814F8B51F9B6EB9E85F5E8A30A));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__HandlePartyChanged_5BD237814F8B51F9B6EB9E85F5E8A30A");
 		}
 
 		return uClassPointer;
@@ -47016,7 +47016,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERVOTESTARTEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerVoteStartedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -47038,7 +47038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYSYSTEM_TA__CREATEVOTESTARTEVENT_F7989543414A27CB56C6E9902D8ACB53));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartySystem_TA__CreateVoteStartEvent_F7989543414A27CB56C6E9902D8ACB53");
 		}
 
 		return uClassPointer;
@@ -47060,7 +47060,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURBRACKETCACHE_TA__REQUEST_2F6B153844044FBDE0E3C0A4F8833683));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourBracketCache_TA__Request_2F6B153844044FBDE0E3C0A4F8833683");
 		}
 
 		return uClassPointer;
@@ -47083,7 +47083,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURBRACKETCACHE_TA__REQUESTCACHED_913CF7F14D8A83D5220627BC56062D70));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourBracketCache_TA__RequestCached_913CF7F14D8A83D5220627BC56062D70");
 		}
 
 		return uClassPointer;
@@ -47105,7 +47105,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURCHECKINERROR_TA__ALERTSIGNUPERROR_732E4EBC4B3F1AD0890D6AB1BCD7732E));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourCheckInError_TA__AlertSignupError_732E4EBC4B3F1AD0890D6AB1BCD7732E");
 		}
 
 		return uClassPointer;
@@ -47128,7 +47128,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_TOURPRECHECKINERROR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_TourPreCheckInError_TA");
 		}
 
 		return uClassPointer;
@@ -47151,7 +47151,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_TOURPRECHECKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_TourPreCheckIn_TA");
 		}
 
 		return uClassPointer;
@@ -47173,7 +47173,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURMATCHSERVERBROWSER_TA__GETMATCHSERVER_0FA4334242C5EA72061D0CBCEBA40E11));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourMatchServerBrowser_TA__GetMatchServer_0FA4334242C5EA72061D0CBCEBA40E11");
 		}
 
 		return uClassPointer;
@@ -47198,7 +47198,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETMATCHSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetMatchServer_TA");
 		}
 
 		return uClassPointer;
@@ -47222,7 +47222,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETMATCHSERVER2_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetMatchServer2_TA");
 		}
 
 		return uClassPointer;
@@ -47245,7 +47245,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_TOURCHECKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_TourCheckIn_TA");
 		}
 
 		return uClassPointer;
@@ -47270,7 +47270,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_TOURCHECKINERROR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_TourCheckInError_TA");
 		}
 
 		return uClassPointer;
@@ -47298,7 +47298,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURPARTYCHECKINTRANSACTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourPartyCheckInTransaction_TA");
 		}
 
 		return uClassPointer;
@@ -47326,7 +47326,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURPARTYCHECKIN_TA__HANDLELEADERCHECKIN_9C0FB2064C27BF3D4827F4BCD7F342E5));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourPartyCheckIn_TA__HandleLeaderCheckIn_9C0FB2064C27BF3D4827F4BCD7F342E5");
 		}
 
 		return uClassPointer;
@@ -47348,7 +47348,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_TOURLEAVETOURNAMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_TourLeaveTournament_TA");
 		}
 
 		return uClassPointer;
@@ -47374,7 +47374,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURSUBSCRIPTIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourSubscriptions_TA");
 		}
 
 		return uClassPointer;
@@ -47408,7 +47408,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURREGISTRATION_TA__REGISTER_4E5EA973496F4F2E8481AA81BAC749FE));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourRegistration_TA__Register_4E5EA973496F4F2E8481AA81BAC749FE");
 		}
 
 		return uClassPointer;
@@ -47430,7 +47430,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___UICONFIG_TA__FINDXPDATARANGEINDEX_E37365B1440CEC91D3D7CA94FEDF094E));
+			uClassPointer = UObject::FindClass("Class TAGame.__UIConfig_TA__FindXPDataRangeIndex_E37365B1440CEC91D3D7CA94FEDF094E");
 		}
 
 		return uClassPointer;
@@ -47452,7 +47452,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___UICONFIG_TA__APPLY_6E1B1F124C9B96BDD5634A990231F49B));
+			uClassPointer = UObject::FindClass("Class TAGame.__UIConfig_TA__Apply_6E1B1F124C9B96BDD5634A990231F49B");
 		}
 
 		return uClassPointer;
@@ -47474,7 +47474,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_____UICONFIG_TA__APPLY_6E1B1F124C9B96BDD5634A990231F49B____UICONFIG_TA__APPLY_6E1B1F124C9B96BDD5634A990231F49B_415389494267D6BE25640C99BB322026));
+			uClassPointer = UObject::FindClass("Class TAGame.____UIConfig_TA__Apply_6E1B1F124C9B96BDD5634A990231F49B____UIConfig_TA__Apply_6E1B1F124C9B96BDD5634A990231F49B_415389494267D6BE25640C99BB322026");
 		}
 
 		return uClassPointer;
@@ -47496,7 +47496,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_____CONSECUTIVEMATCHTRACKER_TA__HANDLEGAMEENDED_27038F924875CD97C312BA8F0C754ABE____CONSECUTIVEMATCHTRACKER_TA__HANDLEGAMEENDED_27038F924875CD97C312BA8F0C754ABE_588400824421933533D68DAA468B1D47));
+			uClassPointer = UObject::FindClass("Class TAGame.____ConsecutiveMatchTracker_TA__HandleGameEnded_27038F924875CD97C312BA8F0C754ABE____ConsecutiveMatchTracker_TA__HandleGameEnded_27038F924875CD97C312BA8F0C754ABE_588400824421933533D68DAA468B1D47");
 		}
 
 		return uClassPointer;
@@ -47519,7 +47519,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGECURRENCY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeCurrency_TA");
 		}
 
 		return uClassPointer;
@@ -47539,7 +47539,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEFILTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeFilter_TA");
 		}
 
 		return uClassPointer;
@@ -47561,7 +47561,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CHALLENGEREWARD_TA__INIT_67DFE3E44FD8824AAEBC12A1D7070B16));
+			uClassPointer = UObject::FindClass("Class TAGame.__ChallengeReward_TA__Init_67DFE3E44FD8824AAEBC12A1D7070B16");
 		}
 
 		return uClassPointer;
@@ -47583,7 +47583,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CLUBSUPDATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_ClubsUpdate_TA");
 		}
 
 		return uClassPointer;
@@ -47603,7 +47603,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CLUBSOWNERCHANGED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_ClubsOwnerChanged_TA");
 		}
 
 		return uClassPointer;
@@ -47623,7 +47623,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CLUBSMEMBERREMOVED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_ClubsMemberRemoved_TA");
 		}
 
 		return uClassPointer;
@@ -47643,7 +47643,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CLUBSMEMBERADDED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_ClubsMemberAdded_TA");
 		}
 
 		return uClassPointer;
@@ -47666,7 +47666,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PERSONACLUBDATA));
+			uClassPointer = UObject::FindClass("Class TAGame.PersonaClubData");
 		}
 
 		return uClassPointer;
@@ -47689,7 +47689,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CLUBPERSONAS_TA__REFRESHPERSONA_39B722E04AA8E50A5EA03296D123CFF6));
+			uClassPointer = UObject::FindClass("Class TAGame.__ClubPersonas_TA__RefreshPersona_39B722E04AA8E50A5EA03296D123CFF6");
 		}
 
 		return uClassPointer;
@@ -47712,7 +47712,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CLUBPERSONAS_TA__QUEUEREFRESH_5D1820F2455616A06957C88CBFF2AB29));
+			uClassPointer = UObject::FindClass("Class TAGame.__ClubPersonas_TA__QueueRefresh_5D1820F2455616A06957C88CBFF2AB29");
 		}
 
 		return uClassPointer;
@@ -47734,7 +47734,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___BINARYUPLOADER_TA__UPLOAD_98D24C3E4888B4CBEF533C808A4BB68D));
+			uClassPointer = UObject::FindClass("Class TAGame.__BinaryUploader_TA__Upload_98D24C3E4888B4CBEF533C808A4BB68D");
 		}
 
 		return uClassPointer;
@@ -47755,7 +47755,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -47776,7 +47776,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CINEMATICINTROSEQUENCE_TA__GETACTIONBINDING_0D7434584C022D95B2060DB6C4F324FA));
+			uClassPointer = UObject::FindClass("Class TAGame.__CinematicIntroSequence_TA__GetActionBinding_0D7434584C022D95B2060DB6C4F324FA");
 		}
 
 		return uClassPointer;
@@ -47799,7 +47799,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CINEMATICINTROSEQUENCE_TA__SETTRACKEDBINDINGS_513C89A14CA7144DFE8B3D846B2C55B0));
+			uClassPointer = UObject::FindClass("Class TAGame.__CinematicIntroSequence_TA__SetTrackedBindings_513C89A14CA7144DFE8B3D846B2C55B0");
 		}
 
 		return uClassPointer;
@@ -47822,7 +47822,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_CINEMATICINTROSEQFINISHED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_CinematicIntroSeqFinished_TA");
 		}
 
 		return uClassPointer;
@@ -47842,7 +47842,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CINEMATICINTRO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_CinematicIntro_TA");
 		}
 
 		return uClassPointer;
@@ -47870,7 +47870,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CROWDACTORMANAGER_TA__OVERRIDECROWDACTORSOUNDS_8D9FA891414D878472647599F488FF85));
+			uClassPointer = UObject::FindClass("Class TAGame.__CrowdActorManager_TA__OverrideCrowdActorSounds_8D9FA891414D878472647599F488FF85");
 		}
 
 		return uClassPointer;
@@ -47892,7 +47892,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CROWDACTORMANAGER_TA__PLAYCROWDSOUND_06BE7CCC4F754069AA06808737B94F1F));
+			uClassPointer = UObject::FindClass("Class TAGame.__CrowdActorManager_TA__PlayCrowdSound_06BE7CCC4F754069AA06808737B94F1F");
 		}
 
 		return uClassPointer;
@@ -47914,7 +47914,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CROWDACTORMANAGER_TA__STOPCROWDSOUND_FA2561AC460F799A464D58A8B4186C4A));
+			uClassPointer = UObject::FindClass("Class TAGame.__CrowdActorManager_TA__StopCrowdSound_FA2561AC460F799A464D58A8B4186C4A");
 		}
 
 		return uClassPointer;
@@ -47936,7 +47936,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___CURRENCYPRODUCTSET_TA__GETCURRENCYINDEXFROMHASHID_401B1ACA410D2E50766FC0B3736AEA07));
+			uClassPointer = UObject::FindClass("Class TAGame.__CurrencyProductSet_TA__GetCurrencyIndexFromHashID_401B1ACA410D2E50766FC0B3736AEA07");
 		}
 
 		return uClassPointer;
@@ -47958,7 +47958,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ESPORTCONFIG_TA__DOWNLOADEVENTIMAGE_6A70BFA24B08DC1F8E63989F90A7FBB2));
+			uClassPointer = UObject::FindClass("Class TAGame.__ESportConfig_TA__DownloadEventImage_6A70BFA24B08DC1F8E63989F90A7FBB2");
 		}
 
 		return uClassPointer;
@@ -47980,7 +47980,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ESPORTCONFIG_TA__GETNEXTEVENTTIME_1BFDDCAE40C52B9DBB0109BE7B5D519D));
+			uClassPointer = UObject::FindClass("Class TAGame.__ESportConfig_TA__GetNextEventTime_1BFDDCAE40C52B9DBB0109BE7B5D519D");
 		}
 
 		return uClassPointer;
@@ -48002,7 +48002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_PREVIEWGOALEXPLOSION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_PreviewGoalExplosion_TA");
 		}
 
 		return uClassPointer;
@@ -48022,7 +48022,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_NOTIFICATION_ANTIADDICTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Notification_AntiAddiction_TA");
 		}
 
 		return uClassPointer;
@@ -48043,7 +48043,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURUTILS_TA__CALCTEAMWINS_6CF4080749B42A2C76C19D8A26A89CF2));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourUtils_TA__CalcTeamWins_6CF4080749B42A2C76C19D8A26A89CF2");
 		}
 
 		return uClassPointer;
@@ -48065,7 +48065,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PARTYMESSAGE_CLUBCHANGED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PartyMessage_ClubChanged_TA");
 		}
 
 		return uClassPointer;
@@ -48095,7 +48095,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEDATA_GAMEEDITOR_TRAINING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveData_GameEditor_Training_TA");
 		}
 
 		return uClassPointer;
@@ -48136,7 +48136,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TRAININGEDITORDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TrainingEditorData_TA");
 		}
 
 		return uClassPointer;
@@ -48157,7 +48157,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TRAININGEDITORMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TrainingEditorMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -48188,7 +48188,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_GARAGESLOTDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_GarageSlotDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -48215,7 +48215,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MENUSEQUENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MenuSequence_TA");
 		}
 
 		return uClassPointer;
@@ -48247,7 +48247,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTFILTER_TA__UPDATEPRODUCTSLOTNEWITEMS_125121FC4105EA9894D3D58065110D96));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductFilter_TA__UpdateProductSlotNewItems_125121FC4105EA9894D3D58065110D96");
 		}
 
 		return uClassPointer;
@@ -48270,7 +48270,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTFILTER_TA__SETPROHIBITEDATTRIBUTETYPESELECTED_B4ECEFDC4FA24F02D1D020A3E5AF3F88));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductFilter_TA__SetProhibitedAttributeTypeSelected_B4ECEFDC4FA24F02D1D020A3E5AF3F88");
 		}
 
 		return uClassPointer;
@@ -48292,7 +48292,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTFILTER_TA__SETEXCLUSIVEATTRIBUTETYPESELECTED_F9A6A6A54353A36559D441BD0C5227C7));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductFilter_TA__SetExclusiveAttributeTypeSelected_F9A6A6A54353A36559D441BD0C5227C7");
 		}
 
 		return uClassPointer;
@@ -48314,7 +48314,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTFILTER_TA__GETPRODUCTATTRIBUTEFILTERS_0042B38E4113A761D5FDD3AE11DEAE14));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductFilter_TA__GetProductAttributeFilters_0042B38E4113A761D5FDD3AE11DEAE14");
 		}
 
 		return uClassPointer;
@@ -48336,7 +48336,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTFILTER_TA__GETPRODUCTSORTINGFILTERS_5C50264A4D68254E164D8BAF21FE23D7));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductFilter_TA__GetProductSortingFilters_5C50264A4D68254E164D8BAF21FE23D7");
 		}
 
 		return uClassPointer;
@@ -48360,7 +48360,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTFILTER_TA__FILTERPRODUCTS_AEC2317042F2EF4B32F998A6EBF3549E));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductFilter_TA__FilterProducts_AEC2317042F2EF4B32F998A6EBF3549E");
 		}
 
 		return uClassPointer;
@@ -48384,7 +48384,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PRODUCTFILTER_TA__INITPRODUCTATTRIBUTES_B8CF4D7748E3731EF094968B1E5ABE7A));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ProductFilter_TA__InitProductAttributes_B8CF4D7748E3731EF094968B1E5ABE7A");
 		}
 
 		return uClassPointer;
@@ -48406,7 +48406,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GARAGEARCHIVESLOT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GarageArchiveSlot_TA");
 		}
 
 		return uClassPointer;
@@ -48449,7 +48449,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_POSSIBLETRADEIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PossibleTradeIn_TA");
 		}
 
 		return uClassPointer;
@@ -48471,7 +48471,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MENUSEQUENCER_TA__GETSEQUENCE_A6D002FA477F669C7DA0AA85E9248DAB));
+			uClassPointer = UObject::FindClass("Class TAGame.__MenuSequencer_TA__GetSequence_A6D002FA477F669C7DA0AA85E9248DAB");
 		}
 
 		return uClassPointer;
@@ -48493,7 +48493,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MICROEVENTCONFIG_TA__GETNEXTACTIVEMICROEVENT_E9DF3BCC4229047345A5FEA1D8BC9648));
+			uClassPointer = UObject::FindClass("Class TAGame.__MicroEventConfig_TA__GetNextActiveMicroEvent_E9DF3BCC4229047345A5FEA1D8BC9648");
 		}
 
 		return uClassPointer;
@@ -48516,7 +48516,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MTXCONFIG_TA__CREATEMODALFORERROR_17B514A74BF6496FA4A03488DC488778));
+			uClassPointer = UObject::FindClass("Class TAGame.__MtxConfig_TA__CreateModalForError_17B514A74BF6496FA4A03488DC488778");
 		}
 
 		return uClassPointer;
@@ -48539,7 +48539,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MTXERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MtxErrors_TA");
 		}
 
 		return uClassPointer;
@@ -48560,7 +48560,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MUTATOR_FREEPLAY_TA__HANDLEUNLIMITEDBOOSTCHANGE_1AE6101D42EF9B0C86EFE3965B072B77));
+			uClassPointer = UObject::FindClass("Class TAGame.__Mutator_Freeplay_TA__HandleUnlimitedBoostChange_1AE6101D42EF9B0C86EFE3965B072B77");
 		}
 
 		return uClassPointer;
@@ -48583,7 +48583,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MUTATOR_FREEPLAY_TA__HANDLEGAMEPLAYSETTINGSSAVE_E532AF60470377F423F7A0B629605BE0));
+			uClassPointer = UObject::FindClass("Class TAGame.__Mutator_Freeplay_TA__HandleGameplaySettingsSave_E532AF60470377F423F7A0B629605BE0");
 		}
 
 		return uClassPointer;
@@ -48608,7 +48608,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_SOCCAR_SUBRULES_ITEMS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Soccar_SubRules_Items_TA");
 		}
 
 		return uClassPointer;
@@ -48655,7 +48655,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERITEMDISPENSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerItemDispenser_TA");
 		}
 
 		return uClassPointer;
@@ -48696,7 +48696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ITEMPOOL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ItemPool_TA");
 		}
 
 		return uClassPointer;
@@ -48726,7 +48726,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MUTATOR_FREEPLAY_TA__MUTATEOBJECT_168575284BB1938C7C6AC7AF9B9921D1));
+			uClassPointer = UObject::FindClass("Class TAGame.__Mutator_Freeplay_TA__MutateObject_168575284BB1938C7C6AC7AF9B9921D1");
 		}
 
 		return uClassPointer;
@@ -48748,7 +48748,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_FREEPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_Freeplay_TA");
 		}
 
 		return uClassPointer;
@@ -48768,7 +48768,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PARTYINVITENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PartyInviteNotification_TA");
 		}
 
 		return uClassPointer;
@@ -48788,7 +48788,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_MTXGARAGEREVEAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_MTXGarageReveal_TA");
 		}
 
 		return uClassPointer;
@@ -48809,7 +48809,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REWARDDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RewardDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -48830,7 +48830,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TASYNCRESULT__PRIVILEGECHECK_X__COPY_7D3E1CD94ACBA78CE88531BA66594B08));
+			uClassPointer = UObject::FindClass("Class TAGame.__TAsyncResult__PrivilegeCheck_X__Copy_7D3E1CD94ACBA78CE88531BA66594B08");
 		}
 
 		return uClassPointer;
@@ -48852,7 +48852,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TASYNCRESULT__PRIVILEGECHECK_X__SETRESULTWHEN_27E37F1B4F194A5B251A0A9D4D83AC37));
+			uClassPointer = UObject::FindClass("Class TAGame.__TAsyncResult__PrivilegeCheck_X__SetResultWhen_27E37F1B4F194A5B251A0A9D4D83AC37");
 		}
 
 		return uClassPointer;
@@ -48874,7 +48874,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TASYNCRESULT__PRIVILEGECHECK_X__NOTIFYONRESULTCOMPLETE_16172E8647376F10EE842F828C813403));
+			uClassPointer = UObject::FindClass("Class TAGame.__TAsyncResult__PrivilegeCheck_X__NotifyOnResultComplete_16172E8647376F10EE842F828C813403");
 		}
 
 		return uClassPointer;
@@ -48896,7 +48896,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TASYNCRESULT__PRIVILEGECHECK_X__NOTIFYONRESULT_375AD2024A3731E21DE139BBBFBDCA09));
+			uClassPointer = UObject::FindClass("Class TAGame.__TAsyncResult__PrivilegeCheck_X__NotifyOnResult_375AD2024A3731E21DE139BBBFBDCA09");
 		}
 
 		return uClassPointer;
@@ -48919,7 +48919,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETMATCHRESERVATIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetMatchReservations_TA");
 		}
 
 		return uClassPointer;
@@ -48942,7 +48942,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURGAMEUPDATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourGameUpdate_TA");
 		}
 
 		return uClassPointer;
@@ -48976,7 +48976,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURSUBSCRIPTIONS_TA__UNSUBSCRIBE_730F2CAE4EAB51258AD2379F74EA016B));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourSubscriptions_TA__Unsubscribe_730F2CAE4EAB51258AD2379F74EA016B");
 		}
 
 		return uClassPointer;
@@ -49000,7 +49000,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURCANCELCREATED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourCancelCreated_TA");
 		}
 
 		return uClassPointer;
@@ -49038,7 +49038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURGAMEUPDATEDISPATCHER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourGameUpdateDispatcher_TA");
 		}
 
 		return uClassPointer;
@@ -49082,7 +49082,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMETOURSERVER_TA__ISBOTONLYTEAM_C2B5081C4D465AFC6E6AA28DE69845BF));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameTourServer_TA__IsBotOnlyTeam_C2B5081C4D465AFC6E6AA28DE69845BF");
 		}
 
 		return uClassPointer;
@@ -49103,7 +49103,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_JOINEXTERNALMATCH_X));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_JoinExternalMatch_X");
 		}
 
 		return uClassPointer;
@@ -49126,7 +49126,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CREATEEXTERNALMATCH_X));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_CreateExternalMatch_X");
 		}
 
 		return uClassPointer;
@@ -49148,7 +49148,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSERVERINFO_FACEIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourServerInfo_FaceIt_TA");
 		}
 
 		return uClassPointer;
@@ -49171,7 +49171,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMETOURSERVER_TA__GETTEAMSCORE_BB5BD9E14AA9CA530E7B58BD3DA2DE10));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameTourServer_TA__GetTeamScore_BB5BD9E14AA9CA530E7B58BD3DA2DE10");
 		}
 
 		return uClassPointer;
@@ -49193,7 +49193,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ONLINEGAMETOURSERVER_TA__FILTERMAPDATA_C90A14554252BAC5C581BDA45A730A7F));
+			uClassPointer = UObject::FindClass("Class TAGame.__OnlineGameTourServer_TA__FilterMapData_C90A14554252BAC5C581BDA45A730A7F");
 		}
 
 		return uClassPointer;
@@ -49214,7 +49214,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_JOINTOURNAMENT_X));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_JoinTournament_X");
 		}
 
 		return uClassPointer;
@@ -49236,7 +49236,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CREATETOURNAMENT_X));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_CreateTournament_X");
 		}
 
 		return uClassPointer;
@@ -49263,7 +49263,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GETUPLOADURLSMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GetUploadUrlsMatch_TA");
 		}
 
 		return uClassPointer;
@@ -49285,7 +49285,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GETUPLOADURLSPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GetUploadUrlsPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -49306,7 +49306,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TRACEABLESPAWNPOINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TraceableSpawnPoint_TA");
 		}
 
 		return uClassPointer;
@@ -49326,7 +49326,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_CRUMBPATHCOMPLETE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_CrumbPathComplete_TA");
 		}
 
 		return uClassPointer;
@@ -49347,7 +49347,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_MENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_Menu_TA");
 		}
 
 		return uClassPointer;
@@ -49368,7 +49368,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_PRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_Product_TA");
 		}
 
 		return uClassPointer;
@@ -49390,7 +49390,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_PRODUCTOWNED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_ProductOwned_TA");
 		}
 
 		return uClassPointer;
@@ -49410,7 +49410,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_PRODUCTEQUIPPED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_ProductEquipped_TA");
 		}
 
 		return uClassPointer;
@@ -49431,7 +49431,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STATUSOBSERVER_PRODUCTS_TA__UPDATETRIGGERSBYSLOT_4E86A709455EE96D485CB5B884140B59));
+			uClassPointer = UObject::FindClass("Class TAGame.__StatusObserver_Products_TA__UpdateTriggersBySlot_4E86A709455EE96D485CB5B884140B59");
 		}
 
 		return uClassPointer;
@@ -49454,7 +49454,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_NUMERICAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_Numerical_TA");
 		}
 
 		return uClassPointer;
@@ -49476,7 +49476,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_PLAYERLEVEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_PlayerLevel_TA");
 		}
 
 		return uClassPointer;
@@ -49496,7 +49496,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATUSTRIGGER_PLAYERXP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatusTrigger_PlayerXP_TA");
 		}
 
 		return uClassPointer;
@@ -49520,7 +49520,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SERVERMERGEERROREVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ServerMergeErrorEvent_TA");
 		}
 
 		return uClassPointer;
@@ -49541,7 +49541,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYVOTE_TA__REMOVEFOLLOWER_057AEB814E104DC25B40DC905248D5E0));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartyVote_TA__RemoveFollower_057AEB814E104DC25B40DC905248D5E0");
 		}
 
 		return uClassPointer;
@@ -49563,7 +49563,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___STAYASPARTYVOTE_TA__ADDFOLLOWERTOLEADER_D9FE50694E651674FAED17A91407AA2A));
+			uClassPointer = UObject::FindClass("Class TAGame.__StayAsPartyVote_TA__AddFollowerToLeader_D9FE50694E651674FAED17A91407AA2A");
 		}
 
 		return uClassPointer;
@@ -49588,7 +49588,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ARENASOUNDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ArenaSoundEvent_TA");
 		}
 
 		return uClassPointer;
@@ -49609,7 +49609,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ARENASOUNDCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ArenaSoundConfig_TA");
 		}
 
 		return uClassPointer;
@@ -49633,7 +49633,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ARENASOUNDMANAGER_TA__HANDLEMATCHWINNERSET_04F7C36B416D535127E3E1A422BBD8AC));
+			uClassPointer = UObject::FindClass("Class TAGame.__ArenaSoundManager_TA__HandleMatchWinnerSet_04F7C36B416D535127E3E1A422BBD8AC");
 		}
 
 		return uClassPointer;
@@ -49655,7 +49655,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ARENASOUNDPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ArenaSoundPlayer_TA");
 		}
 
 		return uClassPointer;
@@ -49676,7 +49676,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_ARCHIVED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_Archived_TA");
 		}
 
 		return uClassPointer;
@@ -49701,7 +49701,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_BUILDBLUEPRINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_BuildBlueprint_TA");
 		}
 
 		return uClassPointer;
@@ -49724,7 +49724,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_REVEALBLUEPRINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RevealBlueprint_TA");
 		}
 
 		return uClassPointer;
@@ -49748,7 +49748,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_CINEMATICINTROSTARTNEXTSEQ_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_CinematicIntroStartNextSeq_TA");
 		}
 
 		return uClassPointer;
@@ -49771,7 +49771,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTRACKLIST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTracklist_TA");
 		}
 
 		return uClassPointer;
@@ -49795,7 +49795,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUSICTRACKLISTNULL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MusicTracklistNull_TA");
 		}
 
 		return uClassPointer;
@@ -49829,7 +49829,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURUPDATEGAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourUpdateGame_TA");
 		}
 
 		return uClassPointer;
@@ -49850,7 +49850,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURGAMEUPDATEDISPATCHER_TA__INIT_884F28C64EC574C7E81CC09A177C4E4A));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourGameUpdateDispatcher_TA__Init_884F28C64EC574C7E81CC09A177C4E4A");
 		}
 
 		return uClassPointer;
@@ -49872,7 +49872,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURGAMEUPDATEDISPATCHER_TA__HANDLEUPDATEGAMESUCCESS_FABEE88943CF916463A464B2AD574452));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourGameUpdateDispatcher_TA__HandleUpdateGameSuccess_FABEE88943CF916463A464B2AD574452");
 		}
 
 		return uClassPointer;
@@ -49898,7 +49898,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_FACEITMATCHSTARTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_FaceItMatchStarted_TA");
 		}
 
 		return uClassPointer;
@@ -49923,7 +49923,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETMATCHRESERVATIONS_FACEIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetMatchReservations_FaceIt_TA");
 		}
 
 		return uClassPointer;
@@ -49943,7 +49943,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURGAMEUPDATE_FACEIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourGameUpdate_FaceIt_TA");
 		}
 
 		return uClassPointer;
@@ -49965,7 +49965,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_CONTAINERKEY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_ContainerKey_TA");
 		}
 
 		return uClassPointer;
@@ -49989,7 +49989,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_CONTAINER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Container_TA");
 		}
 
 		return uClassPointer;
@@ -50016,7 +50016,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_PAINTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Painted_TA");
 		}
 
 		return uClassPointer;
@@ -50038,7 +50038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_LEVEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Level_TA");
 		}
 
 		return uClassPointer;
@@ -50059,7 +50059,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_SCHEMATIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Schematic_TA");
 		}
 
 		return uClassPointer;
@@ -50080,7 +50080,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_CERTIFIED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Certified_TA");
 		}
 
 		return uClassPointer;
@@ -50102,7 +50102,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_PRODUCTLINK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_ProductLink_TA");
 		}
 
 		return uClassPointer;
@@ -50124,7 +50124,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_EXPIRATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Expiration_TA");
 		}
 
 		return uClassPointer;
@@ -50146,7 +50146,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_RENTAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Rental_TA");
 		}
 
 		return uClassPointer;
@@ -50168,7 +50168,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_INDESTRUCTIBLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Indestructible_TA");
 		}
 
 		return uClassPointer;
@@ -50190,7 +50190,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_TITLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Title_TA");
 		}
 
 		return uClassPointer;
@@ -50212,7 +50212,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_TIERED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Tiered_TA");
 		}
 
 		return uClassPointer;
@@ -50234,7 +50234,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_SPECIALEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_SpecialEdition_TA");
 		}
 
 		return uClassPointer;
@@ -50257,7 +50257,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_TEAMEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_TeamEdition_TA");
 		}
 
 		return uClassPointer;
@@ -50281,7 +50281,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_SHOPITEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_ShopItem_TA");
 		}
 
 		return uClassPointer;
@@ -50303,7 +50303,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTATTRIBUTE_CURRENCY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductAttribute_Currency_TA");
 		}
 
 		return uClassPointer;
@@ -50327,7 +50327,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___ARENASOUNDCONFIG_TA__GETNEXTEVENT_5469F3614ABF794FE09A95AD35FA34D7));
+			uClassPointer = UObject::FindClass("Class TAGame.__ArenaSoundConfig_TA__GetNextEvent_5469F3614ABF794FE09A95AD35FA34D7");
 		}
 
 		return uClassPointer;
@@ -50356,7 +50356,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_FACEITUPDATEGAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_FaceItUpdateGame_TA");
 		}
 
 		return uClassPointer;
@@ -50377,7 +50377,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_DLC_TA__HANDLEENTITLEMENTSERROR_6236CB624E620902340C35A1411C349C));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_DLC_TA__HandleEntitlementsError_6236CB624E620902340C35A1411C349C");
 		}
 
 		return uClassPointer;
@@ -50400,7 +50400,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_ACHIEVEMENTDATAUPLOAD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_AchievementDataUpload_TA");
 		}
 
 		return uClassPointer;
@@ -50422,7 +50422,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_UPLOADINTROCARS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_UploadIntroCars_TA");
 		}
 
 		return uClassPointer;
@@ -50444,7 +50444,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INTROCARTEMPLATES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IntroCarTemplates_TA");
 		}
 
 		return uClassPointer;
@@ -50465,7 +50465,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___EPICFRIENDSCONVERTERSYSTEM_TA__SETUPEPICFRIENDSCONVERTER_292F07B64E26201D2F860981E5EF688A));
+			uClassPointer = UObject::FindClass("Class TAGame.__EpicFriendsConverterSystem_TA__SetupEpicFriendsConverter_292F07B64E26201D2F860981E5EF688A");
 		}
 
 		return uClassPointer;
@@ -50486,7 +50486,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EPICFRIENDSCONVERTERSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EpicFriendsConverterSystem_TA");
 		}
 
 		return uClassPointer;
@@ -50519,7 +50519,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EPICFRIENDSCONVERTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EpicFriendsConverter_TA");
 		}
 
 		return uClassPointer;
@@ -50552,7 +50552,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENTPRODUCTASSETCACHE_TA__HANDLECARASSETSLOADED_C873433843DAE26CACFF79993BBB1AD0));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEventProductAssetCache_TA__HandleCarAssetsLoaded_C873433843DAE26CACFF79993BBB1AD0");
 		}
 
 		return uClassPointer;
@@ -50575,7 +50575,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRIASSETCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PriAssetCache_TA");
 		}
 
 		return uClassPointer;
@@ -50597,7 +50597,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENTPRODUCTASSETCACHE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEventProductAssetCache_TA");
 		}
 
 		return uClassPointer;
@@ -50628,7 +50628,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENTPRODUCTASSETCACHE_TA__HANDLEPLAYERADDED_1827ECF4453E541533B274A906907EBB));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEventProductAssetCache_TA__HandlePlayerAdded_1827ECF4453E541533B274A906907EBB");
 		}
 
 		return uClassPointer;
@@ -50650,7 +50650,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GAMEEVENTPRODUCTASSETCACHE_TA__HANDLEPLAYERREMOVED_6C134B414549CFDA88FC37A320DDBF44));
+			uClassPointer = UObject::FindClass("Class TAGame.__GameEventProductAssetCache_TA__HandlePlayerRemoved_6C134B414549CFDA88FC37A320DDBF44");
 		}
 
 		return uClassPointer;
@@ -50672,7 +50672,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_AUTOTOUR_TOURCARD_TA__HANDLESUBSCRIPTIONCHANGED_02E4691041253C488A6343BCA713BC1D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_AutoTour_TourCard_TA__HandleSubscriptionChanged_02E4691041253C488A6343BCA713BC1D");
 		}
 
 		return uClassPointer;
@@ -50706,7 +50706,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_AUTOTOUR_TOURCARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_AutoTour_TourCard_TA");
 		}
 
 		return uClassPointer;
@@ -50738,7 +50738,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CARRUMBLE_TA__HANDLEPAWNSET_0D2968FD4135BD9BBF572684CA619CA2));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_CarRumble_TA__HandlePawnSet_0D2968FD4135BD9BBF572684CA619CA2");
 		}
 
 		return uClassPointer;
@@ -50765,7 +50765,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CARRUMBLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_CarRumble_TA");
 		}
 
 		return uClassPointer;
@@ -50795,7 +50795,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBDETAILS_TA__UPDATECLUBMEMBERS_A024853C4D51F1843504E9900FDE16A0));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ClubDetails_TA__UpdateClubMembers_A024853C4D51F1843504E9900FDE16A0");
 		}
 
 		return uClassPointer;
@@ -50829,7 +50829,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLUBDETAILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ClubDetails_TA");
 		}
 
 		return uClassPointer;
@@ -50861,7 +50861,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__ACCEPTCLUBINVITE_868B9BAE40F299AC9141E182B9AD7738));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__AcceptClubInvite_868B9BAE40F299AC9141E182B9AD7738");
 		}
 
 		return uClassPointer;
@@ -50904,7 +50904,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLUBS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Clubs_TA");
 		}
 
 		return uClassPointer;
@@ -50973,7 +50973,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLUBINVITENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClubInviteNotification_TA");
 		}
 
 		return uClassPointer;
@@ -51001,7 +51001,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXCLUBACTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxClubAction_TA");
 		}
 
 		return uClassPointer;
@@ -51031,7 +51031,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__CREATECLUB_73BC244846F9EBF7BC649C9D905A0F2A));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__CreateClub_73BC244846F9EBF7BC649C9D905A0F2A");
 		}
 
 		return uClassPointer;
@@ -51053,7 +51053,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__INVITETOCLUB_522F77894E57BCD1D98979BE67F23C5C));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__InviteToClub_522F77894E57BCD1D98979BE67F23C5C");
 		}
 
 		return uClassPointer;
@@ -51076,7 +51076,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__REJECTCLUBINVITE_BAFB821D451B1C7CE8F4E1942B288761));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__RejectClubInvite_BAFB821D451B1C7CE8F4E1942B288761");
 		}
 
 		return uClassPointer;
@@ -51099,7 +51099,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__REMOVEFROMCLUB_FE27BDC54823DDB9C500CD872B07A75D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__RemoveFromClub_FE27BDC54823DDB9C500CD872B07A75D");
 		}
 
 		return uClassPointer;
@@ -51121,7 +51121,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__SETCLUBINVITES_3ED8742643B3B10F19AE5DAE04106A7D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__SetClubInvites_3ED8742643B3B10F19AE5DAE04106A7D");
 		}
 
 		return uClassPointer;
@@ -51143,7 +51143,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__SETCLUBOWNER_F889780247E1E0AFF6E5268E57831AEB));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__SetClubOwner_F889780247E1E0AFF6E5268E57831AEB");
 		}
 
 		return uClassPointer;
@@ -51165,7 +51165,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__SETMOTD_AAAE50874C9F72B6E1A67EAF67952142));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__SetMotD_AAAE50874C9F72B6E1A67EAF67952142");
 		}
 
 		return uClassPointer;
@@ -51187,7 +51187,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__SYNCCLUBDETAILS_45A45E2C43CA1A6A5D2E1B8BD002E161));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__SyncClubDetails_45A45E2C43CA1A6A5D2E1B8BD002E161");
 		}
 
 		return uClassPointer;
@@ -51210,7 +51210,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__UPDATECLUBCOLORS_198A232446F66C67F85DB5B65775EE99));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__UpdateClubColors_198A232446F66C67F85DB5B65775EE99");
 		}
 
 		return uClassPointer;
@@ -51233,7 +51233,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__UPDATECLUBNAME_A7B12DC744EEC9D6D7AE7A87E4AB54AC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__UpdateClubName_A7B12DC744EEC9D6D7AE7A87E4AB54AC");
 		}
 
 		return uClassPointer;
@@ -51255,7 +51255,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_CLUBS_TA__UPDATEGFXCLUBDETAILS_0A70AD284DDB01BCB4570AA336DBD0A6));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Clubs_TA__UpdateGFxClubDetails_0A70AD284DDB01BCB4570AA336DBD0A6");
 		}
 
 		return uClassPointer;
@@ -51277,7 +51277,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FACEIT_TA__HANDLEERROR_EF0D97AB4D254FA13F01FFBE512B2129));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_FaceIt_TA__HandleError_EF0D97AB4D254FA13F01FFBE512B2129");
 		}
 
 		return uClassPointer;
@@ -51304,7 +51304,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_FACEIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_FaceIt_TA");
 		}
 
 		return uClassPointer;
@@ -51338,7 +51338,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FRIENDS_TA__CREATECONVERTPLATFORMFRIENDSPROMPT_84AB0DC247F14DD303335E83A731C853));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Friends_TA__CreateConvertPlatformFriendsPrompt_84AB0DC247F14DD303335E83A731C853");
 		}
 
 		return uClassPointer;
@@ -51390,7 +51390,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_FRIENDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Friends_TA");
 		}
 
 		return uClassPointer;
@@ -51543,7 +51543,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FRIENDS_TA__CREATEEPICFRIENDINVITENOTIFICATION_C706F859423C0D44425C24B2E8083909));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Friends_TA__CreateEpicFriendInviteNotification_C706F859423C0D44425C24B2E8083909");
 		}
 
 		return uClassPointer;
@@ -51568,7 +51568,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FRIENDREQUESTNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FriendRequestNotification_TA");
 		}
 
 		return uClassPointer;
@@ -51592,7 +51592,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FRIENDS_TA__DELIVERUNBLOCKEDEPICFRIENDINVITES_4304873B495A4E3BC67633A8913BC15C));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Friends_TA__DeliverUnblockedEpicFriendInvites_4304873B495A4E3BC67633A8913BC15C");
 		}
 
 		return uClassPointer;
@@ -51614,7 +51614,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FRIENDS_TA__HANDLEPARTIESCHANGED_784F8EDF4B7F9DE17D870280C4F8B517));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Friends_TA__HandlePartiesChanged_784F8EDF4B7F9DE17D870280C4F8B517");
 		}
 
 		return uClassPointer;
@@ -51636,7 +51636,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FRIENDS_TA__HIDEBLOCKEDEPICFRIENDINVITES_AC835BD440216434D144498CD0CC34AC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Friends_TA__HideBlockedEpicFriendInvites_AC835BD440216434D144498CD0CC34AC");
 		}
 
 		return uClassPointer;
@@ -51658,7 +51658,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_FRIENDS_TA__ISFRIENDINPARTY_4F62A1BF48EFC0ED197285BE53B63A17));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Friends_TA__IsFriendInParty_4F62A1BF48EFC0ED197285BE53B63A17");
 		}
 
 		return uClassPointer;
@@ -51702,7 +51702,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MTXGARAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MTXGarage_TA");
 		}
 
 		return uClassPointer;
@@ -51785,7 +51785,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MTXGARAGE_TA__HANDLEGETCATALOGRESPONSE_DC3CA93A48B06D19D830639A17F32E26));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MTXGarage_TA__HandleGetCatalogResponse_DC3CA93A48B06D19D830639A17F32E26");
 		}
 
 		return uClassPointer;
@@ -51807,7 +51807,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MTXGARAGE_TA__HANDLEUNLOCKCONTAINERSRESPONSE_73227D494C7856041B07DF945320755C));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MTXGarage_TA__HandleUnlockContainersResponse_73227D494C7856041B07DF945320755C");
 		}
 
 		return uClassPointer;
@@ -51832,7 +51832,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MTXGARAGE_TA__REVEALCONTAINERUNLOCKS_FA758F9040A1B0DB34FED6B92620C985));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MTXGarage_TA__RevealContainerUnlocks_FA758F9040A1B0DB34FED6B92620C985");
 		}
 
 		return uClassPointer;
@@ -51855,7 +51855,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MULTIITEMDROPS_TA__HANDLEACHIEVEMENTREWARDSRECEIVED_8DF2732A4A55DAFA8ACFC6B9649E66E3));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_MultiItemDrops_TA__HandleAchievementRewardsReceived_8DF2732A4A55DAFA8ACFC6B9649E66E3");
 		}
 
 		return uClassPointer;
@@ -51876,7 +51876,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_MUTATORS_TA__INITMUTATORCUSTOMGAMESETTINGS_E3DF21DE43C3F12E72E804B986A34011));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Mutators_TA__InitMutatorCustomGameSettings_E3DF21DE43C3F12E72E804B986A34011");
 		}
 
 		return uClassPointer;
@@ -51909,7 +51909,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MUTATORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Mutators_TA");
 		}
 
 		return uClassPointer;
@@ -51955,7 +51955,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_NOTIFICATIONMANAGER_TA__HANDLENOTIFICATIONREMOVED_A9F1EF6648433836454AE99EBCC7B267));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_NotificationManager_TA__HandleNotificationRemoved_A9F1EF6648433836454AE99EBCC7B267");
 		}
 
 		return uClassPointer;
@@ -51981,7 +51981,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_NOTIFICATIONMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_NotificationManager_TA");
 		}
 
 		return uClassPointer;
@@ -52021,7 +52021,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PLAYERAVATARBORDERPREVIEW_TA__CREATEPLAYERAVATARBORDERPREVIEW_7F9F3F684670520A10D51E9E515FE3AB));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PlayerAvatarBorderPreview_TA__CreatePlayerAvatarBorderPreview_7F9F3F684670520A10D51E9E515FE3AB");
 		}
 
 		return uClassPointer;
@@ -52043,7 +52043,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERAVATARBORDERPREVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerAvatarBorderPreview_TA");
 		}
 
 		return uClassPointer;
@@ -52070,7 +52070,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PLAYERAVATARPREVIEW_TA__CREATEPLAYERAVATARPREVIEW_EE31247C4841DC3D5A9042A497595FA4));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PlayerAvatarPreview_TA__CreatePlayerAvatarPreview_EE31247C4841DC3D5A9042A497595FA4");
 		}
 
 		return uClassPointer;
@@ -52092,7 +52092,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERAVATARPREVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerAvatarPreview_TA");
 		}
 
 		return uClassPointer;
@@ -52119,7 +52119,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PLAYERBANNERS_TA__CREATEPLAYERBANNER_24C52EAB4F692F4D858EEDAF72D8ADED));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PlayerBanners_TA__CreatePlayerBanner_24C52EAB4F692F4D858EEDAF72D8ADED");
 		}
 
 		return uClassPointer;
@@ -52142,7 +52142,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERBANNERS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerBanners_TA");
 		}
 
 		return uClassPointer;
@@ -52176,7 +52176,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_PLAYERBANNERS_TA__CREATEPLAYERBANNERPREVIEW_EE40AE004B59B1F5885793BF5BCC7993));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_PlayerBanners_TA__CreatePlayerBannerPreview_EE40AE004B59B1F5885793BF5BCC7993");
 		}
 
 		return uClassPointer;
@@ -52198,7 +52198,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_REPLAYMANAGER_TA__DOWNLOADREPLAY_E535830D4FB9B1E45470349F3981846F));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ReplayManager_TA__DownloadReplay_E535830D4FB9B1E45470349F3981846F");
 		}
 
 		return uClassPointer;
@@ -52219,7 +52219,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SHOPCATALOGUE_TA__GETONLINEPRODUCTSBYCOSTID_6962468642E19BC6AF15378FA7D8D855));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ShopCatalogue_TA__GetOnlineProductsByCostID_6962468642E19BC6AF15378FA7D8D855");
 		}
 
 		return uClassPointer;
@@ -52264,7 +52264,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SHOPCATALOGUE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ShopCatalogue_TA");
 		}
 
 		return uClassPointer;
@@ -52310,7 +52310,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SHOPCATALOGUE_TA__SYNCITEMIMAGES_3F479D204CFDEE374F3FE693289DFC1B));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_ShopCatalogue_TA__SyncItemImages_3F479D204CFDEE374F3FE693289DFC1B");
 		}
 
 		return uClassPointer;
@@ -52332,7 +52332,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SHOPS_TA__GETCRATESHOP_92879EAD447E103519E702A4DD9A3B21));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Shops_TA__GetCrateShop_92879EAD447E103519E702A4DD9A3B21");
 		}
 
 		return uClassPointer;
@@ -52364,7 +52364,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SHOPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Shops_TA");
 		}
 
 		return uClassPointer;
@@ -52425,7 +52425,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SHOPS_TA__HANDLEGETALLSHOPS_D3BB146B40A50741D122F5AD9F41F597));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Shops_TA__HandleGetAllShops_D3BB146B40A50741D122F5AD9F41F597");
 		}
 
 		return uClassPointer;
@@ -52447,7 +52447,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SHOPS_TA__ONCHECKFORPURCHASEWARNING_522213874B09A4E89138D2A8A5A62834));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Shops_TA__OnCheckForPurchaseWarning_522213874B09A4E89138D2A8A5A62834");
 		}
 
 		return uClassPointer;
@@ -52469,7 +52469,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SPECIALEVENTS_TA__HANDLEPURCHASEREWARDFROMSTORESUCCESS_CA3841B648CE0BD3A57A9AA8DDCD52C0));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_SpecialEvents_TA__HandlePurchaseRewardFromStoreSuccess_CA3841B648CE0BD3A57A9AA8DDCD52C0");
 		}
 
 		return uClassPointer;
@@ -52493,7 +52493,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SPECIALEVENTSTORE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SpecialEventStore_TA");
 		}
 
 		return uClassPointer;
@@ -52520,7 +52520,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_SPECIALEVENTBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_SpecialEventBase_TA");
 		}
 
 		return uClassPointer;
@@ -52547,7 +52547,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PURCHASESPECIALEVENTREWARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_PurchaseSpecialEventReward_TA");
 		}
 
 		return uClassPointer;
@@ -52576,7 +52576,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SPECIALEVENTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SpecialEvents_TA");
 		}
 
 		return uClassPointer;
@@ -52619,7 +52619,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_SPECIALEVENTS_TA__PURCHASEREWARDFROMSTORE_D9DED5A24B4E161556D160BFCE1B6734));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_SpecialEvents_TA__PurchaseRewardFromStore_D9DED5A24B4E161556D160BFCE1B6734");
 		}
 
 		return uClassPointer;
@@ -52643,7 +52643,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURBRACKET_TA__INITTEAMS_C284183446EF082BFB5112A61376CF99));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourBracket_TA__InitTeams_C284183446EF082BFB5112A61376CF99");
 		}
 
 		return uClassPointer;
@@ -52668,7 +52668,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURBRACKETTEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourBracketTeam_TA");
 		}
 
 		return uClassPointer;
@@ -52696,7 +52696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURBRACKET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourBracket_TA");
 		}
 
 		return uClassPointer;
@@ -52734,7 +52734,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURBRACKETMATCHDETAILS_TA__HANDLEGETMATCHDETAILS_4D5306C04CA3F137ACB8A2A71F269FA4));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourBracketMatchDetails_TA__HandleGetMatchDetails_4D5306C04CA3F137ACB8A2A71F269FA4");
 		}
 
 		return uClassPointer;
@@ -52758,7 +52758,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURBRACKETMATCHTEAMDETAILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourBracketMatchTeamDetails_TA");
 		}
 
 		return uClassPointer;
@@ -52787,7 +52787,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURBRACKETMATCHDETAILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourBracketMatchDetails_TA");
 		}
 
 		return uClassPointer;
@@ -52816,7 +52816,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURCHECKIN_TA__HANDLECHECKINERROR_BB7AE67A41DBD1944925DF89CD1A7605));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourCheckIn_TA__HandleCheckInError_BB7AE67A41DBD1944925DF89CD1A7605");
 		}
 
 		return uClassPointer;
@@ -52843,7 +52843,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURCHECKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourCheckIn_TA");
 		}
 
 		return uClassPointer;
@@ -52880,7 +52880,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURCHECKIN_TA__PERFORMCHECKIN_257671B14B7F854A3E8CAC90201F14E0));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourCheckIn_TA__PerformCheckIn_257671B14B7F854A3E8CAC90201F14E0");
 		}
 
 		return uClassPointer;
@@ -52904,7 +52904,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURCHECKIN_TA__REGISTER_2A39455D4CB30B76FF0C9D8C75ED611E));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourCheckIn_TA__Register_2A39455D4CB30B76FF0C9D8C75ED611E");
 		}
 
 		return uClassPointer;
@@ -52928,7 +52928,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURCREATE_TA__CREATETOURNAMENT_3F6CCBF14AB25D5BE6A5949ECB671105));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourCreate_TA__CreateTournament_3F6CCBF14AB25D5BE6A5949ECB671105");
 		}
 
 		return uClassPointer;
@@ -52966,7 +52966,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURCREATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourCreate_TA");
 		}
 
 		return uClassPointer;
@@ -53014,7 +53014,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURCREATE_TA__GETDEFAULTDISABLEDMAPS_7E6F98FD4A68F3BBFEBA52A3EDB0AA23));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourCreate_TA__GetDefaultDisabledMaps_7E6F98FD4A68F3BBFEBA52A3EDB0AA23");
 		}
 
 		return uClassPointer;
@@ -53036,7 +53036,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURDEPENDENTMATCH_TA__UPDATEDEPENDENTMATCH_E674E52048CAE24442AD0B94D3F5709D));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourDependentMatch_TA__UpdateDependentMatch_E674E52048CAE24442AD0B94D3F5709D");
 		}
 
 		return uClassPointer;
@@ -53071,7 +53071,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURBRACKETMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourBracketMatch_TA");
 		}
 
 		return uClassPointer;
@@ -53094,7 +53094,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURDEPENDENTMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourDependentMatch_TA");
 		}
 
 		return uClassPointer;
@@ -53118,7 +53118,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOUREVENT_TA__HANDLEBRACKETRETRIEVED_B415DC4241740BFAB2484AB80CA67FCC));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourEvent_TA__HandleBracketRetrieved_B415DC4241740BFAB2484AB80CA67FCC");
 		}
 
 		return uClassPointer;
@@ -53155,7 +53155,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOUREVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourEvent_TA");
 		}
 
 		return uClassPointer;
@@ -53199,7 +53199,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURPLATFORMS_TA__INITPLATFORMGROUPS_75CAFD8D41BC781C1156E08F790ED8CE));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourPlatforms_TA__InitPlatformGroups_75CAFD8D41BC781C1156E08F790ED8CE");
 		}
 
 		return uClassPointer;
@@ -53223,7 +53223,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURPLATFORMS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourPlatforms_TA");
 		}
 
 		return uClassPointer;
@@ -53257,7 +53257,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURREGISTRATION_TA__REGISTER_FBF8CB8542FC01123590A19FFEE8C358));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourRegistration_TA__Register_FBF8CB8542FC01123590A19FFEE8C358");
 		}
 
 		return uClassPointer;
@@ -53279,7 +53279,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURREGISTRATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourRegistration_TA");
 		}
 
 		return uClassPointer;
@@ -53304,7 +53304,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_TOURSEARCH_TA__FINDPRIVATE_51410CC94FE8CC3723E08BB015F53313));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_TourSearch_TA__FindPrivate_51410CC94FE8CC3723E08BB015F53313");
 		}
 
 		return uClassPointer;
@@ -53339,7 +53339,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURSEARCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourSearch_TA");
 		}
 
 		return uClassPointer;
@@ -53382,7 +53382,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURFINDPRIVATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourFindPrivate_TA");
 		}
 
 		return uClassPointer;
@@ -53405,7 +53405,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___GFXDATA_WALLET_TA__GETCURRENCYROW_22A181B548E68E77173C86827AC5B73A));
+			uClassPointer = UObject::FindClass("Class TAGame.__GFxData_Wallet_TA__GetCurrencyRow_22A181B548E68E77173C86827AC5B73A");
 		}
 
 		return uClassPointer;
@@ -53432,7 +53432,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_WALLETCURRENCY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_WalletCurrency_TA");
 		}
 
 		return uClassPointer;
@@ -53456,7 +53456,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_WALLET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Wallet_TA");
 		}
 
 		return uClassPointer;
@@ -53488,7 +53488,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___MUTATOR_ROBIN_TA__CONSTRUCT_3F31956646227B82517B61BD89877A2E));
+			uClassPointer = UObject::FindClass("Class TAGame.__Mutator_Robin_TA__Construct_3F31956646227B82517B61BD89877A2E");
 		}
 
 		return uClassPointer;
@@ -53513,7 +53513,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_ROBIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Robin_TA");
 		}
 
 		return uClassPointer;
@@ -53537,7 +53537,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___PRODUCTOVERRIDE_PARTICLESYSTEMCOLORPARAMETER_TA__APPLYTOOBJECT_5495476D429C97BFCB83D69CF327C80B));
+			uClassPointer = UObject::FindClass("Class TAGame.__ProductOverride_ParticleSystemColorParameter_TA__ApplyToObject_5495476D429C97BFCB83D69CF327C80B");
 		}
 
 		return uClassPointer;
@@ -53561,7 +53561,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_PARTICLESYSTEMCOLORPARAMETER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_ParticleSystemColorParameter_TA");
 		}
 
 		return uClassPointer;
@@ -53585,7 +53585,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPADSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopAdsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -53608,7 +53608,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPADSCONFIG_TA__APPLY_9092BF5C4571BEB058BF379403625EE6));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopAdsConfig_TA__Apply_9092BF5C4571BEB058BF379403625EE6");
 		}
 
 		return uClassPointer;
@@ -53633,7 +53633,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_LOCAL_TA__GETALLSHOPS_9D0D6536449BFAC4EB68428FAF0D0EAD));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_Local_TA__GetAllShops_9D0D6536449BFAC4EB68428FAF0D0EAD");
 		}
 
 		return uClassPointer;
@@ -53655,7 +53655,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPSSERVICE_LOCAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopsService_Local_TA");
 		}
 
 		return uClassPointer;
@@ -53682,7 +53682,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_LOCAL_TA__GETCRATESHOP_A75029CA4C5CA0F8632D8DA8A6EFF97B));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_Local_TA__GetCrateShop_A75029CA4C5CA0F8632D8DA8A6EFF97B");
 		}
 
 		return uClassPointer;
@@ -53705,7 +53705,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_LOCAL_TA__GETSHOPCATALOGUE_9EA8151E4AA73AFCCA5855AA49BAD948));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_Local_TA__GetShopCatalogue_9EA8151E4AA73AFCCA5855AA49BAD948");
 		}
 
 		return uClassPointer;
@@ -53727,7 +53727,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_LOCAL_TA__PURCHASE_D600049844B3CD6AB74F41ABBB35D7B5));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_Local_TA__Purchase_D600049844B3CD6AB74F41ABBB35D7B5");
 		}
 
 		return uClassPointer;
@@ -53750,7 +53750,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_LOCAL_TA__QUEUETASK_704301BA4997EA65B972BFA1051C18BD));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_Local_TA__QueueTask_704301BA4997EA65B972BFA1051C18BD");
 		}
 
 		return uClassPointer;
@@ -53773,7 +53773,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_PSYNET_TA__GETALLSHOPS_348414484D9BB6617B7AAFBEA882511F));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_PsyNet_TA__GetAllShops_348414484D9BB6617B7AAFBEA882511F");
 		}
 
 		return uClassPointer;
@@ -53796,7 +53796,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETALLSHOPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetAllShops_TA");
 		}
 
 		return uClassPointer;
@@ -53816,7 +53816,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPSSERVICE_PSYNET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopsService_PsyNet_TA");
 		}
 
 		return uClassPointer;
@@ -53842,7 +53842,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_PSYNET_TA__GETCRATESHOP_CF60335B44694BCCC10D0E94A13CD69A));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_PsyNet_TA__GetCrateShop_CF60335B44694BCCC10D0E94A13CD69A");
 		}
 
 		return uClassPointer;
@@ -53867,7 +53867,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETCRATESHOP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetCrateShop_TA");
 		}
 
 		return uClassPointer;
@@ -53890,7 +53890,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_PSYNET_TA__GETSHOPCATALOGUE_581018AC4A01615AF42CA8ACEA5A906D));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_PsyNet_TA__GetShopCatalogue_581018AC4A01615AF42CA8ACEA5A906D");
 		}
 
 		return uClassPointer;
@@ -53914,7 +53914,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETSHOPCATALOGUE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetShopCatalogue_TA");
 		}
 
 		return uClassPointer;
@@ -53937,7 +53937,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___SHOPSSERVICE_PSYNET_TA__PURCHASE_C46BCABC4AC874348DC204903A5AB023));
+			uClassPointer = UObject::FindClass("Class TAGame.__ShopsService_PsyNet_TA__Purchase_C46BCABC4AC874348DC204903A5AB023");
 		}
 
 		return uClassPointer;
@@ -53966,7 +53966,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PURCHASEITEMFROMSHOP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_PurchaseItemFromShop_TA");
 		}
 
 		return uClassPointer;
@@ -53991,7 +53991,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURBRACKETSIMULATOR_TA__ROUNDSTEP_1D572352467527D6E8BC10BCE3DA2D6B));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourBracketSimulator_TA__RoundStep_1D572352467527D6E8BC10BCE3DA2D6B");
 		}
 
 		return uClassPointer;
@@ -54012,7 +54012,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURBRACKETSIMULATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourBracketSimulator_TA");
 		}
 
 		return uClassPointer;
@@ -54049,7 +54049,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSERVICE_PSYNET_TA__CHECKIN_5B09258340352A8A7EE6E5B240D0EC1F));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourService_PsyNet_TA__CheckIn_5B09258340352A8A7EE6E5B240D0EC1F");
 		}
 
 		return uClassPointer;
@@ -54078,7 +54078,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURCHECKIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourCheckIn_TA");
 		}
 
 		return uClassPointer;
@@ -54105,7 +54105,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSERVICE_PSYNET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourService_PsyNet_TA");
 		}
 
 		return uClassPointer;
@@ -54135,7 +54135,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSERVICE_PSYNET_TA__CREATETOURNAMENT_2F68CADC493CD7C140570DBCE6C46873));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourService_PsyNet_TA__CreateTournament_2F68CADC493CD7C140570DBCE6C46873");
 		}
 
 		return uClassPointer;
@@ -54159,7 +54159,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURCREATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourCreate_TA");
 		}
 
 		return uClassPointer;
@@ -54182,7 +54182,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSERVICE_PSYNET_TA__GETBRACKET_4A6A510C4FBEAD1925FB4CA56A4FE34B));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourService_PsyNet_TA__GetBracket_4A6A510C4FBEAD1925FB4CA56A4FE34B");
 		}
 
 		return uClassPointer;
@@ -54206,7 +54206,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETBRACKET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetBracket_TA");
 		}
 
 		return uClassPointer;
@@ -54229,7 +54229,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSERVICE_PSYNET_TA__GETMATCH_9F6DCB2E4625ACB98BC7DD80A5E23AE0));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourService_PsyNet_TA__GetMatch_9F6DCB2E4625ACB98BC7DD80A5E23AE0");
 		}
 
 		return uClassPointer;
@@ -54253,7 +54253,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetMatch_TA");
 		}
 
 		return uClassPointer;
@@ -54276,7 +54276,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSERVICE_PSYNET_TA__GETMATCHDETAILS_65D5D8624C593FA756B84EB3D2FABFDF));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourService_PsyNet_TA__GetMatchDetails_65D5D8624C593FA756B84EB3D2FABFDF");
 		}
 
 		return uClassPointer;
@@ -54300,7 +54300,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETMATCHDETAILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetMatchDetails_TA");
 		}
 
 		return uClassPointer;
@@ -54323,7 +54323,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSERVICE_PSYNET_TA__REGISTERTOURNAMENT_546A6B394590FEE626DE0EAAA5CC744D));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourService_PsyNet_TA__RegisterTournament_546A6B394590FEE626DE0EAAA5CC744D");
 		}
 
 		return uClassPointer;
@@ -54348,7 +54348,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURREGISTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourRegister_TA");
 		}
 
 		return uClassPointer;
@@ -54372,7 +54372,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TOURSERVICE_PSYNET_TA__STARTMATCHMAKING_F27792F44555AB84A823629ACFF949BC));
+			uClassPointer = UObject::FindClass("Class TAGame.__TourService_PsyNet_TA__StartMatchmaking_F27792F44555AB84A823629ACFF949BC");
 		}
 
 		return uClassPointer;
@@ -54395,7 +54395,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME___TWOFACTORAUTHENTICATION_TA__REAUTHENTICATE_4DB0215F4281370D034173A7BE3BB74E));
+			uClassPointer = UObject::FindClass("Class TAGame.__TwoFactorAuthentication_TA__Reauthenticate_4DB0215F4281370D034173A7BE3BB74E");
 		}
 
 		return uClassPointer;
@@ -54419,7 +54419,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_UPDATETWOFACTORSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_UpdateTwoFactorStatus_TA");
 		}
 
 		return uClassPointer;
@@ -54440,7 +54440,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME__USERBUGREPORTTYPES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame._UserBugReportTypes_TA");
 		}
 
 		return uClassPointer;
@@ -54462,7 +54462,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Achievement_TA");
 		}
 
 		return uClassPointer;
@@ -54483,7 +54483,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENT_AG_FARFARAWAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Achievement_AG_FarFarAway_TA");
 		}
 
 		return uClassPointer;
@@ -54511,7 +54511,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_UPDATEDISTANCEDRIVENTIMER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UpdateDistanceDrivenTimer_TA");
 		}
 
 		return uClassPointer;
@@ -54531,7 +54531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementSystem_TA");
 		}
 
 		return uClassPointer;
@@ -54558,7 +54558,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENT_AG_STOCKED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Achievement_AG_Stocked_TA");
 		}
 
 		return uClassPointer;
@@ -54581,7 +54581,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENT_AG_SUPERVICTORIOUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Achievement_AG_SuperVictorious_TA");
 		}
 
 		return uClassPointer;
@@ -54603,7 +54603,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTSGAMEEVENTWON_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementsGameEventWon_TA");
 		}
 
 		return uClassPointer;
@@ -54623,7 +54623,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENT_AG_THESTREAK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Achievement_AG_TheStreak_TA");
 		}
 
 		return uClassPointer;
@@ -54646,7 +54646,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTSGAMEEVENTLOST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementsGameEventLost_TA");
 		}
 
 		return uClassPointer;
@@ -54666,7 +54666,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENT_AG_VIRTUOSO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Achievement_AG_Virtuoso_TA");
 		}
 
 		return uClassPointer;
@@ -54689,7 +54689,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENT_AG_WINNER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Achievement_AG_Winner_TA");
 		}
 
 		return uClassPointer;
@@ -54712,7 +54712,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTCLASSCOLLECTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementClassCollection_TA");
 		}
 
 		return uClassPointer;
@@ -54732,7 +54732,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACTIVEGAMESTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ActiveGameState_TA");
 		}
 
 		return uClassPointer;
@@ -54754,7 +54754,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AICONTROLLER_BREAKOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AIController_Breakout_TA");
 		}
 
 		return uClassPointer;
@@ -54790,7 +54790,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_AIMCONTROL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AimControl_TA");
 		}
 
 		return uClassPointer;
@@ -54812,7 +54812,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ANIMNOTIFY_PLAYAKSOUND_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AnimNotify_PlayAKSound_TA");
 		}
 
 		return uClassPointer;
@@ -54835,7 +54835,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ANIMNOTIFY_TRIGGERTURNTABLEEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AnimNotify_TriggerTurntableEvent_TA");
 		}
 
 		return uClassPointer;
@@ -54857,7 +54857,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_APPLYVELOCITYHITHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ApplyVelocityHitHandler_TA");
 		}
 
 		return uClassPointer;
@@ -54882,7 +54882,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BLOGTILECONFIG_X));
+			uClassPointer = UObject::FindClass("Class TAGame.BlogTileConfig_X");
 		}
 
 		return uClassPointer;
@@ -54904,7 +54904,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BLUEPRINTERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BlueprintErrors_TA");
 		}
 
 		return uClassPointer;
@@ -54924,7 +54924,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BREAKOUTFLOOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.BreakoutFloor_TA");
 		}
 
 		return uClassPointer;
@@ -54947,7 +54947,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_AIPLAYERINDEX));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_AIPlayerIndex");
 		}
 
 		return uClassPointer;
@@ -54972,7 +54972,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_GAMEINFOTYPE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_GameInfoType");
 		}
 
 		return uClassPointer;
@@ -54997,7 +54997,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_GAMESCORE));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_GameScore");
 		}
 
 		return uClassPointer;
@@ -55023,7 +55023,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_TARGETNUMBERSATISFYING));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_TargetNumberSatisfying");
 		}
 
 		return uClassPointer;
@@ -55047,7 +55047,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERA_EDIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Camera_Edit_TA");
 		}
 
 		return uClassPointer;
@@ -55071,7 +55071,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_EDIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Edit_TA");
 		}
 
 		return uClassPointer;
@@ -55098,7 +55098,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERA_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Camera_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -55121,7 +55121,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -55149,7 +55149,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_BALLCAMINVERTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_BallCamInverted_TA");
 		}
 
 		return uClassPointer;
@@ -55179,7 +55179,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_CARINVERTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_CarInverted_TA");
 		}
 
 		return uClassPointer;
@@ -55206,7 +55206,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_BASKETBALLLIVEREPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_BasketballLiveReplay_TA");
 		}
 
 		return uClassPointer;
@@ -55228,7 +55228,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_BREAKOUTLIVEREPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_BreakoutLiveReplay_TA");
 		}
 
 		return uClassPointer;
@@ -55256,7 +55256,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_CAMERATRACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_CameraTrack_TA");
 		}
 
 		return uClassPointer;
@@ -55290,7 +55290,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_COUNTDOWN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Countdown_TA");
 		}
 
 		return uClassPointer;
@@ -55325,7 +55325,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_CUSTOMFOCUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_CustomFocus_TA");
 		}
 
 		return uClassPointer;
@@ -55351,7 +55351,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CUSTOMFOCUSTARGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CustomFocusTarget_TA");
 		}
 
 		return uClassPointer;
@@ -55373,7 +55373,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORBALLCAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorBallCam_TA");
 		}
 
 		return uClassPointer;
@@ -55398,7 +55398,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORCOUNTDOWNROTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorCountdownRotate_TA");
 		}
 
 		return uClassPointer;
@@ -55423,7 +55423,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORCOUNTDOWNTAILPASS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorCountdownTailPass_TA");
 		}
 
 		return uClassPointer;
@@ -55447,7 +55447,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORGOALSCORER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorGoalScorer_TA");
 		}
 
 		return uClassPointer;
@@ -55479,7 +55479,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORKICKOFF_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorKickoff_TA");
 		}
 
 		return uClassPointer;
@@ -55512,7 +55512,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_DIRECTORMOVING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_DirectorMoving_TA");
 		}
 
 		return uClassPointer;
@@ -55541,7 +55541,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_INTROMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_IntroMenu_TA");
 		}
 
 		return uClassPointer;
@@ -55574,7 +55574,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKELETALMESHACTORMAT_INTROCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkeletalMeshActorMAT_IntroCar_TA");
 		}
 
 		return uClassPointer;
@@ -55600,7 +55600,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_LOBBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_Lobby_TA");
 		}
 
 		return uClassPointer;
@@ -55630,7 +55630,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_LOBBYFOCUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_LobbyFocus_TA");
 		}
 
 		return uClassPointer;
@@ -55660,7 +55660,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_MENUCAMACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_MenuCamActor_TA");
 		}
 
 		return uClassPointer;
@@ -55692,7 +55692,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_PODIUMSPOTLIGHT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_PodiumSpotlight_TA");
 		}
 
 		return uClassPointer;
@@ -55720,7 +55720,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_PREPODIUMSPOTLIGHT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_PrePodiumSpotlight_TA");
 		}
 
 		return uClassPointer;
@@ -55767,7 +55767,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATE_STADIUMSIDE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraState_StadiumSide_TA");
 		}
 
 		return uClassPointer;
@@ -55793,7 +55793,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATESELECTOR_PRIORITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraStateSelector_Priority_TA");
 		}
 
 		return uClassPointer;
@@ -55818,7 +55818,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATESELECTOR_SEQUENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraStateSelector_Sequence_TA");
 		}
 
 		return uClassPointer;
@@ -55842,7 +55842,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAMERASTATESELECTOR_RANDOMSEQUENCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CameraStateSelector_RandomSequence_TA");
 		}
 
 		return uClassPointer;
@@ -55866,7 +55866,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CAR_FREEPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Car_Freeplay_TA");
 		}
 
 		return uClassPointer;
@@ -55899,7 +55899,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARJOINTSPINNER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarJointSpinner_TA");
 		}
 
 		return uClassPointer;
@@ -55921,7 +55921,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEFILTER_DEFAULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeFilter_Default_TA");
 		}
 
 		return uClassPointer;
@@ -55942,7 +55942,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHALLENGEFILTER_PROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ChallengeFilter_Progress_TA");
 		}
 
 		return uClassPointer;
@@ -55963,7 +55963,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHEATSTAYASPARTY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CheatStayAsParty_TA");
 		}
 
 		return uClassPointer;
@@ -55991,7 +55991,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CHECKOUTERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CheckoutErrors_TA");
 		}
 
 		return uClassPointer;
@@ -56011,7 +56011,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLUBINVITENOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ClubInviteNotification_TA");
 		}
 
 		return uClassPointer;
@@ -56035,7 +56035,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CLUBSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ClubsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -56056,7 +56056,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_COLLISIONTESTTRACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CollisionTestTrack_TA");
 		}
 
 		return uClassPointer;
@@ -56077,7 +56077,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_DEMOEXPLOSIONHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.DemoExplosionHandler_TA");
 		}
 
 		return uClassPointer;
@@ -56098,7 +56098,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENDROUNDCOMPONENT_TRAININGEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EndRoundComponent_TrainingEditor_TA");
 		}
 
 		return uClassPointer;
@@ -56123,7 +56123,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EPICFRIENDSCONVERTERCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EpicFriendsConverterConfig_TA");
 		}
 
 		return uClassPointer;
@@ -56151,7 +56151,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_EVENTSPAGECONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EventsPageConfig_TA");
 		}
 
 		return uClassPointer;
@@ -56176,7 +56176,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FREETOPLAYCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FreeToPlayConfig_TA");
 		}
 
 		return uClassPointer;
@@ -56196,7 +56196,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_FRIENDREQUESTNOTIFICATION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_FriendRequestNotification_TA");
 		}
 
 		return uClassPointer;
@@ -56224,7 +56224,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_TRAININGEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_TrainingEditor_TA");
 		}
 
 		return uClassPointer;
@@ -56255,7 +56255,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXTRAIT_PREVIEWPARTICLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXTrait_PreviewParticle_TA");
 		}
 
 		return uClassPointer;
@@ -56285,7 +56285,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_FOOTBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_Football_TA");
 		}
 
 		return uClassPointer;
@@ -56318,7 +56318,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_FTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_FTE_TA");
 		}
 
 		return uClassPointer;
@@ -56347,7 +56347,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEEVENT_GODBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameEvent_GodBall_TA");
 		}
 
 		return uClassPointer;
@@ -56380,7 +56380,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_COLLISIONTEST_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_CollisionTest_TA");
 		}
 
 		return uClassPointer;
@@ -56413,7 +56413,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -56439,7 +56439,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_TRAININGEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_TrainingEditor_TA");
 		}
 
 		return uClassPointer;
@@ -56463,7 +56463,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ADHOC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_AdHoc_TA");
 		}
 
 		return uClassPointer;
@@ -56492,7 +56492,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_AUTHENTICATEDNAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_AuthenticatedName_TA");
 		}
 
 		return uClassPointer;
@@ -56523,7 +56523,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_AUTHENTICATEDNAMEAVAILABLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_AuthenticatedNameAvailable_TA");
 		}
 
 		return uClassPointer;
@@ -56565,7 +56565,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_AUTOTOUR_COMPLETEDRESULTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_AutoTour_CompletedResults_TA");
 		}
 
 		return uClassPointer;
@@ -56609,7 +56609,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_AUTOTOUR_GETCOMPLETEDRESULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_AutoTour_GetCompletedResult_TA");
 		}
 
 		return uClassPointer;
@@ -56630,7 +56630,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_AUTOTOURCOMPLETEDRESULTRECEIVED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_AutoTourCompletedResultReceived_TA");
 		}
 
 		return uClassPointer;
@@ -56665,7 +56665,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_AUTOTOUR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_AutoTour_TA");
 		}
 
 		return uClassPointer;
@@ -56703,7 +56703,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_CURRENCYMESSAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_CurrencyMessage_TA");
 		}
 
 		return uClassPointer;
@@ -56725,7 +56725,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_AUTOTOUR_WEEK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_AutoTour_Week_TA");
 		}
 
 		return uClassPointer;
@@ -56749,7 +56749,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_AUTOTOURNOTFOUND_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_AutoTourNotFound_TA");
 		}
 
 		return uClassPointer;
@@ -56770,7 +56770,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_AUTOTOURRECEIVEBANNEDPARTYMEMBERS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_AutoTourReceiveBannedPartyMembers_TA");
 		}
 
 		return uClassPointer;
@@ -56792,7 +56792,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_AUTOTOURRECEIVEBAN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_AutoTourReceiveBan_TA");
 		}
 
 		return uClassPointer;
@@ -56818,7 +56818,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CARCOLORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_CarColors_TA");
 		}
 
 		return uClassPointer;
@@ -56840,7 +56840,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEOBJECT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeObject_TA");
 		}
 
 		return uClassPointer;
@@ -56867,7 +56867,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeBase_TA");
 		}
 
 		return uClassPointer;
@@ -56899,7 +56899,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEREQUIREMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeRequirement_TA");
 		}
 
 		return uClassPointer;
@@ -56919,7 +56919,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGECURRENCY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeCurrency_TA");
 		}
 
 		return uClassPointer;
@@ -56941,7 +56941,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_REQUESTREWARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_RequestReward_TA");
 		}
 
 		return uClassPointer;
@@ -56963,7 +56963,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEREWARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeReward_TA");
 		}
 
 		return uClassPointer;
@@ -56983,7 +56983,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Challenge_TA");
 		}
 
 		return uClassPointer;
@@ -57003,7 +57003,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEBUCKET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeBucket_TA");
 		}
 
 		return uClassPointer;
@@ -57032,7 +57032,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEFOLDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeFolder_TA");
 		}
 
 		return uClassPointer;
@@ -57077,7 +57077,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeManager_TA");
 		}
 
 		return uClassPointer;
@@ -57107,7 +57107,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGEPAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengePage_TA");
 		}
 
 		return uClassPointer;
@@ -57140,7 +57140,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHALLENGETAB_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChallengeTab_TA");
 		}
 
 		return uClassPointer;
@@ -57178,7 +57178,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CHINAPAYMENTBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ChinaPaymentBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -57202,7 +57202,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLIENTPERFORMANCESTATS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ClientPerformanceStats_TA");
 		}
 
 		return uClassPointer;
@@ -57223,7 +57223,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_CLUBSINVITE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_ClubsInvite_TA");
 		}
 
 		return uClassPointer;
@@ -57246,7 +57246,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLUBSERVERBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ClubServerBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -57272,7 +57272,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CONNECTIONSTATS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ConnectionStats_TA");
 		}
 
 		return uClassPointer;
@@ -57301,7 +57301,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CRUMBTRAILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_CrumbTrails_TA");
 		}
 
 		return uClassPointer;
@@ -57336,7 +57336,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CUSTOMTEAMS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_CustomTeams_TA");
 		}
 
 		return uClassPointer;
@@ -57378,7 +57378,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_EVENTSPAGEBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_EventsPageBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -57403,7 +57403,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_FACEITRESERVATIONFOUND_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_FaceItReservationFound_TA");
 		}
 
 		return uClassPointer;
@@ -57425,7 +57425,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PSYNETSERVICE_FACEITSEARCHSTARTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PsyNetService_FaceItSearchStarted_TA");
 		}
 
 		return uClassPointer;
@@ -57448,7 +57448,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_FREETOPLAYREWARDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_FreeToPlayRewards_TA");
 		}
 
 		return uClassPointer;
@@ -57478,7 +57478,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PERSONAGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PersonaGroup_TA");
 		}
 
 		return uClassPointer;
@@ -57501,7 +57501,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_INTROCARSELECT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_IntroCarSelect_TA");
 		}
 
 		return uClassPointer;
@@ -57531,7 +57531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_CARSELECTSTART_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_CarSelectStart_TA");
 		}
 
 		return uClassPointer;
@@ -57551,7 +57551,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_KISMETOVERLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_KismetOverlay_TA");
 		}
 
 		return uClassPointer;
@@ -57576,7 +57576,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LANBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LanBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -57614,7 +57614,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LANSERVER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LanServer_TA");
 		}
 
 		return uClassPointer;
@@ -57648,7 +57648,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LANMATCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LanMatch_TA");
 		}
 
 		return uClassPointer;
@@ -57680,7 +57680,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LEGACYSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LegacyStatus_TA");
 		}
 
 		return uClassPointer;
@@ -57714,7 +57714,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETLEGACYSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetLegacyStatus_TA");
 		}
 
 		return uClassPointer;
@@ -57744,7 +57744,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_LOADOUTSETS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_LoadoutSets_TA");
 		}
 
 		return uClassPointer;
@@ -57798,7 +57798,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOADOUTSEQUENCER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LoadoutSequencer_TA");
 		}
 
 		return uClassPointer;
@@ -57835,7 +57835,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MAPPREFS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MapPrefs_TA");
 		}
 
 		return uClassPointer;
@@ -57876,7 +57876,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MAPSELECTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MapSelection_TA");
 		}
 
 		return uClassPointer;
@@ -57908,7 +57908,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MATCHADMIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MatchAdmin_TA");
 		}
 
 		return uClassPointer;
@@ -57938,7 +57938,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MICROEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MicroEvent_TA");
 		}
 
 		return uClassPointer;
@@ -57965,7 +57965,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_MICROTRANSACTIONS_GETCATALOG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_MicroTransactions_GetCatalog_TA");
 		}
 
 		return uClassPointer;
@@ -57991,7 +57991,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_MICROTRANSACTIONS_STARTPURCHASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_MicroTransactions_StartPurchase_TA");
 		}
 
 		return uClassPointer;
@@ -58014,7 +58014,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_MTXGARAGEBLUEPRINTPREVIEW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_MTXGarageBlueprintPreview_TA");
 		}
 
 		return uClassPointer;
@@ -58041,7 +58041,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_MICROTRANSACTIONS_FINALIZEPURCHASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_MicroTransactions_FinalizePurchase_TA");
 		}
 
 		return uClassPointer;
@@ -58068,7 +58068,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_MICROTRANSACTIONS_UNLOCKCONTAINER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_MicroTransactions_UnlockContainer_TA");
 		}
 
 		return uClassPointer;
@@ -58091,7 +58091,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_NOTIFICATION_ACHIEVEMENTPROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Notification_AchievementProgress_TA");
 		}
 
 		return uClassPointer;
@@ -58115,7 +58115,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NOTIFICATION_ACHIEVEMENTPROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Notification_AchievementProgress_TA");
 		}
 
 		return uClassPointer;
@@ -58140,7 +58140,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_NOTIFICATION_ACHIEVEMENTUNLOCKED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Notification_AchievementUnlocked_TA");
 		}
 
 		return uClassPointer;
@@ -58163,7 +58163,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NOTIFICATION_ACHIEVEMENTUNLOCKED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Notification_AchievementUnlocked_TA");
 		}
 
 		return uClassPointer;
@@ -58189,7 +58189,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLATFORMAUTH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlatformAuth_TA");
 		}
 
 		return uClassPointer;
@@ -58214,7 +58214,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PLATFORMAUTH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_PlatformAuth_TA");
 		}
 
 		return uClassPointer;
@@ -58237,7 +58237,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERREPORTCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerReportConfig_TA");
 		}
 
 		return uClassPointer;
@@ -58258,7 +58258,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PREMATCHLOBBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PreMatchLobby_TA");
 		}
 
 		return uClassPointer;
@@ -58286,7 +58286,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRODUCTLEVELUPGRADE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ProductLevelUpgrade_TA");
 		}
 
 		return uClassPointer;
@@ -58317,7 +58317,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTUPGRADELEVEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductUpgradeLevel_TA");
 		}
 
 		return uClassPointer;
@@ -58351,7 +58351,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PSYTAG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PsyTag_TA");
 		}
 
 		return uClassPointer;
@@ -58392,7 +58392,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_QUICKCHATBINDINGS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_QuickChatBindings_TA");
 		}
 
 		return uClassPointer;
@@ -58425,7 +58425,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REDEEMCODES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RedeemCodes_TA");
 		}
 
 		return uClassPointer;
@@ -58452,7 +58452,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_REDEEMCODE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_RedeemCode_TA");
 		}
 
 		return uClassPointer;
@@ -58476,7 +58476,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REWARDDROP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RewardDrop_TA");
 		}
 
 		return uClassPointer;
@@ -58505,7 +58505,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REWARDDROP_XP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RewardDrop_XP_TA");
 		}
 
 		return uClassPointer;
@@ -58546,7 +58546,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REWARDDROPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RewardDrops_TA");
 		}
 
 		return uClassPointer;
@@ -58597,7 +58597,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ROCKETPASS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RocketPass_TA");
 		}
 
 		return uClassPointer;
@@ -58641,7 +58641,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SCHEMATICTRADEIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SchematicTradeIn_TA");
 		}
 
 		return uClassPointer;
@@ -58679,7 +58679,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_SCHEMATICSTRADEIN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_SchematicsTradeIn_TA");
 		}
 
 		return uClassPointer;
@@ -58704,7 +58704,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SHOPADS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ShopAds_TA");
 		}
 
 		return uClassPointer;
@@ -58727,7 +58727,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPITEMEXPIRATIONHELPER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopItemExpirationHelper_TA");
 		}
 
 		return uClassPointer;
@@ -58759,7 +58759,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -58787,7 +58787,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPAUTOLOADHELPER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopAutoLoadHelper_TA");
 		}
 
 		return uClassPointer;
@@ -58827,7 +58827,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -58853,7 +58853,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETSPECIALEVENTCURRENCYREWARDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetSpecialEventCurrencyRewards_TA");
 		}
 
 		return uClassPointer;
@@ -58880,7 +58880,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_SUPPORTACREATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_SupportACreator_TA");
 		}
 
 		return uClassPointer;
@@ -58925,7 +58925,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_SUPPORTACREATOR_GET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_SupportACreator_Get_TA");
 		}
 
 		return uClassPointer;
@@ -58945,7 +58945,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_SUPPORTACREATOR_CLEAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_SupportACreator_Clear_TA");
 		}
 
 		return uClassPointer;
@@ -58969,7 +58969,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_SUPPORTACREATOR_SET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_SupportACreator_Set_TA");
 		}
 
 		return uClassPointer;
@@ -58991,7 +58991,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SUPPORTACREATORERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SupportACreatorErrors_TA");
 		}
 
 		return uClassPointer;
@@ -59016,7 +59016,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURBRACKETSYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourBracketSync_TA");
 		}
 
 		return uClassPointer;
@@ -59044,7 +59044,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURBRACKETLEADERBOARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourBracketLeaderboard_TA");
 		}
 
 		return uClassPointer;
@@ -59072,7 +59072,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURBRACKETGAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourBracketGame_TA");
 		}
 
 		return uClassPointer;
@@ -59094,7 +59094,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURCHECKINERROR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourCheckInError_TA");
 		}
 
 		return uClassPointer;
@@ -59117,7 +59117,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourConfig_TA");
 		}
 
 		return uClassPointer;
@@ -59138,7 +59138,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURDEPENDENTGAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourDependentGame_TA");
 		}
 
 		return uClassPointer;
@@ -59158,7 +59158,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURDEPENDENTTEAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourDependentTeam_TA");
 		}
 
 		return uClassPointer;
@@ -59189,7 +59189,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURDETAILS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourDetails_TA");
 		}
 
 		return uClassPointer;
@@ -59229,7 +59229,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURDETAILSSYNC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourDetailsSync_TA");
 		}
 
 		return uClassPointer;
@@ -59260,7 +59260,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETPUBLIC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetPublic_TA");
 		}
 
 		return uClassPointer;
@@ -59283,7 +59283,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURSEARCHRESULT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourSearchResult_TA");
 		}
 
 		return uClassPointer;
@@ -59309,7 +59309,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURSPECTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourSpectate_TA");
 		}
 
 		return uClassPointer;
@@ -59338,7 +59338,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TOURSTATUS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TourStatus_TA");
 		}
 
 		return uClassPointer;
@@ -59386,7 +59386,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TRAININGMODE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TrainingMode_TA");
 		}
 
 		return uClassPointer;
@@ -59445,7 +59445,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TRAININGEDITOR_DELETETRAININGDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TrainingEditor_DeleteTrainingData_TA");
 		}
 
 		return uClassPointer;
@@ -59468,7 +59468,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TRAININGEDITOR_GETTRAININGDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TrainingEditor_GetTrainingData_TA");
 		}
 
 		return uClassPointer;
@@ -59493,7 +59493,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TRAININGMODECONSTANTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TrainingModeConstants_TA");
 		}
 
 		return uClassPointer;
@@ -59531,7 +59531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TRAININGMODEBROWSER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TrainingModeBrowser_TA");
 		}
 
 		return uClassPointer;
@@ -59600,7 +59600,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TRAININGEDITOR_UPDATETRAININGDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TrainingEditor_UpdateTrainingData_TA");
 		}
 
 		return uClassPointer;
@@ -59623,7 +59623,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TRAININGEDITOR_ADDTRAININGDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TrainingEditor_AddTrainingData_TA");
 		}
 
 		return uClassPointer;
@@ -59646,7 +59646,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TRAININGEDITOR_LISTPLAYERTRAININGDATATIMESTAMP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TrainingEditor_ListPlayerTrainingDataTimestamp_TA");
 		}
 
 		return uClassPointer;
@@ -59669,7 +59669,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TRAININGEDITOR_BROWSETRAININGDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TrainingEditor_BrowseTrainingData_TA");
 		}
 
 		return uClassPointer;
@@ -59691,7 +59691,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TRAININGEDITOR_LISTPLAYERTRAININGDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TrainingEditor_ListPlayerTrainingData_TA");
 		}
 
 		return uClassPointer;
@@ -59724,7 +59724,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_TRAININGMODEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_TrainingModeEditor_TA");
 		}
 
 		return uClassPointer;
@@ -59770,7 +59770,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_UICONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_UIConfig_TA");
 		}
 
 		return uClassPointer;
@@ -59802,7 +59802,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_VIEWMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ViewMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -59831,7 +59831,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VIEWMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ViewMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -59856,7 +59856,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VIEWMETRICSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ViewMetricsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -59879,7 +59879,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_WORKSHOP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Workshop_TA");
 		}
 
 		return uClassPointer;
@@ -59906,7 +59906,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_WORLDSELECTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_WorldSelection_TA");
 		}
 
 		return uClassPointer;
@@ -59931,7 +59931,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXHUD_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxHUD_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -59958,7 +59958,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GOAL_HOOPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Goal_Hoops_TA");
 		}
 
 		return uClassPointer;
@@ -59993,7 +59993,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_HAUNTEDBALLTRAPTRIGGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.HauntedBallTrapTrigger_TA");
 		}
 
 		return uClassPointer;
@@ -60029,7 +60029,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_HUDACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.HUDActor_TA");
 		}
 
 		return uClassPointer;
@@ -60054,7 +60054,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEACTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleAction_TA");
 		}
 
 		return uClassPointer;
@@ -60074,7 +60074,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLESYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleSystem_TA");
 		}
 
 		return uClassPointer;
@@ -60101,7 +60101,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEPLAYER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdlePlayer_TA");
 		}
 
 		return uClassPointer;
@@ -60121,7 +60121,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEWARNING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleWarning_TA");
 		}
 
 		return uClassPointer;
@@ -60141,7 +60141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLETIMER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleTimer_TA");
 		}
 
 		return uClassPointer;
@@ -60161,7 +60161,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEBANSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleBanSystem_TA");
 		}
 
 		return uClassPointer;
@@ -60182,7 +60182,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_IDLEKICKSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.IdleKickSystem_TA");
 		}
 
 		return uClassPointer;
@@ -60225,7 +60225,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_INMAPSCOREBOARD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.InMapScoreboard_TA");
 		}
 
 		return uClassPointer;
@@ -60264,7 +60264,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ITEMPOOLCYCLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ItemPoolCycle_TA");
 		}
 
 		return uClassPointer;
@@ -60298,7 +60298,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ITEMPOOLSELECTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ItemPoolSelection_TA");
 		}
 
 		return uClassPointer;
@@ -60335,7 +60335,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ITEMPOOLWEIGHTMULTIPLIER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ItemPoolWeightMultiplier_TA");
 		}
 
 		return uClassPointer;
@@ -60362,7 +60362,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAXTIMEENDGAME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaxTimeEndGame_TA");
 		}
 
 		return uClassPointer;
@@ -60385,7 +60385,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAXTIMESYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaxTimeSystem_TA");
 		}
 
 		return uClassPointer;
@@ -60414,7 +60414,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAXTIMEWARNINGDATA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaxTimeWarningData_TA");
 		}
 
 		return uClassPointer;
@@ -60434,7 +60434,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAXTIMEWARNING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaxTimeWarning_TA");
 		}
 
 		return uClassPointer;
@@ -60457,7 +60457,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MENUSEQUENCE_PREMIUMGARAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MenuSequence_PremiumGarage_TA");
 		}
 
 		return uClassPointer;
@@ -60485,7 +60485,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MENUSEQUENCE_PREMIUMGARAGEREVEAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MenuSequence_PremiumGarageReveal_TA");
 		}
 
 		return uClassPointer;
@@ -60509,7 +60509,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_AUDIO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Audio_TA");
 		}
 
 		return uClassPointer;
@@ -60531,7 +60531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_BOTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Bots_TA");
 		}
 
 		return uClassPointer;
@@ -60555,7 +60555,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_GAMEEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_GameEvent_TA");
 		}
 
 		return uClassPointer;
@@ -60577,7 +60577,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_LOADOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_Loadout_TA");
 		}
 
 		return uClassPointer;
@@ -60602,7 +60602,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERSPAWNCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerSpawnConfig_TA");
 		}
 
 		return uClassPointer;
@@ -60622,7 +60622,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERSPAWNSTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerSpawnState_TA");
 		}
 
 		return uClassPointer;
@@ -60642,7 +60642,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERSPAWNSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerSpawnSystem_TA");
 		}
 
 		return uClassPointer;
@@ -60676,7 +60676,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REPLICATEDRESPAWNTICKET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ReplicatedRespawnTicket_TA");
 		}
 
 		return uClassPointer;
@@ -60699,7 +60699,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERSPAWNTICKET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerSpawnTicket_TA");
 		}
 
 		return uClassPointer;
@@ -60720,7 +60720,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_SWAPMICPARAMETERVALUES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_SwapMICParameterValues_TA");
 		}
 
 		return uClassPointer;
@@ -60744,7 +60744,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_DISABLESKELCONTROL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_DisableSkelControl_TA");
 		}
 
 		return uClassPointer;
@@ -60766,7 +60766,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_PARTICLESYSTEMCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_ParticleSystemComponent_TA");
 		}
 
 		return uClassPointer;
@@ -60787,7 +60787,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_PARTICLESYSTEMPARAMETERBASE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_ParticleSystemParameterBase_TA");
 		}
 
 		return uClassPointer;
@@ -60810,7 +60810,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_PARTICLESYSTEMFLOATPARAMETER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_ParticleSystemFloatParameter_TA");
 		}
 
 		return uClassPointer;
@@ -60832,7 +60832,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_PARTICLESYSTEMNAMEPARAMETER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_ParticleSystemNameParameter_TA");
 		}
 
 		return uClassPointer;
@@ -60854,7 +60854,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_PARTICLESYSTEMVECTORPARAMETER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_ParticleSystemVectorParameter_TA");
 		}
 
 		return uClassPointer;
@@ -60876,7 +60876,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_STOPATTACHMENTBEHAVIORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_StopAttachmentBehaviors_TA");
 		}
 
 		return uClassPointer;
@@ -60900,7 +60900,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_WHEELATTACHMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_WheelAttachment_TA");
 		}
 
 		return uClassPointer;
@@ -60924,7 +60924,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTOVERRIDE_WHEELOVERRIDES_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductOverride_WheelOverrides_TA");
 		}
 
 		return uClassPointer;
@@ -60954,7 +60954,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ROCKETPASSERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RocketPassErrors_TA");
 		}
 
 		return uClassPointer;
@@ -60977,7 +60977,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_BANSELF_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_BanSelf_TA");
 		}
 
 		return uClassPointer;
@@ -60998,7 +60998,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_RESETALLPROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_ResetAllProgress_TA");
 		}
 
 		return uClassPointer;
@@ -61021,7 +61021,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_RESETCHALLENGEPROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_ResetChallengeProgress_TA");
 		}
 
 		return uClassPointer;
@@ -61046,7 +61046,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_CHALLENGE_SETPROGRESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_Challenge_SetProgress_TA");
 		}
 
 		return uClassPointer;
@@ -61072,7 +61072,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_DEBUGADDXP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_DebugAddXP_TA");
 		}
 
 		return uClassPointer;
@@ -61097,7 +61097,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_DEBUGSETXP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_DebugSetXP_TA");
 		}
 
 		return uClassPointer;
@@ -61122,7 +61122,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETSPECIALEVENTCURRENCY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetSpecialEventCurrency_TA");
 		}
 
 		return uClassPointer;
@@ -61145,7 +61145,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_GETSPECIALEVENTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_GetSpecialEvents_TA");
 		}
 
 		return uClassPointer;
@@ -61171,7 +61171,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSDEBUGADDPRODUCT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsDebugAddProduct_TA");
 		}
 
 		return uClassPointer;
@@ -61208,7 +61208,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSDEBUGADDRANDOM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsDebugAddRandom_TA");
 		}
 
 		return uClassPointer;
@@ -61239,7 +61239,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSDEBUGSETCERTIFIED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsDebugSetCertified_TA");
 		}
 
 		return uClassPointer;
@@ -61272,7 +61272,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSDEBUGSETEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsDebugSetEdition_TA");
 		}
 
 		return uClassPointer;
@@ -61304,7 +61304,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PRODUCTSDEBUGSETPAINTED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_ProductsDebugSetPainted_TA");
 		}
 
 		return uClassPointer;
@@ -61331,7 +61331,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PSYNETSETVANITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_PsyNetSetVanity_TA");
 		}
 
 		return uClassPointer;
@@ -61356,7 +61356,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_SELECTINTROCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_SelectIntroCar_TA");
 		}
 
 		return uClassPointer;
@@ -61382,7 +61382,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURGETREWARDS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourGetRewards_TA");
 		}
 
 		return uClassPointer;
@@ -61405,7 +61405,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_TOURSTARTMATCHMAKING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_TourStartMatchmaking_TA");
 		}
 
 		return uClassPointer;
@@ -61429,7 +61429,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_UPLOADXP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_UploadXP_TA");
 		}
 
 		return uClassPointer;
@@ -61470,7 +61470,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SCROLLCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ScrollComponent_TA");
 		}
 
 		return uClassPointer;
@@ -61513,7 +61513,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ATTACHASSETTOCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_AttachAssetToCar_TA");
 		}
 
 		return uClassPointer;
@@ -61544,7 +61544,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_CHECKROTATIONANGLE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_CheckRotationAngle_TA");
 		}
 
 		return uClassPointer;
@@ -61569,7 +61569,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_COMPLETEFTECHECKPOINT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_CompleteFTECheckpoint_TA");
 		}
 
 		return uClassPointer;
@@ -61591,7 +61591,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_COUNTER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_Counter_TA");
 		}
 
 		return uClassPointer;
@@ -61614,7 +61614,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_CREATEATTACHCOMPONENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_CreateAttachComponent_TA");
 		}
 
 		return uClassPointer;
@@ -61636,7 +61636,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_DISABLEFORCEINFXACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_DisableForceInFXActor_TA");
 		}
 
 		return uClassPointer;
@@ -61658,7 +61658,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GAMEURLHASOPTION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GameURLHasOption_TA");
 		}
 
 		return uClassPointer;
@@ -61681,7 +61681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETFTESTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetFTEState_TA");
 		}
 
 		return uClassPointer;
@@ -61703,7 +61703,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETGAMEBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetGameBall_TA");
 		}
 
 		return uClassPointer;
@@ -61726,7 +61726,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETPLAYERCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetPlayerCar_TA");
 		}
 
 		return uClassPointer;
@@ -61754,7 +61754,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETRARITYCOLOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetRarityColor_TA");
 		}
 
 		return uClassPointer;
@@ -61777,7 +61777,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETTEAMSCORE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetTeamScore_TA");
 		}
 
 		return uClassPointer;
@@ -61803,7 +61803,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_INSTANCEMATERIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_InstanceMaterial_TA");
 		}
 
 		return uClassPointer;
@@ -61827,7 +61827,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ISTARGETINPLAYERCAMERAVIEW));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_IsTargetInPlayerCameraView");
 		}
 
 		return uClassPointer;
@@ -61849,7 +61849,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_LOADMAP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_LoadMap_TA");
 		}
 
 		return uClassPointer;
@@ -61875,7 +61875,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_LOOKATACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_LookAtActor_TA");
 		}
 
 		return uClassPointer;
@@ -61899,7 +61899,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_MATCHCOUNTDOWN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_MatchCountdown_TA");
 		}
 
 		return uClassPointer;
@@ -61926,7 +61926,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_MOVEACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_MoveActor_TA");
 		}
 
 		return uClassPointer;
@@ -61949,7 +61949,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_REINITPHYS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ReinitPhys_TA");
 		}
 
 		return uClassPointer;
@@ -61976,7 +61976,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ROTATEACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_RotateActor_TA");
 		}
 
 		return uClassPointer;
@@ -62002,7 +62002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETBREAKOUTBALLCHARGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetBreakoutBallCharge_TA");
 		}
 
 		return uClassPointer;
@@ -62025,7 +62025,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETBREAKOUTTILEDAMAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetBreakoutTileDamage_TA");
 		}
 
 		return uClassPointer;
@@ -62047,7 +62047,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETGREENSCREEN_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetGreenScreen_TA");
 		}
 
 		return uClassPointer;
@@ -62071,7 +62071,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETMATINSTVECTORPARAM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetMatInstVectorParam_TA");
 		}
 
 		return uClassPointer;
@@ -62095,7 +62095,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETMESHMATERIALSCALARPARAMETER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetMeshMaterialScalarParameter_TA");
 		}
 
 		return uClassPointer;
@@ -62119,7 +62119,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETNAMEPLATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetNameplate_TA");
 		}
 
 		return uClassPointer;
@@ -62142,7 +62142,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETPOSTPROCESS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetPostProcess_TA");
 		}
 
 		return uClassPointer;
@@ -62167,7 +62167,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETREPLAYCAMERA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetReplayCamera_TA");
 		}
 
 		return uClassPointer;
@@ -62191,7 +62191,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETSKELMATLOADOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetSkelMATLoadout_TA");
 		}
 
 		return uClassPointer;
@@ -62214,7 +62214,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SETTUTORIALTIP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SetTutorialTip_TA");
 		}
 
 		return uClassPointer;
@@ -62239,7 +62239,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_SPAWNACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_SpawnActor_TA");
 		}
 
 		return uClassPointer;
@@ -62261,7 +62261,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_TERMPHYS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_TermPhys_TA");
 		}
 
 		return uClassPointer;
@@ -62283,7 +62283,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_TOGGLEUIOVERLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ToggleUIOverlay_TA");
 		}
 
 		return uClassPointer;
@@ -62307,7 +62307,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQCOND_COMPARESTRING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqCond_CompareString_TA");
 		}
 
 		return uClassPointer;
@@ -62329,7 +62329,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_CARSPAWNED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_CarSpawned_TA");
 		}
 
 		return uClassPointer;
@@ -62354,7 +62354,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_CARTOUCHBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_CarTouchBall_TA");
 		}
 
 		return uClassPointer;
@@ -62376,7 +62376,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_GARAGECOMPLEXSTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_GarageComplexState_TA");
 		}
 
 		return uClassPointer;
@@ -62397,7 +62397,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_MAINMENUSWITCHED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_MainMenuSwitched_TA");
 		}
 
 		return uClassPointer;
@@ -62425,7 +62425,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SHOPERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ShopErrors_TA");
 		}
 
 		return uClassPointer;
@@ -62445,7 +62445,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKILLDECAYFEATURE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkillDecayFeature_TA");
 		}
 
 		return uClassPointer;
@@ -62465,7 +62465,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SKILLDECAYSYSTEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SkillDecaySystem_TA");
 		}
 
 		return uClassPointer;
@@ -62502,7 +62502,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALATTACHMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialAttachment_TA");
 		}
 
 		return uClassPointer;
@@ -62533,7 +62533,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALEVENTERRORS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialEventErrors_TA");
 		}
 
 		return uClassPointer;
@@ -62555,7 +62555,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_ATTACHMENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Attachment_TA");
 		}
 
 		return uClassPointer;
@@ -62578,7 +62578,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BALLCARSPRING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_BallCarSpring_TA");
 		}
 
 		return uClassPointer;
@@ -62619,7 +62619,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BALLVELCRO_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_BallVelcro_TA");
 		}
 
 		return uClassPointer;
@@ -62655,7 +62655,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BATARANG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Batarang_TA");
 		}
 
 		return uClassPointer;
@@ -62679,7 +62679,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BOOSTMOD_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_BoostMod_TA");
 		}
 
 		return uClassPointer;
@@ -62708,7 +62708,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_BOOSTOVERRIDE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_BoostOverride_TA");
 		}
 
 		return uClassPointer;
@@ -62738,7 +62738,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_CARFREEZE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_CarFreeze_TA");
 		}
 
 		return uClassPointer;
@@ -62765,7 +62765,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_CARGRAVITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_CarGravity_TA");
 		}
 
 		return uClassPointer;
@@ -62789,7 +62789,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_CARLAUNCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_CarLaunch_TA");
 		}
 
 		return uClassPointer;
@@ -62816,7 +62816,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_CARSPEED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_CarSpeed_TA");
 		}
 
 		return uClassPointer;
@@ -62842,7 +62842,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_DEMOLISH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Demolish_TA");
 		}
 
 		return uClassPointer;
@@ -62881,7 +62881,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_FOOTBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Football_TA");
 		}
 
 		return uClassPointer;
@@ -62925,7 +62925,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_HANDBRAKEOVERRIDE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_HandbrakeOverride_TA");
 		}
 
 		return uClassPointer;
@@ -62959,7 +62959,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_HITFORCE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_HitForce_TA");
 		}
 
 		return uClassPointer;
@@ -62997,7 +62997,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_RUGBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Rugby_TA");
 		}
 
 		return uClassPointer;
@@ -63041,7 +63041,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_SWAPPER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_Swapper_TA");
 		}
 
 		return uClassPointer;
@@ -63074,7 +63074,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPECIALPICKUP_TIMEBOMB_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SpecialPickup_TimeBomb_TA");
 		}
 
 		return uClassPointer;
@@ -63097,7 +63097,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPLINECAMERATRACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SplineCameraTrack_TA");
 		}
 
 		return uClassPointer;
@@ -63121,7 +63121,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SPLINEFOCUSTARGET_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SplineFocusTarget_TA");
 		}
 
 		return uClassPointer;
@@ -63144,7 +63144,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STASISEXPLOSIONHANDLER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StasisExplosionHandler_TA");
 		}
 
 		return uClassPointer;
@@ -63167,7 +63167,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATFACTORY_BASKETBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatFactory_Basketball_TA");
 		}
 
 		return uClassPointer;
@@ -63198,7 +63198,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATFACTORY_BREAKOUT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatFactory_Breakout_TA");
 		}
 
 		return uClassPointer;
@@ -63228,7 +63228,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATFACTORY_HAUNTEDBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StatFactory_HauntedBall_TA");
 		}
 
 		return uClassPointer;
@@ -63252,7 +63252,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATICMESHACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StaticMeshActor_TA");
 		}
 
 		return uClassPointer;
@@ -63280,7 +63280,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_STATICMESHRBACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.StaticMeshRBActor_TA");
 		}
 
 		return uClassPointer;
@@ -63305,7 +63305,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TMETRICSSHARED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TMetricsShared_TA");
 		}
 
 		return uClassPointer;
@@ -63333,7 +63333,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSEEDER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourSeeder_TA");
 		}
 
 		return uClassPointer;
@@ -63358,7 +63358,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TUTORIAL_AIRTILT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Tutorial_AirTilt_TA");
 		}
 
 		return uClassPointer;
@@ -63386,7 +63386,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_VEHICLEPICKUP_ITEM_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.VehiclePickup_Item_TA");
 		}
 
 		return uClassPointer;
@@ -63410,7 +63410,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_ITEMS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Items_TA");
 		}
 
 		return uClassPointer;
@@ -63430,7 +63430,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_HOCKEY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Hockey_TA");
 		}
 
 		return uClassPointer;
@@ -63450,7 +63450,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_GODBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_GodBall_TA");
 		}
 
 		return uClassPointer;
@@ -63470,7 +63470,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TURNTABLEACTOR_GARAGECOMPLEX_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TurnTableActor_GarageComplex_TA");
 		}
 
 		return uClassPointer;
@@ -63490,7 +63490,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_UNREPLICATEDRBACTOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.UnreplicatedRBActor_TA");
 		}
 
 		return uClassPointer;
@@ -63510,7 +63510,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURSERVERINFO_AUTOTOUR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourServerInfo_AutoTour_TA");
 		}
 
 		return uClassPointer;
@@ -63531,7 +63531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TOURBRACKETGENERATOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.TourBracketGenerator_TA");
 		}
 
 		return uClassPointer;
@@ -63562,7 +63562,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_TEAM_FREEPLAY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Team_Freeplay_TA");
 		}
 
 		return uClassPointer;
@@ -63583,7 +63583,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_STARTHIGHLIGHTREEL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_StartHighlightReel_TA");
 		}
 
 		return uClassPointer;
@@ -63603,7 +63603,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_SHOWGARAGECOMPLEX_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_ShowGarageComplex_TA");
 		}
 
 		return uClassPointer;
@@ -63623,7 +63623,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_PREVIEWMUSICSTINGERVISUALIZER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_PreviewMusicStingerVisualizer_TA");
 		}
 
 		return uClassPointer;
@@ -63643,7 +63643,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQEVENT_INTROMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqEvent_IntroMenu_TA");
 		}
 
 		return uClassPointer;
@@ -63663,7 +63663,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_MAINMENUSWITCH_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_MainMenuSwitch_TA");
 		}
 
 		return uClassPointer;
@@ -63685,7 +63685,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_ISCRATEROULETTEENABLED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_IsCrateRouletteEnabled_TA");
 		}
 
 		return uClassPointer;
@@ -63706,7 +63706,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_INTROMENUCARSINPOSITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_IntroMenuCarsInPosition_TA");
 		}
 
 		return uClassPointer;
@@ -63728,7 +63728,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_HIGHLIGHTREELFINISHED_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_HighlightReelFinished_TA");
 		}
 
 		return uClassPointer;
@@ -63750,7 +63750,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETPLAYLISTTYPE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetPlaylistType_TA");
 		}
 
 		return uClassPointer;
@@ -63771,7 +63771,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETEFFECTINTENSITY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetEffectIntensity_TA");
 		}
 
 		return uClassPointer;
@@ -63793,7 +63793,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_GETEDITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_GetEdition_TA");
 		}
 
 		return uClassPointer;
@@ -63814,7 +63814,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_EXITTOMAINMENU_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_ExitToMainMenu_TA");
 		}
 
 		return uClassPointer;
@@ -63835,7 +63835,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SEQACT_DEMOCAR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SeqAct_DemoCar_TA");
 		}
 
 		return uClassPointer;
@@ -63856,7 +63856,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_SAVEDATAMETRICS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.SaveDataMetrics_TA");
 		}
 
 		return uClassPointer;
@@ -63878,7 +63878,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_PSYNETGETAVATARS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_PsyNetGetAvatars_TA");
 		}
 
 		return uClassPointer;
@@ -63898,7 +63898,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_DECAYSKILL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_DecaySkill_TA");
 		}
 
 		return uClassPointer;
@@ -63918,7 +63918,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_RPC_DEBUGUNLINKPRIMARYACCOUNT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RPC_DebugUnlinkPrimaryAccount_TA");
 		}
 
 		return uClassPointer;
@@ -63938,7 +63938,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_REQUESTPARTYUPEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.RequestPartyUpEvent_TA");
 		}
 
 		return uClassPointer;
@@ -63958,7 +63958,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTEQUIPPROFILESLOTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductEquipProfileSlots_TA");
 		}
 
 		return uClassPointer;
@@ -63978,7 +63978,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTATTRIBUTE_BONUSCRATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAttribute_BonusCrate_TA");
 		}
 
 		return uClassPointer;
@@ -63998,7 +63998,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PRODUCTASSET_CURRENCY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ProductAsset_Currency_TA");
 		}
 
 		return uClassPointer;
@@ -64018,7 +64018,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUT_GAMEEDITOR_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInput_GameEditor_TA");
 		}
 
 		return uClassPointer;
@@ -64039,7 +64039,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_PLAYERINPUT_EDIT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.PlayerInput_Edit_TA");
 		}
 
 		return uClassPointer;
@@ -64060,7 +64060,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ONLINEGAMEVERSION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.OnlineGameVersion_TA");
 		}
 
 		return uClassPointer;
@@ -64083,7 +64083,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_NAMEPLATECOMPONENTMATINEE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.NameplateComponentMatinee_TA");
 		}
 
 		return uClassPointer;
@@ -64104,7 +64104,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MUTATOR_PHYSICSLOGPLAYBACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.Mutator_PhysicsLogPlayback_TA");
 		}
 
 		return uClassPointer;
@@ -64126,7 +64126,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_PHYSICSLOGPLAYBACK_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_PhysicsLogPlayback_TA");
 		}
 
 		return uClassPointer;
@@ -64148,7 +64148,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MENUSEQUENCE_PREMIUMGARAGESNAP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MenuSequence_PremiumGarageSnap_TA");
 		}
 
 		return uClassPointer;
@@ -64170,7 +64170,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MENUSEQUENCE_MUSICSTINGERS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MenuSequence_MusicStingers_TA");
 		}
 
 		return uClassPointer;
@@ -64192,7 +64192,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MAXTIMESTATE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MaxTimeState_TA");
 		}
 
 		return uClassPointer;
@@ -64212,7 +64212,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_MATCHTYPE_ADHOC_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.MatchType_AdHoc_TA");
 		}
 
 		return uClassPointer;
@@ -64233,7 +64233,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_LOCALIZATIONCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.LocalizationConfig_TA");
 		}
 
 		return uClassPointer;
@@ -64254,7 +64254,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GOALVOLUME_HOOPS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GoalVolume_Hoops_TA");
 		}
 
 		return uClassPointer;
@@ -64274,7 +64274,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXMODAL_WARNING_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxModal_Warning_TA");
 		}
 
 		return uClassPointer;
@@ -64294,7 +64294,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_XP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_XP_TA");
 		}
 
 		return uClassPointer;
@@ -64316,7 +64316,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ROCKETPASSBUNDLECONTAINER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RocketPassBundleContainer_TA");
 		}
 
 		return uClassPointer;
@@ -64337,7 +64337,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_REGIONRESTRICTIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_RegionRestrictions_TA");
 		}
 
 		return uClassPointer;
@@ -64358,7 +64358,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PRIVACYPOLICY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PrivacyPolicy_TA");
 		}
 
 		return uClassPointer;
@@ -64380,7 +64380,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PREMIUMGARAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PremiumGarage_TA");
 		}
 
 		return uClassPointer;
@@ -64401,7 +64401,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_PLAYERREPORT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_PlayerReport_TA");
 		}
 
 		return uClassPointer;
@@ -64422,7 +64422,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_MUSICSTINGERS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_MusicStingers_TA");
 		}
 
 		return uClassPointer;
@@ -64446,7 +64446,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_EULA_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_Eula_TA");
 		}
 
 		return uClassPointer;
@@ -64468,7 +64468,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_DATETIME_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_DateTime_TA");
 		}
 
 		return uClassPointer;
@@ -64498,7 +64498,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_CLUBSCONFIG_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_ClubsConfig_TA");
 		}
 
 		return uClassPointer;
@@ -64520,7 +64520,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_BANMESSAGE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_BanMessage_TA");
 		}
 
 		return uClassPointer;
@@ -64547,7 +64547,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_BANMANAGER_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_BanManager_TA");
 		}
 
 		return uClassPointer;
@@ -64572,7 +64572,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GFXDATA_ACHIEVEMENTDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GFxData_AchievementDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -64592,7 +64592,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACHIEVEMENTDROPGROUP_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.AchievementDropGroup_TA");
 		}
 
 		return uClassPointer;
@@ -64612,7 +64612,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_TRANSITION_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Transition_TA");
 		}
 
 		return uClassPointer;
@@ -64632,7 +64632,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_FTE_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_FTE_TA");
 		}
 
 		return uClassPointer;
@@ -64653,7 +64653,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_GAMEINFO_FOOTBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.GameInfo_Football_TA");
 		}
 
 		return uClassPointer;
@@ -64673,7 +64673,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FXACTOR_GARAGECOMPLEXROW_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FXActor_GarageComplexRow_TA");
 		}
 
 		return uClassPointer;
@@ -64693,7 +64693,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_FOLLOWERSCHANGEDEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.FollowersChangedEvent_TA");
 		}
 
 		return uClassPointer;
@@ -64713,7 +64713,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENDROUNDCOMPONENT_TUTORIAL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EndRoundComponent_Tutorial_TA");
 		}
 
 		return uClassPointer;
@@ -64734,7 +64734,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENDROUNDCOMPONENT_RUGBY_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EndRoundComponent_Rugby_TA");
 		}
 
 		return uClassPointer;
@@ -64755,7 +64755,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ENDROUNDCOMPONENT_HAUNTEDBALL_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.EndRoundComponent_HauntedBall_TA");
 		}
 
 		return uClassPointer;
@@ -64776,7 +64776,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CONVERTPLATFORMFRIENDSEVENT_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ConvertPlatformFriendsEvent_TA");
 		}
 
 		return uClassPointer;
@@ -64796,7 +64796,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_CARMESHCOMPONENT_GARAGECOMPLEX_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.CarMeshComponent_GarageComplex_TA");
 		}
 
 		return uClassPointer;
@@ -64817,7 +64817,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_HUMANPLAYERONTEAM));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_HumanPlayerOnTeam");
 		}
 
 		return uClassPointer;
@@ -64840,7 +64840,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_HUMANPLAYERONOPPOSINGTEAM));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_HumanPlayerOnOpposingTeam");
 		}
 
 		return uClassPointer;
@@ -64861,7 +64861,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_BTC_BALLWELDED));
+			uClassPointer = UObject::FindClass("Class TAGame.BTC_BallWelded");
 		}
 
 		return uClassPointer;
@@ -64882,7 +64882,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME_ACTORFACTORYSKELETALMESHACTORMAT_PRODUCTS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame.ActorFactorySkeletalMeshactorMat_Products_TA");
 		}
 
 		return uClassPointer;
@@ -64903,7 +64903,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_TAGAME__TOURNOTIFICATIONS_TA));
+			uClassPointer = UObject::FindClass("Class TAGame._TourNotifications_TA");
 		}
 
 		return uClassPointer;

@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: AkAudio_classes.hpp
@@ -152,7 +152,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_ACTORFACTORYAKAMBIENTSOUND));
+			uClassPointer = UObject::FindClass("Class AkAudio.ActorFactoryAkAmbientSound");
 		}
 
 		return uClassPointer;
@@ -176,7 +176,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKAMBIENTSOUND));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkAmbientSound");
 		}
 
 		return uClassPointer;
@@ -199,7 +199,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKBUSACTOR));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkBusActor");
 		}
 
 		return uClassPointer;
@@ -224,7 +224,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKCOMPONENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkComponent");
 		}
 
 		return uClassPointer;
@@ -253,7 +253,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKDEVICE));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkDevice");
 		}
 
 		return uClassPointer;
@@ -299,7 +299,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKDIALOGUEEVENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkDialogueEvent");
 		}
 
 		return uClassPointer;
@@ -324,7 +324,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKENVIRONMENTS));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkEnvironments");
 		}
 
 		return uClassPointer;
@@ -348,7 +348,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKENVIRONMENTVOLUME));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkEnvironmentVolume");
 		}
 
 		return uClassPointer;
@@ -379,7 +379,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKMUSICANALYSIS));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkMusicAnalysis");
 		}
 
 		return uClassPointer;
@@ -408,7 +408,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKMUSICDEVICE));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkMusicDevice");
 		}
 
 		return uClassPointer;
@@ -441,7 +441,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKPARAMGROUP));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkParamGroup");
 		}
 
 		return uClassPointer;
@@ -490,7 +490,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKPLAYSOUNDCOMPONENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkPlaySoundComponent");
 		}
 
 		return uClassPointer;
@@ -535,7 +535,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKREVPHYSICSSIMULATION));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkRevPhysicsSimulation");
 		}
 
 		return uClassPointer;
@@ -570,7 +570,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKRTPCDECAYCOMPONENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkRTPCDecayComponent");
 		}
 
 		return uClassPointer;
@@ -593,7 +593,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKSOUNDCUE));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkSoundCue");
 		}
 
 		return uClassPointer;
@@ -629,7 +629,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKSOUNDSOURCE));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkSoundSource");
 		}
 
 		return uClassPointer;
@@ -662,7 +662,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKSWITCH));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkSwitch");
 		}
 
 		return uClassPointer;
@@ -684,7 +684,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_INTERPTRACKAKEVENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.InterpTrackAkEvent");
 		}
 
 		return uClassPointer;
@@ -705,7 +705,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_INTERPTRACKAKRTPC));
+			uClassPointer = UObject::FindClass("Class AkAudio.InterpTrackAkRTPC");
 		}
 
 		return uClassPointer;
@@ -726,7 +726,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_INTERPTRACKINSTAKEVENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.InterpTrackInstAkEvent");
 		}
 
 		return uClassPointer;
@@ -746,7 +746,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_INTERPTRACKINSTAKRTPC));
+			uClassPointer = UObject::FindClass("Class AkAudio.InterpTrackInstAkRTPC");
 		}
 
 		return uClassPointer;
@@ -766,7 +766,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKCLEARBANKS));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkClearBanks");
 		}
 
 		return uClassPointer;
@@ -788,7 +788,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKENVIRONMENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkEnvironment");
 		}
 
 		return uClassPointer;
@@ -812,7 +812,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKLOADBANK));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkLoadBank");
 		}
 
 		return uClassPointer;
@@ -834,7 +834,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKPLAYMUSICWITHCUES));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkPlayMusicWithCues");
 		}
 
 		return uClassPointer;
@@ -857,7 +857,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKPLAYSOUND));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkPlaySound");
 		}
 
 		return uClassPointer;
@@ -883,7 +883,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKPOSTEVENT));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkPostEvent");
 		}
 
 		return uClassPointer;
@@ -905,7 +905,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKPOSTTRIGGER));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkPostTrigger");
 		}
 
 		return uClassPointer;
@@ -928,7 +928,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKSETRTPCVALUE));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkSetRTPCValue");
 		}
 
 		return uClassPointer;
@@ -950,7 +950,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKSETSTATE));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkSetState");
 		}
 
 		return uClassPointer;
@@ -972,7 +972,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKSETSWITCH));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkSetSwitch");
 		}
 
 		return uClassPointer;
@@ -992,7 +992,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKSTARTAMBIENTSOUND));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkStartAmbientSound");
 		}
 
 		return uClassPointer;
@@ -1012,7 +1012,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKSTOPALL));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkStopAll");
 		}
 
 		return uClassPointer;
@@ -1037,7 +1037,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKAUDIODEVICE));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkAudioDevice");
 		}
 
 		return uClassPointer;
@@ -1058,7 +1058,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_AKAMBIENTSOUNDACTOR));
+			uClassPointer = UObject::FindClass("Class AkAudio.AkAmbientSoundActor");
 		}
 
 		return uClassPointer;
@@ -1080,7 +1080,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQEVENT_AKMUSICCUE));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqEvent_AkMusicCue");
 		}
 
 		return uClassPointer;
@@ -1103,7 +1103,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_AKAUDIO_SEQACT_AKPLAYSOUNDANDSEEK));
+			uClassPointer = UObject::FindClass("Class AkAudio.SeqAct_AkPlaySoundAndSeek");
 		}
 
 		return uClassPointer;

@@ -1,6 +1,6 @@
 /*
 #############################################################################################
-# Rocket League (210513.57953.327225) SDK
+# Rocket League (210617.48985.332260) SDK
 # Generated with the UE3SDKGenerator v4.2.0
 # ========================================================================================= #
 # File: ProjectX_classes.hpp
@@ -437,7 +437,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX__NETWORKNEXTTYPES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX._NetworkNextTypes_X");
 		}
 
 		return uClassPointer;
@@ -457,7 +457,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX__SHAREDHELPERS));
+			uClassPointer = UObject::FindClass("Class ProjectX._SharedHelpers");
 		}
 
 		return uClassPointer;
@@ -487,7 +487,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX__TYPES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX._Types_X");
 		}
 
 		return uClassPointer;
@@ -518,7 +518,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ACTORCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ActorComponent_X");
 		}
 
 		return uClassPointer;
@@ -554,7 +554,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EXPLOSIONCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ExplosionComponent_X");
 		}
 
 		return uClassPointer;
@@ -590,7 +590,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EXPLOSIONHITHANDLER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ExplosionHitHandler_X");
 		}
 
 		return uClassPointer;
@@ -617,7 +617,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MICPARAMDISPENSERCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MICParamDispenserComponent_X");
 		}
 
 		return uClassPointer;
@@ -677,7 +677,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SHAKECOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ShakeComponent_X");
 		}
 
 		return uClassPointer;
@@ -713,7 +713,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ADHOCBEACON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AdHocBeacon_X");
 		}
 
 		return uClassPointer;
@@ -770,7 +770,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_FXACTOR_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.FXActor_X");
 		}
 
 		return uClassPointer;
@@ -836,7 +836,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ANIMATEPARAMETERSCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AnimateParametersComponent_X");
 		}
 
 		return uClassPointer;
@@ -858,7 +858,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ARCHETYPEPREFAB_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ArchetypePrefab_X");
 		}
 
 		return uClassPointer;
@@ -890,7 +890,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ARCHETYPESPAWNPOINT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ArchetypeSpawnPoint_X");
 		}
 
 		return uClassPointer;
@@ -916,7 +916,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_AWS4SIGNATURE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Aws4Signature_X");
 		}
 
 		return uClassPointer;
@@ -943,7 +943,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONBEACON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationBeacon_X");
 		}
 
 		return uClassPointer;
@@ -987,7 +987,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BEACONMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BeaconMessage_X");
 		}
 
 		return uClassPointer;
@@ -1022,7 +1022,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BUGREPORT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BugReport_X");
 		}
 
 		return uClassPointer;
@@ -1058,7 +1058,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CACHEDWEBDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CachedWebData_X");
 		}
 
 		return uClassPointer;
@@ -1099,7 +1099,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Camera_X");
 		}
 
 		return uClassPointer;
@@ -1158,7 +1158,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERAATTACHMENTCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CameraAttachmentComponent_X");
 		}
 
 		return uClassPointer;
@@ -1179,7 +1179,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CANVASTEXTURE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CanvasTexture_X");
 		}
 
 		return uClassPointer;
@@ -1204,7 +1204,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CANVASTEXTURECOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CanvasTextureComponent_X");
 		}
 
 		return uClassPointer;
@@ -1236,7 +1236,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLAYERCONTROLLER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PlayerController_X");
 		}
 
 		return uClassPointer;
@@ -1310,7 +1310,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CHEATMANAGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CheatManager_X");
 		}
 
 		return uClassPointer;
@@ -1349,7 +1349,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CHEATOBJECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CheatObject_X");
 		}
 
 		return uClassPointer;
@@ -1373,7 +1373,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_COLORPALETTE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ColorPalette_X");
 		}
 
 		return uClassPointer;
@@ -1399,7 +1399,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_COMPRESSION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Compression_X");
 		}
 
 		return uClassPointer;
@@ -1428,7 +1428,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CONTROLPRESET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ControlPreset_X");
 		}
 
 		return uClassPointer;
@@ -1450,7 +1450,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CRASHREPORT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CrashReport_X");
 		}
 
 		return uClassPointer;
@@ -1471,7 +1471,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CRC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CRC_X");
 		}
 
 		return uClassPointer;
@@ -1496,7 +1496,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CYCLELOG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CycleLog_X");
 		}
 
 		return uClassPointer;
@@ -1517,7 +1517,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DISTRIBUTIONFLOATSHAKEPARAMETER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DistributionFloatShakeParameter_X");
 		}
 
 		return uClassPointer;
@@ -1538,7 +1538,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EFFECTSMAP_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EffectsMap_X");
 		}
 
 		return uClassPointer;
@@ -1576,7 +1576,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ENGINESHARE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EngineShare_X");
 		}
 
 		return uClassPointer;
@@ -1630,7 +1630,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOS_ERRORRESPONSE));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOS_ErrorResponse");
 		}
 
 		return uClassPointer;
@@ -1651,7 +1651,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOS_GETACCOUNTSRESPONSE));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOS_GetAccountsResponse");
 		}
 
 		return uClassPointer;
@@ -1676,7 +1676,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOS_ACCOUNTSUMMARYRESPONSE));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOS_AccountSummaryResponse");
 		}
 
 		return uClassPointer;
@@ -1698,7 +1698,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOS_MANAGEBLOCKLISTRESPONSE));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOS_ManageBlockListResponse");
 		}
 
 		return uClassPointer;
@@ -1719,7 +1719,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOS_MANAGEFRIENDSLISTRESPONSE));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOS_ManageFriendsListResponse");
 		}
 
 		return uClassPointer;
@@ -1740,7 +1740,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOSMETRICEVENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOSMetricEvent_X");
 		}
 
 		return uClassPointer;
@@ -1768,7 +1768,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOSMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOSMetrics_X");
 		}
 
 		return uClassPointer;
@@ -1799,7 +1799,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LOCALPLAYER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LocalPlayer_X");
 		}
 
 		return uClassPointer;
@@ -1825,7 +1825,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_STATEOBJECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.StateObject_X");
 		}
 
 		return uClassPointer;
@@ -1852,7 +1852,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Online_X");
 		}
 
 		return uClassPointer;
@@ -1927,7 +1927,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayer_X");
 		}
 
 		return uClassPointer;
@@ -2015,7 +2015,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EPICFRIENDSPLUGIN_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EpicFriendsPlugin_X");
 		}
 
 		return uClassPointer;
@@ -2086,7 +2086,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERAUTHENTICATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerAuthentication_X");
 		}
 
 		return uClassPointer;
@@ -2163,7 +2163,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EPICLOGIN_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EpicLogin_X");
 		}
 
 		return uClassPointer;
@@ -2227,7 +2227,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EPOCHTIMERS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EpochTimers_X");
 		}
 
 		return uClassPointer;
@@ -2255,7 +2255,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EPOCHTIMERTICK_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EpochTimerTick_X");
 		}
 
 		return uClassPointer;
@@ -2358,7 +2358,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ERRORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Errors_X");
 		}
 
 		return uClassPointer;
@@ -2391,7 +2391,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EVENTRECORDER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EventRecorder_X");
 		}
 
 		return uClassPointer;
@@ -2417,7 +2417,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_METRICSSYSTEM_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MetricsSystem_X");
 		}
 
 		return uClassPointer;
@@ -2441,7 +2441,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EVENTRECORDERGROUP_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EventRecorderGroup_X");
 		}
 
 		return uClassPointer;
@@ -2464,7 +2464,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_METRICSGROUP_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MetricsGroup_X");
 		}
 
 		return uClassPointer;
@@ -2487,7 +2487,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMetrics_X");
 		}
 
 		return uClassPointer;
@@ -2522,7 +2522,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextMetrics_X");
 		}
 
 		return uClassPointer;
@@ -2547,7 +2547,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EXPLOSIONCOLLISIONSHAPES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ExplosionCollisionShapes_X");
 		}
 
 		return uClassPointer;
@@ -2571,7 +2571,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BOXCOLLISIONSHAPE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BoxCollisionShape_X");
 		}
 
 		return uClassPointer;
@@ -2591,7 +2591,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GOALCOLLISIONSHAPE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GoalCollisionShape_X");
 		}
 
 		return uClassPointer;
@@ -2613,7 +2613,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SPHERECOLLISIONSHAPE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SphereCollisionShape_X");
 		}
 
 		return uClassPointer;
@@ -2638,7 +2638,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_FAKEDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.FakeData_X");
 		}
 
 		return uClassPointer;
@@ -2661,7 +2661,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_FXACTOREVENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.FXActorEvent_X");
 		}
 
 		return uClassPointer;
@@ -2681,7 +2681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_FXATTACHMENTTRAITBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.FXAttachmentTraitBase_X");
 		}
 
 		return uClassPointer;
@@ -2703,7 +2703,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMEENGINE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameEngine_X");
 		}
 
 		return uClassPointer;
@@ -2733,7 +2733,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMEINFO_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameInfo_X");
 		}
 
 		return uClassPointer;
@@ -2785,7 +2785,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMESETTING_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameSetting_X");
 		}
 
 		return uClassPointer;
@@ -2812,7 +2812,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMESETTINGCATEGORY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameSettingCategory_X");
 		}
 
 		return uClassPointer;
@@ -2847,7 +2847,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMEVIEWPORTCLIENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameViewportClient_X");
 		}
 
 		return uClassPointer;
@@ -2902,7 +2902,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXDATAROW_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxDataRow_X");
 		}
 
 		return uClassPointer;
@@ -2930,7 +2930,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXDATASINGLETON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxDataSingleton_X");
 		}
 
 		return uClassPointer;
@@ -2966,7 +2966,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXSHELL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxShell_X");
 		}
 
 		return uClassPointer;
@@ -3018,7 +3018,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXDATASTORE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxDataStore_X");
 		}
 
 		return uClassPointer;
@@ -3074,7 +3074,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXENGINE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxEngine_X");
 		}
 
 		return uClassPointer;
@@ -3128,7 +3128,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXMOVIEPLAYER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxMoviePlayer_X");
 		}
 
 		return uClassPointer;
@@ -3169,7 +3169,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXOBJECTREFERENCE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxObjectReference_X");
 		}
 
 		return uClassPointer;
@@ -3193,7 +3193,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXDATACALLBACK_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxDataCallback_X");
 		}
 
 		return uClassPointer;
@@ -3216,7 +3216,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXSOUNDPACK_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxSoundPack_X");
 		}
 
 		return uClassPointer;
@@ -3246,7 +3246,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_INTERPCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.InterpComponent_X");
 		}
 
 		return uClassPointer;
@@ -3268,7 +3268,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_IRESERVATIONCONNECTION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.IReservationConnection_X");
 		}
 
 		return uClassPointer;
@@ -3288,7 +3288,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_JSONTESTS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.JsonTests_X");
 		}
 
 		return uClassPointer;
@@ -3317,7 +3317,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LANBEACON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LanBeacon_X");
 		}
 
 		return uClassPointer;
@@ -3348,7 +3348,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LENSFLARECOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LensFlareComponent_X");
 		}
 
 		return uClassPointer;
@@ -3374,7 +3374,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LINKEDACCOUNTMAP_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LinkedAccountMap_X");
 		}
 
 		return uClassPointer;
@@ -3409,7 +3409,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LOCALCACHE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LocalCache_X");
 		}
 
 		return uClassPointer;
@@ -3443,7 +3443,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MAPFLYTHROUGHPROFILER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MapFlythroughProfiler_X");
 		}
 
 		return uClassPointer;
@@ -3466,7 +3466,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTCLIENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextClient_X");
 		}
 
 		return uClassPointer;
@@ -3489,7 +3489,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextServer_X");
 		}
 
 		return uClassPointer;
@@ -3512,7 +3512,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NNXERRORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NNXErrors_X");
 		}
 
 		return uClassPointer;
@@ -3534,7 +3534,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINECONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineConfig_X");
 		}
 
 		return uClassPointer;
@@ -3565,7 +3565,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BEACONCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BeaconConfig_X");
 		}
 
 		return uClassPointer;
@@ -3586,7 +3586,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CONTENTCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ContentConfig_X");
 		}
 
 		return uClassPointer;
@@ -3615,7 +3615,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CROSSPLAYCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CrossplayConfig_X");
 		}
 
 		return uClassPointer;
@@ -3646,7 +3646,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EVENTRECORDERCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EventRecorderConfig_X");
 		}
 
 		return uClassPointer;
@@ -3667,7 +3667,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LOCALIZATIONCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LocalizationConfig_X");
 		}
 
 		return uClassPointer;
@@ -3696,7 +3696,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextConfig_X");
 		}
 
 		return uClassPointer;
@@ -3735,7 +3735,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetConfig_X");
 		}
 
 		return uClassPointer;
@@ -3758,7 +3758,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETRETRYCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetRetryConfig_X");
 		}
 
 		return uClassPointer;
@@ -3785,7 +3785,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPCCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPCConfig_X");
 		}
 
 		return uClassPointer;
@@ -3817,7 +3817,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SERVERCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ServerConfig_X");
 		}
 
 		return uClassPointer;
@@ -3838,7 +3838,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEFRIENDMAP_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineFriendMap_X");
 		}
 
 		return uClassPointer;
@@ -3872,7 +3872,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMESEARCH_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameSearch_X");
 		}
 
 		return uClassPointer;
@@ -3907,7 +3907,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMESETTINGS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameSettings_X");
 		}
 
 		return uClassPointer;
@@ -3949,7 +3949,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINELEGALTEXT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineLegalText_X");
 		}
 
 		return uClassPointer;
@@ -3978,7 +3978,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineMessage_X");
 		}
 
 		return uClassPointer;
@@ -4002,7 +4002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEMESSAGECOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineMessageComponent_X");
 		}
 
 		return uClassPointer;
@@ -4038,7 +4038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARAMETERDISPENSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ParameterDispenser_X");
 		}
 
 		return uClassPointer;
@@ -4069,7 +4069,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTICLEMODULEBEAMTARGET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ParticleModuleBeamTarget_X");
 		}
 
 		return uClassPointer;
@@ -4089,7 +4089,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTICLEMODULELOCATIONBONESOCKET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ParticleModuleLocationBoneSocket_X");
 		}
 
 		return uClassPointer;
@@ -4109,7 +4109,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTICLEMODULELOCATIONSKELVERTSURFACE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ParticleModuleLocationSkelVertSurface_X");
 		}
 
 		return uClassPointer;
@@ -4131,7 +4131,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTICLEMODULEVELOCITYSURFACENORMAL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ParticleModuleVelocitySurfaceNormal_X");
 		}
 
 		return uClassPointer;
@@ -4151,7 +4151,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTICLEMODULEVELOCITYSURFACENORMALSTATIC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ParticleModuleVelocitySurfaceNormalStatic_X");
 		}
 
 		return uClassPointer;
@@ -4173,7 +4173,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTICLEMODULEWIND_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ParticleModuleWind_X");
 		}
 
 		return uClassPointer;
@@ -4197,7 +4197,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PAWN_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Pawn_X");
 		}
 
 		return uClassPointer;
@@ -4231,7 +4231,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PERCON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PerCon_X");
 		}
 
 		return uClassPointer;
@@ -4257,7 +4257,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PHYSICALMATERIALPROPERTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PhysicalMaterialProperty_X");
 		}
 
 		return uClassPointer;
@@ -4301,7 +4301,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLAYERINPUT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PlayerInput_X");
 		}
 
 		return uClassPointer;
@@ -4347,7 +4347,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_POINTLIGHTCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PointLightComponent_X");
 		}
 
 		return uClassPointer;
@@ -4382,7 +4382,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNet_X");
 		}
 
 		return uClassPointer;
@@ -4430,7 +4430,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETBEACONCONNECTION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetBeaconConnection_X");
 		}
 
 		return uClassPointer;
@@ -4455,7 +4455,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETCLIENTSERVICE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetClientService_X");
 		}
 
 		return uClassPointer;
@@ -4478,7 +4478,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETCLIENTSERVICECOLLECTION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetClientServiceCollection_X");
 		}
 
 		return uClassPointer;
@@ -4535,7 +4535,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETCONNECTION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetConnection_X");
 		}
 
 		return uClassPointer;
@@ -4615,7 +4615,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETERRORTYPE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetErrorType_X");
 		}
 
 		return uClassPointer;
@@ -4637,7 +4637,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetMessage_X");
 		}
 
 		return uClassPointer;
@@ -4661,7 +4661,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETMESSENGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetMessenger_X");
 		}
 
 		return uClassPointer;
@@ -4686,7 +4686,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETMESSENGERHTTP_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetMessengerHttp_X");
 		}
 
 		return uClassPointer;
@@ -4721,7 +4721,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETMESSENGERWEBSOCKET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetMessengerWebSocket_X");
 		}
 
 		return uClassPointer;
@@ -4763,7 +4763,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICESERIALIZER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetServiceSerializer_X");
 		}
 
 		return uClassPointer;
@@ -4786,7 +4786,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICESUBSCRIPTIONS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetServiceSubscriptions_X");
 		}
 
 		return uClassPointer;
@@ -4829,7 +4829,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSTATICDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetStaticData_X");
 		}
 
 		return uClassPointer;
@@ -4874,7 +4874,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETURL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetUrl_X");
 		}
 
 		return uClassPointer;
@@ -4897,7 +4897,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RADIALBLURCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RadialBlurComponent_X");
 		}
 
 		return uClassPointer;
@@ -4919,7 +4919,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RANDOMSTREAM_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RandomStream_X");
 		}
 
 		return uClassPointer;
@@ -4947,7 +4947,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RENDERPROFILER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RenderProfiler_X");
 		}
 
 		return uClassPointer;
@@ -4972,7 +4972,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RETRYDELAY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RetryDelay_X");
 		}
 
 		return uClassPointer;
@@ -4995,7 +4995,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RETRYPOLICY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RetryPolicy_X");
 		}
 
 		return uClassPointer;
@@ -5029,7 +5029,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_X");
 		}
 
 		return uClassPointer;
@@ -5065,7 +5065,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CRASHREPORT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_CrashReport_X");
 		}
 
 		return uClassPointer;
@@ -5090,7 +5090,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_RECORDMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RecordMetrics_X");
 		}
 
 		return uClassPointer;
@@ -5117,7 +5117,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPCBATCH_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPCBatch_X");
 		}
 
 		return uClassPointer;
@@ -5149,7 +5149,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPCQUEUE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPCQueue_X");
 		}
 
 		return uClassPointer;
@@ -5185,7 +5185,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RUNTIMEPARAMETERBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RuntimeParameterBase_X");
 		}
 
 		return uClassPointer;
@@ -5205,7 +5205,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RUNTIMEPARAMETER_SPEED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RuntimeParameter_Speed_X");
 		}
 
 		return uClassPointer;
@@ -5225,7 +5225,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RUNTIMEPARAMETERS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RuntimeParameters_X");
 		}
 
 		return uClassPointer;
@@ -5245,7 +5245,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SEQACT_NONNATIVEUPDATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SeqAct_NonNativeUpdate_X");
 		}
 
 		return uClassPointer;
@@ -5266,7 +5266,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SEQUENCECONDITION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SequenceCondition_X");
 		}
 
 		return uClassPointer;
@@ -5287,7 +5287,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SERIALIZER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Serializer_X");
 		}
 
 		return uClassPointer;
@@ -5310,7 +5310,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_JSONSERIALIZER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.JSONSerializer_X");
 		}
 
 		return uClassPointer;
@@ -5338,7 +5338,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_OBJECTSERIALIZER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ObjectSerializer_X");
 		}
 
 		return uClassPointer;
@@ -5382,7 +5382,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAME_BASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGame_Base_X");
 		}
 
 		return uClassPointer;
@@ -5453,7 +5453,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAME_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGame_X");
 		}
 
 		return uClassPointer;
@@ -5510,7 +5510,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMESERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameServer_X");
 		}
 
 		return uClassPointer;
@@ -5567,7 +5567,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEDEDICATEDSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameDedicatedServer_X");
 		}
 
 		return uClassPointer;
@@ -5659,7 +5659,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEDLC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameDLC_X");
 		}
 
 		return uClassPointer;
@@ -5699,7 +5699,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMELEADERBOARDS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameLeaderboards_X");
 		}
 
 		return uClassPointer;
@@ -5770,7 +5770,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMERESERVATIONS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameReservations_X");
 		}
 
 		return uClassPointer;
@@ -5925,7 +5925,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMESTATS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameStats_X");
 		}
 
 		return uClassPointer;
@@ -5953,7 +5953,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TICKABLESTATEOBJECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TickableStateObject_X");
 		}
 
 		return uClassPointer;
@@ -5986,7 +5986,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SYSTEMINFO_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SystemInfo_X");
 		}
 
 		return uClassPointer;
@@ -6016,7 +6016,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TICKACTORCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TickActorComponent_X");
 		}
 
 		return uClassPointer;
@@ -6043,7 +6043,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TIMERS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Timers_X");
 		}
 
 		return uClassPointer;
@@ -6075,7 +6075,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TIMERSCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TimersComponent_X");
 		}
 
 		return uClassPointer;
@@ -6108,7 +6108,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TICKCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TickComponent_X");
 		}
 
 		return uClassPointer;
@@ -6130,7 +6130,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_UISTRINGS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.UIStrings_X");
 		}
 
 		return uClassPointer;
@@ -6165,7 +6165,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WEBREQUEST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WebRequest_X");
 		}
 
 		return uClassPointer;
@@ -6216,7 +6216,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WORDFILTERTYPES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WordFilterTypes_X");
 		}
 
 		return uClassPointer;
@@ -6244,7 +6244,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ANIMNODEBLENDBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AnimNodeBlendBase_X");
 		}
 
 		return uClassPointer;
@@ -6271,7 +6271,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ANIMNODESERIES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AnimNodeSeries_X");
 		}
 
 		return uClassPointer;
@@ -6296,7 +6296,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ANIMNODESEQUENCE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AnimNodeSequence_X");
 		}
 
 		return uClassPointer;
@@ -6316,7 +6316,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ANIMNODEPOSE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AnimNodePose_X");
 		}
 
 		return uClassPointer;
@@ -6339,7 +6339,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ANIMNOTIFY_PLAYPARTICLEEFFECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AnimNotify_PlayParticleEffect_X");
 		}
 
 		return uClassPointer;
@@ -6370,7 +6370,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETBEACON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetBeacon_X");
 		}
 
 		return uClassPointer;
@@ -6426,7 +6426,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TCPBEACON));
+			uClassPointer = UObject::FindClass("Class ProjectX.TcpBeacon");
 		}
 
 		return uClassPointer;
@@ -6459,7 +6459,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TCPMESSAGEBEACON));
+			uClassPointer = UObject::FindClass("Class ProjectX.TcpMessageBeacon");
 		}
 
 		return uClassPointer;
@@ -6500,7 +6500,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TCPCONNECTION));
+			uClassPointer = UObject::FindClass("Class ProjectX.TcpConnection");
 		}
 
 		return uClassPointer;
@@ -6531,7 +6531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WEBSOCKETCONNECTION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WebSocketConnection_X");
 		}
 
 		return uClassPointer;
@@ -6561,7 +6561,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_UDPPINGBEACONBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.UdpPingBeaconBase_X");
 		}
 
 		return uClassPointer;
@@ -6586,7 +6586,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_UDPPINGBEACONCLIENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.UdpPingBeaconClient_X");
 		}
 
 		return uClassPointer;
@@ -6614,7 +6614,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_UDPPINGBEACONSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.UdpPingBeaconServer_X");
 		}
 
 		return uClassPointer;
@@ -6636,7 +6636,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTDRIVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextDriver_X");
 		}
 
 		return uClassPointer;
@@ -6657,7 +6657,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTCONNECTION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextConnection_X");
 		}
 
 		return uClassPointer;
@@ -6677,7 +6677,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTDRIVERPROXY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextDriverProxy_X");
 		}
 
 		return uClassPointer;
@@ -6697,7 +6697,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKNEXTCONNECTIONPROXY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkNextConnectionProxy_X");
 		}
 
 		return uClassPointer;
@@ -6729,7 +6729,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PRIVILEGECHECK_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PrivilegeCheck_X");
 		}
 
 		return uClassPointer;
@@ -6771,7 +6771,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ADDRESERVATIONMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AddReservationMessage_X");
 		}
 
 		return uClassPointer;
@@ -6800,7 +6800,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ACTIVATEANIMSERIESCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ActivateAnimSeriesComponent_X");
 		}
 
 		return uClassPointer;
@@ -6878,7 +6878,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameParty_X");
 		}
 
 		return uClassPointer;
@@ -7116,7 +7116,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEACCOUNT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameAccount_X");
 		}
 
 		return uClassPointer;
@@ -7154,7 +7154,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINECLUBCACHE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineClubCache_X");
 		}
 
 		return uClassPointer;
@@ -7185,7 +7185,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ADDRESERVATIONMESSAGEPRIVATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AddReservationMessagePrivate_X");
 		}
 
 		return uClassPointer;
@@ -7209,7 +7209,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ADDRESERVATIONMESSAGEPUBLIC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AddReservationMessagePublic_X");
 		}
 
 		return uClassPointer;
@@ -7241,7 +7241,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMESKILL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameSkill_X");
 		}
 
 		return uClassPointer;
@@ -7292,7 +7292,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEPLAYLISTS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGamePlaylists_X");
 		}
 
 		return uClassPointer;
@@ -7370,7 +7370,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMESETTINGPLAYLIST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameSettingPlaylist_X");
 		}
 
 		return uClassPointer;
@@ -7403,7 +7403,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SEQEVENT_SPAWNED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SeqEvent_Spawned_X");
 		}
 
 		return uClassPointer;
@@ -7428,7 +7428,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERASTATEBLENDER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CameraStateBlender_X");
 		}
 
 		return uClassPointer;
@@ -7462,7 +7462,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERASTATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CameraState_X");
 		}
 
 		return uClassPointer;
@@ -7495,7 +7495,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERAUTILS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CameraUtils_X");
 		}
 
 		return uClassPointer;
@@ -7523,7 +7523,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERAMODIFIER_CAMERASHAKE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CameraModifier_CameraShake_X");
 		}
 
 		return uClassPointer;
@@ -7549,7 +7549,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERASTATE_CAMACTOR_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CameraState_CamActor_X");
 		}
 
 		return uClassPointer;
@@ -7576,7 +7576,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CDN_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CDN_X");
 		}
 
 		return uClassPointer;
@@ -7599,7 +7599,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_HUD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.HUD_X");
 		}
 
 		return uClassPointer;
@@ -7632,7 +7632,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___CHEATMANAGER_X__RANDOMSLEEP_75FE9F6C45791A19D1B94AB8F65C595A));
+			uClassPointer = UObject::FindClass("Class ProjectX.__CheatManager_X__RandomSleep_75FE9F6C45791A19D1B94AB8F65C595A");
 		}
 
 		return uClassPointer;
@@ -7661,7 +7661,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DEBUGDRAWER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DebugDrawer_X");
 		}
 
 		return uClassPointer;
@@ -7697,7 +7697,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMELANSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameLanServer_X");
 		}
 
 		return uClassPointer;
@@ -7732,7 +7732,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_IONLINEGAMEHOST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.IOnlineGameHost_X");
 		}
 
 		return uClassPointer;
@@ -7797,7 +7797,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEJOINGAME_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameJoinGame_X");
 		}
 
 		return uClassPointer;
@@ -7864,7 +7864,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PREEXITEVENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PreExitEvent_X");
 		}
 
 		return uClassPointer;
@@ -7887,7 +7887,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EXPLOSION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Explosion_X");
 		}
 
 		return uClassPointer;
@@ -7916,7 +7916,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SEQACT_TRIGGERFXACTOR_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SeqAct_TriggerFXActor_X");
 		}
 
 		return uClassPointer;
@@ -7936,7 +7936,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMEINFO_MAPPROFILER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameInfo_MapProfiler_X");
 		}
 
 		return uClassPointer;
@@ -7963,7 +7963,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PRESETMUTATORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PresetMutators_X");
 		}
 
 		return uClassPointer;
@@ -8015,7 +8015,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLAYLISTSETTINGS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PlaylistSettings_X");
 		}
 
 		return uClassPointer;
@@ -8041,7 +8041,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GFXMODAL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GFxModal_X");
 		}
 
 		return uClassPointer;
@@ -8090,7 +8090,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GRI_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GRI_X");
 		}
 
 		return uClassPointer;
@@ -8139,7 +8139,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LANMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LanMessage_X");
 		}
 
 		return uClassPointer;
@@ -8164,7 +8164,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LANMESSAGE_HOSTQUERY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LanMessage_HostQuery_X");
 		}
 
 		return uClassPointer;
@@ -8190,7 +8190,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LANMESSAGE_HOSTRESPONSE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LanMessage_HostResponse_X");
 		}
 
 		return uClassPointer;
@@ -8214,7 +8214,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LANMESSAGE_PING_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LanMessage_Ping_X");
 		}
 
 		return uClassPointer;
@@ -8234,7 +8234,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATCHENDEDMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MatchEndedMessage_X");
 		}
 
 		return uClassPointer;
@@ -8265,7 +8265,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATERIALEFFECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MaterialEffect_X");
 		}
 
 		return uClassPointer;
@@ -8307,7 +8307,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EPICCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EpicConfig_X");
 		}
 
 		return uClassPointer;
@@ -8334,7 +8334,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINECLUBPROVIDER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineClubProvider_X");
 		}
 
 		return uClassPointer;
@@ -8368,7 +8368,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINECONFIGDISPATCHER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineConfigDispatcher_X");
 		}
 
 		return uClassPointer;
@@ -8394,7 +8394,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WEBCACHE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WebCache_X");
 		}
 
 		return uClassPointer;
@@ -8427,7 +8427,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WEBIMAGECACHE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WebImageCache_X");
 		}
 
 		return uClassPointer;
@@ -8462,7 +8462,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEWORDFILTER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameWordFilter_X");
 		}
 
 		return uClassPointer;
@@ -8496,7 +8496,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEWORDFILTERPROCESSOR_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameWordFilterProcessor_X");
 		}
 
 		return uClassPointer;
@@ -8525,7 +8525,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEPRIVILEGES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGamePrivileges_X");
 		}
 
 		return uClassPointer;
@@ -8569,7 +8569,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEREGIONS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameRegions_X");
 		}
 
 		return uClassPointer;
@@ -8631,7 +8631,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEINVITE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameInvite_X");
 		}
 
 		return uClassPointer;
@@ -8665,7 +8665,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEVOICE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameVoice_X");
 		}
 
 		return uClassPointer;
@@ -8699,7 +8699,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEPOPULATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGamePopulation_X");
 		}
 
 		return uClassPointer;
@@ -8736,7 +8736,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMELANBROWSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameLanBrowser_X");
 		}
 
 		return uClassPointer;
@@ -8794,7 +8794,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMESERVERBROWSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameServerBrowser_X");
 		}
 
 		return uClassPointer;
@@ -8840,7 +8840,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEMATCHMAKINGBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameMatchmakingBase_X");
 		}
 
 		return uClassPointer;
@@ -8891,7 +8891,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEPRIVATEMATCH_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGamePrivateMatch_X");
 		}
 
 		return uClassPointer;
@@ -8939,7 +8939,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEMATCHMAKING_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameMatchmaking_X");
 		}
 
 		return uClassPointer;
@@ -9006,7 +9006,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LANBROWSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LanBrowser_X");
 		}
 
 		return uClassPointer;
@@ -9038,7 +9038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_UDPLANBROWSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.UdpLanBrowser_X");
 		}
 
 		return uClassPointer;
@@ -9066,7 +9066,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SYSTEMMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SystemMetrics_X");
 		}
 
 		return uClassPointer;
@@ -9089,7 +9089,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAME_X__CHECKPSYNETCONNECTION_D0AA2383429A7FA1C79DA38DFC199D3C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGame_X__CheckPsyNetConnection_D0AA2383429A7FA1C79DA38DFC199D3C");
 		}
 
 		return uClassPointer;
@@ -9111,7 +9111,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETPUBLICIP_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetPublicIP_X");
 		}
 
 		return uClassPointer;
@@ -9132,7 +9132,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEVERSION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameVersion_X");
 		}
 
 		return uClassPointer;
@@ -9163,7 +9163,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_URLCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.UrlConfig_X");
 		}
 
 		return uClassPointer;
@@ -9185,7 +9185,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATEPLAYERPLAYLIST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdatePlayerPlaylist_X");
 		}
 
 		return uClassPointer;
@@ -9214,7 +9214,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMEDEDICATEDSERVERREGISTRATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameDedicatedServerRegistration_X");
 		}
 
 		return uClassPointer;
@@ -9261,7 +9261,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SERVERTOSERVERMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ServerToServerMessage_X");
 		}
 
 		return uClassPointer;
@@ -9282,7 +9282,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CONNECTIONINFOMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ConnectionInfoMessage_X");
 		}
 
 		return uClassPointer;
@@ -9308,7 +9308,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SERVERPLAYERTRACKER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ServerPlayerTracker_X");
 		}
 
 		return uClassPointer;
@@ -9344,7 +9344,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERPERMISSIONS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerPermissions_X");
 		}
 
 		return uClassPointer;
@@ -9373,7 +9373,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CACHETIMER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CacheTimer_X");
 		}
 
 		return uClassPointer;
@@ -9404,7 +9404,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATCHRECORDER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MatchRecorder_X");
 		}
 
 		return uClassPointer;
@@ -9456,7 +9456,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATCHDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MatchData_X");
 		}
 
 		return uClassPointer;
@@ -9479,7 +9479,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CHECKREPLACEMENTDEDICATEDSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_CheckReplacementDedicatedServer_X");
 		}
 
 		return uClassPointer;
@@ -9504,7 +9504,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_ADDQUITTER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_AddQuitter_X");
 		}
 
 		return uClassPointer;
@@ -9528,7 +9528,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_REMOVEQUITTER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RemoveQuitter_X");
 		}
 
 		return uClassPointer;
@@ -9550,7 +9550,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_RECORDMATCH_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RecordMatch_X");
 		}
 
 		return uClassPointer;
@@ -9574,7 +9574,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATCHLOG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MatchLog_X");
 		}
 
 		return uClassPointer;
@@ -9606,7 +9606,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLANFORGERESERVATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClanforgeReservation_X");
 		}
 
 		return uClassPointer;
@@ -9635,7 +9635,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SERVERMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ServerMetrics_X");
 		}
 
 		return uClassPointer;
@@ -9659,7 +9659,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_DEACTIVATEGAMESERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_DeactivateGameServer_X");
 		}
 
 		return uClassPointer;
@@ -9681,7 +9681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SETSERVERNOTJOINABLE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SetServerNotJoinable_X");
 		}
 
 		return uClassPointer;
@@ -9720,7 +9720,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATEGAMESERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdateGameServer_X");
 		}
 
 		return uClassPointer;
@@ -9770,7 +9770,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CREATEGAMESERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_CreateGameServer_X");
 		}
 
 		return uClassPointer;
@@ -9833,7 +9833,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYERRORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyErrors_X");
 		}
 
 		return uClassPointer;
@@ -9856,7 +9856,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_FINDSERVERTASK_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.FindServerTask_X");
 		}
 
 		return uClassPointer;
@@ -9885,7 +9885,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSFULLMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsFullMessage_X");
 		}
 
 		return uClassPointer;
@@ -9905,7 +9905,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSTEAMFULLMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsTeamFullMessage_X");
 		}
 
 		return uClassPointer;
@@ -9925,7 +9925,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSWAITINGMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsWaitingMessage_X");
 		}
 
 		return uClassPointer;
@@ -9951,7 +9951,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSREADYMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsReadyMessage_X");
 		}
 
 		return uClassPointer;
@@ -9976,7 +9976,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSTIMEDOUTMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsTimedOutMessage_X");
 		}
 
 		return uClassPointer;
@@ -9996,7 +9996,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSPRIVATEMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsPrivateMessage_X");
 		}
 
 		return uClassPointer;
@@ -10017,7 +10017,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSPASSWORDMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsPasswordMessage_X");
 		}
 
 		return uClassPointer;
@@ -10038,7 +10038,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSWRONGPLAYLISTMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsWrongPlaylistMessage_X");
 		}
 
 		return uClassPointer;
@@ -10058,7 +10058,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSWRONGRANKEDMATCHMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsWrongRankedMatchMessage_X");
 		}
 
 		return uClassPointer;
@@ -10078,7 +10078,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSKEYSFAILEDMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsKeysFailedMessage_X");
 		}
 
 		return uClassPointer;
@@ -10098,7 +10098,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONCROSSPLAYDISABLEDMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationCrossplayDisabledMessage_X");
 		}
 
 		return uClassPointer;
@@ -10119,7 +10119,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSMAXPLAYERSMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsMaxPlayersMessage_X");
 		}
 
 		return uClassPointer;
@@ -10141,7 +10141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PINGMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PingMessage_X");
 		}
 
 		return uClassPointer;
@@ -10169,7 +10169,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_KEYSBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_KeysBase_X");
 		}
 
 		return uClassPointer;
@@ -10191,7 +10191,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GENERATEKEYS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GenerateKeys_X");
 		}
 
 		return uClassPointer;
@@ -10211,7 +10211,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CANCELJOINMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CancelJoinMessage_X");
 		}
 
 		return uClassPointer;
@@ -10233,7 +10233,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATCHMAKINGMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MatchmakingMetrics_X");
 		}
 
 		return uClassPointer;
@@ -10267,7 +10267,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DSPENDINGMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DSPendingMessage_X");
 		}
 
 		return uClassPointer;
@@ -10291,7 +10291,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DSR_DSMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DSR_DSMessage_X");
 		}
 
 		return uClassPointer;
@@ -10311,7 +10311,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsMetrics_X");
 		}
 
 		return uClassPointer;
@@ -10376,7 +10376,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DSR_CLIENTMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DSR_ClientMessage_X");
 		}
 
 		return uClassPointer;
@@ -10396,7 +10396,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_INITIALSERVERTOCLIENTMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.InitialServerToClientMessage_X");
 		}
 
 		return uClassPointer;
@@ -10420,7 +10420,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DSR_DSTODSMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DSR_DSToDSMessage_X");
 		}
 
 		return uClassPointer;
@@ -10443,7 +10443,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SERVERTOSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ServerToServer_X");
 		}
 
 		return uClassPointer;
@@ -10465,7 +10465,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETBEACON_X__SENDMESSAGETOSERVER_E36D155C4A3A2377962CF583D760C221));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetBeacon_X__SendMessageToServer_E36D155C4A3A2377962CF583D760C221");
 		}
 
 		return uClassPointer;
@@ -10490,7 +10490,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_RELAYTOSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RelayToServer_X");
 		}
 
 		return uClassPointer;
@@ -10511,7 +10511,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETBEACON_X__SENDMESSAGETOCLIENTS_25ADE5B945FF7AF0FDC8ED9A22C4F7FE));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetBeacon_X__SendMessageToClients_25ADE5B945FF7AF0FDC8ED9A22C4F7FE");
 		}
 
 		return uClassPointer;
@@ -10532,7 +10532,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_QUEUEDOFFLINEMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.QueuedOfflineMessage_X");
 		}
 
 		return uClassPointer;
@@ -10560,7 +10560,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_RELAYTOCLIENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RelayToClient_X");
 		}
 
 		return uClassPointer;
@@ -10581,7 +10581,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_DSRESERVATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_DSReservation_X");
 		}
 
 		return uClassPointer;
@@ -10605,7 +10605,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICEPROVIDER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetServiceProvider_X");
 		}
 
 		return uClassPointer;
@@ -10643,7 +10643,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMELANRESERVATIONS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameLanReservations_X");
 		}
 
 		return uClassPointer;
@@ -10683,7 +10683,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BUGMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BugMetrics_X");
 		}
 
 		return uClassPointer;
@@ -10712,7 +10712,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETLEADERBOARDVALUEFORUSERBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetLeaderboardValueForUserBase_X");
 		}
 
 		return uClassPointer;
@@ -10734,7 +10734,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETSKILLLEADERBOARDVALUEFORUSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetSkillLeaderboardValueForUser_X");
 		}
 
 		return uClassPointer;
@@ -10756,7 +10756,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETLEADERBOARDVALUEFORUSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetLeaderboardValueForUser_X");
 		}
 
 		return uClassPointer;
@@ -10780,7 +10780,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETLEADERBOARDBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetLeaderboardBase_X");
 		}
 
 		return uClassPointer;
@@ -10802,7 +10802,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETSKILLLEADERBOARD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetSkillLeaderboard_X");
 		}
 
 		return uClassPointer;
@@ -10824,7 +10824,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETLEADERBOARD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetLeaderboard_X");
 		}
 
 		return uClassPointer;
@@ -10884,7 +10884,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERFRIENDS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerFriends_X");
 		}
 
 		return uClassPointer;
@@ -10990,7 +10990,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETLEADERBOARDRANKFORUSERSBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetLeaderboardRankForUsersBase_X");
 		}
 
 		return uClassPointer;
@@ -11012,7 +11012,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETSKILLLEADERBOARDRANKFORUSERS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetSkillLeaderboardRankForUsers_X");
 		}
 
 		return uClassPointer;
@@ -11034,7 +11034,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETLEADERBOARDRANKFORUSERS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetLeaderboardRankForUsers_X");
 		}
 
 		return uClassPointer;
@@ -11065,7 +11065,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CHECKRESERVATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CheckReservation_X");
 		}
 
 		return uClassPointer;
@@ -11107,7 +11107,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_REGIONPING_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RegionPing_X");
 		}
 
 		return uClassPointer;
@@ -11128,7 +11128,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PLAYERCANCELMATCHMAKING_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PlayerCancelMatchmaking_X");
 		}
 
 		return uClassPointer;
@@ -11156,7 +11156,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_STARTMATCHMAKING_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_StartMatchmaking_X");
 		}
 
 		return uClassPointer;
@@ -11220,7 +11220,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTIES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Parties_X");
 		}
 
 		return uClassPointer;
@@ -11359,7 +11359,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEMATCHMAKING_X__ONRECEIVEGAMESERVER_A24AF40948E071348B8CFFBC155F41C1));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__OnReceiveGameServer_A24AF40948E071348B8CFFBC155F41C1");
 		}
 
 		return uClassPointer;
@@ -11381,7 +11381,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEMATCHMAKING_X__ADDRECOMMENDEDSERVERS_8A20925143BFDF5FB9C9A2A57F2252F3));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__AddRecommendedServers_8A20925143BFDF5FB9C9A2A57F2252F3");
 		}
 
 		return uClassPointer;
@@ -11404,7 +11404,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SUPERREGION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SuperRegion_X");
 		}
 
 		return uClassPointer;
@@ -11426,7 +11426,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_REGIONCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RegionConfig_X");
 		}
 
 		return uClassPointer;
@@ -11457,7 +11457,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_REGION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.Region_X");
 		}
 
 		return uClassPointer;
@@ -11478,7 +11478,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEMATCHMAKING_X__GETSUBREGIONPINGS_972782DC4996DBC84B18CCA31F5A3E50));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__GetSubRegionPings_972782DC4996DBC84B18CCA31F5A3E50");
 		}
 
 		return uClassPointer;
@@ -11500,7 +11500,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_X");
 		}
 
 		return uClassPointer;
@@ -11524,7 +11524,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_SEARCHSTATUS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_SearchStatus_X");
 		}
 
 		return uClassPointer;
@@ -11547,7 +11547,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_LOBBYSETTINGS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_LobbySettings_X");
 		}
 
 		return uClassPointer;
@@ -11571,7 +11571,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_KICK_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_Kick_X");
 		}
 
 		return uClassPointer;
@@ -11597,7 +11597,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_LOCALPLAYERS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_LocalPlayers_X");
 		}
 
 		return uClassPointer;
@@ -11625,7 +11625,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_MATCHMAKINGAVAILABILITY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_MatchmakingAvailability_X");
 		}
 
 		return uClassPointer;
@@ -11648,7 +11648,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_JOINGAME_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_JoinGame_X");
 		}
 
 		return uClassPointer;
@@ -11671,7 +11671,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_PARTYMEMBERJOINGAME_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_PartyMemberJoinGame_X");
 		}
 
 		return uClassPointer;
@@ -11695,7 +11695,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_DISABLECROSSPLAY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_DisableCrossPlay_X");
 		}
 
 		return uClassPointer;
@@ -11719,7 +11719,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_CROSSPLAYTEXTCHAT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_CrossPlayTextChat_X");
 		}
 
 		return uClassPointer;
@@ -11742,7 +11742,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_INVITETOTRADE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_InviteToTrade_X");
 		}
 
 		return uClassPointer;
@@ -11766,7 +11766,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_ACCEPTINVITETOTRADE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_AcceptInviteToTrade_X");
 		}
 
 		return uClassPointer;
@@ -11790,7 +11790,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_PLAYERTRADECOMPLETE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_PlayerTradeComplete_X");
 		}
 
 		return uClassPointer;
@@ -11812,7 +11812,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_SETPLATFORMPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_SetPlatformParty_X");
 		}
 
 		return uClassPointer;
@@ -11833,7 +11833,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMetrics_X");
 		}
 
 		return uClassPointer;
@@ -11866,7 +11866,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__JOINPARTY_4267F93B4302D2E26FD967A6D33A615D));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__JoinParty_4267F93B4302D2E26FD967A6D33A615D");
 		}
 
 		return uClassPointer;
@@ -11888,7 +11888,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__HANDLECONFIRMJOINGAME_119CB1434528042B0EACB59573285303));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_119CB1434528042B0EACB59573285303");
 		}
 
 		return uClassPointer;
@@ -11910,7 +11910,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__HANDLEJOINLOBBY_B3A3D7094521701F8A029E82257274A0));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleJoinLobby_B3A3D7094521701F8A029E82257274A0");
 		}
 
 		return uClassPointer;
@@ -11931,7 +11931,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYJOINEDEVENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyJoinedEvent_X");
 		}
 
 		return uClassPointer;
@@ -11952,7 +11952,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__UPDATEPARTYINFO_3DF5334B4FB29E0C5FD06992AEDA77A1));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1");
 		}
 
 		return uClassPointer;
@@ -11975,7 +11975,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYPLATFORMSESSION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyPlatformSession_X");
 		}
 
 		return uClassPointer;
@@ -12002,7 +12002,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLIENTRESERVATIONMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClientReservationMessage_X");
 		}
 
 		return uClassPointer;
@@ -12025,7 +12025,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__BROADCASTALLLOCALPLAYERS_54E680BD4A9113C01FE875823F61D2DB));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__BroadcastAllLocalPlayers_54E680BD4A9113C01FE875823F61D2DB");
 		}
 
 		return uClassPointer;
@@ -12047,7 +12047,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyConfig_X");
 		}
 
 		return uClassPointer;
@@ -12069,7 +12069,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_READYTOTRADE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_ReadyToTrade_X");
 		}
 
 		return uClassPointer;
@@ -12092,7 +12092,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERREGIONRESTRICTIONS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerRegionRestrictions_X");
 		}
 
 		return uClassPointer;
@@ -12118,7 +12118,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_INVITETOTRADEERROR_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_InviteToTradeError_X");
 		}
 
 		return uClassPointer;
@@ -12140,7 +12140,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__GETPLAYERSWITHPRIMARYMEMBERID_06F69A3B4423E839AB3C3CB3EC2A482C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__GetPlayersWithPrimaryMemberID_06F69A3B4423E839AB3C3CB3EC2A482C");
 		}
 
 		return uClassPointer;
@@ -12162,7 +12162,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__HASMULTIPLEPLATFORMS_3B75D06043CDE9612EA477B3E949C98A));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HasMultiplePlatforms_3B75D06043CDE9612EA477B3E949C98A");
 		}
 
 		return uClassPointer;
@@ -12185,7 +12185,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__HANDLECLIENTRESERVATIONMESSAGE_5A4FD8B44E70E54AA7699A993E122217));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleClientReservationMessage_5A4FD8B44E70E54AA7699A993E122217");
 		}
 
 		return uClassPointer;
@@ -12207,7 +12207,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__HANDLECONFIRMJOINGAME_CONNECTIONVALID_876B325A4B12ACDC2AD5F3872D47FBF7));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_876B325A4B12ACDC2AD5F3872D47FBF7");
 		}
 
 		return uClassPointer;
@@ -12232,7 +12232,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEPARTY_X__CREATEPARTYINTERNAL_D5D83FFF41D88978A8C829B1D0CFB996));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__CreatePartyInternal_D5D83FFF41D88978A8C829B1D0CFB996");
 		}
 
 		return uClassPointer;
@@ -12253,7 +12253,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYSEQUENCE_INVITEDTOPSYNETPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartySequence_InvitedToPsyNetParty_X");
 		}
 
 		return uClassPointer;
@@ -12278,7 +12278,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYSEQUENCE_INVITEDTOPLATFORMPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartySequence_InvitedToPlatformParty_X");
 		}
 
 		return uClassPointer;
@@ -12302,7 +12302,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYSEQUENCE_PSYNETPARTYUPGRADE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartySequence_PsyNetPartyUpgrade_X");
 		}
 
 		return uClassPointer;
@@ -12329,7 +12329,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RANKEDCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RankedConfig_X");
 		}
 
 		return uClassPointer;
@@ -12352,7 +12352,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DOWNLOADEDPLAYLISTSDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DownloadedPlaylistsData_X");
 		}
 
 		return uClassPointer;
@@ -12373,7 +12373,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETPOPULATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetPopulation_X");
 		}
 
 		return uClassPointer;
@@ -12394,7 +12394,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PLAYERSEARCHPRIVATEMATCH_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PlayerSearchPrivateMatch_X");
 		}
 
 		return uClassPointer;
@@ -12415,7 +12415,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PLAYERCANCELPRIVATEMATCH_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PlayerCancelPrivateMatch_X");
 		}
 
 		return uClassPointer;
@@ -12437,7 +12437,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETGAMESERVERPINGLIST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetGameServerPingList_X");
 		}
 
 		return uClassPointer;
@@ -12460,7 +12460,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_REGIONPINGMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RegionPingMessage_X");
 		}
 
 		return uClassPointer;
@@ -12486,7 +12486,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_REGIONPINGDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RegionPingData_X");
 		}
 
 		return uClassPointer;
@@ -12514,7 +12514,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_REGIONPINGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RegionPinger_X");
 		}
 
 		return uClassPointer;
@@ -12542,7 +12542,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEGAMERESERVATIONS_ASSIGNTEAMSBYPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineGameReservations_AssignTeamsByParty_X");
 		}
 
 		return uClassPointer;
@@ -12566,7 +12566,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_RESERVATIONBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_ReservationBase_X");
 		}
 
 		return uClassPointer;
@@ -12591,7 +12591,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_NEWGAME_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_NewGame_X");
 		}
 
 		return uClassPointer;
@@ -12613,7 +12613,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_BACKFILL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_Backfill_X");
 		}
 
 		return uClassPointer;
@@ -12634,7 +12634,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_CREATEPRIVATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_CreatePrivate_X");
 		}
 
 		return uClassPointer;
@@ -12655,7 +12655,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_JOINPRIVATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_JoinPrivate_X");
 		}
 
 		return uClassPointer;
@@ -12675,7 +12675,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_FRIENDJOIN_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_FriendJoin_X");
 		}
 
 		return uClassPointer;
@@ -12695,7 +12695,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_RECONNECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_Reconnect_X");
 		}
 
 		return uClassPointer;
@@ -12721,7 +12721,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATCHINFOMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MatchInfoMessage_X");
 		}
 
 		return uClassPointer;
@@ -12746,7 +12746,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MIGRATIONSTARTEDMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MigrationStartedMessage_X");
 		}
 
 		return uClassPointer;
@@ -12769,7 +12769,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MAPPREFSCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MapPrefsConfig_X");
 		}
 
 		return uClassPointer;
@@ -12792,7 +12792,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PRI_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PRI_X");
 		}
 
 		return uClassPointer;
@@ -12828,7 +12828,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLUBSETTINGS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClubSettings_X");
 		}
 
 		return uClassPointer;
@@ -12857,7 +12857,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLUBDETAILS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClubDetails_X");
 		}
 
 		return uClassPointer;
@@ -12887,7 +12887,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASYNCRESULT__CLUBDETAILS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TAsyncResult__ClubDetails_X");
 		}
 
 		return uClassPointer;
@@ -12919,7 +12919,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMERESERVATIONS_X__RECORDRESERVATION_1682DD864AA0004BA783DBA20F901ABF));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__RecordReservation_1682DD864AA0004BA783DBA20F901ABF");
 		}
 
 		return uClassPointer;
@@ -12942,7 +12942,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMERESERVATIONS_X__SETPLAYERSWITHMIGRATIONDATA_721B106D40049D9FCA705A8966F96333));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__SetPlayersWithMigrationData_721B106D40049D9FCA705A8966F96333");
 		}
 
 		return uClassPointer;
@@ -12966,7 +12966,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMERESERVATIONS_X__GETMIGRATIONRESERVATIONDATA_45A28BA04CE3CA817E7DC894875AF9F9));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__GetMigrationReservationData_45A28BA04CE3CA817E7DC894875AF9F9");
 		}
 
 		return uClassPointer;
@@ -12991,7 +12991,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CUSTOMGAMESERVERGET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_CustomGameServerGet_X");
 		}
 
 		return uClassPointer;
@@ -13015,7 +13015,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLAYLISTSKILLCACHE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PlaylistSkillCache_X");
 		}
 
 		return uClassPointer;
@@ -13045,7 +13045,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETPLAYERSKILL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetPlayerSkill_X");
 		}
 
 		return uClassPointer;
@@ -13074,7 +13074,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_RECORDMATCHRESULTS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RecordMatchResults_X");
 		}
 
 		return uClassPointer;
@@ -13106,7 +13106,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATESKILLS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdateSkills_X");
 		}
 
 		return uClassPointer;
@@ -13147,7 +13147,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_MATCHPLAYERDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.MatchPlayerData_X");
 		}
 
 		return uClassPointer;
@@ -13169,7 +13169,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SYNCEDSKILLDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SyncedSkillData_X");
 		}
 
 		return uClassPointer;
@@ -13192,7 +13192,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATELEADERBOARD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdateLeaderboard_X");
 		}
 
 		return uClassPointer;
@@ -13222,7 +13222,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WORDFILTERCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WordFilterConfig_X");
 		}
 
 		return uClassPointer;
@@ -13243,7 +13243,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEGAMEWORDFILTER_X__INTERNALSANITIZE_3DB414634D549DDA8B162E96D2C29219));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameWordFilter_X__InternalSanitize_3DB414634D549DDA8B162E96D2C29219");
 		}
 
 		return uClassPointer;
@@ -13266,7 +13266,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETWORDFILTER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetWordFilter_X");
 		}
 
 		return uClassPointer;
@@ -13301,7 +13301,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BANMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BanMessage_X");
 		}
 
 		return uClassPointer;
@@ -13347,7 +13347,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_LOGINAUTHPLAYER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_LoginAuthPlayer_X");
 		}
 
 		return uClassPointer;
@@ -13380,7 +13380,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERSTORAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerStorage_X");
 		}
 
 		return uClassPointer;
@@ -13420,7 +13420,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EPICERRORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EpicErrors_X");
 		}
 
 		return uClassPointer;
@@ -13441,7 +13441,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYTAGCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyTagComponent_X");
 		}
 
 		return uClassPointer;
@@ -13467,7 +13467,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYTAGCHECKRESULT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyTagCheckResult_X");
 		}
 
 		return uClassPointer;
@@ -13497,7 +13497,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CHECKPSYTAG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_CheckPsyTag_X");
 		}
 
 		return uClassPointer;
@@ -13523,7 +13523,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CLAIMPSYTAG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ClaimPsyTag_X");
 		}
 
 		return uClassPointer;
@@ -13547,7 +13547,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASYNCRESULT__PSYTAGCHECKRESULT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TAsyncResult__PsyTagCheckResult_X");
 		}
 
 		return uClassPointer;
@@ -13582,7 +13582,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_FRIENDCHATRECEIVED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_FriendChatReceived_X");
 		}
 
 		return uClassPointer;
@@ -13604,7 +13604,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_FRIENDPSYTAGUPDATED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_FriendPsyTagUpdated_X");
 		}
 
 		return uClassPointer;
@@ -13625,7 +13625,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_OSSCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OSSConfig_X");
 		}
 
 		return uClassPointer;
@@ -13647,7 +13647,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PSYNETSENDINDIVIDUALCHAT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PsyNetSendIndividualChat_X");
 		}
 
 		return uClassPointer;
@@ -13677,7 +13677,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RETRYDELAYER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RetryDelayer_X");
 		}
 
 		return uClassPointer;
@@ -13706,7 +13706,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PSYNETREADFRIENDS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PsyNetReadFriends_X");
 		}
 
 		return uClassPointer;
@@ -13727,7 +13727,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETFRIENDS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetFriends_X");
 		}
 
 		return uClassPointer;
@@ -13748,7 +13748,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERFRIENDS_X__UNBLOCKPLAYER_F91F356640FD87DDB7234EA96C3CBBF8));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__UnblockPlayer_F91F356640FD87DDB7234EA96C3CBBF8");
 		}
 
 		return uClassPointer;
@@ -13771,7 +13771,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UNBLOCKPLAYER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UnblockPlayer_X");
 		}
 
 		return uClassPointer;
@@ -13795,7 +13795,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERFRIENDS_X__BLOCKPLAYER_B69C4F9042E51C052ACA999B8AE72657));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__BlockPlayer_B69C4F9042E51C052ACA999B8AE72657");
 		}
 
 		return uClassPointer;
@@ -13818,7 +13818,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_BLOCKPLAYER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_BlockPlayer_X");
 		}
 
 		return uClassPointer;
@@ -13841,7 +13841,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETBLOCKLIST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetBlockList_X");
 		}
 
 		return uClassPointer;
@@ -13864,7 +13864,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERFRIENDS_X__DOWNLOADBLOCKEDLISTATTEMPT_9601B40E44051C27D5BCC193338281E7));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedListAttempt_9601B40E44051C27D5BCC193338281E7");
 		}
 
 		return uClassPointer;
@@ -13886,7 +13886,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERFRIENDS_X__DOWNLOADBLOCKEDLIST_52C2FCAA43F98EBB71E8EC9BC7843474));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedList_52C2FCAA43F98EBB71E8EC9BC7843474");
 		}
 
 		return uClassPointer;
@@ -13908,7 +13908,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORMFRIENDS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PlatformFriends_X");
 		}
 
 		return uClassPointer;
@@ -13928,7 +13928,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EPICFRIENDS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EpicFriends_X");
 		}
 
 		return uClassPointer;
@@ -13956,7 +13956,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_POSTPROCESSMANAGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PostProcessManager_X");
 		}
 
 		return uClassPointer;
@@ -13998,7 +13998,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetMetrics_X");
 		}
 
 		return uClassPointer;
@@ -14024,7 +14024,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___RPCQUEUE_X__CREATEBATCH_9DF29BA749740FA4353354923B531BCB));
+			uClassPointer = UObject::FindClass("Class ProjectX.__RPCQueue_X__CreateBatch_9DF29BA749740FA4353354923B531BCB");
 		}
 
 		return uClassPointer;
@@ -14049,7 +14049,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASYNCRESULT__PSYNETMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TAsyncResult__PsyNetMessage_X");
 		}
 
 		return uClassPointer;
@@ -14082,7 +14082,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_REPORTCHEATER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ReportCheater_X");
 		}
 
 		return uClassPointer;
@@ -14105,7 +14105,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PRIMARYAUTHLOGGEDIN_TA));
+			uClassPointer = UObject::FindClass("Class ProjectX.PrimaryAuthLoggedIn_TA");
 		}
 
 		return uClassPointer;
@@ -14125,7 +14125,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RESERVATIONSSETTINGUPMATCHMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ReservationsSettingUpMatchMessage_X");
 		}
 
 		return uClassPointer;
@@ -14146,7 +14146,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___RPC_X__CREATETASK_DAFA7BF54909C332F115EDBD60C44F82));
+			uClassPointer = UObject::FindClass("Class ProjectX.__RPC_X__CreateTask_DAFA7BF54909C332F115EDBD60C44F82");
 		}
 
 		return uClassPointer;
@@ -14175,7 +14175,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_TEST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_Test_X");
 		}
 
 		return uClassPointer;
@@ -14208,7 +14208,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TESTSHELPER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TestsHelper_X");
 		}
 
 		return uClassPointer;
@@ -14237,7 +14237,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SEQACT_SPAWNARCHETYPE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SeqAct_SpawnArchetype_X");
 		}
 
 		return uClassPointer;
@@ -14261,7 +14261,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_TESTPLAYERID_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_TestPlayerID_X");
 		}
 
 		return uClassPointer;
@@ -14284,7 +14284,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___MATCHRECORDER_X__GETPLAYERDATA_AAC654674F40C934B161689D8149E5ED));
+			uClassPointer = UObject::FindClass("Class ProjectX.__MatchRecorder_X__GetPlayerData_AAC654674F40C934B161689D8149E5ED");
 		}
 
 		return uClassPointer;
@@ -14307,7 +14307,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LOGINRESPONSE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LoginResponse_X");
 		}
 
 		return uClassPointer;
@@ -14327,7 +14327,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODEBASE));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetModeBase");
 		}
 
 		return uClassPointer;
@@ -14347,7 +14347,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_NETWORKED));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_Networked");
 		}
 
 		return uClassPointer;
@@ -14367,7 +14367,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PAUSEMETRICSSTATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PauseMetricsState_X");
 		}
 
 		return uClassPointer;
@@ -14388,7 +14388,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___WEBCACHE_X__DOWNLOADDATA_416DF744461F6C151E97D895CF775593));
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebCache_X__DownloadData_416DF744461F6C151E97D895CF775593");
 		}
 
 		return uClassPointer;
@@ -14410,7 +14410,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LOCALCACHETESTS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LocalCacheTests_X");
 		}
 
 		return uClassPointer;
@@ -14435,7 +14435,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SKELCONTROLBLENDTARGETCOMPONENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SkelControlBlendTargetComponent_X");
 		}
 
 		return uClassPointer;
@@ -14466,7 +14466,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_APRILCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AprilConfig_X");
 		}
 
 		return uClassPointer;
@@ -14487,7 +14487,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CAMERASTATE_CAMACTORCINEMATIC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CameraState_CamActorCinematic_X");
 		}
 
 		return uClassPointer;
@@ -14510,7 +14510,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_RESERVATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_Reservation_X");
 		}
 
 		return uClassPointer;
@@ -14532,7 +14532,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_RESERVATION2_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_Reservation2_X");
 		}
 
 		return uClassPointer;
@@ -14553,7 +14553,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_RESERVATIONHEARTBEAT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ReservationHeartbeat_X");
 		}
 
 		return uClassPointer;
@@ -14574,7 +14574,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___CROSSPLAYCONFIG_X__GETDISABLEDCROSSPLAYGROUP_250388F4412DA4655AE50CA535579B11));
+			uClassPointer = UObject::FindClass("Class ProjectX.__CrossplayConfig_X__GetDisabledCrossplayGroup_250388F4412DA4655AE50CA535579B11");
 		}
 
 		return uClassPointer;
@@ -14609,7 +14609,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINERESOURCE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineResource_X");
 		}
 
 		return uClassPointer;
@@ -14642,7 +14642,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETGENERICDATAALL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetGenericDataAll_X");
 		}
 
 		return uClassPointer;
@@ -14664,7 +14664,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETPLAYERTITLES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetPlayerTitles_X");
 		}
 
 		return uClassPointer;
@@ -14691,7 +14691,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_REPORTLOWFPS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ReportLowFPS_X");
 		}
 
 		return uClassPointer;
@@ -14721,7 +14721,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SETPLAYERSKILL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SetPlayerSkill_X");
 		}
 
 		return uClassPointer;
@@ -14747,7 +14747,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SETPLAYERSKILLTIER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SetPlayerSkillTier_X");
 		}
 
 		return uClassPointer;
@@ -14772,7 +14772,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETPLAYERPERMISSIONS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetPlayerPermissions_X");
 		}
 
 		return uClassPointer;
@@ -14797,7 +14797,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PAUSESTATICDATASYNC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PauseStaticDataSync_X");
 		}
 
 		return uClassPointer;
@@ -14818,7 +14818,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_STOPWATCH));
+			uClassPointer = UObject::FindClass("Class ProjectX.Stopwatch");
 		}
 
 		return uClassPointer;
@@ -14840,7 +14840,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSTATICDATAMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetStaticDataMetrics_X");
 		}
 
 		return uClassPointer;
@@ -14864,7 +14864,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WEBCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WebConfig_X");
 		}
 
 		return uClassPointer;
@@ -14885,7 +14885,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_ADDPLAYERTOROLE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_AddPlayerToRole_X");
 		}
 
 		return uClassPointer;
@@ -14907,7 +14907,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_REMOVEPLAYERFROMROLE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RemovePlayerFromRole_X");
 		}
 
 		return uClassPointer;
@@ -14930,7 +14930,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SETSEASONREWARD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SetSeasonReward_X");
 		}
 
 		return uClassPointer;
@@ -14955,7 +14955,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASYNCRESULT__ARRAY_LANSERVERRECORD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TAsyncResult__array_LanServerRecord_X");
 		}
 
 		return uClassPointer;
@@ -14992,7 +14992,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ADHOCBROWSER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AdHocBrowser_X");
 		}
 
 		return uClassPointer;
@@ -15023,7 +15023,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LANSERVERRECORD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LanServerRecord_X");
 		}
 
 		return uClassPointer;
@@ -15046,7 +15046,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ADHOCBROWSER_X__CREATESERVER_28852C4049CA922DE8A338AF24B71C6B));
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__CreateServer_28852C4049CA922DE8A338AF24B71C6B");
 		}
 
 		return uClassPointer;
@@ -15070,7 +15070,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ADHOCBROWSER_X__CREATEERRORDELEGATE_A2A668AC406893D8FACA04AD17DF8C4C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__CreateErrorDelegate_A2A668AC406893D8FACA04AD17DF8C4C");
 		}
 
 		return uClassPointer;
@@ -15095,7 +15095,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ADHOCBROWSER_X__JOINSERVER_1730AE65416B73F8A0CEFE8B6EB562DA));
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__JoinServer_1730AE65416B73F8A0CEFE8B6EB562DA");
 		}
 
 		return uClassPointer;
@@ -15120,7 +15120,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ADHOCINTERFACE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AdHocInterface_X");
 		}
 
 		return uClassPointer;
@@ -15146,7 +15146,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ADHOCINTERFACE_X__ENABLEADHOC_9837C0FB459F7F5BA4E66695128018DE));
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocInterface_X__EnableAdHoc_9837C0FB459F7F5BA4E66695128018DE");
 		}
 
 		return uClassPointer;
@@ -15170,7 +15170,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ADHOCINTERFACE_X__DISABLEADHOC_1DD1605349BD3FC27083B790CC59469B));
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocInterface_X__DisableAdHoc_1DD1605349BD3FC27083B790CC59469B");
 		}
 
 		return uClassPointer;
@@ -15207,7 +15207,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BLOGTILE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BlogTile_X");
 		}
 
 		return uClassPointer;
@@ -15231,7 +15231,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_COUNTTRIGGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.CountTrigger_X");
 		}
 
 		return uClassPointer;
@@ -15259,7 +15259,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGEQUEUE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessageQueue_X");
 		}
 
 		return uClassPointer;
@@ -15290,7 +15290,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyBase_X");
 		}
 
 		return uClassPointer;
@@ -15313,7 +15313,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyMessage_X");
 		}
 
 		return uClassPointer;
@@ -15335,7 +15335,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PARTYMESSAGEQUEUE_X__SENDMESSAGE_3C4DCC8C49295DC7ADB4F295252E9916));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartyMessageQueue_X__SendMessage_3C4DCC8C49295DC7ADB4F295252E9916");
 		}
 
 		return uClassPointer;
@@ -15366,7 +15366,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETCHANNEL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetChannel_X");
 		}
 
 		return uClassPointer;
@@ -15402,7 +15402,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYSEQUENCE_CREATEPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartySequence_CreateParty_X");
 		}
 
 		return uClassPointer;
@@ -15428,7 +15428,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYSEQUENCE_JOINPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartySequence_JoinParty_X");
 		}
 
 		return uClassPointer;
@@ -15457,7 +15457,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYSEQUENCE_LEAVEPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartySequence_LeaveParty_X");
 		}
 
 		return uClassPointer;
@@ -15479,7 +15479,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYCHAT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyChat_X");
 		}
 
 		return uClassPointer;
@@ -15503,7 +15503,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYCHANGEOWNER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyChangeOwner_X");
 		}
 
 		return uClassPointer;
@@ -15524,7 +15524,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYSEQUENCE_INVITETOPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartySequence_InviteToParty_X");
 		}
 
 		return uClassPointer;
@@ -15550,7 +15550,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYKICKMEMBER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyKickMember_X");
 		}
 
 		return uClassPointer;
@@ -15574,7 +15574,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYINFO_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyInfo_X");
 		}
 
 		return uClassPointer;
@@ -15601,7 +15601,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_Party_X");
 		}
 
 		return uClassPointer;
@@ -15621,7 +15621,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYUSERINVITED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartyUserInvited_X");
 		}
 
 		return uClassPointer;
@@ -15641,7 +15641,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYSYSTEM_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartySystem_X");
 		}
 
 		return uClassPointer;
@@ -15661,7 +15661,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYUSERJOINED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartyUserJoined_X");
 		}
 
 		return uClassPointer;
@@ -15688,7 +15688,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYUSERKICKED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartyUserKicked_X");
 		}
 
 		return uClassPointer;
@@ -15708,7 +15708,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYUSERLEFT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartyUserLeft_X");
 		}
 
 		return uClassPointer;
@@ -15728,7 +15728,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYUSERDISCONNECTED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartyUserDisconnected_X");
 		}
 
 		return uClassPointer;
@@ -15754,7 +15754,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYOWNERCHANGED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartyOwnerChanged_X");
 		}
 
 		return uClassPointer;
@@ -15774,7 +15774,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PARTYCHAT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PartyChat_X");
 		}
 
 		return uClassPointer;
@@ -15801,7 +15801,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PERCONMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PerConMetrics_X");
 		}
 
 		return uClassPointer;
@@ -15843,7 +15843,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETREQUESTQUE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetRequestQue_X");
 		}
 
 		return uClassPointer;
@@ -15870,7 +15870,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_DUPLICATELOGIN_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_DuplicateLogin_X");
 		}
 
 		return uClassPointer;
@@ -15891,7 +15891,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETCONNECTION_X__PROCESSSERVICECALL_A2C0DD35442BDDDB1BFDC2AFA14C8B31));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetConnection_X__ProcessServiceCall_A2C0DD35442BDDDB1BFDC2AFA14C8B31");
 		}
 
 		return uClassPointer;
@@ -15914,7 +15914,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETMESSENGERHTTP_X__SENDMESSAGE_B4A9D63B40BD7132099ADA92C7EBB108));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetMessengerHttp_X__SendMessage_B4A9D63B40BD7132099ADA92C7EBB108");
 		}
 
 		return uClassPointer;
@@ -15936,7 +15936,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETREQUESTQUE_X__SENDREQUEST_60428EAB40CE18F9D488DE9B5FD78F74));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetRequestQue_X__SendRequest_60428EAB40CE18F9D488DE9B5FD78F74");
 		}
 
 		return uClassPointer;
@@ -15959,7 +15959,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_AAS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_AAS_X");
 		}
 
 		return uClassPointer;
@@ -15982,7 +15982,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_ECHO_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_Echo_X");
 		}
 
 		return uClassPointer;
@@ -16004,7 +16004,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PERSONAINFO_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PersonaInfo_X");
 		}
 
 		return uClassPointer;
@@ -16025,7 +16025,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_FRIENDACCEPTEDREQUEST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_FriendAcceptedRequest_X");
 		}
 
 		return uClassPointer;
@@ -16046,7 +16046,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_FRIENDSTATUSUPDATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_FriendStatusUpdate_X");
 		}
 
 		return uClassPointer;
@@ -16067,7 +16067,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_INCOMINGFRIENDREQUEST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_IncomingFriendRequest_X");
 		}
 
 		return uClassPointer;
@@ -16088,7 +16088,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYNETSERVICE_PLAYERUNFRIENDED_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyNetService_PlayerUnfriended_X");
 		}
 
 		return uClassPointer;
@@ -16109,7 +16109,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETSERVICEPROVIDER_X__CREATECHANNEL_8A2C374C4AD809D2FC634C99EAD463FD));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__CreateChannel_8A2C374C4AD809D2FC634C99EAD463FD");
 		}
 
 		return uClassPointer;
@@ -16134,7 +16134,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASYNCRESULT__PSYNETCLIENTSERVICE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TAsyncResult__PsyNetClientService_X");
 		}
 
 		return uClassPointer;
@@ -16166,7 +16166,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETSERVICEPROVIDER_X__EXECUTEREQUEST_2D98ADDB46EB4383381EC881715C9798));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__ExecuteRequest_2D98ADDB46EB4383381EC881715C9798");
 		}
 
 		return uClassPointer;
@@ -16190,7 +16190,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PSYNETSERVICEPROVIDER_X__EXECUTESERVICEMESSAGE_90BC11E9480A8C2C6139A2A5CFEA7E36));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__ExecuteServiceMessage_90BC11E9480A8C2C6139A2A5CFEA7E36");
 		}
 
 		return uClassPointer;
@@ -16213,7 +16213,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYCHATMESSAGE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyChatMessage_X");
 		}
 
 		return uClassPointer;
@@ -16237,7 +16237,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYCREATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyCreate_X");
 		}
 
 		return uClassPointer;
@@ -16261,7 +16261,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYJOIN_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyJoin_X");
 		}
 
 		return uClassPointer;
@@ -16282,7 +16282,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYLEAVE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartyLeave_X");
 		}
 
 		return uClassPointer;
@@ -16304,7 +16304,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASKGATE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TaskGate_X");
 		}
 
 		return uClassPointer;
@@ -16329,7 +16329,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASKGATE_X__ADD_12E1040C4D45A762018410ADA6C483DC));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TaskGate_X__Add_12E1040C4D45A762018410ADA6C483DC");
 		}
 
 		return uClassPointer;
@@ -16354,7 +16354,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASKGATE_X__ADDWITHTIMEOUT_2EDFCCF546B875AC296889A2E6E4E8F8));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TaskGate_X__AddWithTimeout_2EDFCCF546B875AC296889A2E6E4E8F8");
 		}
 
 		return uClassPointer;
@@ -16378,7 +16378,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_UDPLANSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.UdpLanServer_X");
 		}
 
 		return uClassPointer;
@@ -16403,7 +16403,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SETPLAYERSTORAGERESULT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SetPlayerStorageResult_X");
 		}
 
 		return uClassPointer;
@@ -16431,7 +16431,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERSTORAGEQUEUE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerStorageQueue_X");
 		}
 
 		return uClassPointer;
@@ -16480,7 +16480,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DYNAMICVALUE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DynamicValue_X");
 		}
 
 		return uClassPointer;
@@ -16511,7 +16511,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DYNAMICVALUEMODIFIER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DynamicValueModifier_X");
 		}
 
 		return uClassPointer;
@@ -16538,7 +16538,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DYNAMICVALUEMODIFIERCURVE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DynamicValueModifierCurve_X");
 		}
 
 		return uClassPointer;
@@ -16565,7 +16565,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DYNAMICVALUEMODIFIERDURATION_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DynamicValueModifierDuration_X");
 		}
 
 		return uClassPointer;
@@ -16590,7 +16590,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GETPLAYERSTORAGERESULT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GetPlayerStorageResult_X");
 		}
 
 		return uClassPointer;
@@ -16616,7 +16616,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GETPLAYERSTORAGERESULTITEM_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GetPlayerStorageResultItem_X");
 		}
 
 		return uClassPointer;
@@ -16637,7 +16637,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERSTORAGEMANIFEST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerStorageManifest_X");
 		}
 
 		return uClassPointer;
@@ -16661,7 +16661,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERSTORAGESYNC_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerStorageSync_X");
 		}
 
 		return uClassPointer;
@@ -16689,7 +16689,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINEPLAYERSTORAGECONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlinePlayerStorageConfig_X");
 		}
 
 		return uClassPointer;
@@ -16712,7 +16712,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ENCODEOBJECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EncodeObject_X");
 		}
 
 		return uClassPointer;
@@ -16733,7 +16733,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SAVELOCK_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SaveLock_X");
 		}
 
 		return uClassPointer;
@@ -16758,7 +16758,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PLAYERSTORAGESET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PlayerStorageSet_X");
 		}
 
 		return uClassPointer;
@@ -16781,7 +16781,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ENCODEOBJECTFACTORY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EncodeObjectFactory_X");
 		}
 
 		return uClassPointer;
@@ -16805,7 +16805,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERSTORAGEQUEUE_X__HANDLESTORAGESUCCESS_A34F614D4BE5191A21FD138F3A987982));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982");
 		}
 
 		return uClassPointer;
@@ -16828,7 +16828,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERSTORAGEQUEUE_X__MAPRESULTITEM_C27969EB4B24CFA752F5C68BE37D5C53));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__MapResultItem_C27969EB4B24CFA752F5C68BE37D5C53");
 		}
 
 		return uClassPointer;
@@ -16850,7 +16850,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERSTORAGEQUEUE_X__GETSTORAGEMAXSIZEBYTES_1C15672C4BBC2BDC9D89D9A31C8379C4));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_1C15672C4BBC2BDC9D89D9A31C8379C4");
 		}
 
 		return uClassPointer;
@@ -16872,7 +16872,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINEPLAYERSTORAGESYNC_X__SYNCOBJECTS_25F8F52D4E4E36A47C01FF8D3F71E147));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageSync_X__SyncObjects_25F8F52D4E4E36A47C01FF8D3F71E147");
 		}
 
 		return uClassPointer;
@@ -16896,7 +16896,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PLAYERSTORAGEGET_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PlayerStorageGet_X");
 		}
 
 		return uClassPointer;
@@ -16922,7 +16922,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DECODEOBJECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DecodeObject_X");
 		}
 
 		return uClassPointer;
@@ -16946,7 +16946,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_SMOOTHDYNAMICVALUE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.SmoothDynamicValue_X");
 		}
 
 		return uClassPointer;
@@ -16974,7 +16974,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASYNCRESULT__ARRAY_CLUBINVITE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.TAsyncResult__array_ClubInvite_X");
 		}
 
 		return uClassPointer;
@@ -17009,7 +17009,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLUBINVITE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClubInvite_X");
 		}
 
 		return uClassPointer;
@@ -17033,7 +17033,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ACTIONQUEUE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ActionQueue_X");
 		}
 
 		return uClassPointer;
@@ -17057,7 +17057,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_APPCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.AppConfig_X");
 		}
 
 		return uClassPointer;
@@ -17098,7 +17098,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLUBERRORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClubErrors_X");
 		}
 
 		return uClassPointer;
@@ -17123,7 +17123,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLUBSERVERRESULT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClubServerResult_X");
 		}
 
 		return uClassPointer;
@@ -17144,7 +17144,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLUBUTIL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClubUtil_X");
 		}
 
 		return uClassPointer;
@@ -17171,7 +17171,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___CLUBUTIL_X__ISCLUBTEAM_DA040E814997FC285BA0D5B0AEFF720C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__ClubUtil_X__IsClubTeam_DA040E814997FC285BA0D5B0AEFF720C");
 		}
 
 		return uClassPointer;
@@ -17195,7 +17195,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LOCALCLUBDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.LocalClubData_X");
 		}
 
 		return uClassPointer;
@@ -17220,7 +17220,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___LOCALCLUBDATA_X__GETCLUBBYID_C7C2F4A0495A98D21389729FAF40BDEA));
+			uClassPointer = UObject::FindClass("Class ProjectX.__LocalClubData_X__GetClubByID_C7C2F4A0495A98D21389729FAF40BDEA");
 		}
 
 		return uClassPointer;
@@ -17242,7 +17242,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___LOCALCLUBDATA_X__GETCLUBFORPLAYER_AC85E071401BDC91A4B70CB7DCFD75FA));
+			uClassPointer = UObject::FindClass("Class ProjectX.__LocalClubData_X__GetClubForPlayer_AC85E071401BDC91A4B70CB7DCFD75FA");
 		}
 
 		return uClassPointer;
@@ -17264,7 +17264,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINECLUBCACHE_X__GETCLUBDETAILS_481A79034AF59C9DEBC25AA9414310C5));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubCache_X__GetClubDetails_481A79034AF59C9DEBC25AA9414310C5");
 		}
 
 		return uClassPointer;
@@ -17286,7 +17286,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINECLUBCACHE_X__GETPLAYERCLUBDETAILS_19530D1A4CF5E1EB765F5BB6CE6D5525));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubCache_X__GetPlayerClubDetails_19530D1A4CF5E1EB765F5BB6CE6D5525");
 		}
 
 		return uClassPointer;
@@ -17309,7 +17309,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINECLUBMANAGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineClubManager_X");
 		}
 
 		return uClassPointer;
@@ -17346,7 +17346,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CLUBDETAILSBASE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ClubDetailsBase_X");
 		}
 
 		return uClassPointer;
@@ -17372,7 +17372,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CREATECLUB_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_CreateClub_X");
 		}
 
 		return uClassPointer;
@@ -17396,7 +17396,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATECLUBNAME_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdateClubName_X");
 		}
 
 		return uClassPointer;
@@ -17420,7 +17420,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATECLUBCOLORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdateClubColors_X");
 		}
 
 		return uClassPointer;
@@ -17442,7 +17442,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATECLUBMOTD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdateClubMotD_X");
 		}
 
 		return uClassPointer;
@@ -17465,7 +17465,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_INVITETOCLUB_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_InviteToClub_X");
 		}
 
 		return uClassPointer;
@@ -17488,7 +17488,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_REMOVEFROMCLUB_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RemoveFromClub_X");
 		}
 
 		return uClassPointer;
@@ -17510,7 +17510,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SETCLUBOWNER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SetClubOwner_X");
 		}
 
 		return uClassPointer;
@@ -17532,7 +17532,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETCLUBINVITES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetClubInvites_X");
 		}
 
 		return uClassPointer;
@@ -17555,7 +17555,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_ACCEPTCLUBINVITE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_AcceptClubInvite_X");
 		}
 
 		return uClassPointer;
@@ -17577,7 +17577,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_REJECTCLUBINVITE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_RejectClubInvite_X");
 		}
 
 		return uClassPointer;
@@ -17599,7 +17599,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINECLUBMANAGER_X__LEAVECLUB_D4A4241349CEDEBE5E1103922E7B1968));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubManager_X__LeaveClub_D4A4241349CEDEBE5E1103922E7B1968");
 		}
 
 		return uClassPointer;
@@ -17620,7 +17620,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_LEAVECLUB_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_LeaveClub_X");
 		}
 
 		return uClassPointer;
@@ -17641,7 +17641,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETCLUBDETAILS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetClubDetails_X");
 		}
 
 		return uClassPointer;
@@ -17663,7 +17663,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETPLAYERCLUBDETAILS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetPlayerClubDetails_X");
 		}
 
 		return uClassPointer;
@@ -17686,7 +17686,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINECLUBPROVIDER_X__SYNCCLUBDETAILS_0324D9554246A5A93C80608CB1D86296));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__SyncClubDetails_0324D9554246A5A93C80608CB1D86296");
 		}
 
 		return uClassPointer;
@@ -17709,7 +17709,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINECLUBPROVIDER_X__HANDLECLUBSYNCED_476EBD064D375CDB320C2EA7F1B9400C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__HandleClubSynced_476EBD064D375CDB320C2EA7F1B9400C");
 		}
 
 		return uClassPointer;
@@ -17732,7 +17732,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___ONLINECLUBPROVIDER_X__SYNCPLAYERCLUBDETAILS_60252FCD46010804C1ACCFBD2C038889));
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__SyncPlayerClubDetails_60252FCD46010804C1ACCFBD2C038889");
 		}
 
 		return uClassPointer;
@@ -17757,7 +17757,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ONLINECLUBSERVERLIST_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.OnlineClubServerList_X");
 		}
 
 		return uClassPointer;
@@ -17782,7 +17782,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETCLUBPRIVATEMATCHES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetClubPrivateMatches_X");
 		}
 
 		return uClassPointer;
@@ -17805,7 +17805,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLAYERTITLECONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PlayerTitleConfig_X");
 		}
 
 		return uClassPointer;
@@ -17833,7 +17833,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_FILTERCONTENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_FilterContent_X");
 		}
 
 		return uClassPointer;
@@ -17855,7 +17855,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_PARTYSENDINVITE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_PartySendInvite_X");
 		}
 
 		return uClassPointer;
@@ -17877,7 +17877,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SETCLUBMOTD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SetClubMotD_X");
 		}
 
 		return uClassPointer;
@@ -17900,7 +17900,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SETRICHPRESENCE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SetRichPresence_X");
 		}
 
 		return uClassPointer;
@@ -17922,7 +17922,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_UPDATECLUB_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_UpdateClub_X");
 		}
 
 		return uClassPointer;
@@ -17943,7 +17943,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___SERVERPLAYERTRACKER_X__ADDPLAYER_98BF7EE04B1E7F3A46F565953AD034CF));
+			uClassPointer = UObject::FindClass("Class ProjectX.__ServerPlayerTracker_X__AddPlayer_98BF7EE04B1E7F3A46F565953AD034CF");
 		}
 
 		return uClassPointer;
@@ -17965,7 +17965,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_CLUBINVITE_X__NOTIFYONRESULT_D4E8882B4C590DC1D56973A9A5E89677));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResult_D4E8882B4C590DC1D56973A9A5E89677");
 		}
 
 		return uClassPointer;
@@ -17987,7 +17987,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_CLUBINVITE_X__NOTIFYONRESULTCOMPLETE_8AFAACFE49B5C2660FB959B45EAABA4D));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_8AFAACFE49B5C2660FB959B45EAABA4D");
 		}
 
 		return uClassPointer;
@@ -18009,7 +18009,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_CLUBINVITE_X__SETRESULTWHEN_6409453D44F897FAB961DC9A769DDAA2));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__SetResultWhen_6409453D44F897FAB961DC9A769DDAA2");
 		}
 
 		return uClassPointer;
@@ -18031,7 +18031,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_CLUBINVITE_X__COPY_3503FB7C404F06EFD76450B87A2D51CB));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__Copy_3503FB7C404F06EFD76450B87A2D51CB");
 		}
 
 		return uClassPointer;
@@ -18053,7 +18053,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_LANSERVERRECORD_X__NOTIFYONRESULT_0F943472473DD3C328E2E7B764AF6903));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResult_0F943472473DD3C328E2E7B764AF6903");
 		}
 
 		return uClassPointer;
@@ -18075,7 +18075,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_LANSERVERRECORD_X__NOTIFYONRESULTCOMPLETE_74F01EC04F19B9D880BFC19632EF2993));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_74F01EC04F19B9D880BFC19632EF2993");
 		}
 
 		return uClassPointer;
@@ -18097,7 +18097,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_LANSERVERRECORD_X__SETRESULTWHEN_0ECA5C644151892C2DB05EBEC6CC75A8));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__SetResultWhen_0ECA5C644151892C2DB05EBEC6CC75A8");
 		}
 
 		return uClassPointer;
@@ -18119,7 +18119,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__ARRAY_LANSERVERRECORD_X__COPY_9D75627249C45AD91EB252A58040A628));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__Copy_9D75627249C45AD91EB252A58040A628");
 		}
 
 		return uClassPointer;
@@ -18141,7 +18141,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__CLUBDETAILS_X__NOTIFYONRESULT_B49ADB6D43D5B068D2DCD7BC1322C9C1));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResult_B49ADB6D43D5B068D2DCD7BC1322C9C1");
 		}
 
 		return uClassPointer;
@@ -18163,7 +18163,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__CLUBDETAILS_X__NOTIFYONRESULTCOMPLETE_2A229B4E482904C3DD8DF8A8196AE5B3));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResultComplete_2A229B4E482904C3DD8DF8A8196AE5B3");
 		}
 
 		return uClassPointer;
@@ -18185,7 +18185,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__CLUBDETAILS_X__SETRESULTWHEN_F1528D494E893E1E4F775F97DA08BFD4));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__SetResultWhen_F1528D494E893E1E4F775F97DA08BFD4");
 		}
 
 		return uClassPointer;
@@ -18207,7 +18207,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__CLUBDETAILS_X__COPY_AB6FDCF342AB8363A331939034CA3BAD));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__Copy_AB6FDCF342AB8363A331939034CA3BAD");
 		}
 
 		return uClassPointer;
@@ -18229,7 +18229,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETCLIENTSERVICE_X__NOTIFYONRESULT_60B5220448AF19E0B01215A6A4BA2666));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResult_60B5220448AF19E0B01215A6A4BA2666");
 		}
 
 		return uClassPointer;
@@ -18251,7 +18251,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETCLIENTSERVICE_X__NOTIFYONRESULTCOMPLETE_5CD538AE4E991FF83F0DE898749B000F));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_5CD538AE4E991FF83F0DE898749B000F");
 		}
 
 		return uClassPointer;
@@ -18273,7 +18273,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETCLIENTSERVICE_X__SETRESULTWHEN_3C367D1C4F6BACD3567CDA925B8BE799));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__SetResultWhen_3C367D1C4F6BACD3567CDA925B8BE799");
 		}
 
 		return uClassPointer;
@@ -18295,7 +18295,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETCLIENTSERVICE_X__COPY_0DD3A38B4E1C7697DE99FA9A579AED2C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__Copy_0DD3A38B4E1C7697DE99FA9A579AED2C");
 		}
 
 		return uClassPointer;
@@ -18317,7 +18317,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETMESSAGE_X__NOTIFYONRESULT_64E58EC24DC412C3045D80A439C0A932));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResult_64E58EC24DC412C3045D80A439C0A932");
 		}
 
 		return uClassPointer;
@@ -18339,7 +18339,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETMESSAGE_X__NOTIFYONRESULTCOMPLETE_A2E716014B98A52154029C8EB4E2B361));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_A2E716014B98A52154029C8EB4E2B361");
 		}
 
 		return uClassPointer;
@@ -18361,7 +18361,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETMESSAGE_X__SETRESULTWHEN_EA2067BD4DD94B135E29D58F8E6E885E));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__SetResultWhen_EA2067BD4DD94B135E29D58F8E6E885E");
 		}
 
 		return uClassPointer;
@@ -18383,7 +18383,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYNETMESSAGE_X__COPY_77EA16904C0F8F6E248FAA9A680378E8));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__Copy_77EA16904C0F8F6E248FAA9A680378E8");
 		}
 
 		return uClassPointer;
@@ -18408,7 +18408,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TASYNCRESULT__TEXTURE2DDYNAMIC));
+			uClassPointer = UObject::FindClass("Class ProjectX.TAsyncResult__Texture2DDynamic");
 		}
 
 		return uClassPointer;
@@ -18439,7 +18439,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_GETPLATFORMPARTY_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_GetPlatformParty_X");
 		}
 
 		return uClassPointer;
@@ -18461,7 +18461,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PARTYMESSAGE_GETPLATFORMPARTYRESPONSE_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_GetPlatformPartyResponse_X");
 		}
 
 		return uClassPointer;
@@ -18485,7 +18485,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PARTYSEQUENCE_CREATEPARTY_X__CREATEPARTY_553ACEE047F52496B0778FB1E2C4B8D9));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_CreateParty_X__CreateParty_553ACEE047F52496B0778FB1E2C4B8D9");
 		}
 
 		return uClassPointer;
@@ -18508,7 +18508,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PARTYSEQUENCE_INVITEDTOPLATFORMPARTY_X__HANDLEPLAYERINVITED_5D013A6F40FC1FC01E3712A207F613B0));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_5D013A6F40FC1FC01E3712A207F613B0");
 		}
 
 		return uClassPointer;
@@ -18531,7 +18531,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PARTYSEQUENCE_INVITEDTOPSYNETPARTY_X__HANDLEPLAYERINVITEDPROMPT_8E45D37D4D177ABE3C8EA1AD02462806));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8E45D37D4D177ABE3C8EA1AD02462806");
 		}
 
 		return uClassPointer;
@@ -18554,7 +18554,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PARTYSEQUENCE_INVITEDTOPSYNETPARTY_X__HANDLEPLAYERINVITEDSILENT_D1E31EC9403DF15573ED8894DC6CC62A));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_D1E31EC9403DF15573ED8894DC6CC62A");
 		}
 
 		return uClassPointer;
@@ -18576,7 +18576,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___PARTYSEQUENCE_JOINPARTY_X__HANDLEGETPLATFORMPARTYMESSAGE_F9B4B0EB4FB2989D435BA88A8EF79174));
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_F9B4B0EB4FB2989D435BA88A8EF79174");
 		}
 
 		return uClassPointer;
@@ -18603,7 +18603,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYTAGERRORS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyTagErrors_X");
 		}
 
 		return uClassPointer;
@@ -18630,7 +18630,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PSYTAGSEARCHRESULT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PsyTagSearchResult_X");
 		}
 
 		return uClassPointer;
@@ -18657,7 +18657,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_SEARCHPSYTAG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_SearchPsyTag_X");
 		}
 
 		return uClassPointer;
@@ -18681,7 +18681,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__TEXTURE2DDYNAMIC__NOTIFYONRESULT_FDCEEEAB41ABE96708C1D2A830D4DC9D));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResult_FDCEEEAB41ABE96708C1D2A830D4DC9D");
 		}
 
 		return uClassPointer;
@@ -18703,7 +18703,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__TEXTURE2DDYNAMIC__NOTIFYONRESULTCOMPLETE_B46BE74A413A423CA22B30B82B86044C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_B46BE74A413A423CA22B30B82B86044C");
 		}
 
 		return uClassPointer;
@@ -18725,7 +18725,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__TEXTURE2DDYNAMIC__SETRESULTWHEN_445F5099439B4EF55470F1865FC46F19));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__SetResultWhen_445F5099439B4EF55470F1865FC46F19");
 		}
 
 		return uClassPointer;
@@ -18747,7 +18747,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__TEXTURE2DDYNAMIC__COPY_20FC6D1A471F253FA061549452671F2A));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__Copy_20FC6D1A471F253FA061549452671F2A");
 		}
 
 		return uClassPointer;
@@ -18772,7 +18772,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_WEBIMAGEDOWNLOAD_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.WebImageDownload_X");
 		}
 
 		return uClassPointer;
@@ -18793,7 +18793,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___WEBIMAGECACHE_X__SYNCUNCACHEDIMAGE_5E1B700147E24041B01038A4019D532B));
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__SyncUncachedImage_5E1B700147E24041B01038A4019D532B");
 		}
 
 		return uClassPointer;
@@ -18815,7 +18815,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___WEBIMAGECACHE_X__STARTSYNC_46E4A0C543D955BB7F82E0836A59AA55));
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__StartSync_46E4A0C543D955BB7F82E0836A59AA55");
 		}
 
 		return uClassPointer;
@@ -18837,7 +18837,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___WEBIMAGECACHE_X__HANDLEIMAGEDATA_2A752F294C0E7D0231C951BB02A9E2E0));
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__HandleImageData_2A752F294C0E7D0231C951BB02A9E2E0");
 		}
 
 		return uClassPointer;
@@ -18862,7 +18862,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_STATUSOBSERVER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.StatusObserver_X");
 		}
 
 		return uClassPointer;
@@ -18898,7 +18898,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_TRIGGERINFO));
+			uClassPointer = UObject::FindClass("Class ProjectX.TriggerInfo");
 		}
 
 		return uClassPointer;
@@ -18922,7 +18922,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_STATUSTRIGGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.StatusTrigger_X");
 		}
 
 		return uClassPointer;
@@ -18949,7 +18949,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___STATUSOBSERVER_X__FINDBYACCEPTEDTYPE_3D2F0AD045787FF49D08BF88B8A8A5EE));
+			uClassPointer = UObject::FindClass("Class ProjectX.__StatusObserver_X__FindByAcceptedType_3D2F0AD045787FF49D08BF88B8A8A5EE");
 		}
 
 		return uClassPointer;
@@ -18971,7 +18971,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___STATUSOBSERVER_X__OBSERVESTRIGGERTYPE_3A71FC53434579A6BF71F28D669CEB48));
+			uClassPointer = UObject::FindClass("Class ProjectX.__StatusObserver_X__ObservesTriggerType_3A71FC53434579A6BF71F28D669CEB48");
 		}
 
 		return uClassPointer;
@@ -18993,7 +18993,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___REGIONCONFIG_X__GETSUBREGIONS_E65334504E3A3444C498AE9B2BE32718));
+			uClassPointer = UObject::FindClass("Class ProjectX.__RegionConfig_X__GetSubRegions_E65334504E3A3444C498AE9B2BE32718");
 		}
 
 		return uClassPointer;
@@ -19014,7 +19014,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CLEARCLUBINVITES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ClearClubInvites_X");
 		}
 
 		return uClassPointer;
@@ -19034,7 +19034,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_CLEARFRIENDINVITES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_ClearFriendInvites_X");
 		}
 
 		return uClassPointer;
@@ -19056,7 +19056,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_FILESTORAGE_GETFILEDOWNLOADURL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_FileStorage_GetFileDownloadUrl_X");
 		}
 
 		return uClassPointer;
@@ -19079,7 +19079,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_FILESTORAGE_GETFILEUPLOADURL_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_FileStorage_GetFileUploadUrl_X");
 		}
 
 		return uClassPointer;
@@ -19100,7 +19100,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYTAGCHECKRESULT_X__NOTIFYONRESULT_65DD4499400E1B37F006A3B03BB98B9C));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_65DD4499400E1B37F006A3B03BB98B9C");
 		}
 
 		return uClassPointer;
@@ -19122,7 +19122,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYTAGCHECKRESULT_X__NOTIFYONRESULTCOMPLETE_5E947D3B475E39460AF0C8B09F8A151D));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_5E947D3B475E39460AF0C8B09F8A151D");
 		}
 
 		return uClassPointer;
@@ -19144,7 +19144,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYTAGCHECKRESULT_X__SETRESULTWHEN_4A01DE5E44416E5367772483A2FEA838));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__SetResultWhen_4A01DE5E44416E5367772483A2FEA838");
 		}
 
 		return uClassPointer;
@@ -19166,7 +19166,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___TASYNCRESULT__PSYTAGCHECKRESULT_X__COPY_FD99C02C4008EAFE96EC1CBB8EE02C0E));
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__Copy_FD99C02C4008EAFE96EC1CBB8EE02C0E");
 		}
 
 		return uClassPointer;
@@ -19196,7 +19196,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_CLIENTNETMETRICS_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.ClientNetMetrics_X");
 		}
 
 		return uClassPointer;
@@ -19229,7 +19229,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_GAMESERVERPINGER_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.GameServerPinger_X");
 		}
 
 		return uClassPointer;
@@ -19257,7 +19257,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMETRICSSYSTEM_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMetricsSystem_X");
 		}
 
 		return uClassPointer;
@@ -19281,7 +19281,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_DEDICATEDCLIENT));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_DedicatedClient");
 		}
 
 		return uClassPointer;
@@ -19302,7 +19302,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETWORKPINGEVENT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetworkPingEvent_X");
 		}
 
 		return uClassPointer;
@@ -19322,7 +19322,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_AUTHORITATIVE));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_Authoritative");
 		}
 
 		return uClassPointer;
@@ -19342,7 +19342,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_CLIENT));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_Client");
 		}
 
 		return uClassPointer;
@@ -19362,7 +19362,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_DEDICATEDSERVER));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_DedicatedServer");
 		}
 
 		return uClassPointer;
@@ -19382,7 +19382,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_LISTENSERVER));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_ListenServer");
 		}
 
 		return uClassPointer;
@@ -19402,7 +19402,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_SERVER));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_Server");
 		}
 
 		return uClassPointer;
@@ -19422,7 +19422,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODE_STANDALONE));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetMode_Standalone");
 		}
 
 		return uClassPointer;
@@ -19442,7 +19442,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODEREPLICATOR_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetModeReplicator_X");
 		}
 
 		return uClassPointer;
@@ -19462,7 +19462,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_NETMODESYSTEM_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.NetModeSystem_X");
 		}
 
 		return uClassPointer;
@@ -19486,7 +19486,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_CONSOLE));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_Console");
 		}
 
 		return uClassPointer;
@@ -19506,7 +19506,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_DEDICATEDSERVER));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_DedicatedServer");
 		}
 
 		return uClassPointer;
@@ -19526,7 +19526,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_DINGO));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_Dingo");
 		}
 
 		return uClassPointer;
@@ -19546,7 +19546,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_GAMECLIENT));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_GameClient");
 		}
 
 		return uClassPointer;
@@ -19566,7 +19566,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_LANSERVER));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_LanServer");
 		}
 
 		return uClassPointer;
@@ -19586,7 +19586,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_NNX));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_NNX");
 		}
 
 		return uClassPointer;
@@ -19606,7 +19606,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_ORBIS));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_Orbis");
 		}
 
 		return uClassPointer;
@@ -19626,7 +19626,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_PC));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_PC");
 		}
 
 		return uClassPointer;
@@ -19646,7 +19646,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORM_SERVER));
+			uClassPointer = UObject::FindClass("Class ProjectX.Platform_Server");
 		}
 
 		return uClassPointer;
@@ -19666,7 +19666,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_PLATFORMSYSTEM_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.PlatformSystem_X");
 		}
 
 		return uClassPointer;
@@ -19692,7 +19692,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DECODEOBJECTJSON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DecodeObjectJson_X");
 		}
 
 		return uClassPointer;
@@ -19714,7 +19714,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DECODEOBJECTTYPES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DecodeObjectTypes_X");
 		}
 
 		return uClassPointer;
@@ -19736,7 +19736,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_DECODEOBJECTUOBJECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.DecodeObjectUObject_X");
 		}
 
 		return uClassPointer;
@@ -19759,7 +19759,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ENCODEOBJECTJSON_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EncodeObjectJson_X");
 		}
 
 		return uClassPointer;
@@ -19781,7 +19781,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ENCODEOBJECTUOBJECT_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EncodeObjectUObject_X");
 		}
 
 		return uClassPointer;
@@ -19802,7 +19802,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_ENCODEOBJECTTYPES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EncodeObjectTypes_X");
 		}
 
 		return uClassPointer;
@@ -19824,7 +19824,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_LOCALIZEDACCOUNTLINKURL));
+			uClassPointer = UObject::FindClass("Class ProjectX.LocalizedAccountLinkURL");
 		}
 
 		return uClassPointer;
@@ -19846,7 +19846,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICFRIENDSPLUGIN_X__ADDFRIENDWITHCUSTOMCALLBACK_BE3CBF8B4E1D9FF55ACF93810E3490E7));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__AddFriendWithCustomCallback_BE3CBF8B4E1D9FF55ACF93810E3490E7");
 		}
 
 		return uClassPointer;
@@ -19868,7 +19868,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICFRIENDSPLUGIN_X__REMOVEFRIEND_4C782B554C4BA389686B4FB32CCF6328));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__RemoveFriend_4C782B554C4BA389686B4FB32CCF6328");
 		}
 
 		return uClassPointer;
@@ -19890,7 +19890,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICFRIENDSPLUGIN_X__ACCEPTFRIENDREQUEST_437548B2498B420CB580D481324EEFAB));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__AcceptFriendRequest_437548B2498B420CB580D481324EEFAB");
 		}
 
 		return uClassPointer;
@@ -19912,7 +19912,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICFRIENDSPLUGIN_X__REJECTFRIENDREQUEST_5216E9AB46B0AEB4651D37B0D1BFC50D));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__RejectFriendRequest_5216E9AB46B0AEB4651D37B0D1BFC50D");
 		}
 
 		return uClassPointer;
@@ -19938,7 +19938,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICFRIENDSPLUGIN_X__SENDHTTPREQUEST_3B7978804DFCA2327E937E9B864364B0));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__SendHTTPRequest_3B7978804DFCA2327E937E9B864364B0");
 		}
 
 		return uClassPointer;
@@ -19962,7 +19962,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICFRIENDSPLUGIN_X__GETOUTGOINGFRIENDREQUESTSWITHCUSTOMCALLBACK_77ED111C415F9BBF476A808CDEA4CF49));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_77ED111C415F9BBF476A808CDEA4CF49");
 		}
 
 		return uClassPointer;
@@ -19985,7 +19985,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICLOGIN_X__TRIGGERAUTHTICKETDELEGATE_9A623FFB49AB911F88E7E081333BB472));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__TriggerAuthTicketDelegate_9A623FFB49AB911F88E7E081333BB472");
 		}
 
 		return uClassPointer;
@@ -20007,7 +20007,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICLOGIN_X__HANDLELOGINCHANGED_F308C34B4F9E31D8359C9B9E6ACE0284));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__HandleLoginChanged_F308C34B4F9E31D8359C9B9E6ACE0284");
 		}
 
 		return uClassPointer;
@@ -20029,7 +20029,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICLOGIN_X__REQUESTNINTENDOACCOUNTAUTHORIZATION_126633EB432A085DAE15A6819B61CB3B));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__RequestNintendoAccountAuthorization_126633EB432A085DAE15A6819B61CB3B");
 		}
 
 		return uClassPointer;
@@ -20051,7 +20051,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX___EPICLOGIN_X__UPDATETWOFACTORAUTHENTICATIONSTATUS_B2D9D53A4F2E41963EC75F92DD0B74AE));
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__UpdateTwoFactorAuthenticationStatus_B2D9D53A4F2E41963EC75F92DD0B74AE");
 		}
 
 		return uClassPointer;
@@ -20077,7 +20077,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_GETANTIADDICTIONDATA_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetAntiAddictionData_X");
 		}
 
 		return uClassPointer;
@@ -20098,7 +20098,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX__RESERVATIONTYPES_X));
+			uClassPointer = UObject::FindClass("Class ProjectX._ReservationTypes_X");
 		}
 
 		return uClassPointer;
@@ -20120,7 +20120,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_BLOGCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.BlogConfig_X");
 		}
 
 		return uClassPointer;
@@ -20145,7 +20145,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_EOSMETRICSCONFIG_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.EOSMetricsConfig_X");
 		}
 
 		return uClassPointer;
@@ -20168,7 +20168,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_RPC_JOINMATCH_X));
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_JoinMatch_X");
 		}
 
 		return uClassPointer;
@@ -20189,7 +20189,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_____ONLINEGAMEPARTY_X__UPDATEPARTYINFO_3DF5334B4FB29E0C5FD06992AEDA77A1____ONLINEGAMEPARTY_X__UPDATEPARTYINFO_3DF5334B4FB29E0C5FD06992AEDA77A1_0C50A7F64A8D8B36197D3E91962BA507));
+			uClassPointer = UObject::FindClass("Class ProjectX.____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1_0C50A7F64A8D8B36197D3E91962BA507");
 		}
 
 		return uClassPointer;
@@ -20211,7 +20211,7 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = reinterpret_cast<UClass*>(UObject::GObjObjects()->At(IDX_CLASS_PROJECTX_____ONLINEPLAYERSTORAGEQUEUE_X__HANDLESTORAGESUCCESS_A34F614D4BE5191A21FD138F3A987982____ONLINEPLAYERSTORAGEQUEUE_X__HANDLESTORAGESUCCESS_C3D433EC4649428BEBA56193F14CB51C_16CEB4084D889305AF8690AD6911A91E));
+			uClassPointer = UObject::FindClass("Class ProjectX.____OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C3D433EC4649428BEBA56193F14CB51C_16CEB4084D889305AF8690AD6911A91E");
 		}
 
 		return uClassPointer;

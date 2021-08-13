@@ -702,20 +702,21 @@ public:
 };
 
 // Class OnlineSubsystemEOS.OnlineUserCloudFileInterfaceEOS
-// 0x00B0 (0x0060 - 0x0110)
+// 0x00B8 (0x0060 - 0x0118)
 class UOnlineUserCloudFileInterfaceEOS : public UObject
 {
 public:
 	struct FPointer                                    PDSHandle;                                        		// 0x0060 (0x0008) [0x0000000000003002] (CPF_Const | CPF_Native | CPF_Transient)
-	class UOnlinePlayerInterfaceEOS*                   PlayerInterfaceEOS;                               		// 0x0068 (0x0008) [0x0000000000000000]               
-	TArray<struct FScriptDelegate>                     EnumerateUserFileCompleteDelegates;               		// 0x0070 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	TArray<struct FScriptDelegate>                     ReadUserFileCompleteDelegates;                    		// 0x0080 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	TArray<struct FScriptDelegate>                     WriteUserFileCompleteDelegates;                   		// 0x0090 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	TArray<struct FScriptDelegate>                     DeleteUserFileCompleteDelegates;                  		// 0x00A0 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __OnEnumerateUserFilesComplete__Delegate;         		// 0x00B0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __OnReadUserFileComplete__Delegate;               		// 0x00C8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __OnWriteUserFileComplete__Delegate;              		// 0x00E0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __OnDeleteUserFileComplete__Delegate;             		// 0x00F8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	int                                                LastReadFileErrorCode;                            		// 0x0068 (0x0004) [0x0000000000003000] (CPF_Native | CPF_Transient)
+	class UOnlinePlayerInterfaceEOS*                   PlayerInterfaceEOS;                               		// 0x0070 (0x0008) [0x0000000000000000]               
+	TArray<struct FScriptDelegate>                     EnumerateUserFileCompleteDelegates;               		// 0x0078 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	TArray<struct FScriptDelegate>                     ReadUserFileCompleteDelegates;                    		// 0x0088 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	TArray<struct FScriptDelegate>                     WriteUserFileCompleteDelegates;                   		// 0x0098 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	TArray<struct FScriptDelegate>                     DeleteUserFileCompleteDelegates;                  		// 0x00A8 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __OnEnumerateUserFilesComplete__Delegate;         		// 0x00B8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __OnReadUserFileComplete__Delegate;               		// 0x00D0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __OnWriteUserFileComplete__Delegate;              		// 0x00E8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __OnDeleteUserFileComplete__Delegate;             		// 0x0100 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -752,9 +753,9 @@ public:
 	bool GetFileContents(struct FString UserId, struct FString Filename, TArray<unsigned char>& FileContents);
 };
 
-// Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE
+// Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__LinkedAccount_15383A164BD9B314E1F3DA9B19FC17E6
 // 0x0004 (0x0060 - 0x0064)
-class U__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE : public UObject
+class U__OnlinePlayerInterfaceEOS__LinkedAccount_15383A164BD9B314E1F3DA9B19FC17E6 : public UObject
 {
 public:
 	int                                                LocalUserNum;                                     		// 0x0060 (0x0004) [0x0000000000000000]               
@@ -765,18 +766,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE");
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__LinkedAccount_15383A164BD9B314E1F3DA9B19FC17E6");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerInterfaceEOS__LinkedAccount_35478360455FC0803A7CA081E5B560AE(int _, struct FString PlatformAuthTicket);
+	void __OnlinePlayerInterfaceEOS__LinkedAccount_15383A164BD9B314E1F3DA9B19FC17E6(int _, struct FString PlatformAuthTicket);
 };
 
-// Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05
+// Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_867DCD4A4F250CAFA4F7D4B2787D7ABD
 // 0x0020 (0x0060 - 0x0080)
-class U__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05 : public UObject
+class U__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_867DCD4A4F250CAFA4F7D4B2787D7ABD : public UObject
 {
 public:
 	int                                                LocalUserNum;                                     		// 0x0060 (0x0004) [0x0000000000000000]               
@@ -788,13 +789,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05");
+			uClassPointer = UObject::FindClass("Class OnlineSubsystemEOS.__OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_867DCD4A4F250CAFA4F7D4B2787D7ABD");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_220AAF194826E64582E7DEA5AA114C05(unsigned long bSuccess, struct FString Code);
+	void __OnlinePlayerInterfaceEOS__RequestNativePlatformAuthTicket_867DCD4A4F250CAFA4F7D4B2787D7ABD(unsigned long bSuccess, struct FString Code);
 };
 
 /*

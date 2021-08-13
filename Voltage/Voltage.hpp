@@ -81,7 +81,7 @@ private:
 	UTexture* stadiumlinerads1 = nullptr;
 	UTexture* stadiumlinerads2 = nullptr;
 private:
-	std::string localVersion = "147";
+	std::string localVersion = "148";
 	int titleHexColor;
 	int titleHexGlowColor;
 	bool versionSafe = false;
@@ -126,7 +126,7 @@ private:
 	std::vector<int> ownedDLCs;
 	std::vector<int> crateproduct;
 	std::vector<int> crateproductpaint;
-	std::vector<unsigned long long> spawneditemsInstanceIds;
+	TArray<unsigned long long> spawneditemsInstanceIds;
 	std::shared_ptr<int> notifySpawn;
 	std::shared_ptr<int> savedCustomTitleColor;
 	std::shared_ptr<int> savedCustomTitleGlowColor;
@@ -154,6 +154,7 @@ private:
 	int	 CustomTitleGlowColorG = 0;
 	int	 CustomTitleGlowColorB = 0;
 	bool setCustomAds;
+	int paintValues[21] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 public:
 	void checkVersion();
 	void checkUserAuthed();
@@ -185,6 +186,7 @@ public:
 	void AddModalButton(std::string label);
 	void SetModalColor(int r, int g, int b);
 	void revealSequence();
+	void menuSequence();
 	void dumpItems();
 	void dumpTitles();
 	void dumpSlots();
@@ -215,6 +217,8 @@ public:
 	TArray<APRI_TA*> GetPRIs();
 	void spawnDLC();
 	void spawnAllPainted();
+	void doReveal(UOnlineProduct_TA* revealProduct);
+	std::vector<int> getCrateProducts(std::string crateName);
 	void spawnCrates();
 	void spawnAll();
 	void spawnBorders();
@@ -228,6 +232,7 @@ public:
 	void spawnAlphaRewards();
 	void spawnBlackMarkets();
 	UTexture* DownloadTexture(const char* url, const wchar_t* fileName);
+	bool ExportTexture(UTexture* textureRef, std::string& outTexturePath);
 	void replaceAds(UTexture* billboards1, UTexture* billboards2, UTexture* stadiumlinerads1, UTexture* stadiumlinerads);
 	void RefreshCar();
 	bool SetPlayerTitle(UGFxData_PRI_TA* pri, std::string titletext, FColor titleColor, FColor titleGlowColor);
@@ -581,6 +586,32 @@ FString(L"White_Hat_Legend"),
 FString(L"SE_FordFreestyler"),
 FString(L"SE_FordFreestyleFinalist"),
 FString(L"SE_FordFreestyleChampion"),
+FString(L"AutoTour_04_Bronze_1"),
+FString(L"AutoTour_04_Bronze_2"),
+FString(L"AutoTour_04_Silver_1"),
+FString(L"AutoTour_04_Silver_2"),
+FString(L"AutoTour_04_Gold_1"),
+FString(L"AutoTour_04_Gold_2"),
+FString(L"AutoTour_04_Platinum_1"),
+FString(L"AutoTour_04_Platinum_2"),
+FString(L"AutoTour_04_Diamond_1"),
+FString(L"AutoTour_04_Diamond_2"),
+FString(L"AutoTour_04_Champion_1"),
+FString(L"AutoTour_04_Champion_2"),
+FString(L"AutoTour_04_GrandChampion_1"),
+FString(L"AutoTour_04_GrandChampion_2"),
+FString(L"S17_SuperSonic_Legend"),
+FString(L"S17_SSL_Rumble"),
+FString(L"S17_SSL_DropShot"),
+FString(L"S17_SSL_SnowDay"),
+FString(L"S17_SSL_Hoops"),
+FString(L"AutoTour_04_SuperSonicLegend_1"),
+FString(L"AutoTour_04_SuperSonicLegend_2"),
+FString(L"S17_Grand_Champion_Rumble"),
+FString(L"S17_Grand_Champion_DropShot"),
+FString(L"S17_Grand_Champion_SnowDay"),
+FString(L"S17_Grand_Champion_Hoops"),
+FString(L"Season17GrandChampion"),
 	};
 
 };

@@ -50,12 +50,14 @@ enum class EJoinMatchType : int
 	JMT_END                                            = 4
 };
 
-// Enum ProjectX._Types_X.EAuthResult
-enum class EAuthResult : int
+// Enum ProjectX._Types_X.ESeverityType
+enum class ESeverityType : int
 {
-	AuthResult_OK                                      = 0,
-	AuthResult_Unauthorized                            = 1,
-	AuthResult_END                                     = 2
+	SeverityType_None                                  = 0,
+	SeverityType_Low                                   = 1,
+	SeverityType_Medium                                = 2,
+	SeverityType_High                                  = 3,
+	SeverityType_END                                   = 4
 };
 
 // Enum ProjectX._Types_X.EBanType
@@ -67,7 +69,8 @@ enum class EBanType : int
 	BanType_Parental                                   = 3,
 	BanType_Club                                       = 4,
 	BanType_Trade                                      = 5,
-	BanType_END                                        = 6
+	BanType_QuitPenalty                                = 6,
+	BanType_END                                        = 7
 };
 
 // Enum ProjectX._Types_X.EConsoleQualityMode
@@ -190,6 +193,15 @@ enum class EFXComponentState : int
 	FXComponentState_Attached                          = 1,
 	FXComponentState_PendingDetach                     = 2,
 	FXComponentState_END                               = 3
+};
+
+// Enum ProjectX.FXActor_X.EFXLocality
+enum class EFXLocality : int
+{
+	FXLocality_Controller                              = 0,
+	FXLocality_AlwaysLocal                             = 1,
+	FXLocality_NeverLocal                              = 2,
+	FXLocality_END                                     = 3
 };
 
 // Enum ProjectX.FXActor_X.EAttachActorLocationUnlockFlags
@@ -623,7 +635,7 @@ public:
 		return uClassPointer;
 	};
 
-	bool __MICParamDispenserComponent_X__Attached_75A255B0427FFE801B51119A7ECDFACB(struct FFXAttachment A);
+	bool __MICParamDispenserComponent_X__Attached_C4543C3C4C3448911B36B1BD9F0327F7(struct FFXAttachment A);
 	void eventAttached();
 	void SetActorParameter(struct FName Key, class AActor* Value);
 	void SetLinearColorParameter(struct FName Key, struct FLinearColor Value);
@@ -744,13 +756,14 @@ public:
 	class UFXActorEvent_X*                             SpawnState;                                       		// 0x0268 (0x0008) [0x0000000000000000]               
 	class UFXActorEvent_X*                             ActivationState;                                  		// 0x0270 (0x0008) [0x0000000000000000]               
 	TArray<struct FFXAttachment>                       Attachments;                                      		// 0x0278 (0x0010) [0x0000000000480001] (CPF_Edit | CPF_Component | CPF_NeedCtorLink)
-	struct FName                                       SocketOrBoneName;                                 		// 0x0288 (0x0008) [0x0000000000000001] (CPF_Edit)    
-	unsigned long                                      bDeactivateWhenOwnerDestroyed : 1;                		// 0x0290 (0x0004) [0x0000000000000001] [0x00000001] (CPF_Edit)
-	unsigned long                                      bAllowShadowCasting : 1;                          		// 0x0290 (0x0004) [0x0000000000000001] [0x00000002] (CPF_Edit)
-	unsigned long                                      bAutoActivate : 1;                                		// 0x0290 (0x0004) [0x0000000000000001] [0x00000004] (CPF_Edit)
-	unsigned long                                      bRenderInactive : 1;                              		// 0x0290 (0x0004) [0x0000000000000001] [0x00000008] (CPF_Edit)
-	unsigned long                                      bActive : 1;                                      		// 0x0290 (0x0004) [0x0000000000002000] [0x00000010] (CPF_Transient)
-	unsigned long                                      bHadOwner : 1;                                    		// 0x0290 (0x0004) [0x0000000000002002] [0x00000020] (CPF_Const | CPF_Transient)
+	unsigned char                                      Locality;                                         		// 0x0288 (0x0001) [0x0000000000000001] (CPF_Edit)    
+	struct FName                                       SocketOrBoneName;                                 		// 0x028C (0x0008) [0x0000000000000001] (CPF_Edit)    
+	unsigned long                                      bDeactivateWhenOwnerDestroyed : 1;                		// 0x0294 (0x0004) [0x0000000000000001] [0x00000001] (CPF_Edit)
+	unsigned long                                      bAllowShadowCasting : 1;                          		// 0x0294 (0x0004) [0x0000000000000001] [0x00000002] (CPF_Edit)
+	unsigned long                                      bAutoActivate : 1;                                		// 0x0294 (0x0004) [0x0000000000000001] [0x00000004] (CPF_Edit)
+	unsigned long                                      bRenderInactive : 1;                              		// 0x0294 (0x0004) [0x0000000000000001] [0x00000008] (CPF_Edit)
+	unsigned long                                      bActive : 1;                                      		// 0x0294 (0x0004) [0x0000000000002000] [0x00000010] (CPF_Transient)
+	unsigned long                                      bHadOwner : 1;                                    		// 0x0294 (0x0004) [0x0000000000002002] [0x00000020] (CPF_Const | CPF_Transient)
 	class AFXActor_X*                                  Parent;                                           		// 0x0298 (0x0008) [0x0000000000000001] (CPF_Edit)    
 	class AActor*                                      AttachmentActor;                                  		// 0x02A0 (0x0008) [0x0000000000002000] (CPF_Transient)
 	TArray<class UFXActorEvent_X*>                     FXStates;                                         		// 0x02A8 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
@@ -949,13 +962,13 @@ public:
 		return uClassPointer;
 	};
 
-	void __ReservationBeacon_X__Construct_96AF30D64FB1289EE837B3A551DB7B6C();
-	void __ReservationBeacon_X__Construct_05458B7443422BE1FF6C518AF122BBAB(class UPsyNetBeaconConnection_X* Connection, class UObject* Message);
-	void __ReservationBeacon_X__Construct_FD6257874D3243A14DC1DC8BD8D5883F(class UPsyNetBeacon_X* _, class UPsyNetBeaconConnection_X* Connection);
-	void __ReservationBeacon_X__Construct_D5F0EC784940E22BE8972B8924163E1F(class UPsyNetBeacon_X* _, class UPsyNetBeaconConnection_X* Connection);
-	void __ReservationBeacon_X__Construct_ABADD5654AD378BE15CF588CED773405(class UTcpConnection* Connection, class UObject* Message);
-	void __ReservationBeacon_X__Construct_EB9B1B864C8C4C9067C111859D43FAF2(class UTcpBeacon* _, class UTcpConnection* Connection);
-	void __ReservationBeacon_X__Construct_51B1AA3F406A26992EBF6EB523F3F7F8(class UTcpBeacon* _, class UTcpConnection* Connection);
+	void __ReservationBeacon_X__Construct_B82198A5410540A0710FE09A74DC1F73();
+	void __ReservationBeacon_X__Construct_6F226B074C691A7F12D5EF8DFB27E617(class UPsyNetBeaconConnection_X* Connection, class UObject* Message);
+	void __ReservationBeacon_X__Construct_E0AB0BC24E3249EED86A9B8C05C82845(class UPsyNetBeacon_X* _, class UPsyNetBeaconConnection_X* Connection);
+	void __ReservationBeacon_X__Construct_9CB9982C482CC0BFA5D66D87B51987DE(class UPsyNetBeacon_X* _, class UPsyNetBeaconConnection_X* Connection);
+	void __ReservationBeacon_X__Construct_EE3646364C1DAA98A6381AAAB6F794C6(class UTcpConnection* Connection, class UObject* Message);
+	void __ReservationBeacon_X__Construct_CCA3014E462703CC6DE842823968EB47(class UTcpBeacon* _, class UTcpConnection* Connection);
+	void __ReservationBeacon_X__Construct_5E58B0DA4B66A265F9F6049EFED0F000(class UTcpBeacon* _, class UTcpConnection* Connection);
 	class UIReservationConnection_X* ServerReserveConnection(struct FString ReservationID, struct FUniqueNetId PlayerID, float ConnectionTimeoutSeconds);
 	class UIReservationConnection_X* BeginPsyNetConnect(struct FString ReservationID, struct FString DSRToken);
 	class UIReservationConnection_X* BeginTcpConnect(struct FString BeaconURL);
@@ -1105,7 +1118,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __Camera_X__Destroyed_9DEAE3624414DB0C00850D8F3E6FC559(class UCameraState_X* S);
+	void __Camera_X__Destroyed_EE24F77E46538B75EA15938858D62907(class UCameraState_X* S);
 	void Destroyed();
 	void eventOnViewTargetChanged();
 	void SetViewTarget(class AActor* NewViewTarget, struct FViewTargetTransitionParams TransitionParams);
@@ -1247,7 +1260,7 @@ public:
 	void DebugKill();
 	void DebugKillAllExcept();
 	bool GetAutoAimTarget(class AActor*& HitActor, struct FVector& HitLoc);
-	void __PlayerController_X__ReceivedPlayer_9DBB36A0482BAEC16D50AB87DF18ABF3(class UObject* _);
+	void __PlayerController_X__ReceivedPlayer_222DEF3142A98791DEB5E3A80A0FAAE6(class UObject* _);
 	void ClientSetSeasonReward(struct FPlayerSeasonRewardProgress Reward);
 	void ServerUpdateCustomMatchSettings(struct FCustomMatchSettings Settings);
 	void ServerSetParty(struct FUniqueNetId MemberId, struct FUniqueNetId NewPartyID);
@@ -1589,7 +1602,7 @@ public:
 	struct FString GetRegionString();
 	struct FString GetPlatformString();
 	bool ConfigGetString(struct FString SectionName, struct FString KeyName, struct FString& OutValue);
-	bool ParseCommandlineString(struct FString Param, struct FString& OutValue);
+	bool ParseCommandlineString(struct FString Param, unsigned long bShouldStopOnComma, struct FString& OutValue);
 	bool ParseCommandlineQWORD(struct FString Param, unsigned long long& OutValue);
 	bool ParseCommandlineFloat(struct FString Param, float& OutValue);
 	bool ParseCommandlineInt(struct FString Param, int& OutValue);
@@ -1774,7 +1787,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __EOSMetrics_X__Init_D5B9949E402AEF2359B604AA31449FAD(class UEOSMetricsConfig_X* EpicMetric);
+	void __EOSMetrics_X__Init_3FB32C6E485507CD09BA72ACA5B5F03A(class UEOSMetricsConfig_X* EpicMetric);
 	struct FString GetUserIdNative(struct FUniqueNetId LocalId, struct FString EpicId);
 	void AddPresenceEvent(class UEOSMetricEvent_X* InEvent);
 	void AddEvent(class UEOSMetricEvent_X* InEvent);
@@ -1858,7 +1871,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __Online_X__InitializeEOS_4B84F6EA47F6323EE4A9338B142CFFBC(class UEpicConfig_X* EpicConfig);
+	void __Online_X__InitializeEOS_EF5386874EE3DB421665A8972CDFD843(class UEpicConfig_X* EpicConfig);
 	class UOnlineSubsystem* GetOrCreateEOS(struct FString& SandboxId, struct FString& DeploymentId);
 	void NotifyWhenEOSInitialized(struct FScriptDelegate Callback);
 	void HandleLinkStatusChangedEOSInit(unsigned long bHasInternetConnection);
@@ -1933,8 +1946,8 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlinePlayer_X__OnInit_627FA9F84CDFB79B57FC70A13F95374A(class UOnlinePlayerAuthentication_X* _);
-	void __OnlinePlayer_X__UpdatePsyNetEnabled_CC0EC0E041285210DED2458F7D238FE1(class UBanMessage_X* _);
+	void __OnlinePlayer_X__OnInit_D5F59FF944A64688437D36A3FEA72ECB(class UOnlinePlayerAuthentication_X* _);
+	void __OnlinePlayer_X__UpdatePsyNetEnabled_30757D8949EB1113A6CAD884454E178B(class UBanMessage_X* _);
 	void GetPlayersLikesDislikes(class UGameSettingPlaylist_X* Playlist, TArray<struct FName>& PlayerLikes, TArray<struct FName>& PlayerDislikes);
 	void PrintDebugInfo(class UDebugDrawer* Drawer);
 	bool IsGuestAccount();
@@ -2065,6 +2078,7 @@ public:
 	unsigned long                                      bLoggedIn : 1;                                    		// 0x0120 (0x0004) [0x0000000000000000] [0x00000001] 
 	unsigned long                                      bPlatformTokenAuthenticationFailed : 1;           		// 0x0120 (0x0004) [0x0000000000002000] [0x00000002] (CPF_Transient)
 	unsigned long                                      bSkipAuth : 1;                                    		// 0x0120 (0x0004) [0x0000000000000000] [0x00000004] 
+	unsigned long                                      bLastChanceAuthBan : 1;                           		// 0x0120 (0x0004) [0x0000000000002000] [0x00000008] (CPF_Transient)
 	class UError*                                      AuthLoginError;                                   		// 0x0128 (0x0008) [0x0000000000000000]               
 	class UBanMessage_X*                               BanMessage;                                       		// 0x0130 (0x0008) [0x0000000000002000] (CPF_Transient)
 	class UPsyTagComponent_X*                          PsyTagInfo;                                       		// 0x0138 (0x0008) [0x0000000004080008] (CPF_ExportObject | CPF_Component | CPF_EditInline)
@@ -2096,13 +2110,12 @@ public:
 	void OnEpicLoginInitializedTimeout();
 	void RequestEpicAuthTicket();
 	void HandleEpicAuthTicket(struct FString AuthTicket, struct FString EpicAccountId, class UError* Error);
-	void __OnlinePlayerAuthentication_X__OnInit_B0D66B1B4B6B2035CD85E7B6E2820C50();
+	void __OnlinePlayerAuthentication_X__OnInit_9E60B7E749D9A47491B791B20DF27DD6();
 	struct FString GetDebugName();
 	void GotoAuthState(struct FName AuthStateName);
 	bool IsLoginAttemptActive();
 	struct FName GetFeatureSet();
 	struct FString GetBuildRegion();
-	void OnChangeAuthenticatedName(struct FString NewName);
 	void HandleAuthTicket(unsigned long bSuccess, struct FString AuthTicket);
 	void RequestAuthTicket();
 	bool RequiresEpicAuthTicket();
@@ -2169,12 +2182,12 @@ public:
 		return uClassPointer;
 	};
 
-	void __EpicLogin_X__HandleLoginChanged_0F5A1E974EA281D59364B3B5402C4741(struct FString Ticket, struct FString Id, class UError* Err);
-	void __EpicLogin_X__HandleLoginFailed_EBCC0FB14F5AD7F29C7BE9A0DDFA6214(struct FString Ticket, struct FString Id, class UError* Err);
-	void __EpicLogin_X__UpdateTwoFactorAuthenticationStatus_5EA39F83400AB17DC5A1AF97ABAA4096(struct FString Ticket, struct FString Id, class UError* Err);
-	void __EpicLogin_X__CreateEpicGamesAccount_678479784E95DB6E406157BAF515DBC1(class UWebRequest_X* Response);
-	void __EpicLogin_X__CreateEpicGamesAccount_99D49D934687A96759579BB54687FEDB(struct FString _, struct FString __, class UError* Error);
-	void __EpicLogin_X__RequestNintendoAccountAuthorization_820E201842AF0BF6540BCD9E8A73D436(class UError* _);
+	void __EpicLogin_X__HandleLoginChanged_6A7A92F241D2A98A5421B0AACD27F94C(struct FString Ticket, struct FString Id, class UError* Err);
+	void __EpicLogin_X__HandleLoginFailed_DBC001C04F8639048D37B3AD22E03FCE(struct FString Ticket, struct FString Id, class UError* Err);
+	void __EpicLogin_X__UpdateTwoFactorAuthenticationStatus_F5CFFF57443503A9E7AB468C08CA389E(struct FString Ticket, struct FString Id, class UError* Err);
+	void __EpicLogin_X__CreateEpicGamesAccount_165D0E864A16B7D5DBC46A82ABCCA223(class UWebRequest_X* Response);
+	void __EpicLogin_X__CreateEpicGamesAccount_B133DA43410772B7DF92FD825516AC36(struct FString _, struct FString __, class UError* Error);
+	void __EpicLogin_X__RequestNintendoAccountAuthorization_49D735604A12FD8BFE506C949E2C6F28(class UError* _);
 	void HandleRequestPinGrantTimeout();
 	void HandleLoginTimeout();
 	void ClearRequestPinGrantCallbacks();
@@ -2264,7 +2277,7 @@ public:
 };
 
 // Class ProjectX.Errors_X
-// 0x02F8 (0x0080 - 0x0378)
+// 0x0300 (0x0080 - 0x0380)
 class UErrors_X : public UErrorList
 {
 public:
@@ -2351,6 +2364,7 @@ public:
 	class UErrorType*                                  ServerNotFound;                                   		// 0x0360 (0x0008) [0x0000000000000002] (CPF_Const)   
 	class UPsyNetErrorType_X*                          ExpiredDsConnectToken;                            		// 0x0368 (0x0008) [0x0000000000000002] (CPF_Const)   
 	class UErrorType*                                  MatchmakingNoInternet;                            		// 0x0370 (0x0008) [0x0000000000000002] (CPF_Const)   
+	class UErrorType*                                  PartyRankDisparity;                               		// 0x0378 (0x0008) [0x0000000000000002] (CPF_Const)   
 public:
 	static UClass* StaticClass()
 	{
@@ -2709,7 +2723,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __GameEngine_X__Construct_6D15F9764B410AC9365BA9A98705F7EB(struct FString InURL);
+	void __GameEngine_X__Construct_735F1A7E4018F462351C69B3DA4C5283(struct FString InURL);
 	void PrintDebugInfo(class UDebugDrawer* Drawer);
 	void eventOnlineSubsystemInitialized();
 	void eventConstruct();
@@ -2818,8 +2832,9 @@ public:
 		return uClassPointer;
 	};
 
+	bool __GameSettingCategory_X__GetGameSettingIndex_A405F7A642D1D2A7B18FE0A1DAEA4EBC(class UGameSetting_X* GS);
 	void PrintDebugInfo(class UDebugDrawer* Drawer);
-	int GetGameSettingIndex(struct FName SettingName);
+	int GetGameSettingIndex(struct FName SettingName, unsigned long bIgnoreHidden);
 	bool eventHasSetting(struct FName SettingName);
 	void GetSelectedGameSettings(TArray<class UGameSetting_X*>& SelectedGameSettings);
 	class UGameSetting_X* GetFirstSelectedGameSetting();
@@ -3955,7 +3970,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlineLegalText_X__Sync_B905BAE5464DFB02CA941C9388F6B0DA(class UUrlConfig_X* UrlConfig);
+	void __OnlineLegalText_X__Sync_43A9EA3749F97E0B88EEB5871467F54E(class UUrlConfig_X* UrlConfig);
 	void HandleWebText(class UCachedWebData_X* InCachedData);
 	struct FString GetWebUrl(class UUrlConfig_X* UrlConfig);
 	struct FString GetPlatformString();
@@ -4727,7 +4742,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __PsyNetMessengerWebSocket_X__SendQueuedMessages_E508CB9749C5D34F001E75873C49ACC3(struct FQueuedPsyNetMessage QueuedMessage);
+	void __PsyNetMessengerWebSocket_X__SendQueuedMessages_B471681B4D41556D7B2148BC9BEEE793(struct FQueuedPsyNetMessage QueuedMessage);
 	void eventDispose();
 	void HandleReceivedBunch(class UTcpConnection* C);
 	void SerializeMessage(class UPsyNetMessage_X* Message);
@@ -4835,10 +4850,10 @@ public:
 		return uClassPointer;
 	};
 
-	void __PsyNetStaticData_X__Init_89C8F1E4401250A8443023876E59FDC1(class UObject* _);
-	void __PsyNetStaticData_X__Init_D0822CFB41662C11D35415A03CE92028(class UObject* _);
-	void __PsyNetStaticData_X__Init_88B6916D43C60B6232FDF49476124EC6();
-	void __PsyNetStaticData_X__HandleGetURL_22BB1E6444AF4892FC6F8C8F744E2039(class UOnlineResource_X* _);
+	void __PsyNetStaticData_X__Init_A3041D5348734C62E1C28A9331FE4ED0(class UObject* _);
+	void __PsyNetStaticData_X__Init_D546E7FD43B95DF50A1154BA3E44899F(class UObject* _);
+	void __PsyNetStaticData_X__Init_EBABBB354EAE4128971871BC6474F563();
+	void __PsyNetStaticData_X__HandleGetURL_62B4CABB47080447B8BF4C893A5EBDBA(class UOnlineResource_X* _);
 	class UPsyNetStaticDataMetrics_X* GetMetrics();
 	void UpdateRegisteredObjects();
 	bool LoadFromUTF8(TArray<unsigned char>& SignedData);
@@ -4861,12 +4876,13 @@ public:
 };
 
 // Class ProjectX.PsyNetUrl_X
-// 0x0018 (0x0060 - 0x0078)
+// 0x0028 (0x0060 - 0x0088)
 class UPsyNetUrl_X : public UObject
 {
 public:
 	unsigned long                                      bUseSubsystemURL : 1;                             		// 0x0060 (0x0004) [0x0000000000004001] [0x00000001] (CPF_Edit | CPF_Config)
 	struct FString                                     URL;                                              		// 0x0068 (0x0010) [0x0000000000404001] (CPF_Edit | CPF_Config | CPF_NeedCtorLink)
+	struct FString                                     URLv2;                                            		// 0x0078 (0x0010) [0x0000000000404001] (CPF_Edit | CPF_Config | CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -5099,7 +5115,7 @@ public:
 };
 
 // Class ProjectX.RPCBatch_X
-// 0x0060 (0x0060 - 0x00C0)
+// 0x006C (0x0060 - 0x00CC)
 class URPCBatch_X : public UObject
 {
 public:
@@ -5107,9 +5123,11 @@ public:
 	TArray<struct FPendingRPC>                         Requests;                                         		// 0x0068 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
 	TArray<struct FRPCResponse>                        Responses;                                        		// 0x0078 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
 	struct FRPCError                                   Error;                                            		// 0x0088 (0x0020) [0x0000000000400000] (CPF_NeedCtorLink)
-	class UPsyNetMessage_X*                            RequestMessage;                                   		// 0x00A8 (0x0008) [0x0000000000000000]               
-	class UPsyNetMessage_X*                            ResponseMessage;                                  		// 0x00B0 (0x0008) [0x0000000000000000]               
-	class UError*                                      ResponseError;                                    		// 0x00B8 (0x0008) [0x0000000000000000]               
+	class UObject*                                     Result;                                           		// 0x00A8 (0x0008) [0x0000000000000000]               
+	class UPsyNetMessage_X*                            RequestMessage;                                   		// 0x00B0 (0x0008) [0x0000000000000000]               
+	class UPsyNetMessage_X*                            ResponseMessage;                                  		// 0x00B8 (0x0008) [0x0000000000000000]               
+	class UError*                                      ResponseError;                                    		// 0x00C0 (0x0008) [0x0000000000000000]               
+	unsigned long                                      bUseRpcV2 : 1;                                    		// 0x00C8 (0x0004) [0x0000000000000000] [0x00000001] 
 public:
 	static UClass* StaticClass()
 	{
@@ -5126,7 +5144,7 @@ public:
 };
 
 // Class ProjectX.RPCQueue_X
-// 0x00F8 (0x0070 - 0x0168)
+// 0x0100 (0x0070 - 0x0170)
 class URPCQueue_X : public UComponent
 {
 public:
@@ -5134,14 +5152,15 @@ public:
 	float                                              AuthTimeoutSeconds;                               		// 0x0078 (0x0004) [0x0000000000000001] (CPF_Edit)    
 	class URPCConfig_X*                                RPCConfig;                                        		// 0x0080 (0x0008) [0x0000000000000001] (CPF_Edit)    
 	class UPsyNetRetryConfig_X*                        RetryConfig;                                      		// 0x0088 (0x0008) [0x0000000000000001] (CPF_Edit)    
-	TArray<struct FPendingRPC>                         PendingRPCs;                                      		// 0x0090 (0x0010) [0x0000000000400002] (CPF_Const | CPF_NeedCtorLink)
-	TArray<class URPCBatch_X*>                         PendingBatches;                                   		// 0x00A0 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FMap_Mirror                                 ServiceFailureDelayTimes;                         		// 0x00B0 (0x0050) [0x0000000000001002] (CPF_Const | CPF_Native)
-	unsigned long                                      bAuthorized : 1;                                  		// 0x0100 (0x0004) [0x0000000000000000] [0x00000001] 
-	struct FScriptDelegate                             __EventRPCSuccess__Delegate;                      		// 0x0108 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventRPCError__Delegate;                        		// 0x0120 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventBatchError__Delegate;                      		// 0x0138 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __SendRequestDelegate__Delegate;                  		// 0x0150 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	class UPsyNetUrl_X*                                PsyNetUrl;                                        		// 0x0090 (0x0008) [0x0000000000000001] (CPF_Edit)    
+	TArray<struct FPendingRPC>                         PendingRPCs;                                      		// 0x0098 (0x0010) [0x0000000000400002] (CPF_Const | CPF_NeedCtorLink)
+	TArray<class URPCBatch_X*>                         PendingBatches;                                   		// 0x00A8 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FMap_Mirror                                 ServiceFailureDelayTimes;                         		// 0x00B8 (0x0050) [0x0000000000001002] (CPF_Const | CPF_Native)
+	unsigned long                                      bAuthorized : 1;                                  		// 0x0108 (0x0004) [0x0000000000000000] [0x00000001] 
+	struct FScriptDelegate                             __EventRPCSuccess__Delegate;                      		// 0x0110 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventRPCError__Delegate;                        		// 0x0128 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventBatchError__Delegate;                      		// 0x0140 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __SendRequestDelegate__Delegate;                  		// 0x0158 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -5159,6 +5178,7 @@ public:
 	class UPsyNetMetrics_X* GetPsyNetMetrics();
 	void RecordBatchMetrics(class URPCBatch_X* Batch);
 	void HandleBatchComplete(class URPCBatch_X* Batch, class UPsyNetMessage_X* Response, class UError* Error);
+	void eventCreateBatchSingleRPC(class UPsyNetMessage_X* Message, struct FPendingRPC& RPC);
 	void eventCreateBatch(class UPsyNetMessage_X* Message, TArray<struct FPendingRPC>& BatchRPCs);
 	void eventSignatureMismatch(int ServiceID);
 	void FailAllPending(class UError* Error);
@@ -5471,7 +5491,7 @@ public:
 	void HandleLoginCompleted(class UOnlinePlayerAuthentication_X* Auth, class UAsyncTask* Task);
 	class UAsyncTask* CheckPsyNetConnection();
 	bool RequiresSystemNetworkErrorHandling();
-	bool ValidateUserOnlineAccount(class UError*& Error);
+	bool ValidateUserOnlineAccount();
 	bool CheckInternetConnection(class UError*& Error);
 	bool IsOnlinePlayerID(struct FUniqueNetId PlayerID);
 	class UOnlinePlayer_X* eventGetOnlinePlayerByID(struct FUniqueNetId PlayerID);
@@ -5705,7 +5725,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlineGameLeaderboards_X__ClearPreviousTasks_943D172B4ED8F79A2C99A5A44ED13D45(class URPC_X* RPC);
+	void __OnlineGameLeaderboards_X__ClearPreviousTasks_39D6B80D455302634B8191B16E8ED3A6(class URPC_X* RPC);
 	void ClearPreviousTasks();
 	bool IsSkillLeaderboard(struct FString NewLeaderboardID, int& Playlist);
 	TArray<struct FLeaderboardData> SortLeaderboardDataMMR(TArray<struct FLeaderboardData> Leaderboard);
@@ -5776,20 +5796,20 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlineGameReservations_X__OnInit_C585AC0C432AB696725FCFA20B532BAC(class UIReservationConnection_X* Connection, class UObject* Message);
-	void __OnlineGameReservations_X__OnInit_741063124DE13F816EF059B8D395CABE(class UIReservationConnection_X* Connection, class UObject* Message);
-	void __OnlineGameReservations_X__OnInit_BD9A8FA84DE6D609A31C6DBA62D567B9(class UIReservationConnection_X* Connection, class UObject* Message);
-	bool __OnlineGameReservations_X__SetPlayersWithMigrationData_0FBEB5264CCB65E79C06A38AA6E89CE5(struct FMigrationReservationData P);
-	struct FUniqueNetId __OnlineGameReservations_X__HandlePsyNetBeaconReservation_6060889D4AACBC8288751E92284E4539(struct FPsyNetBeaconPlayerReservation P);
-	void __OnlineGameReservations_X__HandlePublicReservation_CBEC99FE4FF53FDC4344088854D666DE(struct FReservationData P);
-	void __OnlineGameReservations_X__HandlePublicReservation_463523B946DD30F42CB8C09E0BADE4AA(struct FReservationData P);
-	bool __OnlineGameReservations_X__HasTimeoutPlayers_FF3AD82C493DDE61DE80ECB6D8868FA1(struct FReservationData P);
-	bool __OnlineGameReservations_X__HasMultipleReservedTeams_DE3484384765A5AB16119DBD07D8BF9B(int TeamID);
-	int __OnlineGameReservations_X__HasMultipleReservedTeams_F6327AC846042E42BBF814B69CC4EDC1(struct FReservationData P);
-	bool __OnlineGameReservations_X__AllPlayersReserved_325627C44A2A0CFEE98E208054876DF8(struct FReservationData P);
-	bool __OnlineGameReservations_X__AllPlayersInGame_422E3C014569487F92B439B33CD575BA(struct FReservationData P);
-	void __OnlineGameReservations_X__SetServerTraveling_2AA9C4CB40000EA5028F6BB137F2123F(struct FPendingReservation P);
-	struct FUniqueNetId __OnlineGameReservations_X__GetPlayerIDs_F53556DC474E0D2C833983AA3ED6F89E(struct FReservationData Player);
+	void __OnlineGameReservations_X__OnInit_0875D7B842F71F7F7D90CFB123FA8A61(class UIReservationConnection_X* Connection, class UObject* Message);
+	void __OnlineGameReservations_X__OnInit_9F2227DA46125C530F5A399CF4FD0BE7(class UIReservationConnection_X* Connection, class UObject* Message);
+	void __OnlineGameReservations_X__OnInit_4628BD2145C20F51C5B7C99E71B974C3(class UIReservationConnection_X* Connection, class UObject* Message);
+	bool __OnlineGameReservations_X__SetPlayersWithMigrationData_BDBB1B50423B52EF830DFC9507B038EB(struct FMigrationReservationData P);
+	struct FUniqueNetId __OnlineGameReservations_X__HandlePsyNetBeaconReservation_9FA9EC234F9515FFC9D714B4F8F74C3B(struct FPsyNetBeaconPlayerReservation P);
+	void __OnlineGameReservations_X__HandlePublicReservation_8B71B72F4D1790BD55498384156A3E47(struct FReservationData P);
+	void __OnlineGameReservations_X__HandlePublicReservation_90F40EDD43CCB4E05F3B0892987DF5AB(struct FReservationData P);
+	bool __OnlineGameReservations_X__HasTimeoutPlayers_DA8B590B4A7B47812FC9F18747F9DEB7(struct FReservationData P);
+	bool __OnlineGameReservations_X__HasMultipleReservedTeams_B63B1C31404D3A52ED14A8BD696F6DF8(int TeamID);
+	int __OnlineGameReservations_X__HasMultipleReservedTeams_6CD27030493C8B553861609C9E97C859(struct FReservationData P);
+	bool __OnlineGameReservations_X__AllPlayersReserved_A2A4D6664E69A2C15BDED9B4250E4740(struct FReservationData P);
+	bool __OnlineGameReservations_X__AllPlayersInGame_881DCD874F3387DBA1A62C96BA085BFC(struct FReservationData P);
+	void __OnlineGameReservations_X__SetServerTraveling_8E17852240C8609DDC8CEDB7AB1963D7(struct FPendingReservation P);
+	struct FUniqueNetId __OnlineGameReservations_X__GetPlayerIDs_4C978DF0443F2A0F360F0EBEC7FB81DB(struct FReservationData Player);
 	void __bMatchStarted__ChangeNotifyFunc();
 	TArray<struct FUniqueNetId> GetPlayerIDs();
 	float GetMapLoadTimeout(unsigned char Platform);
@@ -6777,7 +6797,7 @@ public:
 		return uClassPointer;
 	};
 
-	struct FUniqueNetId __AddReservationMessage_X__GetPlayerIDs_A54F26ED4B962AB9D07217B671162491(struct FReservationPlayerData P);
+	struct FUniqueNetId __AddReservationMessage_X__GetPlayerIDs_E51F9C584C4EECD4DFC655B9945F7E0B(struct FReservationPlayerData P);
 	TArray<struct FUniqueNetId> GetPlayerIDs();
 	void GetPlayerMapPrefs(struct FUniqueNetId PlayerID, TArray<struct FName>& Likes, TArray<struct FName>& Dislikes);
 	class UAddReservationMessage_X* SetDisableCrossPlay(unsigned long bValue);
@@ -6813,7 +6833,7 @@ public:
 };
 
 // Class ProjectX.OnlineGameParty_X
-// 0x0410 (0x0098 - 0x04A8)
+// 0x04C8 (0x0098 - 0x0560)
 class UOnlineGameParty_X : public UOnline_X
 {
 public:
@@ -6828,49 +6848,57 @@ public:
 	int                                                CurrentPartySize;                                 		// 0x0124 (0x0004) [0x0000000000002000] (CPF_Transient)
 	unsigned long                                      LastbSearchingStatus : 1;                         		// 0x0128 (0x0004) [0x0000000000002000] [0x00000001] (CPF_Transient)
 	unsigned long                                      LastLockStatus : 1;                               		// 0x0128 (0x0004) [0x0000000000002000] [0x00000002] (CPF_Transient)
+	unsigned long                                      bPendingIncomingTradeInvite : 1;                  		// 0x0128 (0x0004) [0x0000000000002000] [0x00000004] (CPF_Transient)
+	unsigned long                                      bTradeLocked : 1;                                 		// 0x0128 (0x0004) [0x0000000000000000] [0x00000008] 
 	struct FName                                       LastSearchState;                                  		// 0x012C (0x0008) [0x0000000000002000] (CPF_Transient)
 	struct FPartyJoinMatchSettings                     MatchSettings;                                    		// 0x0138 (0x0068) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
-	unsigned char                                      ProcessingStatus;                                 		// 0x01A0 (0x0001) [0x0000000000002000] (CPF_Transient)
-	struct FString                                     NotInSameOnlineGameError;                         		// 0x01A8 (0x0010) [0x0000000000408002] (CPF_Const | CPF_Localized | CPF_NeedCtorLink)
-	struct FString                                     MissingLicenseAgreementError;                     		// 0x01B8 (0x0010) [0x0000000000408002] (CPF_Const | CPF_Localized | CPF_NeedCtorLink)
-	class UPartySequence_InvitedToPlatformParty_X*     SequenceInvitedToPlatformParty;                   		// 0x01C8 (0x0008) [0x0000000000000000]               
-	class UPartySequence_PsyNetPartyUpgrade_X*         SequencePsyNetPartyUpgrade;                       		// 0x01D0 (0x0008) [0x0000000000000000]               
-	class UPartySequence_InvitedToPsyNetParty_X*       SequenceInvitedToPsyNetParty;                     		// 0x01D8 (0x0008) [0x0000000000000000]               
-	class UPartyConfig_X*                              PartyConfig;                                      		// 0x01E0 (0x0008) [0x0000000000000001] (CPF_Edit)    
-	class UPsyNetConfig_X*                             Config;                                           		// 0x01E8 (0x0008) [0x0000000000000001] (CPF_Edit)    
-	class UOnlineLobbyInterface*                       PlatformLobbyInterface;                           		// 0x01F0 (0x0010) [0x0000000000000000]               
-	unsigned char                                      UnknownData00[0x8];                               		// 0x01F8 (0x0008) FIX WRONG SIZE OF PREVIOUS PROPERTY
-	class UParties_X*                                  PsyNetLobbyInterface;                             		// 0x0200 (0x0008) [0x0000000000000000]               
-	int                                                CreatePartyLocalPlayerNum;                        		// 0x0208 (0x0004) [0x0000000000000000]               
-	class UCrossplayConfig_X*                          CrossplayConfig;                                  		// 0x0210 (0x0008) [0x0000000000000000]               
-	class UFindServerTask_X*                           FindServerTask;                                   		// 0x0218 (0x0008) [0x0000000000000000]               
-	struct FScriptDelegate                             __EventPartyCreated__Delegate;                    		// 0x0220 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __OnPartyInviteAccepted__Delegate;                		// 0x0238 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPlayerInvited__Delegate;                   		// 0x0250 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPlayerInvitedSilent__Delegate;             		// 0x0268 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPartyChanged__Delegate;                    		// 0x0280 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPartySizeChanged__Delegate;                		// 0x0298 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPartyLeaderChanged__Delegate;              		// 0x02B0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventSearchStatusChanged__Delegate;             		// 0x02C8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPartyError__Delegate;                      		// 0x02E0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPartyJoinGameError__Delegate;              		// 0x02F8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPartyJoinGameSuccess__Delegate;            		// 0x0310 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPartyDestroyed__Delegate;                  		// 0x0328 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventConfirmJoinGameMessage__Delegate;          		// 0x0340 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventLeaderLeftOnlineGame__Delegate;            		// 0x0358 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventProcessingStatusChanged__Delegate;         		// 0x0370 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventDisableCrossPlayChanged__Delegate;         		// 0x0388 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPlayerTradingChanged__Delegate;            		// 0x03A0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventInviteToTrade__Delegate;                   		// 0x03B8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventAcceptedInviteToTrade__Delegate;           		// 0x03D0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventCloseInviteToTrade__Delegate;              		// 0x03E8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventReadyToTrade__Delegate;                    		// 0x0400 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventNotReadyToTrade__Delegate;                 		// 0x0418 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventTradeReady__Delegate;                      		// 0x0430 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventAnotherInviteToTrade__Delegate;            		// 0x0448 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPlayerInMatchChanged__Delegate;            		// 0x0460 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventPlayerIsCurrentlyTrading__Delegate;        		// 0x0478 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __EventStartedJoinFriend__Delegate;               		// 0x0490 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FUniqueNetId                                PendingTradeInvite;                               		// 0x01A0 (0x0048) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	unsigned char                                      ProcessingStatus;                                 		// 0x01E8 (0x0001) [0x0000000000002000] (CPF_Transient)
+	struct FString                                     NotInSameOnlineGameError;                         		// 0x01F0 (0x0010) [0x0000000000408002] (CPF_Const | CPF_Localized | CPF_NeedCtorLink)
+	struct FString                                     MissingLicenseAgreementError;                     		// 0x0200 (0x0010) [0x0000000000408002] (CPF_Const | CPF_Localized | CPF_NeedCtorLink)
+	class UPartySequence_InvitedToPlatformParty_X*     SequenceInvitedToPlatformParty;                   		// 0x0210 (0x0008) [0x0000000000000000]               
+	class UPartySequence_PsyNetPartyUpgrade_X*         SequencePsyNetPartyUpgrade;                       		// 0x0218 (0x0008) [0x0000000000000000]               
+	class UPartySequence_InvitedToPsyNetParty_X*       SequenceInvitedToPsyNetParty;                     		// 0x0220 (0x0008) [0x0000000000000000]               
+	class UPartyConfig_X*                              PartyConfig;                                      		// 0x0228 (0x0008) [0x0000000000000001] (CPF_Edit)    
+	class UPsyNetConfig_X*                             Config;                                           		// 0x0230 (0x0008) [0x0000000000000001] (CPF_Edit)    
+	class UOnlineLobbyInterface*                       PlatformLobbyInterface;                           		// 0x0238 (0x0010) [0x0000000000000000]               
+	unsigned char                                      UnknownData00[0x8];                               		// 0x0240 (0x0008) FIX WRONG SIZE OF PREVIOUS PROPERTY
+	class UParties_X*                                  PsyNetLobbyInterface;                             		// 0x0248 (0x0008) [0x0000000000000000]               
+	int                                                CreatePartyLocalPlayerNum;                        		// 0x0250 (0x0004) [0x0000000000000000]               
+	class UCrossplayConfig_X*                          CrossplayConfig;                                  		// 0x0258 (0x0008) [0x0000000000000000]               
+	class UFindServerTask_X*                           FindServerTask;                                   		// 0x0260 (0x0008) [0x0000000000000000]               
+	struct FString                                     JoinLobbyError;                                   		// 0x0268 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartyCreated__Delegate;                    		// 0x0278 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __OnPartyInviteAccepted__Delegate;                		// 0x0290 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPlayerInvited__Delegate;                   		// 0x02A8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPlayerInvitedSilent__Delegate;             		// 0x02C0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartyChanged__Delegate;                    		// 0x02D8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartySizeChanged__Delegate;                		// 0x02F0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartyLeaderChanged__Delegate;              		// 0x0308 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventSearchStatusChanged__Delegate;             		// 0x0320 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartyError__Delegate;                      		// 0x0338 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartyJoinGameError__Delegate;              		// 0x0350 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartyJoinGameSuccess__Delegate;            		// 0x0368 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPartyDestroyed__Delegate;                  		// 0x0380 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventConfirmJoinGameMessage__Delegate;          		// 0x0398 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventLeaderLeftOnlineGame__Delegate;            		// 0x03B0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventProcessingStatusChanged__Delegate;         		// 0x03C8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventDisableCrossPlayChanged__Delegate;         		// 0x03E0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPlayerTradingChanged__Delegate;            		// 0x03F8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventInviteToTrade__Delegate;                   		// 0x0410 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventAcceptedInviteToTrade__Delegate;           		// 0x0428 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventCloseInviteToTrade__Delegate;              		// 0x0440 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventRemotePlayerReadyToLock__Delegate;         		// 0x0458 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventRemotePlayerNotReadyToLock__Delegate;      		// 0x0470 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventRemotePlayerReadyToConfirm__Delegate;      		// 0x0488 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventTradeConfirmed__Delegate;                  		// 0x04A0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventAnotherInviteToTrade__Delegate;            		// 0x04B8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPlayerInMatchChanged__Delegate;            		// 0x04D0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventPlayerIsCurrentlyTrading__Delegate;        		// 0x04E8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventStartedJoinFriend__Delegate;               		// 0x0500 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventAddPartyMember__Delegate;                  		// 0x0518 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __EventRemovePartyMember__Delegate;               		// 0x0530 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __bTradeLocked__ChangeNotify;                     		// 0x0548 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -6884,10 +6912,12 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlineGameParty_X__UpdatePartyInfo_EBB86C904A39255C3995ACA62792847E(struct FPartyMember PM);
-	bool __OnlineGameParty_X__UpdatePartyInfo_BDA739B948D04E622C5CA98AC548B54F(struct FLobbyMember LM);
-	bool __OnlineGameParty_X__BroadcastAllLocalPlayers_878A978145DFAD7DDE83D49A7002CA7B(struct FPartyMember PM);
-	struct FUniqueNetId __OnlineGameParty_X__GetPlayersWithPrimaryMemberID_B3B8244A455BE226999C8381B36CA601(struct FPartyMember Member);
+	void __OnlineGameParty_X__HandleJoinLobby_33408A2C4B81A264F876A7BC9114F01C();
+	void __OnlineGameParty_X__UpdatePartyInfo_FEE8E4AB4799B986E6120DA254DDFF04(struct FPartyMember PM);
+	bool __OnlineGameParty_X__UpdatePartyInfo_E0DC5EEC47A5E81672F932ABB769DD7C(struct FLobbyMember LM);
+	bool __OnlineGameParty_X__BroadcastAllLocalPlayers_8C72138F49D7B4C9850167AE8393145C(struct FPartyMember PM);
+	struct FUniqueNetId __OnlineGameParty_X__GetPlayersWithPrimaryMemberID_EBE903CF4CBAE453F0423A9D3CE692A9(struct FPartyMember Member);
+	void __bTradeLocked__ChangeNotifyFunc();
 	void HandlePlatformPartyIdChanged(class UPartyPlatformSession_X* Session);
 	void HandleSetPlatformPartyMessage(class UOnlineMessageComponent_X* Component, class UPartyMessage_SetPlatformParty_X* Message);
 	void RequestRejoinPartyInfo();
@@ -6898,8 +6928,14 @@ public:
 	void HandlePlayerTradeComplete(class UOnlineMessageComponent_X* Component, class UObject* Message);
 	void SendPlayerTradeComplete();
 	void SendPlayerTradeCompleteAndClear(unsigned long bWasCanceled);
-	void HandleReadyToTrade(class UOnlineMessageComponent_X* Component, class UObject* Message);
-	void ReadyToTrade(unsigned long bReadyToTrade);
+	void ConfirmTrade();
+	void HandleReadyToConfirmTrade(class UOnlineMessageComponent_X* Component, class UObject* Message);
+	void ReadyToConfirmTrade();
+	void LockTrade();
+	void UnlockTrade();
+	void HandleReadyToLockTrade(class UOnlineMessageComponent_X* Component, class UObject* Message);
+	void ReadyToLockTrade(unsigned long bReady);
+	void SetPartyMemberLockedTrade(int PartyMemberIndex, unsigned long bLocked);
 	void SetPartyMessageHandlerTradeProductUpdate(unsigned long bAddHandler);
 	void ClearLocalTradingPlayer(unsigned long bWasCanceled);
 	bool ClearTradingPartyMember(struct FPartyMember& TradingMember);
@@ -6907,15 +6943,21 @@ public:
 	void ClearAllTradingPlayers();
 	void HandleAcceptInviteToTrade(class UOnlineMessageComponent_X* Component, class UObject* Message);
 	bool CanAcceptTrade();
-	void AcceptInviteToTrade(unsigned long bAccepted);
+	void NotifyPlayerTradeAcceptanceFailed(struct FUniqueNetId& TradingMemberId);
+	void AcceptInviteToTrade(struct FUniqueNetId Inviter, unsigned long bAccepted);
+	struct FUniqueNetId GetTradingPartner();
 	struct FGuid ResolveGuids(struct FGuid& A, struct FGuid& B);
+	void ClearPendingTrade();
+	void SetPendingTrade(struct FUniqueNetId& PendingTarget);
 	struct FGuid GetTradingPlayerTradeID();
 	struct FUniqueNetId GetTradingPlayerID();
 	struct FString GetTradingPlayerName();
 	void HandleInviteToTradeMessage(class UOnlineMessageComponent_X* Component, class UPartyMessage_InviteToTrade_X* Message);
 	void InvitePlayerToTrade(struct FUniqueNetId InMemberId);
 	bool IsPlayerTrading(struct FUniqueNetId InMemberId);
-	void SetPlayersTrading(struct FUniqueNetId InMember1Id, struct FUniqueNetId InMember2Id, unsigned long bTrading);
+	struct FUniqueNetId GetPlayerTradingTarget(struct FUniqueNetId InMemberId);
+	void SetPlayersTrading(struct FUniqueNetId InMemberId1, struct FUniqueNetId InMemberId2, unsigned long bTrading);
+	void ClearPartyMemberTradingInfo(int MemberIndex);
 	struct FString GetMemberName(struct FUniqueNetId InMemberId);
 	TArray<struct FUniqueNetId> GetPlayersWithPrimaryMemberID(struct FUniqueNetId InPrimaryID);
 	TArray<struct FUniqueNetId> GetLocalMemberIDs();
@@ -6984,6 +7026,7 @@ public:
 	void OnNewGame();
 	void SetMatchmakingSearching(unsigned long bState);
 	void SetSearchState(struct FName SearchState);
+	int GetLocalMemberIndex();
 	struct FUniqueNetId GetLocalMemberId();
 	bool IsMemberLocal(struct FUniqueNetId MemberId);
 	bool HasRemoteMember();
@@ -7006,7 +7049,7 @@ public:
 	void HandleLobbySettingsUpdated(struct FActiveLobbyInfo& Lobby);
 	void OnNewLobby();
 	void BroadcastPartyInfo();
-	void HandleJoinLobby_ConnectionValid(struct FString LobbyError);
+	void HandleJoinLobby_ConnectionValid();
 	void HandleJoinLobby(unsigned long bWasSuccessful, struct FString Error, struct FActiveLobbyInfo& LobbyInfo, struct FUniqueLobbyId& LobbyUID);
 	class UError* GetJoinPartyError(struct FActiveLobbyInfo& LobbyInfo);
 	class UError* CheckForJoinPartyError(struct FActiveLobbyInfo& LobbyInfo);
@@ -7033,7 +7076,7 @@ public:
 	void HandlePartyMemberJoinGame(class UOnlineMessageComponent_X* Component, class UPartyMessage_PartyMemberJoinGame_X* MessageObject);
 	bool ClearServersForPostGameRankedMatch();
 	bool SetPartyMemberJoinGame(struct FUniqueNetId& PlayerID, struct FPartyMemberServer& Server);
-	void BroadcastPartyMemberServer(struct FUniqueNetId PlayerID, struct FPartyMemberServer Server);
+	void BroadcastPartyMemberServer(struct FPartyMemberServer Server);
 	void BroadcastLobbySettings(struct FActiveLobbyInfo LobbyInfo);
 	bool SetLeader(struct FUniqueNetId NewLeader);
 	bool IsPrimaryPlayerIndex(int MemberIdx);
@@ -7070,16 +7113,19 @@ public:
 	void InitLobbyInterfaces();
 	void OnExit();
 	void OnInit();
+	void EventRemovePartyMember(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
+	void EventAddPartyMember(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
 	void EventStartedJoinFriend();
 	void EventPlayerIsCurrentlyTrading(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
 	void EventPlayerInMatchChanged(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
 	void EventAnotherInviteToTrade(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
-	void EventTradeReady(class UOnlineGameParty_X* PartyObject);
-	void EventNotReadyToTrade(class UOnlineGameParty_X* PartyObject);
-	void EventReadyToTrade(class UOnlineGameParty_X* PartyObject);
+	void EventTradeConfirmed(class UOnlineGameParty_X* PartyObject);
+	void EventRemotePlayerReadyToConfirm(class UOnlineGameParty_X* PartyObject);
+	void EventRemotePlayerNotReadyToLock(class UOnlineGameParty_X* PartyObject);
+	void EventRemotePlayerReadyToLock(class UOnlineGameParty_X* PartyObject);
 	void EventCloseInviteToTrade(class UOnlineGameParty_X* PartyObject, unsigned long bWasCanceled);
 	void EventAcceptedInviteToTrade(class UOnlineGameParty_X* PartyObject);
-	void EventInviteToTrade(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
+	void EventInviteToTrade(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId Sender, struct FUniqueNetId Recipient);
 	void EventPlayerTradingChanged(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId, unsigned long bIsPlayerTrading);
 	void EventDisableCrossPlayChanged(class UOnlineGameParty_X* PartyObject);
 	void EventProcessingStatusChanged(class UOnlineGameParty_X* PartyObject);
@@ -7090,7 +7136,7 @@ public:
 	void EventPartyJoinGameError(class UOnlineGameParty_X* PartyObject, struct FString LocalizedErrorString);
 	void EventPartyError(class UOnlineGameParty_X* PartyObject, class UError* Error);
 	void EventSearchStatusChanged(class UOnlineGameParty_X* PartyObject, class UPartyMessage_SearchStatus_X* StatusMessage);
-	void EventPartyLeaderChanged(class UOnlineGameParty_X* PartyObject);
+	void EventPartyLeaderChanged(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId NewLeader);
 	void EventPartySizeChanged(class UOnlineGameParty_X* PartyObject, int NewSize, int OldSize);
 	void EventPartyChanged(class UOnlineGameParty_X* PartyObject);
 	void EventPlayerInvitedSilent(class UOnlineGameParty_X* PartyObject, struct FScriptDelegate Callback, struct FUniqueLobbyId& InPartyId, struct FUniqueNetId& InviterId);
@@ -7160,7 +7206,7 @@ public:
 		return uClassPointer;
 	};
 
-	unsigned long long __OnlineClubCache_X__ClearAllExcept_2F9532334E0889DDC287CDBA24EB8C47(class UClubDetails_X* C);
+	unsigned long long __OnlineClubCache_X__ClearAllExcept_ADC749244D28EF9CBA17F2ACE4952269(class UClubDetails_X* C);
 	void ClearAllExcept(TArray<unsigned long long>& KeepClubs);
 	void Clear();
 	void Destroy(unsigned long long ClubID);
@@ -7247,6 +7293,13 @@ public:
 		return uClassPointer;
 	};
 
+	void __OnlineGameSkill_X__Construct_6ECBA9264FD08D6516CFC98D37738121(class UOnlineGameParty_X* PartyObject);
+	void __OnlineGameSkill_X__CreateSyncPlayerSkillRPC_D2005B9C4A14C7038B76868DEB98A237(class URPC_GetPartyMemberSkill_X* RPC);
+	void __OnlineGameSkill_X__CreateSyncPlayerSkillRPC_BF9464BE4AD924D1D7459CA2E7A5FAD4(class URPC_GetPlayerSkill_X* RPC);
+	void __OnlineGameSkill_X__ClearPartyMembersSkill_F4937F354B3670AD92ECB79565BF7D03(struct FPartyMember Member);
+	void __OnlineGameSkill_X__CacheSkills_641727F549D737E546BA18926C250261(struct FPlayerSkillRating Rating);
+	void __OnlineGameSkill_X__SyncPartyMembersSkills_155B159846626B0E710503A279AA20FD(struct FPartyMember Member);
+	bool __OnlineGameSkill_X__SyncPartyMembersSkills_CE23D87845A70C5E52EDEDABBA1EFCC5(struct FPartyMember Member);
 	bool SkillsSynced(struct FUniqueNetId PlayerID);
 	int GetHighestSkillTier(struct FUniqueNetId PlayerID);
 	struct FPlayerSeasonRewardProgress GetPlayerSeasonRewardProgress(struct FUniqueNetId PlayerID);
@@ -7265,11 +7318,22 @@ public:
 	struct FPlayerSkillRating GetPlayerRating(struct FUniqueNetId PlayerID, int Playlist);
 	void OnSkillSynced(struct FUniqueNetId PlayerID, class UError* Error);
 	void CacheSeasonReward(struct FPlayerSeasonRewardProgress Reward);
-	void HandleSkillRequestCompleteRPC(class URPC_GetPlayerSkill_X* RPC);
+	void HandleSyncedPlayerSkill(class URPC_X* RPC, struct FUniqueNetId PlayerID, TArray<struct FPlayerSkillRating> PlayerSkillRatings, class UError* Error);
 	void SyncPlayerSkill(struct FUniqueNetId PlayerID, struct FScriptDelegate Callback);
+	void SyncPartyMembersSkills();
 	void CacheSkill(struct FUpdatedPlayerSkillRating Rating, int Playlist);
+	void CacheSkills(TArray<struct FPlayerSkillRating> Ratings);
 	void PreCacheSkill(struct FPlayerSkillRating Rating, int Playlist);
+	void HandlePartyDestroyed(class UOnlineGameParty_X* PartyObject);
+	void HandlePartyLeaderChanged(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId NewLeader);
+	void HandlePartyMemberRemoved(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
+	void HandlePartyMemberAdded(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId InMemberId);
 	int GetSkillPlaylistID(int PlaylistId);
+	void ClearSkill(struct FUniqueNetId PlayerID);
+	void ClearPartyMembersSkill();
+	bool AllPlayersAreAroundTheSameRank(int PlaylistId);
+	class URPC_X* CreateSyncPlayerSkillRPC(struct FUniqueNetId PlayerID);
+	void eventConstruct();
 	void EventSkillSynced(class UOnlineGameSkill_X* Skill, struct FUniqueNetId PlayerID, class UError* Error);
 };
 
@@ -7298,8 +7362,11 @@ public:
 		return uClassPointer;
 	};
 
-	bool __OnlineGamePlaylists_X__GetPrivateMatch_ED8C4DFB4A179E3070B667903FE5955D(class UGameSettingPlaylist_X* P);
-	bool __OnlineGamePlaylists_X__GetLanMatch_374E0CE5471AF2B5B018B7A387DD46B6(class UGameSettingPlaylist_X* P);
+	bool __OnlineGamePlaylists_X__GetPrivateMatch_6E60D2A645C03B895DC958929462774D(class UGameSettingPlaylist_X* P);
+	bool __OnlineGamePlaylists_X__GetLanMatch_53623A5042C8433B39C6D3A61166DFD1(class UGameSettingPlaylist_X* P);
+	int __OnlineGamePlaylists_X__GetRankedPlaylistIDs_59F840CB424265408434488F06B00594(class UGameSettingPlaylist_X* Playlist);
+	bool __OnlineGamePlaylists_X__GetRankedPlaylistIDs_3B04EBB94045DBB3A7D2BF8FB1D8436F(class UGameSettingPlaylist_X* Playlist);
+	TArray<int> GetRankedPlaylistIDs();
 	struct FString GetLocalizedPlaylistIDCategory(int PlaylistId);
 	class UGameSettingPlaylist_X* GetLanMatch();
 	class UGameSettingPlaylist_X* GetPrivateMatch();
@@ -7314,9 +7381,9 @@ public:
 	void NamesToIDs(TArray<struct FName>& Names, TArray<int>& Ids);
 	struct FString GetPlaylistFriendlyName(int PlaylistId);
 	void CopyPlaylistGameTags();
-	void UpdateORSPlaylistData();
 	void HandlePlaylistsChanged(class UObjectProvider* Provider);
-	int NameToID(struct FName PlaylistName);
+	struct FName IdToName(int PlaylistId);
+	int NameToId(struct FName PlaylistName);
 	int GetTimeRemaining(int PlaylistId);
 	bool IsTimeConstrained(int PlaylistId);
 	class UGameSettingPlaylist_X* GetPlaylistByID(int PlaylistId);
@@ -7328,7 +7395,7 @@ public:
 };
 
 // Class ProjectX.GameSettingPlaylist_X
-// 0x00AC (0x0064 - 0x0110)
+// 0x00BC (0x0064 - 0x0120)
 class UGameSettingPlaylist_X : public UGameSetting_X
 {
 public:
@@ -7363,6 +7430,7 @@ public:
 	struct FName                                       MapName;                                          		// 0x00F0 (0x0008) [0x0000000000000001] (CPF_Edit)    
 	struct FString                                     ServerCommand;                                    		// 0x00F8 (0x0010) [0x0000000000400001] (CPF_Edit | CPF_NeedCtorLink)
 	struct FName                                       MapSetName;                                       		// 0x0108 (0x0008) [0x0000000000000001] (CPF_Edit)    
+	TArray<int>                                        PopulationBuckets;                                		// 0x0110 (0x0010) [0x0000000000400001] (CPF_Edit | CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -7616,9 +7684,9 @@ public:
 	void DrawHUD();
 };
 
-// Class ProjectX.__CheatManager_X__RandomSleep_75FE9F6C45791A19D1B94AB8F65C595A
+// Class ProjectX.__CheatManager_X__RandomSleep_CD87E1F14BCDFB21F60FA8977C911251
 // 0x0010 (0x0060 - 0x0070)
-class U__CheatManager_X__RandomSleep_75FE9F6C45791A19D1B94AB8F65C595A : public UObject
+class U__CheatManager_X__RandomSleep_CD87E1F14BCDFB21F60FA8977C911251 : public UObject
 {
 public:
 	float                                              MinDelay;                                         		// 0x0060 (0x0004) [0x0000000000000000]               
@@ -7632,13 +7700,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__CheatManager_X__RandomSleep_75FE9F6C45791A19D1B94AB8F65C595A");
+			uClassPointer = UObject::FindClass("Class ProjectX.__CheatManager_X__RandomSleep_CD87E1F14BCDFB21F60FA8977C911251");
 		}
 
 		return uClassPointer;
 	};
 
-	void __CheatManager_X__RandomSleep_75FE9F6C45791A19D1B94AB8F65C595A();
+	void __CheatManager_X__RandomSleep_CD87E1F14BCDFB21F60FA8977C911251();
 };
 
 // Class ProjectX.DebugDrawer_X
@@ -7972,7 +8040,7 @@ public:
 };
 
 // Class ProjectX.PlaylistSettings_X
-// 0x00A8 (0x0060 - 0x0108)
+// 0x00B8 (0x0060 - 0x0118)
 class UPlaylistSettings_X : public UObject
 {
 public:
@@ -8008,6 +8076,7 @@ public:
 	struct FName                                       MapName;                                          		// 0x00E8 (0x0008) [0x0000000000000001] (CPF_Edit)    
 	struct FString                                     ServerCommand;                                    		// 0x00F0 (0x0010) [0x0000000000400001] (CPF_Edit | CPF_NeedCtorLink)
 	struct FName                                       MapSetName;                                       		// 0x0100 (0x0008) [0x0000000000000001] (CPF_Edit)    
+	TArray<int>                                        PopulationBuckets;                                		// 0x0108 (0x0010) [0x0000000000400001] (CPF_Edit | CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -8575,11 +8644,11 @@ public:
 		return uClassPointer;
 	};
 
-	struct FString __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_BA194BBA42DC7B8BFA03BD9D83DA0643(class URegionPing_X* R);
-	bool __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_784D72B24AD84A82BDB5FBAB13AD8FD1(class URegionPing_X* R);
-	void __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_3042D4664F24BFDBD121E9AE4147DDB1(struct FGetGameServerPingListData Server);
-	void __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_42890D534E3C99C61AA4929CDCF65CE6(class URegionPing_X* RegionPing);
-	bool __OnlineGameRegions_X__HandlePingMessage_0206D4B0470D3DF972C471B8E7D32C49(class URegionPing_X* RegionPing);
+	struct FString __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_5426E1A64EEB05DABE4BC18BA73DA3AA(class URegionPing_X* R);
+	bool __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_3E3821E14F0FDDD8BB1736A4E31D03CC(class URegionPing_X* R);
+	void __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_D77DD5CA4843D2D76ABD2AB20A21B3EB(struct FGetGameServerPingListData Server);
+	void __OnlineGameRegions_X__HandleGetPingRegionPingsRPC_9EAD7AAB4DA4BB398C7BBD880E573A20(class URegionPing_X* RegionPing);
+	bool __OnlineGameRegions_X__HandlePingMessage_0C5CAC694B8F90EDEAA3E186DDF3AC8B(class URegionPing_X* RegionPing);
 	struct FString GetLocalizedName(struct FString RegionID);
 	bool Exists(struct FString RegionID);
 	void SetCachedRegionPings(TArray<struct FCachedRegionPing>& InCachedRegionPings);
@@ -8640,7 +8709,7 @@ public:
 	void HandleJoinGameComplete(unsigned long bSuccess, struct FString FailReason);
 	void HandlePasswordRequired();
 	void HandleTaskSuccess(struct FServerReservationData Reservation);
-	void __OnlineGameInvite_X__BeginState_678121DA4A7FDB96C22413ACBD52163D(class UError* Error);
+	void __OnlineGameInvite_X__BeginState_DEFEE96C44631131B46C668B15BBBB0E(class UError* Error);
 	void OnGameInviteComplete(unsigned long bSuccess, struct FString FailReason);
 	void JoinGameInviteGame(struct FJoinMatchSettings Settings);
 	void OnGameInviteAccepted(struct FString ErrorString, struct FOnlineGameSearchResult& InviteResult);
@@ -8705,8 +8774,8 @@ public:
 		return uClassPointer;
 	};
 
-	int __OnlineGamePopulation_X__HandleGotAllPopulationPlaylistsRPC_77E7DBFE4BC9539CB48C4DA9709EB4AB(struct FGetPopulationData P);
-	bool __OnlineGamePopulation_X__HandleGotAllPopulationPlaylistsRPC_220C2E34416871AB0D7D4A9BB85888BF(struct FGetPopulationData P);
+	int __OnlineGamePopulation_X__HandleGotAllPopulationPlaylistsRPC_6A244763484167759287BCB48EFA7B5A(struct FGetPopulationData P);
+	bool __OnlineGamePopulation_X__HandleGotAllPopulationPlaylistsRPC_7C2C0EE441C04C36E3DB2B9ABD406CCB(struct FGetPopulationData P);
 	void HandleGotAllPopulationPlaylistsRPC(class URPC_GetPopulation_X* RPC);
 	void GetPlaylistPopulations(struct FScriptDelegate Callback);
 	void EventGetPlaylistPopulations(class UOnlineGamePopulation_X* PopulationsObject);
@@ -8956,21 +9025,21 @@ public:
 	void OnReceiveGameServer(struct FServerReservationData Reservation);
 	void SetupForTimeConstraints();
 	void OnPlaylistTimeEnded();
-	struct FString __OnlineGameMatchmaking_X__StartSearch_86B9989046CCED8CC1C770A22EA658C7(class URegionPing_X* R);
-	struct FString __OnlineGameMatchmaking_X__GetLocalizedPlaylistsString_3D871B0047738F4BAACF1DA5C6751719(int Playlist);
-	struct FString __OnlineGameMatchmaking_X__GetLocalizedRegionsString_E51A7E0F4F63090F7BD6EE8485F3341A(class USuperRegion_X* SuperRegion);
-	class USuperRegion_X* __OnlineGameMatchmaking_X__GetLocalizedRegionsString_9D6E990A49B05539AC1BDA8F03234C5B(class URegion_X* R);
-	struct FString __OnlineGameMatchmaking_X__GetDebugSuperRegionString_06AA122D4D1171E2823B14B13BCD98EF(class URegionPing_X* R);
-	struct FString __OnlineGameMatchmaking_X__AddRecommendedServers_1DBBC653465AFE4738925A8A6B19D801(class URegionPing_X* R);
-	struct FString __OnlineGameMatchmaking_X__AddRecommendedServers_31969C964F1E5BCED79A29AADF889819(class URegionPing_X* R);
-	bool __OnlineGameMatchmaking_X__RecordStart_46510250438EFA726FCEE1869995186D(class URegionPing_X* R);
+	struct FString __OnlineGameMatchmaking_X__StartSearch_2615C1F04E1EE6923E21B29F0D27BD65(class URegionPing_X* R);
+	struct FString __OnlineGameMatchmaking_X__GetLocalizedPlaylistsString_D11ED0744E4E8780B519809720B24414(int Playlist);
+	struct FString __OnlineGameMatchmaking_X__GetLocalizedRegionsString_E5E0EFD546CFC503467090B38A081FD3(class USuperRegion_X* SuperRegion);
+	class USuperRegion_X* __OnlineGameMatchmaking_X__GetLocalizedRegionsString_75D07032482426FC1B74A2B180413688(class URegion_X* R);
+	struct FString __OnlineGameMatchmaking_X__GetDebugSuperRegionString_0D1D1E094BD394D64A275DB7126E21E9(class URegionPing_X* R);
+	struct FString __OnlineGameMatchmaking_X__AddRecommendedServers_06EE3A3445C5C38004BAB59153C50DAE(class URegionPing_X* R);
+	struct FString __OnlineGameMatchmaking_X__AddRecommendedServers_26BAA5C84323FDC77E8E19BC89206403(class URegionPing_X* R);
+	bool __OnlineGameMatchmaking_X__RecordStart_2104A77C4669B6EF3B5E5990CD5762D2(class URegionPing_X* R);
 	void PrintDebugInfo(class UDebugDrawer* Drawer);
 	bool IsMatchmakingDisabled();
 	void SetSkillIgnored(unsigned long bIgnore);
 	void ToggleSkill();
 	void ClearMatchmakingBanTime();
 	void SetMatchmakingBanTime(int Duration);
-	void HandlePartyLeaderChanged(class UOnlineGameParty_X* PartyObject);
+	void HandlePartyLeaderChanged(class UOnlineGameParty_X* PartyObject, struct FUniqueNetId NewLeader);
 	void HandlePartySizeChanged(class UOnlineGameParty_X* PartyObject, int NewSize, int OldSize);
 	void HandlePartyDestroyed(class UOnlineGameParty_X* PartyObject);
 	void OnFindGameWarning(struct FString FailReason);
@@ -9076,9 +9145,9 @@ public:
 	void RecordSpecs();
 };
 
-// Class ProjectX.__OnlineGame_X__CheckPsyNetConnection_D0AA2383429A7FA1C79DA38DFC199D3C
+// Class ProjectX.__OnlineGame_X__CheckPsyNetConnection_BA3A34244C8220B1904F64993B8F1129
 // 0x0008 (0x0060 - 0x0068)
-class U__OnlineGame_X__CheckPsyNetConnection_D0AA2383429A7FA1C79DA38DFC199D3C : public UObject
+class U__OnlineGame_X__CheckPsyNetConnection_BA3A34244C8220B1904F64993B8F1129 : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -9089,13 +9158,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGame_X__CheckPsyNetConnection_D0AA2383429A7FA1C79DA38DFC199D3C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGame_X__CheckPsyNetConnection_BA3A34244C8220B1904F64993B8F1129");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGame_X__CheckPsyNetConnection_D0AA2383429A7FA1C79DA38DFC199D3C(class UOnlinePlayerAuthentication_X* Auth);
+	void __OnlineGame_X__CheckPsyNetConnection_BA3A34244C8220B1904F64993B8F1129(class UOnlinePlayerAuthentication_X* Auth);
 };
 
 // Class ProjectX.RPC_GetPublicIP_X
@@ -9138,10 +9207,10 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlineGameVersion_X__OnInit_ADC2133F40C6F843C8EBA0A4AFB79F80(class UOnlineGameServerBrowser_X* _, class UError* Error);
-	void __OnlineGameVersion_X__OnInit_6CD54CBB486366809071839CF8EB77A9(class UOnlineGamePrivateMatch_X* _, class UError* Error);
-	void __OnlineGameVersion_X__OnInit_D49793B34D0AD2DF7380BE9C5E1D0AAD(class UOnlineGameRegions_X* _, class UError* Error);
-	void __OnlineGameVersion_X__OnInit_05136A1F453B69BFEC03BEAA6A3E65B4(class UOnlineGameMatchmaking_X* _, class UError* Error);
+	void __OnlineGameVersion_X__OnInit_4716246A4188957DF0125D83460B4A6F(class UOnlineGameServerBrowser_X* _, class UError* Error);
+	void __OnlineGameVersion_X__OnInit_F60D459E491528E633C525B47DBA55EE(class UOnlineGamePrivateMatch_X* _, class UError* Error);
+	void __OnlineGameVersion_X__OnInit_3DB73C93456C1FB29D96BABD2013A2AC(class UOnlineGameRegions_X* _, class UError* Error);
+	void __OnlineGameVersion_X__OnInit_AEE806BD4D6CDDE0E01102921370B66B(class UOnlineGameMatchmaking_X* _, class UError* Error);
 	void HandleError(class UError* Error);
 	void OnInit();
 };
@@ -9220,8 +9289,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlineGameDedicatedServerRegistration_X__OnInit_E4B9EAF34494CCA33A3629B26CF62454(struct FString _);
-	void __OnlineGameDedicatedServerRegistration_X__HandleCreateServerSucces_8913B2F94B00220BD210498A4C5CCBAB(class UCacheTimer_X* Timer);
+	void __OnlineGameDedicatedServerRegistration_X__HandleCreateServerSucces_5F3BA0704771C66CC93F6DA0336C5FD2(class UCacheTimer_X* Timer);
 	void HandleCrashed();
 	class UServerMetrics_X* GetServerMetrics();
 	struct FString GetExclusivePlatformString(unsigned char Platform);
@@ -9242,6 +9310,7 @@ public:
 	void SendUpdateRequest();
 	void UpdateServer();
 	void ForceUpdateServer();
+	void ForceUpdateServerOnMapPreLoad(struct FString MapName);
 	void HandleConfigUpdate();
 	void UnregisterServer();
 	void RegisterServer();
@@ -9314,9 +9383,9 @@ public:
 		return uClassPointer;
 	};
 
-	TArray<struct FUniqueNetId> __ServerPlayerTracker_X__Refresh_63254E5B47638D0B539E8CBAF0F9AF9E(class UAddReservationMessage_X* Message);
-	struct FUniqueNetId __ServerPlayerTracker_X__Refresh_588A4B524AFD71330E27D8AFDA4A9AAC(struct FReservationData P);
-	bool __ServerPlayerTracker_X__Refresh_572E4EAD419D321C717507BD8BD809EC(struct FReservationData P);
+	TArray<struct FUniqueNetId> __ServerPlayerTracker_X__Refresh_96316AE04FF9B48914CC9695C1C49317(class UAddReservationMessage_X* Message);
+	struct FUniqueNetId __ServerPlayerTracker_X__Refresh_73592A984155CE83D10C448B88927B96(struct FReservationData P);
+	bool __ServerPlayerTracker_X__Refresh_71E439A047CFC22952EB7AA8C6A5D0A4(struct FReservationData P);
 	struct FString GetPlayerName(struct FUniqueNetId PlayerID);
 	void Reset();
 	void Refresh();
@@ -9410,9 +9479,13 @@ public:
 		return uClassPointer;
 	};
 
+	bool __MatchRecorder_X__GetAbandonedPlayers_E9BEDC0144B90464134399BB1B86EEA0(class UMatchPlayerData_X* P);
+	struct FUniqueNetId __MatchRecorder_X__GetAbandonedPlayerIDs_B20B38C54E5ADEDF5013BB9C505D13D2(class UMatchPlayerData_X* P);
 	void Finished();
 	void UpdateServer(class UOnlineGameDedicatedServer_X* Server);
 	class UMatchPlayerData_X* CreatePlayer(struct FUniqueNetId PlayerID, struct FString PlayerName);
+	TArray<struct FUniqueNetId> GetAbandonedPlayerIDs();
+	TArray<class UMatchPlayerData_X*> GetAbandonedPlayers();
 	class UMatchPlayerData_X* GetPlayerData(struct FUniqueNetId PlayerID);
 	void RemovePlayer(struct FUniqueNetId PlayerID);
 	void ReservePlayer(struct FUniqueNetId PlayerID, struct FUniqueNetId PartyID);
@@ -9516,11 +9589,12 @@ public:
 };
 
 // Class ProjectX.RPC_RemoveQuitter_X
-// 0x0048 (0x00E8 - 0x0130)
+// 0x004C (0x00E8 - 0x0134)
 class URPC_RemoveQuitter_X : public URPC_X
 {
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x00E8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+	int                                                PlaylistId;                                       		// 0x0130 (0x0004) [0x0000000000000000]               
 public:
 	static UClass* StaticClass()
 	{
@@ -9534,6 +9608,7 @@ public:
 		return uClassPointer;
 	};
 
+	class URPC_RemoveQuitter_X* SetPlaylistID(int InPlaylistID);
 	class URPC_RemoveQuitter_X* SetPlayerID(struct FUniqueNetId InPlayerId);
 };
 
@@ -9691,7 +9766,7 @@ public:
 };
 
 // Class ProjectX.RPC_UpdateGameServer_X
-// 0x0084 (0x00E8 - 0x016C)
+// 0x0094 (0x00E8 - 0x017C)
 class URPC_UpdateGameServer_X : public URPC_X
 {
 public:
@@ -9708,11 +9783,12 @@ public:
 	struct FString                                     ExclusivePlatform;                                		// 0x0110 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
 	TArray<struct FString>                             PlayersPlatforms;                                 		// 0x0120 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
 	TArray<struct FUniqueNetId>                        PlayerIDs;                                        		// 0x0130 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FString                                     CustomServerName;                                 		// 0x0140 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FString                                     CustomServerPassword;                             		// 0x0150 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	int                                                ScoreTeam1;                                       		// 0x0160 (0x0004) [0x0000000000000000]               
-	int                                                ScoreTeam2;                                       		// 0x0164 (0x0004) [0x0000000000000000]               
-	int                                                ClubID;                                           		// 0x0168 (0x0004) [0x0000000000000000]               
+	TArray<struct FUniqueNetId>                        AbandonedPlayerIDs;                               		// 0x0140 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FString                                     CustomServerName;                                 		// 0x0150 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FString                                     CustomServerPassword;                             		// 0x0160 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	int                                                ScoreTeam1;                                       		// 0x0170 (0x0004) [0x0000000000000000]               
+	int                                                ScoreTeam2;                                       		// 0x0174 (0x0004) [0x0000000000000000]               
+	int                                                ClubID;                                           		// 0x0178 (0x0004) [0x0000000000000000]               
 public:
 	static UClass* StaticClass()
 	{
@@ -9736,6 +9812,7 @@ public:
 	class URPC_UpdateGameServer_X* SetExclusivePlatform(struct FString InExclusivePlatform);
 	class URPC_UpdateGameServer_X* SetTimeRemaining(int InTimeRemaining);
 	class URPC_UpdateGameServer_X* SetIsPostGame(unsigned long bInIsPostGame);
+	class URPC_UpdateGameServer_X* SetAbandonedPlayerIDs(TArray<struct FUniqueNetId> InPlayerIDs);
 	class URPC_UpdateGameServer_X* SetPlayerIDs(TArray<struct FUniqueNetId> InPlayerIDs);
 	class URPC_UpdateGameServer_X* SetReservationsTeam2(int InReservationsTeam2);
 	class URPC_UpdateGameServer_X* SetReservationsTeam1(int InReservationsTeam1);
@@ -9747,7 +9824,7 @@ public:
 };
 
 // Class ProjectX.RPC_CreateGameServer_X
-// 0x0090 (0x00E8 - 0x0178)
+// 0x00A0 (0x00E8 - 0x0188)
 class URPC_CreateGameServer_X : public URPC_X
 {
 public:
@@ -9762,7 +9839,8 @@ public:
 	int                                                Zone;                                             		// 0x0150 (0x0004) [0x0000000000002000] (CPF_Transient)
 	unsigned long                                      UseWebSocket : 1;                                 		// 0x0154 (0x0004) [0x0000000000002000] [0x00000001] (CPF_Transient)
 	struct FString                                     PerConURL;                                        		// 0x0158 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
-	struct FString                                     PsyToken;                                         		// 0x0168 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	struct FString                                     PerConURLv2;                                      		// 0x0168 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	struct FString                                     PsyToken;                                         		// 0x0178 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -10451,9 +10529,9 @@ public:
 
 };
 
-// Class ProjectX.__PsyNetBeacon_X__SendMessageToServer_E36D155C4A3A2377962CF583D760C221
+// Class ProjectX.__PsyNetBeacon_X__SendMessageToServer_5752378C4CEFD1B4CF38C084DCBA3540
 // 0x0010 (0x0060 - 0x0070)
-class U__PsyNetBeacon_X__SendMessageToServer_E36D155C4A3A2377962CF583D760C221 : public UObject
+class U__PsyNetBeacon_X__SendMessageToServer_5752378C4CEFD1B4CF38C084DCBA3540 : public UObject
 {
 public:
 	class URPC_RelayToServer_X*                        RPC;                                              		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -10465,13 +10543,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetBeacon_X__SendMessageToServer_E36D155C4A3A2377962CF583D760C221");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetBeacon_X__SendMessageToServer_5752378C4CEFD1B4CF38C084DCBA3540");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PsyNetBeacon_X__SendMessageToServer_E36D155C4A3A2377962CF583D760C221(class URPC_X* _);
+	void __PsyNetBeacon_X__SendMessageToServer_5752378C4CEFD1B4CF38C084DCBA3540(class URPC_X* _);
 };
 
 // Class ProjectX.RPC_RelayToServer_X
@@ -10498,9 +10576,9 @@ public:
 
 };
 
-// Class ProjectX.__PsyNetBeacon_X__SendMessageToClients_25ADE5B945FF7AF0FDC8ED9A22C4F7FE
+// Class ProjectX.__PsyNetBeacon_X__SendMessageToClients_043CC369433D49B1807F149AC71DD571
 // 0x0008 (0x0060 - 0x0068)
-class U__PsyNetBeacon_X__SendMessageToClients_25ADE5B945FF7AF0FDC8ED9A22C4F7FE : public UObject
+class U__PsyNetBeacon_X__SendMessageToClients_043CC369433D49B1807F149AC71DD571 : public UObject
 {
 public:
 	class UPsyNetBeaconConnection_X*                   Connection;                                       		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -10511,13 +10589,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetBeacon_X__SendMessageToClients_25ADE5B945FF7AF0FDC8ED9A22C4F7FE");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetBeacon_X__SendMessageToClients_043CC369433D49B1807F149AC71DD571");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __PsyNetBeacon_X__SendMessageToClients_25ADE5B945FF7AF0FDC8ED9A22C4F7FE(class URPC_RelayToClient_X* OtherRPC);
+	bool __PsyNetBeacon_X__SendMessageToClients_043CC369433D49B1807F149AC71DD571(class URPC_RelayToClient_X* OtherRPC);
 };
 
 // Class ProjectX.QueuedOfflineMessage_X
@@ -10890,9 +10968,9 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerFriends_X__OnInit_232E432B46A48E6BC8ADC3885EFC01ED(class UEpicFriendsPlugin_X* Plugin);
-	void __OnlinePlayerFriends_X__OnInit_3AD59D694B6C18DFE88BCBA8C991A513();
-	void __OnlinePlayerFriends_X__OnInit_E23D530E48C13114D7765B90306A74B8(class UPsyNetService_FriendChatReceived_X* N);
+	void __OnlinePlayerFriends_X__OnInit_F0303B1148E2FE212C9C8998B091A1AD(class UEpicFriendsPlugin_X* Plugin);
+	void __OnlinePlayerFriends_X__OnInit_9A035BC5465F076F41AD73A41A9501DE();
+	void __OnlinePlayerFriends_X__OnInit_83D1E6DD4FC75584BA8F01977F99C8E7(class UPsyNetService_FriendChatReceived_X* N);
 	void RebuildFriendsCache();
 	void RemoveEpicFriendLocally(struct FUniqueNetId RemovedID);
 	void SendChatMessage(struct FString InMessage, struct FUniqueNetId Recipient);
@@ -11226,9 +11304,9 @@ public:
 		return uClassPointer;
 	};
 
-	void __Parties_X__CreateLobby_65E1E8374D5A1230B98B278F84A1B2D1(class UError* Error);
-	void __Parties_X__HandlePsyNetPartyJoined_74036BAE44AFAC1E7995479C6DFF48E7(struct FPsyNetPartyMember Member);
-	void __Parties_X__SetLobbyOwner_E98D05AF4067C8D733629B9302F90338(class URPC_PartyChangeOwner_X* RPC);
+	void __Parties_X__CreateLobby_2E42106C45818784B5927895805B96C6(class UError* Error);
+	void __Parties_X__HandlePsyNetPartyJoined_655B33B54B4FC3C95939ECA4D8625B62(struct FPsyNetPartyMember Member);
+	void __Parties_X__SetLobbyOwner_976A154A4432B9C6D5AEA4801775ACD8(class URPC_PartyChangeOwner_X* RPC);
 	void HandlePsyNetPartyInviteAccepted(struct FString PartyID);
 	struct FString GetPsyNetPartyID();
 	struct FUniqueNetId FindPartyLeaderID(TArray<struct FPsyNetPartyMember>& Members);
@@ -11346,9 +11424,9 @@ public:
 	void EventShowInviteUI();
 };
 
-// Class ProjectX.__OnlineGameMatchmaking_X__OnReceiveGameServer_A24AF40948E071348B8CFFBC155F41C1
+// Class ProjectX.__OnlineGameMatchmaking_X__OnReceiveGameServer_D8ADF92744E9BC5B8F5FCC9C4DDE7DBD
 // 0x0080 (0x0060 - 0x00E0)
-class U__OnlineGameMatchmaking_X__OnReceiveGameServer_A24AF40948E071348B8CFFBC155F41C1 : public UObject
+class U__OnlineGameMatchmaking_X__OnReceiveGameServer_D8ADF92744E9BC5B8F5FCC9C4DDE7DBD : public UObject
 {
 public:
 	struct FServerReservationData                      Reservation;                                      		// 0x0060 (0x0080) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -11359,18 +11437,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__OnReceiveGameServer_A24AF40948E071348B8CFFBC155F41C1");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__OnReceiveGameServer_D8ADF92744E9BC5B8F5FCC9C4DDE7DBD");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineGameMatchmaking_X__OnReceiveGameServer_A24AF40948E071348B8CFFBC155F41C1(struct FString R);
+	bool __OnlineGameMatchmaking_X__OnReceiveGameServer_D8ADF92744E9BC5B8F5FCC9C4DDE7DBD(struct FString R);
 };
 
-// Class ProjectX.__OnlineGameMatchmaking_X__AddRecommendedServers_8A20925143BFDF5FB9C9A2A57F2252F3
+// Class ProjectX.__OnlineGameMatchmaking_X__AddRecommendedServers_E3B205FE4A49669D0D8CC8BA1A575F59
 // 0x0004 (0x0060 - 0x0064)
-class U__OnlineGameMatchmaking_X__AddRecommendedServers_8A20925143BFDF5FB9C9A2A57F2252F3 : public UObject
+class U__OnlineGameMatchmaking_X__AddRecommendedServers_E3B205FE4A49669D0D8CC8BA1A575F59 : public UObject
 {
 public:
 	float                                              AccPingThreshold;                                 		// 0x0060 (0x0004) [0x0000000000000000]               
@@ -11381,13 +11459,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__AddRecommendedServers_8A20925143BFDF5FB9C9A2A57F2252F3");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__AddRecommendedServers_E3B205FE4A49669D0D8CC8BA1A575F59");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineGameMatchmaking_X__AddRecommendedServers_8A20925143BFDF5FB9C9A2A57F2252F3(class URegionPing_X* R);
+	bool __OnlineGameMatchmaking_X__AddRecommendedServers_E3B205FE4A49669D0D8CC8BA1A575F59(class URegionPing_X* R);
 };
 
 // Class ProjectX.SuperRegion_X
@@ -11432,8 +11510,8 @@ public:
 		return uClassPointer;
 	};
 
-	struct FRegionSecret __RegionConfig_X__GetRegionSecrets_C4B375B5458EEF5248BD399FB4477225(class URegion_X* R);
-	bool __RegionConfig_X__GetRegionSecrets_FB936DAC42B92890DD496AB2CCB2F08C(class URegion_X* R);
+	struct FRegionSecret __RegionConfig_X__GetRegionSecrets_D001CD1145F7F4748D3018BF1042FD89(class URegion_X* R);
+	bool __RegionConfig_X__GetRegionSecrets_95D5AE43444D83BF0D5FCB9F533AA06C(class URegion_X* R);
 	TArray<struct FRegionSecret> GetRegionSecrets();
 	TArray<class URegion_X*> GetSubRegions(struct FString SuperRegionID);
 	class URegion_X* FindRegion(struct FString RegionID);
@@ -11465,9 +11543,9 @@ public:
 
 };
 
-// Class ProjectX.__OnlineGameMatchmaking_X__GetSubRegionPings_972782DC4996DBC84B18CCA31F5A3E50
+// Class ProjectX.__OnlineGameMatchmaking_X__GetSubRegionPings_6E062E0E4DF2556EDD2B819C583DBD6B
 // 0x0010 (0x0060 - 0x0070)
-class U__OnlineGameMatchmaking_X__GetSubRegionPings_972782DC4996DBC84B18CCA31F5A3E50 : public UObject
+class U__OnlineGameMatchmaking_X__GetSubRegionPings_6E062E0E4DF2556EDD2B819C583DBD6B : public UObject
 {
 public:
 	struct FString                                     SuperRegionID;                                    		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -11478,13 +11556,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__GetSubRegionPings_972782DC4996DBC84B18CCA31F5A3E50");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameMatchmaking_X__GetSubRegionPings_6E062E0E4DF2556EDD2B819C583DBD6B");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineGameMatchmaking_X__GetSubRegionPings_972782DC4996DBC84B18CCA31F5A3E50(class URegionPing_X* R);
+	bool __OnlineGameMatchmaking_X__GetSubRegionPings_6E062E0E4DF2556EDD2B819C583DBD6B(class URegionPing_X* R);
 };
 
 // Class ProjectX.PartyMessage_X
@@ -11557,13 +11635,12 @@ public:
 };
 
 // Class ProjectX.PartyMessage_Kick_X
-// 0x0091 (0x00A8 - 0x0139)
+// 0x0049 (0x00A8 - 0x00F1)
 class UPartyMessage_Kick_X : public UPartyMessage_X
 {
 public:
 	struct FUniqueNetId                                KickPlayer;                                       		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FUniqueNetId                                Instigator;                                       		// 0x00F0 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	unsigned char                                      KickReason;                                       		// 0x0138 (0x0001) [0x0000000000000000]               
+	unsigned char                                      KickReason;                                       		// 0x00F0 (0x0001) [0x0000000000000000]               
 public:
 	static UClass* StaticClass()
 	{
@@ -11578,18 +11655,16 @@ public:
 	};
 
 	class UPartyMessage_Kick_X* SetReason(unsigned char InKickReason);
-	class UPartyMessage_Kick_X* SetInstigator(struct FUniqueNetId InPlayer);
 	class UPartyMessage_Kick_X* SetKicked(struct FUniqueNetId InPlayer);
 };
 
 // Class ProjectX.PartyMessage_LocalPlayers_X
-// 0x005C (0x00A8 - 0x0104)
+// 0x0058 (0x00A8 - 0x0100)
 class UPartyMessage_LocalPlayers_X : public UPartyMessage_X
 {
 public:
 	struct FUniqueNetId                                PrimaryMemberId;                                  		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
 	TArray<struct FSimplePartyMember>                  Members;                                          		// 0x00F0 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	unsigned long                                      bFromLeader : 1;                                  		// 0x0100 (0x0004) [0x0000000000000000] [0x00000001] 
 public:
 	static UClass* StaticClass()
 	{
@@ -11603,7 +11678,6 @@ public:
 		return uClassPointer;
 	};
 
-	class UPartyMessage_LocalPlayers_X* SetFromLeader(unsigned long bIsLeader);
 	void AddMember(struct FPartyMember Member);
 	class UPartyMessage_LocalPlayers_X* AddPlayer(struct FUniqueNetId PlayerID, struct FString PlayerName);
 	class UPartyMessage_LocalPlayers_X* AddOnlinePlayer(class UOnlinePlayer_X* Player);
@@ -11612,12 +11686,11 @@ public:
 };
 
 // Class ProjectX.PartyMessage_MatchmakingAvailability_X
-// 0x004C (0x00A8 - 0x00F4)
+// 0x0004 (0x00A8 - 0x00AC)
 class UPartyMessage_MatchmakingAvailability_X : public UPartyMessage_X
 {
 public:
-	struct FUniqueNetId                                MemberId;                                         		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	int                                                MatchmakeRestrictions;                            		// 0x00F0 (0x0004) [0x0000000000000000]               
+	int                                                MatchmakeRestrictions;                            		// 0x00A8 (0x0004) [0x0000000000000000]               
 public:
 	static UClass* StaticClass()
 	{
@@ -11632,7 +11705,6 @@ public:
 	};
 
 	class UPartyMessage_MatchmakingAvailability_X* SetMatchmakeRestrictions(int InRestrictions);
-	class UPartyMessage_MatchmakingAvailability_X* SetMemberId(struct FUniqueNetId InMemberId);
 };
 
 // Class ProjectX.PartyMessage_JoinGame_X
@@ -11658,12 +11730,11 @@ public:
 };
 
 // Class ProjectX.PartyMessage_PartyMemberJoinGame_X
-// 0x00A0 (0x00A8 - 0x0148)
+// 0x0058 (0x00A8 - 0x0100)
 class UPartyMessage_PartyMemberJoinGame_X : public UPartyMessage_X
 {
 public:
-	struct FUniqueNetId                                PlayerID;                                         		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FPartyMemberServer                          Server;                                           		// 0x00F0 (0x0058) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FPartyMemberServer                          Server;                                           		// 0x00A8 (0x0058) [0x0000000000400000] (CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -11677,17 +11748,15 @@ public:
 		return uClassPointer;
 	};
 
-	class UPartyMessage_PartyMemberJoinGame_X* SetPartyMemberID(struct FUniqueNetId InPlayerId);
 	class UPartyMessage_PartyMemberJoinGame_X* SetPartyMemberServer(struct FPartyMemberServer& InServer);
 };
 
 // Class ProjectX.PartyMessage_DisableCrossPlay_X
-// 0x004C (0x00A8 - 0x00F4)
+// 0x0004 (0x00A8 - 0x00AC)
 class UPartyMessage_DisableCrossPlay_X : public UPartyMessage_X
 {
 public:
-	struct FUniqueNetId                                MemberId;                                         		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	unsigned long                                      bDisableCrossPlay : 1;                            		// 0x00F0 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      bDisableCrossPlay : 1;                            		// 0x00A8 (0x0004) [0x0000000000000000] [0x00000001] 
 public:
 	static UClass* StaticClass()
 	{
@@ -11702,16 +11771,14 @@ public:
 	};
 
 	class UPartyMessage_DisableCrossPlay_X* SetDisableCrossPlay(unsigned long InDisableCrossplay);
-	class UPartyMessage_DisableCrossPlay_X* SetMemberId(struct FUniqueNetId InMemberId);
 };
 
 // Class ProjectX.PartyMessage_CrossPlayTextChat_X
-// 0x0049 (0x00A8 - 0x00F1)
+// 0x0001 (0x00A8 - 0x00A9)
 class UPartyMessage_CrossPlayTextChat_X : public UPartyMessage_X
 {
 public:
-	struct FUniqueNetId                                MemberId;                                         		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	unsigned char                                      CrossChatState;                                   		// 0x00F0 (0x0001) [0x0000000000000000]               
+	unsigned char                                      CrossChatState;                                   		// 0x00A8 (0x0001) [0x0000000000000000]               
 public:
 	static UClass* StaticClass()
 	{
@@ -11726,7 +11793,6 @@ public:
 	};
 
 	class UPartyMessage_CrossPlayTextChat_X* SetCrossPlayTextChatState(unsigned char InCrossChatState);
-	class UPartyMessage_CrossPlayTextChat_X* SetMemberId(struct FUniqueNetId InMemberId);
 };
 
 // Class ProjectX.PartyMessage_InviteToTrade_X
@@ -11852,9 +11918,9 @@ public:
 	void PartyCreated(struct FUniqueLobbyId PartyID, struct FUniqueNetId LeaderID);
 };
 
-// Class ProjectX.__OnlineGameParty_X__JoinParty_4267F93B4302D2E26FD967A6D33A615D
+// Class ProjectX.__OnlineGameParty_X__JoinParty_C26D26D7497662F168BCFD9B808F2BB9
 // 0x0018 (0x0060 - 0x0078)
-class U__OnlineGameParty_X__JoinParty_4267F93B4302D2E26FD967A6D33A615D : public UObject
+class U__OnlineGameParty_X__JoinParty_C26D26D7497662F168BCFD9B808F2BB9 : public UObject
 {
 public:
 	int                                                LocalPlayerNum;                                   		// 0x0060 (0x0004) [0x0000000000000000]               
@@ -11866,18 +11932,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__JoinParty_4267F93B4302D2E26FD967A6D33A615D");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__JoinParty_C26D26D7497662F168BCFD9B808F2BB9");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameParty_X__JoinParty_4267F93B4302D2E26FD967A6D33A615D(class UPrivilegeCheck_X* PrivilegeCheck);
+	void __OnlineGameParty_X__JoinParty_C26D26D7497662F168BCFD9B808F2BB9(class UPrivilegeCheck_X* PrivilegeCheck);
 };
 
-// Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_119CB1434528042B0EACB59573285303
+// Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_2B9968F3472953D15FFBD4B3FD55D102
 // 0x0068 (0x0060 - 0x00C8)
-class U__OnlineGameParty_X__HandleConfirmJoinGame_119CB1434528042B0EACB59573285303 : public UObject
+class U__OnlineGameParty_X__HandleConfirmJoinGame_2B9968F3472953D15FFBD4B3FD55D102 : public UObject
 {
 public:
 	struct FPartyJoinMatchSettings                     InSettings;                                       		// 0x0060 (0x0068) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -11888,35 +11954,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_119CB1434528042B0EACB59573285303");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_2B9968F3472953D15FFBD4B3FD55D102");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameParty_X__HandleConfirmJoinGame_119CB1434528042B0EACB59573285303();
-};
-
-// Class ProjectX.__OnlineGameParty_X__HandleJoinLobby_B3A3D7094521701F8A029E82257274A0
-// 0x0010 (0x0060 - 0x0070)
-class U__OnlineGameParty_X__HandleJoinLobby_B3A3D7094521701F8A029E82257274A0 : public UObject
-{
-public:
-	struct FString                                     Error;                                            		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-public:
-	static UClass* StaticClass()
-	{
-		static UClass* uClassPointer = nullptr;
-
-		if (!uClassPointer)
-		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleJoinLobby_B3A3D7094521701F8A029E82257274A0");
-		}
-
-		return uClassPointer;
-	};
-
-	void __OnlineGameParty_X__HandleJoinLobby_B3A3D7094521701F8A029E82257274A0();
+	void __OnlineGameParty_X__HandleConfirmJoinGame_2B9968F3472953D15FFBD4B3FD55D102();
 };
 
 // Class ProjectX.PartyJoinedEvent_X
@@ -11939,9 +11983,9 @@ public:
 
 };
 
-// Class ProjectX.__OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1
+// Class ProjectX.__OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A
 // 0x0030 (0x0060 - 0x0090)
-class U__OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1 : public UObject
+class U__OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A : public UObject
 {
 public:
 	struct FActiveLobbyInfo                            Lobby;                                            		// 0x0060 (0x0030) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -11952,13 +11996,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1(struct FPartyMember PM);
+	bool __OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A(struct FPartyMember PM);
 };
 
 // Class ProjectX.PartyPlatformSession_X
@@ -12012,9 +12056,9 @@ public:
 	struct FString GetReservationID();
 };
 
-// Class ProjectX.__OnlineGameParty_X__BroadcastAllLocalPlayers_54E680BD4A9113C01FE875823F61D2DB
+// Class ProjectX.__OnlineGameParty_X__BroadcastAllLocalPlayers_AB089E094C8F57509006FBB3DD2A16C3
 // 0x0178 (0x0060 - 0x01D8)
-class U__OnlineGameParty_X__BroadcastAllLocalPlayers_54E680BD4A9113C01FE875823F61D2DB : public UObject
+class U__OnlineGameParty_X__BroadcastAllLocalPlayers_AB089E094C8F57509006FBB3DD2A16C3 : public UObject
 {
 public:
 	struct FPartyMember                                Primary;                                          		// 0x0060 (0x0178) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -12025,13 +12069,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__BroadcastAllLocalPlayers_54E680BD4A9113C01FE875823F61D2DB");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__BroadcastAllLocalPlayers_AB089E094C8F57509006FBB3DD2A16C3");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineGameParty_X__BroadcastAllLocalPlayers_54E680BD4A9113C01FE875823F61D2DB(struct FPartyMember PM);
+	bool __OnlineGameParty_X__BroadcastAllLocalPlayers_AB089E094C8F57509006FBB3DD2A16C3(struct FPartyMember PM);
 };
 
 // Class ProjectX.PartyConfig_X
@@ -12055,13 +12099,12 @@ public:
 
 };
 
-// Class ProjectX.PartyMessage_ReadyToTrade_X
-// 0x004C (0x00A8 - 0x00F4)
-class UPartyMessage_ReadyToTrade_X : public UPartyMessage_X
+// Class ProjectX.PartyMessage_ReadyToConfirmTrade_X
+// 0x0048 (0x00A8 - 0x00F0)
+class UPartyMessage_ReadyToConfirmTrade_X : public UPartyMessage_X
 {
 public:
 	struct FUniqueNetId                                TradingMemberId;                                  		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	unsigned long                                      bReadyToTrade : 1;                                		// 0x00F0 (0x0004) [0x0000000000000000] [0x00000001] 
 public:
 	static UClass* StaticClass()
 	{
@@ -12069,14 +12112,37 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_ReadyToTrade_X");
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_ReadyToConfirmTrade_X");
 		}
 
 		return uClassPointer;
 	};
 
-	class UPartyMessage_ReadyToTrade_X* SetReadyToTrade(unsigned long bInReadyToTrade);
-	class UPartyMessage_ReadyToTrade_X* SetTradingMemberId(struct FUniqueNetId InTradingMemberId);
+	class UPartyMessage_ReadyToConfirmTrade_X* SetTradingMemberId(struct FUniqueNetId InTradingMemberId);
+};
+
+// Class ProjectX.PartyMessage_ReadyToLockTrade_X
+// 0x004C (0x00A8 - 0x00F4)
+class UPartyMessage_ReadyToLockTrade_X : public UPartyMessage_X
+{
+public:
+	struct FUniqueNetId                                TradingMemberId;                                  		// 0x00A8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+	unsigned long                                      bReady : 1;                                       		// 0x00F0 (0x0004) [0x0000000000000000] [0x00000001] 
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.PartyMessage_ReadyToLockTrade_X");
+		}
+
+		return uClassPointer;
+	};
+
+	class UPartyMessage_ReadyToLockTrade_X* SetReadyToTrade(unsigned long bInReadyToTrade);
+	class UPartyMessage_ReadyToLockTrade_X* SetTradingMemberId(struct FUniqueNetId InTradingMemberId);
 };
 
 // Class ProjectX.OnlinePlayerRegionRestrictions_X
@@ -12098,7 +12164,7 @@ public:
 		return uClassPointer;
 	};
 
-	unsigned char __OnlinePlayerRegionRestrictions_X__HandleLoginChanged_AB4D5E5144F4074648BDF5888C9CE96E(struct FName S);
+	unsigned char __OnlinePlayerRegionRestrictions_X__HandleLoginChanged_2FCDB0BE44E3AC3D1817E4A3AAAFBE39(struct FName S);
 	bool IsRestricted(unsigned char Restriction);
 	void HandleLoginChanged(class UOnlinePlayerAuthentication_X* Auth);
 	void OnExit();
@@ -12127,9 +12193,9 @@ public:
 	class UPartyMessage_InviteToTradeError_X* SetError(class UErrorType* Type);
 };
 
-// Class ProjectX.__OnlineGameParty_X__GetPlayersWithPrimaryMemberID_06F69A3B4423E839AB3C3CB3EC2A482C
+// Class ProjectX.__OnlineGameParty_X__GetPlayersWithPrimaryMemberID_DC753B7B4C199E77CE61AA900142F36B
 // 0x0048 (0x0060 - 0x00A8)
-class U__OnlineGameParty_X__GetPlayersWithPrimaryMemberID_06F69A3B4423E839AB3C3CB3EC2A482C : public UObject
+class U__OnlineGameParty_X__GetPlayersWithPrimaryMemberID_DC753B7B4C199E77CE61AA900142F36B : public UObject
 {
 public:
 	struct FUniqueNetId                                InPrimaryID;                                      		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -12140,18 +12206,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__GetPlayersWithPrimaryMemberID_06F69A3B4423E839AB3C3CB3EC2A482C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__GetPlayersWithPrimaryMemberID_DC753B7B4C199E77CE61AA900142F36B");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineGameParty_X__GetPlayersWithPrimaryMemberID_06F69A3B4423E839AB3C3CB3EC2A482C(struct FPartyMember Member);
+	bool __OnlineGameParty_X__GetPlayersWithPrimaryMemberID_DC753B7B4C199E77CE61AA900142F36B(struct FPartyMember Member);
 };
 
-// Class ProjectX.__OnlineGameParty_X__HasMultiplePlatforms_3B75D06043CDE9612EA477B3E949C98A
+// Class ProjectX.__OnlineGameParty_X__HasMultiplePlatforms_79ABAF4A42D6280C53A4BC941AEE02CB
 // 0x0010 (0x0060 - 0x0070)
-class U__OnlineGameParty_X__HasMultiplePlatforms_3B75D06043CDE9612EA477B3E949C98A : public UObject
+class U__OnlineGameParty_X__HasMultiplePlatforms_79ABAF4A42D6280C53A4BC941AEE02CB : public UObject
 {
 public:
 	TArray<unsigned char>                              PartyLeaderCrossPlayGroup;                        		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -12162,18 +12228,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HasMultiplePlatforms_3B75D06043CDE9612EA477B3E949C98A");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HasMultiplePlatforms_79ABAF4A42D6280C53A4BC941AEE02CB");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineGameParty_X__HasMultiplePlatforms_3B75D06043CDE9612EA477B3E949C98A(struct FPartyMember P);
+	bool __OnlineGameParty_X__HasMultiplePlatforms_79ABAF4A42D6280C53A4BC941AEE02CB(struct FPartyMember P);
 };
 
-// Class ProjectX.__OnlineGameParty_X__HandleClientReservationMessage_5A4FD8B44E70E54AA7699A993E122217
+// Class ProjectX.__OnlineGameParty_X__HandleClientReservationMessage_38E7B8DB42F937AFE8332FA03ECFFBD4
 // 0x0028 (0x0060 - 0x0088)
-class U__OnlineGameParty_X__HandleClientReservationMessage_5A4FD8B44E70E54AA7699A993E122217 : public UObject
+class U__OnlineGameParty_X__HandleClientReservationMessage_38E7B8DB42F937AFE8332FA03ECFFBD4 : public UObject
 {
 public:
 	class UClientReservationMessage_X*                 Message;                                          		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -12185,18 +12251,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleClientReservationMessage_5A4FD8B44E70E54AA7699A993E122217");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleClientReservationMessage_38E7B8DB42F937AFE8332FA03ECFFBD4");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameParty_X__HandleClientReservationMessage_5A4FD8B44E70E54AA7699A993E122217();
+	void __OnlineGameParty_X__HandleClientReservationMessage_38E7B8DB42F937AFE8332FA03ECFFBD4();
 };
 
-// Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_876B325A4B12ACDC2AD5F3872D47FBF7
+// Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_82C85BBD46BB03BD62DDE0B9719F4F60
 // 0x0020 (0x0060 - 0x0080)
-class U__OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_876B325A4B12ACDC2AD5F3872D47FBF7 : public UObject
+class U__OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_82C85BBD46BB03BD62DDE0B9719F4F60 : public UObject
 {
 public:
 	struct FJoinMatchSettings                          Settings;                                         		// 0x0060 (0x0020) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -12207,18 +12273,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_876B325A4B12ACDC2AD5F3872D47FBF7");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_82C85BBD46BB03BD62DDE0B9719F4F60");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_876B325A4B12ACDC2AD5F3872D47FBF7(struct FServerReservationData Reservation);
+	void __OnlineGameParty_X__HandleConfirmJoinGame_ConnectionValid_82C85BBD46BB03BD62DDE0B9719F4F60(struct FServerReservationData Reservation);
 };
 
-// Class ProjectX.__OnlineGameParty_X__CreatePartyInternal_D5D83FFF41D88978A8C829B1D0CFB996
+// Class ProjectX.__OnlineGameParty_X__CreatePartyInternal_865BEC404D738CE4F20EA3B9EA85C33B
 // 0x0030 (0x0060 - 0x0090)
-class U__OnlineGameParty_X__CreatePartyInternal_D5D83FFF41D88978A8C829B1D0CFB996 : public UObject
+class U__OnlineGameParty_X__CreatePartyInternal_865BEC404D738CE4F20EA3B9EA85C33B : public UObject
 {
 public:
 	class UOnlineLobbyInterface*                       LobbyInterface;                                   		// 0x0060 (0x0010) [0x0000000000000000]               
@@ -12232,13 +12298,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__CreatePartyInternal_D5D83FFF41D88978A8C829B1D0CFB996");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameParty_X__CreatePartyInternal_865BEC404D738CE4F20EA3B9EA85C33B");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameParty_X__CreatePartyInternal_D5D83FFF41D88978A8C829B1D0CFB996(class UError* ConnectionError);
+	void __OnlineGameParty_X__CreatePartyInternal_865BEC404D738CE4F20EA3B9EA85C33B(class UError* ConnectionError);
 };
 
 // Class ProjectX.PartySequence_InvitedToPsyNetParty_X
@@ -12313,7 +12379,7 @@ public:
 };
 
 // Class ProjectX.RankedConfig_X
-// 0x0038 (0x0078 - 0x00B0)
+// 0x0048 (0x0078 - 0x00C0)
 class URankedConfig_X : public UOnlineConfig_X
 {
 public:
@@ -12322,6 +12388,10 @@ public:
 	TArray<int>                                        SeasonRewardRequiredWinsPerLevel;                 		// 0x0090 (0x0010) [0x0000000000400001] (CPF_Edit | CPF_NeedCtorLink)
 	unsigned long                                      bCheckReservationID : 1;                          		// 0x00A0 (0x0004) [0x0000000000000001] [0x00000001] (CPF_Edit)
 	unsigned long long                                 SeasonEndTimeSeconds;                             		// 0x00A8 (0x0008) [0x0000000000000001] (CPF_Edit)    
+	int                                                MaximumRankDisparity;                             		// 0x00B0 (0x0004) [0x0000000000000001] (CPF_Edit)    
+	int                                                PlacementMatchesNeededToReceiveRank;              		// 0x00B4 (0x0004) [0x0000000000000001] (CPF_Edit)    
+	int                                                HighestTierNewPlayersCanPlayWith;                 		// 0x00B8 (0x0004) [0x0000000000000001] (CPF_Edit)    
+	int                                                HighestMuNewPlayersCanHave;                       		// 0x00BC (0x0004) [0x0000000000000001] (CPF_Edit)    
 public:
 	static UClass* StaticClass()
 	{
@@ -12358,6 +12428,33 @@ public:
 		return uClassPointer;
 	};
 
+};
+
+// Class ProjectX.IOnlineGamePlaylists_X
+// 0x0000 (0x0060 - 0x0060)
+class UIOnlineGamePlaylists_X : public UInterface
+{
+public:
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.IOnlineGamePlaylists_X");
+		}
+
+		return uClassPointer;
+	};
+
+	bool IsNonStandardPlaylistName(struct FName PlaylistName);
+	bool IsStandardPlaylistName(struct FName PlaylistName);
+	bool IsUnrankedPlaylistName(struct FName PlaylistName);
+	bool IsRankedPlaylistName(struct FName PlaylistName);
+	struct FName IdToName(int PlaylistId);
+	int NameToId(struct FName PlaylistName);
+	TArray<struct FName> GetAccessiblePlaylists(TArray<struct FName>& SelectedPlaylists);
 };
 
 // Class ProjectX.RPC_GetPopulation_X
@@ -12520,7 +12617,7 @@ public:
 		return uClassPointer;
 	};
 
-	class URegionPingData_X* __RegionPinger_X__PingRegions_89B7D7D249B0F41D1B7316AA5F8E6487(struct FString Address);
+	class URegionPingData_X* __RegionPinger_X__PingRegions_BA317C674D3430007E0238B170D8B7AE(struct FString Address);
 	void HandlePong(class UUdpPingBeaconClient_X* _, struct FName Address, float DeltaSeconds);
 	void SendPing(int Idx);
 	void Tick(float _);
@@ -12906,9 +13003,9 @@ public:
 	void EventResult(class UClubDetails_X* OutResult);
 };
 
-// Class ProjectX.__OnlineGameReservations_X__RecordReservation_1682DD864AA0004BA783DBA20F901ABF
+// Class ProjectX.__OnlineGameReservations_X__RecordReservation_B2A6338F4B7D6F63314C8EB4C1FAC656
 // 0x0008 (0x0060 - 0x0068)
-class U__OnlineGameReservations_X__RecordReservation_1682DD864AA0004BA783DBA20F901ABF : public UObject
+class U__OnlineGameReservations_X__RecordReservation_B2A6338F4B7D6F63314C8EB4C1FAC656 : public UObject
 {
 public:
 	class UAddReservationMessage_X*                    Message;                                          		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -12919,18 +13016,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__RecordReservation_1682DD864AA0004BA783DBA20F901ABF");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__RecordReservation_B2A6338F4B7D6F63314C8EB4C1FAC656");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameReservations_X__RecordReservation_1682DD864AA0004BA783DBA20F901ABF(struct FReservationPlayerData P);
+	void __OnlineGameReservations_X__RecordReservation_B2A6338F4B7D6F63314C8EB4C1FAC656(struct FReservationPlayerData P);
 };
 
-// Class ProjectX.__OnlineGameReservations_X__SetPlayersWithMigrationData_721B106D40049D9FCA705A8966F96333
+// Class ProjectX.__OnlineGameReservations_X__SetPlayersWithMigrationData_0AF95A994708AB4C98FB33B46994EDEC
 // 0x0018 (0x0060 - 0x0078)
-class U__OnlineGameReservations_X__SetPlayersWithMigrationData_721B106D40049D9FCA705A8966F96333 : public UObject
+class U__OnlineGameReservations_X__SetPlayersWithMigrationData_0AF95A994708AB4C98FB33B46994EDEC : public UObject
 {
 public:
 	TArray<struct FReservationData>                    CurrentPlayers;                                   		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -12942,19 +13039,19 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__SetPlayersWithMigrationData_721B106D40049D9FCA705A8966F96333");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__SetPlayersWithMigrationData_0AF95A994708AB4C98FB33B46994EDEC");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameReservations_X__SetPlayersWithMigrationData_391E6CBE437BFE474C60B081AF170E9F(struct FMigrationReservationData P);
-	void __OnlineGameReservations_X__SetPlayersWithMigrationData_721B106D40049D9FCA705A8966F96333(struct FMigrationReservationData P);
+	void __OnlineGameReservations_X__SetPlayersWithMigrationData_0C9FDE9646EE35556DB3C49C64694302(struct FMigrationReservationData P);
+	void __OnlineGameReservations_X__SetPlayersWithMigrationData_0AF95A994708AB4C98FB33B46994EDEC(struct FMigrationReservationData P);
 };
 
-// Class ProjectX.__OnlineGameReservations_X__GetMigrationReservationData_45A28BA04CE3CA817E7DC894875AF9F9
+// Class ProjectX.__OnlineGameReservations_X__GetMigrationReservationData_079B79E54B90455B7B38F29C328C9F06
 // 0x0018 (0x0060 - 0x0078)
-class U__OnlineGameReservations_X__GetMigrationReservationData_45A28BA04CE3CA817E7DC894875AF9F9 : public UObject
+class U__OnlineGameReservations_X__GetMigrationReservationData_079B79E54B90455B7B38F29C328C9F06 : public UObject
 {
 public:
 	TArray<struct FMigrationReservationData>           CurrentPlayers;                                   		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -12966,13 +13063,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__GetMigrationReservationData_45A28BA04CE3CA817E7DC894875AF9F9");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameReservations_X__GetMigrationReservationData_079B79E54B90455B7B38F29C328C9F06");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameReservations_X__GetMigrationReservationData_45A28BA04CE3CA817E7DC894875AF9F9(struct FReservationData P);
+	void __OnlineGameReservations_X__GetMigrationReservationData_079B79E54B90455B7B38F29C328C9F06(struct FReservationData P);
 };
 
 // Class ProjectX.RPC_CustomGameServerGet_X
@@ -13003,11 +13100,13 @@ public:
 };
 
 // Class ProjectX.PlaylistSkillCache_X
-// 0x0010 (0x0060 - 0x0070)
+// 0x0030 (0x0060 - 0x0090)
 class UPlaylistSkillCache_X : public UObject
 {
 public:
 	TArray<struct FUpdatedPlayerSkillRating>           Players;                                          		// 0x0060 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	class URankedConfig_X*                             RankedConfig;                                     		// 0x0070 (0x0008) [0x0000000000000001] (CPF_Edit)    
+	struct FScriptDelegate                             __EventPlaylistSkillChanged__Delegate;            		// 0x0078 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -13028,16 +13127,43 @@ public:
 	void ClearSkill(struct FUniqueNetId PlayerID);
 	void CacheSkill(struct FUpdatedPlayerSkillRating Rating);
 	void PreCacheSkill(struct FPlayerSkillRating Rating);
+	bool AllPlayersAreAroundTheSameRank();
+	void EventPlaylistSkillChanged();
+};
+
+// Class ProjectX.RPC_GetPartyMemberSkill_X
+// 0x0020 (0x00E8 - 0x0108)
+class URPC_GetPartyMemberSkill_X : public URPC_X
+{
+public:
+	TArray<struct FUniqueNetId>                        PlayerIDs;                                        		// 0x00E8 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	TArray<struct FPartyMemberSkill>                   Players;                                          		// 0x00F8 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.RPC_GetPartyMemberSkill_X");
+		}
+
+		return uClassPointer;
+	};
+
+	void eventOnSuccess();
+	void AddPlayerIDsToResponse();
+	class URPC_GetPartyMemberSkill_X* AddPlayer(struct FUniqueNetId PlayerID);
 };
 
 // Class ProjectX.RPC_GetPlayerSkill_X
-// 0x0060 (0x00E8 - 0x0148)
+// 0x00A8 (0x00E8 - 0x0190)
 class URPC_GetPlayerSkill_X : public URPC_X
 {
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x00E8 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	TArray<struct FGetPlayerSkillData>                 Skills;                                           		// 0x0130 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
-	struct FRPCRewardLevelData                         RewardLevels;                                     		// 0x0140 (0x0008) [0x0000000000002000] (CPF_Transient)
+	TArray<struct FPlayerSkillRating>                  Skills;                                           		// 0x0130 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	struct FPlayerSeasonRewardProgress                 RewardLevels;                                     		// 0x0140 (0x0050) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -13052,6 +13178,8 @@ public:
 	};
 
 	class URPC_GetPlayerSkill_X* SetPlayerID(struct FUniqueNetId InPlayerId);
+	void eventOnSuccess();
+	void AddPlayerIDToResponse();
 };
 
 // Class ProjectX.RPC_RecordMatchResults_X
@@ -13097,7 +13225,7 @@ class URPC_UpdateSkills_X : public URPC_RecordMatchResults_X
 public:
 	int                                                Playlist;                                         		// 0x0170 (0x0004) [0x0000000000000000]               
 	TArray<struct FUpdatedPlayerSkillRating>           NewSkills;                                        		// 0x0178 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
-	TArray<struct FRPCPlayerRewardLevelData>           NewRewardLevels;                                  		// 0x0188 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	TArray<struct FPlayerSeasonRewardProgress>         NewRewardLevels;                                  		// 0x0188 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
 	class UMatchData_X*                                MatchData;                                        		// 0x0198 (0x0008) [0x0000000000002000] (CPF_Transient)
 public:
 	static UClass* StaticClass()
@@ -13156,6 +13284,28 @@ public:
 	void SetSkills(struct FUpdatedPlayerSkillRating Update);
 };
 
+// Class ProjectX.__OnlineGameSkill_X__OnSkillSynced_F886A7394DBEC5E00C7E43B99461E649
+// 0x0048 (0x0060 - 0x00A8)
+class U__OnlineGameSkill_X__OnSkillSynced_F886A7394DBEC5E00C7E43B99461E649 : public UObject
+{
+public:
+	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameSkill_X__OnSkillSynced_F886A7394DBEC5E00C7E43B99461E649");
+		}
+
+		return uClassPointer;
+	};
+
+	bool __OnlineGameSkill_X__OnSkillSynced_F886A7394DBEC5E00C7E43B99461E649(class ULocalPlayer* P);
+};
+
 // Class ProjectX.SyncedSkillData_X
 // 0x0008 (0x0060 - 0x0068)
 class USyncedSkillData_X : public UObject
@@ -13175,6 +13325,73 @@ public:
 		return uClassPointer;
 	};
 
+};
+
+// Class ProjectX.__OnlineGameSkill_X__HandleSyncedPlayerSkill_8FC8525146E16E00FA50E49E74B4FD42
+// 0x0058 (0x0060 - 0x00B8)
+class U__OnlineGameSkill_X__HandleSyncedPlayerSkill_8FC8525146E16E00FA50E49E74B4FD42 : public UObject
+{
+public:
+	TArray<struct FPlayerSkillRating>                  PlayerSkillRatings;                               		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FUniqueNetId                                PlayerID;                                         		// 0x0070 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameSkill_X__HandleSyncedPlayerSkill_8FC8525146E16E00FA50E49E74B4FD42");
+		}
+
+		return uClassPointer;
+	};
+
+	void __OnlineGameSkill_X__HandleSyncedPlayerSkill_8FC8525146E16E00FA50E49E74B4FD42(int RankedPlaylistID);
+};
+
+// Class ProjectX.__OnlineGameSkill_X__ClearSkill_3B17562545B3BAC717555DA051F42E51
+// 0x0048 (0x0060 - 0x00A8)
+class U__OnlineGameSkill_X__ClearSkill_3B17562545B3BAC717555DA051F42E51 : public UObject
+{
+public:
+	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameSkill_X__ClearSkill_3B17562545B3BAC717555DA051F42E51");
+		}
+
+		return uClassPointer;
+	};
+
+	void __OnlineGameSkill_X__ClearSkill_3B17562545B3BAC717555DA051F42E51(class UPlaylistSkillCache_X* P);
+};
+
+// Class ProjectX.__OnlineGameSkill_X__ClearPartyMembersSkill_82C205794E5F61D6C80097A310C9C763
+// 0x0048 (0x0060 - 0x00A8)
+class U__OnlineGameSkill_X__ClearPartyMembersSkill_82C205794E5F61D6C80097A310C9C763 : public UObject
+{
+public:
+	struct FUniqueNetId                                PrimaryPlayerId;                                  		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameSkill_X__ClearPartyMembersSkill_82C205794E5F61D6C80097A310C9C763");
+		}
+
+		return uClassPointer;
+	};
+
+	bool __OnlineGameSkill_X__ClearPartyMembersSkill_82C205794E5F61D6C80097A310C9C763(struct FPartyMember Member);
 };
 
 // Class ProjectX.RPC_UpdateLeaderboard_X
@@ -13230,9 +13447,9 @@ public:
 
 };
 
-// Class ProjectX.__OnlineGameWordFilter_X__InternalSanitize_3DB414634D549DDA8B162E96D2C29219
+// Class ProjectX.__OnlineGameWordFilter_X__InternalSanitize_AB7848BE43E6457FB82C61A5C403A8E9
 // 0x0010 (0x0060 - 0x0070)
-class U__OnlineGameWordFilter_X__InternalSanitize_3DB414634D549DDA8B162E96D2C29219 : public UObject
+class U__OnlineGameWordFilter_X__InternalSanitize_AB7848BE43E6457FB82C61A5C403A8E9 : public UObject
 {
 public:
 	struct FString                                     Id;                                               		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -13243,13 +13460,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameWordFilter_X__InternalSanitize_3DB414634D549DDA8B162E96D2C29219");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineGameWordFilter_X__InternalSanitize_AB7848BE43E6457FB82C61A5C403A8E9");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineGameWordFilter_X__InternalSanitize_3DB414634D549DDA8B162E96D2C29219(struct FWordFilterResult Result);
+	void __OnlineGameWordFilter_X__InternalSanitize_AB7848BE43E6457FB82C61A5C403A8E9(struct FWordFilterResult Result);
 };
 
 // Class ProjectX.PsyNetWordFilter_X
@@ -13272,7 +13489,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __PsyNetWordFilter_X__WordFilterSanitizeString_2C29E4584F7B27FD2DF6E79B0330CBFB(class URPC_FilterContent_X* RPC);
+	void __PsyNetWordFilter_X__WordFilterSanitizeString_66C117BC491B1455DCE1BF82168DA56C(class URPC_FilterContent_X* RPC);
 	void HandlePsyNetWordFilterFail(class URPC_FilterContent_X* RPC);
 	void HandlePsyNetWordFilterSuccess(class URPC_FilterContent_X* RPC);
 	void HandlePsyNetWordFilter(class URPC_FilterContent_X* RPC);
@@ -13287,6 +13504,7 @@ class UBanMessage_X : public UObject
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000040400000] (CPF_NeedCtorLink | CPF_EditInlineNotify)
 	unsigned char                                      BanType;                                          		// 0x00A8 (0x0001) [0x0000000040000000] (CPF_EditInlineNotify)
+	unsigned char                                      SeverityType;                                     		// 0x00A9 (0x0001) [0x0000000040000000] (CPF_EditInlineNotify)
 	struct FString                                     Title;                                            		// 0x00B0 (0x0010) [0x0000000040400000] (CPF_NeedCtorLink | CPF_EditInlineNotify)
 	struct FString                                     Body;                                             		// 0x00C0 (0x0010) [0x0000000040400000] (CPF_NeedCtorLink | CPF_EditInlineNotify)
 	int                                                BannedMinutes;                                    		// 0x00D0 (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
@@ -13307,7 +13525,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __BanMessage_X__Init_DAEB452243081E52BE364599D2144922();
+	void __BanMessage_X__Init_34BC2876402E28C203363E92B7A9FF44();
 	bool IsPermanentlyBanned();
 	bool IsBanned();
 	int GetMinutesRemaining();
@@ -13317,7 +13535,7 @@ public:
 };
 
 // Class ProjectX.RPC_LoginAuthPlayer_X
-// 0x0100 (0x00E8 - 0x01E8)
+// 0x0110 (0x00E8 - 0x01F8)
 class URPC_LoginAuthPlayer_X : public URPC_X
 {
 public:
@@ -13331,6 +13549,7 @@ public:
 	unsigned long                                      bSkipAuth : 1;                                    		// 0x0150 (0x0004) [0x0000000000000000] [0x00000001] 
 	unsigned long                                      bSetAsPrimaryAccount : 1;                         		// 0x0150 (0x0004) [0x0000000000000000] [0x00000002] 
 	unsigned long                                      UseWebSocket : 1;                                 		// 0x0150 (0x0004) [0x0000000000002000] [0x00000004] (CPF_Transient)
+	unsigned long                                      IsLastChanceAuthBan : 1;                          		// 0x0150 (0x0004) [0x0000000000002000] [0x00000008] (CPF_Transient)
 	struct FString                                     EpicAuthTicket;                                   		// 0x0158 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
 	struct FString                                     EpicAccountId;                                    		// 0x0168 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
 	struct FString                                     SessionId;                                        		// 0x0178 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
@@ -13338,8 +13557,9 @@ public:
 	class UBanMessage_X*                               BanMessage;                                       		// 0x0198 (0x0008) [0x0000000000002000] (CPF_Transient)
 	struct FString                                     VerifiedPlayerName;                               		// 0x01A0 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
 	struct FString                                     PerConURL;                                        		// 0x01B0 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
-	struct FPsyTag                                     PsyTag;                                           		// 0x01C0 (0x0018) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
-	TArray<struct FName>                               CountryRestrictions;                              		// 0x01D8 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	struct FString                                     PerConURLv2;                                      		// 0x01C0 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	struct FPsyTag                                     PsyTag;                                           		// 0x01D0 (0x0018) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
+	TArray<struct FName>                               CountryRestrictions;                              		// 0x01E8 (0x0010) [0x0000000000402000] (CPF_Transient | CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -13503,7 +13723,7 @@ public:
 		return uClassPointer;
 	};
 
-	bool __RPC_CheckPsyTag_X__GetTagCheckError_8D5C3AE449A7F7A868D4439DE5DA7D71(struct FString S);
+	bool __RPC_CheckPsyTag_X__GetTagCheckError_C5DE289649897CAF37E1A18FDD24DE09(struct FString S);
 	class UErrorType* eventOverrideErrorType(class UErrorType* ErrorType);
 	class URPC_CheckPsyTag_X* SetPsyTagName(struct FString InName);
 	struct FString GetTagCheckError();
@@ -13735,9 +13955,9 @@ public:
 
 };
 
-// Class ProjectX.__OnlinePlayerFriends_X__UnblockPlayer_F91F356640FD87DDB7234EA96C3CBBF8
+// Class ProjectX.__OnlinePlayerFriends_X__UnblockPlayer_27D415F6402D24B80DD229A4BDFC3FB2
 // 0x0018 (0x0060 - 0x0078)
-class U__OnlinePlayerFriends_X__UnblockPlayer_F91F356640FD87DDB7234EA96C3CBBF8 : public UObject
+class U__OnlinePlayerFriends_X__UnblockPlayer_27D415F6402D24B80DD229A4BDFC3FB2 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -13748,14 +13968,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__UnblockPlayer_F91F356640FD87DDB7234EA96C3CBBF8");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__UnblockPlayer_27D415F6402D24B80DD229A4BDFC3FB2");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerFriends_X__UnblockPlayer_A4FC0A2E4208B1358842D78FB0122219(class URPC_UnblockPlayer_X* RPC);
-	void __OnlinePlayerFriends_X__UnblockPlayer_F91F356640FD87DDB7234EA96C3CBBF8(class URPC_UnblockPlayer_X* RPC);
+	void __OnlinePlayerFriends_X__UnblockPlayer_4454CBA04804EF6CFF608197DCDA7F1A(class URPC_UnblockPlayer_X* RPC);
+	void __OnlinePlayerFriends_X__UnblockPlayer_27D415F6402D24B80DD229A4BDFC3FB2(class URPC_UnblockPlayer_X* RPC);
 };
 
 // Class ProjectX.RPC_UnblockPlayer_X
@@ -13780,9 +14000,9 @@ public:
 	class URPC_UnblockPlayer_X* SetUnblockedPlayerId(struct FUniqueNetId InPlayerId);
 };
 
-// Class ProjectX.__OnlinePlayerFriends_X__BlockPlayer_B69C4F9042E51C052ACA999B8AE72657
+// Class ProjectX.__OnlinePlayerFriends_X__BlockPlayer_D18CE25D4F975D58EAF6C38D608033A8
 // 0x0040 (0x0060 - 0x00A0)
-class U__OnlinePlayerFriends_X__BlockPlayer_B69C4F9042E51C052ACA999B8AE72657 : public UObject
+class U__OnlinePlayerFriends_X__BlockPlayer_D18CE25D4F975D58EAF6C38D608033A8 : public UObject
 {
 public:
 	struct FString                                     BlockedPlayerName;                                		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -13795,14 +14015,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__BlockPlayer_B69C4F9042E51C052ACA999B8AE72657");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__BlockPlayer_D18CE25D4F975D58EAF6C38D608033A8");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerFriends_X__BlockPlayer_11AE044A4D89D5D53233B7ABCCDA7DCD(class URPC_BlockPlayer_X* RPC);
-	void __OnlinePlayerFriends_X__BlockPlayer_B69C4F9042E51C052ACA999B8AE72657(class URPC_BlockPlayer_X* RPC);
+	void __OnlinePlayerFriends_X__BlockPlayer_0E21BC0D4D7F1B862332968B626EB893(class URPC_BlockPlayer_X* RPC);
+	void __OnlinePlayerFriends_X__BlockPlayer_D18CE25D4F975D58EAF6C38D608033A8(class URPC_BlockPlayer_X* RPC);
 };
 
 // Class ProjectX.RPC_BlockPlayer_X
@@ -13851,9 +14071,9 @@ public:
 	void eventOnComplete();
 };
 
-// Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedListAttempt_9601B40E44051C27D5BCC193338281E7
+// Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedListAttempt_2E5DA0C04C6CFCBB78F8FFA4D3FED93E
 // 0x0018 (0x0060 - 0x0078)
-class U__OnlinePlayerFriends_X__DownloadBlockedListAttempt_9601B40E44051C27D5BCC193338281E7 : public UObject
+class U__OnlinePlayerFriends_X__DownloadBlockedListAttempt_2E5DA0C04C6CFCBB78F8FFA4D3FED93E : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -13864,18 +14084,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedListAttempt_9601B40E44051C27D5BCC193338281E7");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedListAttempt_2E5DA0C04C6CFCBB78F8FFA4D3FED93E");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerFriends_X__DownloadBlockedListAttempt_9601B40E44051C27D5BCC193338281E7(class URPC_GetBlockList_X* RPC);
+	void __OnlinePlayerFriends_X__DownloadBlockedListAttempt_2E5DA0C04C6CFCBB78F8FFA4D3FED93E(class URPC_GetBlockList_X* RPC);
 };
 
-// Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedList_52C2FCAA43F98EBB71E8EC9BC7843474
+// Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedList_2BAB1F1D4C2A3532C8898CB2A101AB41
 // 0x0018 (0x0060 - 0x0078)
-class U__OnlinePlayerFriends_X__DownloadBlockedList_52C2FCAA43F98EBB71E8EC9BC7843474 : public UObject
+class U__OnlinePlayerFriends_X__DownloadBlockedList_2BAB1F1D4C2A3532C8898CB2A101AB41 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -13886,14 +14106,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedList_52C2FCAA43F98EBB71E8EC9BC7843474");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerFriends_X__DownloadBlockedList_2BAB1F1D4C2A3532C8898CB2A101AB41");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerFriends_X__DownloadBlockedList_3B7A4C28478271E8931D958FBDC1365A();
-	void __OnlinePlayerFriends_X__DownloadBlockedList_52C2FCAA43F98EBB71E8EC9BC7843474();
+	void __OnlinePlayerFriends_X__DownloadBlockedList_43F203A9438C03E4D69E8A95F5286BC5();
+	void __OnlinePlayerFriends_X__DownloadBlockedList_2BAB1F1D4C2A3532C8898CB2A101AB41();
 };
 
 // Class ProjectX.PlatformFriends_X
@@ -14011,9 +14231,9 @@ public:
 	void RecordServiceCall(struct FString Service, float Latency);
 };
 
-// Class ProjectX.__RPCQueue_X__CreateBatch_9DF29BA749740FA4353354923B531BCB
+// Class ProjectX.__RPCQueue_X__CreateBatchSingleRPC_BC179C914AAFAD81ECB4D794146DD96D
 // 0x0008 (0x0060 - 0x0068)
-class U__RPCQueue_X__CreateBatch_9DF29BA749740FA4353354923B531BCB : public UObject
+class U__RPCQueue_X__CreateBatchSingleRPC_BC179C914AAFAD81ECB4D794146DD96D : public UObject
 {
 public:
 	class URPCBatch_X*                                 Batch;                                            		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -14024,13 +14244,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__RPCQueue_X__CreateBatch_9DF29BA749740FA4353354923B531BCB");
+			uClassPointer = UObject::FindClass("Class ProjectX.__RPCQueue_X__CreateBatchSingleRPC_BC179C914AAFAD81ECB4D794146DD96D");
 		}
 
 		return uClassPointer;
 	};
 
-	void __RPCQueue_X__CreateBatch_9DF29BA749740FA4353354923B531BCB(class UPsyNetMessage_X* Response, class UError* Error);
+	void __RPCQueue_X__CreateBatchSingleRPC_BC179C914AAFAD81ECB4D794146DD96D(class UPsyNetMessage_X* Response, class UError* Error);
 };
 
 // Class ProjectX.TAsyncResult__PsyNetMessage_X
@@ -14066,6 +14286,28 @@ public:
 	class UPsyNetMessage_X* ResultDelegate();
 	void EventResultComplete(class UPsyNetMessage_X* OutResult, class UError* OutError);
 	void EventResult(class UPsyNetMessage_X* OutResult);
+};
+
+// Class ProjectX.__RPCQueue_X__CreateBatch_742F849A434A0A3A7A7737976156725C
+// 0x0008 (0x0060 - 0x0068)
+class U__RPCQueue_X__CreateBatch_742F849A434A0A3A7A7737976156725C : public UObject
+{
+public:
+	class URPCBatch_X*                                 Batch;                                            		// 0x0060 (0x0008) [0x0000000000000000]               
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class ProjectX.__RPCQueue_X__CreateBatch_742F849A434A0A3A7A7737976156725C");
+		}
+
+		return uClassPointer;
+	};
+
+	void __RPCQueue_X__CreateBatch_742F849A434A0A3A7A7737976156725C(class UPsyNetMessage_X* Response, class UError* Error);
 };
 
 // Class ProjectX.RPC_ReportCheater_X
@@ -14133,9 +14375,9 @@ public:
 
 };
 
-// Class ProjectX.__RPC_X__CreateTask_DAFA7BF54909C332F115EDBD60C44F82
+// Class ProjectX.__RPC_X__CreateTask_824C210E47B9AE4E739611B9D602A3AB
 // 0x0018 (0x0060 - 0x0078)
-class U__RPC_X__CreateTask_DAFA7BF54909C332F115EDBD60C44F82 : public UObject
+class U__RPC_X__CreateTask_824C210E47B9AE4E739611B9D602A3AB : public UObject
 {
 public:
 	struct FScriptDelegate                             InCallback;                                       		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -14146,13 +14388,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__RPC_X__CreateTask_DAFA7BF54909C332F115EDBD60C44F82");
+			uClassPointer = UObject::FindClass("Class ProjectX.__RPC_X__CreateTask_824C210E47B9AE4E739611B9D602A3AB");
 		}
 
 		return uClassPointer;
 	};
 
-	void __RPC_X__CreateTask_DAFA7BF54909C332F115EDBD60C44F82(class UError* Err);
+	void __RPC_X__CreateTask_824C210E47B9AE4E739611B9D602A3AB(class UError* Err);
 };
 
 // Class ProjectX.RPC_Test_X
@@ -14271,9 +14513,9 @@ public:
 	void Init();
 };
 
-// Class ProjectX.__MatchRecorder_X__GetPlayerData_AAC654674F40C934B161689D8149E5ED
+// Class ProjectX.__MatchRecorder_X__GetPlayerData_F2940D9D4FAB8F5DE62E7A82634E5496
 // 0x0048 (0x0060 - 0x00A8)
-class U__MatchRecorder_X__GetPlayerData_AAC654674F40C934B161689D8149E5ED : public UObject
+class U__MatchRecorder_X__GetPlayerData_F2940D9D4FAB8F5DE62E7A82634E5496 : public UObject
 {
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -14284,13 +14526,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__MatchRecorder_X__GetPlayerData_AAC654674F40C934B161689D8149E5ED");
+			uClassPointer = UObject::FindClass("Class ProjectX.__MatchRecorder_X__GetPlayerData_F2940D9D4FAB8F5DE62E7A82634E5496");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __MatchRecorder_X__GetPlayerData_AAC654674F40C934B161689D8149E5ED(class UMatchPlayerData_X* P);
+	bool __MatchRecorder_X__GetPlayerData_F2940D9D4FAB8F5DE62E7A82634E5496(class UMatchPlayerData_X* P);
 };
 
 // Class ProjectX.LoginResponse_X
@@ -14375,9 +14617,9 @@ public:
 
 };
 
-// Class ProjectX.__WebCache_X__DownloadData_416DF744461F6C151E97D895CF775593
+// Class ProjectX.__WebCache_X__DownloadData_F2DEDCC44F63097CE6D84D9C990CF674
 // 0x0008 (0x0060 - 0x0068)
-class U__WebCache_X__DownloadData_416DF744461F6C151E97D895CF775593 : public UObject
+class U__WebCache_X__DownloadData_F2DEDCC44F63097CE6D84D9C990CF674 : public UObject
 {
 public:
 	class UWebRequest_X*                               WebRequest;                                       		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -14388,13 +14630,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__WebCache_X__DownloadData_416DF744461F6C151E97D895CF775593");
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebCache_X__DownloadData_F2DEDCC44F63097CE6D84D9C990CF674");
 		}
 
 		return uClassPointer;
 	};
 
-	void __WebCache_X__DownloadData_416DF744461F6C151E97D895CF775593(struct FString Key, struct FString Value);
+	void __WebCache_X__DownloadData_F2DEDCC44F63097CE6D84D9C990CF674(struct FString Key, struct FString Value);
 };
 
 // Class ProjectX.LocalCacheTests_X
@@ -14561,9 +14803,9 @@ public:
 
 };
 
-// Class ProjectX.__CrossplayConfig_X__GetDisabledCrossplayGroup_250388F4412DA4655AE50CA535579B11
+// Class ProjectX.__CrossplayConfig_X__GetDisabledCrossplayGroup_5C683D644E13ABE7FF3B4783633D8EE6
 // 0x0001 (0x0060 - 0x0061)
-class U__CrossplayConfig_X__GetDisabledCrossplayGroup_250388F4412DA4655AE50CA535579B11 : public UObject
+class U__CrossplayConfig_X__GetDisabledCrossplayGroup_5C683D644E13ABE7FF3B4783633D8EE6 : public UObject
 {
 public:
 	unsigned char                                      PlayerPlatform;                                   		// 0x0060 (0x0001) [0x0000000000000000]               
@@ -14574,13 +14816,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__CrossplayConfig_X__GetDisabledCrossplayGroup_250388F4412DA4655AE50CA535579B11");
+			uClassPointer = UObject::FindClass("Class ProjectX.__CrossplayConfig_X__GetDisabledCrossplayGroup_5C683D644E13ABE7FF3B4783633D8EE6");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __CrossplayConfig_X__GetDisabledCrossplayGroup_250388F4412DA4655AE50CA535579B11(struct FCrossplayGroup P);
+	bool __CrossplayConfig_X__GetDisabledCrossplayGroup_5C683D644E13ABE7FF3B4783633D8EE6(struct FCrossplayGroup P);
 };
 
 // Class ProjectX.OnlineResource_X
@@ -14998,7 +15240,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __AdHocBrowser_X__GetServerList_D611C8DC4460C1D5E30FFE842E5529A4();
+	void __AdHocBrowser_X__GetServerList_10DD4B404451E522B1E26FA35C8B9AB2();
 	void HandleSearchTimeout();
 	void AdHocHandleOnNetworkChanged(TArray<struct FAdHocAccessPointInfo> Ahapis);
 	int FindIndexFromServerID(struct FString InServerID);
@@ -15031,9 +15273,9 @@ public:
 
 };
 
-// Class ProjectX.__AdHocBrowser_X__CreateServer_28852C4049CA922DE8A338AF24B71C6B
+// Class ProjectX.__AdHocBrowser_X__CreateServer_2C47D6AB4D558D6425DA6191CE30CF73
 // 0x0030 (0x0060 - 0x0090)
-class U__AdHocBrowser_X__CreateServer_28852C4049CA922DE8A338AF24B71C6B : public UObject
+class U__AdHocBrowser_X__CreateServer_2C47D6AB4D558D6425DA6191CE30CF73 : public UObject
 {
 public:
 	struct FString                                     MetaData;                                         		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -15046,19 +15288,19 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__CreateServer_28852C4049CA922DE8A338AF24B71C6B");
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__CreateServer_2C47D6AB4D558D6425DA6191CE30CF73");
 		}
 
 		return uClassPointer;
 	};
 
-	void __AdHocBrowser_X__CreateServer_9C8096CD4BC574CF806B96BB449CC484();
-	void __AdHocBrowser_X__CreateServer_28852C4049CA922DE8A338AF24B71C6B();
+	void __AdHocBrowser_X__CreateServer_EBA31AEA4B25C03F7DD9788B6C8317FC();
+	void __AdHocBrowser_X__CreateServer_2C47D6AB4D558D6425DA6191CE30CF73();
 };
 
-// Class ProjectX.__AdHocBrowser_X__CreateErrorDelegate_A2A668AC406893D8FACA04AD17DF8C4C
+// Class ProjectX.__AdHocBrowser_X__CreateErrorDelegate_CFC4DEE94D89EAB30428A5827BC8FED5
 // 0x0020 (0x0060 - 0x0080)
-class U__AdHocBrowser_X__CreateErrorDelegate_A2A668AC406893D8FACA04AD17DF8C4C : public UObject
+class U__AdHocBrowser_X__CreateErrorDelegate_CFC4DEE94D89EAB30428A5827BC8FED5 : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -15070,19 +15312,19 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__CreateErrorDelegate_A2A668AC406893D8FACA04AD17DF8C4C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__CreateErrorDelegate_CFC4DEE94D89EAB30428A5827BC8FED5");
 		}
 
 		return uClassPointer;
 	};
 
-	void __AdHocBrowser_X__CreateErrorDelegate_05D2536F4F2FB5154CCCE49522E1831F();
-	void __AdHocBrowser_X__CreateErrorDelegate_A2A668AC406893D8FACA04AD17DF8C4C(class UError* Error);
+	void __AdHocBrowser_X__CreateErrorDelegate_DFF999864A197C07E171F49019A8E126();
+	void __AdHocBrowser_X__CreateErrorDelegate_CFC4DEE94D89EAB30428A5827BC8FED5(class UError* Error);
 };
 
-// Class ProjectX.__AdHocBrowser_X__JoinServer_1730AE65416B73F8A0CEFE8B6EB562DA
+// Class ProjectX.__AdHocBrowser_X__JoinServer_73FD583148BBE5057DE3D0BE3EEA8950
 // 0x0028 (0x0060 - 0x0088)
-class U__AdHocBrowser_X__JoinServer_1730AE65416B73F8A0CEFE8B6EB562DA : public UObject
+class U__AdHocBrowser_X__JoinServer_73FD583148BBE5057DE3D0BE3EEA8950 : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -15095,13 +15337,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__JoinServer_1730AE65416B73F8A0CEFE8B6EB562DA");
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocBrowser_X__JoinServer_73FD583148BBE5057DE3D0BE3EEA8950");
 		}
 
 		return uClassPointer;
 	};
 
-	void __AdHocBrowser_X__JoinServer_1730AE65416B73F8A0CEFE8B6EB562DA();
+	void __AdHocBrowser_X__JoinServer_73FD583148BBE5057DE3D0BE3EEA8950();
 };
 
 // Class ProjectX.AdHocInterface_X
@@ -15132,9 +15374,9 @@ public:
 	class UAsyncTask* EnableAdHoc();
 };
 
-// Class ProjectX.__AdHocInterface_X__EnableAdHoc_9837C0FB459F7F5BA4E66695128018DE
+// Class ProjectX.__AdHocInterface_X__EnableAdHoc_281846CE4FA658FA0FEB16920BDF18F6
 // 0x0020 (0x0060 - 0x0080)
-class U__AdHocInterface_X__EnableAdHoc_9837C0FB459F7F5BA4E66695128018DE : public UObject
+class U__AdHocInterface_X__EnableAdHoc_281846CE4FA658FA0FEB16920BDF18F6 : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -15146,19 +15388,19 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocInterface_X__EnableAdHoc_9837C0FB459F7F5BA4E66695128018DE");
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocInterface_X__EnableAdHoc_281846CE4FA658FA0FEB16920BDF18F6");
 		}
 
 		return uClassPointer;
 	};
 
-	void __AdHocInterface_X__EnableAdHoc_98780673475ED373412D3E8BEACC5BDF();
-	void __AdHocInterface_X__EnableAdHoc_9837C0FB459F7F5BA4E66695128018DE();
+	void __AdHocInterface_X__EnableAdHoc_0B7F91834BB27B7C7353848F63CE7248();
+	void __AdHocInterface_X__EnableAdHoc_281846CE4FA658FA0FEB16920BDF18F6();
 };
 
-// Class ProjectX.__AdHocInterface_X__DisableAdHoc_1DD1605349BD3FC27083B790CC59469B
+// Class ProjectX.__AdHocInterface_X__DisableAdHoc_8617E42541F6804C6CAA0AA562AA98F9
 // 0x0020 (0x0060 - 0x0080)
-class U__AdHocInterface_X__DisableAdHoc_1DD1605349BD3FC27083B790CC59469B : public UObject
+class U__AdHocInterface_X__DisableAdHoc_8617E42541F6804C6CAA0AA562AA98F9 : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -15170,14 +15412,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocInterface_X__DisableAdHoc_1DD1605349BD3FC27083B790CC59469B");
+			uClassPointer = UObject::FindClass("Class ProjectX.__AdHocInterface_X__DisableAdHoc_8617E42541F6804C6CAA0AA562AA98F9");
 		}
 
 		return uClassPointer;
 	};
 
-	void __AdHocInterface_X__DisableAdHoc_41D87FC2450EB3B8B68E0FB67B94F51F();
-	void __AdHocInterface_X__DisableAdHoc_1DD1605349BD3FC27083B790CC59469B();
+	void __AdHocInterface_X__DisableAdHoc_9E1088B74B94C22B6F5319837CA6A773();
+	void __AdHocInterface_X__DisableAdHoc_8617E42541F6804C6CAA0AA562AA98F9();
 };
 
 // Class ProjectX.BlogTile_X
@@ -15195,8 +15437,8 @@ public:
 	unsigned long long                                 StartTimeEpoch;                                   		// 0x00D0 (0x0008) [0x0000000000000000]               
 	unsigned char                                      LinkType;                                         		// 0x00D8 (0x0001) [0x0000000040000000] (CPF_EditInlineNotify)
 	int                                                ShopID;                                           		// 0x00DC (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
-	int                                                ProductID;                                        		// 0x00E0 (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
-	int                                                ShopItemID;                                       		// 0x00E4 (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
+	int                                                ShopItemID;                                       		// 0x00E0 (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
+	int                                                ProductID;                                        		// 0x00E4 (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
 	int                                                CategoryID;                                       		// 0x00E8 (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
 	int                                                PlaylistId;                                       		// 0x00EC (0x0004) [0x0000000040000000] (CPF_EditInlineNotify)
 	struct FString                                     InfoURL;                                          		// 0x00F0 (0x0010) [0x0000000040400000] (CPF_NeedCtorLink | CPF_EditInlineNotify)
@@ -15265,7 +15507,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __PartyMessageQueue_X__CancelAll_01C9CE794699DE533ADD9E9A2AA00228(class UAsyncTask* Task);
+	void __PartyMessageQueue_X__CancelAll_B16C322F4227C9EC40B116B562B986AE(class UAsyncTask* Task);
 	void HandleTaskComplete(class UAsyncTask* Task);
 	class UAsyncTask* SendMessage(struct FUniqueLobbyId LobbyId, struct FString Message);
 	void SendBatch();
@@ -15322,9 +15564,9 @@ public:
 	class URPC_PartyMessage_X* SetMessage(struct FString InMessage);
 };
 
-// Class ProjectX.__PartyMessageQueue_X__SendMessage_3C4DCC8C49295DC7ADB4F295252E9916
+// Class ProjectX.__PartyMessageQueue_X__SendMessage_93AB81514AB6ECB3DDA81BBA8AA56F5D
 // 0x0008 (0x0060 - 0x0068)
-class U__PartyMessageQueue_X__SendMessage_3C4DCC8C49295DC7ADB4F295252E9916 : public UObject
+class U__PartyMessageQueue_X__SendMessage_93AB81514AB6ECB3DDA81BBA8AA56F5D : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -15335,13 +15577,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PartyMessageQueue_X__SendMessage_3C4DCC8C49295DC7ADB4F295252E9916");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartyMessageQueue_X__SendMessage_93AB81514AB6ECB3DDA81BBA8AA56F5D");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PartyMessageQueue_X__SendMessage_3C4DCC8C49295DC7ADB4F295252E9916(class UError* _);
+	void __PartyMessageQueue_X__SendMessage_93AB81514AB6ECB3DDA81BBA8AA56F5D(class UError* _);
 };
 
 // Class ProjectX.PsyNetChannel_X
@@ -15408,7 +15650,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __PartySequence_CreateParty_X__CreateParty_15AE44554E718755455E15B518436AB0(class URPC_X* _);
+	void __PartySequence_CreateParty_X__CreateParty_4077A4A5418DFA3EEF9E08B2DCB84F57(class URPC_X* _);
 	void HandleCreatePartyComplete();
 	void HandlePlatformPartyCreated(unsigned long bWasSuccessful, struct FString Error, struct FUniqueLobbyId& PlatformPartyID);
 	class UAsyncTask* CreateParty(int LocalPlayerNum, int MaxPlayers, unsigned char Type, TArray<struct FLobbyMetaData> InitialSettings);
@@ -15530,8 +15772,8 @@ public:
 		return uClassPointer;
 	};
 
-	void __PartySequence_InviteToParty_X__InviteToPsyNetParty_7437BA0848872DDE90EFE1ADF1A91016(class URPC_PartySendInvite_X* RPC);
-	void __PartySequence_InviteToParty_X__InviteToPsyNetParty_AA382A784B36111E8C93B9999CE184CE(class URPC_PartySendInvite_X* RPC);
+	void __PartySequence_InviteToParty_X__InviteToPsyNetParty_3D8D6D494B5D7BFF528A2AA53BA3FAEA(class URPC_PartySendInvite_X* RPC);
+	void __PartySequence_InviteToParty_X__InviteToPsyNetParty_C6F3D74A4141A9AC6BCA5FAB6454E99E(class URPC_PartySendInvite_X* RPC);
 	bool InviteToPsyNetParty(struct FUniqueLobbyId& LobbyId, struct FUniqueNetId& PlayerID);
 	bool InviteToParty(struct FUniqueLobbyId& LobbyId, struct FUniqueNetId& PlayerID);
 };
@@ -15878,9 +16120,9 @@ public:
 
 };
 
-// Class ProjectX.__PsyNetConnection_X__ProcessServiceCall_A2C0DD35442BDDDB1BFDC2AFA14C8B31
+// Class ProjectX.__PsyNetConnection_X__ProcessServiceCall_D18FFA01431DAA414C130EAE8C81F82E
 // 0x0008 (0x0060 - 0x0068)
-class U__PsyNetConnection_X__ProcessServiceCall_A2C0DD35442BDDDB1BFDC2AFA14C8B31 : public UObject
+class U__PsyNetConnection_X__ProcessServiceCall_D18FFA01431DAA414C130EAE8C81F82E : public UObject
 {
 public:
 	class UPsyNetMessage_X*                            Response;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -15891,18 +16133,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetConnection_X__ProcessServiceCall_A2C0DD35442BDDDB1BFDC2AFA14C8B31");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetConnection_X__ProcessServiceCall_D18FFA01431DAA414C130EAE8C81F82E");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PsyNetConnection_X__ProcessServiceCall_A2C0DD35442BDDDB1BFDC2AFA14C8B31(class UError* _);
+	void __PsyNetConnection_X__ProcessServiceCall_D18FFA01431DAA414C130EAE8C81F82E(class UError* _);
 };
 
-// Class ProjectX.__PsyNetMessengerHttp_X__SendMessage_B4A9D63B40BD7132099ADA92C7EBB108
+// Class ProjectX.__PsyNetMessengerHttp_X__SendMessage_30470D9846BCBC174FB48196ADBD7AFF
 // 0x0018 (0x0060 - 0x0078)
-class U__PsyNetMessengerHttp_X__SendMessage_B4A9D63B40BD7132099ADA92C7EBB108 : public UObject
+class U__PsyNetMessengerHttp_X__SendMessage_30470D9846BCBC174FB48196ADBD7AFF : public UObject
 {
 public:
 	struct FString                                     PsyRequestID;                                     		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -15914,18 +16156,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetMessengerHttp_X__SendMessage_B4A9D63B40BD7132099ADA92C7EBB108");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetMessengerHttp_X__SendMessage_30470D9846BCBC174FB48196ADBD7AFF");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PsyNetMessengerHttp_X__SendMessage_B4A9D63B40BD7132099ADA92C7EBB108(class UWebRequest_X* Request);
+	void __PsyNetMessengerHttp_X__SendMessage_30470D9846BCBC174FB48196ADBD7AFF(class UWebRequest_X* Request);
 };
 
-// Class ProjectX.__PsyNetRequestQue_X__SendRequest_60428EAB40CE18F9D488DE9B5FD78F74
+// Class ProjectX.__PsyNetRequestQue_X__SendRequest_45EADF3C4635C59BB4E91B9FA5DD57E5
 // 0x0008 (0x0060 - 0x0068)
-class U__PsyNetRequestQue_X__SendRequest_60428EAB40CE18F9D488DE9B5FD78F74 : public UObject
+class U__PsyNetRequestQue_X__SendRequest_45EADF3C4635C59BB4E91B9FA5DD57E5 : public UObject
 {
 public:
 	struct FName                                       RequestID;                                        		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -15936,13 +16178,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetRequestQue_X__SendRequest_60428EAB40CE18F9D488DE9B5FD78F74");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetRequestQue_X__SendRequest_45EADF3C4635C59BB4E91B9FA5DD57E5");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PsyNetRequestQue_X__SendRequest_60428EAB40CE18F9D488DE9B5FD78F74();
+	void __PsyNetRequestQue_X__SendRequest_45EADF3C4635C59BB4E91B9FA5DD57E5();
 };
 
 // Class ProjectX.PsyNetService_AAS_X
@@ -16096,9 +16338,9 @@ public:
 
 };
 
-// Class ProjectX.__PsyNetServiceProvider_X__CreateChannel_8A2C374C4AD809D2FC634C99EAD463FD
+// Class ProjectX.__PsyNetServiceProvider_X__CreateChannel_9FCD054D40A1197AB2854EAD7B3F4EF4
 // 0x0010 (0x0060 - 0x0070)
-class U__PsyNetServiceProvider_X__CreateChannel_8A2C374C4AD809D2FC634C99EAD463FD : public UObject
+class U__PsyNetServiceProvider_X__CreateChannel_9FCD054D40A1197AB2854EAD7B3F4EF4 : public UObject
 {
 public:
 	struct FString                                     ChannelName;                                      		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -16109,13 +16351,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__CreateChannel_8A2C374C4AD809D2FC634C99EAD463FD");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__CreateChannel_9FCD054D40A1197AB2854EAD7B3F4EF4");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __PsyNetServiceProvider_X__CreateChannel_8A2C374C4AD809D2FC634C99EAD463FD(class UPsyNetChannel_X* C);
+	bool __PsyNetServiceProvider_X__CreateChannel_9FCD054D40A1197AB2854EAD7B3F4EF4(class UPsyNetChannel_X* C);
 };
 
 // Class ProjectX.TAsyncResult__PsyNetClientService_X
@@ -16153,9 +16395,9 @@ public:
 	void EventResult(class UPsyNetClientService_X* OutResult);
 };
 
-// Class ProjectX.__PsyNetServiceProvider_X__ExecuteRequest_2D98ADDB46EB4383381EC881715C9798
+// Class ProjectX.__PsyNetServiceProvider_X__ExecuteRequest_6C569B2749D026E7615470B45CE555D1
 // 0x0008 (0x0060 - 0x0068)
-class U__PsyNetServiceProvider_X__ExecuteRequest_2D98ADDB46EB4383381EC881715C9798 : public UObject
+class U__PsyNetServiceProvider_X__ExecuteRequest_6C569B2749D026E7615470B45CE555D1 : public UObject
 {
 public:
 	class UPsyNetMessage_X*                            Response;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -16166,18 +16408,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__ExecuteRequest_2D98ADDB46EB4383381EC881715C9798");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__ExecuteRequest_6C569B2749D026E7615470B45CE555D1");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PsyNetServiceProvider_X__ExecuteRequest_2D98ADDB46EB4383381EC881715C9798(class UPsyNetClientService_X* Result, class UError* Error);
+	void __PsyNetServiceProvider_X__ExecuteRequest_6C569B2749D026E7615470B45CE555D1(class UPsyNetClientService_X* Result, class UError* Error);
 };
 
-// Class ProjectX.__PsyNetServiceProvider_X__ExecuteServiceMessage_90BC11E9480A8C2C6139A2A5CFEA7E36
+// Class ProjectX.__PsyNetServiceProvider_X__ExecuteServiceMessage_C5D9492041FBED14498FD4AE59221B2F
 // 0x0020 (0x0060 - 0x0080)
-class U__PsyNetServiceProvider_X__ExecuteServiceMessage_90BC11E9480A8C2C6139A2A5CFEA7E36 : public UObject
+class U__PsyNetServiceProvider_X__ExecuteServiceMessage_C5D9492041FBED14498FD4AE59221B2F : public UObject
 {
 public:
 	struct FString                                     ServiceName;                                      		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -16190,14 +16432,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__ExecuteServiceMessage_90BC11E9480A8C2C6139A2A5CFEA7E36");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PsyNetServiceProvider_X__ExecuteServiceMessage_C5D9492041FBED14498FD4AE59221B2F");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PsyNetServiceProvider_X__ExecuteServiceMessage_011F0D62456F405CAF28619B64E96276(class UError* Err);
-	void __PsyNetServiceProvider_X__ExecuteServiceMessage_90BC11E9480A8C2C6139A2A5CFEA7E36(class UPsyNetClientService_X* R, class UError* E);
+	void __PsyNetServiceProvider_X__ExecuteServiceMessage_8D4D48484F8EBDCF47EE62A57559CFFF(class UError* Err);
+	void __PsyNetServiceProvider_X__ExecuteServiceMessage_C5D9492041FBED14498FD4AE59221B2F(class UPsyNetClientService_X* R, class UError* E);
 };
 
 // Class ProjectX.RPC_PartyChatMessage_X
@@ -16316,9 +16558,9 @@ public:
 	void SetOpen(unsigned long bIsOpen);
 };
 
-// Class ProjectX.__TaskGate_X__Add_12E1040C4D45A762018410ADA6C483DC
+// Class ProjectX.__TaskGate_X__Add_959F117B4C0A66D9D7FD2BB0C431D64D
 // 0x0008 (0x0060 - 0x0068)
-class U__TaskGate_X__Add_12E1040C4D45A762018410ADA6C483DC : public UObject
+class U__TaskGate_X__Add_959F117B4C0A66D9D7FD2BB0C431D64D : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -16329,18 +16571,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TaskGate_X__Add_12E1040C4D45A762018410ADA6C483DC");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TaskGate_X__Add_959F117B4C0A66D9D7FD2BB0C431D64D");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TaskGate_X__Add_12E1040C4D45A762018410ADA6C483DC();
+	void __TaskGate_X__Add_959F117B4C0A66D9D7FD2BB0C431D64D();
 };
 
-// Class ProjectX.__TaskGate_X__AddWithTimeout_2EDFCCF546B875AC296889A2E6E4E8F8
+// Class ProjectX.__TaskGate_X__AddWithTimeout_E16008F94488EF3F96D8158868156866
 // 0x0038 (0x0060 - 0x0098)
-class U__TaskGate_X__AddWithTimeout_2EDFCCF546B875AC296889A2E6E4E8F8 : public UObject
+class U__TaskGate_X__AddWithTimeout_E16008F94488EF3F96D8158868156866 : public UObject
 {
 public:
 	class UAsyncTask*                                  Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -16354,14 +16596,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TaskGate_X__AddWithTimeout_2EDFCCF546B875AC296889A2E6E4E8F8");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TaskGate_X__AddWithTimeout_E16008F94488EF3F96D8158868156866");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TaskGate_X__AddWithTimeout_50DB5D0742906315547541A40CC31164();
-	void __TaskGate_X__AddWithTimeout_2EDFCCF546B875AC296889A2E6E4E8F8();
+	void __TaskGate_X__AddWithTimeout_720F7E554EE6933A59F1D79EF8817FB5();
+	void __TaskGate_X__AddWithTimeout_E16008F94488EF3F96D8158868156866();
 };
 
 // Class ProjectX.UdpLanServer_X
@@ -16437,13 +16679,13 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerStorageQueue_X__Construct_ED172FC94632D1B52D33378CE5C623CC(struct FString _);
-	void __OnlinePlayerStorageQueue_X__SendBatch_Internal_E3BB8C024E7045AB47E1F7999632C711(class URPC_X* RPC);
-	bool __OnlinePlayerStorageQueue_X__HandleStorageSuccess_19575B9E46035CB4E95A4E9FDE1EA71D(struct FPendingStorage P);
-	void __OnlinePlayerStorageQueue_X__HandleStorageSuccess_C809F85B46E20EF7DE5F72899413B9C3(struct FSetPlayerStorageRequestItem R);
-	bool __OnlinePlayerStorageQueue_X__HandleStorageSuccess_987845AC44825F44534D50B0FC18D307(struct FSetPlayerStorageResultItem Item);
-	void __OnlinePlayerStorageQueue_X__HandleStorageError_DBF4ED41412699CB3F0A2DB7FF55043B(struct FPendingStorage P);
-	bool __OnlinePlayerStorageQueue_X__HandleStorageError_3F32630D458918D435ED4FACA2742369(struct FPendingStorage P);
+	void __OnlinePlayerStorageQueue_X__Construct_A88BF87D42AC4F484FA0C8910D7B4A12(struct FString _);
+	void __OnlinePlayerStorageQueue_X__SendBatch_Internal_544717F0447F7E2DA06BBEBD2CB808A1(class URPC_X* RPC);
+	bool __OnlinePlayerStorageQueue_X__HandleStorageSuccess_29F7497A47103051A965928DFC16A994(struct FPendingStorage P);
+	void __OnlinePlayerStorageQueue_X__HandleStorageSuccess_A67501C44C05DAC3F07A96A990F6DBE1(struct FSetPlayerStorageRequestItem R);
+	bool __OnlinePlayerStorageQueue_X__HandleStorageSuccess_8BEF7E8748E5BB6F420A8980738AF0DD(struct FSetPlayerStorageResultItem Item);
+	void __OnlinePlayerStorageQueue_X__HandleStorageError_21291CC44FC3140E8A2D79B576D8E1DF(struct FPendingStorage P);
+	bool __OnlinePlayerStorageQueue_X__HandleStorageError_8E6A1FD24B906261CC6B93B6C3F10321(struct FPendingStorage P);
 	int GetStorageMaxSizeBytes(struct FName Category);
 	void HandleStorageError(class UError* Error);
 	struct FPendingStorage MapResultItem(struct FSetPlayerStorageResultItem Item);
@@ -16667,7 +16909,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerStorageSync_X__HandleSyncSuccess_F7CAC9D2404BA0C4942F36A15EE7B144(struct FOnlinePlayerStorageSyncResult Result);
+	void __OnlinePlayerStorageSync_X__HandleSyncSuccess_AF217939459C0BB31879088C17ADE6F4(struct FOnlinePlayerStorageSyncResult Result);
 	class UObject* InstanceSyncData(class UObject* LocalObject, class UDecodeObject_X* DecodeObj);
 	void HandleSyncSuccess(class URPC_PlayerStorageGet_X* RPC, class UAsyncTask* ResponseTask);
 	int CrcObject(unsigned char Encoding, class UObject* Data);
@@ -16791,9 +17033,9 @@ public:
 	class UEncodeObject_X* EncodeObject(unsigned char Encoding, class UObject* Target);
 };
 
-// Class ProjectX.__OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982
+// Class ProjectX.__OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161
 // 0x0018 (0x0060 - 0x0078)
-class U__OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982 : public UObject
+class U__OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161 : public UObject
 {
 public:
 	TArray<struct FSetPlayerStorageResultItem>         OutOfSync;                                        		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -16805,19 +17047,19 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerStorageQueue_X__HandleStorageSuccess_C3D433EC4649428BEBA56193F14CB51C(struct FSetPlayerStorageResultItem R);
-	bool __OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982(struct FSetPlayerStorageRequestItem R);
+	void __OnlinePlayerStorageQueue_X__HandleStorageSuccess_1A8FD8374EFC1B38AAF7D18F6F525C30(struct FSetPlayerStorageResultItem R);
+	bool __OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161(struct FSetPlayerStorageRequestItem R);
 };
 
-// Class ProjectX.__OnlinePlayerStorageQueue_X__MapResultItem_C27969EB4B24CFA752F5C68BE37D5C53
+// Class ProjectX.__OnlinePlayerStorageQueue_X__MapResultItem_19495AEE46D256E05DA7DC908C605D56
 // 0x0010 (0x0060 - 0x0070)
-class U__OnlinePlayerStorageQueue_X__MapResultItem_C27969EB4B24CFA752F5C68BE37D5C53 : public UObject
+class U__OnlinePlayerStorageQueue_X__MapResultItem_19495AEE46D256E05DA7DC908C605D56 : public UObject
 {
 public:
 	struct FSetPlayerStorageResultItem                 Item;                                             		// 0x0060 (0x0010) [0x0000000000000000]               
@@ -16828,18 +17070,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__MapResultItem_C27969EB4B24CFA752F5C68BE37D5C53");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__MapResultItem_19495AEE46D256E05DA7DC908C605D56");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlinePlayerStorageQueue_X__MapResultItem_C27969EB4B24CFA752F5C68BE37D5C53(struct FPendingStorage P);
+	bool __OnlinePlayerStorageQueue_X__MapResultItem_19495AEE46D256E05DA7DC908C605D56(struct FPendingStorage P);
 };
 
-// Class ProjectX.__OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_1C15672C4BBC2BDC9D89D9A31C8379C4
+// Class ProjectX.__OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_2A9D82854901B97E5AC959819540CC17
 // 0x0008 (0x0060 - 0x0068)
-class U__OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_1C15672C4BBC2BDC9D89D9A31C8379C4 : public UObject
+class U__OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_2A9D82854901B97E5AC959819540CC17 : public UObject
 {
 public:
 	struct FName                                       Category;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -16850,18 +17092,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_1C15672C4BBC2BDC9D89D9A31C8379C4");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_2A9D82854901B97E5AC959819540CC17");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_1C15672C4BBC2BDC9D89D9A31C8379C4(struct FStorageMaxSize C);
+	bool __OnlinePlayerStorageQueue_X__GetStorageMaxSizeBytes_2A9D82854901B97E5AC959819540CC17(struct FStorageMaxSize C);
 };
 
-// Class ProjectX.__OnlinePlayerStorageSync_X__SyncObjects_25F8F52D4E4E36A47C01FF8D3F71E147
+// Class ProjectX.__OnlinePlayerStorageSync_X__SyncObjects_C9424ABE411B3A236ED7628630F51C1E
 // 0x0008 (0x0060 - 0x0068)
-class U__OnlinePlayerStorageSync_X__SyncObjects_25F8F52D4E4E36A47C01FF8D3F71E147 : public UObject
+class U__OnlinePlayerStorageSync_X__SyncObjects_C9424ABE411B3A236ED7628630F51C1E : public UObject
 {
 public:
 	class UAsyncTask*                                  ResponseTask;                                     		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -16872,13 +17114,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageSync_X__SyncObjects_25F8F52D4E4E36A47C01FF8D3F71E147");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlinePlayerStorageSync_X__SyncObjects_C9424ABE411B3A236ED7628630F51C1E");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlinePlayerStorageSync_X__SyncObjects_25F8F52D4E4E36A47C01FF8D3F71E147(class URPC_X* RPC);
+	void __OnlinePlayerStorageSync_X__SyncObjects_C9424ABE411B3A236ED7628630F51C1E(class URPC_X* RPC);
 };
 
 // Class ProjectX.RPC_PlayerStorageGet_X
@@ -16902,8 +17144,8 @@ public:
 		return uClassPointer;
 	};
 
-	void __RPC_PlayerStorageGet_X__OnSuccess_338FB90346F2F3E34FC83D9D00AA32F3(class UGetPlayerStorageResultItem_X* Item);
-	bool __RPC_PlayerStorageGet_X__OnSuccess_391BB6444F4A3AC68AD964B5B0241BB4(class UGetPlayerStorageResultItem_X* Item);
+	void __RPC_PlayerStorageGet_X__OnSuccess_72EA1409412177E254BC4CAD03072DB1(class UGetPlayerStorageResultItem_X* Item);
+	bool __RPC_PlayerStorageGet_X__OnSuccess_17CF29E84F898B185B1E1CBA8CF0385F(class UGetPlayerStorageResultItem_X* Item);
 	void eventOnSuccess();
 	class UObject* eventGetResponseObject();
 };
@@ -17158,9 +17400,9 @@ public:
 	bool IsClubMatch(int TeamSize, TArray<unsigned long long>& Team0Clubs, TArray<unsigned long long>& Team1Clubs);
 };
 
-// Class ProjectX.__ClubUtil_X__IsClubTeam_DA040E814997FC285BA0D5B0AEFF720C
+// Class ProjectX.__ClubUtil_X__IsClubTeam_D72003374F100CC2F32724B9B0D69157
 // 0x0010 (0x0060 - 0x0070)
-class U__ClubUtil_X__IsClubTeam_DA040E814997FC285BA0D5B0AEFF720C : public UObject
+class U__ClubUtil_X__IsClubTeam_D72003374F100CC2F32724B9B0D69157 : public UObject
 {
 public:
 	TArray<unsigned long long>                         TeamClubs;                                        		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -17171,13 +17413,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__ClubUtil_X__IsClubTeam_DA040E814997FC285BA0D5B0AEFF720C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__ClubUtil_X__IsClubTeam_D72003374F100CC2F32724B9B0D69157");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __ClubUtil_X__IsClubTeam_DA040E814997FC285BA0D5B0AEFF720C(unsigned long long Id);
+	bool __ClubUtil_X__IsClubTeam_D72003374F100CC2F32724B9B0D69157(unsigned long long Id);
 };
 
 // Class ProjectX.LocalClubData_X
@@ -17207,9 +17449,9 @@ public:
 	void Load();
 };
 
-// Class ProjectX.__LocalClubData_X__GetClubByID_C7C2F4A0495A98D21389729FAF40BDEA
+// Class ProjectX.__LocalClubData_X__GetClubByID_8778E9584CE1332D157F1685DDBBDD7E
 // 0x0008 (0x0060 - 0x0068)
-class U__LocalClubData_X__GetClubByID_C7C2F4A0495A98D21389729FAF40BDEA : public UObject
+class U__LocalClubData_X__GetClubByID_8778E9584CE1332D157F1685DDBBDD7E : public UObject
 {
 public:
 	unsigned long long                                 Id;                                               		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -17220,18 +17462,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__LocalClubData_X__GetClubByID_C7C2F4A0495A98D21389729FAF40BDEA");
+			uClassPointer = UObject::FindClass("Class ProjectX.__LocalClubData_X__GetClubByID_8778E9584CE1332D157F1685DDBBDD7E");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __LocalClubData_X__GetClubByID_C7C2F4A0495A98D21389729FAF40BDEA(class UClubDetails_X* C);
+	bool __LocalClubData_X__GetClubByID_8778E9584CE1332D157F1685DDBBDD7E(class UClubDetails_X* C);
 };
 
-// Class ProjectX.__LocalClubData_X__GetClubForPlayer_AC85E071401BDC91A4B70CB7DCFD75FA
+// Class ProjectX.__LocalClubData_X__GetClubForPlayer_8B4CDFC942AAC7A16A205A8CCE995184
 // 0x0048 (0x0060 - 0x00A8)
-class U__LocalClubData_X__GetClubForPlayer_AC85E071401BDC91A4B70CB7DCFD75FA : public UObject
+class U__LocalClubData_X__GetClubForPlayer_8B4CDFC942AAC7A16A205A8CCE995184 : public UObject
 {
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -17242,18 +17484,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__LocalClubData_X__GetClubForPlayer_AC85E071401BDC91A4B70CB7DCFD75FA");
+			uClassPointer = UObject::FindClass("Class ProjectX.__LocalClubData_X__GetClubForPlayer_8B4CDFC942AAC7A16A205A8CCE995184");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __LocalClubData_X__GetClubForPlayer_AC85E071401BDC91A4B70CB7DCFD75FA(class UClubDetails_X* C);
+	bool __LocalClubData_X__GetClubForPlayer_8B4CDFC942AAC7A16A205A8CCE995184(class UClubDetails_X* C);
 };
 
-// Class ProjectX.__OnlineClubCache_X__GetClubDetails_481A79034AF59C9DEBC25AA9414310C5
+// Class ProjectX.__OnlineClubCache_X__GetClubDetails_5D71A0594E65AE46BD34849A7EECCD47
 // 0x0008 (0x0060 - 0x0068)
-class U__OnlineClubCache_X__GetClubDetails_481A79034AF59C9DEBC25AA9414310C5 : public UObject
+class U__OnlineClubCache_X__GetClubDetails_5D71A0594E65AE46BD34849A7EECCD47 : public UObject
 {
 public:
 	unsigned long long                                 ClubID;                                           		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -17264,18 +17506,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubCache_X__GetClubDetails_481A79034AF59C9DEBC25AA9414310C5");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubCache_X__GetClubDetails_5D71A0594E65AE46BD34849A7EECCD47");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineClubCache_X__GetClubDetails_481A79034AF59C9DEBC25AA9414310C5(class UClubDetails_X* C);
+	bool __OnlineClubCache_X__GetClubDetails_5D71A0594E65AE46BD34849A7EECCD47(class UClubDetails_X* C);
 };
 
-// Class ProjectX.__OnlineClubCache_X__GetPlayerClubDetails_19530D1A4CF5E1EB765F5BB6CE6D5525
+// Class ProjectX.__OnlineClubCache_X__GetPlayerClubDetails_2E2A75CC422D85AC17B9549E8AAD225E
 // 0x0048 (0x0060 - 0x00A8)
-class U__OnlineClubCache_X__GetPlayerClubDetails_19530D1A4CF5E1EB765F5BB6CE6D5525 : public UObject
+class U__OnlineClubCache_X__GetPlayerClubDetails_2E2A75CC422D85AC17B9549E8AAD225E : public UObject
 {
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -17286,13 +17528,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubCache_X__GetPlayerClubDetails_19530D1A4CF5E1EB765F5BB6CE6D5525");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubCache_X__GetPlayerClubDetails_2E2A75CC422D85AC17B9549E8AAD225E");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __OnlineClubCache_X__GetPlayerClubDetails_19530D1A4CF5E1EB765F5BB6CE6D5525(class UClubDetails_X* C);
+	bool __OnlineClubCache_X__GetPlayerClubDetails_2E2A75CC422D85AC17B9549E8AAD225E(class UClubDetails_X* C);
 };
 
 // Class ProjectX.OnlineClubManager_X
@@ -17352,7 +17594,7 @@ public:
 		return uClassPointer;
 	};
 
-	class UClubDetails_X* __RPC_ClubDetailsBase_X__CreateClubDetailsTask_844E0DFE4BB472C04AF647B7E3C6C534();
+	class UClubDetails_X* __RPC_ClubDetailsBase_X__CreateClubDetailsTask_11E293BF49952F344B0961BEB9F1752A();
 	class UTAsyncResult__ClubDetails_X* CreateClubDetailsTask();
 };
 
@@ -17538,7 +17780,7 @@ public:
 		return uClassPointer;
 	};
 
-	TArray<class UClubInvite_X*> __RPC_GetClubInvites_X__CreateClubInvitesTask_A3CBA02B4167C63E9B4A6E88DF3FB69A();
+	TArray<class UClubInvite_X*> __RPC_GetClubInvites_X__CreateClubInvitesTask_555585574BF0B0A96F9B7DA20A73162B();
 	class UTAsyncResult__array_ClubInvite_X* CreateClubInvitesTask();
 };
 
@@ -17586,9 +17828,9 @@ public:
 	class URPC_RejectClubInvite_X* SetClubID(unsigned long long InClubID);
 };
 
-// Class ProjectX.__OnlineClubManager_X__LeaveClub_D4A4241349CEDEBE5E1103922E7B1968
+// Class ProjectX.__OnlineClubManager_X__LeaveClub_937BEAD846DD1CE64E3CDD83B36B7716
 // 0x0008 (0x0060 - 0x0068)
-class U__OnlineClubManager_X__LeaveClub_D4A4241349CEDEBE5E1103922E7B1968 : public UObject
+class U__OnlineClubManager_X__LeaveClub_937BEAD846DD1CE64E3CDD83B36B7716 : public UObject
 {
 public:
 	unsigned long long                                 ClubID;                                           		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -17599,13 +17841,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubManager_X__LeaveClub_D4A4241349CEDEBE5E1103922E7B1968");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubManager_X__LeaveClub_937BEAD846DD1CE64E3CDD83B36B7716");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineClubManager_X__LeaveClub_D4A4241349CEDEBE5E1103922E7B1968();
+	void __OnlineClubManager_X__LeaveClub_937BEAD846DD1CE64E3CDD83B36B7716();
 };
 
 // Class ProjectX.RPC_LeaveClub_X
@@ -17672,9 +17914,9 @@ public:
 	class URPC_GetPlayerClubDetails_X* SetPlayerID(struct FUniqueNetId InPlayerId);
 };
 
-// Class ProjectX.__OnlineClubProvider_X__SyncClubDetails_0324D9554246A5A93C80608CB1D86296
+// Class ProjectX.__OnlineClubProvider_X__SyncClubDetails_A46550DA49C996C8D68F59BC585F3AA5
 // 0x0010 (0x0060 - 0x0070)
-class U__OnlineClubProvider_X__SyncClubDetails_0324D9554246A5A93C80608CB1D86296 : public UObject
+class U__OnlineClubProvider_X__SyncClubDetails_A46550DA49C996C8D68F59BC585F3AA5 : public UObject
 {
 public:
 	unsigned long long                                 ClubID;                                           		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -17686,19 +17928,19 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__SyncClubDetails_0324D9554246A5A93C80608CB1D86296");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__SyncClubDetails_A46550DA49C996C8D68F59BC585F3AA5");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineClubProvider_X__SyncClubDetails_C59E790648E3CCE316D79782A221744A(class URPC_X* _);
-	bool __OnlineClubProvider_X__SyncClubDetails_0324D9554246A5A93C80608CB1D86296(class URPC_GetClubDetails_X* R);
+	void __OnlineClubProvider_X__SyncClubDetails_CEB60F574B21B1DD450DC7B27270578C(class URPC_X* _);
+	bool __OnlineClubProvider_X__SyncClubDetails_A46550DA49C996C8D68F59BC585F3AA5(class URPC_GetClubDetails_X* R);
 };
 
-// Class ProjectX.__OnlineClubProvider_X__HandleClubSynced_476EBD064D375CDB320C2EA7F1B9400C
+// Class ProjectX.__OnlineClubProvider_X__HandleClubSynced_7BF3C5CE4D133EC53614B2A1A3047592
 // 0x0008 (0x0060 - 0x0068)
-class U__OnlineClubProvider_X__HandleClubSynced_476EBD064D375CDB320C2EA7F1B9400C : public UObject
+class U__OnlineClubProvider_X__HandleClubSynced_7BF3C5CE4D133EC53614B2A1A3047592 : public UObject
 {
 public:
 	class URPC_GetClubDetails_X*                       RPC;                                              		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -17709,18 +17951,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__HandleClubSynced_476EBD064D375CDB320C2EA7F1B9400C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__HandleClubSynced_7BF3C5CE4D133EC53614B2A1A3047592");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineClubProvider_X__HandleClubSynced_476EBD064D375CDB320C2EA7F1B9400C(struct FClubMember Member);
+	void __OnlineClubProvider_X__HandleClubSynced_7BF3C5CE4D133EC53614B2A1A3047592(struct FClubMember Member);
 };
 
-// Class ProjectX.__OnlineClubProvider_X__SyncPlayerClubDetails_60252FCD46010804C1ACCFBD2C038889
+// Class ProjectX.__OnlineClubProvider_X__SyncPlayerClubDetails_AE946F224AB4B10590D9958FCD73EB5B
 // 0x0050 (0x0060 - 0x00B0)
-class U__OnlineClubProvider_X__SyncPlayerClubDetails_60252FCD46010804C1ACCFBD2C038889 : public UObject
+class U__OnlineClubProvider_X__SyncPlayerClubDetails_AE946F224AB4B10590D9958FCD73EB5B : public UObject
 {
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -17732,14 +17974,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__SyncPlayerClubDetails_60252FCD46010804C1ACCFBD2C038889");
+			uClassPointer = UObject::FindClass("Class ProjectX.__OnlineClubProvider_X__SyncPlayerClubDetails_AE946F224AB4B10590D9958FCD73EB5B");
 		}
 
 		return uClassPointer;
 	};
 
-	void __OnlineClubProvider_X__SyncPlayerClubDetails_E5D3139C47488FC08D5BC1A56894F02A(class URPC_X* _);
-	bool __OnlineClubProvider_X__SyncPlayerClubDetails_60252FCD46010804C1ACCFBD2C038889(class URPC_GetPlayerClubDetails_X* R);
+	void __OnlineClubProvider_X__SyncPlayerClubDetails_0156DCF54E4A87F0861BE09DCCCBF630(class URPC_X* _);
+	bool __OnlineClubProvider_X__SyncPlayerClubDetails_AE946F224AB4B10590D9958FCD73EB5B(class URPC_GetPlayerClubDetails_X* R);
 };
 
 // Class ProjectX.OnlineClubServerList_X
@@ -17763,9 +18005,9 @@ public:
 		return uClassPointer;
 	};
 
-	void __OnlineClubServerList_X__Refresh_9D7F3AB045F28C5B5CE42AAB1033CBB5(class URPC_X* _);
-	void __OnlineClubServerList_X__Refresh_6BF3FA7348854B9525B9BDBBDF28AE60(class URPC_X* _);
-	void __OnlineClubServerList_X__Refresh_4DF9FADD4F2499B49BE281A1125FC4BF(class URPC_X* _);
+	void __OnlineClubServerList_X__Refresh_A95077DC47171D2C1269A093D74941C3(class URPC_X* _);
+	void __OnlineClubServerList_X__Refresh_3D3E061346C1CB487A038690B809CC15(class URPC_X* _);
+	void __OnlineClubServerList_X__Refresh_454EDDA44FAB95275AF4E380B47A2ADD(class URPC_X* _);
 	class UAsyncTask* Refresh();
 };
 
@@ -17930,9 +18172,9 @@ public:
 
 };
 
-// Class ProjectX.__ServerPlayerTracker_X__AddPlayer_98BF7EE04B1E7F3A46F565953AD034CF
+// Class ProjectX.__ServerPlayerTracker_X__AddPlayer_324B5FE24566751CA177A89767FE8281
 // 0x0048 (0x0060 - 0x00A8)
-class U__ServerPlayerTracker_X__AddPlayer_98BF7EE04B1E7F3A46F565953AD034CF : public UObject
+class U__ServerPlayerTracker_X__AddPlayer_324B5FE24566751CA177A89767FE8281 : public UObject
 {
 public:
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -17943,18 +18185,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__ServerPlayerTracker_X__AddPlayer_98BF7EE04B1E7F3A46F565953AD034CF");
+			uClassPointer = UObject::FindClass("Class ProjectX.__ServerPlayerTracker_X__AddPlayer_324B5FE24566751CA177A89767FE8281");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __ServerPlayerTracker_X__AddPlayer_98BF7EE04B1E7F3A46F565953AD034CF(struct FUniqueNetId P);
+	bool __ServerPlayerTracker_X__AddPlayer_324B5FE24566751CA177A89767FE8281(struct FUniqueNetId P);
 };
 
-// Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResult_D4E8882B4C590DC1D56973A9A5E89677
+// Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResult_38BC8E554EFCE6F77C76BE827993EEB7
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__array_ClubInvite_X__NotifyOnResult_D4E8882B4C590DC1D56973A9A5E89677 : public UObject
+class U__TAsyncResult__array_ClubInvite_X__NotifyOnResult_38BC8E554EFCE6F77C76BE827993EEB7 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -17965,18 +18207,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResult_D4E8882B4C590DC1D56973A9A5E89677");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResult_38BC8E554EFCE6F77C76BE827993EEB7");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_ClubInvite_X__NotifyOnResult_D4E8882B4C590DC1D56973A9A5E89677();
+	void __TAsyncResult__array_ClubInvite_X__NotifyOnResult_38BC8E554EFCE6F77C76BE827993EEB7();
 };
 
-// Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_8AFAACFE49B5C2660FB959B45EAABA4D
+// Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_5D1ED4B34EBF986F339BF1A3EDE57A90
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_8AFAACFE49B5C2660FB959B45EAABA4D : public UObject
+class U__TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_5D1ED4B34EBF986F339BF1A3EDE57A90 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -17987,18 +18229,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_8AFAACFE49B5C2660FB959B45EAABA4D");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_5D1ED4B34EBF986F339BF1A3EDE57A90");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_8AFAACFE49B5C2660FB959B45EAABA4D(class UError* Err);
+	void __TAsyncResult__array_ClubInvite_X__NotifyOnResultComplete_5D1ED4B34EBF986F339BF1A3EDE57A90(class UError* Err);
 };
 
-// Class ProjectX.__TAsyncResult__array_ClubInvite_X__SetResultWhen_6409453D44F897FAB961DC9A769DDAA2
+// Class ProjectX.__TAsyncResult__array_ClubInvite_X__SetResultWhen_66468DD844073F88363CE6AA19071975
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__array_ClubInvite_X__SetResultWhen_6409453D44F897FAB961DC9A769DDAA2 : public UObject
+class U__TAsyncResult__array_ClubInvite_X__SetResultWhen_66468DD844073F88363CE6AA19071975 : public UObject
 {
 public:
 	struct FScriptDelegate                             GetResultDelegate;                                		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18009,18 +18251,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__SetResultWhen_6409453D44F897FAB961DC9A769DDAA2");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__SetResultWhen_66468DD844073F88363CE6AA19071975");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_ClubInvite_X__SetResultWhen_6409453D44F897FAB961DC9A769DDAA2();
+	void __TAsyncResult__array_ClubInvite_X__SetResultWhen_66468DD844073F88363CE6AA19071975();
 };
 
-// Class ProjectX.__TAsyncResult__array_ClubInvite_X__Copy_3503FB7C404F06EFD76450B87A2D51CB
+// Class ProjectX.__TAsyncResult__array_ClubInvite_X__Copy_DB8979484DDAF86F19B680BB2F252B73
 // 0x0008 (0x0060 - 0x0068)
-class U__TAsyncResult__array_ClubInvite_X__Copy_3503FB7C404F06EFD76450B87A2D51CB : public UObject
+class U__TAsyncResult__array_ClubInvite_X__Copy_DB8979484DDAF86F19B680BB2F252B73 : public UObject
 {
 public:
 	class UTAsyncResult__array_ClubInvite_X*           Instance;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18031,18 +18273,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__Copy_3503FB7C404F06EFD76450B87A2D51CB");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_ClubInvite_X__Copy_DB8979484DDAF86F19B680BB2F252B73");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_ClubInvite_X__Copy_3503FB7C404F06EFD76450B87A2D51CB(TArray<class UClubInvite_X*> R, class UError* E);
+	void __TAsyncResult__array_ClubInvite_X__Copy_DB8979484DDAF86F19B680BB2F252B73(TArray<class UClubInvite_X*> R, class UError* E);
 };
 
-// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResult_0F943472473DD3C328E2E7B764AF6903
+// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResult_9775065848D26368B53A2597BAFC75F4
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__array_LanServerRecord_X__NotifyOnResult_0F943472473DD3C328E2E7B764AF6903 : public UObject
+class U__TAsyncResult__array_LanServerRecord_X__NotifyOnResult_9775065848D26368B53A2597BAFC75F4 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18053,18 +18295,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResult_0F943472473DD3C328E2E7B764AF6903");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResult_9775065848D26368B53A2597BAFC75F4");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_LanServerRecord_X__NotifyOnResult_0F943472473DD3C328E2E7B764AF6903();
+	void __TAsyncResult__array_LanServerRecord_X__NotifyOnResult_9775065848D26368B53A2597BAFC75F4();
 };
 
-// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_74F01EC04F19B9D880BFC19632EF2993
+// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_23BDBE0C4ED89F801A41D8B84942D294
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_74F01EC04F19B9D880BFC19632EF2993 : public UObject
+class U__TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_23BDBE0C4ED89F801A41D8B84942D294 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18075,18 +18317,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_74F01EC04F19B9D880BFC19632EF2993");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_23BDBE0C4ED89F801A41D8B84942D294");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_74F01EC04F19B9D880BFC19632EF2993(class UError* Err);
+	void __TAsyncResult__array_LanServerRecord_X__NotifyOnResultComplete_23BDBE0C4ED89F801A41D8B84942D294(class UError* Err);
 };
 
-// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__SetResultWhen_0ECA5C644151892C2DB05EBEC6CC75A8
+// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__SetResultWhen_29C68E9B4E2EF371FA166D8B54286442
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__array_LanServerRecord_X__SetResultWhen_0ECA5C644151892C2DB05EBEC6CC75A8 : public UObject
+class U__TAsyncResult__array_LanServerRecord_X__SetResultWhen_29C68E9B4E2EF371FA166D8B54286442 : public UObject
 {
 public:
 	struct FScriptDelegate                             GetResultDelegate;                                		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18097,18 +18339,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__SetResultWhen_0ECA5C644151892C2DB05EBEC6CC75A8");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__SetResultWhen_29C68E9B4E2EF371FA166D8B54286442");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_LanServerRecord_X__SetResultWhen_0ECA5C644151892C2DB05EBEC6CC75A8();
+	void __TAsyncResult__array_LanServerRecord_X__SetResultWhen_29C68E9B4E2EF371FA166D8B54286442();
 };
 
-// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__Copy_9D75627249C45AD91EB252A58040A628
+// Class ProjectX.__TAsyncResult__array_LanServerRecord_X__Copy_159E429244D389CE32E128BFBB314894
 // 0x0008 (0x0060 - 0x0068)
-class U__TAsyncResult__array_LanServerRecord_X__Copy_9D75627249C45AD91EB252A58040A628 : public UObject
+class U__TAsyncResult__array_LanServerRecord_X__Copy_159E429244D389CE32E128BFBB314894 : public UObject
 {
 public:
 	class UTAsyncResult__array_LanServerRecord_X*      Instance;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18119,18 +18361,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__Copy_9D75627249C45AD91EB252A58040A628");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__array_LanServerRecord_X__Copy_159E429244D389CE32E128BFBB314894");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__array_LanServerRecord_X__Copy_9D75627249C45AD91EB252A58040A628(TArray<class ULanServerRecord_X*> R, class UError* E);
+	void __TAsyncResult__array_LanServerRecord_X__Copy_159E429244D389CE32E128BFBB314894(TArray<class ULanServerRecord_X*> R, class UError* E);
 };
 
-// Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResult_B49ADB6D43D5B068D2DCD7BC1322C9C1
+// Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResult_A50FE8074969951D2940E19A2D2970C3
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__ClubDetails_X__NotifyOnResult_B49ADB6D43D5B068D2DCD7BC1322C9C1 : public UObject
+class U__TAsyncResult__ClubDetails_X__NotifyOnResult_A50FE8074969951D2940E19A2D2970C3 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18141,18 +18383,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResult_B49ADB6D43D5B068D2DCD7BC1322C9C1");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResult_A50FE8074969951D2940E19A2D2970C3");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__ClubDetails_X__NotifyOnResult_B49ADB6D43D5B068D2DCD7BC1322C9C1();
+	void __TAsyncResult__ClubDetails_X__NotifyOnResult_A50FE8074969951D2940E19A2D2970C3();
 };
 
-// Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResultComplete_2A229B4E482904C3DD8DF8A8196AE5B3
+// Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResultComplete_1957EA414C5E21C2C3A7858B09AA4E97
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__ClubDetails_X__NotifyOnResultComplete_2A229B4E482904C3DD8DF8A8196AE5B3 : public UObject
+class U__TAsyncResult__ClubDetails_X__NotifyOnResultComplete_1957EA414C5E21C2C3A7858B09AA4E97 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18163,18 +18405,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResultComplete_2A229B4E482904C3DD8DF8A8196AE5B3");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__NotifyOnResultComplete_1957EA414C5E21C2C3A7858B09AA4E97");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__ClubDetails_X__NotifyOnResultComplete_2A229B4E482904C3DD8DF8A8196AE5B3(class UError* Err);
+	void __TAsyncResult__ClubDetails_X__NotifyOnResultComplete_1957EA414C5E21C2C3A7858B09AA4E97(class UError* Err);
 };
 
-// Class ProjectX.__TAsyncResult__ClubDetails_X__SetResultWhen_F1528D494E893E1E4F775F97DA08BFD4
+// Class ProjectX.__TAsyncResult__ClubDetails_X__SetResultWhen_DA393F464AFDD3B6B4F0B68C794949AB
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__ClubDetails_X__SetResultWhen_F1528D494E893E1E4F775F97DA08BFD4 : public UObject
+class U__TAsyncResult__ClubDetails_X__SetResultWhen_DA393F464AFDD3B6B4F0B68C794949AB : public UObject
 {
 public:
 	struct FScriptDelegate                             GetResultDelegate;                                		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18185,18 +18427,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__SetResultWhen_F1528D494E893E1E4F775F97DA08BFD4");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__SetResultWhen_DA393F464AFDD3B6B4F0B68C794949AB");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__ClubDetails_X__SetResultWhen_F1528D494E893E1E4F775F97DA08BFD4();
+	void __TAsyncResult__ClubDetails_X__SetResultWhen_DA393F464AFDD3B6B4F0B68C794949AB();
 };
 
-// Class ProjectX.__TAsyncResult__ClubDetails_X__Copy_AB6FDCF342AB8363A331939034CA3BAD
+// Class ProjectX.__TAsyncResult__ClubDetails_X__Copy_095318474EDDC98FB8F130AFFBEA7116
 // 0x0008 (0x0060 - 0x0068)
-class U__TAsyncResult__ClubDetails_X__Copy_AB6FDCF342AB8363A331939034CA3BAD : public UObject
+class U__TAsyncResult__ClubDetails_X__Copy_095318474EDDC98FB8F130AFFBEA7116 : public UObject
 {
 public:
 	class UTAsyncResult__ClubDetails_X*                Instance;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18207,18 +18449,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__Copy_AB6FDCF342AB8363A331939034CA3BAD");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__ClubDetails_X__Copy_095318474EDDC98FB8F130AFFBEA7116");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__ClubDetails_X__Copy_AB6FDCF342AB8363A331939034CA3BAD(class UClubDetails_X* R, class UError* E);
+	void __TAsyncResult__ClubDetails_X__Copy_095318474EDDC98FB8F130AFFBEA7116(class UClubDetails_X* R, class UError* E);
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResult_60B5220448AF19E0B01215A6A4BA2666
+// Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResult_6941405B40E9B04781512AAB40E61697
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyNetClientService_X__NotifyOnResult_60B5220448AF19E0B01215A6A4BA2666 : public UObject
+class U__TAsyncResult__PsyNetClientService_X__NotifyOnResult_6941405B40E9B04781512AAB40E61697 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18229,18 +18471,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResult_60B5220448AF19E0B01215A6A4BA2666");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResult_6941405B40E9B04781512AAB40E61697");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetClientService_X__NotifyOnResult_60B5220448AF19E0B01215A6A4BA2666();
+	void __TAsyncResult__PsyNetClientService_X__NotifyOnResult_6941405B40E9B04781512AAB40E61697();
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_5CD538AE4E991FF83F0DE898749B000F
+// Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_2227A90E4473A9DD9FE8449614C6CBD3
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_5CD538AE4E991FF83F0DE898749B000F : public UObject
+class U__TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_2227A90E4473A9DD9FE8449614C6CBD3 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18251,18 +18493,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_5CD538AE4E991FF83F0DE898749B000F");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_2227A90E4473A9DD9FE8449614C6CBD3");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_5CD538AE4E991FF83F0DE898749B000F(class UError* Err);
+	void __TAsyncResult__PsyNetClientService_X__NotifyOnResultComplete_2227A90E4473A9DD9FE8449614C6CBD3(class UError* Err);
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetClientService_X__SetResultWhen_3C367D1C4F6BACD3567CDA925B8BE799
+// Class ProjectX.__TAsyncResult__PsyNetClientService_X__SetResultWhen_CDD7496C41B1C7B5ACD4DFA92A1BFC12
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyNetClientService_X__SetResultWhen_3C367D1C4F6BACD3567CDA925B8BE799 : public UObject
+class U__TAsyncResult__PsyNetClientService_X__SetResultWhen_CDD7496C41B1C7B5ACD4DFA92A1BFC12 : public UObject
 {
 public:
 	struct FScriptDelegate                             GetResultDelegate;                                		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18273,18 +18515,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__SetResultWhen_3C367D1C4F6BACD3567CDA925B8BE799");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__SetResultWhen_CDD7496C41B1C7B5ACD4DFA92A1BFC12");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetClientService_X__SetResultWhen_3C367D1C4F6BACD3567CDA925B8BE799();
+	void __TAsyncResult__PsyNetClientService_X__SetResultWhen_CDD7496C41B1C7B5ACD4DFA92A1BFC12();
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetClientService_X__Copy_0DD3A38B4E1C7697DE99FA9A579AED2C
+// Class ProjectX.__TAsyncResult__PsyNetClientService_X__Copy_92B0D0B8430A638912A8AFB9B3613CE5
 // 0x0008 (0x0060 - 0x0068)
-class U__TAsyncResult__PsyNetClientService_X__Copy_0DD3A38B4E1C7697DE99FA9A579AED2C : public UObject
+class U__TAsyncResult__PsyNetClientService_X__Copy_92B0D0B8430A638912A8AFB9B3613CE5 : public UObject
 {
 public:
 	class UTAsyncResult__PsyNetClientService_X*        Instance;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18295,18 +18537,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__Copy_0DD3A38B4E1C7697DE99FA9A579AED2C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetClientService_X__Copy_92B0D0B8430A638912A8AFB9B3613CE5");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetClientService_X__Copy_0DD3A38B4E1C7697DE99FA9A579AED2C(class UPsyNetClientService_X* R, class UError* E);
+	void __TAsyncResult__PsyNetClientService_X__Copy_92B0D0B8430A638912A8AFB9B3613CE5(class UPsyNetClientService_X* R, class UError* E);
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResult_64E58EC24DC412C3045D80A439C0A932
+// Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResult_EE07909245403F7777E196AFE8406A41
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyNetMessage_X__NotifyOnResult_64E58EC24DC412C3045D80A439C0A932 : public UObject
+class U__TAsyncResult__PsyNetMessage_X__NotifyOnResult_EE07909245403F7777E196AFE8406A41 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18317,18 +18559,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResult_64E58EC24DC412C3045D80A439C0A932");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResult_EE07909245403F7777E196AFE8406A41");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetMessage_X__NotifyOnResult_64E58EC24DC412C3045D80A439C0A932();
+	void __TAsyncResult__PsyNetMessage_X__NotifyOnResult_EE07909245403F7777E196AFE8406A41();
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_A2E716014B98A52154029C8EB4E2B361
+// Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_1BE727A043DE0394B4DA9E8391F1E1EC
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_A2E716014B98A52154029C8EB4E2B361 : public UObject
+class U__TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_1BE727A043DE0394B4DA9E8391F1E1EC : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18339,18 +18581,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_A2E716014B98A52154029C8EB4E2B361");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_1BE727A043DE0394B4DA9E8391F1E1EC");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_A2E716014B98A52154029C8EB4E2B361(class UError* Err);
+	void __TAsyncResult__PsyNetMessage_X__NotifyOnResultComplete_1BE727A043DE0394B4DA9E8391F1E1EC(class UError* Err);
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetMessage_X__SetResultWhen_EA2067BD4DD94B135E29D58F8E6E885E
+// Class ProjectX.__TAsyncResult__PsyNetMessage_X__SetResultWhen_9D6441894FEF04F49C9A1097E86F736B
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyNetMessage_X__SetResultWhen_EA2067BD4DD94B135E29D58F8E6E885E : public UObject
+class U__TAsyncResult__PsyNetMessage_X__SetResultWhen_9D6441894FEF04F49C9A1097E86F736B : public UObject
 {
 public:
 	struct FScriptDelegate                             GetResultDelegate;                                		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18361,18 +18603,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__SetResultWhen_EA2067BD4DD94B135E29D58F8E6E885E");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__SetResultWhen_9D6441894FEF04F49C9A1097E86F736B");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetMessage_X__SetResultWhen_EA2067BD4DD94B135E29D58F8E6E885E();
+	void __TAsyncResult__PsyNetMessage_X__SetResultWhen_9D6441894FEF04F49C9A1097E86F736B();
 };
 
-// Class ProjectX.__TAsyncResult__PsyNetMessage_X__Copy_77EA16904C0F8F6E248FAA9A680378E8
+// Class ProjectX.__TAsyncResult__PsyNetMessage_X__Copy_310BAF87409A29D92EF9E488B0B9A2E1
 // 0x0008 (0x0060 - 0x0068)
-class U__TAsyncResult__PsyNetMessage_X__Copy_77EA16904C0F8F6E248FAA9A680378E8 : public UObject
+class U__TAsyncResult__PsyNetMessage_X__Copy_310BAF87409A29D92EF9E488B0B9A2E1 : public UObject
 {
 public:
 	class UTAsyncResult__PsyNetMessage_X*              Instance;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18383,13 +18625,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__Copy_77EA16904C0F8F6E248FAA9A680378E8");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyNetMessage_X__Copy_310BAF87409A29D92EF9E488B0B9A2E1");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyNetMessage_X__Copy_77EA16904C0F8F6E248FAA9A680378E8(class UPsyNetMessage_X* R, class UError* E);
+	void __TAsyncResult__PsyNetMessage_X__Copy_310BAF87409A29D92EF9E488B0B9A2E1(class UPsyNetMessage_X* R, class UError* E);
 };
 
 // Class ProjectX.TAsyncResult__Texture2DDynamic
@@ -18469,9 +18711,9 @@ public:
 
 };
 
-// Class ProjectX.__PartySequence_CreateParty_X__CreateParty_553ACEE047F52496B0778FB1E2C4B8D9
+// Class ProjectX.__PartySequence_CreateParty_X__CreateParty_83B0CA3147393AD7260D7D9F857508E1
 // 0x0019 (0x0060 - 0x0079)
-class U__PartySequence_CreateParty_X__CreateParty_553ACEE047F52496B0778FB1E2C4B8D9 : public UObject
+class U__PartySequence_CreateParty_X__CreateParty_83B0CA3147393AD7260D7D9F857508E1 : public UObject
 {
 public:
 	TArray<struct FLobbyMetaData>                      InitialSettings;                                  		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18485,18 +18727,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_CreateParty_X__CreateParty_553ACEE047F52496B0778FB1E2C4B8D9");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_CreateParty_X__CreateParty_83B0CA3147393AD7260D7D9F857508E1");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PartySequence_CreateParty_X__CreateParty_553ACEE047F52496B0778FB1E2C4B8D9(class URPC_PartyCreate_X* RPC);
+	void __PartySequence_CreateParty_X__CreateParty_83B0CA3147393AD7260D7D9F857508E1(class URPC_PartyCreate_X* RPC);
 };
 
-// Class ProjectX.__PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_5D013A6F40FC1FC01E3712A207F613B0
+// Class ProjectX.__PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_84DAF6214D2133B49341C2B739D49F29
 // 0x0058 (0x0060 - 0x00B8)
-class U__PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_5D013A6F40FC1FC01E3712A207F613B0 : public UObject
+class U__PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_84DAF6214D2133B49341C2B739D49F29 : public UObject
 {
 public:
 	struct FUniqueLobbyId                              InLobbyId;                                        		// 0x0060 (0x0010) [0x0000000000000000]               
@@ -18508,18 +18750,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_5D013A6F40FC1FC01E3712A207F613B0");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_84DAF6214D2133B49341C2B739D49F29");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_5D013A6F40FC1FC01E3712A207F613B0();
+	void __PartySequence_InvitedToPlatformParty_X__HandlePlayerInvited_84DAF6214D2133B49341C2B739D49F29();
 };
 
-// Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8E45D37D4D177ABE3C8EA1AD02462806
+// Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8A4EC15541F588D4071D6B97D4C25FB2
 // 0x0058 (0x0060 - 0x00B8)
-class U__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8E45D37D4D177ABE3C8EA1AD02462806 : public UObject
+class U__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8A4EC15541F588D4071D6B97D4C25FB2 : public UObject
 {
 public:
 	struct FUniqueLobbyId                              InLobbyId;                                        		// 0x0060 (0x0010) [0x0000000000000000]               
@@ -18531,18 +18773,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8E45D37D4D177ABE3C8EA1AD02462806");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8A4EC15541F588D4071D6B97D4C25FB2");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8E45D37D4D177ABE3C8EA1AD02462806();
+	void __PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedPrompt_8A4EC15541F588D4071D6B97D4C25FB2();
 };
 
-// Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_D1E31EC9403DF15573ED8894DC6CC62A
+// Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_C705065A490063513BC3678787905A60
 // 0x0058 (0x0060 - 0x00B8)
-class U__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_D1E31EC9403DF15573ED8894DC6CC62A : public UObject
+class U__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_C705065A490063513BC3678787905A60 : public UObject
 {
 public:
 	struct FUniqueLobbyId                              InLobbyId;                                        		// 0x0060 (0x0010) [0x0000000000000000]               
@@ -18554,18 +18796,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_D1E31EC9403DF15573ED8894DC6CC62A");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_C705065A490063513BC3678787905A60");
 		}
 
 		return uClassPointer;
 	};
 
-	void __PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_D1E31EC9403DF15573ED8894DC6CC62A();
+	void __PartySequence_InvitedToPsyNetParty_X__HandlePlayerInvitedSilent_C705065A490063513BC3678787905A60();
 };
 
-// Class ProjectX.__PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_F9B4B0EB4FB2989D435BA88A8EF79174
+// Class ProjectX.__PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_3AD1FB144C1445757B4487838E2E2BE6
 // 0x0008 (0x0060 - 0x0068)
-class U__PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_F9B4B0EB4FB2989D435BA88A8EF79174 : public UObject
+class U__PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_3AD1FB144C1445757B4487838E2E2BE6 : public UObject
 {
 public:
 	class UPartyMessage_GetPlatformParty_X*            Message;                                          		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18576,13 +18818,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_F9B4B0EB4FB2989D435BA88A8EF79174");
+			uClassPointer = UObject::FindClass("Class ProjectX.__PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_3AD1FB144C1445757B4487838E2E2BE6");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_F9B4B0EB4FB2989D435BA88A8EF79174(struct FPartyMember M);
+	bool __PartySequence_JoinParty_X__HandleGetPlatformPartyMessage_3AD1FB144C1445757B4487838E2E2BE6(struct FPartyMember M);
 };
 
 // Class ProjectX.PsyTagErrors_X
@@ -18668,9 +18910,9 @@ public:
 	class URPC_SearchPsyTag_X* SetTag(struct FString InName, int InCode);
 };
 
-// Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResult_FDCEEEAB41ABE96708C1D2A830D4DC9D
+// Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResult_41D1BC0943890406F19E52912206AEC0
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__Texture2DDynamic__NotifyOnResult_FDCEEEAB41ABE96708C1D2A830D4DC9D : public UObject
+class U__TAsyncResult__Texture2DDynamic__NotifyOnResult_41D1BC0943890406F19E52912206AEC0 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18681,18 +18923,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResult_FDCEEEAB41ABE96708C1D2A830D4DC9D");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResult_41D1BC0943890406F19E52912206AEC0");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__Texture2DDynamic__NotifyOnResult_FDCEEEAB41ABE96708C1D2A830D4DC9D();
+	void __TAsyncResult__Texture2DDynamic__NotifyOnResult_41D1BC0943890406F19E52912206AEC0();
 };
 
-// Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_B46BE74A413A423CA22B30B82B86044C
+// Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_02FEB01E4148FB4BCF061D8F8F31F220
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_B46BE74A413A423CA22B30B82B86044C : public UObject
+class U__TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_02FEB01E4148FB4BCF061D8F8F31F220 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18703,18 +18945,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_B46BE74A413A423CA22B30B82B86044C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_02FEB01E4148FB4BCF061D8F8F31F220");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_B46BE74A413A423CA22B30B82B86044C(class UError* Err);
+	void __TAsyncResult__Texture2DDynamic__NotifyOnResultComplete_02FEB01E4148FB4BCF061D8F8F31F220(class UError* Err);
 };
 
-// Class ProjectX.__TAsyncResult__Texture2DDynamic__SetResultWhen_445F5099439B4EF55470F1865FC46F19
+// Class ProjectX.__TAsyncResult__Texture2DDynamic__SetResultWhen_FD79B42F47ECE0DD88DD849009D1555C
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__Texture2DDynamic__SetResultWhen_445F5099439B4EF55470F1865FC46F19 : public UObject
+class U__TAsyncResult__Texture2DDynamic__SetResultWhen_FD79B42F47ECE0DD88DD849009D1555C : public UObject
 {
 public:
 	struct FScriptDelegate                             GetResultDelegate;                                		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18725,18 +18967,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__SetResultWhen_445F5099439B4EF55470F1865FC46F19");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__SetResultWhen_FD79B42F47ECE0DD88DD849009D1555C");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__Texture2DDynamic__SetResultWhen_445F5099439B4EF55470F1865FC46F19();
+	void __TAsyncResult__Texture2DDynamic__SetResultWhen_FD79B42F47ECE0DD88DD849009D1555C();
 };
 
-// Class ProjectX.__TAsyncResult__Texture2DDynamic__Copy_20FC6D1A471F253FA061549452671F2A
+// Class ProjectX.__TAsyncResult__Texture2DDynamic__Copy_E91ABB914885E11F0EB266B9A993C2EE
 // 0x0008 (0x0060 - 0x0068)
-class U__TAsyncResult__Texture2DDynamic__Copy_20FC6D1A471F253FA061549452671F2A : public UObject
+class U__TAsyncResult__Texture2DDynamic__Copy_E91ABB914885E11F0EB266B9A993C2EE : public UObject
 {
 public:
 	class UTAsyncResult__Texture2DDynamic*             Instance;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18747,13 +18989,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__Copy_20FC6D1A471F253FA061549452671F2A");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__Texture2DDynamic__Copy_E91ABB914885E11F0EB266B9A993C2EE");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__Texture2DDynamic__Copy_20FC6D1A471F253FA061549452671F2A(class UTexture2DDynamic* R, class UError* E);
+	void __TAsyncResult__Texture2DDynamic__Copy_E91ABB914885E11F0EB266B9A993C2EE(class UTexture2DDynamic* R, class UError* E);
 };
 
 // Class ProjectX.WebImageDownload_X
@@ -18780,9 +19022,9 @@ public:
 
 };
 
-// Class ProjectX.__WebImageCache_X__SyncUncachedImage_5E1B700147E24041B01038A4019D532B
+// Class ProjectX.__WebImageCache_X__SyncUncachedImage_E20ABC4B4E051F7B52C14EBF36DADF95
 // 0x0008 (0x0060 - 0x0068)
-class U__WebImageCache_X__SyncUncachedImage_5E1B700147E24041B01038A4019D532B : public UObject
+class U__WebImageCache_X__SyncUncachedImage_E20ABC4B4E051F7B52C14EBF36DADF95 : public UObject
 {
 public:
 	class UTAsyncResult__Texture2DDynamic*             Task;                                             		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18793,18 +19035,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__SyncUncachedImage_5E1B700147E24041B01038A4019D532B");
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__SyncUncachedImage_E20ABC4B4E051F7B52C14EBF36DADF95");
 		}
 
 		return uClassPointer;
 	};
 
-	void __WebImageCache_X__SyncUncachedImage_5E1B700147E24041B01038A4019D532B(struct FOnlineImageDownload ImageInfo);
+	void __WebImageCache_X__SyncUncachedImage_E20ABC4B4E051F7B52C14EBF36DADF95(struct FOnlineImageDownload ImageInfo);
 };
 
-// Class ProjectX.__WebImageCache_X__StartSync_46E4A0C543D955BB7F82E0836A59AA55
+// Class ProjectX.__WebImageCache_X__StartSync_C71882504BA1B8468411968C494F79C6
 // 0x0008 (0x0060 - 0x0068)
-class U__WebImageCache_X__StartSync_46E4A0C543D955BB7F82E0836A59AA55 : public UObject
+class U__WebImageCache_X__StartSync_C71882504BA1B8468411968C494F79C6 : public UObject
 {
 public:
 	class UWebImageDownload_X*                         Download;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18815,18 +19057,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__StartSync_46E4A0C543D955BB7F82E0836A59AA55");
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__StartSync_C71882504BA1B8468411968C494F79C6");
 		}
 
 		return uClassPointer;
 	};
 
-	void __WebImageCache_X__StartSync_46E4A0C543D955BB7F82E0836A59AA55(class UCachedWebData_X* Data);
+	void __WebImageCache_X__StartSync_C71882504BA1B8468411968C494F79C6(class UCachedWebData_X* Data);
 };
 
-// Class ProjectX.__WebImageCache_X__HandleImageData_2A752F294C0E7D0231C951BB02A9E2E0
+// Class ProjectX.__WebImageCache_X__HandleImageData_58F7EC0343ED7731263D67BD1212656D
 // 0x0008 (0x0060 - 0x0068)
-class U__WebImageCache_X__HandleImageData_2A752F294C0E7D0231C951BB02A9E2E0 : public UObject
+class U__WebImageCache_X__HandleImageData_58F7EC0343ED7731263D67BD1212656D : public UObject
 {
 public:
 	class UWebImageDownload_X*                         Download;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18837,13 +19079,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__HandleImageData_2A752F294C0E7D0231C951BB02A9E2E0");
+			uClassPointer = UObject::FindClass("Class ProjectX.__WebImageCache_X__HandleImageData_58F7EC0343ED7731263D67BD1212656D");
 		}
 
 		return uClassPointer;
 	};
 
-	void __WebImageCache_X__HandleImageData_2A752F294C0E7D0231C951BB02A9E2E0(struct FString _, struct FImageLayout Image);
+	void __WebImageCache_X__HandleImageData_58F7EC0343ED7731263D67BD1212656D(struct FString _, struct FImageLayout Image);
 };
 
 // Class ProjectX.StatusObserver_X
@@ -18868,7 +19110,7 @@ public:
 		return uClassPointer;
 	};
 
-	class UTriggerInfo* __StatusObserver_X__Init_2CBE962043BEC5D632917C92BE4F840D(class UClass* T);
+	class UTriggerInfo* __StatusObserver_X__Init_460AF64C459EB20F08EE7C945A6FB5F1(class UClass* T);
 	void __bInitComplete__ChangeNotifyFunc();
 	void DebugPrintTriggers();
 	void DebugPrint();
@@ -18936,9 +19178,9 @@ public:
 	void DebugPrint();
 };
 
-// Class ProjectX.__StatusObserver_X__FindByAcceptedType_3D2F0AD045787FF49D08BF88B8A8A5EE
+// Class ProjectX.__StatusObserver_X__FindByAcceptedType_AC01CEEA4794F209CB802FB2EE554122
 // 0x0008 (0x0060 - 0x0068)
-class U__StatusObserver_X__FindByAcceptedType_3D2F0AD045787FF49D08BF88B8A8A5EE : public UObject
+class U__StatusObserver_X__FindByAcceptedType_AC01CEEA4794F209CB802FB2EE554122 : public UObject
 {
 public:
 	class UClass*                                      InType;                                           		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18949,18 +19191,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__StatusObserver_X__FindByAcceptedType_3D2F0AD045787FF49D08BF88B8A8A5EE");
+			uClassPointer = UObject::FindClass("Class ProjectX.__StatusObserver_X__FindByAcceptedType_AC01CEEA4794F209CB802FB2EE554122");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __StatusObserver_X__FindByAcceptedType_3D2F0AD045787FF49D08BF88B8A8A5EE(class UTriggerInfo* TT);
+	bool __StatusObserver_X__FindByAcceptedType_AC01CEEA4794F209CB802FB2EE554122(class UTriggerInfo* TT);
 };
 
-// Class ProjectX.__StatusObserver_X__ObservesTriggerType_3A71FC53434579A6BF71F28D669CEB48
+// Class ProjectX.__StatusObserver_X__ObservesTriggerType_98469A6B478A46870FD0508B945B7EDB
 // 0x0008 (0x0060 - 0x0068)
-class U__StatusObserver_X__ObservesTriggerType_3A71FC53434579A6BF71F28D669CEB48 : public UObject
+class U__StatusObserver_X__ObservesTriggerType_98469A6B478A46870FD0508B945B7EDB : public UObject
 {
 public:
 	class UStatusTrigger_X*                            InTrigger;                                        		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -18971,18 +19213,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__StatusObserver_X__ObservesTriggerType_3A71FC53434579A6BF71F28D669CEB48");
+			uClassPointer = UObject::FindClass("Class ProjectX.__StatusObserver_X__ObservesTriggerType_98469A6B478A46870FD0508B945B7EDB");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __StatusObserver_X__ObservesTriggerType_3A71FC53434579A6BF71F28D669CEB48(class UClass* C);
+	bool __StatusObserver_X__ObservesTriggerType_98469A6B478A46870FD0508B945B7EDB(class UClass* C);
 };
 
-// Class ProjectX.__RegionConfig_X__GetSubRegions_E65334504E3A3444C498AE9B2BE32718
+// Class ProjectX.__RegionConfig_X__GetSubRegions_7193063F4CBAD547CB8A80B57ACAFECD
 // 0x0010 (0x0060 - 0x0070)
-class U__RegionConfig_X__GetSubRegions_E65334504E3A3444C498AE9B2BE32718 : public UObject
+class U__RegionConfig_X__GetSubRegions_7193063F4CBAD547CB8A80B57ACAFECD : public UObject
 {
 public:
 	struct FString                                     SuperRegionID;                                    		// 0x0060 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -18993,13 +19235,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__RegionConfig_X__GetSubRegions_E65334504E3A3444C498AE9B2BE32718");
+			uClassPointer = UObject::FindClass("Class ProjectX.__RegionConfig_X__GetSubRegions_7193063F4CBAD547CB8A80B57ACAFECD");
 		}
 
 		return uClassPointer;
 	};
 
-	bool __RegionConfig_X__GetSubRegions_E65334504E3A3444C498AE9B2BE32718(class URegion_X* R);
+	bool __RegionConfig_X__GetSubRegions_7193063F4CBAD547CB8A80B57ACAFECD(class URegion_X* R);
 };
 
 // Class ProjectX.RPC_ClearClubInvites_X
@@ -19087,9 +19329,9 @@ public:
 
 };
 
-// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_65DD4499400E1B37F006A3B03BB98B9C
+// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_59019A674EA2162F1067EC9E2F0CED1C
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_65DD4499400E1B37F006A3B03BB98B9C : public UObject
+class U__TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_59019A674EA2162F1067EC9E2F0CED1C : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19100,18 +19342,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_65DD4499400E1B37F006A3B03BB98B9C");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_59019A674EA2162F1067EC9E2F0CED1C");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_65DD4499400E1B37F006A3B03BB98B9C();
+	void __TAsyncResult__PsyTagCheckResult_X__NotifyOnResult_59019A674EA2162F1067EC9E2F0CED1C();
 };
 
-// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_5E947D3B475E39460AF0C8B09F8A151D
+// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_594A59404599D9CB7CD47A8C1C400047
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_5E947D3B475E39460AF0C8B09F8A151D : public UObject
+class U__TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_594A59404599D9CB7CD47A8C1C400047 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19122,18 +19364,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_5E947D3B475E39460AF0C8B09F8A151D");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_594A59404599D9CB7CD47A8C1C400047");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_5E947D3B475E39460AF0C8B09F8A151D(class UError* Err);
+	void __TAsyncResult__PsyTagCheckResult_X__NotifyOnResultComplete_594A59404599D9CB7CD47A8C1C400047(class UError* Err);
 };
 
-// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__SetResultWhen_4A01DE5E44416E5367772483A2FEA838
+// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__SetResultWhen_BD48206446D5FE7F98FA029041FB7966
 // 0x0018 (0x0060 - 0x0078)
-class U__TAsyncResult__PsyTagCheckResult_X__SetResultWhen_4A01DE5E44416E5367772483A2FEA838 : public UObject
+class U__TAsyncResult__PsyTagCheckResult_X__SetResultWhen_BD48206446D5FE7F98FA029041FB7966 : public UObject
 {
 public:
 	struct FScriptDelegate                             GetResultDelegate;                                		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19144,18 +19386,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__SetResultWhen_4A01DE5E44416E5367772483A2FEA838");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__SetResultWhen_BD48206446D5FE7F98FA029041FB7966");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyTagCheckResult_X__SetResultWhen_4A01DE5E44416E5367772483A2FEA838();
+	void __TAsyncResult__PsyTagCheckResult_X__SetResultWhen_BD48206446D5FE7F98FA029041FB7966();
 };
 
-// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__Copy_FD99C02C4008EAFE96EC1CBB8EE02C0E
+// Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__Copy_1B3A5A2346D599150E6AEF9912570F21
 // 0x0008 (0x0060 - 0x0068)
-class U__TAsyncResult__PsyTagCheckResult_X__Copy_FD99C02C4008EAFE96EC1CBB8EE02C0E : public UObject
+class U__TAsyncResult__PsyTagCheckResult_X__Copy_1B3A5A2346D599150E6AEF9912570F21 : public UObject
 {
 public:
 	class UTAsyncResult__PsyTagCheckResult_X*          Instance;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -19166,13 +19408,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__Copy_FD99C02C4008EAFE96EC1CBB8EE02C0E");
+			uClassPointer = UObject::FindClass("Class ProjectX.__TAsyncResult__PsyTagCheckResult_X__Copy_1B3A5A2346D599150E6AEF9912570F21");
 		}
 
 		return uClassPointer;
 	};
 
-	void __TAsyncResult__PsyTagCheckResult_X__Copy_FD99C02C4008EAFE96EC1CBB8EE02C0E(class UPsyTagCheckResult_X* R, class UError* E);
+	void __TAsyncResult__PsyTagCheckResult_X__Copy_1B3A5A2346D599150E6AEF9912570F21(class UPsyTagCheckResult_X* R, class UError* E);
 };
 
 // Class ProjectX.ClientNetMetrics_X
@@ -19202,8 +19444,8 @@ public:
 		return uClassPointer;
 	};
 
-	void __ClientNetMetrics_X__StartRecording_E59F59B24EBDD907C324D9827A1E166F(class UGameServerPinger_X* _);
-	void __ClientNetMetrics_X__StartRecording_C38C8A2E41C0240B1BD843B18CE658FA(class UGameServerPinger_X* _, float DelaySeconds);
+	void __ClientNetMetrics_X__StartRecording_3B1EF86B4EB104621D3C128E3A608CDF(class UGameServerPinger_X* _);
+	void __ClientNetMetrics_X__StartRecording_E5B1D0EA4F4CE0E35B7EFD96E744FB38(class UGameServerPinger_X* _, float DelaySeconds);
 	struct FPingStats CalcPingStats(TArray<float>& Pings);
 	void Record();
 	void RecordTimer();
@@ -19832,9 +20074,9 @@ public:
 
 };
 
-// Class ProjectX.__EpicFriendsPlugin_X__AddFriendWithCustomCallback_BE3CBF8B4E1D9FF55ACF93810E3490E7
+// Class ProjectX.__EpicFriendsPlugin_X__AddFriendWithCustomCallback_9C117B47460352F05E8D378EEE756EFA
 // 0x0060 (0x0060 - 0x00C0)
-class U__EpicFriendsPlugin_X__AddFriendWithCustomCallback_BE3CBF8B4E1D9FF55ACF93810E3490E7 : public UObject
+class U__EpicFriendsPlugin_X__AddFriendWithCustomCallback_9C117B47460352F05E8D378EEE756EFA : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19846,18 +20088,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__AddFriendWithCustomCallback_BE3CBF8B4E1D9FF55ACF93810E3490E7");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__AddFriendWithCustomCallback_9C117B47460352F05E8D378EEE756EFA");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicFriendsPlugin_X__AddFriendWithCustomCallback_BE3CBF8B4E1D9FF55ACF93810E3490E7(class UEOS_ManageFriendsListResponse* R, class UError* E);
+	void __EpicFriendsPlugin_X__AddFriendWithCustomCallback_9C117B47460352F05E8D378EEE756EFA(class UEOS_ManageFriendsListResponse* R, class UError* E);
 };
 
-// Class ProjectX.__EpicFriendsPlugin_X__RemoveFriend_4C782B554C4BA389686B4FB32CCF6328
+// Class ProjectX.__EpicFriendsPlugin_X__RemoveFriend_DD997C414CD6D2F76BC926873612B30E
 // 0x0048 (0x0060 - 0x00A8)
-class U__EpicFriendsPlugin_X__RemoveFriend_4C782B554C4BA389686B4FB32CCF6328 : public UObject
+class U__EpicFriendsPlugin_X__RemoveFriend_DD997C414CD6D2F76BC926873612B30E : public UObject
 {
 public:
 	struct FUniqueNetId                                FriendId;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19868,18 +20110,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__RemoveFriend_4C782B554C4BA389686B4FB32CCF6328");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__RemoveFriend_DD997C414CD6D2F76BC926873612B30E");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicFriendsPlugin_X__RemoveFriend_4C782B554C4BA389686B4FB32CCF6328(class UEOS_ManageFriendsListResponse* R, class UError* E);
+	void __EpicFriendsPlugin_X__RemoveFriend_DD997C414CD6D2F76BC926873612B30E(class UEOS_ManageFriendsListResponse* R, class UError* E);
 };
 
-// Class ProjectX.__EpicFriendsPlugin_X__AcceptFriendRequest_437548B2498B420CB580D481324EEFAB
+// Class ProjectX.__EpicFriendsPlugin_X__AcceptFriendRequest_9BFCE9BC4A23E2483F467C93476DB779
 // 0x0048 (0x0060 - 0x00A8)
-class U__EpicFriendsPlugin_X__AcceptFriendRequest_437548B2498B420CB580D481324EEFAB : public UObject
+class U__EpicFriendsPlugin_X__AcceptFriendRequest_9BFCE9BC4A23E2483F467C93476DB779 : public UObject
 {
 public:
 	struct FUniqueNetId                                FriendId;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19890,18 +20132,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__AcceptFriendRequest_437548B2498B420CB580D481324EEFAB");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__AcceptFriendRequest_9BFCE9BC4A23E2483F467C93476DB779");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicFriendsPlugin_X__AcceptFriendRequest_437548B2498B420CB580D481324EEFAB(class UEOS_ManageFriendsListResponse* R, class UError* E);
+	void __EpicFriendsPlugin_X__AcceptFriendRequest_9BFCE9BC4A23E2483F467C93476DB779(class UEOS_ManageFriendsListResponse* R, class UError* E);
 };
 
-// Class ProjectX.__EpicFriendsPlugin_X__RejectFriendRequest_5216E9AB46B0AEB4651D37B0D1BFC50D
+// Class ProjectX.__EpicFriendsPlugin_X__RejectFriendRequest_C4E14B5F45DB048FD78BF7AFF4F379E3
 // 0x0048 (0x0060 - 0x00A8)
-class U__EpicFriendsPlugin_X__RejectFriendRequest_5216E9AB46B0AEB4651D37B0D1BFC50D : public UObject
+class U__EpicFriendsPlugin_X__RejectFriendRequest_C4E14B5F45DB048FD78BF7AFF4F379E3 : public UObject
 {
 public:
 	struct FUniqueNetId                                FriendId;                                         		// 0x0060 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19912,18 +20154,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__RejectFriendRequest_5216E9AB46B0AEB4651D37B0D1BFC50D");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__RejectFriendRequest_C4E14B5F45DB048FD78BF7AFF4F379E3");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicFriendsPlugin_X__RejectFriendRequest_5216E9AB46B0AEB4651D37B0D1BFC50D(class UEOS_ManageFriendsListResponse* R, class UError* E);
+	void __EpicFriendsPlugin_X__RejectFriendRequest_C4E14B5F45DB048FD78BF7AFF4F379E3(class UEOS_ManageFriendsListResponse* R, class UError* E);
 };
 
-// Class ProjectX.__EpicFriendsPlugin_X__SendHTTPRequest_3B7978804DFCA2327E937E9B864364B0
+// Class ProjectX.__EpicFriendsPlugin_X__SendHTTPRequest_1978A0AE4C1853352446EDABE83218BA
 // 0x0048 (0x0060 - 0x00A8)
-class U__EpicFriendsPlugin_X__SendHTTPRequest_3B7978804DFCA2327E937E9B864364B0 : public UObject
+class U__EpicFriendsPlugin_X__SendHTTPRequest_1978A0AE4C1853352446EDABE83218BA : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19938,20 +20180,20 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__SendHTTPRequest_3B7978804DFCA2327E937E9B864364B0");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__SendHTTPRequest_1978A0AE4C1853352446EDABE83218BA");
 		}
 
 		return uClassPointer;
 	};
 
-	void ____EpicFriendsPlugin_X__SendHTTPRequest_3B7978804DFCA2327E937E9B864364B0____EpicFriendsPlugin_X__SendHTTPRequest_61F24ACC4799723D04B05BB6EAE97688_F4F4250A4CC9EFD10F76E2A9135B04A9(class UWebRequest_X* Response);
-	void __EpicFriendsPlugin_X__SendHTTPRequest_61F24ACC4799723D04B05BB6EAE97688(unsigned long bSuccess, struct FString EpicAuthTicket);
-	void __EpicFriendsPlugin_X__SendHTTPRequest_3B7978804DFCA2327E937E9B864364B0(class UWebRequest_X* Response);
+	void ____EpicFriendsPlugin_X__SendHTTPRequest_1978A0AE4C1853352446EDABE83218BA____EpicFriendsPlugin_X__SendHTTPRequest_CBD0F226408A00A417B763BA6F5890BC_0E3E7E8B44BA82C253FC3DB90E7D8B50(class UWebRequest_X* Response);
+	void __EpicFriendsPlugin_X__SendHTTPRequest_CBD0F226408A00A417B763BA6F5890BC(unsigned long bSuccess, struct FString EpicAuthTicket);
+	void __EpicFriendsPlugin_X__SendHTTPRequest_1978A0AE4C1853352446EDABE83218BA(class UWebRequest_X* Response);
 };
 
-// Class ProjectX.__EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_77ED111C415F9BBF476A808CDEA4CF49
+// Class ProjectX.__EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_8D3C133D4F5FD298958880BC75DC9CC9
 // 0x0018 (0x0060 - 0x0078)
-class U__EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_77ED111C415F9BBF476A808CDEA4CF49 : public UObject
+class U__EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_8D3C133D4F5FD298958880BC75DC9CC9 : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19962,18 +20204,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_77ED111C415F9BBF476A808CDEA4CF49");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_8D3C133D4F5FD298958880BC75DC9CC9");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_77ED111C415F9BBF476A808CDEA4CF49(class UEOS_GetAccountsResponse* R, class UError* E);
+	void __EpicFriendsPlugin_X__GetOutgoingFriendRequestsWithCustomCallback_8D3C133D4F5FD298958880BC75DC9CC9(class UEOS_GetAccountsResponse* R, class UError* E);
 };
 
-// Class ProjectX.__EpicLogin_X__TriggerAuthTicketDelegate_9A623FFB49AB911F88E7E081333BB472
+// Class ProjectX.__EpicLogin_X__TriggerAuthTicketDelegate_0EE3E61E463B5FC3E7CEC290CE46980F
 // 0x0060 (0x0060 - 0x00C0)
-class U__EpicLogin_X__TriggerAuthTicketDelegate_9A623FFB49AB911F88E7E081333BB472 : public UObject
+class U__EpicLogin_X__TriggerAuthTicketDelegate_0EE3E61E463B5FC3E7CEC290CE46980F : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -19985,18 +20227,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__TriggerAuthTicketDelegate_9A623FFB49AB911F88E7E081333BB472");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__TriggerAuthTicketDelegate_0EE3E61E463B5FC3E7CEC290CE46980F");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicLogin_X__TriggerAuthTicketDelegate_9A623FFB49AB911F88E7E081333BB472(unsigned long bSuccess, struct FString AuthTicket);
+	void __EpicLogin_X__TriggerAuthTicketDelegate_0EE3E61E463B5FC3E7CEC290CE46980F(unsigned long bSuccess, struct FString AuthTicket);
 };
 
-// Class ProjectX.__EpicLogin_X__HandleLoginChanged_F308C34B4F9E31D8359C9B9E6ACE0284
+// Class ProjectX.__EpicLogin_X__HandleLoginChanged_B081173F4E7FD69131C45B8429CB9248
 // 0x0001 (0x0060 - 0x0061)
-class U__EpicLogin_X__HandleLoginChanged_F308C34B4F9E31D8359C9B9E6ACE0284 : public UObject
+class U__EpicLogin_X__HandleLoginChanged_B081173F4E7FD69131C45B8429CB9248 : public UObject
 {
 public:
 	unsigned char                                      InLocalPlayerNum;                                 		// 0x0060 (0x0001) [0x0000000000000000]               
@@ -20007,18 +20249,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__HandleLoginChanged_F308C34B4F9E31D8359C9B9E6ACE0284");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__HandleLoginChanged_B081173F4E7FD69131C45B8429CB9248");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicLogin_X__HandleLoginChanged_F308C34B4F9E31D8359C9B9E6ACE0284();
+	void __EpicLogin_X__HandleLoginChanged_B081173F4E7FD69131C45B8429CB9248();
 };
 
-// Class ProjectX.__EpicLogin_X__RequestNintendoAccountAuthorization_126633EB432A085DAE15A6819B61CB3B
+// Class ProjectX.__EpicLogin_X__RequestNintendoAccountAuthorization_9923821F440F5498E79C2D848A1D9F8F
 // 0x0018 (0x0060 - 0x0078)
-class U__EpicLogin_X__RequestNintendoAccountAuthorization_126633EB432A085DAE15A6819B61CB3B : public UObject
+class U__EpicLogin_X__RequestNintendoAccountAuthorization_9923821F440F5498E79C2D848A1D9F8F : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -20029,18 +20271,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__RequestNintendoAccountAuthorization_126633EB432A085DAE15A6819B61CB3B");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__RequestNintendoAccountAuthorization_9923821F440F5498E79C2D848A1D9F8F");
 		}
 
 		return uClassPointer;
 	};
 
-	void __EpicLogin_X__RequestNintendoAccountAuthorization_126633EB432A085DAE15A6819B61CB3B(struct FString NintendoAccountToken);
+	void __EpicLogin_X__RequestNintendoAccountAuthorization_9923821F440F5498E79C2D848A1D9F8F(struct FString NintendoAccountToken);
 };
 
-// Class ProjectX.__EpicLogin_X__UpdateTwoFactorAuthenticationStatus_B2D9D53A4F2E41963EC75F92DD0B74AE
+// Class ProjectX.__EpicLogin_X__UpdateTwoFactorAuthenticationStatus_32B732D047611144492AC78B80CA3D6F
 // 0x0018 (0x0060 - 0x0078)
-class U__EpicLogin_X__UpdateTwoFactorAuthenticationStatus_B2D9D53A4F2E41963EC75F92DD0B74AE : public UObject
+class U__EpicLogin_X__UpdateTwoFactorAuthenticationStatus_32B732D047611144492AC78B80CA3D6F : public UObject
 {
 public:
 	struct FScriptDelegate                             Callback;                                         		// 0x0060 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -20051,14 +20293,14 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__UpdateTwoFactorAuthenticationStatus_B2D9D53A4F2E41963EC75F92DD0B74AE");
+			uClassPointer = UObject::FindClass("Class ProjectX.__EpicLogin_X__UpdateTwoFactorAuthenticationStatus_32B732D047611144492AC78B80CA3D6F");
 		}
 
 		return uClassPointer;
 	};
 
-	void ____EpicLogin_X__UpdateTwoFactorAuthenticationStatus_B2D9D53A4F2E41963EC75F92DD0B74AE____EpicLogin_X__UpdateTwoFactorAuthenticationStatus_B2D9D53A4F2E41963EC75F92DD0B74AE_562C48754BAD82CF3FE6BEA504B87C90(struct FString Ticket, struct FString Id, class UError* Err);
-	void __EpicLogin_X__UpdateTwoFactorAuthenticationStatus_B2D9D53A4F2E41963EC75F92DD0B74AE(unsigned long bSuccess, struct FString AuthTicket);
+	void ____EpicLogin_X__UpdateTwoFactorAuthenticationStatus_32B732D047611144492AC78B80CA3D6F____EpicLogin_X__UpdateTwoFactorAuthenticationStatus_32B732D047611144492AC78B80CA3D6F_56C2D1C04951FF76024A0A9456BF9F56(struct FString Ticket, struct FString Id, class UError* Err);
+	void __EpicLogin_X__UpdateTwoFactorAuthenticationStatus_32B732D047611144492AC78B80CA3D6F(unsigned long bSuccess, struct FString AuthTicket);
 };
 
 // Class ProjectX.RPC_GetAntiAddictionData_X
@@ -20126,8 +20368,8 @@ public:
 		return uClassPointer;
 	};
 
-	int __BlogConfig_X__Apply_F8B64C51435FA044A473E38D92D33B0C(class UBlogTile_X* L, class UBlogTile_X* R);
-	void __BlogConfig_X__Apply_A7A8EC0B41FE10F540A752B5345985D9(class UBlogTile_X* X);
+	int __BlogConfig_X__Apply_5E4D9FB1471F7097F7B129BD1C116D07(class UBlogTile_X* L, class UBlogTile_X* R);
+	void __BlogConfig_X__Apply_6B4BCA0D49A13536FF8248AE6617EDDB(class UBlogTile_X* X);
 	void Apply();
 };
 
@@ -20176,9 +20418,9 @@ public:
 
 };
 
-// Class ProjectX.____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1_0C50A7F64A8D8B36197D3E91962BA507
+// Class ProjectX.____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A_647264B2495B51C4AD3327B4D8FF47DC
 // 0x0178 (0x0060 - 0x01D8)
-class U____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1_0C50A7F64A8D8B36197D3E91962BA507 : public UObject
+class U____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A_647264B2495B51C4AD3327B4D8FF47DC : public UObject
 {
 public:
 	struct FPartyMember                                PM;                                               		// 0x0060 (0x0178) [0x0000000000400000] (CPF_NeedCtorLink)
@@ -20189,18 +20431,18 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1_0C50A7F64A8D8B36197D3E91962BA507");
+			uClassPointer = UObject::FindClass("Class ProjectX.____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A_647264B2495B51C4AD3327B4D8FF47DC");
 		}
 
 		return uClassPointer;
 	};
 
-	bool ____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1____OnlineGameParty_X__UpdatePartyInfo_3DF5334B4FB29E0C5FD06992AEDA77A1_0C50A7F64A8D8B36197D3E91962BA507(struct FLobbyMember LM);
+	bool ____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A____OnlineGameParty_X__UpdatePartyInfo_181C0AB3403D6466B9293A950F4CB37A_647264B2495B51C4AD3327B4D8FF47DC(struct FLobbyMember LM);
 };
 
-// Class ProjectX.____OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C3D433EC4649428BEBA56193F14CB51C_16CEB4084D889305AF8690AD6911A91E
+// Class ProjectX.____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161____OnlinePlayerStorageQueue_X__HandleStorageSuccess_1A8FD8374EFC1B38AAF7D18F6F525C30_9FFA291B49A5A99817A9EAB73E41DC5B
 // 0x0010 (0x0060 - 0x0070)
-class U____OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C3D433EC4649428BEBA56193F14CB51C_16CEB4084D889305AF8690AD6911A91E : public UObject
+class U____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161____OnlinePlayerStorageQueue_X__HandleStorageSuccess_1A8FD8374EFC1B38AAF7D18F6F525C30_9FFA291B49A5A99817A9EAB73E41DC5B : public UObject
 {
 public:
 	struct FSetPlayerStorageResultItem                 R;                                                		// 0x0060 (0x0010) [0x0000000000000000]               
@@ -20211,13 +20453,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class ProjectX.____OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C3D433EC4649428BEBA56193F14CB51C_16CEB4084D889305AF8690AD6911A91E");
+			uClassPointer = UObject::FindClass("Class ProjectX.____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161____OnlinePlayerStorageQueue_X__HandleStorageSuccess_1A8FD8374EFC1B38AAF7D18F6F525C30_9FFA291B49A5A99817A9EAB73E41DC5B");
 		}
 
 		return uClassPointer;
 	};
 
-	bool ____OnlinePlayerStorageQueue_X__HandleStorageSuccess_A34F614D4BE5191A21FD138F3A987982____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C3D433EC4649428BEBA56193F14CB51C_16CEB4084D889305AF8690AD6911A91E(struct FPendingStorage P);
+	bool ____OnlinePlayerStorageQueue_X__HandleStorageSuccess_C9FB861E4720BBF9D916E093C6BC4161____OnlinePlayerStorageQueue_X__HandleStorageSuccess_1A8FD8374EFC1B38AAF7D18F6F525C30_9FFA291B49A5A99817A9EAB73E41DC5B(struct FPendingStorage P);
 };
 
 /*

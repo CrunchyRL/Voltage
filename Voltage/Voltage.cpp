@@ -133,9 +133,14 @@ struct FColor fcolor(FLinearColor lincolor)
 	return fcolor;
 }
 
+struct FLinearColor flincolor(FColor color)
+{
+	return Utils::GetInstanceOf<UProductPaint_TA>()->ColorToLinearColor(color);
+}
+
 struct FLinearColor flincolor(unsigned char r, unsigned char g, unsigned char b)
 {
-	return Utils::GetDefaultInstanceOf<UObject>()->ColorToLinearColor(FColor{r, g, b});
+	return Utils::GetInstanceOf<UProductPaint_TA>()->ColorToLinearColor(FColor{r, g, b});
 }
 
 class UProduct_TA* Voltage::GetProductFromId(const int32_t& productId)
@@ -213,79 +218,50 @@ bool Voltage::areGNamesValid()
 unsigned long long Voltage::newInstanceID()
 {
 	++largestInstanceID;
-	spawneditemsInstanceIds.push_back(largestInstanceID);
+	spawneditemsInstanceIds.Add(largestInstanceID);
 	return largestInstanceID;
 }
 
 void Voltage::checkUserAuthed()
 {
-	std::ofstream ofile("authedusers.txt");
+	unsigned long long steamid = gameWrapper->GetSteamID();
+	std::string epicid = gameWrapper->GetEpicID();
 
-	ofile.clear();
-
-	ofile << "Error! Couldn't Download the File :(" << std::endl;
-	ofile << crunchysteamid << std::endl;
-
-	ofile.close();
-
-	const wchar_t* srcURL;
-	srcURL = L"https://pastebin.com/raw/zj4ktJam"; 
-	if (srcURL != L"https://pastebin.com/raw/zj4ktJam")
-		return;
-	const wchar_t* destFile = L"authedusers.txt";
-	URLDownloadToFile(NULL, srcURL, destFile, 0, NULL);
-
-	std::ifstream file("authedusers.txt");
-
-	if (file.is_open())
+	if (steamid == 76561198252921625)
 	{
-		std::string index;
-		std::unordered_set<std::string> names;
-		while (file >> index)
-		{
-			names.insert(index);
-		}
-		file.close();
-
-		userAuthorized = false;
-		if (gameWrapper->IsUsingSteamVersion())
-		{
-			if (names.find(std::to_string(gameWrapper->GetSteamID())) != names.end())
-			{
-				userAuthorized = true;
-			}
-			else if (gameWrapper->GetSteamID() == 76561198198599905)
-			{
-				userAuthorized = true;
-			}
-			else if (gameWrapper->GetSteamID() == 76561199041479774)
-			{
-				userAuthorized = true;
-			}
-			else if (gameWrapper->GetSteamID() == 76561199070685139)
-			{
-				userAuthorized = true;
-			}
-			else if (gameWrapper->GetSteamID() == 76561199000420814)
-			{
-				userAuthorized = true;
-			}
-			else if (gameWrapper->GetSteamID() == 76561198802144166)
-			{
-				userAuthorized = true;
-			}
-		}
-		if (gameWrapper->IsUsingEpicVersion())
-		{
-			if (names.find(gameWrapper->GetEpicID()) != names.end())
-			{
-				userAuthorized = true;
-			}
-			else if (gameWrapper->GetEpicID() == "4d2214d764294baf8c9b00131f21c3c5")
-			{
-				userAuthorized = true;
-			}
-		}
+		userAuthorized = true;
+	}
+	else if (steamid == 76561198210519021)
+	{
+		userAuthorized = true;
+	}
+	else if (steamid == 76561198931552275)
+	{
+		userAuthorized = true;
+	}
+	else if (steamid == 76561198060874771)
+	{
+		userAuthorized = true;
+	}
+	else if (steamid == 76561198385919252)
+	{
+		userAuthorized = true;
+	}
+	else if (steamid == 76561199077431566)
+	{
+		userAuthorized = true;
+	}
+	else if (steamid == 76561198893029666)
+	{
+		userAuthorized = true;
+	}
+	else if (steamid == 76561199007508407)
+	{
+		userAuthorized = true;
+	}
+	else if (epicid == "6fbb9b15ad664f2aa9e84cd49ae4eac5")
+	{
+		userAuthorized = true;
 	}
 }
 
@@ -318,19 +294,19 @@ void Voltage::onLoad()
 		{
 			Console.Success(Console.GetTimestamp(true) + "[Authorization] User is authorized");
 		}
+		if (gameWrapper->IsUsingEpicVersion())
+		{
+			uintptr_t entryPoint = reinterpret_cast<uintptr_t>(GetModuleHandle(NULL));
+			uintptr_t GObjectsAddress = entryPoint + EPICGObjects_Offset;
+			uintptr_t GNamesAddress = entryPoint + EPICGNames_Offset;
+			GObjects = reinterpret_cast<TArray<UObject*>*>(GObjectsAddress);
+			GNames = reinterpret_cast<TArray<FNameEntry*>*>(GNamesAddress);
+		}
 		if (gameWrapper->IsUsingSteamVersion())
 		{
 			uintptr_t entryPoint = reinterpret_cast<uintptr_t>(GetModuleHandle(NULL));
 			uintptr_t GObjectsAddress = entryPoint + STEAMGObjects_Offset;
 			uintptr_t GNamesAddress = entryPoint + STEAMGNames_Offset;
-			GObjects = reinterpret_cast<TArray<UObject*>*>(GObjectsAddress);
-			GNames = reinterpret_cast<TArray<FNameEntry*>*>(GNamesAddress);
-		}
-		else
-		{
-			uintptr_t entryPoint = reinterpret_cast<uintptr_t>(GetModuleHandle(NULL));
-			uintptr_t GObjectsAddress = entryPoint + EPICGObjects_Offset;
-			uintptr_t GNamesAddress = entryPoint + EPICGNames_Offset;
 			GObjects = reinterpret_cast<TArray<UObject*>*>(GObjectsAddress);
 			GNames = reinterpret_cast<TArray<FNameEntry*>*>(GNamesAddress);
 		}
@@ -406,21 +382,6 @@ void Voltage::onLoad()
 							{
 								selectedtitlenum = playertitles->SelectedTitle;
 							}
-							//if (gameWrapper->GetSteamID() == crunchysteamid)
-							//{
-							//	if (count.I != selectedtitlenum)
-							//	{
-							//		count.I = selectedtitlenum;
-							//		if (bSetCustomTitle)
-							//		{
-							//			dataStore->SetStringValue(t, count.I, L"Text", L"Voltage Developer");
-							//			dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(173, 216, 230));
-							//			dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(173, 216, 230));
-							//		}
-							//	}
-							//}
-							//else
-							//{
 							if (count.I != selectedtitlenum)
 							{
 								count.I = selectedtitlenum;
@@ -439,7 +400,6 @@ void Voltage::onLoad()
 									dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
 								}
 							}
-							//}
 						}
 					}
 				});
@@ -456,18 +416,6 @@ void Voltage::onLoad()
 					}
 					FName t = FName(L"PlayerTitlesPlayerTitles");
 					FASValue count;
-					//if (gameWrapper->GetSteamID() == 76561198252921625)
-					//{
-					//	count.I = selectedtitlenum;
-					//	if (bSetCustomTitle)
-					//	{
-					//		dataStore->SetStringValue(t, count.I, L"Text", L"Voltage Developer");
-					//		dataStore->SetIntValue(t, count.I, L"Color", rgbtoint(173, 216, 230));
-					//		dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(173, 216, 230));
-					//	}
-					//}
-					//else
-					//{
 					if (count.I != selectedtitlenum)
 					{
 						count.I = selectedtitlenum;
@@ -487,7 +435,6 @@ void Voltage::onLoad()
 							dataStore->SetIntValue(t, count.I, L"GlowColor", rgbtoint(CustomTitleGlowColorR, CustomTitleGlowColorG, CustomTitleGlowColorB));
 						}
 					}
-					//}
 				});
 		}
 		else
@@ -565,6 +512,7 @@ void Voltage::loadInstances(bool log)
 	if (classesSafe)
 	{
 		SaveData = Utils::GetInstanceOf<USaveData_TA>();
+		SaveData->bEnableOnlineData = false;
 		ProductDatabase = Utils::GetInstanceOf<UProductDatabase_TA>();
 		DLCProductCache = Utils::GetInstanceOf<UOnlineDLCProductCache_TA>();
 		titleConfig = Utils::GetInstanceOf<UPlayerTitleConfig_X>();
@@ -606,7 +554,7 @@ void Voltage::loadInstances(bool log)
 			ownedProducts.clear();
 			ownedDLCs.clear();
 			largestInstanceID = 0;
-			spawneditemsInstanceIds.clear();
+			spawneditemsInstanceIds.Clear();
 			std::vector<unsigned long long> instanceIds;
 
 			for (int i = 0; i < DLCProductCache->GeneratedProducts.Num(); i++)
@@ -634,7 +582,18 @@ void Voltage::loadInstances(bool log)
 				ownedProducts.push_back(onlineProduct->ProductID);
 			}
 
-			std::sort(spawneditemsInstanceIds.begin(), spawneditemsInstanceIds.end());
+			std::vector<unsigned long long> siidv;
+			siidv.clear();
+
+			for (unsigned long long& iid : spawneditemsInstanceIds)
+			{
+				siidv.push_back(iid);
+			}
+			std::sort(siidv.begin(), siidv.end());
+			for (unsigned long long& iid : siidv)
+			{
+				spawneditemsInstanceIds.Add(iid);
+			}
 			std::sort(ownedProducts.begin(), ownedProducts.end());
 			std::sort(instanceIds.begin(), instanceIds.end());
 			largestInstanceID = instanceIds.back();
@@ -759,41 +718,32 @@ void Voltage::dumpObjectsForClass(UClass* StaticClass)
 			Console.Error("[Authorization] User is not authorized!");
 			return;
 		}
+		std::ofstream file(VoltageFolder.u8string() + "\\" + StaticClass->GetName() + "-Dump.txt");
 
-		if (ProductDatabase)
+		int totalFunctions = 0;
+
+		for (UObject* uObject : *UObject::GObjObjects())
 		{
-			std::ofstream file(VoltageFolder.u8string() + "\\objects.txt");
-
-			int totalFunctions = 0;
-
-			for (UObject* uObject : *UObject::GObjObjects())
+			if (uObject)
 			{
-				if (uObject)
+				if (uObject->IsA(StaticClass))
 				{
-					if (uObject->IsA(StaticClass))
-					{
-						file << uObject->GetFullName() << "\n";
-						totalFunctions++;
-					}
+					file << uObject->GetFullName() << "\n";
+					totalFunctions++;
 				}
 			}
+		}
 
-			file.close();
+		file.close();
 
-			if (totalFunctions > 0)
-			{
-				Console.Success("Successfully Dumped " + std::to_string(totalFunctions) + " objects to \"objects.txt\" Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
-			}
-			else
-			{
-				classesSafe = false;
-				Console.Error("Error: RLSDK Classes are wrong, please contact Crunchy!");
-			}
+		if (totalFunctions > 0)
+		{
+			Console.Success("Successfully Dumped " + std::to_string(totalFunctions) + " objects to " + StaticClass->GetName() + "-Dump.txt" + " Located in Your RocketLeague Folder/Binaries/Win64/Voltage!");
 		}
 		else
 		{
-			Console.Error("Error: Could not find \"UProductDatabase_TA\", please contact Crunchy if he doesn't already know!");
 			classesSafe = false;
+			Console.Error("Error: RLSDK Classes are wrong, please contact Crunchy!");
 		}
 	}
 	else
@@ -1228,16 +1178,105 @@ void Voltage::userGivePaintedProduct(std::vector<std::string> params)
 
 void Voltage::revealSequence()
 {
-	UMenuSequence_PremiumGarageReveal_TA* premiumgaragereveal = Utils::GetInstanceOf<UMenuSequence_PremiumGarageReveal_TA>();
-	if (premiumgaragereveal) {
-		Console.Notify("Found UMenuSequence_PremiumGarageReveal_TA");
-		UMenuSequence_TA* menusequence = Utils::GetInstanceOf<UMenuSequence_TA>();
-		if (menusequence) {
-			Console.Notify("Found UMenuSequence_TA");
-			premiumgaragereveal->EnterFadeOut();
-			premiumgaragereveal->EnterSequence(menusequence);
+	UGFxData_MenuSequence_TA* menusequence = Utils::GetInstanceOf<UGFxData_MenuSequence_TA>();
+	if (menusequence)
+	{
+		/*for (FMenuSequencePair& menuseq : menusequence->MenuStack)
+		{
+			Console.Write(menuseq.MenuSequence.ToString());
+		}*/
+		menusequence->SetMenuSequence(L"PremiumGarage_Reveal");
+	}
+}
+
+void Voltage::menuSequence()
+{
+	UGFxData_MenuSequence_TA* menusequence = Utils::GetInstanceOf<UGFxData_MenuSequence_TA>();
+	if (menusequence)
+	{
+		/*for (FMenuSequencePair& menuseq : menusequence->MenuStack)
+		{
+			Console.Write(menuseq.MenuSequence.ToString());
+		}*/
+		menusequence->SetMenuSequence(L"MainMenu");
+	}
+}
+
+void Voltage::doReveal(UOnlineProduct_TA* revealProduct)
+{
+	UPremiumGaragePreviewSet_TA * premiumgarage = Utils::GetInstanceOf<UPremiumGaragePreviewSet_TA>();
+	revealSequence();
+	premiumgarage->DoReveal(revealProduct, 1);
+	gameWrapper->HookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished", [this](...)
+		{
+			spawnProductCRATEITEMS(crateitem, crateitem_paint);
+			menuSequence();
+
+			UPremiumGaragePreviewSet_TA* premiumgarage = Utils::GetInstanceOf<UPremiumGaragePreviewSet_TA>();
+			premiumgarage->FinishReveal();
+		});
+}
+
+std::vector<int> Voltage::getCrateProducts(std::string crateName)
+{
+	int AccoladeItems[25] = { 5104, 4916, 5774, 5955, 6117, 6191, 6192, 1067, 5421, 4653,4653,4653,4653,4653, 5352,5352,5352,5352,5352, 5124, 5124, 5124, 6252, 6252, 6252 };
+	int FanRewards[40] = { 4078,4078,4078,4078,4078,4078,4078, 3986, 3953, 4894, 4894, 4894, 4894, 4894, 4894, 4894, 4894, 4894, 5607, 5607, 5607,5607, 5607, 5607, 2791, 1744, 4838, 5417, 1743, 5462, 4002, 5618, 4905, 4254, 5593, 4482, 4361, 5619, 5590, 2734 };
+	int PlayersChoiceItems[49] = { 1059, 1059, 1059, 1059, 1059, 1059, 1059, 2693, 2693, 2693, 2693, 2693, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 1980, 1980, 1980, 1423, 2819, 1975, 1951, 1856, 2853, 2837, 1661, 1580, 2614, 2854, 2966, 3239, 3453 };
+	int Imports[14] = { 35, 36, 45, 52, 44, 62, 63, 53, 23, 22, 30, 25, 31, 28, };
+	int BeachBlast[34] = { 2337, 2337, 2337, 2337, 2458, 2458, 2458, 2458, 2596, 2596, 2596, 2596, 2596, 2627, 2627, 2627, 2627, 2627, 1777, 1777, 1777, 1777, 2474, 2880, 2513, 2904, 2956, 2918, 2922, 2854, 2966, 3239, 3453 };
+	std::vector<int> blackmarkets;
+	for (UProduct_TA* produc : ProductDatabase->Products_New)
+	{
+		if (!produc)
+			continue;
+
+		if (produc->Quality == 6)
+			blackmarkets.push_back(produc->GetID());
+	}
+
+	std::vector<int> finalproducts;
+
+	if (crateName == "tournament")
+	{
+		for (int i = 0; i < 25; i++)
+		{
+			finalproducts.push_back(AccoladeItems[i]);
 		}
 	}
+	if (crateName == "fanrewards")
+	{
+		for (int i = 0; i < 40; i++)
+		{
+			finalproducts.push_back(FanRewards[i]);
+		}
+	}
+	if (crateName == "playerschoice")
+	{
+		for (int i = 0; i < 49; i++)
+		{
+			finalproducts.push_back(PlayersChoiceItems[i]);
+		}
+	}
+	if (crateName == "imports")
+	{
+		for (int i = 0; i < 14; i++)
+		{
+			finalproducts.push_back(Imports[i]);
+		}
+	}
+	if (crateName == "beachblast")
+	{
+		for (int i = 0; i < 34; i++)
+		{
+			finalproducts.push_back(BeachBlast[i]);
+		}
+	}
+	if (crateName == "blackmarkets")
+	{
+		return blackmarkets;
+	}
+
+	return finalproducts;
 }
 
 void Voltage::cratesim(std::vector<std::string> params)
@@ -1253,7 +1292,6 @@ void Voltage::cratesim(std::vector<std::string> params)
 		if (Utils::GetInstanceOf<UOnline_X>()->IsInMainMenu())
 		{
 			UPremiumGaragePreviewSet_TA* premiumgarage = Utils::GetInstanceOf<UPremiumGaragePreviewSet_TA>();
-			auto turntable = premiumgarage->GetTurntable();
 			crateitem = 0;
 			crateitem_paint = 0;
 			if (params.size() == 2)
@@ -1261,102 +1299,91 @@ void Voltage::cratesim(std::vector<std::string> params)
 				if (params[1].compare("tournament") == 0)
 				{
 					gameWrapper->UnhookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished");
-					int paintValues[21] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-					int AccoladeItems[25] = { 5826, 4869, 5935, 5851, 5589, 5908, 5930, 5418, 5755, 5173,5173,5173,5173,5173, 4703,4703,4703,4703,4703, 5994, 5994, 5994, 5994, 5994, 5994 };
+					int AccoladeItems[25] = { 5104, 4916, 5774, 5955, 6117, 6191, 6192, 1067, 5421, 4653,4653,4653,4653,4653, 5352,5352,5352,5352,5352, 5124, 5124, 5124, 6252, 6252, 6252 };
 					crateitem = AccoladeItems[rand() % 25];
 					crateitem_paint = paintValues[rand() % 21];
 
 					UOnlineProduct_TA* revealproduct = Utils::GetDefaultInstanceOf<UOnlineProduct_TA>();
 					revealproduct->ProductID = crateitem;
-					revealproduct->InstanceID = newInstanceID();
-					revealproduct->AddedTimestamp = 0;
-
-					revealSequence();
-					premiumgarage->DoReveal(revealproduct, 1);
-					gameWrapper->HookEventWithCaller<ServerWrapper>("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished", [this](ServerWrapper sw, void* params, std::string eventName)
-						{
-							for (int i = 0; i < 1; i++)
-							{
-								spawnProductCRATEITEMS(crateitem, crateitem_paint);
-							}
-						});
+					doReveal(revealproduct);
 				}
 				if (params[1].compare("fanrewards") == 0)
 				{
 					gameWrapper->UnhookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished");
-					int paintValues[21] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 					int FanRewards[40] = { 4078,4078,4078,4078,4078,4078,4078, 3986, 3953, 4894, 4894, 4894, 4894, 4894, 4894, 4894, 4894, 4894, 5607, 5607, 5607,5607, 5607, 5607, 2791, 1744, 4838, 5417, 1743, 5462, 4002, 5618, 4905, 4254, 5593, 4482, 4361, 5619, 5590, 2734 };
 					crateitem = FanRewards[rand() % 40];
 					crateitem_paint = paintValues[rand() % 21];
-					revealSequence();
-					premiumgarage->DoReveal(NULL, 1);
-					gameWrapper->HookEventWithCaller<ServerWrapper>("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished", [this](ServerWrapper sw, void* params, std::string eventName)
-						{
-							for (int i = 0; i < 1; i++)
-							{
-								spawnProductCRATEITEMS(crateitem, crateitem_paint);
-							}
-						});
+
+					doReveal(NULL);
 				}
 				if (params[1].compare("playerschoice") == 0)
 				{
 					gameWrapper->UnhookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished");
-					int paintValues[21] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 					int PlayersChoiceItems[49] = { 1059, 1059, 1059, 1059, 1059, 1059, 1059, 2693, 2693, 2693, 2693, 2693, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 1955, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 2551, 1980, 1980, 1980, 1423, 2819, 1975, 1951, 1856, 2853, 2837, 1661, 1580, 2614, 2854, 2966, 3239, 3453 };
 					crateitem = PlayersChoiceItems[rand() % 49];
 					crateitem_paint = paintValues[rand() % 21];
 
 					UOnlineProduct_TA* revealproduct = Utils::GetDefaultInstanceOf<UOnlineProduct_TA>();
 					revealproduct->ProductID = crateitem;
-					revealproduct->InstanceID = newInstanceID();
-					revealproduct->AddedTimestamp = 0;
-
-					revealSequence();
-					premiumgarage->DoReveal(revealproduct, 1);
-					turntable->RevealProduct = revealproduct;
-					gameWrapper->HookEventWithCaller<ServerWrapper>("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished", [this](ServerWrapper sw, void* params, std::string eventName)
-						{
-							for (int i = 0; i < 1; i++)
-							{
-								spawnProductCRATEITEMS(crateitem, crateitem_paint);
-							}
-						});
+					doReveal(revealproduct);
 				}
 				if (params[1].compare("ncvrtradeup") == 0)
 				{
 					gameWrapper->UnhookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished");
-					int paintValues[21] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 					int Imports[14] = { 35, 36, 45, 52, 44, 62, 63, 53, 23, 22, 30, 25, 31, 28, };
 					crateitem = Imports[rand() % 14];
 					crateitem_paint = paintValues[rand() % 21];
 
 					UOnlineProduct_TA* revealproduct = Utils::GetDefaultInstanceOf<UOnlineProduct_TA>();
-					revealproduct->ProductID = 5266;
-					revealproduct->InstanceID = newInstanceID();
-					revealproduct->AddedTimestamp = 0;
-
-					revealSequence();
-					premiumgarage->DoReveal(revealproduct, 1);
-					gameWrapper->HookEventWithCaller<ServerWrapper>("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished", [this](ServerWrapper sw, void* params, std::string eventName)
-						{
-							for (int i = 0; i < 1; i++)
-							{
-								spawnProductCRATEITEMS(crateitem, crateitem_paint);
-							}
-						});
+					revealproduct->ProductID = 271;
+					doReveal(revealproduct);
 				}
 				if (params[1].compare("titles") == 0)
 				{
 					gameWrapper->UnhookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished");
 					revealSequence();
+
 					premiumgarage->DoReveal(NULL, 1);
-					gameWrapper->HookEventWithCaller<ServerWrapper>("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished", [this](ServerWrapper sw, void* params, std::string eventName)
+					gameWrapper->HookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished", [this](...)
 						{
-							for (int i = 0; i < 1; i++)
-							{
-								GiveTitle(TitleIDs[rand() % 343]);
-							}
+							GiveTitle(TitleIDs[rand() % 343]);
+							menuSequence();
+
+							UPremiumGaragePreviewSet_TA* premiumgarage = Utils::GetInstanceOf<UPremiumGaragePreviewSet_TA>();
+							premiumgarage->FinishReveal();
 						});
+				}
+				if (params[1].compare("beachblast") == 0)
+				{
+					gameWrapper->UnhookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished");
+					int BeachBlast[34] = { 2337, 2337, 2337, 2337, 2458, 2458, 2458, 2458, 2596, 2596, 2596, 2596, 2596, 2627, 2627, 2627, 2627, 2627, 1777, 1777, 1777, 1777, 2474, 2880, 2513, 2904, 2956, 2918, 2922, 2854, 2966, 3239, 3453 };
+					crateitem = BeachBlast[rand() % 34];
+					crateitem_paint = paintValues[rand() % 21];
+
+					UOnlineProduct_TA* revealproduct = Utils::GetDefaultInstanceOf<UOnlineProduct_TA>();
+					revealproduct->ProductID = crateitem;
+					doReveal(revealproduct);
+				}
+				if (params[1].compare("bmdrop") == 0)
+				{
+					gameWrapper->UnhookEvent("Function TAGame.PremiumGaragePreviewSet_TA.OnRevealFinished");
+					std::vector<int> blackmarkets;
+					for (UProduct_TA* produc : ProductDatabase->Products_New)
+					{
+						if (!produc)
+							continue;
+
+						if (produc->Quality == 6)
+							blackmarkets.push_back(produc->GetID());
+					}
+					crateitem = blackmarkets[rand() % blackmarkets.size()];
+					crateitem_paint = paintValues[rand() % 21];
+
+					UOnlineProduct_TA* revealproduct = Utils::GetDefaultInstanceOf<UOnlineProduct_TA>();
+					revealproduct->ProductID = crateitem;
+					revealproduct->InstanceID = newInstanceID();
+
+					doReveal(revealproduct);
 				}
 
 			}
@@ -1629,9 +1656,25 @@ UTexture* GetCustomTexture(std::string customTexturePath)
 	image->LoadForCanvas();
 	auto realImage = image->GetCanvasTex();
 	UTexture* customTexture = reinterpret_cast<UTexture*>(realImage);
-	UOnlineImageDownloaderWeb* onlineimagedownload = Utils::GetInstanceOf<UOnlineImageDownloaderWeb>();
-
 	return customTexture;
+
+	/*
+	UFileSystem* filesystem = Utils::GetDefaultInstanceOf<UFileSystem>();
+		if (filesystem)
+		{
+			Console.Notify("Found UFileSystem");
+			UTexture2DDynamic* anyTexture = Utils::GetDefaultInstanceOf<UTexture2DDynamic>();
+			UTexture2DDynamic* customTexture = anyTexture->Create(128, 128, (unsigned char)EPixelFormat::PF_A8R8G8B8, true);
+			TArray<unsigned char> customTextureBytes;
+			if (filesystem->LoadFileToBytes(Utils::to_fstring(VoltageFolder.u8string() + "\\testytest_128x128.png"), 0, 65536, customTextureBytes))
+			{
+				Console.Success("loaded le file into bytes successfully!!");
+				customTexture->UpdateMipFromPNG(0, customTextureBytes);
+			}
+
+			replaceAds(customTexture, customTexture, customTexture, customTexture);
+		}
+	*/
 }
 
 UTexture* Voltage::DownloadTexture(const char* url, const wchar_t* fileName)
@@ -1741,13 +1784,59 @@ void Voltage::replaceAds(UTexture* billboards1, UTexture* billboards2, UTexture*
 	}
 }
 
+UMaterialInstanceConstant* FindMIC(UTexture* texturetofind)
+{
+	for (UMaterialInstanceConstant* matconst : Utils::GetAllInstancesOf<UMaterialInstanceConstant>())
+	{
+		if (matconst)
+		{
+			for (FTextureParameterValue& textureparam : matconst->TextureParameterValues)
+			{
+				if (textureparam.ParameterValue == texturetofind)
+				{
+					return matconst;
+				}
+
+				return nullptr;
+			}
+		}
+		return nullptr;
+	}
+
+	return nullptr;
+}
+
+TArray<UMaterialInstanceConstant*> banners;
+
+void replaceAllAds(UTexture* ads)
+{
+	static FName paramName(L"AdTexture");
+
+	for (UMaterialInstanceConstant* mic : banners)
+	{
+		if (mic)
+		{
+			UTexture* outTexture = nullptr;
+			
+			if (mic->GetTextureParameterValue(paramName, outTexture))
+			{
+				mic->SetTextureParameterValue(paramName, ads);
+			}
+		}
+	}
+}
+
 TArray<UGFxData_TeamInfo_TA*> teaminfos;
+std::vector<UTexture*>adtextrures;
 
 unsigned char red1 = 255;
 unsigned char green1 = 0;
 unsigned char blue1 = 0;
 
-int ViewId = 0;
+int ahudtick = 0;
+int adtick = 0;
+
+using std::vector; using std::string; using std::ios;
 
 void Voltage::debug()
 {
@@ -1766,6 +1855,54 @@ void Voltage::debug()
 		Console.Error("(Debug) Error: RLSDK classes are wrong, please contact Crunchy if he doesn't already know!");
 	}
 }
+
+/*
+		UGFxData_TradeLobby_TA* tradeLobby = Utils::GetInstanceOf<UGFxData_TradeLobby_TA>();
+		if (tradeLobby)
+		{
+			TArray<UOnlineProduct_TA*> remoteoffers = tradeLobby->GetProductOfferings(tradeLobby->RemoteProductSet);
+			TArray<UOnlineProduct_TA*> localoffers = tradeLobby->GetProductOfferings(tradeLobby->ProductTransactions->TransactionProductSet);
+
+			Console.Write(" ");
+			Console.Write("Your Offerings: ");
+			for (UOnlineProduct_TA* product : localoffers)
+			{
+				UProductAttribute_Painted_TA* paintedAttribute = (UProductAttribute_Painted_TA*)product->GetAttribute(UProductAttribute_Painted_TA::StaticClass());
+				UPaintDatabase_TA* paintdb = Utils::GetInstanceOf<UPaintDatabase_TA>();
+
+				if (paintedAttribute != nullptr && paintdb != nullptr)
+				{
+					Console.Write(product->GetLongLabel().ToString() + "(" + paintdb->Paints[paintedAttribute->PaintID]->Label.ToString() + ")");
+				}
+				else
+				{
+					Console.Write(product->GetLongLabel().ToString());
+				}
+
+				if (std::find(spawneditemsInstanceIds.begin(), spawneditemsInstanceIds.end(), product->InstanceID) != spawneditemsInstanceIds.end())
+				{
+					Console.Write("^ Voltage Item", TextColors::Blue);
+				}
+			}
+			Console.Write(" ");
+			Console.Write(tradeLobby->GetRemotePlayerName().ToString() + "'s Offerings: ");
+			for (UOnlineProduct_TA* product : remoteoffers)
+			{
+				UProductAttribute_Painted_TA* paintedAttribute = (UProductAttribute_Painted_TA*)product->GetAttribute(UProductAttribute_Painted_TA::StaticClass());
+				UPaintDatabase_TA* paintdb = Utils::GetInstanceOf<UPaintDatabase_TA>();
+
+				if (paintedAttribute != nullptr && paintdb != nullptr)
+				{
+					Console.Write(product->GetLongLabel().ToString() + "(" + paintdb->Paints[paintedAttribute->PaintID]->Label.ToString() + ")");
+				}
+				else
+				{
+					Console.Write(product->GetLongLabel().ToString());
+				}
+			}
+		}
+*/
+
 /* CGT Textures */
 // doesnt download the textures so i wouldnt recommend useing this, it was for when i was first figuring out custom textures..
 void Voltage::SetCGTTextures()
@@ -2437,9 +2574,9 @@ void Voltage::renderMiscTab()
 					}
 
 					FPlayerSeasonRewardProgress progress;
-					progress.PlayerID = SaveData->GetOnlinePlayer()->PlayerID;
-					progress.Level = setSeasonRewardID;
-					progress.Wins = 10;
+					progress.PlayerID = Utils::GetUniqueID();
+					progress.SeasonLevel = setSeasonRewardID;
+					progress.SeasonLevelWins = 10;
 
 					FUpdatedPlayerSkillRating rating;
 					rating.Tier = setRankID;
@@ -2448,7 +2585,7 @@ void Voltage::renderMiscTab()
 					rating.MMR = 3466;
 					rating.Sigma = 3466;
 					rating.Mu = 3466;
-					rating.PlayerID = SaveData->GetOnlinePlayer()->PlayerID;
+					rating.PlayerID = Utils::GetUniqueID();
 					rating.PrevMu = 3466;
 					rating.PrevSigma = 3466;
 					rating.PrevTier = setRankID;
@@ -2701,7 +2838,7 @@ void Voltage::renderItemmodTab()
 				}
 				ImGui::Unindent(20);
 			}
-			if (ImGui::CollapsingHeader("Crate Sims - VERY BUGGY ATM")) {
+			if (ImGui::CollapsingHeader("Crate Sims")) {
 				ImGui::Indent(20);
 				if (ImGui::Button("Player's Choice")) {
 					Execute([this](GameWrapper*) {
@@ -2728,10 +2865,20 @@ void Voltage::renderItemmodTab()
 						cvarManager->executeCommand("mtn_crate titles");
 						});
 				}
+				if (ImGui::Button("Beach Blast")) {
+					Execute([this](GameWrapper*) {
+						cvarManager->executeCommand("mtn_crate beachblast");
+						});
+				}
+				if (ImGui::Button("Black Markets Drop")) {
+					Execute([this](GameWrapper*) {
+						cvarManager->executeCommand("mtn_crate bmdrop");
+						});
+				}
 				ImGui::Unindent(20);
 			}
 			ImGui::Separator();
-			if (ImGui::Button("Synchronize inventory with psyonix saved copy")) {
+			if (ImGui::Button("Remove spawned items")) {
 				Execute([this](GameWrapper*) {
 					sync(false);
 					});
@@ -2988,7 +3135,14 @@ void Voltage::spawnAllPainted()
 					if (onlineProduct)
 					{
 						SaveData->GiveOnlineProduct(onlineProduct);
-						Console.Write("[Inventory Mod] Successfully spawned in product: " + onlineProduct->GetLongLabel().ToString() + "\"");
+						if (onlineProduct->GetLongLabel().IsValid())
+						{
+							Console.Write("[Inventory Mod] Successfully spawned in product: " + onlineProduct->GetLongLabel().ToString());
+						}
+						else
+						{
+							Console.Write("[Inventory Mod] Successfully spawned in product: " + std::to_string(onlineProduct->ProductID));
+						}
 						Console.Write("[Inventory Mod] InstanceID: " + std::to_string(onlineProduct->InstanceID));
 						Console.Write("[Inventory Mod] Paint Value: " + paintedData.Value.ToString());
 					}
@@ -3230,7 +3384,14 @@ void Voltage::spawnAll()
 				if (onlineProduct)
 				{
 					SaveData->GiveOnlineProduct(onlineProduct);
-					Console.Write("[Inventory Mod] Successfully Spawned Product: " + GetProductFromId(ProductID)->LongLabel.ToString());
+					if (onlineProduct->GetLongLabel().IsValid())
+					{
+						Console.Write("[Inventory Mod] Successfully spawned in product: " + onlineProduct->GetLongLabel().ToString());
+					}
+					else
+					{
+						Console.Write("[Inventory Mod] Successfully spawned in product: " + std::to_string(onlineProduct->ProductID));
+					}
 				}
 				else
 				{
@@ -3544,6 +3705,9 @@ UOnlineProduct_TA* Voltage::GiveProduct(int productId, int paintId, int qualityI
 {
 	if (classesSafe && instancesLoaded)
 	{
+		USaveData_TA* SaveData = Utils::GetInstanceOf<USaveData_TA>();
+		UProductAttribute_Quality_TA* QualityAttribute = Utils::GetDefaultInstanceOf<UProductAttribute_Quality_TA>();
+		UProductAttribute_Painted_TA* PaintedAttribute = Utils::GetDefaultInstanceOf<UProductAttribute_Painted_TA>();
 		if (SaveData && QualityAttribute && PaintedAttribute && NoNotifyAttribute)
 		{
 			checkUserAuthed();
@@ -3613,7 +3777,14 @@ UOnlineProduct_TA* Voltage::GiveProduct(int productId, int paintId, int qualityI
 				SaveData->GiveOnlineProduct(onlineProduct);
 				SaveData->GiveOnlineProductHelper(onlineProduct);
 
-				Console.Write("[Inventory Mod] Successfully spawned in product: " + onlineProduct->GetLongLabel().ToString());
+				if (onlineProduct->GetLongLabel().IsValid())
+				{
+					Console.Write("[Inventory Mod] Successfully spawned in product: " + onlineProduct->GetLongLabel().ToString());
+				}
+				else
+				{
+					Console.Write("[Inventory Mod] Successfully spawned in product: " + std::to_string(onlineProduct->ProductID));
+				}
 				Console.Write("[Inventory Mod] InstanceID: " + std::to_string(onlineProduct->InstanceID));
 				Console.Write("[Inventory Mod] Paint Value: " + paintedData.Value.ToString());
 				Console.Write("[Inventory Mod] Quality Value: " + qualityData.Value.ToString());
@@ -3648,6 +3819,15 @@ void Voltage::sync(bool exiting)
 		{
 			if (!exiting)
 			{
+				SaveData->bEnableOnlineData = true;
+				for (unsigned long long& instanceid : spawneditemsInstanceIds)
+				{
+					SaveData->RemoveOnlineProductIdNoNotify(instanceid);
+				}
+				if (playertitles)
+				{
+					playertitles->UpdatePlayerTitles();
+				}
 				SaveData->SyncOnlineProducts();
 				UOnlineGameSkill_X* skillz = Utils::GetInstanceOf<UOnlineGameSkill_X>();
 				if (skillz)
@@ -3673,6 +3853,7 @@ void Voltage::sync(bool exiting)
 			else
 			{
 				SaveData->SyncOnlineProducts();
+				spawneditemsInstanceIds.Clear();
 				UOnlineGameSkill_X* skillz = Utils::GetInstanceOf<UOnlineGameSkill_X>();
 				if (skillz)
 				{

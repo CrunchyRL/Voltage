@@ -110,6 +110,15 @@ struct FServerResult
 	struct FCustomMatchSettings                        Settings;                                         		// 0x0020 (0x0090) [0x0000000000400000] (CPF_NeedCtorLink)
 };
 
+// ScriptStruct ProjectX._Types_X.ReplicatedReservationData
+// 0x0059
+struct FReplicatedReservationData
+{
+	struct FUniqueNetId                                PlayerID;                                         		// 0x0000 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FString                                     PlayerName;                                       		// 0x0048 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
+	unsigned char                                      Status;                                           		// 0x0058 (0x0001) [0x0000000000000000]               
+};
+
 // ScriptStruct ProjectX._Types_X.OnlineStatus
 // 0x0059
 struct FOnlineStatus
@@ -287,8 +296,8 @@ struct FPlayerTitleData
 struct FPlayerSeasonRewardProgress
 {
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0000 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	int                                                Level;                                            		// 0x0048 (0x0004) [0x0000000000000000]               
-	int                                                Wins;                                             		// 0x004C (0x0004) [0x0000000000000000]               
+	int                                                SeasonLevel;                                      		// 0x0048 (0x0004) [0x0000000000000000]               
+	int                                                SeasonLevelWins;                                  		// 0x004C (0x0004) [0x0000000000000000]               
 };
 
 // ScriptStruct ProjectX._Types_X.ActiveServerData
@@ -320,21 +329,22 @@ struct FServerConnectionInfo
 };
 
 // ScriptStruct ProjectX._Types_X.TierSkillRating
-// 0x0014(0x001C - 0x0008)
+// 0x0018(0x0020 - 0x0008)
 struct FTierSkillRating : FSkillRating
 {
 	int                                                Tier;                                             		// 0x0008 (0x0004) [0x0000000000000000]               
 	int                                                Division;                                         		// 0x000C (0x0004) [0x0000000000000000]               
 	int                                                MatchesPlayed;                                    		// 0x0010 (0x0004) [0x0000000000000000]               
 	int                                                PlacementMatchesPlayed;                           		// 0x0014 (0x0004) [0x0000000000000000]               
-	float                                              MMR;                                              		// 0x0018 (0x0004) [0x0000000000000000]               
+	int                                                WinStreak;                                        		// 0x0018 (0x0004) [0x0000000000000000]               
+	float                                              MMR;                                              		// 0x001C (0x0004) [0x0000000000000000]               
 };
 
 // ScriptStruct ProjectX._Types_X.SkillMatchPartyRating
-// 0x0004(0x0020 - 0x001C)
+// 0x0004(0x0024 - 0x0020)
 struct FSkillMatchPartyRating : FTierSkillRating
 {
-	int                                                PartyID;                                          		// 0x001C (0x0004) [0x0000000000000000]               
+	int                                                PartyID;                                          		// 0x0020 (0x0004) [0x0000000000000000]               
 };
 
 // ScriptStruct ProjectX._Types_X.SkillMatchParty
@@ -357,15 +367,6 @@ struct FSkillMatchData
 	int                                                Team0Score;                                       		// 0x0010 (0x0004) [0x0000000000000000]               
 	int                                                Team1Score;                                       		// 0x0014 (0x0004) [0x0000000000000000]               
 	unsigned long                                      bOverTime : 1;                                    		// 0x0018 (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// ScriptStruct ProjectX._Types_X.ReplicatedReservationData
-// 0x0059
-struct FReplicatedReservationData
-{
-	struct FUniqueNetId                                PlayerID;                                         		// 0x0000 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FString                                     PlayerName;                                       		// 0x0048 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
-	unsigned char                                      Status;                                           		// 0x0058 (0x0001) [0x0000000000000000]               
 };
 
 // ScriptStruct ProjectX._Types_X.ReservationPlayerData
@@ -442,49 +443,34 @@ struct FBindingAction
 };
 
 // ScriptStruct ProjectX._Types_X.PlaylistTierSkillRating
-// 0x0004(0x0020 - 0x001C)
+// 0x0004(0x0024 - 0x0020)
 struct FPlaylistTierSkillRating : FTierSkillRating
 {
-	int                                                Playlist;                                         		// 0x001C (0x0004) [0x0000000000000000]               
-};
-
-// ScriptStruct ProjectX._Types_X.PlayerSkillRating
-// 0x004C(0x0068 - 0x001C)
-struct FPlayerSkillRating : FTierSkillRating
-{
-	struct FUniqueNetId                                PlayerID;                                         		// 0x0020 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+	int                                                Playlist;                                         		// 0x0020 (0x0004) [0x0000000000000000]               
 };
 
 // ScriptStruct ProjectX._Types_X.PlaylistSkillRating
-// 0x0004(0x006C - 0x0068)
-struct FPlaylistSkillRating : FPlayerSkillRating
+// 0x0004(0x0024 - 0x0020)
+struct FPlaylistSkillRating : FTierSkillRating
 {
-	int                                                Playlist;                                         		// 0x0068 (0x0004) [0x0000000000000000]               
+	int                                                Playlist;                                         		// 0x0020 (0x0004) [0x0000000000000000]               
+};
+
+// ScriptStruct ProjectX._Types_X.PlayerSkillRating
+// 0x004C(0x0070 - 0x0024)
+struct FPlayerSkillRating : FPlaylistSkillRating
+{
+	struct FUniqueNetId                                PlayerID;                                         		// 0x0028 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
 };
 
 // ScriptStruct ProjectX._Types_X.UpdatedPlayerSkillRating
-// 0x0010(0x0078 - 0x0068)
+// 0x0010(0x0080 - 0x0070)
 struct FUpdatedPlayerSkillRating : FPlayerSkillRating
 {
-	float                                              PrevMu;                                           		// 0x0068 (0x0004) [0x0000000000000000]               
-	float                                              PrevSigma;                                        		// 0x006C (0x0004) [0x0000000000000000]               
-	int                                                PrevTier;                                         		// 0x0070 (0x0004) [0x0000000000000000]               
-	int                                                PrevDivision;                                     		// 0x0074 (0x0004) [0x0000000000000000]               
-};
-
-// ScriptStruct ProjectX._Types_X.RPCRewardLevelData
-// 0x0008
-struct FRPCRewardLevelData
-{
-	int                                                SeasonLevel;                                      		// 0x0000 (0x0004) [0x0000000000000000]               
-	int                                                SeasonLevelWins;                                  		// 0x0004 (0x0004) [0x0000000000000000]               
-};
-
-// ScriptStruct ProjectX._Types_X.RPCPlayerRewardLevelData
-// 0x0048(0x0050 - 0x0008)
-struct FRPCPlayerRewardLevelData : FRPCRewardLevelData
-{
-	struct FUniqueNetId                                PlayerID;                                         		// 0x0008 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+	float                                              PrevMu;                                           		// 0x0070 (0x0004) [0x0000000000000000]               
+	float                                              PrevSigma;                                        		// 0x0074 (0x0004) [0x0000000000000000]               
+	int                                                PrevTier;                                         		// 0x0078 (0x0004) [0x0000000000000000]               
+	int                                                PrevDivision;                                     		// 0x007C (0x0004) [0x0000000000000000]               
 };
 
 // ScriptStruct ProjectX._Types_X.CachedRegionPing
@@ -520,7 +506,8 @@ struct FPartyMember
 	unsigned long                                      bDisableCrossPlay : 1;                            		// 0x00AC (0x0004) [0x0000000000000000] [0x00000001] 
 	struct FUniqueNetId                                TradingMemberId;                                  		// 0x00B0 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
 	struct FGuid                                       TradeId;                                          		// 0x00F8 (0x0010) [0x0000000000000000]               
-	unsigned long                                      bReadyToTrade : 1;                                		// 0x0108 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      bReadyToLockTrade : 1;                            		// 0x0108 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      bReadyToConfirmTrade : 1;                         		// 0x0108 (0x0004) [0x0000000000000000] [0x00000002] 
 	struct FPartyMemberServer                          Server;                                           		// 0x0110 (0x0058) [0x0000000000400000] (CPF_NeedCtorLink)
 	struct FUniqueLobbyId                              PlatformParty;                                    		// 0x0168 (0x0010) [0x0000000000000000]               
 };
@@ -1211,24 +1198,17 @@ struct FPendingReservation
 // 0x0068
 struct FSkillSyncRequest
 {
-	class URPC_GetPlayerSkill_X*                       RPC;                                              		// 0x0000 (0x0008) [0x0000000000000000]               
+	class URPC_X*                                      RPC;                                              		// 0x0000 (0x0008) [0x0000000000000000]               
 	struct FUniqueNetId                                PlayerID;                                         		// 0x0008 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
 	struct FScriptDelegate                             Callback;                                         		// 0x0050 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
 };
 
-// ScriptStruct ProjectX.RPC_GetPlayerSkill_X.GetPlayerSkillData
-// 0x0024
-struct FGetPlayerSkillData
+// ScriptStruct ProjectX.RPC_GetPartyMemberSkill_X.PartyMemberSkill
+// 0x0058
+struct FPartyMemberSkill
 {
-	int                                                Playlist;                                         		// 0x0000 (0x0004) [0x0000000000000000]               
-	float                                              Mu;                                               		// 0x0004 (0x0004) [0x0000000000000000]               
-	float                                              Sigma;                                            		// 0x0008 (0x0004) [0x0000000000000000]               
-	int                                                Tier;                                             		// 0x000C (0x0004) [0x0000000000000000]               
-	int                                                Division;                                         		// 0x0010 (0x0004) [0x0000000000000000]               
-	int                                                MatchesPlayed;                                    		// 0x0014 (0x0004) [0x0000000000000000]               
-	float                                              MMR;                                              		// 0x0018 (0x0004) [0x0000000000000000]               
-	int                                                WinStreak;                                        		// 0x001C (0x0004) [0x0000000000000000]               
-	int                                                PlacementMatchesPlayed;                           		// 0x0020 (0x0004) [0x0000000000000000]               
+	struct FUniqueNetId                                PlayerID;                                         		// 0x0000 (0x0048) [0x0000000000400000] (CPF_NeedCtorLink)
+	TArray<struct FPlayerSkillRating>                  Skills;                                           		// 0x0048 (0x0010) [0x0000000000400000] (CPF_NeedCtorLink)
 };
 
 // ScriptStruct ProjectX.OnlineGameStats_X.UploadStatData

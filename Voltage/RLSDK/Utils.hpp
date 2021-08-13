@@ -311,7 +311,7 @@ namespace Utils
 		}
 	}
 
-	uintptr_t FindPattern(HMODULE module, const unsigned char* pattern, const char* mask)
+	uintptr_t FindPattern(HMODULE module, const uint8_t* pattern, const char* mask)
 	{
 		MODULEINFO info = { };
 		GetModuleInformation(GetCurrentProcess(), module, &info, sizeof(MODULEINFO));
@@ -351,8 +351,32 @@ namespace Utils
 				if (paramValue.ParameterValue == ogTexture)
 				{
 					constant->SetTextureParameterValue(paramValue.ParameterName, newTexture);
+					std::cout << paramValue.ParameterName.ToString() << std::endl;
 				}
 			}
 		}
 	}
+
+	/*
+		for (UMaterialInstanceConstant* matconst : Utils::GetAllInstancesOf<UMaterialInstanceConstant>())
+		{
+			if (matconst)
+			{
+				for (FTextureParameterValue& textureparam : matconst->TextureParameterValues)
+				{
+					for (UTexture* tex2d : Utils::GetAllInstancesOf<UTexture>())
+					{
+						if (tex2d)
+						{
+							if (textureparam.ParameterValue && textureparam.ParameterValue == tex2d)
+							{
+								Console.Notify("Texture: " + (std::string)tex2d->GetFullName());
+								Console.Notify("TextureParamName: " + textureparam.ParameterName.ToString());
+							}
+						}
+					}
+				}
+			}
+		}
+	*/
 }

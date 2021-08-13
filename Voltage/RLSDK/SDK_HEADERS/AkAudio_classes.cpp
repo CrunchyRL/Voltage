@@ -179,7 +179,7 @@ class UAkEnvironments* UAkDevice::GetEnvironments()
 };
 
 // Function AkAudio.AkDevice.NotifyWhenInitialized
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -273,7 +273,7 @@ void UAkDevice::PrintData()
 };
 
 // Function AkAudio.AkDevice.SetDynamicRange
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  Type                           (CPF_Parm)
 
@@ -298,7 +298,7 @@ void UAkDevice::SetDynamicRange(unsigned char Type)
 };
 
 // Function AkAudio.AkDevice.SetOutputType
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  Type                           (CPF_Parm)
 
@@ -375,7 +375,7 @@ void UAkDevice::SetSplitScreenListenerEnabled(unsigned long bEnable)
 };
 
 // Function AkAudio.AkDevice.SetSplitScreenListenerPosition
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // struct FVector                 Location                       (CPF_Parm)
 
@@ -400,7 +400,7 @@ void UAkDevice::SetSplitScreenListenerPosition(struct FVector Location)
 };
 
 // Function AkAudio.AkDevice.UpdateSecondaryOutputs
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 
 void UAkDevice::UpdateSecondaryOutputs()
@@ -423,7 +423,7 @@ void UAkDevice::UpdateSecondaryOutputs()
 };
 
 // Function AkAudio.AkDevice.SetGlobalRTCP
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
@@ -500,7 +500,7 @@ void UAkDevice::PlayGlobalSound(class UAkSoundCue* Sound)
 };
 
 // Function AkAudio.AkDevice.SetState
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // struct FName                   InStateGroup                   (CPF_Parm)
 // struct FName                   InState                        (CPF_Parm)
@@ -556,7 +556,7 @@ void UAkDevice::SetSwitch(class AActor* SourceActor, struct FName Key, struct FN
 };
 
 // Function AkAudio.AkDevice.SetRTCP
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // class AActor*                  SourceActor                    (CPF_Parm)
 // struct FName                   Key                            (CPF_Parm)
@@ -610,7 +610,7 @@ void UAkDevice::StopAllSounds(class AActor* SourceActor)
 };
 
 // Function AkAudio.AkDevice.StopSound
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // class AActor*                  SourceActor                    (CPF_Parm)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
@@ -637,7 +637,7 @@ void UAkDevice::StopSound(class AActor* SourceActor, class UAkSoundCue* Sound)
 };
 
 // Function AkAudio.AkDevice.PlaySound
-// [0x04036401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04026401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_NetMulticast | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // class UAkSoundSource*          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_EditInline)
 // class AActor*                  SourceActor                    (CPF_Parm)
@@ -1017,7 +1017,7 @@ void UAkMusicDevice::SetRTCP(struct FName Key, float Value)
 };
 
 // Function AkAudio.AkMusicDevice.StopPlayingID
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // int                            PlayingID                      (CPF_Parm)
 
@@ -1067,7 +1067,7 @@ void UAkMusicDevice::Stop(class UAkSoundCue* Sound)
 };
 
 // Function AkAudio.AkMusicDevice.Play
-// [0x04032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
+// [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_BlueprintCallable | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
@@ -2294,7 +2294,7 @@ void UAkSoundSource::EventMarker(class UAkSoundSource* Source, int PlayingID, st
 };
 
 // Function AkAudio.AkSoundSource.EventFinished
-// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 // class UAkSoundSource*          Source                         (CPF_Parm | CPF_EditInline)
 // int                            PlayingID                      (CPF_Parm)
@@ -2338,7 +2338,7 @@ void USeqAct_AkPlayMusicWithCues::eventTriggerEvents(struct FString CueName)
 };
 
 // Function AkAudio.SeqAct_AkPlaySound.ToggleSoundFor
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class AActor*                  A                              (CPF_Parm)
 // unsigned long                  bPlay                          (CPF_Parm)
@@ -2361,7 +2361,7 @@ void USeqAct_AkPlaySound::ToggleSoundFor(class AActor* A, unsigned long bPlay)
 };
 
 // Function AkAudio.SeqAct_AkPlaySound.ToggleSound
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bPlay                          (CPF_Parm)
 

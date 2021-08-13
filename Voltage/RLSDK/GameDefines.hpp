@@ -20,18 +20,18 @@
 #include <map>
 
 // GObjects
-#define STEAMGObjects_Offset 		  (uintptr_t)0x247d218
-#define EPICGObjects_Offset 		  (uintptr_t)0x23f7cf8
+#define STEAMGObjects_Offset 		  (uintptr_t)0x229f4b0
+#define EPICGObjects_Offset 		  (uintptr_t)0x221FF70
 // GNames
-#define STEAMGNames_Offset 			  (uintptr_t)0x247d1d0
-#define EPICGNames_Offset 			  (uintptr_t)0x23f7cb0
+#define STEAMGNames_Offset 			  (uintptr_t)0x229f468
+#define EPICGNames_Offset 		      (uintptr_t)0x221FF28
 
 // GObjects
-#define GObjects_Pattern		(const uint8_t*)"\xE8\x00\x00\x00\x00\xEB\x82"
-#define GObjects_Mask			(const char*)"x????xx"
+#define GObjects_Pattern		(const uint8_t*)"\xE8\x00\x00\x00\x00\x8B\x5D\xAF"
+#define GObjects_Mask			(const char*)"x????xxx"
 // GNames
-#define GNames_Pattern			(const uint8_t*)"\xE8\x00\x00\x00\x00\x48\x83\xCF\xFF\x45\x85\xFF"
-#define GNames_Mask				(const char*)"x????xxxxxxx"
+#define GNames_Pattern			(const uint8_t*)"\xE8\x00\x00\x00\x00\x48\xC7\xC7"
+#define GNames_Mask				(const char*)"x????xxx"
 
 /*
 # ========================================================================================= #
@@ -266,7 +266,7 @@ template<typename TKey, typename TValue>
 struct TMap
 {
 private:
-	struct TPair
+struct TPair
 	{
 		TKey Key;
 		TValue Value;
@@ -647,7 +647,7 @@ public:
 
 struct FPointer
 {
-	uintptr_t Dummy;
+	uintptr_t ptr;
 };
 
 struct FScriptDelegate

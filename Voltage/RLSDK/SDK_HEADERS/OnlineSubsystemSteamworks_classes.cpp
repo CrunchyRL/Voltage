@@ -22,7 +22,7 @@
 */
 
 // Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.RequestAuthTicket
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FUniqueNetId            PlayerID                       (CPF_Parm | CPF_NeedCtorLink)
@@ -57,7 +57,7 @@ bool UOnlineAuthInterfaceSteamworks::RequestAuthTicket(struct FUniqueNetId Playe
 };
 
 // Function OnlineSubsystemSteamworks.OnlineAuthInterfaceSteamworks.RequiresAuthTicket
-// [0x00030002] (FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020002] (FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1721,7 +1721,7 @@ bool UOnlineGameInterfaceSteamworks_PsyNet::UpdateOnlineGame(struct FName Sessio
 };
 
 // Function OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks_PsyNet.SetFriendJoinLocation
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // struct FUniqueNetId            JoinablePlayerID               (CPF_Parm | CPF_NeedCtorLink)
 // struct FString                 ServerAddress                  (CPF_Parm | CPF_NeedCtorLink)
@@ -2569,7 +2569,7 @@ unsigned char UOnlineSubsystemSteamworks::GetControllerPlatform(int LocalPlayerN
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetControllerID
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            LocalPlayerNum                 (CPF_Parm)
@@ -2673,7 +2673,7 @@ void UOnlineSubsystemSteamworks::UnregisterController(int LocalPlayerNum)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.RegisterController
-// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            LocalPlayerNum                 (CPF_Parm)
 // int                            ControllerId                   (CPF_OptionalParm | CPF_Parm)
@@ -2700,7 +2700,7 @@ void UOnlineSubsystemSteamworks::RegisterController(int LocalPlayerNum, int Cont
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanRegisterController
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            LocalPlayerNum                 (CPF_Parm)
@@ -2835,7 +2835,7 @@ TArray<struct FName> UOnlineSubsystemSteamworks::GetActiveDiscDLC()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetOnlineSubscriptionRequirement
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bRequiresOnlineSubscription    (CPF_Parm)
 
@@ -3011,7 +3011,7 @@ void UOnlineSubsystemSteamworks::AddUnregisteredControllerDelegate(struct FScrip
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddRegisteredControllerDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         RegisteredControllerDelegate   (CPF_Parm | CPF_NeedCtorLink)
 
@@ -3169,7 +3169,7 @@ bool UOnlineSubsystemSteamworks::CanSendOfflinePartyInvite(struct FUniqueNetId P
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CheckParentalControlInfo
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned long                  bShowUi                        (CPF_Parm)
@@ -3453,7 +3453,7 @@ void UOnlineSubsystemSteamworks::OnSystemUserControllerPairingChanged(int NewLoc
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearAccountPickerInput
-// [0x00030000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020000] (FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::ClearAccountPickerInput()
@@ -3491,7 +3491,7 @@ void UOnlineSubsystemSteamworks::LookForAccountPickerInput()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddPlayerToSession
-// [0x00030000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020000] (FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ControllerId                   (CPF_Parm)
 
@@ -3747,7 +3747,7 @@ void UOnlineSubsystemSteamworks::SetPlayedWith(struct FUniqueNetId PlayerNetId)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HandleBootMessage
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -3918,7 +3918,7 @@ void UOnlineSubsystemSteamworks::ClearCommerceDialogClosedDelegate(struct FScrip
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddCommerceDialogClosedDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         InDelegate                     (CPF_Parm | CPF_NeedCtorLink)
 
@@ -3958,7 +3958,7 @@ void UOnlineSubsystemSteamworks::OnCommerceDialogClosed()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.WordFilterSanitizeString
-// [0x00034001] (FUNC_Final | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00024001] (FUNC_Final | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Comment                        (CPF_Const | CPF_Parm | CPF_NeedCtorLink)
@@ -4007,7 +4007,7 @@ void UOnlineSubsystemSteamworks::RemoveCanPlayOnlineChangedDelegate(struct FScri
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddCanPlayOnlineChangedDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -4077,7 +4077,7 @@ void UOnlineSubsystemSteamworks::ClearSaveDataNoSpaceDialogCompleteDelegate(stru
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddSaveDataNoSpaceDialogCompleteDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         DeviceDelegate                 (CPF_Parm | CPF_NeedCtorLink)
 
@@ -4140,7 +4140,7 @@ void UOnlineSubsystemSteamworks::ClearUnlockedDLCChangeDelegate(struct FScriptDe
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUnlockedDLCChangeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         InDelegate                     (CPF_Parm | CPF_NeedCtorLink)
 
@@ -4161,7 +4161,7 @@ void UOnlineSubsystemSteamworks::AddUnlockedDLCChangeDelegate(struct FScriptDele
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetUnlockedDLC
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // TArray<struct FName>           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -4183,7 +4183,7 @@ TArray<struct FName> UOnlineSubsystemSteamworks::GetUnlockedDLC()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnUnlockedDLCChange
-// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::OnUnlockedDLCChange()
@@ -4400,7 +4400,7 @@ bool UOnlineSubsystemSteamworks::AnyPlayerChatRestricted()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.InitializeTrophyAPI
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::InitializeTrophyAPI()
@@ -4670,7 +4670,7 @@ bool UOnlineSubsystemSteamworks::IsEnabled()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetRichPresence
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FString                 PresenceString                 (CPF_Parm | CPF_NeedCtorLink)
@@ -5532,7 +5532,7 @@ bool UOnlineSubsystemSteamworks::WriteUserFileInternal(struct FString UserId, st
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetVoiceReceiveVolume
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // float                          VoiceVolume                    (CPF_Parm)
@@ -6179,7 +6179,7 @@ bool UOnlineSubsystemSteamworks::GetNumberOfCurrentPlayers()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadOnlineAvatars
-// [0x00430400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags) iNative [0x0004]
+// [0x00420400] (FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // unsigned char                  Size                           (CPF_Parm)
 // struct FScriptDelegate         ReadOnlineAvatarCompleteDelegate (CPF_Parm | CPF_NeedCtorLink)
@@ -6247,7 +6247,7 @@ bool UOnlineSubsystemSteamworks::ShowCustomPlayersUI(unsigned char LocalUserNum,
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetAchievements
-// [0x00434401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00424401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -6302,7 +6302,7 @@ void UOnlineSubsystemSteamworks::ClearReadAchievementsCompleteDelegate(unsigned 
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddReadAchievementsCompleteDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         ReadAchievementsCompleteDelegate (CPF_Parm | CPF_NeedCtorLink)
@@ -6346,7 +6346,7 @@ void UOnlineSubsystemSteamworks::OnReadAchievementsComplete(int TitleId)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadAchievements
-// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -8358,7 +8358,7 @@ struct FString UOnlineSubsystemSteamworks::GetKeyboardInputResults(unsigned char
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ClearKeyboardInputDoneDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         InputDelegate                  (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8421,7 +8421,7 @@ void UOnlineSubsystemSteamworks::OnKeyboardInputComplete(unsigned long bWasSucce
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HideKeyboardUI
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -8771,7 +8771,7 @@ void UOnlineSubsystemSteamworks::ClearConnectionStatusChangeDelegate(struct FScr
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddConnectionStatusChangeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         ConnectionStatusDelegate       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8880,7 +8880,7 @@ void UOnlineSubsystemSteamworks::ClearUserRestoredDelegate(struct FScriptDelegat
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserRestoredDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         UserRestoredDelegate           (CPF_Parm | CPF_NeedCtorLink)
 
@@ -8943,7 +8943,7 @@ void UOnlineSubsystemSteamworks::ClearUserOrphanedDelegate(struct FScriptDelegat
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserOrphanedDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         UserOrphanedDelegate           (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9006,7 +9006,7 @@ void UOnlineSubsystemSteamworks::ClearControllerChangeDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddControllerChangeDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         ControllerChangeDelegate       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9118,7 +9118,7 @@ void UOnlineSubsystemSteamworks::ClearExternalUIChangeDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddExternalUIChangeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         ExternalUIDelegate             (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9181,7 +9181,7 @@ void UOnlineSubsystemSteamworks::ClearLinkStatusChangeDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLinkStatusChangeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LinkStatusDelegate             (CPF_Parm | CPF_NeedCtorLink)
 
@@ -9223,7 +9223,7 @@ void UOnlineSubsystemSteamworks::OnLinkStatusChange(unsigned long bIsConnected)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.HasLinkConnection
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -9857,7 +9857,7 @@ bool UOnlineSubsystemSteamworks::StartSpeechRecognition(unsigned char LocalUserN
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.StopNetworkedVoice
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 
@@ -9928,7 +9928,7 @@ void UOnlineSubsystemSteamworks::ClearPlayerTalkingDelegate(struct FScriptDelega
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddPlayerTalkingDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         TalkerDelegate                 (CPF_Parm | CPF_NeedCtorLink)
 
@@ -10208,7 +10208,7 @@ bool UOnlineSubsystemSteamworks::RegisterRemoteTalker(struct FUniqueNetId Player
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UnregisterLocalTalker
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -10264,7 +10264,7 @@ bool UOnlineSubsystemSteamworks::RegisterLocalTalker(unsigned char LocalUserNum)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendsList
-// [0x00434401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00424401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -10365,7 +10365,7 @@ void UOnlineSubsystemSteamworks::OnReadFriendsComplete(unsigned long bWasSuccess
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.ReadFriendsList
-// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -11003,7 +11003,7 @@ void UOnlineSubsystemSteamworks::AddAvatarChangeDelegate(unsigned char LocalUser
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetFriendPresence
-// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FOnlineFriend           FriendData                     (CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -11051,7 +11051,7 @@ void UOnlineSubsystemSteamworks::ClearFriendPresenceChangeDelegate(unsigned char
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendPresenceChangeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         PresenceDelegate               (CPF_Parm | CPF_NeedCtorLink)
@@ -11074,7 +11074,7 @@ void UOnlineSubsystemSteamworks::AddFriendPresenceChangeDelegate(unsigned char L
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddFriendsChangeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         FriendsDelegate                (CPF_Parm | CPF_NeedCtorLink)
@@ -11204,7 +11204,7 @@ void UOnlineSubsystemSteamworks::ClearLoginStatusChangeDelegate(struct FScriptDe
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginStatusChangeDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LoginStatusDelegate            (CPF_Parm | CPF_NeedCtorLink)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -11271,7 +11271,7 @@ void UOnlineSubsystemSteamworks::ClearLoginChangeDelegate(struct FScriptDelegate
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginChangeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LoginDelegate                  (CPF_Parm | CPF_NeedCtorLink)
 
@@ -11355,7 +11355,7 @@ void UOnlineSubsystemSteamworks::ClearUserSwitchCompleteDelegate(struct FScriptD
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddUserSwitchCompleteDelegate
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         UserSwitchCompleteDelegate     (CPF_Parm | CPF_NeedCtorLink)
 
@@ -11376,7 +11376,7 @@ void UOnlineSubsystemSteamworks::AddUserSwitchCompleteDelegate(struct FScriptDel
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.SetPrimaryPlayerGamepadToLastInput
-// [0x00030001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020001] (FUNC_Final | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineSubsystemSteamworks::SetPrimaryPlayerGamepadToLastInput()
@@ -11984,7 +11984,7 @@ bool UOnlineSubsystemSteamworks::CanCommunicateText(unsigned char LocalUserNum, 
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.CanCommunicate
-// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -12050,7 +12050,7 @@ bool UOnlineSubsystemSteamworks::CanPlayOnline(unsigned char LocalUserNum, unsig
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetPlayerNickname
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -12074,7 +12074,7 @@ struct FString UOnlineSubsystemSteamworks::GetPlayerNickname(unsigned char Local
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetUniquePlayerId
-// [0x00430003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00420003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -12124,7 +12124,7 @@ bool UOnlineSubsystemSteamworks::IsGuestLogin(unsigned char LocalUserNum)
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.GetLoginStatus
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -12266,7 +12266,7 @@ void UOnlineSubsystemSteamworks::ClearLoginFailedDelegate(unsigned char LocalUse
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.AddLoginFailedDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         LoginFailedDelegate            (CPF_Parm | CPF_NeedCtorLink)
@@ -12338,7 +12338,7 @@ bool UOnlineSubsystemSteamworks::AutoLogin()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Login
-// [0x00034401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00024401] (FUNC_Final | FUNC_Native | FUNC_NetMulticast | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // unsigned char                  LocalUserNum                   (CPF_Parm)
@@ -12720,7 +12720,7 @@ void UOnlineSubsystemSteamworks::eventExit()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.PostInit
-// [0x00030802] (FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020802] (FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -12742,7 +12742,7 @@ bool UOnlineSubsystemSteamworks::eventPostInit()
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.Init
-// [0x00030C00] (FUNC_Native | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020C00] (FUNC_Native | FUNC_Event | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -12862,7 +12862,7 @@ struct FString UOnlinePurchaseInterfaceSteamworks::FormatCurrency(struct FString
 };
 
 // Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.HandleGetAppPriceInfoComplete
-// [0x00850003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Private | FUNC_HasDefaults | FUNC_AllFlags)
+// [0x00840003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Private | FUNC_HasDefaults | FUNC_AllFlags)
 // Parameter info:
 // class UHttpRequestInterface*   Request                        (CPF_Parm)
 // class UHttpResponseInterface*  Response                       (CPF_Parm)
@@ -12887,7 +12887,7 @@ void UOnlinePurchaseInterfaceSteamworks::HandleGetAppPriceInfoComplete(class UHt
 };
 
 // Function OnlineSubsystemSteamworks.OnlinePurchaseInterfaceSteamworks.GetAppPriceInfo
-// [0x00C30002] (FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_AllFlags)
+// [0x00C20002] (FUNC_RequiredAPI | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)

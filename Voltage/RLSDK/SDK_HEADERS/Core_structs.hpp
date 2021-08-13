@@ -555,6 +555,14 @@ struct FObjectPropertyInjection
 	class UObjectProperty*                             Property;                                         		// 0x0008 (0x0008) [0x0000000000000000]               
 };
 
+// ScriptStruct Core.ObjectProvider.InterfacePropertyInjection
+// 0x0010
+struct FInterfacePropertyInjection
+{
+	class UObject*                                     Subscriber;                                       		// 0x0000 (0x0008) [0x0000000000000000]               
+	class UInterfaceProperty*                          Property;                                         		// 0x0008 (0x0008) [0x0000000000000000]               
+};
+
 // ScriptStruct Core._Types_Core.SceNpOnlineId
 // 0x0014
 struct FSceNpOnlineId

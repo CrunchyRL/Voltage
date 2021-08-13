@@ -225,6 +225,32 @@ enum class EContentKeyIndex_ContinuousIntegration : int
 	ContinuousIntegration_END                          = 4
 };
 
+// Enum Core._Types_Generated.EContentKeyIndex_PrimeUpdate35
+enum class EContentKeyIndex_PrimeUpdate35 : int
+{
+	PrimeUpdate35_904C03345B5306946918E821FFD0557D     = 0,
+	PrimeUpdate35_7D2BD3C4466DC9DCB376054A00FD8704     = 1,
+	PrimeUpdate35_95D345AF6F80E57FF039F0AF309CF397     = 2,
+	PrimeUpdate35_8895661B346552E41E98626288616FDB     = 3,
+	PrimeUpdate35_4936E2EC04B35A4C33132DB942EEFBF9     = 4,
+	PrimeUpdate35_E4CE5BA9AE7B7CF44E87C642A1B2075F     = 5,
+	PrimeUpdate35_AB8CA32A6AC22D1BCD733B45AAF3E516     = 6,
+	PrimeUpdate35_82504C8CB31FDBF83749FDB9D4647B22     = 7,
+	PrimeUpdate35_0F79BF2A330B5F14F6F1B334BAD190B8     = 8,
+	PrimeUpdate35_2FE48155423D40CAD4A7C1E13DFCA010     = 9,
+	PrimeUpdate35_85B7C89F12D13A7FC7C1BF63F2223D07     = 10,
+	PrimeUpdate35_8C08D9BB2ECFFE7FCB5E1C9ADA0C6915     = 11,
+	PrimeUpdate35_30D1E752D5CC3D535314F48E0155BC8B     = 12,
+	PrimeUpdate35_9DB24424FFE117E4360FB889EC00EBC4     = 13,
+	PrimeUpdate35_8B91A692CFC5CEF406CF0B7A5340F490     = 14,
+	PrimeUpdate35_A71FDE17430E717C0EA90A81E08C7D09     = 15,
+	PrimeUpdate35_F3CB1DE67976A82AF24C37EA7BF28116     = 16,
+	PrimeUpdate35_B8FB465286F92DA86FCFFABCD943FC43     = 17,
+	PrimeUpdate35_7BD907E5EE245062AD8C8911144583B3     = 18,
+	PrimeUpdate35_2F59A5E90E71DA06C07E887054F77C0A     = 19,
+	PrimeUpdate35_END                                  = 20
+};
+
 // Enum Core._Types_Generated.EContentKeyIndex_PrimeUpdate34
 enum class EContentKeyIndex_PrimeUpdate34 : int
 {
@@ -1246,7 +1272,7 @@ public:
 		return uClassPointer;
 	};
 
-	void __Subscription__TriggerAll_DD23D598441796B09EC4B188D6BC9F74(class USubscription* S);
+	void __Subscription__TriggerAll_7704095B48F14C8CEF86CD9E451044D5(class USubscription* S);
 	class USubscription* GetNone();
 	void TriggerAll(TArray<class USubscription*>& Subscriptions);
 	class USubscription* Create(struct FScriptDelegate InCallback);
@@ -1810,11 +1836,11 @@ public:
 };
 
 // Class Core.InterfaceProperty
-// 0x0008 (0x00C8 - 0x00D0)
+// 0x0010 (0x00C8 - 0x00D8)
 class UInterfaceProperty : public UProperty
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                               		// 0x00C8 (0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                              		// 0x00C8 (0x0010) MISSED OFFSET
 public:
 	static UClass* StaticClass()
 	{
@@ -2045,66 +2071,68 @@ public:
 	unsigned long                                      MatchAdmin : 1;                                   		// 0x0070 (0x0004) [0x0000000040000000] [0x00100000] (CPF_EditInlineNotify)
 	unsigned long                                      FilterContent : 1;                                		// 0x0070 (0x0004) [0x0000000040000000] [0x00200000] (CPF_EditInlineNotify)
 	unsigned long                                      EncryptContent : 1;                               		// 0x0070 (0x0004) [0x0000000040000000] [0x00400000] (CPF_EditInlineNotify)
-	unsigned long                                      GarageSuperSonicTrail : 1;                        		// 0x0070 (0x0004) [0x0000000040000000] [0x02000000] (CPF_EditInlineNotify)
-	unsigned long                                      GarageBallExplosions : 1;                         		// 0x0070 (0x0004) [0x0000000040000000] [0x04000000] (CPF_EditInlineNotify)
-	unsigned long                                      GarageEngineAudio : 1;                            		// 0x0070 (0x0004) [0x0000000040000000] [0x08000000] (CPF_EditInlineNotify)
-	unsigned long                                      EsportsCamera : 1;                                		// 0x0070 (0x0004) [0x0000000040000000] [0x20000000] (CPF_EditInlineNotify)
-	unsigned long                                      OnlineXP : 1;                                     		// 0x0070 (0x0004) [0x0000000040000000] [0x80000000] (CPF_EditInlineNotify)
-	unsigned long                                      PsyNetFriends : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x00000001] (CPF_EditInlineNotify)
-	unsigned long                                      ClanforgeReservation : 1;                         		// 0x0074 (0x0004) [0x0000000040000000] [0x00000008] (CPF_EditInlineNotify)
-	unsigned long                                      UserSettingObserver : 1;                          		// 0x0074 (0x0004) [0x0000000040000000] [0x00000020] (CPF_EditInlineNotify)
-	unsigned long                                      Metrics : 1;                                      		// 0x0074 (0x0004) [0x0000000040000000] [0x00000040] (CPF_EditInlineNotify)
-	unsigned long                                      EOSMetrics : 1;                                   		// 0x0074 (0x0004) [0x0000000040000000] [0x00000080] (CPF_EditInlineNotify)
-	unsigned long                                      MusicPlaylistSelection : 1;                       		// 0x0074 (0x0004) [0x0000000040000000] [0x00000100] (CPF_EditInlineNotify)
-	unsigned long                                      KeyboardAirPitchSafety : 1;                       		// 0x0074 (0x0004) [0x0000000040000000] [0x00000200] (CPF_EditInlineNotify)
-	unsigned long                                      SpecialEvents : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x00000800] (CPF_EditInlineNotify)
-	unsigned long                                      OnlineShop : 1;                                   		// 0x0074 (0x0004) [0x0000000040000000] [0x00008000] (CPF_EditInlineNotify)
-	unsigned long                                      PlayerBannerCustomization : 1;                    		// 0x0074 (0x0004) [0x0000000040000000] [0x00020000] (CPF_EditInlineNotify)
-	unsigned long                                      AvatarBorder : 1;                                 		// 0x0074 (0x0004) [0x0000000040000000] [0x00040000] (CPF_EditInlineNotify)
-	unsigned long                                      SecureUDP : 1;                                    		// 0x0074 (0x0004) [0x0000000040000000] [0x00080000] (CPF_EditInlineNotify)
-	unsigned long                                      PsyNet : 1;                                       		// 0x0074 (0x0004) [0x0000000040000000] [0x00100000] (CPF_EditInlineNotify)
-	unsigned long                                      OnlinePlayerStorage : 1;                          		// 0x0074 (0x0004) [0x0000000040000000] [0x00200000] (CPF_EditInlineNotify)
-	unsigned long                                      LocalSaveData : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x00400000] (CPF_EditInlineNotify)
-	unsigned long                                      CrowdV2 : 1;                                      		// 0x0074 (0x0004) [0x0000000040000000] [0x01000000] (CPF_EditInlineNotify)
-	unsigned long                                      ChatBan : 1;                                      		// 0x0074 (0x0004) [0x0000000040000000] [0x02000000] (CPF_EditInlineNotify)
-	unsigned long                                      BacktraceCrashDumps : 1;                          		// 0x0074 (0x0004) [0x0000000040000000] [0x04000000] (CPF_EditInlineNotify)
-	unsigned long                                      MusicStingers : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x08000000] (CPF_EditInlineNotify)
-	unsigned long                                      MonsterCarV2 : 1;                                 		// 0x0074 (0x0004) [0x0000000040000000] [0x20000000] (CPF_EditInlineNotify)
-	unsigned long                                      SpotifyButton : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x40000000] (CPF_EditInlineNotify)
-	unsigned long                                      RocketPass : 1;                                   		// 0x0074 (0x0004) [0x0000000040000000] [0x80000000] (CPF_EditInlineNotify)
-	unsigned long                                      PsyTag : 1;                                       		// 0x0078 (0x0004) [0x0000000040000000] [0x00000002] (CPF_EditInlineNotify)
-	unsigned long                                      SeasonRewards : 1;                                		// 0x0078 (0x0004) [0x0000000040000000] [0x00000004] (CPF_EditInlineNotify)
-	unsigned long                                      BotDetection : 1;                                 		// 0x0078 (0x0004) [0x0000000040000000] [0x00000008] (CPF_EditInlineNotify)
-	unsigned long                                      CrateRoulette : 1;                                		// 0x0078 (0x0004) [0x0000000040000000] [0x00000010] (CPF_EditInlineNotify)
-	unsigned long                                      NetworkNext : 1;                                  		// 0x0078 (0x0004) [0x0000000040000000] [0x00000020] (CPF_EditInlineNotify)
-	unsigned long                                      FaceIt : 1;                                       		// 0x0078 (0x0004) [0x0000000040000000] [0x00000040] (CPF_EditInlineNotify)
-	unsigned long                                      OnlinePlayerTitles : 1;                           		// 0x0078 (0x0004) [0x0000000040000000] [0x00000100] (CPF_EditInlineNotify)
-	unsigned long                                      RestrictByRegion : 1;                             		// 0x0078 (0x0004) [0x0000000040000000] [0x00000200] (CPF_EditInlineNotify)
-	unsigned long                                      FirstTimeExperience : 1;                          		// 0x0078 (0x0004) [0x0000000040000000] [0x00001000] (CPF_EditInlineNotify)
-	unsigned long                                      RLBot : 1;                                        		// 0x0078 (0x0004) [0x0000000040000000] [0x00004000] (CPF_EditInlineNotify)
-	unsigned long                                      CarMatinee : 1;                                   		// 0x0078 (0x0004) [0x0000000040000000] [0x00008000] (CPF_EditInlineNotify)
-	unsigned long                                      SteamInput : 1;                                   		// 0x0078 (0x0004) [0x0000000040000000] [0x00020000] (CPF_EditInlineNotify)
-	unsigned long                                      ReplayFXControls : 1;                             		// 0x0078 (0x0004) [0x0000000040000000] [0x00400000] (CPF_EditInlineNotify)
-	unsigned long                                      ESportsShop : 1;                                  		// 0x0078 (0x0004) [0x0000000040000000] [0x00800000] (CPF_EditInlineNotify)
-	unsigned long                                      TeamColoredBoostMeter : 1;                        		// 0x0078 (0x0004) [0x0000000040000000] [0x40000000] (CPF_EditInlineNotify)
-	unsigned long                                      GarageArchive : 1;                                		// 0x0078 (0x0004) [0x0000000040000000] [0x80000000] (CPF_EditInlineNotify)
-	unsigned long                                      DynamicRangeAudioSettings : 1;                    		// 0x007C (0x0004) [0x0000000040000000] [0x00000002] (CPF_EditInlineNotify)
-	unsigned long                                      AutoTour : 1;                                     		// 0x007C (0x0004) [0x0000000040000000] [0x00000004] (CPF_EditInlineNotify)
-	unsigned long                                      QuickPlay : 1;                                    		// 0x007C (0x0004) [0x0000000040000000] [0x00000008] (CPF_EditInlineNotify)
-	unsigned long                                      NewsPanelV2 : 1;                                  		// 0x007C (0x0004) [0x0000000040000000] [0x00000010] (CPF_EditInlineNotify)
-	unsigned long                                      Blueprints : 1;                                   		// 0x007C (0x0004) [0x0000000040000000] [0x00000020] (CPF_EditInlineNotify)
-	unsigned long                                      GodBall : 1;                                      		// 0x007C (0x0004) [0x0000000040000000] [0x00000040] (CPF_EditInlineNotify)
-	unsigned long                                      RocketBucks : 1;                                  		// 0x007C (0x0004) [0x0000000040000000] [0x00000100] (CPF_EditInlineNotify)
-	unsigned long                                      DiscordRichPresence : 1;                          		// 0x007C (0x0004) [0x0000000040000000] [0x00001000] (CPF_EditInlineNotify)
-	unsigned long                                      SupportACreator : 1;                              		// 0x007C (0x0004) [0x0000000040000000] [0x00002000] (CPF_EditInlineNotify)
-	unsigned long                                      CinematicIntro : 1;                               		// 0x007C (0x0004) [0x0000000040000000] [0x00004000] (CPF_EditInlineNotify)
-	unsigned long                                      TinyCrowd : 1;                                    		// 0x007C (0x0004) [0x0000000040000000] [0x00008000] (CPF_EditInlineNotify)
-	unsigned long                                      CrumbTrail : 1;                                   		// 0x007C (0x0004) [0x0000000040000000] [0x00010000] (CPF_EditInlineNotify)
-	unsigned long                                      EpicOnlineServices : 1;                           		// 0x007C (0x0004) [0x0000000040000000] [0x00020000] (CPF_EditInlineNotify)
-	unsigned long                                      XPGatedPlaylists : 1;                             		// 0x007C (0x0004) [0x0000000040000000] [0x00080000] (CPF_EditInlineNotify)
-	unsigned long                                      TradeInV2 : 1;                                    		// 0x007C (0x0004) [0x0000000040000000] [0x00400000] (CPF_EditInlineNotify)
-	unsigned long                                      Football : 1;                                     		// 0x007C (0x0004) [0x0000000040000000] [0x00800000] (CPF_EditInlineNotify)
-	unsigned long                                      RumbleSelection : 1;                              		// 0x007C (0x0004) [0x0000000040000000] [0x01000000] (CPF_EditInlineNotify)
+	unsigned long                                      GarageSuperSonicTrail : 1;                        		// 0x0070 (0x0004) [0x0000000040000000] [0x01000000] (CPF_EditInlineNotify)
+	unsigned long                                      GarageBallExplosions : 1;                         		// 0x0070 (0x0004) [0x0000000040000000] [0x02000000] (CPF_EditInlineNotify)
+	unsigned long                                      GarageEngineAudio : 1;                            		// 0x0070 (0x0004) [0x0000000040000000] [0x04000000] (CPF_EditInlineNotify)
+	unsigned long                                      EsportsCamera : 1;                                		// 0x0070 (0x0004) [0x0000000040000000] [0x10000000] (CPF_EditInlineNotify)
+	unsigned long                                      OnlineXP : 1;                                     		// 0x0070 (0x0004) [0x0000000040000000] [0x40000000] (CPF_EditInlineNotify)
+	unsigned long                                      PsyNetFriends : 1;                                		// 0x0070 (0x0004) [0x0000000040000000] [0x80000000] (CPF_EditInlineNotify)
+	unsigned long                                      ClanforgeReservation : 1;                         		// 0x0074 (0x0004) [0x0000000040000000] [0x00000004] (CPF_EditInlineNotify)
+	unsigned long                                      UserSettingObserver : 1;                          		// 0x0074 (0x0004) [0x0000000040000000] [0x00000010] (CPF_EditInlineNotify)
+	unsigned long                                      Metrics : 1;                                      		// 0x0074 (0x0004) [0x0000000040000000] [0x00000020] (CPF_EditInlineNotify)
+	unsigned long                                      EOSMetrics : 1;                                   		// 0x0074 (0x0004) [0x0000000040000000] [0x00000040] (CPF_EditInlineNotify)
+	unsigned long                                      MusicPlaylistSelection : 1;                       		// 0x0074 (0x0004) [0x0000000040000000] [0x00000080] (CPF_EditInlineNotify)
+	unsigned long                                      KeyboardAirPitchSafety : 1;                       		// 0x0074 (0x0004) [0x0000000040000000] [0x00000100] (CPF_EditInlineNotify)
+	unsigned long                                      SpecialEvents : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x00000400] (CPF_EditInlineNotify)
+	unsigned long                                      OnlineShop : 1;                                   		// 0x0074 (0x0004) [0x0000000040000000] [0x00004000] (CPF_EditInlineNotify)
+	unsigned long                                      PlayerBannerCustomization : 1;                    		// 0x0074 (0x0004) [0x0000000040000000] [0x00010000] (CPF_EditInlineNotify)
+	unsigned long                                      AvatarBorder : 1;                                 		// 0x0074 (0x0004) [0x0000000040000000] [0x00020000] (CPF_EditInlineNotify)
+	unsigned long                                      SecureUDP : 1;                                    		// 0x0074 (0x0004) [0x0000000040000000] [0x00040000] (CPF_EditInlineNotify)
+	unsigned long                                      PsyNet : 1;                                       		// 0x0074 (0x0004) [0x0000000040000000] [0x00080000] (CPF_EditInlineNotify)
+	unsigned long                                      OnlinePlayerStorage : 1;                          		// 0x0074 (0x0004) [0x0000000040000000] [0x00100000] (CPF_EditInlineNotify)
+	unsigned long                                      LocalSaveData : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x00200000] (CPF_EditInlineNotify)
+	unsigned long                                      CrowdV2 : 1;                                      		// 0x0074 (0x0004) [0x0000000040000000] [0x00800000] (CPF_EditInlineNotify)
+	unsigned long                                      ChatBan : 1;                                      		// 0x0074 (0x0004) [0x0000000040000000] [0x01000000] (CPF_EditInlineNotify)
+	unsigned long                                      BacktraceCrashDumps : 1;                          		// 0x0074 (0x0004) [0x0000000040000000] [0x02000000] (CPF_EditInlineNotify)
+	unsigned long                                      MusicStingers : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x04000000] (CPF_EditInlineNotify)
+	unsigned long                                      MonsterCarV2 : 1;                                 		// 0x0074 (0x0004) [0x0000000040000000] [0x10000000] (CPF_EditInlineNotify)
+	unsigned long                                      SpotifyButton : 1;                                		// 0x0074 (0x0004) [0x0000000040000000] [0x20000000] (CPF_EditInlineNotify)
+	unsigned long                                      RocketPass : 1;                                   		// 0x0074 (0x0004) [0x0000000040000000] [0x40000000] (CPF_EditInlineNotify)
+	unsigned long                                      PsyTag : 1;                                       		// 0x0078 (0x0004) [0x0000000040000000] [0x00000001] (CPF_EditInlineNotify)
+	unsigned long                                      SeasonRewards : 1;                                		// 0x0078 (0x0004) [0x0000000040000000] [0x00000002] (CPF_EditInlineNotify)
+	unsigned long                                      BotDetection : 1;                                 		// 0x0078 (0x0004) [0x0000000040000000] [0x00000004] (CPF_EditInlineNotify)
+	unsigned long                                      CrateRoulette : 1;                                		// 0x0078 (0x0004) [0x0000000040000000] [0x00000008] (CPF_EditInlineNotify)
+	unsigned long                                      NetworkNext : 1;                                  		// 0x0078 (0x0004) [0x0000000040000000] [0x00000010] (CPF_EditInlineNotify)
+	unsigned long                                      FaceIt : 1;                                       		// 0x0078 (0x0004) [0x0000000040000000] [0x00000020] (CPF_EditInlineNotify)
+	unsigned long                                      OnlinePlayerTitles : 1;                           		// 0x0078 (0x0004) [0x0000000040000000] [0x00000080] (CPF_EditInlineNotify)
+	unsigned long                                      RestrictByRegion : 1;                             		// 0x0078 (0x0004) [0x0000000040000000] [0x00000100] (CPF_EditInlineNotify)
+	unsigned long                                      FirstTimeExperience : 1;                          		// 0x0078 (0x0004) [0x0000000040000000] [0x00000800] (CPF_EditInlineNotify)
+	unsigned long                                      RLBot : 1;                                        		// 0x0078 (0x0004) [0x0000000040000000] [0x00002000] (CPF_EditInlineNotify)
+	unsigned long                                      CarMatinee : 1;                                   		// 0x0078 (0x0004) [0x0000000040000000] [0x00004000] (CPF_EditInlineNotify)
+	unsigned long                                      SteamInput : 1;                                   		// 0x0078 (0x0004) [0x0000000040000000] [0x00010000] (CPF_EditInlineNotify)
+	unsigned long                                      ReplayFXControls : 1;                             		// 0x0078 (0x0004) [0x0000000040000000] [0x00200000] (CPF_EditInlineNotify)
+	unsigned long                                      ESportsShop : 1;                                  		// 0x0078 (0x0004) [0x0000000040000000] [0x00400000] (CPF_EditInlineNotify)
+	unsigned long                                      TeamColoredBoostMeter : 1;                        		// 0x0078 (0x0004) [0x0000000040000000] [0x20000000] (CPF_EditInlineNotify)
+	unsigned long                                      GarageArchive : 1;                                		// 0x0078 (0x0004) [0x0000000040000000] [0x40000000] (CPF_EditInlineNotify)
+	unsigned long                                      DynamicRangeAudioSettings : 1;                    		// 0x007C (0x0004) [0x0000000040000000] [0x00000001] (CPF_EditInlineNotify)
+	unsigned long                                      AutoTour : 1;                                     		// 0x007C (0x0004) [0x0000000040000000] [0x00000002] (CPF_EditInlineNotify)
+	unsigned long                                      QuickPlay : 1;                                    		// 0x007C (0x0004) [0x0000000040000000] [0x00000004] (CPF_EditInlineNotify)
+	unsigned long                                      NewsPanelV2 : 1;                                  		// 0x007C (0x0004) [0x0000000040000000] [0x00000008] (CPF_EditInlineNotify)
+	unsigned long                                      Blueprints : 1;                                   		// 0x007C (0x0004) [0x0000000040000000] [0x00000010] (CPF_EditInlineNotify)
+	unsigned long                                      GodBall : 1;                                      		// 0x007C (0x0004) [0x0000000040000000] [0x00000020] (CPF_EditInlineNotify)
+	unsigned long                                      RocketBucks : 1;                                  		// 0x007C (0x0004) [0x0000000040000000] [0x00000080] (CPF_EditInlineNotify)
+	unsigned long                                      DiscordRichPresence : 1;                          		// 0x007C (0x0004) [0x0000000040000000] [0x00000800] (CPF_EditInlineNotify)
+	unsigned long                                      SupportACreator : 1;                              		// 0x007C (0x0004) [0x0000000040000000] [0x00001000] (CPF_EditInlineNotify)
+	unsigned long                                      CinematicIntro : 1;                               		// 0x007C (0x0004) [0x0000000040000000] [0x00002000] (CPF_EditInlineNotify)
+	unsigned long                                      TinyCrowd : 1;                                    		// 0x007C (0x0004) [0x0000000040000000] [0x00004000] (CPF_EditInlineNotify)
+	unsigned long                                      CrumbTrail : 1;                                   		// 0x007C (0x0004) [0x0000000040000000] [0x00008000] (CPF_EditInlineNotify)
+	unsigned long                                      EpicOnlineServices : 1;                           		// 0x007C (0x0004) [0x0000000040000000] [0x00010000] (CPF_EditInlineNotify)
+	unsigned long                                      XPGatedPlaylists : 1;                             		// 0x007C (0x0004) [0x0000000040000000] [0x00040000] (CPF_EditInlineNotify)
+	unsigned long                                      TradeInV2 : 1;                                    		// 0x007C (0x0004) [0x0000000040000000] [0x00200000] (CPF_EditInlineNotify)
+	unsigned long                                      Football : 1;                                     		// 0x007C (0x0004) [0x0000000040000000] [0x00400000] (CPF_EditInlineNotify)
+	unsigned long                                      RumbleSelection : 1;                              		// 0x007C (0x0004) [0x0000000040000000] [0x00800000] (CPF_EditInlineNotify)
+	unsigned long                                      UndersizedParty : 1;                              		// 0x007C (0x0004) [0x0000000040000000] [0x01000000] (CPF_EditInlineNotify)
+	unsigned long                                      StreamerSafeAudio : 1;                            		// 0x007C (0x0004) [0x0000000040000000] [0x02000000] (CPF_EditInlineNotify)
 public:
 	static UClass* StaticClass()
 	{
@@ -2435,7 +2463,7 @@ public:
 };
 
 // Class Core.ObjectProvider
-// 0x0160 (0x0070 - 0x01D0)
+// 0x0170 (0x0070 - 0x01E0)
 class UObjectProvider : public UComponent
 {
 public:
@@ -2447,16 +2475,17 @@ public:
 	TArray<struct FObjectProviderSubscription>         SubscribedToRemoves;                              		// 0x00F8 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
 	TArray<struct FObjectProviderSubscription>         SubscribedToLists;                                		// 0x0108 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
 	struct FArray_Mirror                               Injections;                                       		// 0x0118 (0x0010) [0x0000000000003002] (CPF_Const | CPF_Native | CPF_Transient)
-	TArray<class UClass*>                              PendingInjectionClasses;                          		// 0x0128 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
-	TArray<struct FObjectProviderPendingCallback>      PendingCallbacks;                                 		// 0x0138 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
-	unsigned char                                      bTriggeringCallbacks;                             		// 0x0148 (0x0001) [0x0000000000002002] (CPF_Const | CPF_Transient)
-	class UObjectProvider*                             Parent;                                           		// 0x0150 (0x0008) [0x000000000408200A] (CPF_Const | CPF_ExportObject | CPF_Transient | CPF_Component | CPF_EditInline)
-	TArray<class UObjectProvider*>                     Children;                                         		// 0x0158 (0x0010) [0x000000000448200A] (CPF_Const | CPF_ExportObject | CPF_Transient | CPF_Component | CPF_NeedCtorLink | CPF_EditInline)
-	TArray<class UObjectProvider*>                     Proxies;                                          		// 0x0168 (0x0010) [0x000000000448200A] (CPF_Const | CPF_ExportObject | CPF_Transient | CPF_Component | CPF_NeedCtorLink | CPF_EditInline)
-	TArray<struct FObjectProviderPendingCallback>      PendingInjectionCallbacks;                        		// 0x0178 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
-	struct FScriptDelegate                             __ObjectSubscriptionCallback__Delegate;           		// 0x0188 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __ObjectListSubscriptionCallback__Delegate;       		// 0x01A0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
-	struct FScriptDelegate                             __ObjectChangeCallback__Delegate;                 		// 0x01B8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FArray_Mirror                               InterfaceInjections;                              		// 0x0128 (0x0010) [0x0000000000003002] (CPF_Const | CPF_Native | CPF_Transient)
+	TArray<class UClass*>                              PendingInjectionClasses;                          		// 0x0138 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
+	TArray<struct FObjectProviderPendingCallback>      PendingCallbacks;                                 		// 0x0148 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
+	unsigned char                                      bTriggeringCallbacks;                             		// 0x0158 (0x0001) [0x0000000000002002] (CPF_Const | CPF_Transient)
+	class UObjectProvider*                             Parent;                                           		// 0x0160 (0x0008) [0x000000000408200A] (CPF_Const | CPF_ExportObject | CPF_Transient | CPF_Component | CPF_EditInline)
+	TArray<class UObjectProvider*>                     Children;                                         		// 0x0168 (0x0010) [0x000000000448200A] (CPF_Const | CPF_ExportObject | CPF_Transient | CPF_Component | CPF_NeedCtorLink | CPF_EditInline)
+	TArray<class UObjectProvider*>                     Proxies;                                          		// 0x0178 (0x0010) [0x000000000448200A] (CPF_Const | CPF_ExportObject | CPF_Transient | CPF_Component | CPF_NeedCtorLink | CPF_EditInline)
+	TArray<struct FObjectProviderPendingCallback>      PendingInjectionCallbacks;                        		// 0x0188 (0x0010) [0x0000000000402002] (CPF_Const | CPF_Transient | CPF_NeedCtorLink)
+	struct FScriptDelegate                             __ObjectSubscriptionCallback__Delegate;           		// 0x0198 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __ObjectListSubscriptionCallback__Delegate;       		// 0x01B0 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
+	struct FScriptDelegate                             __ObjectChangeCallback__Delegate;                 		// 0x01C8 (0x0018) [0x0000000000400000] (CPF_NeedCtorLink)
 public:
 	static UClass* StaticClass()
 	{
@@ -2799,9 +2828,9 @@ public:
 	void TestSpecialLogging();
 };
 
-// Class Core.__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812
+// Class Core.__AsyncTask__All_3AE6D05C4656F1977AC5FF9735B8B7BB
 // 0x0010 (0x0060 - 0x0070)
-class U__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812 : public UObject
+class U__AsyncTask__All_3AE6D05C4656F1977AC5FF9735B8B7BB : public UObject
 {
 public:
 	int                                                DependentsCount;                                  		// 0x0060 (0x0004) [0x0000000000000000]               
@@ -2813,13 +2842,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class Core.__AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812");
+			uClassPointer = UObject::FindClass("Class Core.__AsyncTask__All_3AE6D05C4656F1977AC5FF9735B8B7BB");
 		}
 
 		return uClassPointer;
 	};
 
-	void __AsyncTask__All_2C3F245B4F175665D439CCAE11AF6812();
+	void __AsyncTask__All_3AE6D05C4656F1977AC5FF9735B8B7BB();
 };
 
 // Class Core.IDisposable

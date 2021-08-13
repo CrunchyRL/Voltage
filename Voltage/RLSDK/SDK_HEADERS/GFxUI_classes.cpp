@@ -22,7 +22,7 @@
 */
 
 // Function GFxUI.GFxEngine.UpdateMovieLoadingInfo
-// [0x00438401] (FUNC_Final | FUNC_Native | FUNC_UbergraphFunction | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00428401] (FUNC_Final | FUNC_Native | FUNC_UbergraphFunction | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FLoadingMovieMapInfo    LoadingInfo                    (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -209,7 +209,7 @@ void UGFxInteraction::NotifyPlayerRemoved(int PlayerIndex, class ULocalPlayer* R
 };
 
 // Function GFxUI.GFxInteraction.NotifyPlayerAdded
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // int                            PlayerIndex                    (CPF_Parm)
 // class ULocalPlayer*            AddedPlayer                    (CPF_Parm)
@@ -241,7 +241,7 @@ void UGFxInteraction::NotifyPlayerAdded(int PlayerIndex, class ULocalPlayer* Add
 };
 
 // Function GFxUI.GFxInteraction.NotifyGameSessionEnded
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 
 void UGFxInteraction::NotifyGameSessionEnded()
@@ -461,7 +461,7 @@ void UGFxMoviePlayer::ApplyPriorityBlurEffect(unsigned long bRemoveEffect)
 };
 
 // Function GFxUI.GFxMoviePlayer.ApplyPriorityEffect
-// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bRequestedBlurState            (CPF_Parm)
 // unsigned long                  bRequestedHiddenState          (CPF_Parm)
@@ -507,7 +507,7 @@ void UGFxMoviePlayer::eventPlaySoundFromTheme(struct FName EventName, struct FNa
 };
 
 // Function GFxUI.GFxMoviePlayer.OnFocusLost
-// [0x00030801] (FUNC_Final | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020801] (FUNC_Final | FUNC_Event | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            LocalPlayerIndex               (CPF_Parm)
 
@@ -528,7 +528,7 @@ void UGFxMoviePlayer::eventOnFocusLost(int LocalPlayerIndex)
 };
 
 // Function GFxUI.GFxMoviePlayer.OnFocusGained
-// [0x00030801] (FUNC_Final | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020801] (FUNC_Final | FUNC_Event | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // int                            LocalPlayerIndex               (CPF_Parm)
 
@@ -570,7 +570,7 @@ void UGFxMoviePlayer::ConsoleCommand(struct FString Command)
 };
 
 // Function GFxUI.GFxMoviePlayer.GetPC
-// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class APlayerController*       ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -592,7 +592,7 @@ class APlayerController* UGFxMoviePlayer::eventGetPC()
 };
 
 // Function GFxUI.GFxMoviePlayer.GetLP
-// [0x00030803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020803] (FUNC_Final | FUNC_RequiredAPI | FUNC_Event | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // class ULocalPlayer*            ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1631,7 +1631,7 @@ int UGFxMoviePlayer::GetAVMVersion()
 };
 
 // Function GFxUI.GFxMoviePlayer.FilterButtonInput
-// [0x00030801] (FUNC_Final | FUNC_Event | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020801] (FUNC_Final | FUNC_Event | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // int                            ControllerId                   (CPF_Parm)
@@ -1659,7 +1659,7 @@ bool UGFxMoviePlayer::eventFilterButtonInput(int ControllerId, struct FName Butt
 };
 
 // Function GFxUI.GFxMoviePlayer.FlushPlayerInput
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  capturekeysonly                (CPF_Parm)
 
@@ -1780,7 +1780,7 @@ void UGFxMoviePlayer::AddCaptureKey(struct FName Key)
 };
 
 // Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveInput
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bCanReceiveInput               (CPF_Parm)
 
@@ -1805,7 +1805,7 @@ void UGFxMoviePlayer::SetMovieCanReceiveInput(unsigned long bCanReceiveInput)
 };
 
 // Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveFocus
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bCanReceiveFocus               (CPF_Parm)
 
@@ -2293,7 +2293,7 @@ void UGFxMoviePlayer::PostAdvance(float DeltaTime)
 };
 
 // Function GFxUI.GFxMoviePlayer.Advance
-// [0x00030401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // float                          Time                           (CPF_Parm)
 

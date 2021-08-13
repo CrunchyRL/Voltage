@@ -22,7 +22,7 @@
 */
 
 // Function GFxUI.GFxEngine.UpdateMovieLoadingInfo
-// [0x00438401] 
+// [0x00428401] 
 struct UGFxEngine_execUpdateMovieLoadingInfo_Parms
 {
 	struct FLoadingMovieMapInfo                        LoadingInfo;                                      		// 0x0000 (0x00A0) [0x0000000000400182] (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
@@ -78,7 +78,7 @@ struct UGFxInteraction_execNotifyPlayerRemoved_Parms
 };
 
 // Function GFxUI.GFxInteraction.NotifyPlayerAdded
-// [0x00030400]  iNative [0x0004]
+// [0x00020400]  iNative [0x0004]
 struct UGFxInteraction_execNotifyPlayerAdded_Parms
 {
 	int                                                PlayerIndex;                                      		// 0x0000 (0x0004) [0x0000000000000080] (CPF_Parm)    
@@ -86,7 +86,7 @@ struct UGFxInteraction_execNotifyPlayerAdded_Parms
 };
 
 // Function GFxUI.GFxInteraction.NotifyGameSessionEnded
-// [0x00030400]  iNative [0x0004]
+// [0x00020400]  iNative [0x0004]
 struct UGFxInteraction_execNotifyGameSessionEnded_Parms
 {
 };
@@ -147,7 +147,7 @@ struct UGFxMoviePlayer_execApplyPriorityBlurEffect_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.ApplyPriorityEffect
-// [0x00030803] 
+// [0x00020803] 
 struct UGFxMoviePlayer_eventApplyPriorityEffect_Parms
 {
 	bool                                               bRequestedBlurState : 1;                          		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] (CPF_Parm)
@@ -165,14 +165,14 @@ struct UGFxMoviePlayer_eventPlaySoundFromTheme_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.OnFocusLost
-// [0x00030801] 
+// [0x00020801] 
 struct UGFxMoviePlayer_eventOnFocusLost_Parms
 {
 	int                                                LocalPlayerIndex;                                 		// 0x0000 (0x0004) [0x0000000000000080] (CPF_Parm)    
 };
 
 // Function GFxUI.GFxMoviePlayer.OnFocusGained
-// [0x00030801] 
+// [0x00020801] 
 struct UGFxMoviePlayer_eventOnFocusGained_Parms
 {
 	int                                                LocalPlayerIndex;                                 		// 0x0000 (0x0004) [0x0000000000000080] (CPF_Parm)    
@@ -187,7 +187,7 @@ struct UGFxMoviePlayer_execConsoleCommand_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.GetPC
-// [0x00030803] 
+// [0x00020803] 
 struct UGFxMoviePlayer_eventGetPC_Parms
 {
 	class APlayerController*                           ReturnValue;                                      		// 0x0000 (0x0008) [0x0000000000000580] (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
@@ -195,7 +195,7 @@ struct UGFxMoviePlayer_eventGetPC_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.GetLP
-// [0x00030803] 
+// [0x00020803] 
 struct UGFxMoviePlayer_eventGetLP_Parms
 {
 	class ULocalPlayer*                                ReturnValue;                                      		// 0x0000 (0x0008) [0x0000000000000580] (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
@@ -509,7 +509,7 @@ struct UGFxMoviePlayer_execGetAVMVersion_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.FilterButtonInput
-// [0x00030801] 
+// [0x00020801] 
 struct UGFxMoviePlayer_eventFilterButtonInput_Parms
 {
 	int                                                ControllerId;                                     		// 0x0000 (0x0004) [0x0000000000000080] (CPF_Parm)    
@@ -519,7 +519,7 @@ struct UGFxMoviePlayer_eventFilterButtonInput_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.FlushPlayerInput
-// [0x00030401] 
+// [0x00020401] 
 struct UGFxMoviePlayer_execFlushPlayerInput_Parms
 {
 	bool                                               capturekeysonly : 1;                              		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] (CPF_Parm)
@@ -552,14 +552,14 @@ struct UGFxMoviePlayer_execAddCaptureKey_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveInput
-// [0x00030401] 
+// [0x00020401] 
 struct UGFxMoviePlayer_execSetMovieCanReceiveInput_Parms
 {
 	bool                                               bCanReceiveInput : 1;                             		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] (CPF_Parm)
 };
 
 // Function GFxUI.GFxMoviePlayer.SetMovieCanReceiveFocus
-// [0x00030401] 
+// [0x00020401] 
 struct UGFxMoviePlayer_execSetMovieCanReceiveFocus_Parms
 {
 	bool                                               bCanReceiveFocus : 1;                             		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] (CPF_Parm)
@@ -705,7 +705,7 @@ struct UGFxMoviePlayer_execPostAdvance_Parms
 };
 
 // Function GFxUI.GFxMoviePlayer.Advance
-// [0x00030401] 
+// [0x00020401] 
 struct UGFxMoviePlayer_execAdvance_Parms
 {
 	float                                              Time;                                             		// 0x0000 (0x0004) [0x0000000000000080] (CPF_Parm)    

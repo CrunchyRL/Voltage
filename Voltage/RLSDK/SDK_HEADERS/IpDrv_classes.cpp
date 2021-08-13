@@ -1064,7 +1064,7 @@ void UAvatarDownloadMap::AllValues(int StartIndex, int MaxValues, class UAvatarD
 };
 
 // Function IpDrv.HttpRequestCurl.ProcessRequest
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
@@ -1196,7 +1196,7 @@ class UHttpRequestInterface* UHttpRequestCurl::SetContent(TArray<unsigned char>&
 };
 
 // Function IpDrv.HttpRequestCurl.SetURL
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // class UHttpRequestInterface*   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 URL                            (CPF_Parm | CPF_NeedCtorLink)
@@ -1229,7 +1229,7 @@ class UHttpRequestInterface* UHttpRequestCurl::SetURL(struct FString URL)
 };
 
 // Function IpDrv.HttpRequestCurl.SetVerb
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // class UHttpRequestInterface*   ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 Verb                           (CPF_Parm | CPF_NeedCtorLink)
@@ -1544,7 +1544,7 @@ int UHttpResponseCurl::GetResponseCode()
 };
 
 // Function IpDrv.HttpResponseCurl.GetContentAsString
-// [0x00030400] (FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
+// [0x00020400] (FUNC_Native | FUNC_Public | FUNC_AllFlags) iNative [0x0004]
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 
@@ -1795,7 +1795,7 @@ struct FString UHttpResponseCurl::GetHeader(struct FString HeaderName)
 };
 
 // Function IpDrv.ImageDecoder.RequestDecodeImage
-// [0x00430401] (FUNC_Final | FUNC_Native | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00420401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 RequestURL                     (CPF_Parm | CPF_NeedCtorLink)
 // unsigned char                  ImageType                      (CPF_Parm)
@@ -6179,7 +6179,7 @@ void UOnlineAuthInterfaceImpl::OnAccountAuthorization(struct FString Token)
 };
 
 // Function IpDrv.OnlineAuthInterfaceImpl.OnLoginChanged
-// [0x00030000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020000] (FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bLoggedIn                      (CPF_Parm)
 
@@ -6274,7 +6274,7 @@ bool UOnlineAuthInterfaceImpl::RequiresAuthTicket()
 };
 
 // Function IpDrv.OnlineAuthInterfaceImpl.OnReceivedAuthCode
-// [0x00130001] (FUNC_Final | FUNC_MulticastDelegate | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
+// [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter info:
 // unsigned long                  bSuccess                       (CPF_Parm)
 // struct FString                 Code                           (CPF_Parm | CPF_NeedCtorLink)
@@ -8531,7 +8531,7 @@ void UOnlineGameInterfaceImpl::ClearGameInviteAcceptedDelegate(unsigned char Loc
 };
 
 // Function IpDrv.OnlineGameInterfaceImpl.AddGameInviteAcceptedDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         GameInviteAcceptedDelegate     (CPF_Parm | CPF_NeedCtorLink)
@@ -9782,7 +9782,7 @@ void UOnlineGameInterfaceImpl::OnFindOnlineGamesComplete(unsigned long bWasSucce
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.GetImageType
-// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FString                 ContentType                    (CPF_Parm | CPF_NeedCtorLink)
@@ -9883,7 +9883,7 @@ void UOnlineImageDownloaderWeb::OnDownloadComplete(class UHttpRequestInterface* 
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.DownloadNextImage
-// [0x00050003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Private | FUNC_AllFlags)
+// [0x00040003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Private | FUNC_AllFlags)
 // Parameter info:
 
 void UOnlineImageDownloaderWeb::DownloadNextImage()
@@ -9902,7 +9902,7 @@ void UOnlineImageDownloaderWeb::DownloadNextImage()
 };
 
 // Function IpDrv.OnlineImageDownloaderWeb.RequestOnlineImages
-// [0x00434003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetMulticast | FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00424003] (FUNC_Final | FUNC_RequiredAPI | FUNC_NetMulticast | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         FinishedCallback               (CPF_Parm | CPF_NeedCtorLink)
 // unsigned long                  bSupportSRGB                   (CPF_OptionalParm | CPF_Parm)
@@ -10862,7 +10862,7 @@ void UOnlineLobbyInterfaceImpl::RemoveLocalPlayerFromSession(struct FUniqueNetId
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLocalPartyMemberToSession
-// [0x00430000] (FUNC_MulticastDelegate | FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
+// [0x00420000] (FUNC_Public | FUNC_HasOutParms | FUNC_AllFlags)
 // Parameter info:
 // struct FUniqueNetId            NewPartyMember                 (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
@@ -11046,7 +11046,7 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyInviteDelegate(struct FScriptDelegate 
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyInviteDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LobbyInviteDelegate            (CPF_Parm | CPF_NeedCtorLink)
 
@@ -11417,7 +11417,7 @@ void UOnlineLobbyInterfaceImpl::ClearLobbyReceiveBinaryDataDelegate(struct FScri
 };
 
 // Function IpDrv.OnlineLobbyInterfaceImpl.AddLobbyReceiveBinaryDataDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         LobbyReceiveBinaryDataDelegate (CPF_Parm | CPF_NeedCtorLink)
 
@@ -12530,7 +12530,7 @@ void UOnlinePersistentAuthInterfaceImpl::ClearUnderageUserDetectedDelegate(struc
 };
 
 // Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddUnderageUserDetectedDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 
@@ -12597,7 +12597,7 @@ void UOnlinePersistentAuthInterfaceImpl::ClearRequestPinGrantCodeDelegate(unsign
 };
 
 // Function IpDrv.OnlinePersistentAuthInterfaceImpl.AddRequestPinGrantCodeDelegate
-// [0x00030003] (FUNC_Final | FUNC_RequiredAPI | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00020003] (FUNC_Final | FUNC_RequiredAPI | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // unsigned char                  LocalUserNum                   (CPF_Parm)
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
@@ -14486,7 +14486,7 @@ void UWebRequest::AddHeader(struct FString HeaderName, struct FString Value)
 };
 
 // Function IpDrv.WebRequest.EncodeBase64
-// [0x00032401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_MulticastDelegate | FUNC_Public | FUNC_AllFlags)
+// [0x00022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_AllFlags)
 // Parameter info:
 // struct FString                 ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink)
 // struct FString                 Decoded                        (CPF_Parm | CPF_NeedCtorLink)

@@ -975,47 +975,8 @@ enum class EDebugState : int
 // Enum Engine.AudioDevice.ESoundClassName
 enum class ESoundClassName : int
 {
-	WeaponTellSuper                                    = 0,
-	WeaponTell                                         = 1,
-	WeaponMortarIncoming                               = 2,
-	WeaponFriend                                       = 3,
-	WeaponEnemy                                        = 4,
-	WeaponBulletEffects                                = 5,
-	Weapon                                             = 6,
-	VoiceChat                                          = 7,
-	Voice                                              = 8,
-	Vehicle                                            = 9,
-	UserMusic                                          = 10,
-	UI                                                 = 11,
-	Stinger                                            = 12,
-	SoundModeExceptions                                = 13,
-	SFX                                                = 14,
-	OptionVoice                                        = 15,
-	OptionsSFX                                         = 16,
-	OptionMusic                                        = 17,
-	Music                                              = 18,
-	MovieVoice                                         = 19,
-	MovieEffects                                       = 20,
-	Master                                             = 21,
-	Item                                               = 22,
-	GameMusic                                          = 23,
-	Explosions                                         = 24,
-	DialogNoRadio                                      = 25,
-	DialogNoDSP                                        = 26,
-	DialogMedium                                       = 27,
-	DialogLoud                                         = 28,
-	DialogDeafening                                    = 29,
-	Dialog                                             = 30,
-	Cinematic                                          = 31,
-	ChatterFriend                                      = 32,
-	ChatterEnemytell                                   = 33,
-	ChatterEnemy                                       = 34,
-	Chatter                                            = 35,
-	CharacterFriend                                    = 36,
-	CharacterEnemy                                     = 37,
-	Character                                          = 38,
-	Ambient                                            = 39,
-	ESoundClassName_END                                = 40
+	Master                                             = 0,
+	ESoundClassName_END                                = 1
 };
 
 // Enum Engine.AudioDevice.ETTSSpeaker
@@ -1968,7 +1929,8 @@ enum class EConsoleType : int
 	CONSOLE_NNX                                        = 13,
 	CONSOLE_Lockhart                                   = 14,
 	CONSOLE_Anaconda                                   = 15,
-	CONSOLE_END                                        = 16
+	CONSOLE_Prospero                                   = 16,
+	CONSOLE_END                                        = 17
 };
 
 // Enum Engine.WorldInfo.EPreferredLightmapType
@@ -40523,7 +40485,7 @@ public:
 };
 
 // Class Engine.CameraActor
-// 0x0188 (0x0268 - 0x03F0)
+// 0x0190 (0x0268 - 0x03F8)
 class ACameraActor : public AActor
 {
 public:
@@ -40533,8 +40495,9 @@ public:
 	float                                              FOVAngle;                                         		// 0x0270 (0x0004) [0x0000000000000021] (CPF_Edit | CPF_Net)
 	float                                              CamOverridePostProcessAlpha;                      		// 0x0274 (0x0004) [0x0000000000000001] (CPF_Edit)    
 	struct FPostProcessSettings                        CamOverridePostProcess;                           		// 0x0278 (0x0168) [0x0000000000400001] (CPF_Edit | CPF_NeedCtorLink)
-	class UDrawFrustumComponent*                       DrawFrustum;                                      		// 0x03E0 (0x0008) [0x0000000004080008] (CPF_ExportObject | CPF_Component | CPF_EditInline)
-	class UStaticMeshComponent*                        MeshComp;                                         		// 0x03E8 (0x0008) [0x0000000004080008] (CPF_ExportObject | CPF_Component | CPF_EditInline)
+	class UCameraModifier_CameraShake*                 CameraShakeCamMod;                                		// 0x03E0 (0x0008) [0x0000000004400009] (CPF_Edit | CPF_ExportObject | CPF_NeedCtorLink | CPF_EditInline)
+	class UDrawFrustumComponent*                       DrawFrustum;                                      		// 0x03E8 (0x0008) [0x0000000004080008] (CPF_ExportObject | CPF_Component | CPF_EditInline)
+	class UStaticMeshComponent*                        MeshComp;                                         		// 0x03F0 (0x0008) [0x0000000004080008] (CPF_ExportObject | CPF_Component | CPF_EditInline)
 public:
 	static UClass* StaticClass()
 	{
@@ -40553,7 +40516,7 @@ public:
 };
 
 // Class Engine.DynamicCameraActor
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x03F8 - 0x03F8)
 class ADynamicCameraActor : public ACameraActor
 {
 public:
@@ -43932,7 +43895,7 @@ public:
 };
 
 // Class Engine.StaticCameraActor
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x03F8 - 0x03F8)
 class AStaticCameraActor : public ACameraActor
 {
 public:
@@ -44311,9 +44274,9 @@ public:
 	void eventOnOwnerChanged();
 };
 
-// Class Engine.__ScriptGroup_ORS__CreateObjects_50FEE89740B5031B7817C2B0637F244B
+// Class Engine.__ScriptGroup_ORS__CreateObjects_F911DEC045D27EB4A8FF64B83288400A
 // 0x0008 (0x0060 - 0x0068)
-class U__ScriptGroup_ORS__CreateObjects_50FEE89740B5031B7817C2B0637F244B : public UObject
+class U__ScriptGroup_ORS__CreateObjects_F911DEC045D27EB4A8FF64B83288400A : public UObject
 {
 public:
 	class UObject*                                     ObjOuter;                                         		// 0x0060 (0x0008) [0x0000000000000000]               
@@ -44324,13 +44287,13 @@ public:
 
 		if (!uClassPointer)
 		{
-			uClassPointer = UObject::FindClass("Class Engine.__ScriptGroup_ORS__CreateObjects_50FEE89740B5031B7817C2B0637F244B");
+			uClassPointer = UObject::FindClass("Class Engine.__ScriptGroup_ORS__CreateObjects_F911DEC045D27EB4A8FF64B83288400A");
 		}
 
 		return uClassPointer;
 	};
 
-	void __ScriptGroup_ORS__CreateObjects_50FEE89740B5031B7817C2B0637F244B(class UClass* C);
+	void __ScriptGroup_ORS__CreateObjects_F911DEC045D27EB4A8FF64B83288400A(class UClass* C);
 };
 
 // Class Engine.ReplicatedActor_ORS
@@ -44377,6 +44340,48 @@ public:
 
 	void ModifyActorComponentsVisibility(class AActor* ActorToModify);
 	void eventActivated();
+};
+
+// Class Engine.EpochNow_RealTime
+// 0x0000 (0x0060 - 0x0060)
+class UEpochNow_RealTime : public UObject
+{
+public:
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class Engine.EpochNow_RealTime");
+		}
+
+		return uClassPointer;
+	};
+
+	unsigned long long EpochNow();
+};
+
+// Class Engine.IEpochNow
+// 0x0000 (0x0060 - 0x0060)
+class UIEpochNow : public UInterface
+{
+public:
+public:
+	static UClass* StaticClass()
+	{
+		static UClass* uClassPointer = nullptr;
+
+		if (!uClassPointer)
+		{
+			uClassPointer = UObject::FindClass("Class Engine.IEpochNow");
+		}
+
+		return uClassPointer;
+	};
+
+	unsigned long long EpochNow();
 };
 
 /*
